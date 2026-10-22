@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/assets/ultimate-gold-header.png" alt="Ultimate Gold — Ho-Oh over Johto / Ho-Oh sobre Johto" width="100%"></p>
+<p align="center"><img src="docs/assets/ultimate-gold-header.png" alt="Ultimate Gold — Ho-Oh over Johto" width="100%"></p>
 
 <div align="center">
   <p><strong>HEARTGOLD · JOHTO · FAN PROJECT</strong></p>
@@ -50,6 +50,8 @@ Choose a build and patch a clean dump from your own Pokémon HeartGold USA cartr
 ---
 
 ## Español
+
+<p align="center"><img src="docs/assets/ultimate-gold-header.png" alt="Ultimate Gold — Ho-Oh sobre Johto" width="100%"></p>
 
 <div align="center">
   <p><strong>HEARTGOLD · JOHTO · PROYECTO DE FANS</strong></p>

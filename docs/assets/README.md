@@ -6,7 +6,7 @@
 
 - Dimensions: 2172 × 724 pixels; size: 2,567,362 bytes.
 - SHA-256: `4255034e27af18ec1c65b8809adb66e67279dc4fd46f1d70c5e4fdf82b46afe1`.
-- Scope: one shared README header above the English and Spanish sections.
+- Scope: the same unchanged image appears once in each README language section, with English and Spanish alternative text respectively.
 
 Pokémon and Ho-Oh belong to their respective rights holders. Ultimate Gold is an unofficial fan project; approval for this repository does not imply endorsement or ownership of third-party characters.
 
@@ -16,6 +16,6 @@ Pokémon and Ho-Oh belong to their respective rights holders. Ultimate Gold is a
 
 - Dimensiones: 2172 × 724 píxeles; tamaño: 2.567.362 bytes.
 - SHA-256: `4255034e27af18ec1c65b8809adb66e67279dc4fd46f1d70c5e4fdf82b46afe1`.
-- Alcance: una cabecera compartida, antes de las secciones inglesa y española del README.
+- Alcance: la misma imagen sin modificar aparece una vez en cada sección de idioma del README, con texto alternativo en inglés y español respectivamente.
 
 Pokémon y Ho-Oh pertenecen a sus respectivos titulares. Ultimate Gold es un proyecto de fans no oficial; la aprobación para este repositorio no implica respaldo ni propiedad de personajes de terceros.
