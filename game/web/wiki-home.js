@@ -9,8 +9,7 @@
       primary: 'Explore trainer teams',
       secondary: 'Open the Pokédex',
       features: 'Builds & features',
-      art: 'Johto starter Pokémon',
-      artLabel: 'JOHTO / GENERATION II',
+      art: 'Ho-Oh flying over Johto at sunset, with Ultimate Gold branding.',
       countSpecies: 'Pokédex entries',
       countTrainers: 'trainer records',
       countMoves: 'moves',
@@ -46,8 +45,7 @@
       primary: 'Explorar equipos',
       secondary: 'Abrir la Pokédex',
       features: 'Versiones y características',
-      art: 'Pokémon iniciales de Johto',
-      artLabel: 'JOHTO / GENERACIÓN II',
+      art: 'Ho-Oh sobrevolando Johto al atardecer, con la marca Ultimate Gold.',
       countSpecies: 'entradas de Pokédex',
       countTrainers: 'registros de entrenadores',
       countMoves: 'movimientos',
@@ -105,25 +103,14 @@
       const entry = counts.find(([, label]) => label === key);
       return new Intl.NumberFormat(language === 'es' ? 'es-ES' : 'en-US').format(entry ? entry[0] : 0);
     };
-    const starters = [
-      ['152', 'Chikorita'],
-      ['155', 'Cyndaquil'],
-      ['158', 'Totodile']
-    ];
-
     return `<div class="home-page">
       <section class="home-hero" aria-labelledby="home-title">
+        <img class="home-hero-art" src="../assets/branding/ultimate-gold-header.png" alt="${text.art}" width="2172" height="724" loading="eager" fetchpriority="high" decoding="async">
         <div class="home-hero-copy">
           <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>${text.eyebrow}</p>
-          <p class="home-wordmark">ULTIMATE <strong>GOLD</strong><span>WIKI</span></p>
           <h1 id="home-title">${escapeHtml(text.title).replace(/\n/g, '<br>')}</h1>
           <p class="home-lede">${text.intro}</p>
           <div class="home-actions"><a class="button button-primary" href="#/trainers">${text.primary}<span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#/pokemon">${text.secondary}<span aria-hidden="true">→</span></a><a class="button button-quiet home-features-link" href="#/guide/features">${text.features}<span aria-hidden="true">→</span></a></div>
-        </div>
-        <div class="home-hero-art" role="img" aria-label="${text.art}">
-          <div class="home-art-caption"><span>01</span><span>${text.artLabel}</span></div>
-          <div class="home-art-scene"><span class="home-art-ring home-art-ring-one"></span><span class="home-art-ring home-art-ring-two"></span>${starters.map(([id, name], index) => `<img class="home-starter home-starter-${index + 1}" src="../sprites/pokemon/${id}.png" alt="${name}" loading="eager">`).join('')}<span class="home-art-ground"></span></div>
-          <div class="home-art-foot"><span>${language === 'es' ? 'INICIALES DE JOHTO' : 'JOHTO STARTERS'}</span><span aria-hidden="true">✳</span></div>
         </div>
       </section>
 
