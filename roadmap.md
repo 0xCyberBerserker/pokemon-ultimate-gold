@@ -9,6 +9,25 @@ The live backlog is in [Projects](https://github.com/users/0xCyberBerserker/proj
 - Complete bounded tests, then prepare a short playable review for The designated reviewer.
 - Decide a release only after gameplay, provenance/licensing and human acceptance. Kris integration is pending asset provenance; the editor prototype is separate from downloadable Alpha 2. The previously deferred PWT implementation remains outside current scope.
 
+### Future platform proposals — UG-PORTS-20261023
+
+The initial architectural assessment is a hypothesis, not a code audit, executed PoC or compatibility result. Technical ownership is **Dev**; **ScrumMaster** tracks the proposals. Both initiatives remain **Pendiente**, outside Sprint 0, with no implementation, installation, patcher integration or release authorized. Research priorities and duration estimates in the assessment are uncalibrated suggestions, not commitments. Reuse the already planned platform investigation rather than duplicating or advancing it.
+
+- [Hybrid PC target — #21](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/21): compare A0, a standalone executable bundling emulation as contingency, with A1, ARM9 recompilation retaining DS compatibility services. Standalone does not mean fully native. The assessment names [ssrecomp](https://github.com/ClickingMaster/ssrecomp) and [pokeheartgold-single-screen](https://github.com/ClickingMaster/pokeheartgold-single-screen) as candidates; their status, licenses, Windows support and exact-build compatibility remain unverified.
+- [Fully native PC engine — #22](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/22): investigate reuse of HGSS logic while replacing DS dependencies. Audit ARM9/ARM7, NitroSDK, overlays, graphics/audio, memory, DMA, interrupts, 32-bit pointers, packing, timing and saves. Decompilation alone does not establish portability.
+
+| Logical task | Proposed outcome | Gate before execution |
+| --- | --- | --- |
+| UG-PC-001 | Exact-fork/build/hash and dependency compatibility audit. | Approved research scope; primary-source verification. |
+| UG-PC-002 | Linux hybrid PoC: original reference, then exact Ultimate Gold build. | Accepted UG-PC-001 and separate PoC authorization. |
+| UG-PC-003 | Real-Windows build, controls and persistence validation. | Accepted UG-PC-002 and validation authorization. |
+| UG-NATIVE-001 | Engine/platform dependency audit. | Exact source baseline and approved research scope. |
+| UG-NATIVE-002 | Real deterministic native module with reference-result parity. | Accepted UG-NATIVE-001, chosen module and authorized experiment. |
+
+The logical IDs are not additional GitHub issues or active assignments. Compare architectures conceptually; develop sequentially if approved. A future hybrid PoC must pin source/tool hashes, boot Ultimate Gold, create a game, enter a map, complete a battle, save normally, close fully and reload with state comparison against the exact reference. Original SoulSilver running does not prove Ultimate Gold compatibility. Wine does not accept Windows; save states do not prove normal-save interoperability. Native module parity precedes any proposed playable vertical slice, which would still not accept the full game.
+
+Before distribution, review licenses and permissions for dependencies and generated code. Require the user's own ROM; do not distribute ROMs, proprietary SDKs or protected resources. Human scope decisions and independent evidence review remain gates. Game translation is a separate proposal from platform research and [public-text editorial review #19](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/19). The original assessment stays internal; this section is its sanitized canonical planning summary.
+
 ## Español
 
 El backlog vigente está en [Projects](https://github.com/users/0xCyberBerserker/projects/4); aquí solo quedan los criterios de entrega.
@@ -17,3 +36,22 @@ El backlog vigente está en [Projects](https://github.com/users/0xCyberBerserker
 - Sprint 0 confirmado con el chat técnico: **Editor integrado y evidencia reproducible**. Seguimiento del editor, PC y Kris sin inventar fechas.
 - Completar las pruebas acotadas y preparar una revisión jugable breve para La persona revisora.
 - Decidir la release tras validar juego, procedencia/licencias y aceptación humana. Kris depende de la procedencia de recursos; el prototipo del editor sigue separado de Alpha 2 descargable. Implementar PWT sigue aplazado.
+
+### Propuestas futuras de plataformas — UG-PORTS-20261023
+
+La valoración arquitectónica inicial es una hipótesis, no una auditoría del código, PoC ejecutada ni resultado de compatibilidad. **Dev** es responsable técnico y **ScrumMaster** mantiene el seguimiento. Ambas iniciativas quedan **Pendiente**, fuera del Sprint 0, sin autorizar implementación, instalaciones, integración con el parcheador ni release. Las prioridades y duraciones del estudio son sugerencias sin calibrar, no compromisos. Reutilizar la investigación de plataformas ya prevista, sin duplicarla ni adelantarla.
+
+- [Destino PC híbrido — #21](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/21): comparar A0, ejecutable autónomo con emulación incorporada como contingencia, con A1, recompilación ARM9 que conserva servicios de compatibilidad DS. Autónomo no significa completamente nativo. El estudio menciona los dos repositorios enlazados arriba como candidatos; siguen pendientes su estado, licencias, soporte Windows y compatibilidad con nuestro build exacto.
+- [Motor PC completamente nativo — #22](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/22): investigar reutilización de lógica HGSS sustituyendo dependencias DS. Auditar ARM9/ARM7, NitroSDK, overlays, gráficos/audio, memoria, DMA, interrupciones, punteros de 32 bits, packing, temporización y guardados. La decompilación por sí sola no acredita portabilidad.
+
+| Tarea lógica | Resultado propuesto | Requisito antes de ejecutar |
+| --- | --- | --- |
+| UG-PC-001 | Auditoría de fork/build/hashes exactos, dependencias y compatibilidad. | Alcance de investigación aprobado y fuentes primarias contrastadas. |
+| UG-PC-002 | PoC híbrida Linux: referencia original y después Ultimate Gold exacto. | UG-PC-001 aceptada y autorización separada de la PoC. |
+| UG-PC-003 | Compilación, controles y persistencia en Windows real. | UG-PC-002 aceptada y autorización de validación. |
+| UG-NATIVE-001 | Auditoría de dependencias del motor y plataforma. | Fuente exacta y alcance de investigación aprobado. |
+| UG-NATIVE-002 | Módulo nativo real determinista con paridad frente a la referencia. | UG-NATIVE-001 aceptada, módulo elegido y experimento autorizado. |
+
+Los IDs lógicos no son issues adicionales ni encargos activos. Comparar las arquitecturas conceptualmente y desarrollar de forma secuencial si se aprueba. Una futura PoC híbrida debe fijar hashes de fuente y herramientas, arrancar Ultimate Gold, crear partida, llegar a mapa, completar un combate, guardar normalmente, cerrar por completo y cargar comparando estado con la referencia exacta. SoulSilver original funcionando no acredita Ultimate Gold. Wine no acepta Windows y los save states no demuestran compatibilidad de partidas normales. La paridad del módulo nativo precede a cualquier propuesta de vertical slice jugable, que tampoco aceptaría el juego completo.
+
+Antes de distribuir, revisar licencias y permisos de dependencias y código generado. Requerir la ROM propia del usuario; no distribuir ROMs, SDK propietario ni recursos protegidos. Siguen pendientes las decisiones humanas de alcance y la revisión independiente de evidencias. La traducción del juego es otra propuesta, distinta de plataformas y de la [revisión editorial pública #19](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/19). El estudio original permanece interno; esta sección es su síntesis canónica saneada de planificación.
