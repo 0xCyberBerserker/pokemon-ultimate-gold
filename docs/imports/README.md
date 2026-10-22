@@ -2,7 +2,11 @@
 
 ## English
 
-### Current snapshot 08
+### Current snapshot 10
+
+The [snapshot 10 manifest](2026-10-23-source-manifest-10.json), SHA-256 `88dbb967c4be4060f862c19afa3b14b69311c05ef3ec16e1f21d14219151bc24`, describes all 1,652 game files. Its byte-identical [delivery receipt](2026-10-23-delivery-validation-10.md) has SHA-256 `abfb66bf0335f5d6b9a58bc238fc44033284764672dc2028a55990c1a0619b68`. Against base `269f9690ca1037425698e21c87ed9ab97c0e6936`, only project status, current editor status and four generated wiki EN/ES body leaves change. No game files are added or removed. The stored-Party follow-up closes the grant-save comparison before Use; two later RAM checksums and post-Use Save/cold remain unaccepted. Alpha 2 downloads, code, patches, defaults and artwork are unchanged. Receiver checks verified inventory and documentation scope; source build/idempotence/test results are attributed to the receipt. No rendered or full-game acceptance follows. Earlier snapshots remain immutable historical records.
+
+### Historical snapshot 08
 
 The [snapshot 08 manifest](2026-10-23-source-manifest-08.json), SHA-256 `5ec6ff0fdfcd8bf56f84fd651953f45d0cbc4eb11eeac62115eeae278e23e2ba`, describes all 1,652 current game files, including the cache-reference change previously recorded below. Its byte-identical [delivery receipt](2026-10-23-delivery-validation-08.md) has SHA-256 `07827a27118cd5c2b5cd3e30685fe87665dbabf0dca6654ebda8d9edb8d1976c`. Against public main `02638754b4b3254244a6761dc6a6dffc1fc06800`, only four game files change: editor status, Nature QA, game roadmap and generated wiki data. No files are added or removed; root management documents are preserved.
 
@@ -41,7 +45,11 @@ ROMs, saves, states, raw memory dumps, archives, symlinks and Pages workflows ar
 
 ## Español
 
-### Instantánea actual 08
+### Instantánea actual 10
+
+El [manifiesto 10](2026-10-23-source-manifest-10.json) describe los 1.652 archivos de juego; manifiesto y [recibo idéntico](2026-10-23-delivery-validation-10.md) tienen los hashes indicados arriba. Frente a la base `269f9690ca1037425698e21c87ed9ab97c0e6936` sólo cambian estado del proyecto, estado del editor y cuatro cuerpos EN/ES del JSON wiki, sin altas ni bajas de juego. El seguimiento del equipo guardado cierra la comparación anterior a Use; quedan pendientes dos checksums RAM posteriores y otro Save/frío tras Use. Alfa 2 descargable, código, parches, valores predeterminados y arte no cambian. El receptor comprobó inventario y alcance documental; build, idempotencia y pruebas del origen se atribuyen al recibo. Sin aceptación de renderizado ni del juego completo. Los snapshots anteriores conservan su valor histórico inmutable.
+
+### Instantánea histórica 08
 
 El [manifiesto de la instantánea 08](2026-10-23-source-manifest-08.json), SHA-256 `5ec6ff0fdfcd8bf56f84fd651953f45d0cbc4eb11eeac62115eeae278e23e2ba`, describe los 1.652 archivos actuales de juego, incluido el cambio de caché registrado más abajo. Su [recibo de entrega](2026-10-23-delivery-validation-08.md), copiado byte a byte, tiene SHA-256 `07827a27118cd5c2b5cd3e30685fe87665dbabf0dca6654ebda8d9edb8d1976c`. Frente al main público `02638754b4b3254244a6761dc6a6dffc1fc06800`, solo cambian cuatro archivos: estado del editor, QA de naturaleza, roadmap del juego y datos generados de la wiki. No hay altas ni bajas; se conserva la gestión raíz.
 
