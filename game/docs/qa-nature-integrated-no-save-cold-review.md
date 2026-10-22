@@ -16,6 +16,12 @@ Bag evidence is bounded to the loaded cache/projection: BPAC is 2,376 bytes with
 
 Limits remain: runner gameplay acceptance is `NOT_ASSESSED`; Reset, another mutation after Save, PC storage, and full consumer coverage were not tested. See the frozen [acceptance JSON](@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-save-cold-audit-v3/acceptance.json).
 
+### Nature selector Back (separate bounded case)
+
+On bd50, six chained invocations with no cheats selected the explicit `Back` row on Nature selector page 1 and returned to the Nature action menu (`Set Nature / Reset to PID / Back`). Party SaveArray2 (1,460 bytes), the SaveArray3 Bag projection (1,952 bytes), the identified BPAC cache (2,376 bytes), and the source DSV remained byte-identical across this run. Pins: ROM `bd50a9d18ebc4397316a58595710ed7ed205dea839af4666af975a0373bf3164`; core `d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89`; runner `a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8`; source DSV `8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356`; acceptance JSON `906828ba5ad4ec15b21a8b8c203e31fa1b87ff85a1d38b28d527fde35c6a5488`; source QA note `6ba917dc99e5ad8f542d1985642d02324f2e6b9e83b82c1f06b645b51b16211d`; independent review `cf96173907ee1e6326a4d85cd3d45bc46bcff624b455b31e3a2b5d431fb266b1` (exact replay).
+
+This verifies only the selector Back return path. No Nature was applied; this case includes no Save, cold reload, or derived-stat claim.
+
 ## Español
 
 **Dictamen: aceptación acotada.** La evidencia congelada sustenta la rama de rechazo, el guardado nativo, la carga en frío y el Resumen registrado. Esta revisión independiente fue de solo lectura sobre el auditor y sus artefactos; no volvió a ejecutar la ROM ni el core.
@@ -31,3 +37,9 @@ La evidencia de la Bolsa se limita a la caché/proyección cargada: BPAC de 2.37
 **Límite de cifrado:** los slots 0–1 coinciden byte a byte con el DSV y tienen checksum válido. El slot 2 difiere y solo se acepta por la frontera estricta de cifrado (prefijo claro de 18 bytes; sufijo claro de Party desde 0); su checksum observado y la igualdad semántica decodificada son falsos. No se afirma que el slot 2 tenga decodificación ni checksum válidos ([comparación de cifrado](@HOME@/Games/Sacred-Gold/night-sprint/qa/dispatch_preview_sampled_acceptance.py:86)). El hash de la captura congelada del Resumen es `c70ef8402e68d2b2a0de8c3027b7a8271baad208d50fc16848faa53e8747d4c6`; el JSON atribuye a root la comprobación visual de Lonely.
 
 Límites: el runner marca `gameplay_acceptance` como `NOT_ASSESSED`; no se probaron Reset, otra mutación después de Save, almacenamiento PC ni cobertura completa de consumidores. Informe [acceptance JSON congelado](@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-save-cold-audit-v3/acceptance.json).
+
+### Back del selector Nature (caso acotado separado)
+
+En bd50, seis invocaciones encadenadas y sin trucos seleccionaron la fila explícita `Back` de la página 1 del selector Nature y regresaron al menú de acciones (`Set Nature / Reset to PID / Back`). SaveArray2 del equipo (1.460 bytes), la proyección de Bolsa SaveArray3 (1.952 bytes), la caché BPAC identificada (2.376 bytes) y la DSV fuente permanecieron idénticos byte a byte durante esta ejecución. Pins: ROM `bd50a9d18ebc4397316a58595710ed7ed205dea839af4666af975a0373bf3164`; núcleo `d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89`; runner `a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8`; DSV fuente `8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356`; JSON de aceptación `906828ba5ad4ec15b21a8b8c203e31fa1b87ff85a1d38b28d527fde35c6a5488`; nota QA fuente `6ba917dc99e5ad8f542d1985642d02324f2e6b9e83b82c1f06b645b51b16211d`; revisión independiente `cf96173907ee1e6326a4d85cd3d45bc46bcff624b455b31e3a2b5d431fb266b1` (reproducción exacta).
+
+Esto verifica únicamente el regreso mediante Back del selector. No se aplicó una Nature; este caso no incluye Save, recarga en frío ni afirmaciones sobre estadísticas derivadas.
