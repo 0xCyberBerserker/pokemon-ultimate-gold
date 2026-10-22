@@ -1,0 +1,14 @@
+*.nds
+*.NDS
+*.gba
+*.GBA
+*.sav
+*.dsv
+*.state
+*.states
+*.zip
+*.7z
+*.rar
+.env
+.env.*
+__pycache__/
