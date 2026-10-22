@@ -1,0 +1,46 @@
+name: Game CI
+
+on:
+  push:
+    paths:
+      - "game/**"
+      - ".github/workflows/game-ci.yml"
+      - ".github/workflows/game-pages.yml"
+  pull_request:
+    paths:
+      - "game/**"
+      - ".github/workflows/game-ci.yml"
+      - ".github/workflows/game-pages.yml"
+
+permissions:
+  contents: none
+
+jobs:
+  validate:
+    name: Build and test game project
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Build static site
+        run: python3 tools/build_site.py
+        working-directory: game
+
+      - name: Run standard-library tests
+        run: python3 -m unittest discover -s tests -v
+        working-directory: game
+        env:
+          SACRED_GOLD_CLEAN_ROM: ""
+          SACRED_GOLD_XDELTA: ""
+
+      - name: Record ROM-backed test scope
+        run: echo "Positive ROM-backed VCDIFF integration is intentionally skipped; CI receives no clean ROM."
+
+      - name: Check vendored VCDIFF JavaScript syntax
+        run: node --check web/vendor/rompatcher/vcdiff.js
+        working-directory: game
