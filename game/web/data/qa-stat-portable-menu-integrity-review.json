@@ -1,0 +1,98 @@
+{
+  "schema": "portable-menu-fadefix-integrity-review/v1",
+  "verdict": "PASS_STRICT_PARTY_BAG_AND_ROM_RESERVE_MATCH_AT_RETAINED_SNAPSHOTS",
+  "scope": "Offline comparison of the three frozen system_ram.bin snapshots only; no core, new run, ROM mutation, or evidence mutation.",
+  "summary_en": "All active Party records in the three retained RAM snapshots match the CRC-valid source DSV at strict per-record cipher boundaries. Full Bag SaveArray3 matches the selected DSV bytes, and all three 4 KiB RAM reserve ranges match the exact candidate ROM sections. Cold and cancel slot 2 are checksum-invalid during an encryption transition, but every byte matches one valid native cipher/plain boundary; no decoded semantic claim is made for those two records.",
+  "summary_es": "Todos los registros activos del equipo en las tres capturas RAM conservadas coinciden con la DSV fuente válida por CRC, usando fronteras estrictas de cifrado por registro. SaveArray3 completo de la Bolsa coincide con la DSV seleccionada y las tres reservas RAM de 4 KiB coinciden con las secciones de la ROM candidata. El slot 2 de las capturas cold y cancel tiene checksum inválido durante una transición de cifrado, pero todos sus bytes coinciden con una frontera nativa válida entre cifrado y texto plano; no se afirma semántica descifrada para esos dos registros.",
+  "dependencies": {
+    "smoke_report": {
+      "path": "qa/runs/portable-stat-editor-menu-fadefix-smoke-audit/acceptance.json",
+      "sha256": "d08f9460d65ff6332be88ce2bef068196423b1d8682644d02db12495efe0253a"
+    },
+    "candidate_rom": {
+      "path": "experiments/eviv/portable-stat-editor-menu-fadefix/portable-stat-editor-menu-fadefix-fix6a.nds",
+      "sha256": "2abb1c8cf87540aad70d3c7c13517bee5a159ef3e38af11a1440030b276317ed"
+    },
+    "source_dsv": {
+      "path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+      "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "bytes": 524410,
+      "selected_main_slot": {
+        "base": "0x00000000",
+        "counter": 10,
+        "crc16": "0x4322",
+        "both_slots_validated": true
+      }
+    },
+    "comparison_helpers": [
+      "qa/hm_fly_surf_fix6a_acceptance.py:party_match",
+      "internal/hm-qol/qa_fixtures.py:verify_save/decode_party_mon",
+      "qa/stat_editor_reset_native_acceptance.py:select_main"
+    ]
+  },
+  "party": {
+    "contract": "SaveArray2 is 1460 bytes at runtime offset 0xD080. The helper checks the 8-byte header, active record headers, every byte of each 236-byte record against an even-byte cipher/plain boundary per box and tail segment, and inactive bytes. No record bytes or fields are ignored or normalized.",
+    "runs": [
+      {
+        "run": "portable-stat-editor-menu-fadefix-cold",
+        "system_ram_sha256": "0aac1bbc98d72307e74824cba9159d6bb7a16c53cecd269a9e069b493f03fce0",
+        "party_count": 3,
+        "all_records_strictly_match_source": true,
+        "all_records_checksum_valid": false,
+        "records": [
+          {"slot": 0, "checksum_valid": true, "strict_match": true, "box_phase": {"mode": "plain_prefix", "split_bytes": 0}, "tail_phase": {"mode": "plain_prefix", "split_bytes": 0}},
+          {"slot": 1, "checksum_valid": true, "strict_match": true, "box_phase": {"mode": "plain_prefix", "split_bytes": 0}, "tail_phase": {"mode": "plain_prefix", "split_bytes": 0}},
+          {"slot": 2, "checksum_valid": false, "strict_match": true, "box_phase": {"mode": "plain_prefix", "split_bytes": 12}, "tail_phase": {"mode": "plain_suffix", "split_bytes": 0}}
+        ],
+        "decoded_semantics_for_invalid_slot": "NOT_CLAIMED"
+      },
+      {
+        "run": "portable-stat-editor-menu-fadefix-cancel-smoke",
+        "system_ram_sha256": "0cf568dfad14b6e626638a36cc9eb2f2d6821e17c641543a5cbb8a31de12b021",
+        "party_count": 3,
+        "all_records_strictly_match_source": true,
+        "all_records_checksum_valid": false,
+        "records": [
+          {"slot": 0, "checksum_valid": true, "strict_match": true, "box_phase": {"mode": "plain_prefix", "split_bytes": 0}, "tail_phase": {"mode": "plain_prefix", "split_bytes": 0}},
+          {"slot": 1, "checksum_valid": true, "strict_match": true, "box_phase": {"mode": "plain_prefix", "split_bytes": 0}, "tail_phase": {"mode": "plain_prefix", "split_bytes": 0}},
+          {"slot": 2, "checksum_valid": false, "strict_match": true, "box_phase": {"mode": "plain_suffix", "split_bytes": 0}, "tail_phase": {"mode": "plain_suffix", "split_bytes": 52}}
+        ],
+        "decoded_semantics_for_invalid_slot": "NOT_CLAIMED"
+      },
+      {
+        "run": "portable-stat-editor-menu-fadefix-reentry-selector",
+        "system_ram_sha256": "3d53962195f8c440b82441c99ce72008badce9635eb16737ec5b74c8876a4daa",
+        "party_count": 3,
+        "all_records_strictly_match_source": true,
+        "all_records_checksum_valid": true,
+        "records": [
+          {"slot": 0, "checksum_valid": true, "strict_match": true, "box_phase": {"mode": "plain_prefix", "split_bytes": 0}, "tail_phase": {"mode": "plain_prefix", "split_bytes": 0}},
+          {"slot": 1, "checksum_valid": true, "strict_match": true, "box_phase": {"mode": "plain_prefix", "split_bytes": 0}, "tail_phase": {"mode": "plain_prefix", "split_bytes": 0}},
+          {"slot": 2, "checksum_valid": true, "strict_match": true, "box_phase": {"mode": "plain_prefix", "split_bytes": 0}, "tail_phase": {"mode": "plain_prefix", "split_bytes": 0}}
+        ]
+      }
+    ]
+  },
+  "bag_save_array3": {
+    "runtime_contract": {"size": 1952, "ram_offset": "0xD634"},
+    "source_dsv_offset": "0x644",
+    "result": "EXACT_BYTE_MATCH_IN_ALL_THREE_SNAPSHOTS",
+    "runtime_and_source_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+  },
+  "reserved_ram": {
+    "result": "EXACT_MATCH_TO_CANDIDATE_ROM_MAIN_CODE_SECTIONS_IN_ALL_THREE_SNAPSHOTS",
+    "ranges": [
+      {"address": "0x023D5000", "size": 4096, "section_address": "0x023D5000", "ram_and_rom_sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399"},
+      {"address": "0x023D6000", "size": 4096, "section_address": "0x023D6000", "ram_and_rom_sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e"},
+      {"address": "0x023D7000", "size": 4096, "section_address": "0x023D7000", "ram_and_rom_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"}
+    ]
+  },
+  "limits": {
+    "ram_scope": "Only the three retained system_ram.bin final snapshots were compared; the screenshots do not have matching per-frame RAM dumps in this evidence set.",
+    "setter": "NOT_TESTED",
+    "save_persistence": "NOT_TESTED",
+    "post_use_cold_reload": "NOT_TESTED",
+    "reentry": "BAG_UI_ONLY; PARTY_SLOT_AND_EDITOR_NOT_REACHED",
+    "friendship_or_other_semantic_delta": "NOT_INFERRED_FROM_CHECKSUM_INVALID_TRANSITION_RECORDS"
+  }
+}

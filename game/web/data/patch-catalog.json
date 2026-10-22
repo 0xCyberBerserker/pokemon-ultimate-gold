@@ -1,0 +1,31 @@
+{
+  "schema": "ultimate-gold-patch-catalog/v1",
+  "default": "alpha2",
+  "versions": {
+    "alpha1": {
+      "label": {
+        "en": "Alpha 1 — previous build",
+        "es": "Alfa 1 — versión anterior"
+      },
+      "note": {
+        "en": "Previous tested-partial build.",
+        "es": "Versión anterior con pruebas parciales."
+      },
+      "manifest": "./patch-manifest-alpha1.json",
+      "status": "TESTED_PARTIAL"
+    },
+    "alpha2": {
+      "label": {
+        "en": "Alpha 2 — experimental, tested partial",
+        "es": "Alfa 2 — experimental, pruebas parciales"
+      },
+      "note": {
+        "en": "Experimental exact-FIX6a build with bounded QA. Full-story testing is pending; EVIV editing and Kris are not included.",
+        "es": "Build experimental FIX6a exacto con QA acotado. Falta probar la historia completa; no incluye editor EVIV ni Kris."
+      },
+      "manifest": "./patch-manifest-alpha2.json",
+      "status": "EXPERIMENTAL_TESTED_PARTIAL",
+      "experimental": true
+    }
+  }
+}

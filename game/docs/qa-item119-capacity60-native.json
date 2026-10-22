@@ -1,0 +1,1173 @@
+{
+  "schema": "rocket-stat-editor-capacity60-bd50-native-acceptance/v1",
+  "status": "BOUNDED_NATIVE_CAPACITY_RETRY_PASS",
+  "gameplay_acceptance": "NOT_ASSESSED",
+  "native_save": "NOT_PERFORMED",
+  "item_use": "NOT_TESTED",
+  "scope": "One exact ROM build; full-60 rejection; one empty-slot preparation branched from the rejection state; retry grant; duplicate re-entry.",
+  "pins": {
+    "files": {
+      "rom": {
+        "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/stat-editor-nature-integrated-rocket08e-same-conversation/ultimate-gold-stat-editor-nature-integrated-same-conversation.nds",
+        "sha256": "bd50a9d18ebc4397316a58595710ed7ed205dea839af4666af975a0373bf3164"
+      },
+      "core": {
+        "path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+        "sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+      },
+      "runner": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_capacity_bd50.py",
+        "sha256": "907a8ef3da22b71577289cc9454f764f27de8c4a248bfe6f913f6cc6c537814b"
+      },
+      "runner_wrapper": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_once_capacity_bd50.py",
+        "sha256": "a98874215d53bc2dc68ddd4ca720a5695536df7328750e507a6d9f390dba0e9f"
+      },
+      "capacity_helper": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/rocket_stat_editor_capacity60_fixtures_bd50.py",
+        "sha256": "b4a680be897be229221f2c59e2a41344627554de45816902c4db718164fa5b6c"
+      },
+      "gift_helper": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/alpha2_gift_acceptance.py",
+        "sha256": "3dd43377ba35da956debb2209e9de18873ee9333db9cdd0eb3ff2e18a1ac799b"
+      },
+      "party_helper": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/hm_fly_surf_fix6a_acceptance.py",
+        "sha256": "06e4e6df491719b883e25503715e45dbdcf0cd0ec7fd2785bcd3d962b13208bb"
+      },
+      "full60_recipe": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/rocket_stat_editor_capacity60_bd50_20261022/full60_preparation_ar.json",
+        "sha256": "f076644c809b32ad5fac9c8193e56fa05d02759d84d61079d019e1d02ad94016"
+      },
+      "release59_recipe": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/rocket_stat_editor_capacity60_bd50_20261022/release_filler59_ar.json",
+        "sha256": "a7dd399cd59803c0811a8485fb8aceecfeca5153a30945d204a7cabf5f9cafea"
+      },
+      "recipe_manifest": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/rocket_stat_editor_capacity60_bd50_20261022/manifest.json",
+        "sha256": "461b3a54b252aa1751986cf5029cd5f9caa8cadc8f870c02de42a50651bc5d4b"
+      }
+    },
+    "seed": {
+      "dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-bd50-dialogue-05-20261022/battery-evidence/ultimate-gold-stat-editor-nature-integrated-same-conversation.dsv",
+      "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "dsv_bytes": 524410,
+      "selected_slot": {
+        "active_base": 262144,
+        "active_counter": 9,
+        "active_crc16": 53760,
+        "both_slots_crc_valid": true,
+        "party_offset": 262288
+      },
+      "state_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-bd50-dialogue-05-20261022/dialogue.state",
+      "state_sha256": "90bec123c1cd43f7b67fd51baeaba6771b1356ffc4e7aa52b9bfc36c47d8527c",
+      "profile_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-profile-20261022/ultimate-gold-stat-editor-nature-integrated-same-conversation.dsv",
+      "profile_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+    },
+    "capacity": {
+      "cache_address": "0x023DD700",
+      "bag_address": "0x023DD714",
+      "slot_count": 594,
+      "key_item_slots": 60,
+      "save_array3_size": 860
+    }
+  },
+  "runs": [
+    {
+      "id": "full60_preparation",
+      "run": "rocket-capacity60-bd50-full60-prep-20261022-b",
+      "classification": "SETUP_ONLY",
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-full60-prep-20261022-b/full60.state",
+        "sha256": "fa8bfef9e3f6c5504dd168c4292e5598294e035dd1dedde6d87e615ec26ada06",
+        "parent_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-bd50-dialogue-05-20261022/dialogue.state",
+        "parent_sha256": "90bec123c1cd43f7b67fd51baeaba6771b1356ffc4e7aa52b9bfc36c47d8527c"
+      },
+      "result_sha256": "c2152cf21fead368797689e39b5713a832ed0726535fb902d92b065d60bf0c2d",
+      "battery_sidecar_sha256": "6c46183b120d22d28a5d5b471b682c61207a5cec8e0b2279e94e147f2bac7a6e",
+      "frames": 3,
+      "input_script_sha256": "bf4cd8a7274d1336971e7b152e8305499349a157b9f1bc46b6273e96100ce860",
+      "setup_recipe": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-full60-prep-20261022-b/input-cheats.json",
+        "sha256": "f076644c809b32ad5fac9c8193e56fa05d02759d84d61079d019e1d02ad94016",
+        "code_sha256": [
+          "b5eb369c1f7ae617b2baaf5f09350767edaebda31ad8c970ad1918625a098d47",
+          "a30805c69ebe04fd04d9b2b571f37321cd46f18ed05fe09b985990db528b9eb8",
+          "fc86fdcb5be2b41dcd78d9370556add2d65c4625f2ffb7241153723e75c85db3"
+        ],
+        "active_frames": [
+          0,
+          2
+        ],
+        "purpose": "temporary Bag fixture preparation only"
+      },
+      "cheats_during_interaction": [
+        {
+          "sha256": "b5eb369c1f7ae617b2baaf5f09350767edaebda31ad8c970ad1918625a098d47",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "sha256": "a30805c69ebe04fd04d9b2b571f37321cd46f18ed05fe09b985990db528b9eb8",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "sha256": "fc86fdcb5be2b41dcd78d9370556add2d65c4625f2ffb7241153723e75c85db3",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "ram_sha256": "9ccb73877030bf542ce828ed8f6c9c1079b7fc3ec5c12fcc2f2b99bf15d92477",
+      "seed_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "save_array3": {
+        "address": "0x0227C838",
+        "size": 1952,
+        "key_item_projection_matches_cache_first_50": true
+      },
+      "key_item_cache": {
+        "occupied_slots": 60,
+        "slot59": [
+          535,
+          1
+        ],
+        "stat_editor_119_quantity": 0,
+        "canonical_bag_sha256": "27919ea30f414f25d0689057cfc16718fbc4b9c7823473a13b3963fd6fe6802b",
+        "key_pocket_inventory": {
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "429": 1,
+          "430": 1,
+          "431": 1,
+          "434": 1,
+          "435": 1,
+          "437": 1,
+          "440": 1,
+          "441": 1,
+          "442": 1,
+          "443": 1,
+          "444": 1,
+          "445": 1,
+          "446": 1,
+          "447": 1,
+          "448": 1,
+          "449": 1,
+          "450": 1,
+          "451": 1,
+          "452": 1,
+          "453": 1,
+          "455": 1,
+          "456": 1,
+          "457": 1,
+          "458": 1,
+          "459": 1,
+          "460": 1,
+          "461": 1,
+          "462": 1,
+          "463": 1,
+          "464": 1,
+          "465": 1,
+          "466": 1,
+          "468": 1,
+          "469": 1,
+          "470": 1,
+          "471": 1,
+          "472": 1,
+          "473": 1,
+          "474": 1,
+          "475": 1,
+          "476": 1,
+          "477": 1,
+          "478": 1,
+          "479": 1,
+          "480": 1,
+          "481": 1,
+          "482": 1,
+          "483": 1,
+          "484": 1,
+          "501": 1,
+          "502": 1,
+          "503": 1,
+          "504": 1,
+          "532": 1,
+          "533": 1,
+          "534": 1,
+          "535": 1
+        }
+      },
+      "party": {
+        "all_records_strictly_match_seed": true,
+        "all_checksums_valid": true,
+        "checksum_validity_is_diagnostic_only": true,
+        "party_count": 3,
+        "ram_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "screenshots": []
+    },
+    {
+      "id": "full60_rejection",
+      "run": "rocket-capacity60-bd50-full60-reject-20261022-a",
+      "classification": "NATIVE_INTERACTION_NO_CODES",
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-full60-reject-20261022-a/reject.state",
+        "sha256": "c542c27fa817ab647d171bcc3555948284641c6a3fe0f3b27891c03eaea6fa72",
+        "parent_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-full60-prep-20261022-b/full60.state",
+        "parent_sha256": "fa8bfef9e3f6c5504dd168c4292e5598294e035dd1dedde6d87e615ec26ada06"
+      },
+      "result_sha256": "03832aeb07d349ef11c67ec9d7e5380a228a492a7b4183f2d20a8dce7622d2c9",
+      "battery_sidecar_sha256": "c9f2e8134ba49f4ffb4c78b7dab8a823f9b5fd08b7e2b9b2338143b45014763e",
+      "frames": 90,
+      "input_script_sha256": "f47aa5078de236b88fed519ccc7289ea66a318ae8e13332eeda1d1299dbb658e",
+      "setup_recipe": null,
+      "cheats_during_interaction": [],
+      "ram_sha256": "7ad00073c49250c1200374422874e7db20e51e73506d02a6eec4ed7091257381",
+      "seed_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "save_array3": {
+        "address": "0x0227C838",
+        "size": 1952,
+        "key_item_projection_matches_cache_first_50": true
+      },
+      "key_item_cache": {
+        "occupied_slots": 60,
+        "slot59": [
+          535,
+          1
+        ],
+        "stat_editor_119_quantity": 0,
+        "canonical_bag_sha256": "27919ea30f414f25d0689057cfc16718fbc4b9c7823473a13b3963fd6fe6802b",
+        "key_pocket_inventory": {
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "429": 1,
+          "430": 1,
+          "431": 1,
+          "434": 1,
+          "435": 1,
+          "437": 1,
+          "440": 1,
+          "441": 1,
+          "442": 1,
+          "443": 1,
+          "444": 1,
+          "445": 1,
+          "446": 1,
+          "447": 1,
+          "448": 1,
+          "449": 1,
+          "450": 1,
+          "451": 1,
+          "452": 1,
+          "453": 1,
+          "455": 1,
+          "456": 1,
+          "457": 1,
+          "458": 1,
+          "459": 1,
+          "460": 1,
+          "461": 1,
+          "462": 1,
+          "463": 1,
+          "464": 1,
+          "465": 1,
+          "466": 1,
+          "468": 1,
+          "469": 1,
+          "470": 1,
+          "471": 1,
+          "472": 1,
+          "473": 1,
+          "474": 1,
+          "475": 1,
+          "476": 1,
+          "477": 1,
+          "478": 1,
+          "479": 1,
+          "480": 1,
+          "481": 1,
+          "482": 1,
+          "483": 1,
+          "484": 1,
+          "501": 1,
+          "502": 1,
+          "503": 1,
+          "504": 1,
+          "532": 1,
+          "533": 1,
+          "534": 1,
+          "535": 1
+        }
+      },
+      "party": {
+        "all_records_strictly_match_seed": true,
+        "all_checksums_valid": true,
+        "checksum_validity_is_diagnostic_only": true,
+        "party_count": 3,
+        "ram_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-full60-reject-20261022-a/before_capacity_choice.png",
+          "sha256": "2e7e114364f557c6fcbef44f5ba080e19419b9cf719eb43ad99ae05ca1038faf"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-full60-reject-20261022-a/full60_result_message.png",
+          "sha256": "a1e0dc9fe17e52c0ba0589d57f7f5dbe6dba2f7b180f9c229ab87ba011303198"
+        }
+      ]
+    },
+    {
+      "id": "alternative_release59_preparation_excluded",
+      "run": "rocket-capacity60-bd50-release59-prep-20261022-a",
+      "classification": "SETUP_ONLY",
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-release59-prep-20261022-a/release59.state",
+        "sha256": "9660e8d6a8de27dcb1af3e462cd069b213f1eeaf3da081b1fc6f824f4e5b151d",
+        "parent_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-full60-prep-20261022-b/full60.state",
+        "parent_sha256": "fa8bfef9e3f6c5504dd168c4292e5598294e035dd1dedde6d87e615ec26ada06"
+      },
+      "result_sha256": "e1e72518687fe9efe10e7a531d8f721f17ae49fdd798fc4db2a3c936d60c2fa6",
+      "battery_sidecar_sha256": "03030000ef4669aefd622d7e82d2e0f0f07b8f914e9b65a48bfa2bc0517e9cda",
+      "frames": 3,
+      "input_script_sha256": "bf4cd8a7274d1336971e7b152e8305499349a157b9f1bc46b6273e96100ce860",
+      "setup_recipe": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-release59-prep-20261022-a/input-cheats.json",
+        "sha256": "a7dd399cd59803c0811a8485fb8aceecfeca5153a30945d204a7cabf5f9cafea",
+        "code_sha256": [
+          "59a3b6696264984bb5d47d894f05f16aa9b46a7f34cd7c2e9d1fa7197658c8d3"
+        ],
+        "active_frames": [
+          0,
+          2
+        ],
+        "purpose": "temporary Bag fixture preparation only"
+      },
+      "cheats_during_interaction": [
+        {
+          "sha256": "59a3b6696264984bb5d47d894f05f16aa9b46a7f34cd7c2e9d1fa7197658c8d3",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "ram_sha256": "17e33780c63a0046fbcb57fd4ab2d1253273645fa5ba4dfa59b9361cd3f0675b",
+      "seed_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "save_array3": {
+        "address": "0x0227C838",
+        "size": 1952,
+        "key_item_projection_matches_cache_first_50": true
+      },
+      "key_item_cache": {
+        "occupied_slots": 59,
+        "slot59": [
+          0,
+          0
+        ],
+        "stat_editor_119_quantity": 0,
+        "canonical_bag_sha256": "ca4d72cea15d254fb7b6af29fe1f615c55a8126564ce8d70c7376431ff64f1a4",
+        "key_pocket_inventory": {
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "429": 1,
+          "430": 1,
+          "431": 1,
+          "434": 1,
+          "435": 1,
+          "437": 1,
+          "440": 1,
+          "441": 1,
+          "442": 1,
+          "443": 1,
+          "444": 1,
+          "445": 1,
+          "446": 1,
+          "447": 1,
+          "448": 1,
+          "449": 1,
+          "450": 1,
+          "451": 1,
+          "452": 1,
+          "453": 1,
+          "455": 1,
+          "456": 1,
+          "457": 1,
+          "458": 1,
+          "459": 1,
+          "460": 1,
+          "461": 1,
+          "462": 1,
+          "463": 1,
+          "464": 1,
+          "465": 1,
+          "466": 1,
+          "468": 1,
+          "469": 1,
+          "470": 1,
+          "471": 1,
+          "472": 1,
+          "473": 1,
+          "474": 1,
+          "475": 1,
+          "476": 1,
+          "477": 1,
+          "478": 1,
+          "479": 1,
+          "480": 1,
+          "481": 1,
+          "482": 1,
+          "483": 1,
+          "484": 1,
+          "501": 1,
+          "502": 1,
+          "503": 1,
+          "504": 1,
+          "532": 1,
+          "533": 1,
+          "534": 1
+        }
+      },
+      "party": {
+        "all_records_strictly_match_seed": true,
+        "all_checksums_valid": true,
+        "checksum_validity_is_diagnostic_only": true,
+        "party_count": 3,
+        "ram_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "screenshots": []
+    },
+    {
+      "id": "post_rejection_release59_preparation",
+      "run": "rocket-capacity60-bd50-release59-recovery-prep-20261022-a",
+      "classification": "SETUP_ONLY",
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-release59-recovery-prep-20261022-a/recovery59.state",
+        "sha256": "6b34c0d8be812c9b7110c05a46c14a746a2feed59b475e015747418b0a5412f4",
+        "parent_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-full60-reject-20261022-a/reject.state",
+        "parent_sha256": "c542c27fa817ab647d171bcc3555948284641c6a3fe0f3b27891c03eaea6fa72"
+      },
+      "result_sha256": "450c8fc2a4aad9b62682808a72fdbc17e6f114cb27b07d29bc5ab07693ff3af1",
+      "battery_sidecar_sha256": "8dad5ffba48e77854cfdcf42b8aea08cdbb0a68678abc409152fd7b30461f557",
+      "frames": 3,
+      "input_script_sha256": "bf4cd8a7274d1336971e7b152e8305499349a157b9f1bc46b6273e96100ce860",
+      "setup_recipe": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-release59-recovery-prep-20261022-a/input-cheats.json",
+        "sha256": "a7dd399cd59803c0811a8485fb8aceecfeca5153a30945d204a7cabf5f9cafea",
+        "code_sha256": [
+          "59a3b6696264984bb5d47d894f05f16aa9b46a7f34cd7c2e9d1fa7197658c8d3"
+        ],
+        "active_frames": [
+          0,
+          2
+        ],
+        "purpose": "temporary Bag fixture preparation only"
+      },
+      "cheats_during_interaction": [
+        {
+          "sha256": "59a3b6696264984bb5d47d894f05f16aa9b46a7f34cd7c2e9d1fa7197658c8d3",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "ram_sha256": "b6ebde1fc09c04e940d49e70aebbfcaff42a9985b07cde500d75cd3ca4164da5",
+      "seed_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "save_array3": {
+        "address": "0x0227C838",
+        "size": 1952,
+        "key_item_projection_matches_cache_first_50": true
+      },
+      "key_item_cache": {
+        "occupied_slots": 59,
+        "slot59": [
+          0,
+          0
+        ],
+        "stat_editor_119_quantity": 0,
+        "canonical_bag_sha256": "ca4d72cea15d254fb7b6af29fe1f615c55a8126564ce8d70c7376431ff64f1a4",
+        "key_pocket_inventory": {
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "429": 1,
+          "430": 1,
+          "431": 1,
+          "434": 1,
+          "435": 1,
+          "437": 1,
+          "440": 1,
+          "441": 1,
+          "442": 1,
+          "443": 1,
+          "444": 1,
+          "445": 1,
+          "446": 1,
+          "447": 1,
+          "448": 1,
+          "449": 1,
+          "450": 1,
+          "451": 1,
+          "452": 1,
+          "453": 1,
+          "455": 1,
+          "456": 1,
+          "457": 1,
+          "458": 1,
+          "459": 1,
+          "460": 1,
+          "461": 1,
+          "462": 1,
+          "463": 1,
+          "464": 1,
+          "465": 1,
+          "466": 1,
+          "468": 1,
+          "469": 1,
+          "470": 1,
+          "471": 1,
+          "472": 1,
+          "473": 1,
+          "474": 1,
+          "475": 1,
+          "476": 1,
+          "477": 1,
+          "478": 1,
+          "479": 1,
+          "480": 1,
+          "481": 1,
+          "482": 1,
+          "483": 1,
+          "484": 1,
+          "501": 1,
+          "502": 1,
+          "503": 1,
+          "504": 1,
+          "532": 1,
+          "533": 1,
+          "534": 1
+        }
+      },
+      "party": {
+        "all_records_strictly_match_seed": true,
+        "all_checksums_valid": true,
+        "checksum_validity_is_diagnostic_only": true,
+        "party_count": 3,
+        "ram_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "screenshots": []
+    },
+    {
+      "id": "recovery_notice_acknowledgement",
+      "run": "rocket-capacity60-bd50-recovery-ack-20261022-a",
+      "classification": "NATIVE_INTERACTION_NO_CODES",
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-recovery-ack-20261022-a/ack.state",
+        "sha256": "2a717329ce983264611e8eef1da9f357ea249589e1c5df76abe328cdd618d7ab",
+        "parent_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-release59-recovery-prep-20261022-a/recovery59.state",
+        "parent_sha256": "6b34c0d8be812c9b7110c05a46c14a746a2feed59b475e015747418b0a5412f4"
+      },
+      "result_sha256": "1f5dafea6f80c01379e11b87a5443aeeb12f9a6791cf1313ea55b80ca0798e01",
+      "battery_sidecar_sha256": "c92a351d3e0edc8f246d67ce11e16e0ca63e22d740a51ebdbe95d307ad6e0a01",
+      "frames": 90,
+      "input_script_sha256": "7a0612eb43d9359e3abd2c93ca0ad5d03645b32a04034cc6e0e0ea87f029c23e",
+      "setup_recipe": null,
+      "cheats_during_interaction": [],
+      "ram_sha256": "736b06721a599ec190103c254ba56848e5e281f900f41f93fa60c6afb11e5c92",
+      "seed_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "save_array3": {
+        "address": "0x0227C838",
+        "size": 1952,
+        "key_item_projection_matches_cache_first_50": true
+      },
+      "key_item_cache": {
+        "occupied_slots": 59,
+        "slot59": [
+          0,
+          0
+        ],
+        "stat_editor_119_quantity": 0,
+        "canonical_bag_sha256": "ca4d72cea15d254fb7b6af29fe1f615c55a8126564ce8d70c7376431ff64f1a4",
+        "key_pocket_inventory": {
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "429": 1,
+          "430": 1,
+          "431": 1,
+          "434": 1,
+          "435": 1,
+          "437": 1,
+          "440": 1,
+          "441": 1,
+          "442": 1,
+          "443": 1,
+          "444": 1,
+          "445": 1,
+          "446": 1,
+          "447": 1,
+          "448": 1,
+          "449": 1,
+          "450": 1,
+          "451": 1,
+          "452": 1,
+          "453": 1,
+          "455": 1,
+          "456": 1,
+          "457": 1,
+          "458": 1,
+          "459": 1,
+          "460": 1,
+          "461": 1,
+          "462": 1,
+          "463": 1,
+          "464": 1,
+          "465": 1,
+          "466": 1,
+          "468": 1,
+          "469": 1,
+          "470": 1,
+          "471": 1,
+          "472": 1,
+          "473": 1,
+          "474": 1,
+          "475": 1,
+          "476": 1,
+          "477": 1,
+          "478": 1,
+          "479": 1,
+          "480": 1,
+          "481": 1,
+          "482": 1,
+          "483": 1,
+          "484": 1,
+          "501": 1,
+          "502": 1,
+          "503": 1,
+          "504": 1,
+          "532": 1,
+          "533": 1,
+          "534": 1
+        }
+      },
+      "party": {
+        "all_records_strictly_match_seed": true,
+        "all_checksums_valid": false,
+        "checksum_validity_is_diagnostic_only": true,
+        "party_count": 3,
+        "ram_party_array_sha256": "4c2d5aeacf916e3d1fef854c2b2a45ec762eeb81d82a51de534d7620f37bd4f0",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "screenshots": []
+    },
+    {
+      "id": "post_rejection_retry_offer",
+      "run": "rocket-capacity60-bd50-recovery-talk-20261022-a",
+      "classification": "NATIVE_INTERACTION_NO_CODES",
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-recovery-talk-20261022-a/talk.state",
+        "sha256": "2517ff554ef3941e82cf81f28d3fde322ebdb2bdceed26a4af95cd6421c07980",
+        "parent_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-recovery-ack-20261022-a/ack.state",
+        "parent_sha256": "2a717329ce983264611e8eef1da9f357ea249589e1c5df76abe328cdd618d7ab"
+      },
+      "result_sha256": "4a5c81e37eb27735d9b0e00f44d0577f78130f4fcbac866c3a49426d9317cc23",
+      "battery_sidecar_sha256": "b0e66e9318d87578821c08fc5701518e06e78b91755d16e6ac7dc4971e83e2db",
+      "frames": 160,
+      "input_script_sha256": "a0e88dbfbe28dba14d1c85769d27ff1da02542c60bd696937d716a9ab084be7b",
+      "setup_recipe": null,
+      "cheats_during_interaction": [],
+      "ram_sha256": "42c3506d42bc6ee7e46c18aa9a438a928a8a49e7ebeb71e0c589ac1a96d3850c",
+      "seed_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "save_array3": {
+        "address": "0x0227C838",
+        "size": 1952,
+        "key_item_projection_matches_cache_first_50": true
+      },
+      "key_item_cache": {
+        "occupied_slots": 59,
+        "slot59": [
+          0,
+          0
+        ],
+        "stat_editor_119_quantity": 0,
+        "canonical_bag_sha256": "ca4d72cea15d254fb7b6af29fe1f615c55a8126564ce8d70c7376431ff64f1a4",
+        "key_pocket_inventory": {
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "429": 1,
+          "430": 1,
+          "431": 1,
+          "434": 1,
+          "435": 1,
+          "437": 1,
+          "440": 1,
+          "441": 1,
+          "442": 1,
+          "443": 1,
+          "444": 1,
+          "445": 1,
+          "446": 1,
+          "447": 1,
+          "448": 1,
+          "449": 1,
+          "450": 1,
+          "451": 1,
+          "452": 1,
+          "453": 1,
+          "455": 1,
+          "456": 1,
+          "457": 1,
+          "458": 1,
+          "459": 1,
+          "460": 1,
+          "461": 1,
+          "462": 1,
+          "463": 1,
+          "464": 1,
+          "465": 1,
+          "466": 1,
+          "468": 1,
+          "469": 1,
+          "470": 1,
+          "471": 1,
+          "472": 1,
+          "473": 1,
+          "474": 1,
+          "475": 1,
+          "476": 1,
+          "477": 1,
+          "478": 1,
+          "479": 1,
+          "480": 1,
+          "481": 1,
+          "482": 1,
+          "483": 1,
+          "484": 1,
+          "501": 1,
+          "502": 1,
+          "503": 1,
+          "504": 1,
+          "532": 1,
+          "533": 1,
+          "534": 1
+        }
+      },
+      "party": {
+        "all_records_strictly_match_seed": true,
+        "all_checksums_valid": true,
+        "checksum_validity_is_diagnostic_only": true,
+        "party_count": 3,
+        "ram_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-recovery-talk-20261022-a/rocket_retalk_open.png",
+          "sha256": "ff53a09d74ca59f6e98f6660696258f9dec41af15d448dff7b5e81888ea6a480"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-recovery-talk-20261022-a/rocket_retalk_wait.png",
+          "sha256": "13b6bed50c70d29ebde8c466fa59b0bde836efa90950226cf74643744b78563b"
+        }
+      ]
+    },
+    {
+      "id": "post_rejection_retry_acceptance",
+      "run": "rocket-capacity60-bd50-retry-accept-20261022-a",
+      "classification": "NATIVE_INTERACTION_NO_CODES",
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-retry-accept-20261022-a/accepted.state",
+        "sha256": "5bd2c63da9aba7f6870e31a297f9f537e2502704d3ef2353d687d8dda5e7a3f2",
+        "parent_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-recovery-talk-20261022-a/talk.state",
+        "parent_sha256": "2517ff554ef3941e82cf81f28d3fde322ebdb2bdceed26a4af95cd6421c07980"
+      },
+      "result_sha256": "255adba0888802e56e12d57f774f16afba0bec414ea5f5924feeb2d7b9dabd17",
+      "battery_sidecar_sha256": "96f0672286a320abfcdc924f995f16aeccf97311520d2cf82f86143b5b94002f",
+      "frames": 90,
+      "input_script_sha256": "eb0978f822490951d177e5a653604d466929ad50a4e0491c7f59bd3c4a32d418",
+      "setup_recipe": null,
+      "cheats_during_interaction": [],
+      "ram_sha256": "fe0c8b7d6c7dd325505da9a773ced63c56ecfdc38fc08a4cbcb01a022dc52172",
+      "seed_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "save_array3": {
+        "address": "0x0227C838",
+        "size": 1952,
+        "key_item_projection_matches_cache_first_50": true
+      },
+      "key_item_cache": {
+        "occupied_slots": 60,
+        "slot59": [
+          119,
+          1
+        ],
+        "stat_editor_119_quantity": 1,
+        "canonical_bag_sha256": "5dc486fe8a5732ed352c34d86d8d995af49b9dee09de2649324cf06f961cafc3",
+        "key_pocket_inventory": {
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1,
+          "429": 1,
+          "430": 1,
+          "431": 1,
+          "434": 1,
+          "435": 1,
+          "437": 1,
+          "440": 1,
+          "441": 1,
+          "442": 1,
+          "443": 1,
+          "444": 1,
+          "445": 1,
+          "446": 1,
+          "447": 1,
+          "448": 1,
+          "449": 1,
+          "450": 1,
+          "451": 1,
+          "452": 1,
+          "453": 1,
+          "455": 1,
+          "456": 1,
+          "457": 1,
+          "458": 1,
+          "459": 1,
+          "460": 1,
+          "461": 1,
+          "462": 1,
+          "463": 1,
+          "464": 1,
+          "465": 1,
+          "466": 1,
+          "468": 1,
+          "469": 1,
+          "470": 1,
+          "471": 1,
+          "472": 1,
+          "473": 1,
+          "474": 1,
+          "475": 1,
+          "476": 1,
+          "477": 1,
+          "478": 1,
+          "479": 1,
+          "480": 1,
+          "481": 1,
+          "482": 1,
+          "483": 1,
+          "484": 1,
+          "501": 1,
+          "502": 1,
+          "503": 1,
+          "504": 1,
+          "532": 1,
+          "533": 1,
+          "534": 1
+        }
+      },
+      "party": {
+        "all_records_strictly_match_seed": true,
+        "all_checksums_valid": true,
+        "checksum_validity_is_diagnostic_only": true,
+        "party_count": 3,
+        "ram_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-retry-accept-20261022-a/yes_selected_before_retry.png",
+          "sha256": "bb57425b601ae49ed1d9a571617aa0198eb44b2d0e02ec1912456bd2ceb865ac"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-retry-accept-20261022-a/retry_grant_result.png",
+          "sha256": "c471fea2ead5bae0b002631ce9f8d8df9d44ba2659db0380b8359ac183bea585"
+        }
+      ]
+    },
+    {
+      "id": "grant_notice_acknowledgement",
+      "run": "rocket-capacity60-bd50-grant-ack-20261022-a",
+      "classification": "NATIVE_INTERACTION_NO_CODES",
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-grant-ack-20261022-a/ack.state",
+        "sha256": "843bbc5379d99aa90858c36109a28190c218a5b695b3c0ad0816b8de0dd57b14",
+        "parent_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-retry-accept-20261022-a/accepted.state",
+        "parent_sha256": "5bd2c63da9aba7f6870e31a297f9f537e2502704d3ef2353d687d8dda5e7a3f2"
+      },
+      "result_sha256": "b0529fb4b92dc1b9e2cf19592f0e16e655eec00b785b5671af7cf4d7eddaf6de",
+      "battery_sidecar_sha256": "407f50891ec140f9986e348c052cb298198e3eceabb5122a08371efa44557dc6",
+      "frames": 90,
+      "input_script_sha256": "b702b88e1c7042a6e966c1a1a2ffa456e79c3473e7873801ad2a496d8baf2ce7",
+      "setup_recipe": null,
+      "cheats_during_interaction": [],
+      "ram_sha256": "b91af48eeac41eaad2043c8c5cd9d80fa77b41eaa1c477810b16935ba3520eec",
+      "seed_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "save_array3": {
+        "address": "0x0227C838",
+        "size": 1952,
+        "key_item_projection_matches_cache_first_50": true
+      },
+      "key_item_cache": {
+        "occupied_slots": 60,
+        "slot59": [
+          119,
+          1
+        ],
+        "stat_editor_119_quantity": 1,
+        "canonical_bag_sha256": "5dc486fe8a5732ed352c34d86d8d995af49b9dee09de2649324cf06f961cafc3",
+        "key_pocket_inventory": {
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1,
+          "429": 1,
+          "430": 1,
+          "431": 1,
+          "434": 1,
+          "435": 1,
+          "437": 1,
+          "440": 1,
+          "441": 1,
+          "442": 1,
+          "443": 1,
+          "444": 1,
+          "445": 1,
+          "446": 1,
+          "447": 1,
+          "448": 1,
+          "449": 1,
+          "450": 1,
+          "451": 1,
+          "452": 1,
+          "453": 1,
+          "455": 1,
+          "456": 1,
+          "457": 1,
+          "458": 1,
+          "459": 1,
+          "460": 1,
+          "461": 1,
+          "462": 1,
+          "463": 1,
+          "464": 1,
+          "465": 1,
+          "466": 1,
+          "468": 1,
+          "469": 1,
+          "470": 1,
+          "471": 1,
+          "472": 1,
+          "473": 1,
+          "474": 1,
+          "475": 1,
+          "476": 1,
+          "477": 1,
+          "478": 1,
+          "479": 1,
+          "480": 1,
+          "481": 1,
+          "482": 1,
+          "483": 1,
+          "484": 1,
+          "501": 1,
+          "502": 1,
+          "503": 1,
+          "504": 1,
+          "532": 1,
+          "533": 1,
+          "534": 1
+        }
+      },
+      "party": {
+        "all_records_strictly_match_seed": true,
+        "all_checksums_valid": false,
+        "checksum_validity_is_diagnostic_only": true,
+        "party_count": 3,
+        "ram_party_array_sha256": "cf50f42f3702028ebfbd048257b964be79b68e54951e8f0543fcfa4f7efd88b7",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "screenshots": []
+    },
+    {
+      "id": "already_owned_reentry",
+      "run": "rocket-capacity60-bd50-reentry-20261022-a",
+      "classification": "NATIVE_INTERACTION_NO_CODES",
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-reentry-20261022-a/reentry.state",
+        "sha256": "17c7d7bd1e70f59a306c2b1fa4eb249f985f27ded0e1074b4e4573c6db1bdc2b",
+        "parent_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-grant-ack-20261022-a/ack.state",
+        "parent_sha256": "843bbc5379d99aa90858c36109a28190c218a5b695b3c0ad0816b8de0dd57b14"
+      },
+      "result_sha256": "44ec8ece562efb62c97a1b2ef198f126428eaa558cb9bd63f0a35d657d6678fb",
+      "battery_sidecar_sha256": "9a6b7ee8f1c877f48f145dfa24353389690bb606943cea2ef8e79f6e07cb640f",
+      "frames": 110,
+      "input_script_sha256": "335ac9d4d69d92ce2c6fd943090ecdd8ff8618432f238513476f83bf8ed7af29",
+      "setup_recipe": null,
+      "cheats_during_interaction": [],
+      "ram_sha256": "c699f66314877939a0d060fefb605d32ee0fcc5707c129a4f20a00ed9f2ce3b7",
+      "seed_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "save_array3": {
+        "address": "0x0227C838",
+        "size": 1952,
+        "key_item_projection_matches_cache_first_50": true
+      },
+      "key_item_cache": {
+        "occupied_slots": 60,
+        "slot59": [
+          119,
+          1
+        ],
+        "stat_editor_119_quantity": 1,
+        "canonical_bag_sha256": "5dc486fe8a5732ed352c34d86d8d995af49b9dee09de2649324cf06f961cafc3",
+        "key_pocket_inventory": {
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1,
+          "429": 1,
+          "430": 1,
+          "431": 1,
+          "434": 1,
+          "435": 1,
+          "437": 1,
+          "440": 1,
+          "441": 1,
+          "442": 1,
+          "443": 1,
+          "444": 1,
+          "445": 1,
+          "446": 1,
+          "447": 1,
+          "448": 1,
+          "449": 1,
+          "450": 1,
+          "451": 1,
+          "452": 1,
+          "453": 1,
+          "455": 1,
+          "456": 1,
+          "457": 1,
+          "458": 1,
+          "459": 1,
+          "460": 1,
+          "461": 1,
+          "462": 1,
+          "463": 1,
+          "464": 1,
+          "465": 1,
+          "466": 1,
+          "468": 1,
+          "469": 1,
+          "470": 1,
+          "471": 1,
+          "472": 1,
+          "473": 1,
+          "474": 1,
+          "475": 1,
+          "476": 1,
+          "477": 1,
+          "478": 1,
+          "479": 1,
+          "480": 1,
+          "481": 1,
+          "482": 1,
+          "483": 1,
+          "484": 1,
+          "501": 1,
+          "502": 1,
+          "503": 1,
+          "504": 1,
+          "532": 1,
+          "533": 1,
+          "534": 1
+        }
+      },
+      "party": {
+        "all_records_strictly_match_seed": true,
+        "all_checksums_valid": true,
+        "checksum_validity_is_diagnostic_only": true,
+        "party_count": 3,
+        "ram_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-reentry-20261022-a/before_reentry.png",
+          "sha256": "4f99f0890815b060a17c051291cc7e144f37c0d619f77ccaa7bad9097a8c3332"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-capacity60-bd50-reentry-20261022-a/already_owned_message.png",
+          "sha256": "7f0a4a0e4c9a3e7ae5f1666b741b5d677a4cb1e753566c9e7e524764157cc21c"
+        }
+      ]
+    }
+  ],
+  "bag_transitions": {
+    "reject_full_bag": {
+      "before": "full60_preparation",
+      "after": "full60_rejection",
+      "bag_bytes_changed": []
+    },
+    "actual_recovery": {
+      "start": "full60_rejection",
+      "preparation": "post_rejection_release59_preparation",
+      "alternative_preparation_excluded": "alternative_release59_preparation_excluded",
+      "released_filler_slot": 59,
+      "grant_from_59_to_60_changed_relative_bag_offsets": [
+        2372,
+        2374
+      ],
+      "first_50_key_items_projection_matches": true
+    },
+    "duplicate_reentry": {
+      "input": "grant_notice_acknowledgement",
+      "output": "already_owned_reentry",
+      "bag_bytes_changed": [],
+      "item_119_quantity": 1
+    }
+  },
+  "visual_review": {
+    "reviewed_by_root": [
+      {
+        "run": "rocket-capacity60-bd50-full60-reject-20261022-a",
+        "screenshot": "full60_result_message.png",
+        "observed_text": "Bag is full. Make room."
+      },
+      {
+        "run": "rocket-capacity60-bd50-reentry-20261022-a",
+        "screenshot": "already_owned_message.png",
+        "observed_text": "You already have it."
+      }
+    ],
+    "captured_only": [
+      {
+        "run": "rocket-capacity60-bd50-retry-accept-20261022-a",
+        "screenshot": "retry_grant_result.png",
+        "observed_text": "You got the Stat Editor!"
+      }
+    ],
+    "note": "Screenshot hashes are checked; visual text confirmation is recorded separately from automated parsing."
+  },
+  "excluded_history": [
+    {
+      "run_id": "rocket-capacity60-bd50-full60-prep-20261022-a",
+      "classification": "PRE_CORE_FAILURE",
+      "reason": "old wrapper preflight aborted before emulator/core start; not a native attempt"
+    },
+    {
+      "run": "rocket-capacity60-bd50-release59-prep-20261022-a",
+      "classification": "PREPARATION_ONLY_NOT_RECOVERY",
+      "reason": "branched from full60 preparation before the rejection; excluded from recovery claim"
+    }
+  ],
+  "limitations": [
+    "The DSV remained byte-identical to the AA0C seed; no native Save or fresh-cold persistence test was performed.",
+    "The test used temporary, hash-pinned Action Replay codes only to prepare the 60/59-slot Bag fixtures; all menu interactions ran with codes disabled.",
+    "Party snapshots are accepted only through the existing strict encrypted/plain cipher-boundary comparator; a non-decodable boundary snapshot is recorded without semantic normalization or a corruption claim.",
+    "This verifies the bounded emulator interaction on bd50 only; it does not establish general gameplay or release acceptance.",
+    "The earlier attempted run ID remains excluded and was not reused."
+  ]
+}

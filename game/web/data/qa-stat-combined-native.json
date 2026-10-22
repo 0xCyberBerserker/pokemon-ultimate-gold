@@ -1,0 +1,1156 @@
+{
+  "schema": "ultimate-gold-combined-selector-preview-acceptance/v1",
+  "status": "NATIVE_SELECTOR_CANCEL_AND_SLOT0_PREVIEW_VERIFIED; MUTATION_AND_RELEASE_NOT_TESTED",
+  "downloadable": false,
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/combined-selector-preview/combined-selector-preview-fix6a.nds",
+    "sha256": "938149619b2620d3b56871ad30f3526dcd3f8c748a726d02a311191f6d5a3634",
+    "build_report_path": "experiments/eviv/combined-selector-preview/build.json",
+    "build_report_sha256": "8aa14c895652751024f0495c4814f2a868400660d02f6c01777e459cc22ec552",
+    "static_review_path": "internal/stat-editor-research/combined-selector-preview-review.json",
+    "static_review_sha256": "1753afba58b8d25c2c184766d4055e1592f17af63c6ce451929b67a5adf49717",
+    "parent_preview_sha256": "f1ab9f71c73903802f4185760d97923db720b2bdf1a92d2904ac21fa510d09d9",
+    "parent_selector_sha256": "b987fec615e44e01d1505297599a31f1a584c6bf8029e677cb49ba507bbffb5b",
+    "common_parent_sha256": "dec58721ea4ad1d34fd5d195c0618529bf21b14e0e8bdc017bf98af8dad8911c"
+  },
+  "emulator": {
+    "core_path": "tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_path": "qa/dispatch_preview_sampled_runner.py",
+    "runner_sha256": "9d3daba8c3026167d97142510a34f58b48615b289fa8759e819980c9c35cb3e4",
+    "cheats": []
+  },
+  "source_dsv": {
+    "path": "qa/runs/dispatch-preview-fixture/dispatch-preview-fix6a.dsv",
+    "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+    "both_slots_crc_valid": true,
+    "active_slot": {
+      "base": 262144,
+      "counter": 9,
+      "crc16": 53760
+    }
+  },
+  "preview_target": {
+    "slot": 0,
+    "species_id": 35,
+    "name": "Clefairy",
+    "hp_iv": 15,
+    "step": 1,
+    "expected_preview": 16
+  },
+  "results": {
+    "cancel": {
+      "special_vars_8004_8005_800c": [
+        1,
+        65535,
+        255
+      ],
+      "ack_returns_to_clean_field": true
+    },
+    "slot0": {
+      "special_vars_8004_8005_800c": [
+        0,
+        16,
+        0
+      ],
+      "ack_returns_to_clean_field": true
+    }
+  },
+  "integrity": {
+    "battery_unchanged_all_runs": true,
+    "party_strict_native_cipher_boundary_all_runs": true,
+    "bag_full_save_array3_matches_dsv_all_runs": true,
+    "reserve_sections_match_candidate_all_runs": true,
+    "reserve_section_addresses": [
+      "0x023D5000",
+      "0x023D6000",
+      "0x023D7000"
+    ]
+  },
+  "runs": [
+    {
+      "name": "combined-selector-preview-cold",
+      "frames": 5500,
+      "result_sha256": "8e99fb8391f56f1d951c5547a214e4516e48a59714ef14112684534d80db7fb4",
+      "input_script_sha256": "8585149159c5372f3c4216b751ad664a10544426e37b889670685c83e1467097",
+      "state_input_sha256": null,
+      "state_output_sha256": "9ead9dea69bfe37460e5609dede7b1fb6bbbbf104b2705409bc1c883d62dc2b5",
+      "system_ram_sha256": "90224a51714896f95dac2de9ab1e12b12e9633e85d789d5e2d0e0a7081d073d8",
+      "battery_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "battery_snapshot_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "strict_party_cipher_boundary_match": true,
+      "party_all_runtime_checksums_valid": false,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_checksum": 19307,
+          "observed_checksum": 19307,
+          "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 35,
+              "expected_checksum": 19307,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 1,
+          "expected_checksum": 56412,
+          "observed_checksum": 56412,
+          "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 152,
+              "expected_checksum": 56412,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 2,
+          "expected_checksum": 46459,
+          "observed_checksum": 46459,
+          "observed_record_sha256": "908986b2c5b620ae1580d1aabad680db2d246f787be4a44b88f0817540136ff3",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 66,
+              "expected_checksum": 46459,
+              "header_matches": true,
+              "record_bytes_equal": false,
+              "box_phase": {
+                "mode": "plain_suffix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_suffix",
+                "split": 48
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": false,
+          "decode_error": "party Pokémon checksum failed",
+          "decoded_semantic_match_sources": [],
+          "strict_exact_match": true
+        }
+      ],
+      "bag_save_array3_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+      "bag_exact_dsv_match": true,
+      "reserve_sections_sha256": {
+        "0x023d5000": "9ffb21f19611796a3d5f5b959fed6e2c956773f45540f58617dedf4a9777ed4e",
+        "0x023d6000": "75b0642a6d7fd5055fb22d998cf15c05dc495f2351b657aa51c5ea7b38a8cad3",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": [
+        {
+          "path": "continue_or_load.png",
+          "sha256": "fb0d0628ea715f95703c9daef907b96cb1ce6a5a53841320b1bc4d8005cd9532"
+        },
+        {
+          "path": "loaded_identity.png",
+          "sha256": "652df6363f35f964e3101d287834eca173a4f9ac72184aa7718675268b47e44b"
+        },
+        {
+          "path": "loaded_location.png",
+          "sha256": "4e225503105df04c8d11e5c265fbc138d4c05f3c2516b743bc117f8e7b12b101"
+        },
+        {
+          "path": "title_or_menu.png",
+          "sha256": "60cebe104afd7bc667a6b871ec74ef05a49d58966d09bb0ca1b3a398b50b0776"
+        }
+      ]
+    },
+    {
+      "name": "combined-selector-preview-menu",
+      "frames": 700,
+      "result_sha256": "e44961ae6cadde9db82b5af4b987c921203cc6b2ad1f7a2f96c947ce121bab3d",
+      "input_script_sha256": "13e3a3e84921351b2a576606cf6e19d283b4a8b85b4e01bb749c241c3cb86f19",
+      "state_input_sha256": "9ead9dea69bfe37460e5609dede7b1fb6bbbbf104b2705409bc1c883d62dc2b5",
+      "state_output_sha256": "66dc00bfe60353a8818e2c6c99681922e167bcac6c365c2c3aecc59a2156628c",
+      "system_ram_sha256": "7d8d6fd4219e0117e25c1ce885b11e2ee82abac816d413c4f5bfddcfe9e0f146",
+      "battery_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "battery_snapshot_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "strict_party_cipher_boundary_match": true,
+      "party_all_runtime_checksums_valid": true,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_checksum": 19307,
+          "observed_checksum": 19307,
+          "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 35,
+              "expected_checksum": 19307,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 1,
+          "expected_checksum": 56412,
+          "observed_checksum": 56412,
+          "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 152,
+              "expected_checksum": 56412,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 2,
+          "expected_checksum": 46459,
+          "observed_checksum": 46459,
+          "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 66,
+              "expected_checksum": 46459,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        }
+      ],
+      "bag_save_array3_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+      "bag_exact_dsv_match": true,
+      "reserve_sections_sha256": {
+        "0x023d5000": "9ffb21f19611796a3d5f5b959fed6e2c956773f45540f58617dedf4a9777ed4e",
+        "0x023d6000": "75b0642a6d7fd5055fb22d998cf15c05dc495f2351b657aa51c5ea7b38a8cad3",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": [
+        {
+          "path": "field_before_facing.png",
+          "sha256": "05dbd882e95bcc2996517d2c605aff0656d37819b1f97e09e1a584b53826f463"
+        },
+        {
+          "path": "selector_menu_stable.png",
+          "sha256": "dc3680e94f4c4e17d959ca5dc5217ee5879be0c4d4126160da0ed204d1f0fe10"
+        },
+        {
+          "path": "selector_menu_visible.png",
+          "sha256": "ca3eb8cd2dfcabc05c36079c546250d31f6c60ff24e14a83f7a9d591aad345c3"
+        }
+      ]
+    },
+    {
+      "name": "combined-selector-preview-party",
+      "frames": 250,
+      "result_sha256": "3e87840ab36c5e85206a80bc24e74186cea7b4cc970e948d577aa8567348e8f8",
+      "input_script_sha256": "9a273080d7fd62cf73edcf4716b979de4d9621b912f2dff3043b6f42f73ba0b7",
+      "state_input_sha256": "66dc00bfe60353a8818e2c6c99681922e167bcac6c365c2c3aecc59a2156628c",
+      "state_output_sha256": "f1babca9a6bd06b092f5252886c05942595f98f7053b78e2216f195680ad3cea",
+      "system_ram_sha256": "c0ff420c1c8af79b8f95d1e3ee20c7956dc99aec66bb423fbc3ebf8048721c2b",
+      "battery_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "battery_snapshot_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "strict_party_cipher_boundary_match": true,
+      "party_all_runtime_checksums_valid": true,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_checksum": 19307,
+          "observed_checksum": 19307,
+          "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 35,
+              "expected_checksum": 19307,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 1,
+          "expected_checksum": 56412,
+          "observed_checksum": 56412,
+          "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 152,
+              "expected_checksum": 56412,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 2,
+          "expected_checksum": 46459,
+          "observed_checksum": 46459,
+          "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 66,
+              "expected_checksum": 46459,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        }
+      ],
+      "bag_save_array3_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+      "bag_exact_dsv_match": true,
+      "reserve_sections_sha256": {
+        "0x023d5000": "9ffb21f19611796a3d5f5b959fed6e2c956773f45540f58617dedf4a9777ed4e",
+        "0x023d6000": "75b0642a6d7fd5055fb22d998cf15c05dc495f2351b657aa51c5ea7b38a8cad3",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": [
+        {
+          "path": "menu_before_open.png",
+          "sha256": "e606f35366c685340f8e4d0ab13fd4c5a3822c8eaaab26a81b9b19cc800befc4"
+        },
+        {
+          "path": "party_selector_stable.png",
+          "sha256": "e00e1c25f41768d5adc2d3559b06ce4da78188057db0a0c264cef56e327b3419"
+        },
+        {
+          "path": "party_selector_visible.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        }
+      ]
+    },
+    {
+      "name": "combined-selector-preview-cancel",
+      "frames": 400,
+      "result_sha256": "b71006ae730fcc5c1e911309ee0628a98172718425585646650d20fbd8d6ccf2",
+      "input_script_sha256": "311a26955a53cb4a606411cde2682b323e0857bbda3bd645d82f39c2ddf880cd",
+      "state_input_sha256": "f1babca9a6bd06b092f5252886c05942595f98f7053b78e2216f195680ad3cea",
+      "state_output_sha256": "a46a1054c2482e0f99da98aaebb715ecf866ab5092e3bccd5a7441ca6279aa84",
+      "system_ram_sha256": "b705f519ad6c48e9e4dfadc5b8e0c2efc0b4b72e956195386d49c33d9c102c74",
+      "battery_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "battery_snapshot_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "strict_party_cipher_boundary_match": true,
+      "party_all_runtime_checksums_valid": true,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_checksum": 19307,
+          "observed_checksum": 19307,
+          "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 35,
+              "expected_checksum": 19307,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 1,
+          "expected_checksum": 56412,
+          "observed_checksum": 56412,
+          "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 152,
+              "expected_checksum": 56412,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 2,
+          "expected_checksum": 46459,
+          "observed_checksum": 46459,
+          "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 66,
+              "expected_checksum": 46459,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        }
+      ],
+      "bag_save_array3_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+      "bag_exact_dsv_match": true,
+      "reserve_sections_sha256": {
+        "0x023d5000": "9ffb21f19611796a3d5f5b959fed6e2c956773f45540f58617dedf4a9777ed4e",
+        "0x023d6000": "75b0642a6d7fd5055fb22d998cf15c05dc495f2351b657aa51c5ea7b38a8cad3",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": [
+        {
+          "path": "cancel_before_action.png",
+          "sha256": "0940a5378dd8bb63eb35bd0eae481594e235ee9f1e603062986b1aab99d914dd"
+        },
+        {
+          "path": "cancel_feedback.png",
+          "sha256": "2b85c7f00dd4e13595fa090622bc4941349d9d81cbac1721537fa194b7560451"
+        },
+        {
+          "path": "cancel_feedback_stable.png",
+          "sha256": "31bd2c14b52be76f1f11e3855b42dd405b2fb7602f663fb309f07fe6349fca6d"
+        }
+      ],
+      "script_environment": {
+        "field_system": "0x022a01d8",
+        "task_manager": "0x022c0170",
+        "script_environment": "0x022a6b38",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6c38",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041075",
+        "script_pc": "0x022a8f16",
+        "script_pc_opcode_u16": 53,
+        "special_vars_8004_8005_800c": [
+          1,
+          65535,
+          255
+        ]
+      }
+    },
+    {
+      "name": "combined-selector-preview-cancel-ack",
+      "frames": 200,
+      "result_sha256": "9309ac81518b32729eaa4229345ff44da6ba7c8ac97ce46d19f26e8bed9d5347",
+      "input_script_sha256": "e94b179b847b161c8590f4222c6a3e4069a3949c33a643afc304bcfb4f54488d",
+      "state_input_sha256": "a46a1054c2482e0f99da98aaebb715ecf866ab5092e3bccd5a7441ca6279aa84",
+      "state_output_sha256": "1c5f10eb9113e6758b4e071cdfb6433ee8f0db01a512ecc68300b3b2925c404f",
+      "system_ram_sha256": "3ce0664368898c8bba45324a52f9ebd4b5d262214e51fe550cbc9fb2920a3211",
+      "battery_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "battery_snapshot_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "strict_party_cipher_boundary_match": true,
+      "party_all_runtime_checksums_valid": false,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_checksum": 19307,
+          "observed_checksum": 19307,
+          "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 35,
+              "expected_checksum": 19307,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 1,
+          "expected_checksum": 56412,
+          "observed_checksum": 56412,
+          "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 152,
+              "expected_checksum": 56412,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 2,
+          "expected_checksum": 46459,
+          "observed_checksum": 46459,
+          "observed_record_sha256": "aae332c7e6a69a94a3bd1acda9132c90733484b55467b3178c875dd2ba36815f",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 66,
+              "expected_checksum": 46459,
+              "header_matches": true,
+              "record_bytes_equal": false,
+              "box_phase": {
+                "mode": "plain_suffix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_suffix",
+                "split": 44
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": false,
+          "decode_error": "party Pokémon checksum failed",
+          "decoded_semantic_match_sources": [],
+          "strict_exact_match": true
+        }
+      ],
+      "bag_save_array3_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+      "bag_exact_dsv_match": true,
+      "reserve_sections_sha256": {
+        "0x023d5000": "9ffb21f19611796a3d5f5b959fed6e2c956773f45540f58617dedf4a9777ed4e",
+        "0x023d6000": "75b0642a6d7fd5055fb22d998cf15c05dc495f2351b657aa51c5ea7b38a8cad3",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": [
+        {
+          "path": "cancel_message_before_ack.png",
+          "sha256": "6fc57a805f94b0bc621cf8c7b7d033c305ad43b291c62a5719d30347ebf4a31e"
+        },
+        {
+          "path": "field_after_cancel_ack.png",
+          "sha256": "6666d26dd245c8ee9f12d290274000a1640ea36d5fa3814c71a00fbb3528b739"
+        }
+      ],
+      "field_after_ack": {
+        "textbox_open": false,
+        "script_environments": 0,
+        "field_location": [
+          60,
+          -1,
+          684,
+          409,
+          0
+        ]
+      }
+    },
+    {
+      "name": "combined-selector-preview-slot0",
+      "frames": 400,
+      "result_sha256": "070f65f03107290f562b9178e8367fac4452ea4e6692788c7924512c8e074b8f",
+      "input_script_sha256": "8d30348adc06c40b14e12c6c32317a104b77524ad32285ebe2aa97395381c2da",
+      "state_input_sha256": "f1babca9a6bd06b092f5252886c05942595f98f7053b78e2216f195680ad3cea",
+      "state_output_sha256": "b78e573c36cec3d6ff961f1cbad5c131cd8f1ffcd5f4f312ec46ff33948b3e59",
+      "system_ram_sha256": "694f46c75c34798e419a29f3dd9596bb75c308639a455f0ea74ba9e68935a6dc",
+      "battery_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "battery_snapshot_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "strict_party_cipher_boundary_match": true,
+      "party_all_runtime_checksums_valid": true,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_checksum": 19307,
+          "observed_checksum": 19307,
+          "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 35,
+              "expected_checksum": 19307,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 1,
+          "expected_checksum": 56412,
+          "observed_checksum": 56412,
+          "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 152,
+              "expected_checksum": 56412,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 2,
+          "expected_checksum": 46459,
+          "observed_checksum": 46459,
+          "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 66,
+              "expected_checksum": 46459,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        }
+      ],
+      "bag_save_array3_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+      "bag_exact_dsv_match": true,
+      "reserve_sections_sha256": {
+        "0x023d5000": "9ffb21f19611796a3d5f5b959fed6e2c956773f45540f58617dedf4a9777ed4e",
+        "0x023d6000": "75b0642a6d7fd5055fb22d998cf15c05dc495f2351b657aa51c5ea7b38a8cad3",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": [
+        {
+          "path": "slot0_before_action.png",
+          "sha256": "0940a5378dd8bb63eb35bd0eae481594e235ee9f1e603062986b1aab99d914dd"
+        },
+        {
+          "path": "slot0_feedback.png",
+          "sha256": "433cadf9fc1bd99ec07632d83512dc75e3219afed10549aa579de696abd20b8e"
+        },
+        {
+          "path": "slot0_feedback_stable.png",
+          "sha256": "079844a7f25bc21e56917d0410054de0697490fa480863cccaeda109ba7cf58c"
+        }
+      ],
+      "script_environment": {
+        "field_system": "0x022a01d8",
+        "task_manager": "0x022c0170",
+        "script_environment": "0x022a6b38",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6c38",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041075",
+        "script_pc": "0x022a8f00",
+        "script_pc_opcode_u16": 53,
+        "special_vars_8004_8005_800c": [
+          0,
+          16,
+          0
+        ]
+      }
+    },
+    {
+      "name": "combined-selector-preview-slot0-ack",
+      "frames": 200,
+      "result_sha256": "4d0812c2fe6f7b3e6aa07a1768e6c4bddb1ef6cc257f8ed6e51ce9e2b8caf6b1",
+      "input_script_sha256": "2ed9c7d768ecc6a4f67c2df2419eee897b8b9fe7d3d31cbc4f54c9af0e93eb64",
+      "state_input_sha256": "b78e573c36cec3d6ff961f1cbad5c131cd8f1ffcd5f4f312ec46ff33948b3e59",
+      "state_output_sha256": "612fa93bc2aff2938909fff73a220099948374fc0695302413f7116ff7e2e041",
+      "system_ram_sha256": "2464eafee99d33d74d60093b0a93531de645b25156e69e4725211ec426b35837",
+      "battery_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "battery_snapshot_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "strict_party_cipher_boundary_match": true,
+      "party_all_runtime_checksums_valid": false,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_checksum": 19307,
+          "observed_checksum": 19307,
+          "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 35,
+              "expected_checksum": 19307,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 1,
+          "expected_checksum": 56412,
+          "observed_checksum": 56412,
+          "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 152,
+              "expected_checksum": 56412,
+              "header_matches": true,
+              "record_bytes_equal": true,
+              "box_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_prefix",
+                "split": 0
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": true,
+          "decoded_semantic_match_sources": [
+            "source_fixture"
+          ],
+          "strict_exact_match": true
+        },
+        {
+          "slot": 2,
+          "expected_checksum": 46459,
+          "observed_checksum": 46459,
+          "observed_record_sha256": "5e457a3c96800b11f18c66ca28c62e1524b2749a93c42e8a7d240b0f2e73bfe6",
+          "reference_candidates": [
+            {
+              "label": "source_fixture",
+              "dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              },
+              "species_id": 66,
+              "expected_checksum": 46459,
+              "header_matches": true,
+              "record_bytes_equal": false,
+              "box_phase": {
+                "mode": "plain_suffix",
+                "split": 0
+              },
+              "tail_phase": {
+                "mode": "plain_suffix",
+                "split": 52
+              },
+              "record_matches_cipher_boundary": true
+            }
+          ],
+          "observed_checksum_valid": false,
+          "decode_error": "party Pokémon checksum failed",
+          "decoded_semantic_match_sources": [],
+          "strict_exact_match": true
+        }
+      ],
+      "bag_save_array3_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+      "bag_exact_dsv_match": true,
+      "reserve_sections_sha256": {
+        "0x023d5000": "9ffb21f19611796a3d5f5b959fed6e2c956773f45540f58617dedf4a9777ed4e",
+        "0x023d6000": "75b0642a6d7fd5055fb22d998cf15c05dc495f2351b657aa51c5ea7b38a8cad3",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": [
+        {
+          "path": "field_after_slot0_ack.png",
+          "sha256": "2aed053d8830e8aa5cd63d6bd2a95376b106c6357176651c2cf07afd5f0a5583"
+        },
+        {
+          "path": "slot0_message_before_ack.png",
+          "sha256": "80fc0bdb97990fda31e0629a9a402d5bc3e2d8bf267ce7795dcd239e4a748dd8"
+        }
+      ],
+      "field_after_ack": {
+        "textbox_open": false,
+        "script_environments": 0,
+        "field_location": [
+          60,
+          -1,
+          684,
+          409,
+          0
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "This is isolated native selector/preview-path QA for the exact FIX6a candidate, not product or Alpha2 acceptance.",
+    "No EV/IV/Nature setter, reset, confirmation workflow, save, or post-save cold recovery was exercised.",
+    "Only cancel and slot 0 were exercised; additional party slots were not tested.",
+    "Battery bytes were preserved as evidence; this does not establish persistence of any stat edit."
+  ]
+}

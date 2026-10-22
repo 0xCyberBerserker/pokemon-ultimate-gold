@@ -1,0 +1,73 @@
+{
+  "schema": "portable-menu-textfix-independent-review/v1",
+  "verdict": "PASS_STATIC",
+  "summary_en": "The candidate contains the intended message-field correction and the inspected physical ROM delta matches the declared scope. Native runtime remains untested.",
+  "summary_es": "La candidata corrige los índices de campos del mensaje previsto y el diff físico inspeccionado coincide con el alcance declarado. La ejecución nativa sigue sin probarse.",
+  "candidate": {
+    "path": "experiments/eviv/portable-stat-editor-menu-textfix/portable-stat-editor-menu-textfix-fix6a.nds",
+    "sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a",
+    "size_bytes": 127073056
+  },
+  "parent": {
+    "path": "experiments/eviv/portable-stat-editor-menu-uimode/portable-stat-editor-menu-uimode-fix6a.nds",
+    "sha256": "5a61083689668f3efcf46c4821b77b336875af5237a36f9985eb4cc159bd7d44"
+  },
+  "build_report": {
+    "path": "experiments/eviv/portable-stat-editor-menu-textfix/build.json",
+    "sha256": "a15a6dd1e85294b87a2a8b0dfe094ed532eed76b9623626eb96bc14218086e75",
+    "status": "STATIC_BUILD_PASS_RUNTIME_NOT_TESTED"
+  },
+  "physical_diff": {
+    "only_changed_rom_file": "a/0/2/7",
+    "only_changed_narc_member": 40,
+    "changed_message_id": 134,
+    "message_134_growth_words": 6,
+    "message_134_growth_bytes": 12,
+    "messages_0_116_semantically_unchanged": true,
+    "other_appended_messages_semantically_unchanged": true,
+    "script_2072_byte_identical_to_parent": true,
+    "arm9_byte_identical_to_parent": true,
+    "arm7_byte_identical_to_parent": true
+  },
+  "message_fields": {
+    "message_text": "Current: {STRVAR_3:1,0,0}; proposed: {STRVAR_4:2,0,0}.\\nApply this change?",
+    "controls": [
+      { "control": "0x0300", "argc": 3, "args": [1, 0, 0] },
+      { "control": "0x0400", "argc": 3, "args": [2, 0, 0] }
+    ],
+    "bufferint_slot_to_field": {
+      "1": { "variable": "current", "id": "0x8008", "message_field": 1 },
+      "2": { "variable": "proposal", "id": "0x8005", "message_field": 2 }
+    },
+    "shown_proposal_guard": {
+      "variable": "0x8009",
+      "role": "stale-proposal check/readback only; not a message-format field"
+    },
+    "retail_contract": {
+      "bufferint": "The BufferInt command passes its u8 slot to BufferIntegerAsString, which stores the formatted value at that MessageFormat field index.",
+      "strvar": "StringExpandPlaceholders reads argument 0 as the MessageFormat.fields index; the control-code parser skips argc words and accesses only the requested field argument.",
+      "field_count": 8,
+      "expansion_with_fields_1_15_and_2_16": "Current: 15; proposed: 16.\\nApply this change?"
+    }
+  },
+  "verification": {
+    "host_test": {
+      "command": "python3 night-sprint/qa/test_stat_editor_menu_script.py",
+      "result": "PASS",
+      "host_test_sha256": "10247bf50e43f22a16650dd613aecb823fcdad5bbda2ac69c416ee5648169e8f"
+    },
+    "negative_regression": "PASS: replacing the indexed STRVAR controls with zero-argument controls is rejected because field indexes do not match BufferInt slots 1 and 2.",
+    "source_files": [
+      "night-sprint/engine/upstream/pokeheartgold/src/scrcmd_strbuf.c",
+      "night-sprint/engine/upstream/pokeheartgold/src/message_format.c",
+      "night-sprint/engine/upstream/pokeheartgold/src/string_control_code.c",
+      "night-sprint/qa/stat_editor_menu_script.py",
+      "night-sprint/qa/test_stat_editor_menu_script.py"
+    ],
+    "runtime": "NOT_TESTED"
+  },
+  "limitations": [
+    "This review verifies the static ROM/NARC diff and the message-format contract only.",
+    "No native UI, gameplay, or player-facing confirmation flow was executed; this is not runtime acceptance."
+  ]
+}

@@ -1,0 +1,1388 @@
+{
+  "source": "hg-engine trainer_gfx *_enc.png rendered by repository nitrogfx pipeline",
+  "source_commit": "local hg-engine checkout; dump_trainer_gfx.sh pipeline",
+  "sprites": [
+    {
+      "class_id": 0,
+      "path": "web/sprites/trainers/000.png",
+      "bytes": 811,
+      "sha256": "2432a8662cd96a1bb2d5fb787110a1979c6d98752cded10318a96d770bd0940f",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "0867900b8b774a77516a2667871d7bfd48c4c1cd6c09d8dcdb0c1b728fc30572",
+      "previous_raw_bytes": 821,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 1,
+      "path": "web/sprites/trainers/001.png",
+      "bytes": 806,
+      "sha256": "81b02e9e1e734fa6df17baaf6153750c84c4233208aeffee543edbca3bf8449a",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "313460155bd42634a8c7fd5dba48f397d46d1fe75aa7c3d81cd5e9757534f788",
+      "previous_raw_bytes": 790,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 2,
+      "path": "web/sprites/trainers/002.png",
+      "bytes": 685,
+      "sha256": "788b7165661aa219041829883d0e2c48a83f11922080694bdd78f4f97ac8ed7d",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "ea0f6cd480353344072865ca2fb3a6dd2011d260f4dd169c9c9d08ea8c185bf3",
+      "previous_raw_bytes": 672,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 3,
+      "path": "web/sprites/trainers/003.png",
+      "bytes": 783,
+      "sha256": "f3c9bb51ab19782faea77d79938199c3f1320896f4e87274a7c73a8b71a1c3eb",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "ad21bb67b5f24b3f917c4f5b362097ead3fde09ba1c2b660c417ea0f7ea08558",
+      "previous_raw_bytes": 760,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 4,
+      "path": "web/sprites/trainers/004.png",
+      "bytes": 705,
+      "sha256": "5c2f6b884d09f31ace0c546744b79b017a044e0d07f3093e1ebde5848c1e0d61",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "aeac563838fca8507374e29e3d3c444387e9d1f4e1b1e0c577fa85d9da130a43",
+      "previous_raw_bytes": 693,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 5,
+      "path": "web/sprites/trainers/005.png",
+      "bytes": 649,
+      "sha256": "e49d9ed78bc2d3259a349386ffeca3a33cf4fb7cb53441da3a2c7f06340d2a49",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "c36bb58bcc77bf0ee1ffbe738fdc1738482b6095b8a8941c4ec964966f9684aa",
+      "previous_raw_bytes": 627,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 6,
+      "path": "web/sprites/trainers/006.png",
+      "bytes": 898,
+      "sha256": "499481fdeaef2857bf926f0082d78fe617dde1ef64c22ed9b4007043c49339dd",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "1babdb26b274a0df341d2af967ec4675be6f692dfedb6427443898a88936e4bd",
+      "previous_raw_bytes": 894,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 7,
+      "path": "web/sprites/trainers/007.png",
+      "bytes": 818,
+      "sha256": "4e0f12ebf6ed799ab0a573ed778d0290e8c2240dd5d1df87dcbbda3585f0270e",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "cfb8982b3979fa89922a6863c11ad8bac4c67cf4992d2863be9eca547d5f277e",
+      "previous_raw_bytes": 788,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 8,
+      "path": "web/sprites/trainers/008.png",
+      "bytes": 822,
+      "sha256": "76f10d72bd7b8b1c50cebb0057170544ec1f117f4fb237feebaf9796d94a67a1",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "a2281e9ced3c18806b760e341ca15a508d74d0551e6b8b5f0cc07eef03d6dc4e",
+      "previous_raw_bytes": 807,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 9,
+      "path": "web/sprites/trainers/009.png",
+      "bytes": 1148,
+      "sha256": "00601cceeacf5e46e140f77d8c72478030e084a74cc718cb1639079330c54fc2",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "a56ad5fc87748f4cbd8c0af3bab8d9a0fe140590a1f9023ac929c47941a08ef2",
+      "previous_raw_bytes": 1154,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 10,
+      "path": "web/sprites/trainers/010.png",
+      "bytes": 804,
+      "sha256": "be9ea3fd72c848236e274b41f2734de382657b9f4a61107413a2e20a0a8b7c67",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "2851532f7d6d27fd9a712a3fe18547134356acb8359253a278d4b7426e3a4b07",
+      "previous_raw_bytes": 786,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 11,
+      "path": "web/sprites/trainers/011.png",
+      "bytes": 1175,
+      "sha256": "45d8ced802173d9fc688c2c3b6b583e10acc110274fcc69bbf34b9c20bda2b20",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "5a5a35e5379fc009d75918f80067da57e783b1b38a16d25649eda92c9e26f8fe",
+      "previous_raw_bytes": 1153,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 12,
+      "path": "web/sprites/trainers/012.png",
+      "bytes": 1049,
+      "sha256": "41429e94171429a025ac6ab6bbbbafa9648ddbf3ebdfb6f1dd81a94cc524f852",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "9b24a4514d2aa76652f56cc371e2d421546d265181d584775aaf088aeb8c8250",
+      "previous_raw_bytes": 1047,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 13,
+      "path": "web/sprites/trainers/013.png",
+      "bytes": 1090,
+      "sha256": "42b69c2b7258f68052e14a946dc54142e8fcd6dacee72b7c1dcddac8ce27e8f6",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "0ccca9b39030cbe8b7e8ad9ed8f5bdb5783d466aa112cc86c4e476498d7be2d2",
+      "previous_raw_bytes": 1089,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 14,
+      "path": "web/sprites/trainers/014.png",
+      "bytes": 995,
+      "sha256": "c76465bf473eee851721ed8e2794e1997b229c5aa514858b2906d8a391d76059",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "245cd74d2c21c5b0bf909d0dc965d8da99f766f5d1d173183158910fc1ee1d3e",
+      "previous_raw_bytes": 996,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 15,
+      "path": "web/sprites/trainers/015.png",
+      "bytes": 981,
+      "sha256": "fb3dd545a0eb97d7b9bdbf2a1d8746e7129de81dfaf4d5a543bea769a161c8df",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "44efecb1fd8f14d9377d7f9f2b4ae72b2712569c955471f69f9f0e0bbc7b1f62",
+      "previous_raw_bytes": 980,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 16,
+      "path": "web/sprites/trainers/016.png",
+      "bytes": 894,
+      "sha256": "01e760cdb536403d35cc2daec53e7ab084c80f8c7c1dd6e76f5e05e1d7339b1a",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "d8d22768d82a510ce66424927100f40852b097264eb455a7cf28a1418ac96027",
+      "previous_raw_bytes": 897,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 17,
+      "path": "web/sprites/trainers/017.png",
+      "bytes": 788,
+      "sha256": "f4054b5cc5fd7a12b8abf21d47522ee04ebbeac7b3c108345660c30fe6642913",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "22b6d0b9b1c61a065780ecbcf56e200df194d2b42d9c70ff4494a27312d9d91c",
+      "previous_raw_bytes": 808,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 18,
+      "path": "web/sprites/trainers/018.png",
+      "bytes": 876,
+      "sha256": "11032e1b50350eaa18c57cf4be13fddff9ab1f35c5b0d4f410ce384399094e7e",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "cac1de723ba54b86b18670132a57c267a6cae7d63747014b2790da1084d5dae7",
+      "previous_raw_bytes": 860,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 19,
+      "path": "web/sprites/trainers/019.png",
+      "bytes": 782,
+      "sha256": "215d2abf6d38cf5972b8ff012815304b5d852d5a82bf6b5e88e9edfc8fa269dc",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "b4ba9595d1b3f8b60c222d1d8bcd81f5121146cf4707015c4f2d432bdc7dba63",
+      "previous_raw_bytes": 760,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 20,
+      "path": "web/sprites/trainers/020.png",
+      "bytes": 870,
+      "sha256": "8a97f334c6418d70a7a2a3bbfb8c4c85b0f6e30dada0d59a5847f5096ec3bea2",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "536c8fb31af56e6ab7f6fdd4e9e85924c100fd0fd995cc9aa12a195d54ecd01b",
+      "previous_raw_bytes": 867,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 21,
+      "path": "web/sprites/trainers/021.png",
+      "bytes": 909,
+      "sha256": "5edc941b7b5118bdf81819546e3e8aa6bec38cea6a7df52445836d00ec7fe151",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "0e7b800e49190f87d9c78100963eab0e761e8bf8df46a9c8d7eb3719e6bd3545",
+      "previous_raw_bytes": 891,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 22,
+      "path": "web/sprites/trainers/022.png",
+      "bytes": 669,
+      "sha256": "88ad8b7fd24cdf254b0954d760e8122414c5ed9d33a556fe2dd5b6f6a60722a0",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "5d1e2bba087211fd1b05fbb803fd7bbab7c1210b1aec39df2a364c6e3d70ab1d",
+      "previous_raw_bytes": 637,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 23,
+      "path": "web/sprites/trainers/023.png",
+      "bytes": 1141,
+      "sha256": "58ac113701c617520cb824ce784a7d8899e3c8ede401cc401ffd6069cda313df",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "8a4f5062faf4744d13ccffc9cb97dd413643594a070ef5a40e8bd0355a5171eb",
+      "previous_raw_bytes": 1741,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 24,
+      "path": "web/sprites/trainers/024.png",
+      "bytes": 838,
+      "sha256": "2358f979028df9a7918bf5b10a770fd998fa91d3d90713ad84bf99d4c92c5d04",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "8b5e1ad0b129e3b333d07c8466e1cd29d3bc65407f9ac3fa82bf49767c7cea0a",
+      "previous_raw_bytes": 831,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 25,
+      "path": "web/sprites/trainers/025.png",
+      "bytes": 825,
+      "sha256": "8303e902d101f6c5cca24dcbd81aa0358d45c21c0e88c95d8ff8ffd6c4837e3c",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "f9a60b9cedfcbdeb37caf33dea4eb6cea53b4b738f1bdf6628949cc3ad88f19c",
+      "previous_raw_bytes": 802,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 26,
+      "path": "web/sprites/trainers/026.png",
+      "bytes": 830,
+      "sha256": "6fc51f68689651f550e22bff223ecfefffd57098fc885bde1d8ebe9f6aab162c",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "5277525611b880c971c17e73d56e31014cd75334ff7c1ec2452e0f0d08c4f697",
+      "previous_raw_bytes": 816,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 27,
+      "path": "web/sprites/trainers/027.png",
+      "bytes": 846,
+      "sha256": "f0525875f37ac33fbbf8125ac8f98d18a341cc0480e6f5c068670cc5b396a93e",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "02eb4290057aa4f3d40aa3be1cd192b964424ef805adbbbc5d1fe7e7272d7c10",
+      "previous_raw_bytes": 842,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 28,
+      "path": "web/sprites/trainers/028.png",
+      "bytes": 680,
+      "sha256": "bb29ff4cd5d9e97e84b52c5685b196cb12ea0c7c27bbca36fae4f7d959880311",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "907a5dbd8d89406758f00990f9c616e76c211b6ed69b2a7cb7c3d0ce5dc9cf30",
+      "previous_raw_bytes": 653,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 29,
+      "path": "web/sprites/trainers/029.png",
+      "bytes": 836,
+      "sha256": "a31b3fa04eea055703ba7e3ba6b2fbe4ca7e41447c9efe98d3ae6be13733b170",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "59682d65fad0cf8a14d5f0b296536478efd30842a388108695b81dd8bd4f6c47",
+      "previous_raw_bytes": 824,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 30,
+      "path": "web/sprites/trainers/030.png",
+      "bytes": 900,
+      "sha256": "8e1be20c2e366eebdbbca5cf0a41b2102cd2d635bc2f53c3d017eb140ed193cd",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "d492339d4edc7a0567d826e5e9b10163f9bc69100a0feade381fea1ebc182d5c",
+      "previous_raw_bytes": 895,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 31,
+      "path": "web/sprites/trainers/031.png",
+      "bytes": 1077,
+      "sha256": "8df7663ae407fae4ca509104073f9ebb64910355f324ac052f87c6f1efdddb49",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "577f0d02365cb25915d34bb814ae4ec47b69d9de7861ba7985ecca3a1dbad88e",
+      "previous_raw_bytes": 1071,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 32,
+      "path": "web/sprites/trainers/032.png",
+      "bytes": 669,
+      "sha256": "a7ffb4a34a10177976a85270ac2110237ee08243165ae67e5f6d1a185d82ea0a",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "a193b1a5f5cae21a4853a0bb676ad8ac38c8e08b5aa4014dee510b562b1eb9a8",
+      "previous_raw_bytes": 652,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 33,
+      "path": "web/sprites/trainers/033.png",
+      "bytes": 926,
+      "sha256": "aceafcfc3775f735393a6549e62212396c84c5fa4e33c48efc365c0ca96b725e",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "4e2e13e1e80c05c0a821d46b3f96b0fa12e50f63904f1e534584f11e02e601d9",
+      "previous_raw_bytes": 925,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 34,
+      "path": "web/sprites/trainers/034.png",
+      "bytes": 903,
+      "sha256": "6ea9c3b585ef7b94405be4adb921575a7dbbf4bbfce9d1727128e98544d0695e",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "e12bb4ed92c56d42f7502fe202a1d82ad54ae948758d960cb67cc3d9c609adcc",
+      "previous_raw_bytes": 887,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 35,
+      "path": "web/sprites/trainers/035.png",
+      "bytes": 712,
+      "sha256": "f2abb80921d731c0bdc1245acbce010e1d2bd12666516097bbdd9954a2cc2deb",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "01868a918da5cf1ebf64846fd9a7761fcb103d81a4d9e134f48ddee017afb1a8",
+      "previous_raw_bytes": 700,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 36,
+      "path": "web/sprites/trainers/036.png",
+      "bytes": 945,
+      "sha256": "7aac73ffa22744946c35f1596f3d94e8ff910ab611c336abb0611126c7bcc5c0",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "54e4f88d39d65fe7eec8fae998c0e1f43e2295e530969981fa0abebdcfab7cad",
+      "previous_raw_bytes": 943,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 37,
+      "path": "web/sprites/trainers/037.png",
+      "bytes": 944,
+      "sha256": "2dbe987513d49e64410cd4780cce4e3a252461aedddb941c42f19344614a289b",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "24d88162c3e8ec05a27083c49f422e642072deea02d09f1c725165e5da666c72",
+      "previous_raw_bytes": 946,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 38,
+      "path": "web/sprites/trainers/038.png",
+      "bytes": 782,
+      "sha256": "acd9ef43dc83c05c6333673bda6afbe9eca05d6c694010e86671c3c66b7be3f8",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "4567865ae194d8789b5b9026bd95ffcf005aa70224395c3c0832f47751bf9707",
+      "previous_raw_bytes": 759,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 39,
+      "path": "web/sprites/trainers/039.png",
+      "bytes": 800,
+      "sha256": "52a1df6937ccb3c77085f11a24b8ba51fa5add9748a3159b1e1b50647e3bc330",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "d69a5adb5fdfa28adc1cb759c12ce4173158fe598a7b9b36ebf9ec91fdb10997",
+      "previous_raw_bytes": 806,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 40,
+      "path": "web/sprites/trainers/040.png",
+      "bytes": 816,
+      "sha256": "9630ed5cecd2044a6f222ac435b7736aa87acd87a1905e4ecd89dc038109b0b7",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "8f2eb4fa970a744816e9efb3f170e344c974a6156e8bcca9021972b2aca58b60",
+      "previous_raw_bytes": 798,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 41,
+      "path": "web/sprites/trainers/041.png",
+      "bytes": 926,
+      "sha256": "8eb9dfd7063c4bace634731df1ca915bbc83b385a60a83bc08d61d528f174678",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "658687521874a139151ae431b9cb7933e5b01d79917858bee9843e1bb9d4824b",
+      "previous_raw_bytes": 920,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 42,
+      "path": "web/sprites/trainers/042.png",
+      "bytes": 727,
+      "sha256": "c11a7d40c836c1054c6b95e21220f633c79178bf30cc251cd1abc75d1d6f4cad",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "75ea00d70875e62ad021a6d1af2993bc9fada6f438ba10c2eba5ad3271009f37",
+      "previous_raw_bytes": 708,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 43,
+      "path": "web/sprites/trainers/043.png",
+      "bytes": 726,
+      "sha256": "e6b20d16afa1d0fef492ae4728b54ea4201b66317d205ca1ceaebe7a7f2ef0aa",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "7b2e97fff31c7a5319c8f79650c876e60c64711e99b2b0498ed9700b3fc0c589",
+      "previous_raw_bytes": 724,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 44,
+      "path": "web/sprites/trainers/044.png",
+      "bytes": 630,
+      "sha256": "bfc36b06d1b82baf9a13ebbe81712f57be6a64974e6ce38d3c39d014567515b9",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "b9071db03afe4f7c72a5e90f36ee1f48049b89368a7d6beb6315bef46c9e2895",
+      "previous_raw_bytes": 620,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 45,
+      "path": "web/sprites/trainers/045.png",
+      "bytes": 642,
+      "sha256": "b8477ab017a3a5ffaff0e32b13c87d08c631d1e1f64e98d6f7fa182b1a4aa201",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "0521e0c721e69dedf5a5089597cda60c9e6feb1ec7ca0c7982edd169b324bfec",
+      "previous_raw_bytes": 618,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 46,
+      "path": "web/sprites/trainers/046.png",
+      "bytes": 799,
+      "sha256": "01c972c9a350b60d85af550ebc42a084726bf7d5e48a400371d1c189b6bb069f",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "ecc360f41f0a9a304dd705d3b4a26684bb9d5dc7a1b68de0c53df20ae5082b29",
+      "previous_raw_bytes": 792,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 47,
+      "path": "web/sprites/trainers/047.png",
+      "bytes": 957,
+      "sha256": "2564a9d58cf1c6e221ee98089afb45d9963ef9ec3e79a1bc55ac75dd979b3baa",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "985509b26eca68fbd6fea3a130fd71688bdf99a26d179e116559e025053d4d0b",
+      "previous_raw_bytes": 955,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 48,
+      "path": "web/sprites/trainers/048.png",
+      "bytes": 985,
+      "sha256": "df53384b9f10fd50d03adc04d09ba780aa527d6c19fa2ddccd9b0b1301fdc9f4",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "2218fbdf42475154c852e155c47e40a835d4b14e0e822f846fddbf66e4ee86ce",
+      "previous_raw_bytes": 965,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 49,
+      "path": "web/sprites/trainers/049.png",
+      "bytes": 950,
+      "sha256": "0971ad2334565a414fa589df46f95a41d512cc9e3b90339a83570f0ab6fc79a9",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "3d5f5cd8f2ff064fa928053b913642ddbead03133ae3c2e13ebb0640daed12aa",
+      "previous_raw_bytes": 919,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 50,
+      "path": "web/sprites/trainers/050.png",
+      "bytes": 944,
+      "sha256": "9f3f0fd0ad0677766a0bf412ae88b6638b4850296a5e7200432357bf6b8f7a24",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "11a6e33e558796572fed5db6a1ccde622a5a94dacf0052b3976cef8aa65aac85",
+      "previous_raw_bytes": 933,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 51,
+      "path": "web/sprites/trainers/051.png",
+      "bytes": 824,
+      "sha256": "18c7854d091cdb93d3f0254c8cf18f668b04a0b9f86964b65e7742123eb689ea",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "adaa2e538045921a3233f45e1f31d004ce84813bbd05317e62a4bf004c76d234",
+      "previous_raw_bytes": 814,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 52,
+      "path": "web/sprites/trainers/052.png",
+      "bytes": 1069,
+      "sha256": "3b596892a02e9405a78d2f00356c7fe47d704b8aae8020e819c27c682458a1ae",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "8f59471fd72093cae3804c612c6adaead7153099859b26170b5ebeb9089d35a4",
+      "previous_raw_bytes": 1048,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 53,
+      "path": "web/sprites/trainers/053.png",
+      "bytes": 844,
+      "sha256": "4133e985e4047eaae61e60894b65092ba8ba9bf446393b55fc09c1d8bc35880f",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "6b6f99a77614e4a999258486bfca778f1d7c08d09dc451d38b7c6d8be1de7883",
+      "previous_raw_bytes": 833,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 54,
+      "path": "web/sprites/trainers/054.png",
+      "bytes": 883,
+      "sha256": "dff0d973e089c68184a9f3faf27e5cd751f2cd8e523db0907289e12a4fc15a30",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "89cbba7d667a3ed846102fad9b26c220b2d0e017ed0d87ca35f697fec997f7c8",
+      "previous_raw_bytes": 880,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 55,
+      "path": "web/sprites/trainers/055.png",
+      "bytes": 735,
+      "sha256": "b09581b986349453255fd026697fd009478ca28f9b94474b2b09fc04f0d8663e",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "a50339ce9b23d79dc9f5ab7632d90beba2b5bc9d58d95c2262c6ef27aca7147a",
+      "previous_raw_bytes": 732,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 56,
+      "path": "web/sprites/trainers/056.png",
+      "bytes": 1103,
+      "sha256": "523c51875170d9e7e8efc5b5d2cc4758412d15b1a3134923e84c4678da2fa07d",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "34f7583c3e470597c4734281ead1ae321e13be81c422dfa09de57a58630e8804",
+      "previous_raw_bytes": 1086,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 57,
+      "path": "web/sprites/trainers/057.png",
+      "bytes": 1080,
+      "sha256": "1685a659792e41db9c574b85e38309333168b780a01356ee04941d54d995c41c",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "dadfcd5b17049e69abd5b8a450f2942f28627833b7d7c2bcc6689b66170bd49f",
+      "previous_raw_bytes": 1079,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 58,
+      "path": "web/sprites/trainers/058.png",
+      "bytes": 1023,
+      "sha256": "c5e39a66c6493a981f120235f3e1b7840a494620eda46f5f15e7cff6e020eba1",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "0b3274dbb5c9fb157a0187a412cd7c49c34b7cdf48794d7e8df016da9db6215c",
+      "previous_raw_bytes": 1009,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 59,
+      "path": "web/sprites/trainers/059.png",
+      "bytes": 818,
+      "sha256": "c5e9b2dd21d828e9c5645f8f5ae62a4a3635410c2bb515e7969355bc28b62e93",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "4073d619ee99a3a5d9719ae61b95ab94b88a91ffa4bb7f5b12e84f1fc86cb5ff",
+      "previous_raw_bytes": 809,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 60,
+      "path": "web/sprites/trainers/060.png",
+      "bytes": 748,
+      "sha256": "329421097b53878f0aa098f543fdc438be6e56331ae9a163843085cf6febedd0",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "02c4c995a35cd8b3aa89adb635cbadd42a8fc998c626d00a9df023e77ab22196",
+      "previous_raw_bytes": 740,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 61,
+      "path": "web/sprites/trainers/061.png",
+      "bytes": 622,
+      "sha256": "0a2c8e47e46607bfd39c2fb98ffea92fa1b9adaa943bb02eb685e4dab88120ba",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "285d0ad28dcbee22d7e98a6228bad7aecbb66389ef1d1d067b8b4c94e107d2fd",
+      "previous_raw_bytes": 613,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 62,
+      "path": "web/sprites/trainers/062.png",
+      "bytes": 802,
+      "sha256": "0add1953c43786609dc06198da116c7c685690dbe7e61c1c071b2e02c7d3a5b2",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "c07ebfe6f79b49cd363e6519eb08839ac7d5038016ea72c7fa82fdfb35329f9f",
+      "previous_raw_bytes": 788,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 63,
+      "path": "web/sprites/trainers/063.png",
+      "bytes": 923,
+      "sha256": "b2feb5fd5ebf454127b0289a04c9f2613e7bc7349515c83d1e8b71613c916adc",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "25a02559013df88ecf915396c9850d8dff77289b9bc392d093c9bc7d9200f1ed",
+      "previous_raw_bytes": 914,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 64,
+      "path": "web/sprites/trainers/064.png",
+      "bytes": 1273,
+      "sha256": "45ae70032b7ea5c1bf03fdcd411b2e2e5768cc581fa709e07bf889a3bd9db6e5",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "c1945119c06eaed3ebe09965d8cc21374ce69d5d94ff86ee02e6f7c490566082",
+      "previous_raw_bytes": 1253,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 65,
+      "path": "web/sprites/trainers/065.png",
+      "bytes": 1540,
+      "sha256": "caaf41371e5213dba41e8af406562a8f95a369d4279a3ee447a4366d7bcabcc8",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "ecdc295f3dd7068ad2bfe33bb7917ea5800f8447801dac6ee2fd3845f8180690",
+      "previous_raw_bytes": 1552,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 66,
+      "path": "web/sprites/trainers/066.png",
+      "bytes": 1486,
+      "sha256": "df55bc173c209d1684cebe20e36762f412fdb4a016569f84ad06a27c489320c8",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "7716b502b0ac39f454fd6bea6acb01c527c5f8f186b8542ab77adf45f6979dbf",
+      "previous_raw_bytes": 2198,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 67,
+      "path": "web/sprites/trainers/067.png",
+      "bytes": 1661,
+      "sha256": "afcf1c27121f2c6cccc1e7d94943ef9800c57e8788136190f9a003eba1fa67ec",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "e85bb444e688b8adb0e038fecc2d248e498965e7cd3c50a7b2546eeed21fcd21",
+      "previous_raw_bytes": 2429,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 68,
+      "path": "web/sprites/trainers/068.png",
+      "bytes": 1124,
+      "sha256": "405841ebc91bdbdb2c010bd4f1c62e65d7c80655d685a4f1bd50d19aa6d7a345",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "c24ada2c8c29331cddcd15c3b54186598d398d26440ac782bb1e21ee8f34b812",
+      "previous_raw_bytes": 1110,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 69,
+      "path": "web/sprites/trainers/069.png",
+      "bytes": 959,
+      "sha256": "78bf9ba1655dbcf9d1e7bbed40b224008ba11f39ea3612507ab6d34f865d7729",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "6ff0dead7d0baf1e802d0a9554001e67609ccaf01918338f5014e4ab79a29a7c",
+      "previous_raw_bytes": 950,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 70,
+      "path": "web/sprites/trainers/070.png",
+      "bytes": 1242,
+      "sha256": "476c86770d15c9b3644d171d41abb3e3c9aa89b768c6cc7c079c6a952809d9b2",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "3d89d32109f6ec11cad99cc7c3c0c32060320e30bab5b405694a4f811b5196fb",
+      "previous_raw_bytes": 1856,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 71,
+      "path": "web/sprites/trainers/071.png",
+      "bytes": 932,
+      "sha256": "5593d07a09629fe4abbc9caa2a7fd7d5ce0483c1ede284defee95fdeae20ea6e",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "ea5904b63f5dd42d5cdbd6a46508a604534a5052efad3c9f8c17adbe4bda6394",
+      "previous_raw_bytes": 945,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 72,
+      "path": "web/sprites/trainers/072.png",
+      "bytes": 1305,
+      "sha256": "62451e2d294dedb30e9ad65c609fc39d6515b6bb2cbec93ec31ffbaf923ffb81",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "7cdb3a0398b3bcfce29d63a6d6c4edc4c85e0dbd5feb5f67fb4173d22218d3e1",
+      "previous_raw_bytes": 1856,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 73,
+      "path": "web/sprites/trainers/073.png",
+      "bytes": 1431,
+      "sha256": "d950dca97a92e713d52a3c1cb9a376c5ba57ca9fa5f6fa31a86b788cc6971367",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "7424da540d4e0d479af3c65a70d27f7e8806b7eed4b04c1877904b8175ec5847",
+      "previous_raw_bytes": 1971,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 74,
+      "path": "web/sprites/trainers/074.png",
+      "bytes": 1284,
+      "sha256": "7b73f1641f26c9c11a360029a97764b4619df2a078b363164f4f1d3d0b367e8e",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "87a81b330a779d92359db2601bdefda4fab20e728b80d582fb0b516a3f4691bc",
+      "previous_raw_bytes": 1922,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 75,
+      "path": "web/sprites/trainers/075.png",
+      "bytes": 1610,
+      "sha256": "461c19dac83e9d64d65b6bf99e4df78a789ddec4574d21f5249611aa5e651b05",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "78363b45110f62d31eab595a66709aa2ed7ac16ef3ff26b8bf7287a15d97c1fc",
+      "previous_raw_bytes": 2296,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 76,
+      "path": "web/sprites/trainers/076.png",
+      "bytes": 1546,
+      "sha256": "660ceb236927a2a9ce34cba13b86f4224af8450ae7fd2b75367426f9d3907ed2",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "38cc12312b7d8016e73a251e8d925c54471cce68098e148cdd07801b1c66cb79",
+      "previous_raw_bytes": 2268,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 77,
+      "path": "web/sprites/trainers/077.png",
+      "bytes": 810,
+      "sha256": "db6e5df1c20cfd9a306d6d94bb9a7bbc275f22262770cd3b3bd1b94ad37cca92",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "f251c7ffbd56fee984dbbf86294258f874f414697e4b7828320bcf7d332aa975",
+      "previous_raw_bytes": 790,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 78,
+      "path": "web/sprites/trainers/078.png",
+      "bytes": 949,
+      "sha256": "5a3047a04d36ad9fe544e65a4d71c474ad8286cbb410e96906abca068b064ad6",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "51b4f6af7144da4db4bd419e9eb7a8bc2a76412520653162ff9502be67df5ce0",
+      "previous_raw_bytes": 949,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 79,
+      "path": "web/sprites/trainers/079.png",
+      "bytes": 1068,
+      "sha256": "0f72cd7f0a1ea0f6dc68874ba9269e3f02c4f82254c2a78ab4bf4286abf16708",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "5fc2cc5763c1c9b1df77b1e7a9bf764523156110d591685b9ff43173f865eac6",
+      "previous_raw_bytes": 1070,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 80,
+      "path": "web/sprites/trainers/080.png",
+      "bytes": 862,
+      "sha256": "761925246f5219191ef5b763c949abce916c0f99f76848afb1fec28d2890e8fd",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "c360a8de0734dbdee36ead4e2f170c9c985afedd1af54a4d3a5c712c87e5955e",
+      "previous_raw_bytes": 837,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 81,
+      "path": "web/sprites/trainers/081.png",
+      "bytes": 778,
+      "sha256": "d8c1f474230d2e60b9b8b22f6741bf87875be01da4fc7608086e2b41f6e5a2a2",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "fc00ba4c502ec4439f91d640afb66bfd5622c32f41cf0ef61933ee8d9b7d5d0a",
+      "previous_raw_bytes": 762,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 82,
+      "path": "web/sprites/trainers/082.png",
+      "bytes": 1033,
+      "sha256": "355cd43b38c6f998d1f094e05a740f91445b22a6e37b822b524b9b11916ae4b0",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "c3d663f9424a83a9eb271611292121bc85ef843501df262548c6969a6b913672",
+      "previous_raw_bytes": 1020,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 83,
+      "path": "web/sprites/trainers/083.png",
+      "bytes": 936,
+      "sha256": "e2a764b822e5fd82526e35303e35d090c5a1e9e06913196e91d8d5284ae9e75c",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "bfff3efcc481e2814ee29ad376c256e42a8d9cfd38e679e6b02484e9d44adf31",
+      "previous_raw_bytes": 930,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 84,
+      "path": "web/sprites/trainers/084.png",
+      "bytes": 735,
+      "sha256": "9374678395470b6943c021b9543048b8fe5432c8fe407f7b82c020aa416cf93c",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "c991043ee5580d9d64733a2498e0639041b945b6942d8507d38bcd2e6f68ee83",
+      "previous_raw_bytes": 710,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 85,
+      "path": "web/sprites/trainers/085.png",
+      "bytes": 859,
+      "sha256": "e3e27878516f96504479fc8fe36894d616588c66f794e069a412936580d40898",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "47d80973df4282f6c1e02531919d48dc738567f1ee4dca23dcb3184a7f7ef03a",
+      "previous_raw_bytes": 847,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 86,
+      "path": "web/sprites/trainers/086.png",
+      "bytes": 1726,
+      "sha256": "535a3584692d715d838c1b6a7c3e85fe3e8ea735f2d2f83643aedfc5ca63efe8",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "ac430b83bf64e2d572420c65ee1ab5cca2553eda6207409c7e81668863514f0e",
+      "previous_raw_bytes": 2820,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 87,
+      "path": "web/sprites/trainers/087.png",
+      "bytes": 1159,
+      "sha256": "fb9669f07d3b6d14706df213a09c933e6314e5c11806ed5b3dd52e3d4d5313b7",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "0696460d9a801a623e5ac5d0d6811b5932edf93322429b4e1cd0ef3d1971a71f",
+      "previous_raw_bytes": 1829,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 88,
+      "path": "web/sprites/trainers/088.png",
+      "bytes": 1350,
+      "sha256": "93289e9337595cb1f6ceb110ec156dd44d92100635a8549a4f6c3cb232469a44",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "54fce8d65b4ccb2126c3a53d3b0594f3bf6af32dce112afaf4fe0b8c4b4956fa",
+      "previous_raw_bytes": 2115,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 89,
+      "path": "web/sprites/trainers/089.png",
+      "bytes": 1416,
+      "sha256": "612a69347137728b8f35853088a365d2b257438be44d48a1064c3ee312fddf2c",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "685881fb1e725850a0a6e1cacafbdd57ee43ed31941c8b358dd0b922020e70b8",
+      "previous_raw_bytes": 1756,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 90,
+      "path": "web/sprites/trainers/090.png",
+      "bytes": 1394,
+      "sha256": "517b9e7e467a27a273af060bf2ff620551c030a58faee489955ccda9200c1ad0",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "e0909e6d4d8b6be77d2bbb516c39ffa0a3520159aa72106821a30087c87a1f26",
+      "previous_raw_bytes": 2160,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 91,
+      "path": "web/sprites/trainers/091.png",
+      "bytes": 1153,
+      "sha256": "bfbc402d87839934557dc75344873cb8c2a012441ee42e4a5b58e927fe73636a",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "1bca3e18764fef5e22c21409dbb7e7ba9ff5add0f22fde2bef80efec64401eb5",
+      "previous_raw_bytes": 1826,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 92,
+      "path": "web/sprites/trainers/092.png",
+      "bytes": 1149,
+      "sha256": "550f21f672d5bffda07ac7b8e34f72faf68322f328251ce57f084414304d871c",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "3a96c6c2652379f7589d467036dab7a26a46eddac7c6f5e9b13f1d35e4f6955b",
+      "previous_raw_bytes": 1444,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 93,
+      "path": "web/sprites/trainers/093.png",
+      "bytes": 1129,
+      "sha256": "3e35e7669a7dab87fcb381b6350f14656082d78c12f5305aa969921690c27d29",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "701ed1389f1802bcd7ffcf90c6d33571dc1a2fec78cfbedcd23ae1735bd30afe",
+      "previous_raw_bytes": 1656,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 94,
+      "path": "web/sprites/trainers/094.png",
+      "bytes": 1332,
+      "sha256": "d4326231c4d69d1094fc905ba6526206532be4d6cfa98e7c32c9b45a2f020c3b",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "ceb2a4b6c1b7de97cba6aa0934e79b3c7fbeceb319b065458851c1e3ae66254d",
+      "previous_raw_bytes": 2234,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 95,
+      "path": "web/sprites/trainers/095.png",
+      "bytes": 788,
+      "sha256": "870fe688bd885c81a0667233142c30e407f998c0c58d49b2b5f577c06998fb33",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "224388b139d45ca540cf52c2618fcbf3282aa4c1c027567c85f1b79cd566af6e",
+      "previous_raw_bytes": 790,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 96,
+      "path": "web/sprites/trainers/096.png",
+      "bytes": 845,
+      "sha256": "ba75d26c31b996990afa0ef86de904773ab076ce5ab6b787f5a84d340655b949",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "6ae9ebdf1ab53a250ec0ece95df3adb65506fffe526be8e54427048bd961ea61",
+      "previous_raw_bytes": 830,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 97,
+      "path": "web/sprites/trainers/097.png",
+      "bytes": 1308,
+      "sha256": "b9cb1225cefcf8b342d23fb518f63856f369d8c195a329653d77018946013f39",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "25f430a362b4fcac1329935b3e6dffc13149dc98f6ccd18797031e605d974dda",
+      "previous_raw_bytes": 2212,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 98,
+      "path": "web/sprites/trainers/098.png",
+      "bytes": 1211,
+      "sha256": "245ecfae1828115016e7734d3a8aa596c27e538b5de44877ab8ccd736dd533d9",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "7741efb2caec6fb4187855c6cf2e4993ac09ce09689871e1733ddd9c51001822",
+      "previous_raw_bytes": 1714,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 99,
+      "path": "web/sprites/trainers/099.png",
+      "bytes": 952,
+      "sha256": "79d8d4731d46b19847111648c52d75c4bf0201bb8c0563559066264e657bd10b",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "ac91e1a63ebe6b7228fc76c99b28c1daa3d473443dabdf36cff2367d50f9c8be",
+      "previous_raw_bytes": 1421,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 100,
+      "path": "web/sprites/trainers/100.png",
+      "bytes": 1108,
+      "sha256": "b3c30999928f51ff2f3ee921c055c78741f2df3c680dd8d9904448a86e3da4c4",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "81c6e4b3e5e947ea98634d41a8cd7f19a973ae564b5795bc1eff7c8da5509422",
+      "previous_raw_bytes": 1393,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 101,
+      "path": "web/sprites/trainers/101.png",
+      "bytes": 1324,
+      "sha256": "5848f47a9cf57dbf40c644d899ebcb0f514473094d981c55f4aff7e4e9251ae0",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "7a579aad5610a403bfb43830468ce5be4b480d48639bce3b1530ef2ca4069f88",
+      "previous_raw_bytes": 2511,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 102,
+      "path": "web/sprites/trainers/102.png",
+      "bytes": 1743,
+      "sha256": "eafa6f5e59074ef5635c580a6d55060b4ba6220e854e81a74898c9d7470fc0cb",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "14d174b04e23155a9dd1611d50180213f419094a05a10ee97818a72962040259",
+      "previous_raw_bytes": 2857,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 103,
+      "path": "web/sprites/trainers/103.png",
+      "bytes": 1428,
+      "sha256": "7b68e1585171dacbbf635e6ea39f849e5fa11fcad385b754c996f4c9a11260d7",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "a8142ff415be0b6d338d3f8be71e30ddd9119be7691f1fa05bf0bf0e9a64cc38",
+      "previous_raw_bytes": 2190,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 104,
+      "path": "web/sprites/trainers/104.png",
+      "bytes": 1598,
+      "sha256": "324c6f00f5f16f51f31eee36331ec8109310417b0ba0501c97f7f17efc955f9f",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "685e1502cc513c7e95c2f2dfef4b8802cb02777855cee898cb5996bdc46f3553",
+      "previous_raw_bytes": 1902,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 105,
+      "path": "web/sprites/trainers/105.png",
+      "bytes": 1369,
+      "sha256": "376bf235bf063dd77d533a3c9433ac9fd884973e95264f27d3c09813f864636a",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "e3e2fd0766f9cd550ad1a782837f07b4893d02da71653edf654f6576fd91c877",
+      "previous_raw_bytes": 1823,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 106,
+      "path": "web/sprites/trainers/106.png",
+      "bytes": 1539,
+      "sha256": "507a0c9e21aae8d571e8f8cc1d6709b017e07143fc6e1a5b1d9243f7ffab0513",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "ad91fedee4f667a3952df8e353defacfc1f5b02f362e10e30bcfacf35209064b",
+      "previous_raw_bytes": 2235,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 107,
+      "path": "web/sprites/trainers/107.png",
+      "bytes": 1568,
+      "sha256": "d82fe4bc6cba68579b1a77e679cda65c00bcae4e761cd01c26bcebdc1c361a59",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "2e09595c41a59e216514b19bd7b22b164babd4f6407ef983a603e0876542ac18",
+      "previous_raw_bytes": 2325,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 108,
+      "path": "web/sprites/trainers/108.png",
+      "bytes": 1490,
+      "sha256": "79c02af79a036fa45877ca19e3515cf0f13c26776f5ca8a08b75eb3eba42a8e7",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "d8130c2da5fd8e814f236cac5b5da92ea523f98a8b53e68dc4b10f87ee5f425e",
+      "previous_raw_bytes": 1746,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 109,
+      "path": "web/sprites/trainers/109.png",
+      "bytes": 1325,
+      "sha256": "e5c00d95262628f8309c9732464713081fb44b805e93c16b0cf49e1772aafa23",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "e6cd620caecc43e151cf0fbd54de2e31a840ef54b4e54131d5f8f80fc0c5e0d6",
+      "previous_raw_bytes": 1650,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 110,
+      "path": "web/sprites/trainers/110.png",
+      "bytes": 997,
+      "sha256": "165b7ef9bab1f01b8d08bce7c1da414d44f5f04bf2568d0e88a31fc75cfd5e5e",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "39f93631a237b620131bc099e133a3139bb4ee20f2146f2e3c350f3db8c064be",
+      "previous_raw_bytes": 1711,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 111,
+      "path": "web/sprites/trainers/111.png",
+      "bytes": 1018,
+      "sha256": "9e186787eeacd4f05eaa586b230c125b6664242f5c93046c884cb5d637cf3153",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "7da84e158e3ae927495649d8667ac09e1a63b2a25c9077d7fa4f15588b52fc9a",
+      "previous_raw_bytes": 1012,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 112,
+      "path": "web/sprites/trainers/112.png",
+      "bytes": 1719,
+      "sha256": "78b51fd6ec4da4bd07c7609ab9aafae51138dcd8dfc1b7de15b40c28c773f1a0",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "fe184c39df04d91743d2bd735d5f0a0be16e244038e3fe848553fab1e3b031ac",
+      "previous_raw_bytes": 2370,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 113,
+      "path": "web/sprites/trainers/113.png",
+      "bytes": 950,
+      "sha256": "fa11deeb176783b9c697e863d8616784bebc6183e044cfbce374e6b5d94436bd",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "74bf3ee7c37c2ae88be3e46e0a30194e7407ad0b429afafe3307084f801c8927",
+      "previous_raw_bytes": 942,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 114,
+      "path": "web/sprites/trainers/114.png",
+      "bytes": 870,
+      "sha256": "1942e4bd44a7e4286245d1108300f077af659d0bfd4fe8d17d5f24fa3a548a82",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "b1515faede67f257d2161aa4351cb645151030d8dc892cb4b95d2915187ce4f8",
+      "previous_raw_bytes": 883,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 115,
+      "path": "web/sprites/trainers/115.png",
+      "bytes": 959,
+      "sha256": "9e78c66e3b4473159f4bffd87054880bda177579122d47fd9ac4cc37792a79a7",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "148d5dedc9681d9eeb95c724b6d6f25ea9c1ccf79a3e6172b1263f4013bf41e4",
+      "previous_raw_bytes": 956,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 116,
+      "path": "web/sprites/trainers/116.png",
+      "bytes": 760,
+      "sha256": "b6a4fd88265fe8b0c307ed1c4bd2549692ee42f86eb754283b634376a0ee126a",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "320388a7a2d7a5f53e30883145778b9cfa45596dd4f13dbea8680241afc2a03f",
+      "previous_raw_bytes": 761,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 117,
+      "path": "web/sprites/trainers/117.png",
+      "bytes": 796,
+      "sha256": "cdf416db0a8facaf2d143b94d1738523c6f65025a0a0c4c84137e00162f1316d",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "e39d0ca5f0e5f2258d8425c98c5d5a61bf17f3b04c860327851f78f32fe59bcd",
+      "previous_raw_bytes": 802,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 118,
+      "path": "web/sprites/trainers/118.png",
+      "bytes": 871,
+      "sha256": "f303c6e22ba4acd1afbea8ef3cd599a87853eb0b6a230c64777c181dae5551e6",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "a29fa7eb44526cf2dfe5f587f2670e5f239c2efc5fcd982d324323bbaf0413b0",
+      "previous_raw_bytes": 881,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 119,
+      "path": "web/sprites/trainers/119.png",
+      "bytes": 1141,
+      "sha256": "58ac113701c617520cb824ce784a7d8899e3c8ede401cc401ffd6069cda313df",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "8a4f5062faf4744d13ccffc9cb97dd413643594a070ef5a40e8bd0355a5171eb",
+      "previous_raw_bytes": 1741,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 120,
+      "path": "web/sprites/trainers/120.png",
+      "bytes": 974,
+      "sha256": "cef7d9e0e3d1ed7a45939e24f78a495a97a9f27d494baa3d13014091cef30c20",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "93c7047cb78c88721f881a51ef5e2816da050fdc9a711f50faba66d9a333504e",
+      "previous_raw_bytes": 956,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 121,
+      "path": "web/sprites/trainers/121.png",
+      "bytes": 1418,
+      "sha256": "45066a9cc7c19ca13ac9b470a2ee45e880250434d81033996473ba82afc4af71",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "be7cb0da4c99406ca89d3ca994cd7de5282aa575145f6342e30d68955a850ea5",
+      "previous_raw_bytes": 1392,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 122,
+      "path": "web/sprites/trainers/122.png",
+      "bytes": 1078,
+      "sha256": "2719f235917a972ddeda53735aee624d5ab5843182a67f91a2f188cf19c2f390",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "6884e7855a67344660652ec3b0c6f2461d0ead247fb027949a94183a51a603b3",
+      "previous_raw_bytes": 1083,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 123,
+      "path": "web/sprites/trainers/123.png",
+      "bytes": 1237,
+      "sha256": "0004ce7d796042980801ccfb46e808bbae6b981b501a7b12c98b54bf1bd221f6",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "0ac009725b610cca27ab85a2eb0ccb70514f63c8145dbd832f0befde823ec953",
+      "previous_raw_bytes": 2771,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 124,
+      "path": "web/sprites/trainers/124.png",
+      "bytes": 1166,
+      "sha256": "bfe399dd7370008a0afca731272774f508a0b493d64728ae3d31a276545c7141",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "7961134ba3d3f327d21270f38885a902d70f3a3c230bbf25f23ad369b3ef14bf",
+      "previous_raw_bytes": 1405,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 125,
+      "path": "web/sprites/trainers/125.png",
+      "bytes": 788,
+      "sha256": "870fe688bd885c81a0667233142c30e407f998c0c58d49b2b5f577c06998fb33",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "224388b139d45ca540cf52c2618fcbf3282aa4c1c027567c85f1b79cd566af6e",
+      "previous_raw_bytes": 790,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 126,
+      "path": "web/sprites/trainers/126.png",
+      "bytes": 845,
+      "sha256": "ba75d26c31b996990afa0ef86de904773ab076ce5ab6b787f5a84d340655b949",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "6ae9ebdf1ab53a250ec0ece95df3adb65506fffe526be8e54427048bd961ea61",
+      "previous_raw_bytes": 830,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 127,
+      "path": "web/sprites/trainers/127.png",
+      "bytes": 778,
+      "sha256": "77fc025813e7c99b6193d6fd0a64ff7feaf00fccb68797393289e9e957ee615e",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "085bf423b354a29929d2413ff3f869d8114fada2127b0b3a30a4d2add6725c75",
+      "previous_raw_bytes": 765,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 128,
+      "path": "web/sprites/trainers/128.png",
+      "bytes": 769,
+      "sha256": "4058d9ce01efabc4934d0bc32b169409dabe6c7e04315c95bf6b3f84d84a1881",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "99d8da454bea5e457df2a6df5f416c37af3cc9265dac78e9d6897b0d470cf4cd",
+      "previous_raw_bytes": 766,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 129,
+      "path": "web/sprites/trainers/129.png",
+      "bytes": 994,
+      "sha256": "0bf28a94d5dc30df1fa9e462ed892a5d03a536c28c48e30618e731a74b0ea0b0",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "7f99f6bd2ed9ba6face44644f9186cab20439c635b678d4bcd90ad7bc482aef9",
+      "previous_raw_bytes": 2637,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 130,
+      "path": "web/sprites/trainers/130.png",
+      "bytes": 1665,
+      "sha256": "d5e73ed1e831ca480f5479394336e0ef5ab101d8924a8d69e8fe90537a2a46cb",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "c7de39e05d26d9250d8133d7513a041149d4452a3f7440bf4825161c7cfdd250",
+      "previous_raw_bytes": 2472,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 131,
+      "path": "web/sprites/trainers/131.png",
+      "bytes": 1427,
+      "sha256": "cfdf4dd3f6d33d5fdf8fba5dc439fa880cc543e45b5cd1ed666e3322828fd3ba",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "200db4283ef004505912b175853346720c56f19ce251b5766fd524a021948893",
+      "previous_raw_bytes": 2315,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 132,
+      "path": "web/sprites/trainers/132.png",
+      "bytes": 2169,
+      "sha256": "73eac5564b82d8cd25f1502780d87a2c67589329ff4c80dd7d22ddd4940e8d4a",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "bc8014c188a40842ead472d4792bd1d6eae1161c365e24f14c87612013cd58af",
+      "previous_raw_bytes": 2429,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 133,
+      "path": "web/sprites/trainers/133.png",
+      "bytes": 1898,
+      "sha256": "fc6dba49cd2c536b4f0dff08de1d22198a255991b0e348856791574bb2cd038d",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "a97583ce64d1fd4f8026f30dd02cb14b67a434ae0fc91577cf7a4bc28cafbb45",
+      "previous_raw_bytes": 3417,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 134,
+      "path": "web/sprites/trainers/134.png",
+      "bytes": 1820,
+      "sha256": "a4729ac2e6effc0b91a142f356239c8d72930962a7b4dfec6f15e1d1bcc38011",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "741aa7e5e188f56448a0a8eec75bceac818006e1ecb1d3cc821181f247c33d65",
+      "previous_raw_bytes": 2664,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 135,
+      "path": "web/sprites/trainers/135.png",
+      "bytes": 1735,
+      "sha256": "f6f3024e4b6312844228ec093729b7a94dd09f3c712c5ab0567ebf10d60fb307",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "e68ade5cfdce56a898b3e1ad8dc86037eed843f9b0053dd0557f331bba7a27e8",
+      "previous_raw_bytes": 2609,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 136,
+      "path": "web/sprites/trainers/136.png",
+      "bytes": 1401,
+      "sha256": "96f6a245a89f54effb5bf3a1dee5110d87b8633848399f8faa895b2acaaeabbc",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "4b89b623972cc9e08182432f14eb31dfa3115ffa873d13ef5843437c7f9d5bd9",
+      "previous_raw_bytes": 2409,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    },
+    {
+      "class_id": 137,
+      "path": "web/sprites/trainers/137.png",
+      "bytes": 1699,
+      "sha256": "88f539cf648533215e5f128cd65fc0a6b0713a7dbe38e53e1f60253440efa205",
+      "status": "class_join_verified_rendered_enc",
+      "previous_raw_sha256": "9ede60e9637edd0e0837f53b2d823fad06748e55f94128f73ccf93a1e2396f47",
+      "previous_raw_bytes": 2909,
+      "alpha": "PNG tRNS palette index 0 -> alpha 0; other palette entries -> alpha 255"
+    }
+  ],
+  "join": "trainer NARC a/0/5/5 byte 1 -> class_id -> trainer_gfx/{class_id:03d}_enc.png rendered as web/sprites/trainers/{class_id:03d}.png",
+  "pipeline": "build/trainer_gfx/8_{class*5:03d}-04.NCGR + 8_{class*5+1:03d}-05.NCLR; nitrogfx -width 20 -encodebacktofront; exported *_enc.png; postprocess: PNG tRNS index 0 transparent (pixels/IDAT unchanged)"
+}

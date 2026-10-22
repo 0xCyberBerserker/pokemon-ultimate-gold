@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A local English and Spanish reference for the Ultimate Gold project.">
+  <meta name="theme-color" content="#f3f1eb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#181a17" media="(prefers-color-scheme: dark)">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'">
+  <title>Ultimate Gold Wiki</title>
+  <link rel="stylesheet" href="../wiki-style.css?v=20261022lists3">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#/" aria-label="Ultimate Gold Wiki home" data-ui-aria-key="brandHome">
+        <span class="brand-mark" aria-hidden="true">UG</span>
+        <span class="brand-copy"><strong>ULTIMATE GOLD</strong><small data-ui-key="brandSubtitle">Project wiki</small></span>
+      </a>
+      <p class="sidebar-kicker" data-ui-key="fieldGuide">Field guide</p>
+      <details class="nav-menu" open>
+        <summary><span id="nav-label" data-ui-key="browse">Browse</span><span class="nav-menu-indicator" aria-hidden="true"></span></summary>
+        <nav id="category-nav" aria-label="Wiki sections" data-ui-aria-key="wikiSections"></nav>
+      </details>
+      <div class="sidebar-footer">
+        <a href="../LICENSES.html"><span data-ui-key="credits">Credits</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <header class="topbar">
+        <label class="search" for="search">
+          <span id="search-label">Search</span>
+          <span class="search-field"><span class="search-icon" aria-hidden="true"></span><input id="search" type="search" placeholder="Pokémon, trainer, move…" autocomplete="off"></span>
+        </label>
+        <label class="game-mode-control" for="game-mode"><span data-ui-key="gameMode">Game mode</span><select id="game-mode" data-ui-aria-key="gameMode"><option value="normal">Normal</option><option value="plus">Plus</option></select></label>
+        <label class="language-control" for="language"><span class="language-icon" aria-hidden="true">文</span><select id="language" aria-label="Language" data-ui-aria-key="language"><option value="en">English</option><option value="es">Español</option></select></label>
+      </header>
+
+      <section id="content" aria-live="polite" aria-busy="false"></section>
+      <footer class="page-footer"><span>Made with 🖤 in Barcelona City 🇪🇸</span><a href="../LICENSES.html"><span data-ui-key="projectCredits">Project credits</span></a></footer>
+    </main>
+  </div>
+  <script src="../cheat-catalog.js?v=20261022"></script>
+  <script src="../wiki-home.js?v=20261022nav"></script>
+  <script src="../wiki-app.js?v=20261022lists6"></script>
+</body>
+</html>

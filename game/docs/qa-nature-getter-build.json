@@ -1,0 +1,220 @@
+{
+  "schema": "nature-effective-getter-prototype/v1",
+  "status": "PRIVATE_STATIC_PROTOTYPE_HOST_AND_ARM_BUILD_PASS_NATIVE_EFFECTIVE_GETTER_UNTESTED",
+  "base": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-party-probe/nature-party-probe-fix6a.nds",
+    "sha256": "c8851a108d17222015fd34b078b6539a09a7948a4d4fd62e778406ce4b65357f"
+  },
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-getter-prototype/nature-getter-prototype-fix6a.nds",
+    "sha256": "ea9486f9465a4e20546a44729589b2ef822c9ce245eb5ee16ae756883c5b3209",
+    "bytes": 127073568,
+    "changed_arm9_ranges": [
+      {
+        "start": "0x0206FE04",
+        "end_exclusive": "0x0206FE0C",
+        "before": "70 B5 05 1C FD F7 E6 FF",
+        "after": "00 4B 18 47 01 6C 3D 02"
+      },
+      {
+        "start": "0x023D6C00",
+        "end_exclusive": "0x023D6C44",
+        "before_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "after_sha256": "9b69e8310d40aceb1e23cef90cad2eaba5fb151f255f633f14c908dd5039d4d3"
+      }
+    ],
+    "arm9_sections_changed": [
+      "0x02000000",
+      "0x023D6000"
+    ],
+    "arm9_other_sections_byte_exact": true,
+    "arm7_overlay_tables_and_129_overlays_byte_exact": true,
+    "filesystem_byte_exact": true,
+    "nature_getter_thunk_unchanged": true,
+    "nature_pid_fallback_function_unchanged": true,
+    "landing_preimage_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+    "landing_preimage_all_zero": true,
+    "guard_address": "0x023D6D00",
+    "guard_preimage_all_zero": true,
+    "startup_load_gate": {
+      "status": "STATIC_BOOT_ORDER_PASS",
+      "arm9_entry": "0x02000800",
+      "settings_pointer_address": "0x02000AAC",
+      "settings_address": "0x02000BA0",
+      "copy_table": {
+        "start": "0x0211E8C0",
+        "end_exclusive": "0x0211E908",
+        "data_start": "0x02111860",
+        "bss": [
+          "0x02111860",
+          "0x021E5900"
+        ]
+      },
+      "autoload_entry_index": 4,
+      "autoload_entries": [
+        {
+          "destination": "0x01FF8000",
+          "size": 8192,
+          "bss_size": 0,
+          "source_start": "0x02111860",
+          "source_end_exclusive": "0x02113860"
+        },
+        {
+          "destination": "0x027E0000",
+          "size": 96,
+          "bss_size": 32,
+          "source_start": "0x02113860",
+          "source_end_exclusive": "0x021138C0"
+        },
+        {
+          "destination": "0x023D8000",
+          "size": 32768,
+          "bss_size": 0,
+          "source_start": "0x021138C0",
+          "source_end_exclusive": "0x0211B8C0"
+        },
+        {
+          "destination": "0x023D7000",
+          "size": 4096,
+          "bss_size": 0,
+          "source_start": "0x0211B8C0",
+          "source_end_exclusive": "0x0211C8C0"
+        },
+        {
+          "destination": "0x023D6000",
+          "size": 4096,
+          "bss_size": 0,
+          "source_start": "0x0211C8C0",
+          "source_end_exclusive": "0x0211D8C0"
+        },
+        {
+          "destination": "0x023D5000",
+          "size": 4096,
+          "bss_size": 0,
+          "source_start": "0x0211D8C0",
+          "source_end_exclusive": "0x0211E8C0"
+        }
+      ],
+      "pre_nitro_main_autoload_call": {
+        "instruction_address": "0x020008A4",
+        "instruction": "0xEB00005C",
+        "target": "0x02000A1C"
+      },
+      "loader_reads_module_params_at": "0x02000BA0",
+      "loader_copies_reserve_before_nitro_main": true,
+      "nitro_main_thumb_pointer": "0x02000CA5",
+      "payload_zero_in_autoload_source": true,
+      "interpretation": "ARM9 entry executes the statically verified copy-table routine before branching to NitroMain. The section containing 0x023D6C00 is in that table; its payload is therefore loaded before game initialization/Party-load callers can reach the getter. Static boot-order evidence only; no runtime probe."
+    }
+  },
+  "startup_load_gate": {
+    "status": "STATIC_BOOT_ORDER_PASS",
+    "arm9_entry": "0x02000800",
+    "settings_pointer_address": "0x02000AAC",
+    "settings_address": "0x02000BA0",
+    "copy_table": {
+      "start": "0x0211E8C0",
+      "end_exclusive": "0x0211E908",
+      "data_start": "0x02111860",
+      "bss": [
+        "0x02111860",
+        "0x021E5900"
+      ]
+    },
+    "autoload_entry_index": 4,
+    "autoload_entries": [
+      {
+        "destination": "0x01FF8000",
+        "size": 8192,
+        "bss_size": 0,
+        "source_start": "0x02111860",
+        "source_end_exclusive": "0x02113860"
+      },
+      {
+        "destination": "0x027E0000",
+        "size": 96,
+        "bss_size": 32,
+        "source_start": "0x02113860",
+        "source_end_exclusive": "0x021138C0"
+      },
+      {
+        "destination": "0x023D8000",
+        "size": 32768,
+        "bss_size": 0,
+        "source_start": "0x021138C0",
+        "source_end_exclusive": "0x0211B8C0"
+      },
+      {
+        "destination": "0x023D7000",
+        "size": 4096,
+        "bss_size": 0,
+        "source_start": "0x0211B8C0",
+        "source_end_exclusive": "0x0211C8C0"
+      },
+      {
+        "destination": "0x023D6000",
+        "size": 4096,
+        "bss_size": 0,
+        "source_start": "0x0211C8C0",
+        "source_end_exclusive": "0x0211D8C0"
+      },
+      {
+        "destination": "0x023D5000",
+        "size": 4096,
+        "bss_size": 0,
+        "source_start": "0x0211D8C0",
+        "source_end_exclusive": "0x0211E8C0"
+      }
+    ],
+    "pre_nitro_main_autoload_call": {
+      "instruction_address": "0x020008A4",
+      "instruction": "0xEB00005C",
+      "target": "0x02000A1C"
+    },
+    "loader_reads_module_params_at": "0x02000BA0",
+    "loader_copies_reserve_before_nitro_main": true,
+    "nitro_main_thumb_pointer": "0x02000CA5",
+    "payload_zero_in_autoload_source": true,
+    "interpretation": "ARM9 entry executes the statically verified copy-table routine before branching to NitroMain. The section containing 0x023D6C00 is in that table; its payload is therefore loaded before game initialization/Party-load callers can reach the getter. Static boot-order evidence only; no runtime probe."
+  },
+  "host_test": {
+    "result": "PASS",
+    "output": "",
+    "test_binary_sha256": "3e72689b06c931e3decff35ed4e917de5347801a1c97de2b799e76f0c00c331a"
+  },
+  "prototype": {
+    "function": "NatureGetter_GetBoxMonNature",
+    "semantics": "Read MON_DATA_PERSONALITY and MON_DATA_UNUSED_114 while preserving the BoxMon fast-mode lock; bits 1..5 encode nature+1; values 1..25 map to nature indices 0..24; zero or encoded values 26..31 fall back to PID % 25.",
+    "native": {
+      "address": "0x023D6C00",
+      "thumb_pointer": "0x023D6C01",
+      "bytes": 68,
+      "sha256": "9b69e8310d40aceb1e23cef90cad2eaba5fb151f255f633f14c908dd5039d4d3",
+      "object_sha256": "76f8864bb69c160676aea3c2699cce521579087a208b9478f2cd33cbf314e2e6",
+      "elf_sha256": "2f59c0870cd2476c44c86ad1a37c3c0fd034d9a18b7191753beba07d0d4dd82a",
+      "map_sha256": "0782fd5d7451fc8be1934c4204ea74e56abedd6c7db722f5dc968105c27bebe0",
+      "undefined_symbols": [
+        "BoxMonSetFastModeOff",
+        "BoxMonSetFastModeOn",
+        "GetBoxMonData",
+        "GetNatureFromPersonality"
+      ],
+      "native_calls": {
+        "BoxMonSetFastModeOn": "0x0206DDD9",
+        "BoxMonSetFastModeOff": "0x0206DE01",
+        "GetBoxMonData": "0x0206E641",
+        "GetNatureFromPersonality": "0x0206FE2D"
+      },
+      "disassembly": "\n@TMP@/nature-getter-build-zhkod5ft/nature_getter.elf:\tfile format elf32-littlearm\n\ndisassembly of section .nature_getter:\n\n023d6c00 <naturegetter_getboxmonnature>:\n 23d6c00: b5f0         \tpush\t{r4, r5, r6, r7, lr}\n 23d6c02: 0004         \tmovs\tr4, r0\n 23d6c04: f497 f8e8    \tbl\t0x206ddd8               @ imm = #-0x368e30\n 23d6c08: 0006         \tmovs\tr6, r0\n 23d6c0a: 2700         \tmovs\tr7, #0x0\n 23d6c0c: 0020         \tmovs\tr0, r4\n 23d6c0e: 0039         \tmovs\tr1, r7\n 23d6c10: 003a         \tmovs\tr2, r7\n 23d6c12: f497 fd15    \tbl\t0x206e640 <boxmonsetfastmodeoff+0x83f> @ imm = #-0x3685d6\n 23d6c16: 0005         \tmovs\tr5, r0\n 23d6c18: 2172         \tmovs\tr1, #0x72\n 23d6c1a: 0020         \tmovs\tr0, r4\n 23d6c1c: 003a         \tmovs\tr2, r7\n 23d6c1e: f497 fd0f    \tbl\t0x206e640 <boxmonsetfastmodeoff+0x83f> @ imm = #-0x3685e2\n 23d6c22: 0007         \tmovs\tr7, r0\n 23d6c24: 0020         \tmovs\tr0, r4\n 23d6c26: 0031         \tmovs\tr1, r6\n 23d6c28: f497 f8ea    \tbl\t0x206de00 <boxmonsetfastmodeon+0x27> @ imm = #-0x368e2c\n 23d6c2c: 06b8         \tlsls\tr0, r7, #0x1a\n 23d6c2e: 0ec0         \tlsrs\tr0, r0, #0x1b\n 23d6c30: 1e40         \tsubs\tr0, r0, #0x1\n 23d6c32: 2818         \tcmp\tr0, #0x18\n 23d6c34: d902         \tbls\t0x23d6c3c <naturegetter_getboxmonnature+0x3c> @ imm = #0x4\n 23d6c36: 0028         \tmovs\tr0, r5\n 23d6c38: f499 f8f8    \tbl\t0x206fe2c <getboxmondata+0x17eb> @ imm = #-0x366e10\n 23d6c3c: 21ff         \tmovs\tr1, #0xff\n 23d6c3e: 4001         \tands\tr1, r0\n 23d6c40: 0008         \tmovs\tr0, r1\n 23d6c42: bdf0         \tpop\t{r4, r5, r6, r7, pc}\n"
+    },
+    "source_sha256": "5047f7c37bf3f61a7833886245998999f6f4e727b2ef717e3dd4574a5ea52816",
+    "header_sha256": "983315376e0e6b3443a70f9746f6455fe7522af774cef23ad28806acb54ec454",
+    "host_test_source_sha256": "da495734a5da7b4b5a8f2e7ce4a95c03628bb8dcb332d7de6ba1bbc193702d5d"
+  },
+  "limits": [
+    "No core/emulator run; no runtime getter or stats acceptance.",
+    "No PC round-trip or save/cold persistence claim.",
+    "PID-direct nature consumers remain unchanged.",
+    "Not integrated with editor 119 or any patcher/release build."
+  ]
+}

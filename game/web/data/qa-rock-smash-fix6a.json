@@ -1,0 +1,632 @@
+{
+  "schema": "ultimate-gold-fix6a-rock-smash-native-qa/v1",
+  "status": "NATIVE_ACTION_CONFIRMED",
+  "target_rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+  "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+  "runners": {
+    "fix6a": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+    "fix5_no_codes": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8"
+  },
+  "runner_diff_scope": "Source comparison: the only difference is the FIX6a ROM hash added to fix6a's one-frame cheat whitelist; the no-code path is identical.",
+  "target": {
+    "map_id": 7,
+    "map_name": "D18R0101",
+    "event_bank": 5,
+    "object_id": 8,
+    "model_id": 85,
+    "script_id": 10001,
+    "event_flag": 16,
+    "position": [
+      5,
+      22
+    ]
+  },
+  "runs": [
+    {
+      "run": "rock-smash-fix6a-native-cold-staged-1",
+      "result_sha256": "519e09c184a27acbe310a12ffc8cff3c25c6645d47d0869cd8e4157604c7c8ba",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "script_sha256": "3a3f27e9acc06f3eff1b024a93c6b9566cc7fa531c6df24860b47a08c3a48a23",
+      "frames": 2000,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": null,
+      "state_out_sha256": "a6a94a0df09aab9fc98b9fb1849564391b7c102b12f09bc9d7ff8da3d50a12d5",
+      "system_ram_sha256": "dac3d7040e382b178a8bf5f52fb9d0d1d8fc8fe22d72297ea58cc7c54b6fc5b0",
+      "dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d"
+    },
+    {
+      "run": "rock-smash-fix6a-native-cold-staged-2",
+      "result_sha256": "409ab9db773c9d9dced472770219a418bdabca743e12de64a64b97df851325f9",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "script_sha256": "54e14242ac23cc1b0671cd348e60efe44ce709e2a3237e1ebd71ed704edb68d0",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "a6a94a0df09aab9fc98b9fb1849564391b7c102b12f09bc9d7ff8da3d50a12d5",
+      "state_out_sha256": "0137e5f88c751362ff159234d2bc9a456340c5015b0086158584e16f1335d48d",
+      "system_ram_sha256": "abc65738c70195087e23bf7142426fbdfafec959c27c2204aea8b09b54e3359b",
+      "dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d"
+    },
+    {
+      "run": "rock-smash-fix6a-native-cold-staged-3",
+      "result_sha256": "b5960c2990114090ebb1ad6126f084b44e9685e9d3ae67a7401f17033f282494",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "script_sha256": "206b216328173a84ee4d1520bfafbf0407611043697709f7e7b25158d7ca4247",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "0137e5f88c751362ff159234d2bc9a456340c5015b0086158584e16f1335d48d",
+      "state_out_sha256": "9ad3a68a489e88a8de493d83a418cd9f0f7a413c48346608d29e7f11317a3c94",
+      "system_ram_sha256": "579be915410cd45cf3b2649ccd3240f71c2f4510733be798323c46f6b066bcb1",
+      "dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d"
+    },
+    {
+      "run": "rock-smash-fix6a-native-cold-staged-4",
+      "result_sha256": "b30e5ae5a4d7fbb5a906b7646c224156aa5ed4d5e7e1594a1c7a03a886e3650a",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "script_sha256": "e3e029df828ca6b1e12f6275b9971eef291059bb4886ea684e87face2bb08d46",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "9ad3a68a489e88a8de493d83a418cd9f0f7a413c48346608d29e7f11317a3c94",
+      "state_out_sha256": "f819f016608d4ab10673d3396d480113b62a920a0be77565f3a85b6b21fe22fb",
+      "system_ram_sha256": "21e70b8a0f944799f474667923df7e212ea665b8d20c919ceaac86e0ff58d99d",
+      "dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d"
+    },
+    {
+      "run": "rock-smash-fix6a-native-interact-1",
+      "result_sha256": "843a336a1931bebfc779e123d2983fec8727600d0e7013556800e4b4b9d5cc4f",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "script_sha256": "d153f6c45f3eecb9aee4bc69215847b6fa9b8f6ac8ebdebb9383e0e96bf7e2ae",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "f819f016608d4ab10673d3396d480113b62a920a0be77565f3a85b6b21fe22fb",
+      "state_out_sha256": "0dab879c4b79e273d368452263a0af27738a6c1739fe903dfd14ea287bf1bf8f",
+      "system_ram_sha256": "d7f1743900396ce21a32e6e2f392de616759b3f0e51864783f6614daf665321b",
+      "dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d"
+    },
+    {
+      "run": "rock-smash-fix6a-native-yes",
+      "result_sha256": "92ad06191084cdc4399b6442dca69ba9c64e4ab204f6304ee328044b97ef0643",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "script_sha256": "c8bb544f110069e5a9ad56f0305cd9bd443e6b59bc51172792bba36b75d7d77b",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "0dab879c4b79e273d368452263a0af27738a6c1739fe903dfd14ea287bf1bf8f",
+      "state_out_sha256": "1d40043cda668e060ea47de4a701e0392c65af66c56a2a8716ef7164b1fe8110",
+      "system_ram_sha256": "b9b5b2e68afdb44a28e9ac977e5f4d734df328c46fc8a69058be9ae2cd92b4fa",
+      "dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d"
+    },
+    {
+      "run": "rock-smash-fix6a-native-dismiss",
+      "result_sha256": "f1fa613e5b213bdc0ccfc2227e7fe911fff20db6ffeae14c373966197bf30cc1",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "script_sha256": "7e564d7a6551bb85b158b86f839cd5792b87c79222309e493666c4ce02e62df2",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "1d40043cda668e060ea47de4a701e0392c65af66c56a2a8716ef7164b1fe8110",
+      "state_out_sha256": "495c3ef18a3f705fb424e003b4bd721c4640f592a82f04de999a3e23ee93b649",
+      "system_ram_sha256": "bff932e0bf67b8f542590c72ca9e9e5520ff8e56b398fffc3dbf1ca74dbe3919",
+      "dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d"
+    }
+  ],
+  "excluded_attempts": [
+    {
+      "run": "rock-smash-fix6a-native-warp-prep",
+      "classification": "INVALID_FIXTURE_EXCLUDED",
+      "reason": "The prepared currentPosition used map 7 with map 217 coordinates; it cannot establish gameplay behavior."
+    },
+    {
+      "run": "rock-smash-fix6a-native-cold",
+      "classification": "EMPTY_SAVE_DIR_EXCLUDED",
+      "reason": "The run's saveDir was empty and did not contain the adjacent same-ROM DSV."
+    },
+    {
+      "run": "rock-smash-fix6a-native-cold-correction",
+      "classification": "ACTION_AMBIGUOUS_EXCLUDED",
+      "reason": "Repeated A inputs after Continue may have already activated the target before its checkpoint."
+    }
+  ],
+  "pre_action": {
+    "state_sha256": "f819f016608d4ab10673d3396d480113b62a920a0be77565f3a85b6b21fe22fb",
+    "runtime": {
+      "ram_sha256": "21e70b8a0f944799f474667923df7e212ea665b8d20c919ceaac86e0ff58d99d",
+      "target_slot_address": "0x22a2b3c",
+      "flags": 49185,
+      "object_id": 8,
+      "map_id": 7,
+      "model_id": 85,
+      "event_flag": 16,
+      "script_id": 10001,
+      "current_xyz": [
+        5,
+        0,
+        22
+      ],
+      "active": true
+    },
+    "actor": {
+      "object_id": 255,
+      "map_id": 1,
+      "state": 0,
+      "current_xyz": [
+        5,
+        0,
+        21
+      ],
+      "facing_codes": [
+        1,
+        1,
+        1
+      ],
+      "adjacent_to_target": true
+    },
+    "target_present": true,
+    "flag_16_set": false,
+    "fixture_dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d"
+  },
+  "native_interaction": {
+    "prompt_en": "This rock appears to be breakable. Would you like to use Rock Smash?",
+    "result_text_en": "CLEFAIRY used Rock Smash!",
+    "party_member_nickname": "CLEFAIRY",
+    "party_member_species_id": 35,
+    "object_8_present_after_dismiss": false,
+    "object_8_slot_zero_after_dismiss": true,
+    "flag_16_set_after_dismiss": false,
+    "interpretation": "The native interaction and move use are confirmed by the reviewed captures. The event object is inactive after the follow-up A dismisses the result message; flag 16 remains clear and is not asserted as a required script effect.",
+    "screenshots": {
+      "rock-smash-fix6a-native-interact-1": {
+        "local_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rock-smash-fix6a-native-interact-1/rock_smash_first_native_response.png",
+        "sha256": "4c3e5d65de9e2b4bce1f524f643c217b3a1550482fcfaa15d2e6cbd01e69cbdb"
+      },
+      "rock-smash-fix6a-native-yes": {
+        "local_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rock-smash-fix6a-native-yes/rock_smash_yes_response.png",
+        "sha256": "aadba4fd06beff08f1f448ad11bad6d149af569c865734a6eed3760480dcdfc5"
+      },
+      "rock-smash-fix6a-native-dismiss": {
+        "local_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rock-smash-fix6a-native-dismiss/rock_smash_after_message_dismiss.png",
+        "sha256": "c6fd0708ccc57b0aff4326acec4618ad2d0cadf4231d4c70986288ef9f0e3cb6"
+      }
+    }
+  },
+  "preservation": {
+    "before": {
+      "party": "28f30c919ddfc2c35b7ffce25acac2dd1b9185318891da1ebb29af7f4c962cd2",
+      "bag": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "after": {
+      "party": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "bag": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "bag_unchanged": true,
+    "party_array_raw_changed_at_cold_continue_boundary": true,
+    "party_exact_saved_record_comparison": {
+      "pre_action": {
+        "run": "rock-smash-fix6a-native-cold-staged-4",
+        "reference_dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rock-smash-fix6a-native-cold-staged-4/profile/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+        "reference_dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d",
+        "reference_slot_base": 0,
+        "reference_save_counter": 10,
+        "reference_crc16_valid": true,
+        "reference_dsv_party_offset": 144,
+        "reference_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_party_array_sha256": "28f30c919ddfc2c35b7ffce25acac2dd1b9185318891da1ebb29af7f4c962cd2",
+        "normalized_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_saved_record_match": true,
+        "records": [
+          {
+            "slot": 0,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "slot": 1,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "slot": 2,
+            "box": {
+              "plaintext_prefix_bytes": 60
+            },
+            "tail": {
+              "encrypted_prefix_bytes": 0
+            },
+            "record_sha256": "422aa4b77f4fb65d959cf3d7c9ae75769af5f9802d74b3cc40f3964a59a9dca1"
+          }
+        ],
+        "array_dynamic_offset": "0xD080",
+        "species_id_slot0": 35,
+        "moves": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ]
+      },
+      "post_action": {
+        "run": "rock-smash-fix6a-native-dismiss",
+        "reference_dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rock-smash-fix6a-native-cold-staged-4/profile/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+        "reference_dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d",
+        "reference_slot_base": 0,
+        "reference_save_counter": 10,
+        "reference_crc16_valid": true,
+        "reference_dsv_party_offset": 144,
+        "reference_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "normalized_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_saved_record_match": true,
+        "records": [
+          {
+            "slot": 0,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "slot": 1,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "slot": 2,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        ],
+        "array_dynamic_offset": "0xD080",
+        "species_id_slot0": 35,
+        "moves": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "party_all_action_checks": [
+      {
+        "run": "rock-smash-fix6a-native-cold-staged-4",
+        "reference_dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rock-smash-fix6a-native-cold-staged-4/profile/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+        "reference_dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d",
+        "reference_slot_base": 0,
+        "reference_save_counter": 10,
+        "reference_crc16_valid": true,
+        "reference_dsv_party_offset": 144,
+        "reference_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_party_array_sha256": "28f30c919ddfc2c35b7ffce25acac2dd1b9185318891da1ebb29af7f4c962cd2",
+        "normalized_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_saved_record_match": true,
+        "records": [
+          {
+            "slot": 0,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "slot": 1,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "slot": 2,
+            "box": {
+              "plaintext_prefix_bytes": 60
+            },
+            "tail": {
+              "encrypted_prefix_bytes": 0
+            },
+            "record_sha256": "422aa4b77f4fb65d959cf3d7c9ae75769af5f9802d74b3cc40f3964a59a9dca1"
+          }
+        ],
+        "array_dynamic_offset": "0xD080",
+        "species_id_slot0": 35,
+        "moves": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "run": "rock-smash-fix6a-native-interact-1",
+        "reference_dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rock-smash-fix6a-native-cold-staged-4/profile/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+        "reference_dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d",
+        "reference_slot_base": 0,
+        "reference_save_counter": 10,
+        "reference_crc16_valid": true,
+        "reference_dsv_party_offset": 144,
+        "reference_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "normalized_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_saved_record_match": true,
+        "records": [
+          {
+            "slot": 0,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "slot": 1,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "slot": 2,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        ],
+        "array_dynamic_offset": "0xD080",
+        "species_id_slot0": 35,
+        "moves": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "run": "rock-smash-fix6a-native-yes",
+        "reference_dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rock-smash-fix6a-native-cold-staged-4/profile/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+        "reference_dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d",
+        "reference_slot_base": 0,
+        "reference_save_counter": 10,
+        "reference_crc16_valid": true,
+        "reference_dsv_party_offset": 144,
+        "reference_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "normalized_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_saved_record_match": true,
+        "records": [
+          {
+            "slot": 0,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "slot": 1,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "slot": 2,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        ],
+        "array_dynamic_offset": "0xD080",
+        "species_id_slot0": 35,
+        "moves": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "run": "rock-smash-fix6a-native-dismiss",
+        "reference_dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rock-smash-fix6a-native-cold-staged-4/profile/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+        "reference_dsv_sha256": "0a256c4d5b17d059e0720d88c5fcbd89a7635b2b777c5371cee9722feb14bd9d",
+        "reference_slot_base": 0,
+        "reference_save_counter": 10,
+        "reference_crc16_valid": true,
+        "reference_dsv_party_offset": 144,
+        "reference_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "normalized_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_saved_record_match": true,
+        "records": [
+          {
+            "slot": 0,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "slot": 1,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "slot": 2,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        ],
+        "array_dynamic_offset": "0xD080",
+        "species_id_slot0": 35,
+        "moves": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ]
+      }
+    ],
+    "party_array_note": "The staged cold Continue dump stopped during the native encryption/decryption loop. Every header and record byte matched the native saved bytes at one exact encryption boundary per box/tail segment; after normalization the full SaveArray2 matched byte-for-byte.",
+    "reserve_unchanged": true
+  },
+  "evidence_limits": {
+    "emulator_execution_status": "COMPLETED is tool execution only, not a gameplay verdict.",
+    "battery_save_cold_acceptance": "NOT_TESTED",
+    "species": "CLEFAIRY species ID 35; exact save-array record comparison passed.",
+    "event_flag_16": "Remained clear; object deactivation is the observed post-action outcome.",
+    "local_evidence": "RAM, states, copied DSVs, and screenshots remain local and are not published with the bilingual document."
+  }
+}

@@ -1,0 +1,821 @@
+{
+  "schema": "ultimate-gold-fix6a-whirlpool-native-qa/v1",
+  "status": "PASS_NATIVE_PROMPT_AND_CROSSING",
+  "claim_boundary": "One native Whirlpool activation is confirmed by the exact prompt, party-member text, and runtime position crossing the full 3x3 Whirlpool footprint. No post-action save, cold reload, or broader story/map acceptance was performed.",
+  "rom": {
+    "path": "experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+    "sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+  },
+  "runtime": {
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_path": "qa/headless_runner_fix5.py",
+    "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+    "cheats": []
+  },
+  "static_preflight": {
+    "path": "qa/runs/hm-whirlpool-fix6a-static/preflight.json",
+    "sha256": "70317178b2cf044de175999be3342ef7f7e657418b309348eecc7b3938371a3f",
+    "status": "STATIC_PREFLIGHT_READY",
+    "parser_path": "qa/hm_bdhc_height.py",
+    "parser_sha256": "67815a9a21aee59e921bac653cb0e30392f340426da1d0a58e2cf6d086b7df9f",
+    "parser_report_path": "qa/hm_bdhc_height.json",
+    "parser_report_sha256": "cba6bc900f1cde8fda626332c8c994b7c887c65711e5e05109d6d5e10158431f",
+    "map": {
+      "id": 95,
+      "name": "W41",
+      "model_id": 64
+    },
+    "approach": {
+      "xz": [
+        213,
+        333
+      ],
+      "facing": "east",
+      "PER_bytes_le": "1500",
+      "PER_u16_le": "0x0015",
+      "behavior": "0x15",
+      "height_units": 0.5
+    },
+    "target": {
+      "footprint": {
+        "origin_xz": [
+          214,
+          331
+        ],
+        "size": [
+          3,
+          3
+        ]
+      },
+      "PER_bytes_le": "1180",
+      "PER_u16_le": "0x8011",
+      "behavior": "0x11",
+      "height_units": 0.5
+    },
+    "height_derivation": {
+      "current_y": 1,
+      "vec_y_fx32": 32768,
+      "runtime_observed": false
+    }
+  },
+  "input_save_chain": {
+    "approved_surf_state_path": "qa/runs/hm-remaining-strength-fix6a/stage7-surf-message.state",
+    "approved_surf_state_sha256": "b3808d44a99895b99e975ba8d9f4bb8a4c6297aff863cedbd6e4a3b2aea6a0a8",
+    "same_run_native_dsv_sha256": "b83713ade92961cd55ce3afe34bdab5ae83318b7c7bc84dbc384037828a8e9b7",
+    "native_save_run_path": "qa/runs/hm-whirlpool-fix6a-native-save",
+    "native_save_dsv_sha256": "20fcb3875dee5a3b8f3c6c74924b1e49e5b62e6f51097a00dcf377dc119b375d",
+    "native_save_selected_counter": 9,
+    "weather_mismatch_fixture_sha256": "42267c903ed14e06f3a1ed17817a827b75582ce45ce59f588ecbc4508962b4c5",
+    "weather_mismatch_fixture_classification": "EXCLUDED_FROM_NATIVE_ACCEPTANCE",
+    "weather_correction": {
+      "source_map": 176,
+      "source_weather": 11,
+      "source_camera": 0,
+      "target_map": 95,
+      "target_weather": 0,
+      "target_camera": 0,
+      "map_header_sha256": "dee927df8ce0244538d60e525244a24a76270b96eb1c8764eb9355ec49918376",
+      "source": "LocalFieldData field offsets from src/save_local_field_data.c; native warp recomputes weather in src/field_warp_tasks.c, while Continue restores it."
+    },
+    "resumed_old_weather_state_excluded": {
+      "run": "hm-whirlpool-fix6a-weather-continue",
+      "result_sha256": "a940f5566437b803b43cce34176af17da4e392cbe2929ab46ba217b614de1256",
+      "classification": "EXCLUDED_STATE_CARRYOVER",
+      "reason": "The title savestate carried the previous loaded battery state, so a new SaveDir DSV was not a cold-state boundary."
+    },
+    "corrected_dsv_manifest_path": "qa/runs/hm-whirlpool-fix6a-weather-fixture-reviewed/dsv-fixture.json",
+    "corrected_dsv_manifest_sha256": "e26fb22f6769c4c1dc6d2d67d5a6d887da0cbab56d3dc3c2e0737c5a56034e78",
+    "corrected_dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+    "corrected_dsv_size": 524410,
+    "both_dsv_slot_crcs_valid": true,
+    "selected_slot_counter": 9,
+    "fallback_slot_unchanged": true
+  },
+  "runs": [
+    {
+      "run": "hm-whirlpool-fix6a-weather-cold-start",
+      "result_sha256": "2e1e93f79d9dee46891c91a4305d51cf0812d9566bf84ca222640cd929b1e2d6",
+      "script": "hm_whirlpool_fix6a_weather_boot_start.json",
+      "script_sha256": "1666456c843182dcc0d09a9d62b1bcc388bdb1c1224d00bf3f71e9548a16272f",
+      "frame_count": 1500,
+      "execution_status": "COMPLETED",
+      "runner_gameplay_label": "NOT_ASSESSED",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "cheats": [],
+      "state_in_sha256": null,
+      "state_out_sha256": "7e05f4ce4ceaa8e48a8f7861f4b3d603bb59f07c6578b4fd5613a4ac8d113c58",
+      "system_ram_sha256": null,
+      "dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-whirlpool-fix6a-weather-cold-start/weather_corrected_title_before_continue.png",
+          "sha256": "6b9148ca5ebc84f06e52cc3ecbf79ceacc3929790f9fe057efb7928e816bdfdf"
+        }
+      ]
+    },
+    {
+      "run": "hm-whirlpool-fix6a-weather-title-a",
+      "result_sha256": "a8d911e1f4e9e0cf01941bc5a5e456fa93bcc12976b86e369f7d36e1838d1da6",
+      "script": "hm_whirlpool_fix6a_title_a.json",
+      "script_sha256": "6bc0c855e2755c17751883fd22b4727fd3dbe26da73a4b6332e220622e719376",
+      "frame_count": 600,
+      "execution_status": "COMPLETED",
+      "runner_gameplay_label": "NOT_ASSESSED",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "cheats": [],
+      "state_in_sha256": "7e05f4ce4ceaa8e48a8f7861f4b3d603bb59f07c6578b4fd5613a4ac8d113c58",
+      "state_out_sha256": "598cbf75d4cb3d1c4e9527ccd9f132fd84031308b2cd8aacbca2db32d222a66e",
+      "system_ram_sha256": null,
+      "dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-whirlpool-fix6a-weather-title-a/settled_title_a.png",
+          "sha256": "728d1ef8d0969ae7a256fb5f751500e93d26cde841ca6149287fcc34fcabe0a3"
+        }
+      ]
+    },
+    {
+      "run": "hm-whirlpool-fix6a-weather-title-menu",
+      "result_sha256": "b497d9edfd31e565761587eef2d3bba925fcf8bf58c741f3ee745da5f51fdf2c",
+      "script": "hm_whirlpool_fix6a_title_menu.json",
+      "script_sha256": "ced46880a39ce8bc77dc3801047f30cea455845356bb4009caab9d68122e2576",
+      "frame_count": 600,
+      "execution_status": "COMPLETED",
+      "runner_gameplay_label": "NOT_ASSESSED",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "cheats": [],
+      "state_in_sha256": "598cbf75d4cb3d1c4e9527ccd9f132fd84031308b2cd8aacbca2db32d222a66e",
+      "state_out_sha256": "0dba90ef2125738f7fcfcde96f0c5741a6c54214109dbba3ccaf12d09efcfc96",
+      "system_ram_sha256": null,
+      "dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-whirlpool-fix6a-weather-title-menu/settled_continue_menu.png",
+          "sha256": "69516f4618a09eee7e538760be1f146667c4975ca257ac888630f077f399cbb0"
+        }
+      ]
+    },
+    {
+      "run": "hm-whirlpool-fix6a-weather-continue2",
+      "result_sha256": "1f37aa84e0059a04471cdd00deb89006bdb458ad7f7b721e27ad2859fbb89915",
+      "script": "hm_whirlpool_fix6a_continue_a.json",
+      "script_sha256": "1f43ae3ab1c7c40cc6db61116b5c0368576bb1eaa7f2b9fea2bb7f321ab4043f",
+      "frame_count": 1500,
+      "execution_status": "COMPLETED",
+      "runner_gameplay_label": "NOT_ASSESSED",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "cheats": [],
+      "state_in_sha256": "0dba90ef2125738f7fcfcde96f0c5741a6c54214109dbba3ccaf12d09efcfc96",
+      "state_out_sha256": "52b0a92cdc38543411f418314b5f2a47e2f062ae0e538a41f58a797f05ac4aeb",
+      "system_ram_sha256": "03b1e62c7847f732f2c3406b0ae97fe8327f582ddbf49824b9cd330e66f89ce4",
+      "dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-whirlpool-fix6a-weather-continue2/post_continue_settled.png",
+          "sha256": "955510ac448d4d7953043ffd27137e33be5a6351bee26ac50277293760a5cb15"
+        }
+      ]
+    },
+    {
+      "run": "hm-whirlpool-fix6a-weather-interact",
+      "result_sha256": "cf4aff4af06b726d3956cc70536c0c0c6ed9031e059d8a0abe70b36590b4affa",
+      "script": "hm_whirlpool_fix6a_interact.json",
+      "script_sha256": "5511bd2b569e026d46c53e20b439b6c55eaf23410aab2279f64d0fcff7b1975d",
+      "frame_count": 700,
+      "execution_status": "COMPLETED",
+      "runner_gameplay_label": "NOT_ASSESSED",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "cheats": [],
+      "state_in_sha256": "52b0a92cdc38543411f418314b5f2a47e2f062ae0e538a41f58a797f05ac4aeb",
+      "state_out_sha256": "0b4b524da9ba24003a9494de831b0054d364fcb58d3522428a5d95e8a214e43f",
+      "system_ram_sha256": "8dad717c98d554626aecc4e69caaa51f8ae8c8a44b599b71f529136a4fb1cf30",
+      "dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-whirlpool-fix6a-weather-interact/whirlpool_interact_settled.png",
+          "sha256": "091d40eef6eca1ac18e8d533d438b92134700b64d50a400b46ebe8e09e741015"
+        }
+      ]
+    },
+    {
+      "run": "hm-whirlpool-fix6a-weather-yes",
+      "result_sha256": "ab8c7f7781dcf7e752dc83e80e9198bef6530cdabc80cb81c4e3f9fabcf64771",
+      "script": "hm_whirlpool_fix6a_yes.json",
+      "script_sha256": "bcee8299c59f2a60af37988ad720f78afe1fa094ebcc831e9d4c3c4c5723b1dd",
+      "frame_count": 1000,
+      "execution_status": "COMPLETED",
+      "runner_gameplay_label": "NOT_ASSESSED",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "cheats": [],
+      "state_in_sha256": "0b4b524da9ba24003a9494de831b0054d364fcb58d3522428a5d95e8a214e43f",
+      "state_out_sha256": "2db8f96150f5ff8f020d48c7afc1bf6eceb3615d05a2fd4fd4c3d31ceee8332d",
+      "system_ram_sha256": "b46b3af7cc27275cc781a20f26fba7aba91a61c45cb4a57bf461ea618c5d0842",
+      "dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-whirlpool-fix6a-weather-yes/whirlpool_after_native_yes.png",
+          "sha256": "37f49f2b54d739b70bf982a1a5012d531ccd40b2a93f263ccd848e32efe9f803"
+        }
+      ]
+    },
+    {
+      "run": "hm-whirlpool-fix6a-weather-dismiss",
+      "result_sha256": "becebf2362c2d71ea49264b1223f98a102447ae9fe5608363dddcf40f0eb4300",
+      "script": "hm_whirlpool_fix6a_dismiss.json",
+      "script_sha256": "76a2fb310635f2a5a50a00f9f5b50810cf1d721cd35d8c5fb16510861bda2469",
+      "frame_count": 1000,
+      "execution_status": "COMPLETED",
+      "runner_gameplay_label": "NOT_ASSESSED",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "cheats": [],
+      "state_in_sha256": "2db8f96150f5ff8f020d48c7afc1bf6eceb3615d05a2fd4fd4c3d31ceee8332d",
+      "state_out_sha256": "69ecd5670af76f3f470d715ae351b8aeab88898fa9f520660ff01f225cd06e4b",
+      "system_ram_sha256": "ca8857ad2a1ebcb3635f30bf0d5056b3c653acbd62598d682d68ee2da63c9e70",
+      "dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-whirlpool-fix6a-weather-dismiss/whirlpool_final_scene.png",
+          "sha256": "e38449f28b259a1495971699fb594267d68242e48b53c338f32f62144ae15c60"
+        }
+      ]
+    }
+  ],
+  "invalidated_initial_attempts": [
+    {
+      "run": "hm-whirlpool-fix6a-interact",
+      "result_sha256": "b1bc564bb555a5b73f6fa28ac8088faa5339bef2496ca091fc3633f557bca2b3",
+      "dsv_sha256": "42267c903ed14e06f3a1ed17817a827b75582ce45ce59f588ecbc4508962b4c5",
+      "classification": "EXCLUDED_WEATHER_MISMATCHED_FIXTURE",
+      "reason": "The DSV retained LocalFieldData.weather=11 from map176, while map95 MapHeader requires weather=0; the core screenshot had a Dark Cave mask."
+    },
+    {
+      "run": "hm-whirlpool-fix6a-yes",
+      "result_sha256": "db2c914afd21b2c6b2a660e6f514b4da342819eaa29d390e25a9f96275331408",
+      "dsv_sha256": "42267c903ed14e06f3a1ed17817a827b75582ce45ce59f588ecbc4508962b4c5",
+      "classification": "EXCLUDED_WEATHER_MISMATCHED_FIXTURE",
+      "reason": "The DSV retained LocalFieldData.weather=11 from map176, while map95 MapHeader requires weather=0; the core screenshot had a Dark Cave mask."
+    },
+    {
+      "run": "hm-whirlpool-fix6a-dismiss",
+      "result_sha256": "caadf82132c23c78874f342d48b5508a05013df56283bd6cd77181e37db9f008",
+      "dsv_sha256": "42267c903ed14e06f3a1ed17817a827b75582ce45ce59f588ecbc4508962b4c5",
+      "classification": "EXCLUDED_WEATHER_MISMATCHED_FIXTURE",
+      "reason": "The DSV retained LocalFieldData.weather=11 from map176, while map95 MapHeader requires weather=0; the core screenshot had a Dark Cave mask."
+    }
+  ],
+  "runtime_before_after": {
+    "baseline": {
+      "ram_sha256": "03b1e62c7847f732f2c3406b0ae97fe8327f582ddbf49824b9cd330e66f89ce4",
+      "location": [
+        95,
+        -1,
+        213,
+        333,
+        3
+      ],
+      "local_field_weather": 0,
+      "local_field_camera": 0,
+      "player": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          213,
+          1,
+          333
+        ],
+        "facing_codes": [
+          3,
+          3,
+          3
+        ],
+        "avatar_state": 2
+      },
+      "save_array_sizes_offsets": {
+        "1": {
+          "size": 48,
+          "offset": "0xd050"
+        },
+        "2": {
+          "size": 1460,
+          "offset": "0xd080"
+        },
+        "3": {
+          "size": 1952,
+          "offset": "0xd634"
+        }
+      },
+      "party": {
+        "reference_dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+        "selected_dsv_counter": 9,
+        "selected_slot_base": 262144,
+        "selected_dsv_party_offset": 262288,
+        "party_array_size": 1460,
+        "ram_dynamic_offset": "0xd080",
+        "source_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "ram_array_sha256": "9694828d0df975062f8adbcc4c16404f7f26abea6dab71bea360413fbad492aa",
+        "normalized_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "exact_record_match": true,
+        "party_count": 3,
+        "species_ids": [
+          35,
+          152,
+          66
+        ],
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves_in_source_party": true,
+        "cipher_phase_evidence": [
+          {
+            "party_slot": 0,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "party_slot": 1,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075"
+          },
+          {
+            "party_slot": 2,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 10
+            },
+            "party_tail_cipher_phase": {
+              "encrypted_prefix_bytes": 0
+            },
+            "ram_record_sha256": "d3107b945807c4b2a3795aa0ea888a65c179fa7fc04baf1856971991e257154f"
+          }
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "prompt": {
+      "ram_sha256": "8dad717c98d554626aecc4e69caaa51f8ae8c8a44b599b71f529136a4fb1cf30",
+      "location": [
+        95,
+        -1,
+        213,
+        333,
+        3
+      ],
+      "local_field_weather": 0,
+      "local_field_camera": 0,
+      "player": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          213,
+          1,
+          333
+        ],
+        "facing_codes": [
+          3,
+          3,
+          3
+        ],
+        "avatar_state": 2
+      },
+      "save_array_sizes_offsets": {
+        "1": {
+          "size": 48,
+          "offset": "0xd050"
+        },
+        "2": {
+          "size": 1460,
+          "offset": "0xd080"
+        },
+        "3": {
+          "size": 1952,
+          "offset": "0xd634"
+        }
+      },
+      "party": {
+        "reference_dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+        "selected_dsv_counter": 9,
+        "selected_slot_base": 262144,
+        "selected_dsv_party_offset": 262288,
+        "party_array_size": 1460,
+        "ram_dynamic_offset": "0xd080",
+        "source_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "ram_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "normalized_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "exact_record_match": true,
+        "party_count": 3,
+        "species_ids": [
+          35,
+          152,
+          66
+        ],
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves_in_source_party": true,
+        "cipher_phase_evidence": [
+          {
+            "party_slot": 0,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "party_slot": 1,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075"
+          },
+          {
+            "party_slot": 2,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "yes_result": {
+      "ram_sha256": "b46b3af7cc27275cc781a20f26fba7aba91a61c45cb4a57bf461ea618c5d0842",
+      "location": [
+        95,
+        -1,
+        213,
+        333,
+        3
+      ],
+      "local_field_weather": 0,
+      "local_field_camera": 0,
+      "player": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          213,
+          1,
+          333
+        ],
+        "facing_codes": [
+          3,
+          3,
+          3
+        ],
+        "avatar_state": 2
+      },
+      "save_array_sizes_offsets": {
+        "1": {
+          "size": 48,
+          "offset": "0xd050"
+        },
+        "2": {
+          "size": 1460,
+          "offset": "0xd080"
+        },
+        "3": {
+          "size": 1952,
+          "offset": "0xd634"
+        }
+      },
+      "party": {
+        "reference_dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+        "selected_dsv_counter": 9,
+        "selected_slot_base": 262144,
+        "selected_dsv_party_offset": 262288,
+        "party_array_size": 1460,
+        "ram_dynamic_offset": "0xd080",
+        "source_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "ram_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "normalized_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "exact_record_match": true,
+        "party_count": 3,
+        "species_ids": [
+          35,
+          152,
+          66
+        ],
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves_in_source_party": true,
+        "cipher_phase_evidence": [
+          {
+            "party_slot": 0,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "party_slot": 1,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075"
+          },
+          {
+            "party_slot": 2,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "post_advance": {
+      "ram_sha256": "ca8857ad2a1ebcb3635f30bf0d5056b3c653acbd62598d682d68ee2da63c9e70",
+      "location": [
+        95,
+        -1,
+        217,
+        333,
+        3
+      ],
+      "local_field_weather": 0,
+      "local_field_camera": 0,
+      "player": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          217,
+          1,
+          333
+        ],
+        "facing_codes": [
+          3,
+          3,
+          3
+        ],
+        "avatar_state": 2
+      },
+      "save_array_sizes_offsets": {
+        "1": {
+          "size": 48,
+          "offset": "0xd050"
+        },
+        "2": {
+          "size": 1460,
+          "offset": "0xd080"
+        },
+        "3": {
+          "size": 1952,
+          "offset": "0xd634"
+        }
+      },
+      "party": {
+        "reference_dsv_sha256": "dca0aed6e2d0fe464d9fd2f71250f90bcc919c64826040e930d1bef553481e70",
+        "selected_dsv_counter": 9,
+        "selected_slot_base": 262144,
+        "selected_dsv_party_offset": 262288,
+        "party_array_size": 1460,
+        "ram_dynamic_offset": "0xd080",
+        "source_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "ram_array_sha256": "6d2d352ebd32059010b19896c0f0109eee948ab610d48505e32d561804980295",
+        "normalized_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "exact_record_match": true,
+        "party_count": 3,
+        "species_ids": [
+          35,
+          152,
+          66
+        ],
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves_in_source_party": true,
+        "cipher_phase_evidence": [
+          {
+            "party_slot": 0,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "party_slot": 1,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075"
+          },
+          {
+            "party_slot": 2,
+            "box_cipher_phase": {
+              "encrypted_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "encrypted_prefix_bytes": 4
+            },
+            "ram_record_sha256": "64c70707c59f568b725707bcea6e73a7b575c29d0415e7e86917e46c65c54564"
+          }
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "crossing": {
+      "start_xz": [
+        213,
+        333
+      ],
+      "end_xz": [
+        217,
+        333
+      ],
+      "target_footprint_x_range": [
+        214,
+        216
+      ],
+      "native_crossing_observed": true,
+      "manual_directional_input_after_yes": false
+    }
+  },
+  "hm_move_guard": {
+    "move_ids": [
+      15,
+      19,
+      57,
+      70,
+      127,
+      249,
+      250,
+      431
+    ],
+    "negative_test": {
+      "tested_hm_move_id": 431,
+      "detected": true,
+      "tested_non_hm_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "not_detected": true
+    }
+  },
+  "preservation": {
+    "party_normalized_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+    "party_unchanged": true,
+    "party_count": 3,
+    "party_species_ids": [
+      35,
+      152,
+      66
+    ],
+    "party_moves_by_slot": [
+      [
+        27,
+        1,
+        0,
+        0
+      ],
+      [
+        33,
+        45,
+        0,
+        0
+      ],
+      [
+        67,
+        43,
+        0,
+        0
+      ]
+    ],
+    "party_contains_no_hm_moves": true,
+    "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+    "bag_unchanged": true,
+    "reserve_address_range": "0x023D7000-0x023D7FFF",
+    "reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+    "reserve_unchanged": true,
+    "battery_save_after_action": "NOT_SAVED"
+  },
+  "scope_limits": [
+    "The native action visibly crossed map-95 Whirlpool tiles x=214..216.",
+    "No save or cold reload followed the Whirlpool use.",
+    "No broader progression, access, or alternate Whirlpool sites were tested.",
+    "The earlier weather-11 run is preserved as excluded evidence, not a gameplay failure."
+  ],
+  "consultation_unavailable": true
+}

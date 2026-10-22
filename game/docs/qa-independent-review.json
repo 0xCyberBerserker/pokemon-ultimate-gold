@@ -1,0 +1,134 @@
+{
+  "schema": "ultimate-gold-independent-qa-review/v1",
+  "review_date": "2026-10-22",
+  "status": "PARTIAL_BF_FINDING_RESOLVED_KIT_REVIEWED_PENDING_HM_REMAINING",
+  "summary": {
+    "en": "The reviewed HM, Battle Frontier, and combined-build kit evidence is hash-consistent and carefully scoped. BF-01 was corrected. Three native kit actions pass the declared checks; evolution-shop acceptance remains pending. A low-severity DSV provenance clarification is recommended.",
+    "es": "La evidencia revisada de MO, Battle Frontier y kit del build combinado mantiene hashes coherentes y un alcance acotado. BF-01 quedó corregido. Tres acciones nativas del kit superan las comprobaciones declaradas; la aceptación de la tienda de evoluciones sigue pendiente. Se recomienda aclarar la procedencia DSV, un hallazgo de severidad baja."
+  },
+  "method": {
+    "en": "Read-only review of reports, offline audit code, hashes, state lineage, and selected original screenshots. The initial HM/Battle Frontier review did not open an emulator; FIX5 was later tested on one leased core and released. The combined-kit review was read-only and did not rerun suites or alter originals.",
+    "es": "Revisión de solo lectura de informes, código de auditoría offline, hashes, cadena de estados y capturas originales seleccionadas. La revisión inicial de MO/Battle Frontier no abrió emulador; después se probó FIX5 con un núcleo cedido y se liberó. La revisión del kit combinado fue de solo lectura: no repitió suites ni modificó originales."
+  },
+  "findings": [
+    {
+      "id": "BF-01",
+      "severity": "MEDIUM",
+      "status": "RESOLVED",
+      "title": {
+        "en": "Map identity is mislabeled or unverified",
+        "es": "La identidad del mapa está mal etiquetada o no está verificada"
+      },
+      "evidence": [
+        "night-sprint/qa/frontier_acceptance.py:231-260 reads SaveData.LocalFieldData.currentPosition at SaveData + 0x1244; the corrected key is cached_elevator_position_at_battle_start and current_field_map_verified is false.",
+        "night-sprint/engine/upstream/pokeheartgold/include/constants/maps.h:270 defines MAP_BATTLE_TOWER_ELEVATOR=266; line 271 defines MAP_BATTLE_TOWER_UNUSED_1=267.",
+        "docs/battle-frontier.md:33,80 and docs/qa-battle-frontier.json now identify the cached saved position as map 266 (Elevator), not the active field map.",
+        "night-sprint/qa/runs/frontier-counter-step-27/frontier_battle_load_wait_270.png SHA-256 ab130e5e9989484ea2f4d809da76bf0659e62ba33058169e756c2454320d6b9b shows an active battle but no field-map identifier."
+      ],
+      "detail": {
+        "en": "The recorded value proves a cached saved-position tuple with map value 266. It does not independently establish the active field map.",
+        "es": "El valor registrado demuestra una tupla en caché de posición guardada con valor de mapa 266. No establece de forma independiente el mapa de campo activo."
+      },
+      "recommendation": {
+        "en": "Resolved: the tuple is labelled as cached saved position map 266 (Elevator per maps.h); the active field map remains explicitly unverified, while screenshot-based first-battle evidence remains separate.",
+        "es": "Resuelto: la tupla se etiqueta como posición guardada en caché del mapa 266 (ascensor según maps.h); el mapa de campo activo queda expresamente sin verificar y la evidencia del primer combate por capturas permanece separada."
+      },
+      "resolution": {
+        "en": "Root corrected the audit script and English/Spanish guide, regenerated qa-battle-frontier.json offline, and preserved the screenshot-based battle-start claim. No emulator/core was reopened.",
+        "es": "Root corrigió el script de auditoría y la guía en inglés/español, regeneró qa-battle-frontier.json offline y conservó la afirmación de inicio de combate respaldada por capturas. No se volvió a abrir el emulador/núcleo."
+      }
+    },
+    {
+      "id": "KIT-01",
+      "severity": "LOW",
+      "status": "CLARIFICATION_RECOMMENDED",
+      "title": {
+        "en": "Golden seed and action-run DSV provenance are not explicitly distinguished",
+        "es": "No se distingue explícitamente el DSV semilla del DSV usado en las acciones"
+      },
+      "evidence": [
+        "docs/qa-combined-kit-shop.json sets kit.source_battery_sha256 to fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384, while every kit action run records the copied runtime DSV as e2366b6eb035a67c2d8987d6f7ce9bb73f5e847234789ac1e2055e09c24db0f6.",
+        "docs/qa-owned-hm-actions.json records the same test-profile DSV at fc9… on cold startup and e236… after its native save/reload. combined_kit_shop_acceptance.py hard-codes the seed hash but does not assert a seed-to-runtime-copy lineage."
+      ],
+      "detail": {
+        "en": "The per-run DSV hashes are recorded and the difference is consistent with the earlier native save changing the disposable profile. This does not invalidate the live kit-action RAM checks, but the combined report does not explain that relationship; its field can be mistaken for the DSV consumed by each action run.",
+        "es": "Los hashes DSV por ejecución están registrados y la diferencia es compatible con el guardado nativo anterior que cambió el perfil desechable. Esto no invalida las comprobaciones de RAM de las acciones del kit, pero el informe combinado no explica la relación; el campo puede confundirse con el DSV consumido por cada ejecución."
+      },
+      "recommendation": {
+        "en": "Label fc9… as the original golden seed and state separately that the action runs used the e236… saved profile copy. Keep save persistence outside the kit-action claim unless tested separately.",
+        "es": "Etiquetar fc9… como semilla Golden original e indicar por separado que las acciones usaron la copia del perfil guardado e236…. Mantener la persistencia fuera de la afirmación de acciones del kit salvo que se pruebe aparte."
+      }
+    }
+  ],
+  "verified": {
+    "hm": {
+      "target_rom_sha256": "c64dc998bf97c621027bd3e9f16e7526309db3fc69b99c8198d28b1614b75304",
+      "original_player_rom_sha256": "3e405d796cae0ab7d6f67d89a8d9097220f58497a849a09ea0a56651910412c1",
+      "golden_save_sha256": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "matrix_case_count": 8,
+      "matrix_rom_hashes_match": true,
+      "matrix_screenshot_hashes_match": true,
+      "native_save_and_fresh_process_reload": {
+        "runner_pids_distinct": true,
+        "save_runner_pid": 3032420,
+        "save_result_sha256": "e8ba309a60066943379719b0c4563d48303fb7c39d8fc1905a70d0b9018f34de",
+        "reload_runner_pid": 3036147,
+        "reload_result_sha256": "f1e867edeaf76e835f1b535a35fda0d3420ec71e43af06c0579da2568605cd09",
+        "reload_has_state_input": false,
+        "saved_battery_sha256": "e2366b6eb035a67c2d8987d6f7ce9bb73f5e847234789ac1e2055e09c24db0f6",
+        "reload_battery_sha256": "e2366b6eb035a67c2d8987d6f7ce9bb73f5e847234789ac1e2055e09c24db0f6",
+        "golden_save_unchanged": true
+      },
+      "known_strength_clipping_defect": "OPEN",
+      "scope_en": "Fixture-based menu matrix and native Fly/Surf evidence only; no acceptance of the other six actions, map gates, HM teaching, or combined kit/shop behavior.",
+      "scope_es": "Matriz de menús con fixtures y evidencia nativa de Fly/Surf; no acepta las otras seis acciones, límites de mapa, enseñanza de MO ni comportamiento combinado de kit/tienda."
+    },
+    "battle_frontier": {
+      "target_rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+      "recorded_checks": 267,
+      "recorded_checks_passed": 267,
+      "recorded_checks_failed": 0,
+      "check_count_interpretation": "Assertion/check count only; not independent trials or a statistical confidence measure.",
+      "cached_position_266": "MAP_BATTLE_TOWER_ELEVATOR per pinned maps.h; current_field_map_verified=false",
+      "map_label_finding_resolved": true,
+      "runtime_chain": {
+        "clean_boots": 1,
+        "state_linked_continuations": 27,
+        "synthetic_direct_entry": true
+      },
+      "message_archive": "a/0/2/7",
+      "published_reception_screenshot_byte_identical": true,
+      "pending": [
+        "Normal-story access",
+        "Battle Factory, Battle Hall, Battle Castle, Battle Arcade",
+        "Battle outcome, rewards, and continued streak",
+        "Cold battery-save reload"
+      ]
+    },
+    "combined_kit_shop": {
+      "target_rom_sha256": "c64dc998bf97c621027bd3e9f16e7526309db3fc69b99c8198d28b1614b75304",
+      "recorded_assertions": {
+        "passed": 61,
+        "failed": 0,
+        "interpretation": "assertion count, not independent trials or statistical confidence"
+      },
+      "actions": [
+        "party_healer",
+        "rare_candy",
+        "oran_berry"
+      ],
+      "observed_scope": "Checksum-valid party records read from emulated RAM; bag bytes and selected reserve canaries compared across state-linked action runs. One-frame fixture codes occur only in setup runs; action runs report no active codes.",
+      "shop_status": "PENDING_NATIVE_VENDOR_AND_PURCHASE",
+      "review_result": "Kit claims align with the inspected RAM comparisons and selected UI evidence. They do not establish battery persistence. Shop claims correctly remain pending."
+    }
+  },
+  "pending_sibling_reviews": [
+    {
+      "artifact": "docs/qa-hm-remaining.json",
+      "status": "PENDING"
+    }
+  ],
+  "release_acceptance": "NOT_ESTABLISHED"
+}

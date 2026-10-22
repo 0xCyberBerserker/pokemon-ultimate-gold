@@ -1,0 +1,61 @@
+{
+  "title": "Portable stat editor no-REGISTER smoke independent review",
+  "verdict": "PASS_BOUNDED_NATIVE_NO_WRITE_SMOKE",
+  "scope": "Independent offline replay and visual review of the four-run no-REGISTER smoke. No emulation/core was started during this review.",
+  "artifacts": {
+    "candidate_sha256": "03d8711445a32868a64b5c34abbd094c2f4be7a0d40d09fafcc54460a257c620",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "seed_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "auditor": {
+      "path": "qa/portable_stat_editor_menu_noregister_smoke_acceptance.py",
+      "sha256": "d6a5d597bce73df6722787c507ef6e1d89954c5d9820b9bf866a301feaa9cac2"
+    },
+    "frozen_acceptance": {
+      "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-report-01/acceptance.json",
+      "sha256": "739b3a8b572f69cfde0bb2eff79c63372ae730e4242ee37f45ca4bdf1253d303"
+    }
+  },
+  "offline_replay": {
+    "result": "PASS",
+    "output_directory": "temporary directory outside repository",
+    "regenerated_acceptance_byte_exact": true,
+    "runs": 4
+  },
+  "run_chain": {
+    "cold": {
+      "run": "portable-stat-editor-menu-noregister-smoke-cold-01",
+      "frames": 5500,
+      "state_in": null
+    },
+    "next_runs": [
+      "portable-stat-editor-menu-noregister-smoke-bag-menu-01",
+      "portable-stat-editor-menu-noregister-smoke-use-party-family-01",
+      "portable-stat-editor-menu-noregister-smoke-exit-01"
+    ],
+    "chain_integrity": "Each later run's physical state input resolves to the preceding run's output state hash.",
+    "rom_core_runner_and_no_cheats": "Pinned and checked for every run."
+  },
+  "verified_checks": [
+    "The cold run has no state input; it starts from the fixed candidate and seed DSV.",
+    "All four runs bind physical result, RAM dump, input script, output state, frozen DSV snapshot, and sidecar hashes.",
+    "The seed DSV is CRC/header checked, hash-identical across the isolated profile, and the recorded runtime battery path remains unchanged.",
+    "Party snapshots match the selected DSV through exact native cipher-boundary checks; the runtime SaveArray3 bytes match the seed DSV.",
+    "The canonical Bag bytes are identical across the four RAM snapshots and key item 118 remains quantity 1.",
+    "Reserve sections at 0x023D5000, 0x023D6000, and 0x023D7000 match the candidate ROM bytes in every run.",
+    "The family menu is captured with EVs/IVs/Exit; RAM UI mode/state reads 3/1 there and 0/1 after Exit."
+  ],
+  "visual_review": {
+    "context_menu": "kit_context_final.png visibly shows USE, MOVE, and CANCEL; REGISTER/DESELECT are absent.",
+    "key_items": "key_items_open.png visibly lists Cheat Kit.",
+    "party_and_family": "Party selector highlights Clefairy; family menu shows EVs, IVs, Exit.",
+    "exit": "field_after_exit.png shows return to field."
+  },
+  "limits": [
+    "This is a bounded no-write smoke, not EV/IV operation acceptance.",
+    "Save and fresh-process cold persistence for editor actions were not tested.",
+    "REGISTER/DESELECT absence was independently checked visually, not via automated OCR.",
+    "Canonical Bag bytes are compared across these four RAM snapshots; the auditor does not claim a direct Bag-buffer-to-DSV byte mapping.",
+    "No whole-game or broader regression acceptance is implied."
+  ]
+}

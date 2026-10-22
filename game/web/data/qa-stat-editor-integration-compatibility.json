@@ -1,0 +1,65 @@
+{
+  "schema": "ultimate-gold-portable-editor-integration-compatibility/v1",
+  "status": "REVISED_MARKER_REUSED_SEPARATE_EDITOR_PENDING",
+  "superseded_status": "FLAG_SLOT_COLLISION_STATIC",
+  "scope": "Static comparison of Alpha2 item kit and no-REGISTER EV/IV candidate; no ROM/core execution.",
+  "evidence": {
+    "@HOME@/Games/Sacred-Gold/night-sprint/qa/portable_stat_editor_menu_noregister_build.py": "d6651661c8d82bc87d4050ff7c477f522b9ae7503af0d835cc5eb0f483c9288c",
+    "@HOME@/Games/Sacred-Gold/night-sprint/qa/stat_editor_menu_script.py": "004c4241321aaaa876c7bf63524d7633633aca15678ff4d43035d2237294328e",
+    "@HOME@/Games/Sacred-Gold/project/docs/qa-alpha2-build.json": "12f76a7c3afff0942ea7bc920fda4c0c45341c162d80f60627b8bba5787301a3",
+    "@HOME@/Games/Sacred-Gold/project/docs/item-icon-evidence.json": "6ef41414d21c05309517323eca7bb2f9c01a346a845044272b6d28aa930a3e80"
+  },
+  "facts": {
+    "alpha2_item_ids": {
+      "113": "TM Refill",
+      "114": "Party Healer",
+      "118": "Cheat Kit"
+    },
+    "candidate_item_id": 118,
+    "candidate_behavior": "The candidate keeps item 118 fieldUse=5 and changes only its selectable flag; its generated script is an EV/IV/nature-style party editor menu.",
+    "candidate_preservation": {
+      "item_113_114_mapping_preserved": true,
+      "other_item_records_byte_exact": true
+    },
+    "editor_script_contract": {
+      "families": [
+        "EVs",
+        "IVs"
+      ],
+      "steps": {
+        "EVs": [
+          1,
+          4,
+          10
+        ],
+        "IVs": [
+          1,
+          5
+        ]
+      },
+      "runtime": "not tested"
+    },
+    "alpha2_support_evidence": {
+      "gift_ids": [
+        113,
+        114,
+        118
+      ],
+      "shop_report_contains_item_118": true,
+      "docs_item_locations_contains_113": true
+    }
+  },
+  "finding": "Independent source review corrected the initial collision claim. Alpha2 item 118 has fieldUse=0 and acts as a possession marker checked by Bag_TakeItem to retain supported consumables. The EV/IV candidate adds a USE action and appends script 2072 while preserving the previous 72 destinations; it does not replace a pre-existing Cheat Kit USE menu. Reuse must still be tested in the final candidate.",
+  "correction_sources": [
+    "night-sprint/internal/cheat-kit/cheat_kit_hook.c:31",
+    "night-sprint/internal/portable-kit-launch/portable_kit_launch.c:67",
+    "night-sprint/qa/portable_kit_launch_build.py:405",
+    "night-sprint/internal/stat-editor-research/portable-editor-item119-audit.json"
+  ],
+  "minimum_solution": "Preserve the item 118 possession marker and its consumable-reuse hook. A separate editor item implements the requested organization, rather than repairing a proven loss of an existing USE action. The private item 119 candidate requires independent static review, native action/reuse tests and an implemented NPC migration. This review does not prove item 119 globally unused.",
+  "limits": [
+    "No ROM writes, emulator run, or source build performed.",
+    "No claim that an unused item ID is safe.",
+    "Nature support is not present in the inspected stat_editor_menu_script.py contract; it covers EV/IV families only."
+  ]
+}

@@ -1,0 +1,502 @@
+{
+  "schema": "rocket-grant-08e-native-save-cold/v1",
+  "status": "VERIFIED_WITH_INTERMEDIATE_TRACE_LIMIT",
+  "scope": "Native save and fresh same-ROM cold-load persistence of item 119 already granted into expanded Key Items slot 50; no new grant, no EV/IV write, no general release acceptance.",
+  "build": {
+    "rom": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-rocket-grant/portable-stat-editor-rocket-grant-fix6a.nds",
+    "sha256": "08e1d4e51599dc459600f1eff44e7915acbbaa111d74321be22a4800af629fcf",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "one_shot_wrapper": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_once.py",
+    "wrapper_sha256": "88d9254e8291486e4c78d2585976497d9ad9a69e224179b411aedbb55c959181"
+  },
+  "profile": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/rocket-grant-08e-expanded-store-inspect/portable-stat-editor-rocket-grant-fix6a.dsv",
+    "rom_basename_match": true,
+    "source_dsv": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-scan-key-items-01/battery-evidence/portable-stat-editor-rocket-grant-fix6a.dsv",
+      "sha256": "3ad0dd9f5155962a11819af3ad62d9a410cb9d3e2b7fc343ef2a2898967930d0",
+      "unchanged": true
+    },
+    "saved_dsv": {
+      "sha256": "0a0a2e3348050e6625e3db7cef5715f188e7727106ff147a1c168d3ec11ad254",
+      "bytes": 524410,
+      "active_counter": 11,
+      "active_slot_base": 262144,
+      "slots": [
+        {
+          "base": 0,
+          "save_counter": 10,
+          "crc16": 20999,
+          "crc_valid": true,
+          "current_position": [
+            60,
+            -1,
+            685,
+            408,
+            2
+          ]
+        },
+        {
+          "base": 262144,
+          "save_counter": 11,
+          "crc16": 12333,
+          "crc_valid": true,
+          "current_position": [
+            60,
+            -1,
+            685,
+            408,
+            2
+          ]
+        }
+      ],
+      "counter_delta": 1
+    }
+  },
+  "run_chain": {
+    "rocket-grant-08e-expanded-store-scan-key-items-01": {
+      "result_sha256": "d8f3ae15b7510daff6b5ae6a54fcbe016de85cbe3651cc4b8c9f547f6761047c",
+      "input_sha256": "1e7b2f5352ee76fe591f187cd54e948ee6db2f13d998d13a142a5b68358a8faa",
+      "frames": 1500,
+      "state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-key-items-01/key-items.state",
+      "state_in_sha256": "d8f256c6a9cef0c30f4dc1e1405105e3de632f9465289745088fafc11dddd79e",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-scan-key-items-01/scan.state",
+      "state_out_sha256": "4097eae7060871d69b355b9214a9c1b579c6c5de617e12f0345e2b5c338463c9",
+      "main_ram_sha256": "0e6e2568c05ffdb764388a037fee9bd9ca3d8ad8ec0fb1a67b18300c0f55030b",
+      "battery_dsv_sha256": "3ad0dd9f5155962a11819af3ad62d9a410cb9d3e2b7fc343ef2a2898967930d0",
+      "battery_sidecar": "FROZEN"
+    },
+    "rocket-grant-08e-expanded-store-close-bag-01": {
+      "result_sha256": "cc79cac3a5d1c80056fff964b0fb5dbc1efc1458fcaee3d8f5c4eaabfcc22907",
+      "input_sha256": "9f845bbea091c94ea19f67b951d09ced6ac6a8af6f74206f34e808516bae5891",
+      "frames": 300,
+      "state_in": "qa/runs/rocket-grant-08e-expanded-store-scan-key-items-01/scan.state",
+      "state_in_sha256": "4097eae7060871d69b355b9214a9c1b579c6c5de617e12f0345e2b5c338463c9",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-close-bag-01/close.state",
+      "state_out_sha256": "34f0f66c26aee7f5e72b8350e68d49a08676c941e4794cce5fbb2650a92b90d8",
+      "main_ram_sha256": "5d248d2531dd1039ae9e2ebee206e0d355173c320a510b006564d0e0459e4701",
+      "battery_dsv_sha256": "3ad0dd9f5155962a11819af3ad62d9a410cb9d3e2b7fc343ef2a2898967930d0",
+      "battery_sidecar": "MISSING; result hash matches independently frozen source DSV before and after this transition"
+    },
+    "rocket-grant-08e-expanded-store-save-open-01": {
+      "result_sha256": "f36d66e1bdb2e9b53b6c9e26a1922bea95d170e2091ecfcd3a70e06baacd68cd",
+      "input_sha256": "2a4a7263b48341d54c89aaf962105aee371836174bd8aff8bfd88616094b9aaf",
+      "frames": 650,
+      "state_in": "qa/runs/rocket-grant-08e-expanded-store-close-bag-01/close.state",
+      "state_in_sha256": "34f0f66c26aee7f5e72b8350e68d49a08676c941e4794cce5fbb2650a92b90d8",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-save-open-01/save-prompt.state",
+      "state_out_sha256": "4f2a38967936676db3f704389a251440ecf824df0463006dbcd3988eb7d288f7",
+      "main_ram_sha256": "bcd5f86ed8631e2f217bcefdab5ad67f285acbc3fe45a388d39cc0014445b00e",
+      "battery_dsv_sha256": "3ad0dd9f5155962a11819af3ad62d9a410cb9d3e2b7fc343ef2a2898967930d0",
+      "battery_sidecar": "FROZEN"
+    },
+    "rocket-grant-08e-expanded-store-save-confirm-01": {
+      "result_sha256": "4d8905acacfa9b98fb2b886587fa52a9dca082c9a4c3ca5dc48e383288ed9dbf",
+      "input_sha256": "875fb84185a3a3ec714efc077d0e640e9690493ec8e07eb82cbbc8e81ad579df",
+      "frames": 500,
+      "state_in": "qa/runs/rocket-grant-08e-expanded-store-save-open-01/save-prompt.state",
+      "state_in_sha256": "4f2a38967936676db3f704389a251440ecf824df0463006dbcd3988eb7d288f7",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-save-confirm-01/after-first-confirm.state",
+      "state_out_sha256": "4aeddaed7d931fcb92f75344bc96a68e9548e4888aac69a44983af2818d63705",
+      "main_ram_sha256": "1f02ee7854600a6f79b3b7f113ee48694776d2c2828e4f8cdac5506854821f92",
+      "battery_dsv_sha256": "3ad0dd9f5155962a11819af3ad62d9a410cb9d3e2b7fc343ef2a2898967930d0",
+      "battery_sidecar": "FROZEN"
+    },
+    "rocket-grant-08e-expanded-store-save-overwrite-01": {
+      "result_sha256": "3f54954ce5bb5754836aa8333aa5b89ffa72466896313efeaab17dc0e9e609c5",
+      "input_sha256": "2daa65cd59ee91ea6fa04db24f06e43cb240cf4ae3bfb59fb33907576d5ad0ca",
+      "frames": 7400,
+      "state_in": "qa/runs/rocket-grant-08e-expanded-store-save-confirm-01/after-first-confirm.state",
+      "state_in_sha256": "4aeddaed7d931fcb92f75344bc96a68e9548e4888aac69a44983af2818d63705",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-save-overwrite-01/saved.state",
+      "state_out_sha256": "f96d45e0273570dcd3c88e194bcf6ed3eabe80cfe87c9b1009476190d2c489d3",
+      "main_ram_sha256": "b30c01cbed1e412ae1bd81e0605d0040103fb4897e46510e2028c3c2ba3b71c8",
+      "battery_dsv_sha256": "0a0a2e3348050e6625e3db7cef5715f188e7727106ff147a1c168d3ec11ad254",
+      "battery_sidecar": "FROZEN"
+    },
+    "rocket-grant-08e-expanded-store-saved-cold-01": {
+      "result_sha256": "5417e004c843d3df67ca7bf339bc8349f5e6e830995b4741740d29ed46e38f1c",
+      "input_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "frames": 5500,
+      "state_in": null,
+      "state_in_sha256": null,
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-saved-cold-01/cold.state",
+      "state_out_sha256": "eca9bfb4e4a5f6e3126e9b82a8ee9885251392036bb1f4b40a907083cd97d8b9",
+      "main_ram_sha256": "421e23681252da34cde7a3d6d9a1a38a87ac5a73db869911771a7c3e050e6e52",
+      "battery_dsv_sha256": "0a0a2e3348050e6625e3db7cef5715f188e7727106ff147a1c168d3ec11ad254",
+      "battery_sidecar": "FROZEN"
+    },
+    "rocket-grant-08e-expanded-store-saved-cold-key-items-01": {
+      "result_sha256": "e76025430cecc50119f308dc6989dbb2cd2757b98b4f8187ad470004f684e3bc",
+      "input_sha256": "b27c87116dda6825108effce14d1e3e1c96d345a6a0bd027210441fd0585b232",
+      "frames": 2200,
+      "state_in": "qa/runs/rocket-grant-08e-expanded-store-saved-cold-01/cold.state",
+      "state_in_sha256": "eca9bfb4e4a5f6e3126e9b82a8ee9885251392036bb1f4b40a907083cd97d8b9",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-saved-cold-key-items-01/key-items.state",
+      "state_out_sha256": "568139123cc1e79d4735645ef565747e781bb1b4474b93d7921e5fed40691b94",
+      "main_ram_sha256": "af9508e74531c2a76304e038f3b870ed5c4b47733d99aa67a894a259bb7664cd",
+      "battery_dsv_sha256": "0a0a2e3348050e6625e3db7cef5715f188e7727106ff147a1c168d3ec11ad254",
+      "battery_sidecar": "FROZEN"
+    }
+  },
+  "save_ui": {
+    "overwrite_prompt": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-save-overwrite-01/overwrite_yes_before_confirm.png",
+    "save_complete": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-save-overwrite-01/save_complete.png",
+    "prompt_displayed_time": "0:36"
+  },
+  "persistence": {
+    "native_save_runtime": {
+      "save_data_pointer": "0x227c2a8",
+      "savearray3": {
+        "size": 1952,
+        "offset": "0xd634"
+      },
+      "bpac_magic": "0x43415042",
+      "bpac_save_data_link_valid": true,
+      "bpac_savearray3_projection_link_valid": true,
+      "pocket_7_key_item_capacity": 60,
+      "item_119": {
+        "pocket": 7,
+        "pocket_slot": 50,
+        "global_slot": 584,
+        "ram_address": "0x023DE034",
+        "quantity": 1
+      },
+      "party_vs_saved_dsv": {
+        "reference_dsv_sha256": "0a0a2e3348050e6625e3db7cef5715f188e7727106ff147a1c168d3ec11ad254",
+        "selected_dsv_counter": 11,
+        "selected_slot_base": 262144,
+        "selected_dsv_party_offset": 262288,
+        "party_array_size": 1460,
+        "ram_dynamic_offset": "0xd080",
+        "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "ram_array_sha256": "1d55472e887ed15c7ca3c8b947601c7d097f776a5b126a29fda2a4916df6efc1",
+        "normalized_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_record_match": true,
+        "party_count": 3,
+        "species_ids": [
+          35,
+          152,
+          66
+        ],
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves_in_source_party": true,
+        "cipher_phase_evidence": [
+          {
+            "party_slot": 0,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "party_slot": 1,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "party_slot": 2,
+            "box_cipher_phase": {
+              "encrypted_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "encrypted_prefix_bytes": 64
+            },
+            "ram_record_sha256": "431a471f00b7a27fe2ce15658f1dd5a17d1e878de6055201c039c68d74a4a307"
+          }
+        ]
+      },
+      "expanded_bag_sha256": "cd1df8d66d1bc15f36b5b514c52879e7ad5c92fb573e5518ce80e9466da37770"
+    },
+    "fresh_cold_runtime": {
+      "save_data_pointer": "0x227c228",
+      "savearray3": {
+        "size": 1952,
+        "offset": "0xd634"
+      },
+      "bpac_magic": "0x43415042",
+      "bpac_save_data_link_valid": true,
+      "bpac_savearray3_projection_link_valid": true,
+      "pocket_7_key_item_capacity": 60,
+      "item_119": {
+        "pocket": 7,
+        "pocket_slot": 50,
+        "global_slot": 584,
+        "ram_address": "0x023DE034",
+        "quantity": 1
+      },
+      "party_vs_saved_dsv": {
+        "reference_dsv_sha256": "0a0a2e3348050e6625e3db7cef5715f188e7727106ff147a1c168d3ec11ad254",
+        "selected_dsv_counter": 11,
+        "selected_slot_base": 262144,
+        "selected_dsv_party_offset": 262288,
+        "party_array_size": 1460,
+        "ram_dynamic_offset": "0xd080",
+        "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "ram_array_sha256": "0ba5391ba2f253862ab492750b767a260d6afded1dbdac9e73154a10bf22b15a",
+        "normalized_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_record_match": true,
+        "party_count": 3,
+        "species_ids": [
+          35,
+          152,
+          66
+        ],
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves_in_source_party": true,
+        "cipher_phase_evidence": [
+          {
+            "party_slot": 0,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "party_slot": 1,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "party_slot": 2,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 8
+            },
+            "party_tail_cipher_phase": {
+              "encrypted_prefix_bytes": 0
+            },
+            "ram_record_sha256": "640c6cdc9ae0d948816fcdf1b92a2aafa196dd141ab3f6faa1172912e73023e0"
+          }
+        ]
+      },
+      "expanded_bag_sha256": "cd1df8d66d1bc15f36b5b514c52879e7ad5c92fb573e5518ce80e9466da37770"
+    },
+    "post_cold_key_items_runtime": {
+      "save_data_pointer": "0x227c228",
+      "savearray3": {
+        "size": 1952,
+        "offset": "0xd634"
+      },
+      "bpac_magic": "0x43415042",
+      "bpac_save_data_link_valid": true,
+      "bpac_savearray3_projection_link_valid": true,
+      "pocket_7_key_item_capacity": 60,
+      "item_119": {
+        "pocket": 7,
+        "pocket_slot": 50,
+        "global_slot": 584,
+        "ram_address": "0x023DE034",
+        "quantity": 1
+      },
+      "party_vs_saved_dsv": {
+        "reference_dsv_sha256": "0a0a2e3348050e6625e3db7cef5715f188e7727106ff147a1c168d3ec11ad254",
+        "selected_dsv_counter": 11,
+        "selected_slot_base": 262144,
+        "selected_dsv_party_offset": 262288,
+        "party_array_size": 1460,
+        "ram_dynamic_offset": "0xd080",
+        "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "ram_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "normalized_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_record_match": true,
+        "party_count": 3,
+        "species_ids": [
+          35,
+          152,
+          66
+        ],
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves_in_source_party": true,
+        "cipher_phase_evidence": [
+          {
+            "party_slot": 0,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "party_slot": 1,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "party_slot": 2,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        ]
+      },
+      "expanded_bag_sha256": "cd1df8d66d1bc15f36b5b514c52879e7ad5c92fb573e5518ce80e9466da37770"
+    },
+    "expanded_bag_exact_2376_byte_match_across_scan_save_cold_and_ui": true,
+    "pre_save_party_matches_original_crc_valid_dsv": {
+      "reference_dsv_sha256": "3ad0dd9f5155962a11819af3ad62d9a410cb9d3e2b7fc343ef2a2898967930d0",
+      "selected_dsv_counter": 10,
+      "selected_slot_base": 0,
+      "selected_dsv_party_offset": 144,
+      "party_array_size": 1460,
+      "ram_dynamic_offset": "0xd080",
+      "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "ram_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "normalized_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "exact_record_match": true,
+      "party_count": 3,
+      "species_ids": [
+        35,
+        152,
+        66
+      ],
+      "moves_by_party_slot": [
+        [
+          27,
+          1,
+          0,
+          0
+        ],
+        [
+          33,
+          45,
+          0,
+          0
+        ],
+        [
+          67,
+          43,
+          0,
+          0
+        ]
+      ],
+      "no_hm_moves_in_source_party": true,
+      "cipher_phase_evidence": [
+        {
+          "party_slot": 0,
+          "box_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "party_tail_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+        },
+        {
+          "party_slot": 1,
+          "box_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "party_tail_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "ram_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "party_slot": 2,
+          "box_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "party_tail_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "ram_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+        }
+      ]
+    },
+    "cold_boot_state_input": null,
+    "cold_boot_cheats": [],
+    "post_cold_visible_key_items_page9": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-08e-expanded-store-saved-cold-key-items-01/key_page_9_stable_after_cold.png",
+    "visible_screenshot_sha256": "c255f9c08a624577667e0ef6b8e15565e2f96f36672234a4b50ea314318b1e95"
+  },
+  "limits": [
+    "The close-Bag transition run has no battery-evidence sidecar because freeze_battery_evidence was missed before the later native save changed the profile. Its result records the original DSV SHA, which matches the frozen scan source DSV and the frozen save-open/first-confirm runs; no retrospective sidecar was created.",
+    "The 1952-byte SaveArray3 is the legacy projection. The persisted item is verified in the linked expanded BPAC cache and native UI; this report does not infer item absence from SaveArray3.",
+    "This verifies persistence of the already acquired item only; it does not test NPC acquisition, a fresh recipient, EV/IV operations, or full feature release acceptance."
+  ]
+}

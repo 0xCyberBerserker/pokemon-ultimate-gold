@@ -1,0 +1,175 @@
+{
+  "schema": "nature-stat-recalc-canonical-bag-supplement/v1",
+  "status": "PASS_BOUNDED_CANONICAL_CACHE_LINK_AND_INVARIANCE",
+  "scope_en": "Read-only verification that the initialized 594-slot canonical cache points to the active SaveData and legacy Bag projection, and remains byte-identical across the frozen cold/use/reset snapshots.",
+  "scope_es": "Verificación de solo lectura de que la caché canónica inicializada de 594 slots apunta al SaveData y a la proyección legacy activos y permanece idéntica en los snapshots congelados cold/use/reset.",
+  "limits_en": "This does not prove item acquisition, relocation, Save/cold persistence after mutation, general cache lifecycle, or gameplay acceptance. Item 119 was absent in all sampled snapshots.",
+  "limits_es": "Esto no demuestra adquisición, reubicación, persistencia tras mutación/guardado/recarga, ciclo de vida general de la caché ni aceptación de juego. El objeto 119 estaba ausente en todos los snapshots muestreados.",
+  "pins": {
+    "rom_sha256": "9e01938d9b27d453ec7a901c72d4f23a6d761a7a74b360deeb23ccdd56057636",
+    "v2_report_sha256": "03a55ffed6bb1d8850212ecc05700b7018fba3ef62e7b0406c0a9f101edd4528",
+    "fixture_helper_sha256": "ec653a1c6d1efe07d85feec5e539f60da909e9ab40ed58cb154542e48b1c1d01"
+  },
+  "canonical_layout": {
+    "magic": "0x43415042",
+    "state_address": "0x023DD700",
+    "cache_offset": "0x14",
+    "cache_bytes": 2376,
+    "slot_count": 594,
+    "key_pocket_offset_slots": 534,
+    "key_pocket_slots": 60
+  },
+  "snapshots": [
+    {
+      "phase": "cold",
+      "ram_sha256": "c73825c2ed102ef9a525f985cfd289b2867d74cb65c0a086c4d70c3be1b43643",
+      "save_data_address": "0x0227C240",
+      "save_array3_address": "0x0227C894",
+      "save_array3_size": 1952,
+      "canonical_state_address": "0x023DD700",
+      "canonical_cache_address": "0x023DD714",
+      "canonical_cache_bytes": 2376,
+      "canonical_cache_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "canonical_key_items": [
+        {
+          "slot": 0,
+          "item_id": 450,
+          "quantity": 1
+        },
+        {
+          "slot": 1,
+          "item_id": 502,
+          "quantity": 1
+        },
+        {
+          "slot": 2,
+          "item_id": 113,
+          "quantity": 1
+        },
+        {
+          "slot": 3,
+          "item_id": 114,
+          "quantity": 1
+        },
+        {
+          "slot": 4,
+          "item_id": 118,
+          "quantity": 1
+        }
+      ],
+      "canonical_item_quantities": {
+        "118": 1,
+        "119": 0
+      },
+      "legacy_118_119_slots": [
+        {
+          "slot": 169,
+          "item_id": 118,
+          "quantity": 1
+        }
+      ],
+      "legacy_save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+    },
+    {
+      "phase": "use",
+      "ram_sha256": "e27a62e05ac257f8cef0c6fdf3c5f6c7246754b035d8bf955a6352f10058b325",
+      "save_data_address": "0x0227C240",
+      "save_array3_address": "0x0227C894",
+      "save_array3_size": 1952,
+      "canonical_state_address": "0x023DD700",
+      "canonical_cache_address": "0x023DD714",
+      "canonical_cache_bytes": 2376,
+      "canonical_cache_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "canonical_key_items": [
+        {
+          "slot": 0,
+          "item_id": 450,
+          "quantity": 1
+        },
+        {
+          "slot": 1,
+          "item_id": 502,
+          "quantity": 1
+        },
+        {
+          "slot": 2,
+          "item_id": 113,
+          "quantity": 1
+        },
+        {
+          "slot": 3,
+          "item_id": 114,
+          "quantity": 1
+        },
+        {
+          "slot": 4,
+          "item_id": 118,
+          "quantity": 1
+        }
+      ],
+      "canonical_item_quantities": {
+        "118": 1,
+        "119": 0
+      },
+      "legacy_118_119_slots": [
+        {
+          "slot": 169,
+          "item_id": 118,
+          "quantity": 1
+        }
+      ],
+      "legacy_save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+    },
+    {
+      "phase": "reset",
+      "ram_sha256": "e13eea3a4545854375b55c9c7aa45f8959840c6f16cb29fe147b220b9d5c402d",
+      "save_data_address": "0x0227C240",
+      "save_array3_address": "0x0227C894",
+      "save_array3_size": 1952,
+      "canonical_state_address": "0x023DD700",
+      "canonical_cache_address": "0x023DD714",
+      "canonical_cache_bytes": 2376,
+      "canonical_cache_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "canonical_key_items": [
+        {
+          "slot": 0,
+          "item_id": 450,
+          "quantity": 1
+        },
+        {
+          "slot": 1,
+          "item_id": 502,
+          "quantity": 1
+        },
+        {
+          "slot": 2,
+          "item_id": 113,
+          "quantity": 1
+        },
+        {
+          "slot": 3,
+          "item_id": 114,
+          "quantity": 1
+        },
+        {
+          "slot": 4,
+          "item_id": 118,
+          "quantity": 1
+        }
+      ],
+      "canonical_item_quantities": {
+        "118": 1,
+        "119": 0
+      },
+      "legacy_118_119_slots": [
+        {
+          "slot": 169,
+          "item_id": 118,
+          "quantity": 1
+        }
+      ],
+      "legacy_save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+    }
+  ],
+  "canonical_cache_identical_across_snapshots": true
+}

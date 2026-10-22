@@ -1,0 +1,63 @@
+{
+  "schema": "portable-menu-uimode-static-review/v1",
+  "verdict": "PASS_STATIC_RUNTIME_PENDING",
+  "scope": "Offline physical comparison of the frozen UI-mode candidate against fadefix, plus source-generator and control-flow verification. No core, emulation, or ROM writes.",
+  "summary_en": "No static blocker found. The candidate changes only global script 2072 in script NARC member 3, adding the required mode-3 transition before its menus and restoring mode 0 only on the normal exit. Selector cancellation skips both transitions. The extracted script is byte-exact to the current generator, and removing the two mode opcodes yields the same normalized command graph as fadefix.",
+  "summary_es": "No se encontró ningún bloqueo estático. La candidata solo cambia el script global 2072 del miembro 3 del NARC de scripts: añade la transición requerida al modo 3 antes de los menús y restaura el modo 0 únicamente en la salida normal. La cancelación del selector omite ambas transiciones. El script extraído coincide byte por byte con el generador actual y, al quitar los dos opcodes de modo, conserva el mismo grafo de comandos normalizado que fadefix.",
+  "candidate": {
+    "path": "experiments/eviv/portable-stat-editor-menu-uimode/portable-stat-editor-menu-uimode-fix6a.nds",
+    "sha256": "5a61083689668f3efcf46c4821b77b336875af5237a36f9985eb4cc159bd7d44"
+  },
+  "comparison_parent": {
+    "path": "experiments/eviv/portable-stat-editor-menu-fadefix/portable-stat-editor-menu-fadefix-fix6a.nds",
+    "sha256": "2abb1c8cf87540aad70d3c7c13517bee5a159ef3e38af11a1440030b276317ed"
+  },
+  "build_provenance": {
+    "builder_path": "night-sprint/qa/portable_stat_editor_menu_uimode_build.py",
+    "builder_sha256": "3fc767e72c54a1c2412b72f88640debadb08e77d95d228daeae4ff6d2849eacb",
+    "build_report_path": "experiments/eviv/portable-stat-editor-menu-uimode/build.json",
+    "build_report_sha256": "cdb53ef7cf2c4688f849ffd67b27e2935c745677d08004222d7699770e78cc48",
+    "generator_path": "night-sprint/qa/stat_editor_menu_script.py",
+    "generator_sha256": "3b27a630851a72d1e19231aea6d4ffe28be240e92161d96f60218d9e3cc41457",
+    "host_test_path": "night-sprint/qa/test_stat_editor_menu_script.py",
+    "host_test_sha256": "ae33b8b080ae41927600caf9ae0c25066b4628fb922914f544d588be16383b3d"
+  },
+  "physical_delta_vs_fadefix": {
+    "arm9_byte_exact": true,
+    "arm7_byte_exact": true,
+    "nds_file_count_equal": true,
+    "changed_paths": ["a/0/1/2"],
+    "changed_narc_members": [3],
+    "member_3_script_bank_bytes_parent_candidate": [23757, 23761],
+    "delta_bytes": 4
+  },
+  "script_2072": {
+    "bank_entry_count": 73,
+    "global_id": 2072,
+    "payload_bytes_parent_candidate": [17590, 17594],
+    "payload_sha256_candidate": "de457ad35f9ea352091db4de66992fb348e599cd1071f2fd724130180b8e3d94",
+    "generator_byte_exact": true,
+    "normalized_command_graph_equal_to_fadefix": true,
+    "normalized_command_count": 2908,
+    "all_branch_targets_are_command_boundaries": true,
+    "hide_opcode": {"id": 746, "offset": 53},
+    "show_opcode": {"id": 747, "offset": 17588},
+    "selector_cancel": {
+      "comparison": "0x800C == 255",
+      "reachable_opcodes": [44, 49, 53, 22, 97, 2],
+      "bypasses_hide_and_show": true
+    },
+    "menu_init_exec_between_hide_and_show": true,
+    "show_immediately_precedes_release_all": true
+  },
+  "verification": {
+    "physical_readback": "PASS using installed ndspy 4.1.0",
+    "command": "python3 night-sprint/qa/test_stat_editor_menu_script.py",
+    "result": "PASS: generated payload is 17594 bytes, SHA-256 de457ad35f9ea352091db4de66992fb348e599cd1071f2fd724130180b8e3d94, 2910 commands, 30 messages"
+  },
+  "limits": {
+    "runtime_game_test": "NOT_TESTED",
+    "save_or_cold_persistence": "NOT_TESTED",
+    "gameplay_acceptance": "NOT_CLAIMED"
+  }
+}

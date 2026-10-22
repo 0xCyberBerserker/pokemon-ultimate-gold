@@ -1,0 +1,24 @@
+{
+  "schema": "ultimate-gold-stat-editor-host-adapter/v1",
+  "date": "2026-10-22",
+  "status": "PASS_HOST_API_ROUTING_WITH_STUBS",
+  "command": "python3 qa/stat_editor_native_host_test.py",
+  "working_directory": "night-sprint",
+  "inputs": {
+    "qa/stat_editor_native_host_test.c": "70caddd92c3ea8429b3354b56fe76b6af9775eb6bb6760f7573902e94c9272ac",
+    "qa/stat_editor_native_host_test.py": "e18e3a517f0b7937dc5378bd08aefbbc0cf7d489f347ded90b8c5af4393a7b92",
+    "internal/stat-editor/stat_editor.c": "5ffdaf4bf223516b0b9ad4eccd2437f207459539d67a9c0995912d5dba3a8776",
+    "internal/stat-editor/stat_editor_native.c": "ed819da3941b0c515f1140c25a6f19548f5abb7d95ff5bb9f9f8de23fe22bcb8"
+  },
+  "checks": [
+    "Real core and adapter compiled against engine Party/Pokemon layouts; warnings treated as errors.",
+    "Selected-slot routing, unchanged other slots, preview without setters and staged EV/IV increments.",
+    "EV 255 per stat and 510 total; IV 31; clamping, confirmed setters and separate all-stat zero resets.",
+    "Cancel 255, null/invalid party, invalid counts, empty target and Egg/checksum-failure rejection.",
+    "PID bytes preserved across tested mutations; one recalculation through the adapter."
+  ],
+  "limits": [
+    "Host stubs validate API routing and policy, not native encryption, real stat or nature formulas.",
+    "No emulator, player-facing confirmation/menu, portable item, save/PC persistence or release acceptance is established here."
+  ]
+}

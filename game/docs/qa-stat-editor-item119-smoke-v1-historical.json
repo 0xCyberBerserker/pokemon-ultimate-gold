@@ -1,0 +1,606 @@
+{
+  "schema": "portable-stat-editor-separate-item-noregister-smoke/v1",
+  "status": "PASS_BOUNDED_NATIVE_NO_WRITE_SMOKE_WITH_PARTY_CIPHER_LIMIT",
+  "gameplay_acceptance": "NOT_ASSESSED",
+  "scope": "Synthetic item 119 in a disposable Alpha2-derived DSV; native Bag USE, Party slot 0 selection, family-menu Exit, and return to field. No EV/IV operation, save, NPC grant, or release integration was tested.",
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-separate-item-noregister/portable-stat-editor-separate-item-noregister-fix6a.nds",
+    "sha256": "8bc4692eab0644a1b4366da4d7cae0f47ce09429953d198f1732fe0f96f81f62",
+    "build_report": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-separate-item-noregister/build.json",
+    "build_report_sha256": "13a48a59c227c983c70adb6ee636985c45e8b5f39d95146b18d480e95e78de05"
+  },
+  "static_item_metadata": {
+    "item_id": 119,
+    "record_member": 517,
+    "flags": "0x03a0",
+    "selectable_register_bit_0x0040": false,
+    "field_use_func": 5,
+    "f439_comparison": {
+      "historical_f439_sha256": "f43916ab420c4254eadd48ad5e57a8fb319f8181627b034f1a8186b3f63ce80d",
+      "changed_narc_paths": [
+        "a/0/1/7"
+      ],
+      "arm9_byte_exact": true,
+      "arm7_byte_exact": true,
+      "all_existing_item_members_byte_exact": true,
+      "item_119_member": 517,
+      "item_119_record_changed_offsets": [
+        8
+      ],
+      "item_119_flags_before_after": [
+        "0x03e0",
+        "0x03a0"
+      ],
+      "item_119_flags_xor": "0x0040",
+      "serialized_item_narc_changed_ranges": [
+        [
+          22820,
+          22820
+        ]
+      ],
+      "serialized_item_narc_changed_byte_count": 1
+    },
+    "native_context_observation": "USE, MOVE, CANCEL shown; REGISTER/DESELECT absent in captured context menu",
+    "register_observation_method": "manual screenshot review; no OCR"
+  },
+  "runtime": {
+    "core_path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "once_wrapper_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_once.py",
+    "once_wrapper_sha256": "88d9254e8291486e4c78d2585976497d9ad9a69e224179b411aedbb55c959181",
+    "cheats": [],
+    "screenshots": {
+      "qa/runs/portable-stat-editor-separate-item-noregister-bag-context-01/item119_context_stable.png": {
+        "sha256": "39c4919673f3692fc0a3b633ad66ce3d42dccb3749924416ecffd54410d612f7",
+        "observation": "Key Items context offers USE, MOVE, CANCEL; REGISTER/DESELECT are absent."
+      },
+      "qa/runs/portable-stat-editor-separate-item-noregister-cancel-01/bag_after_cancel_stable.png": {
+        "sha256": "6a3dba6a0cec3e9ae3ce7f6b2e15039dc5fa8c5a7e1525da108c56af8937e55b",
+        "observation": "Cancel returns to Key Items with Stat Editor selected and its description visible."
+      },
+      "qa/runs/portable-stat-editor-separate-item-noregister-use-02/party_selector_before_slot0.png": {
+        "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25",
+        "observation": "Party selector is visible with slot 0 Clefairy."
+      },
+      "qa/runs/portable-stat-editor-separate-item-noregister-use-02/editor_family_menu_stable.png": {
+        "sha256": "ba66c9e6ace563d69f40f6553304b5f3d31454601623417a71c1d71a81e44b08",
+        "observation": "EVs, IVs and Exit are visible after selecting slot 0."
+      },
+      "qa/runs/portable-stat-editor-separate-item-noregister-exit-01/field_after_exit_stable.png": {
+        "sha256": "85f3602d0d23c6a9eff8dea9e413f43d1c6d39a0318588683de057a18956be01",
+        "observation": "Exit returns to the visible field."
+      }
+    }
+  },
+  "fixture": {
+    "seed_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-kit-launch-native-alpha2-seeded-cold/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+    "seed_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "seed_acceptance_sha256": "5df276619b51652ced92c61af30a35d650e7ad591773445c44cbd8709267e3c9",
+    "fixture_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/portable-stat-editor-separate-item-noregister/portable-stat-editor-separate-item-noregister-fix6a.dsv",
+    "fixture_dsv_sha256": "a72d2f982c6a9889f8431481318f97a2e653b317df293c4239893198a1f0e118",
+    "fixture_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/portable_stat_editor_separate_item_noregister_fixture.json",
+    "fixture_manifest_sha256": "8f1aadf8a75528adef614b12d30f541ac06ce231873041e29f08db4ac9a085f3",
+    "selected_slot_counter": 10,
+    "selected_slot_crc16": "0x036c",
+    "both_main_crc_valid": true,
+    "save_counters_preserved": [
+      10,
+      9
+    ],
+    "synthetic_item_119_quantity": 1,
+    "item_118_quantity": 1,
+    "native_gifts_preserved": true,
+    "profile_dsv_unchanged_through_runs": true,
+    "changes_are_synthetic_only": true
+  },
+  "runs": {
+    "portable-stat-editor-separate-item-noregister-cold-01": {
+      "id": "portable-stat-editor-separate-item-noregister-cold-01",
+      "result_sha256": "bc03f196776d37cba170b38a7577d14151dd89681748b70e7b764e44175798f1",
+      "input": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-cold-01/input-script.json",
+        "sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a"
+      },
+      "state_in_sha256": null,
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-cold-01/cold.state",
+        "sha256": "428062df6f67fae0ec60bf2206b8a91ee4457b85922f54589a68d161b6bb208a"
+      },
+      "battery_sidecar_sha256": "14704487e57b7fcd8620f4a79bd5871e373cd201cc66e6cb37aae762445664bf",
+      "battery_snapshot": "qa/runs/portable-stat-editor-separate-item-noregister-cold-01/battery-evidence/portable-stat-editor-separate-item-noregister-fix6a.dsv",
+      "battery_sha256": "a72d2f982c6a9889f8431481318f97a2e653b317df293c4239893198a1f0e118",
+      "ram": null,
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-cold-01/cold_continue_accepted.png",
+          "sha256": "5f2be96d5af2a56f594b63c4d178584f1fa9a74e40de212c9b0fbb41780f4b3d"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-cold-01/cold_continue_menu.png",
+          "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-cold-01/cold_final.png",
+          "sha256": "df76b04b4cf960a072a6f6c6fe240b043d51e5355588de97f1b476f71c82d5dd"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-cold-01/cold_loaded_field.png",
+          "sha256": "9015e4b864330017df7b3e2bd3f85e23b981229dcbc304a4f54f54f87948e6d2"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-cold-01/cold_loaded_identity.png",
+          "sha256": "cd854c5561c4e1bd816c497ecf392dbf8c0708ef003830d45db8927108ed735e"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-cold-01/cold_pre_title_inputs.png",
+          "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+        }
+      ]
+    },
+    "portable-stat-editor-separate-item-noregister-bag-context-01": {
+      "id": "portable-stat-editor-separate-item-noregister-bag-context-01",
+      "result_sha256": "cb12ae756b1c98c5374d9929b1ad791dea50b9a1c36d1831b078a8ae99f50437",
+      "input": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-bag-context-01/input-script.json",
+        "sha256": "e9682f102673414d8228c5eda65a7a68ce7831b2c683ed486a95488728d8f716"
+      },
+      "state_in_sha256": "428062df6f67fae0ec60bf2206b8a91ee4457b85922f54589a68d161b6bb208a",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-bag-context-01/state.state",
+        "sha256": "9b6958792c19311964cec2819775672a71ae71237db76efbb94199ed12f73fad"
+      },
+      "battery_sidecar_sha256": "8f1d5a9d58a50fb7780e4e15f766a99dd09d1edae3abd607b6d41df0f7a7c752",
+      "battery_snapshot": "qa/runs/portable-stat-editor-separate-item-noregister-bag-context-01/battery-evidence/portable-stat-editor-separate-item-noregister-fix6a.dsv",
+      "battery_sha256": "a72d2f982c6a9889f8431481318f97a2e653b317df293c4239893198a1f0e118",
+      "ram": null,
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-bag-context-01/bag_open.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-bag-context-01/bag_stable.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-bag-context-01/field_before_bag.png",
+          "sha256": "8766d1ea3ec3e1485849571c31bff7e3614444aeb8d87297a6a125d8191d0dfe"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-bag-context-01/item119_context.png",
+          "sha256": "39c4919673f3692fc0a3b633ad66ce3d42dccb3749924416ecffd54410d612f7"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-bag-context-01/item119_context_stable.png",
+          "sha256": "39c4919673f3692fc0a3b633ad66ce3d42dccb3749924416ecffd54410d612f7"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-bag-context-01/item119_selected.png",
+          "sha256": "39c4919673f3692fc0a3b633ad66ce3d42dccb3749924416ecffd54410d612f7"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-bag-context-01/key_items_open.png",
+          "sha256": "838163db18fa944efe3a5f22e92b1734beeb33f7603c003015ae7afd41dd645c"
+        }
+      ]
+    },
+    "portable-stat-editor-separate-item-noregister-cancel-01": {
+      "id": "portable-stat-editor-separate-item-noregister-cancel-01",
+      "result_sha256": "a3fe0ad29e7d3d9c8b1a2d30ec47ae49c6dd99b6660447399cc682d47ab580f2",
+      "input": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-cancel-01/input-script.json",
+        "sha256": "25d7f475a98a53e16577a5775a16368a3e8dc384e04100f09d951d4e3b9aafc2"
+      },
+      "state_in_sha256": "9b6958792c19311964cec2819775672a71ae71237db76efbb94199ed12f73fad",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-cancel-01/state.state",
+        "sha256": "e1c2c170538c3076544da724da60d604201f6d5cf0edeb6ce97958a33baeefed"
+      },
+      "battery_sidecar_sha256": "c9885c0c0272b4f4017451aff6e12fa620a604b720765f7deeadf88fe549ff1f",
+      "battery_snapshot": "qa/runs/portable-stat-editor-separate-item-noregister-cancel-01/battery-evidence/portable-stat-editor-separate-item-noregister-fix6a.dsv",
+      "battery_sha256": "a72d2f982c6a9889f8431481318f97a2e653b317df293c4239893198a1f0e118",
+      "ram": null,
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-cancel-01/bag_after_cancel.png",
+          "sha256": "6a3dba6a0cec3e9ae3ce7f6b2e15039dc5fa8c5a7e1525da108c56af8937e55b"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-cancel-01/bag_after_cancel_stable.png",
+          "sha256": "6a3dba6a0cec3e9ae3ce7f6b2e15039dc5fa8c5a7e1525da108c56af8937e55b"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-cancel-01/context_before_cancel.png",
+          "sha256": "e844e858be8648bf44d1984a01375378faffb546ab2f14212acde91a4ddd3207"
+        }
+      ]
+    },
+    "portable-stat-editor-separate-item-noregister-use-02": {
+      "id": "portable-stat-editor-separate-item-noregister-use-02",
+      "result_sha256": "e0ff9c7427123dc0c84275d945fa36b2c02deda4cd919cebceb0ff67c6ea92e0",
+      "input": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-use-02/input-script.json",
+        "sha256": "9849fc45f984cb28bf3f3091c03811f1dc741bcf2f2ca37ecdbfc7e03cbf6c3e"
+      },
+      "state_in_sha256": "e1c2c170538c3076544da724da60d604201f6d5cf0edeb6ce97958a33baeefed",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-use-02/state.state",
+        "sha256": "0ad228c6574c05da0f93652db8ebf00daf73e36cf6027ae0388724d50858ed52"
+      },
+      "battery_sidecar_sha256": "09024475dc796965e3659fff770f64993b02ae8ea5ed545fa1e29f684eb23b6f",
+      "battery_snapshot": "qa/runs/portable-stat-editor-separate-item-noregister-use-02/battery-evidence/portable-stat-editor-separate-item-noregister-fix6a.dsv",
+      "battery_sha256": "a72d2f982c6a9889f8431481318f97a2e653b317df293c4239893198a1f0e118",
+      "ram": null,
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-use-02/bag_item_selected.png",
+          "sha256": "6a3dba6a0cec3e9ae3ce7f6b2e15039dc5fa8c5a7e1525da108c56af8937e55b"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-use-02/editor_family_menu.png",
+          "sha256": "da91d05b174985b6c0e107d68c987b242983d281739b675168dbd1dfb53c6343"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-use-02/editor_family_menu_stable.png",
+          "sha256": "ba66c9e6ace563d69f40f6553304b5f3d31454601623417a71c1d71a81e44b08"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-use-02/item119_context_reopened.png",
+          "sha256": "39c4919673f3692fc0a3b633ad66ce3d42dccb3749924416ecffd54410d612f7"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-use-02/party_selector_before_slot0.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-use-02/slot0_before_accept.png",
+          "sha256": "0940a5378dd8bb63eb35bd0eae481594e235ee9f1e603062986b1aab99d914dd"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-use-02/use_before_selection.png",
+          "sha256": "39c4919673f3692fc0a3b633ad66ce3d42dccb3749924416ecffd54410d612f7"
+        }
+      ]
+    },
+    "portable-stat-editor-separate-item-noregister-exit-01": {
+      "id": "portable-stat-editor-separate-item-noregister-exit-01",
+      "result_sha256": "45bcdf5316c6e7b86bc5c689e9a8252abced3096f7c80cea69261011e9e09be8",
+      "input": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-exit-01/input-script.json",
+        "sha256": "2173e15a61d28599dff0f92829d411ed79f2e2c1f6b4b467a824eb58b7099443"
+      },
+      "state_in_sha256": "0ad228c6574c05da0f93652db8ebf00daf73e36cf6027ae0388724d50858ed52",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-exit-01/state.state",
+        "sha256": "050efa3ea084f08849cc3e4fecf9c552e22622a3cd317d3ed3f2f18e9708f679"
+      },
+      "battery_sidecar_sha256": "0d1b076ef73f00d63c76c0a26993106a178f42beaa36a5fa615f703e5d5dce72",
+      "battery_snapshot": "qa/runs/portable-stat-editor-separate-item-noregister-exit-01/battery-evidence/portable-stat-editor-separate-item-noregister-fix6a.dsv",
+      "battery_sha256": "a72d2f982c6a9889f8431481318f97a2e653b317df293c4239893198a1f0e118",
+      "ram": null,
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-exit-01/family_exit_highlight.png",
+          "sha256": "0cd9c0a89349467faf08195eaf175f6e909e92917e16af04b667a97b70841a81"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-exit-01/family_initial.png",
+          "sha256": "83588f2441905ce1386d5feb763145ca785c37bd743c3e2b363425736d9655ad"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-exit-01/family_iv_highlight.png",
+          "sha256": "23718360afb2565b431163439403eb49f3813d393c6a353a9b01abde8d954793"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-exit-01/field_after_exit.png",
+          "sha256": "967b92b21a51d58847cfdbea0ba53316c35e5ba9a474dcb30b2b38ff29f5ae9a"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-exit-01/field_after_exit_stable.png",
+          "sha256": "85f3602d0d23c6a9eff8dea9e413f43d1c6d39a0318588683de057a18956be01"
+        }
+      ]
+    },
+    "portable-stat-editor-separate-item-noregister-ram-cold-01": {
+      "id": "portable-stat-editor-separate-item-noregister-ram-cold-01",
+      "result_sha256": "281f88151d83a4e62e177d5cb821fcab4f316bdc1c86ce771bab90ac0016562c",
+      "input": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-ram-cold-01/input-script.json",
+        "sha256": "050d3ed158b6f89367ad095c16105d40b8c12a4054d885240820dad0b9148437"
+      },
+      "state_in_sha256": "428062df6f67fae0ec60bf2206b8a91ee4457b85922f54589a68d161b6bb208a",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-ram-cold-01/state.state",
+        "sha256": "ab973d7c1043794aaa14548daef93940286c32a5e480990349d646f08e8aee0c"
+      },
+      "battery_sidecar_sha256": "3689e7981eb5b96ed060e678ef3490e42044b50aec39dca8e1e9c04dbbbbfe1c",
+      "battery_snapshot": "qa/runs/portable-stat-editor-separate-item-noregister-ram-cold-01/battery-evidence/portable-stat-editor-separate-item-noregister-fix6a.dsv",
+      "battery_sha256": "a72d2f982c6a9889f8431481318f97a2e653b317df293c4239893198a1f0e118",
+      "ram": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-ram-cold-01/system_ram.bin",
+        "sha256": "0829ef5bfc18737549974f933bf0e6ab8b6ef247f7c1c8ff99965f959686be80"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-ram-cold-01/endpoint_observation.png",
+          "sha256": "a059ea4c0710387dafdf27151738cf3e69c13b18d0ad0d51405e4868531d67e4"
+        }
+      ]
+    },
+    "portable-stat-editor-separate-item-noregister-ram-exit-01": {
+      "id": "portable-stat-editor-separate-item-noregister-ram-exit-01",
+      "result_sha256": "f920e6430cc4de7d574ce2a025b052687460cb04e2e63e79f1cfcf012457ef44",
+      "input": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-ram-exit-01/input-script.json",
+        "sha256": "050d3ed158b6f89367ad095c16105d40b8c12a4054d885240820dad0b9148437"
+      },
+      "state_in_sha256": "050efa3ea084f08849cc3e4fecf9c552e22622a3cd317d3ed3f2f18e9708f679",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-ram-exit-01/state.state",
+        "sha256": "92fc7e581711c50f4829702f9dcaed5491f1cf0435b43d295793e793aaff8042"
+      },
+      "battery_sidecar_sha256": "b92872f0fba3216f1102fe4ea2cae4e0bb0366ba8932e6383b506bab96063261",
+      "battery_snapshot": "qa/runs/portable-stat-editor-separate-item-noregister-ram-exit-01/battery-evidence/portable-stat-editor-separate-item-noregister-fix6a.dsv",
+      "battery_sha256": "a72d2f982c6a9889f8431481318f97a2e653b317df293c4239893198a1f0e118",
+      "ram": {
+        "path": "qa/runs/portable-stat-editor-separate-item-noregister-ram-exit-01/system_ram.bin",
+        "sha256": "9f1c03753937994af84ebc2f4ed362f5795ccee429a9e2826917a5baade3b165"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-separate-item-noregister-ram-exit-01/endpoint_observation.png",
+          "sha256": "390c0ab45c723c261f08fcff00eac320cb54b8be283a2bae3613c738d5f750aa"
+        }
+      ]
+    }
+  },
+  "invariants": {
+    "runtime_endpoints": {
+      "cold_endpoint": {
+        "party_address": "0x0427c28c",
+        "party_size": 1460,
+        "party_sha256": "d0698c4660dc686253af16a4eb9ff0a562c99288f55f828d1c470b5b21cf9bc7",
+        "party_matches_seed_crc_boundary": null,
+        "savearray3_address": "0x0427c840",
+        "savearray3_size": 1952,
+        "savearray3_sha256": "750ac1a7959a17a4bafc802295bff4c5f9097090c147ffa2986e9de3c89f7734",
+        "savearray3_matches_fixture_dsv": true,
+        "bag_address": "0x023dd714",
+        "bag_size": 2376,
+        "bag_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "key_item_118": 1,
+        "key_item_119": 1,
+        "inventory": {
+          "items": {
+            "77": 1,
+            "78": 1,
+            "81": 2
+          },
+          "medicine": {
+            "17": 5,
+            "50": 1
+          },
+          "balls": {
+            "1": 19
+          },
+          "tmhm": {
+            "328": 99,
+            "329": 99,
+            "420": 1,
+            "421": 1,
+            "422": 1,
+            "423": 1,
+            "424": 1,
+            "425": 1,
+            "426": 1,
+            "427": 1
+          },
+          "berries": {
+            "154": 1,
+            "155": 1,
+            "157": 1
+          },
+          "mail": {},
+          "battle": {},
+          "key": {
+            "113": 1,
+            "114": 1,
+            "118": 1,
+            "119": 1,
+            "450": 1,
+            "502": 1
+          }
+        }
+      },
+      "exit_endpoint": {
+        "party_address": "0x0427c28c",
+        "party_size": 1460,
+        "party_sha256": "3baa4211860a4536b3b8332b33091922d46c2956a54a07008b8d7fb4f744d76c",
+        "party_matches_seed_crc_boundary": null,
+        "savearray3_address": "0x0427c840",
+        "savearray3_size": 1952,
+        "savearray3_sha256": "750ac1a7959a17a4bafc802295bff4c5f9097090c147ffa2986e9de3c89f7734",
+        "savearray3_matches_fixture_dsv": true,
+        "bag_address": "0x023dd714",
+        "bag_size": 2376,
+        "bag_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "key_item_118": 1,
+        "key_item_119": 1,
+        "inventory": {
+          "items": {
+            "77": 1,
+            "78": 1,
+            "81": 2
+          },
+          "medicine": {
+            "17": 5,
+            "50": 1
+          },
+          "balls": {
+            "1": 19
+          },
+          "tmhm": {
+            "328": 99,
+            "329": 99,
+            "420": 1,
+            "421": 1,
+            "422": 1,
+            "423": 1,
+            "424": 1,
+            "425": 1,
+            "426": 1,
+            "427": 1
+          },
+          "berries": {
+            "154": 1,
+            "155": 1,
+            "157": 1
+          },
+          "mail": {},
+          "battle": {},
+          "key": {
+            "113": 1,
+            "114": 1,
+            "118": 1,
+            "119": 1,
+            "450": 1,
+            "502": 1
+          }
+        }
+      }
+    },
+    "bag_byte_exact_cold_to_exit": true,
+    "savearray3_matches_fixture_dsv_and_is_unchanged": true,
+    "party_raw_array_cold_sha256": "d0698c4660dc686253af16a4eb9ff0a562c99288f55f828d1c470b5b21cf9bc7",
+    "party_raw_array_exit_sha256": "3baa4211860a4536b3b8332b33091922d46c2956a54a07008b8d7fb4f744d76c",
+    "party_raw_arrays_equal": false,
+    "party_raw_diff_byte_count": 154,
+    "party_raw_diff_ranges": [
+      [
+        488,
+        619
+      ],
+      [
+        694,
+        715
+      ]
+    ],
+    "party_dsv_boundary_phases": {
+      "cold": [
+        {
+          "slot": 0,
+          "box": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          }
+        },
+        {
+          "slot": 1,
+          "box": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          }
+        },
+        {
+          "slot": 2,
+          "box": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail": {
+            "mode": "plain_prefix",
+            "split_bytes": 4
+          }
+        }
+      ],
+      "exit": [
+        {
+          "slot": 0,
+          "box": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          }
+        },
+        {
+          "slot": 1,
+          "box": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          }
+        },
+        {
+          "slot": 2,
+          "box": {
+            "mode": "plain_suffix",
+            "split_bytes": 0
+          },
+          "tail": {
+            "mode": "plain_suffix",
+            "split_bytes": 78
+          }
+        }
+      ]
+    },
+    "party_strict_comparator": {
+      "cold": {
+        "status": "LIMITED_TRANSIENT_BOUNDARY",
+        "error": "decoded party fields changed in record 2"
+      },
+      "exit": {
+        "status": "PASS",
+        "strict_cipher_boundary_match": true,
+        "checksum_valid_slot2": false,
+        "decoded_fields_claimed_for_slot2": false
+      }
+    },
+    "party_slot2_interpretation": "Cold slot 2 has an exact DSV cipher boundary (tail plain-prefix 4 bytes); Exit has an exact boundary (tail encrypted-prefix 78 bytes) with invalid checksum. No decoding or semantic claim is made for that transient record.",
+    "array_source_regression_guard": {
+      "party_address": "0x0427c28c",
+      "party_size": 1460,
+      "bag_address": "0x023dd714",
+      "bag_size": 2376,
+      "ranges_distinct": true,
+      "negative_one_byte_party_test_rejected": true
+    },
+    "dsv_changed_bytes_during_runtime": 0
+  },
+  "excluded_attempts": [
+    {
+      "run_id": "portable-stat-editor-separate-item-noregister-use-01",
+      "status": "PRE_CORE_FAILURE_EXCLUDED",
+      "note_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-separate-item-noregister-use-01/attempt-note.json",
+      "note_sha256": "6e258859813be37f23bd2653a06290d31da78cf7149181801e92cde4b3c234a7",
+      "reason": "The command supplied a malformed ROM path with the directory component separate-item duplicated; the runner failed retro_load_game before emulation."
+    }
+  ],
+  "limits": [
+    "Item 119 was inserted synthetically into an isolated profile; native item acquisition and NPC migration are not tested.",
+    "The item icon is the game's question-mark placeholder; this smoke does not validate a custom icon.",
+    "No EV/IV family was opened and no value was mutated; no save or cold persistence was attempted.",
+    "Party slot 2 is retained only as exact cipher-boundary evidence; no checksum or decoded semantic claim is made for it.",
+    "Absence of REGISTER/DESELECT is a manual screenshot observation, not OCR or an exhaustive item-consumer audit.",
+    "Runner completion is not whole-gameplay or release acceptance."
+  ],
+  "auditor": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/portable_stat_editor_separate_item_noregister_smoke_acceptance.py",
+    "sha256": "8dfd60744f99c60f903b54e016143692146ecf8dfa30c84618b0e72259a6c3a0"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "nature-mask-stage0-unclassified-followup/v1",
+  "status": "STAGE0_NATURE_RELEVANCE_CLEARED_PARTY_ONLY_PRIVATE_POC_JUSTIFIED",
+  "scope": "Read-only attribution of three stage0 overlay-12 change ranges from the exact retail/stage0 ROM pair. No emulator/core, ROM writes, or save changes.",
+  "provenance": {
+    "retail_rom_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+    "stage0_rom_sha256": "281c2d68e442479e679d8b7e36566ade614d236151c65c9684bad6985461827d",
+    "stage0_delta_sha256": "0bd20d17c8b18ee0a369d812b01facd83b00b3179d5fdca2ab149274b8248fc0",
+    "upstream_decomp": "engine/upstream/pokeheartgold",
+    "upstream_commit": "6988158691eb6178cff697cda0428045ddcba5fb",
+    "retail_overlay12": {
+      "id": 12,
+      "ram_base": "0x022378C0",
+      "file_size": 226176,
+      "sha256": "bec67b3e240e94530eb9a21164aab0a5bfe3a39a91366b9d9c07bf63eb669695"
+    },
+    "stage0_overlay12": {
+      "id": 12,
+      "ram_base": "0x022378C0",
+      "file_size": 226176,
+      "sha256": "d32c3d9ecaf606d5db324d6f911a84e3046d6cdcf4c0c82618c8dc8588200f30"
+    },
+    "previous_compiled_map_report": {
+      "path": "internal/stat-editor-research/nature-mask-compiled-ownership.json",
+      "sha256": "4249446d62017776c033cc779a6fc2592efb141dbacaf62ba7a8da3e93b7c194"
+    }
+  },
+  "findings": [
+    {
+      "range": "0x022474A2-0x022474A5",
+      "overlay12_file_offsets": [
+        "0xFBE2",
+        "0xFBE4"
+      ],
+      "retail_bytes": "90 08 85 42",
+      "stage0_bytes": "91 08 88 42",
+      "decoded_retail": [
+        "lsrs r0, r2, #2",
+        "cmp r5, r0"
+      ],
+      "decoded_stage0": [
+        "lsrs r1, r2, #2",
+        "cmp r0, r1"
+      ],
+      "source_attribution": {
+        "file": "engine/upstream/pokeheartgold/src/battle/battle_command.c",
+        "function": "BattleSystem_CalculateBallShakes",
+        "lines": "7246-7257",
+        "file_sha256": "168117a2d14259cbd822efa27992b409003efbc32a6b076a459eb8ad48244fcb",
+        "meaning": "The surrounding compiled branch uses Heavy Ball weight thresholds 4096, 3072, 2048, and 1024 and adjusts catchRate by +40, +30, +20, or -20. The source explicitly notes that the original final comparison mistakenly tests catchRate < 1024 instead of weight. The changed register operands switch that final test to weight < 1024.",
+        "confidence": "High semantic/source correspondence from exact thresholds, branch structure, and changed comparison operands; no linker map for this C function was present in the inspected build artifacts."
+      },
+      "nature_relation": "Unrelated: this branch uses battle catch-rate and species weight, not PokemonDataBlockB+0x1A, field 114, mask 0x003E, PID, or nature APIs."
+    },
+    {
+      "range": "0x0225204C-0x02252050",
+      "overlay12_file_offset": "0x1A78C",
+      "retail_bytes": "7C CC 26 02",
+      "stage0_bytes": "60 BE 1F 02",
+      "literal_values": {
+        "retail": "0x0226CC7C",
+        "stage0": "0x021FBE60"
+      },
+      "source_attribution": {
+        "file": "engine/upstream/pokeheartgold/src/battle/overlay_12_0224E4FC.c",
+        "array": "sTypeEffectiveness",
+        "array_lines": "2083 onward",
+        "consumer_function": "ov12_02251D28",
+        "consumer_start": "0x02251D28",
+        "consumer_source_line": 2228,
+        "file_sha256": "be2d44db8e4ba6d1ef387798defcbc502e812afc723608b75d35c96ae2fd4958",
+        "consumer_reference_evidence": "Thumb instructions in ov12_02251D28 load the literal at 0x0225204C (PC-relative literal target 0x0225204C) and index it as 3-byte attacker/defender/effect entries; the source loops over sTypeEffectiveness and applies type effectiveness. Retail address 0x0226CC7C begins with the corresponding 3-byte table rows.",
+        "nature_relation": "Unrelated data: this is a battle type-effectiveness table pointer, not a nature/PID or BlockB+0x1A reference."
+      },
+      "destination_check": {
+        "result": "UNRESOLVED_OVERLAPPING_OVERLAY_ADDRESS",
+        "address": "0x021FBE60",
+        "overlay0": {
+          "id": 0,
+          "ram_base": "0x021E5900",
+          "file_size": 216448,
+          "sha256_retail_and_stage0": "b2f4e05409c8dd077aecc065cdc9da6b16bf41adc260ad8af45e013029f644ce",
+          "bytes_at_address": "0D 00 52 E3 98 00 9F 35 01 00 40 30 1E FF 2F 31"
+        },
+        "overlay1": {
+          "id": 1,
+          "ram_base": "0x021E5900",
+          "file_size": 148064,
+          "sha256_retail_and_stage0": "70ad543419e7d43bbf2b470b386d322492b66fbe37cd1dbfae7eb40b5306df37",
+          "source_symbol_at_address": "Field3dModelAnimation_LoadFromFilesystem begins at 0x021FBE44 in asm/overlay_01_021FB878.s",
+          "bytes_at_address": "28 1C 21 1C 00 F0 E4 F8 30 1C 28 61 01 B0 78 BD"
+        },
+        "interpretation": "The semantic owner of this literal is sTypeEffectiveness, unrelated to nature storage. Its destination overlaps code-bearing overlay0/overlay1 ranges in retained files; this is a separate battle-pointer/address-alias question and is not used as a global nature-storage blocker or classified as a valid table relocation by this report.",
+        "table_prefix_at_retail_target": "00 05 05 00 08 05 0A 0A 05 0A 0B 05"
+      }
+    }
+  ],
+  "conclusion": {
+    "the_two_changed_instruction_bytes": "Attributed to the Heavy Ball catch-rate threshold branch; unrelated to nature storage.",
+    "the_changed_pointer_literal": "Attributed to the sTypeEffectiveness type chart used by battle damage calculation; unrelated to nature storage. Its destination alias remains a separate battle-data question and does not block the nature-only prototype decision.",
+    "private_prototype_decision": "YES, bounded to a disposable private Party-only storage prototype. The exact compiled Party getter/setter map, source-declared reserved field, 23-snapshot/22-transition exact build comparison, and attribution of both stage0 hunks provide enough evidence for a reversible proof of encoding/readback. The prototype must read-modify-write only mask 0x003E, preserve every other bit and PID, and make no nature-consumer, PC/Box, or release claim.",
+    "global_storage_decision": "NOT_CLEARED. No inference of global absence/availability, runtime semantic behavior, native persistence, Box/PC/daycare/battle-copy safety, or complete campaign compatibility."
+  },
+  "next_gate": "Implement only a throwaway Party-slot encoding/readback prototype on an isolated ROM/save copy: exercise no-override, valid values 1..25, invalid values 26..31, and sentinels in all bits outside 0x003E; assert PID and every non-mask field remain unchanged. Before hooking effective nature behavior, validate GetBoxMonNature consumers for calculated stats, summary, battle, flavors and breeding. Before PC/Box claims, map public BoxMon getter/setter wrappers and verify Party\u2194PC transfer plus save/cold on disposable fixtures. The overlapping 0x021FBE60 battle-pointer question is separate."
+}

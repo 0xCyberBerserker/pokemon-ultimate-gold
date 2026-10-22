@@ -1,0 +1,38 @@
+{
+  "schema": "stat-editor-repeat-iv10-independent-review/v1",
+  "result": "PASS_BOUNDED_REPEAT_IV10_SAVE_COLD",
+  "scope": "Offline review of the frozen acceptance report and auditor; no emulator replay, ROM/core edits, or source changes.",
+  "artifacts": {
+    "acceptance_report": {
+      "path": "qa/portable_stat_editor_repeat_iv10_acceptance.json",
+      "sha256": "74ef22f59f10b1781f9dbced62c6982ed0d9d8e9e3c87d52f7a012e66f79c718"
+    },
+    "auditor": {
+      "path": "qa/stat_editor_repeat_iv10_acceptance.py",
+      "sha256": "56c227c56ed9e38c554e941782815d3f3d15325cb46872347f3471ad7ec4cdc5"
+    }
+  },
+  "checks": {
+    "report_status": "VERIFIED_BOUNDED_NATIVE_REPEAT_IV10_SAVE_COLD",
+    "gameplay_acceptance": "NOT_ASSESSED",
+    "state_chain_runs": 7,
+    "state_hashes_match_declared_values": true,
+    "parent_state_links_match": true,
+    "cold_state_has_no_state_input": true,
+    "battery_lineage": "seed b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db -> native save bce1dd052e8aa1a43f6e981a79b17b2e2576228e87f8230ed1d086c99a4417ca -> cold same hash",
+    "iv_lineage": "seed HP IV 0 -> intermediate 5 -> Repeat -> final 10",
+    "save_counters": [12, 13, 13],
+    "saved_equals_cold": true,
+    "bag_preserved": true,
+    "duplicate_run_note": {
+      "path": "qa/runs/portable-stat-editor-iv-plus5-repeat-textfix-confirm-ten/duplicate-run-note.json",
+      "sha256": "90b9adf3176121bbe3cf4a97a342853ff41c157428d9cd62108117a1452d7be4",
+      "status": "EXCLUDED_OVERWRITTEN_FORK"
+    }
+  },
+  "limits": [
+    "No emulation was repeated; this review verifies retained hashes and declared lineage only.",
+    "The report explicitly does not assess gameplay acceptance or broad release acceptance.",
+    "The duplicate-run note is excluded and contributes no acceptance evidence."
+  ]
+}

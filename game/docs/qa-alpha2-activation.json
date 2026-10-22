@@ -1,0 +1,38 @@
+{
+  "schema": "ultimate-gold-alpha2-activation/v1",
+  "status": "PASS_LOCAL_DEFAULT_ACTIVATION_WITH_BOUNDED_GAMEPLAY_QA",
+  "date": "2026-10-22",
+  "default_build": "alpha2",
+  "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+  "fallback_build": "alpha1",
+  "datasets": {
+    "wiki_source": {"file": "docs/wiki-data.json", "sha256": "1d82196b35144c7d15d08f48baa338d73d4c8dea06e0f80aa574b8ad6cc45e36"},
+    "cheat_catalog": {"file": "docs/cheat-catalog.json", "sha256": "1eecdfab7660519dcc0d3c13b1799f5df6a875e3661fce8b5cb6155f9e9ea2cd"},
+    "species": 493,
+    "moves": 467,
+    "items": 516,
+    "trainers": 737,
+    "trainer_members": 2086,
+    "journey_stages": 90,
+    "ordered_trainers": 639,
+    "acquisition_rows": {"documented_upstream": 150, "verified_target_shop_stock": 208, "native_gift_runtime_only": 3, "bounded_native_purchase_save_cold_verified": 2},
+    "preserved_equal_to_alpha1": ["species", "types", "abilities", "moves", "trainers", "game_modes", "trainer_journey", "tmhm"]
+  },
+  "verification": {
+    "python_unittest_discover": {"passed": 44, "failed": 0, "external_clean_rom_and_xdelta_enabled": true},
+    "browser_checks": [
+      {"driver": "tests/patcher-browser.cjs", "sha256": "5782ca859c32b2eda22f085301f0740244cfa335e700bfd86c9ee217fd5c14c8", "result": "PASS"},
+      {"driver": "tests/wiki-browser.cjs", "sha256": "8982ae56eab0e1a0b30dda9eb34295fb038ff45b91a88403a76fd5b5c1cedf19", "result": "PASS"},
+      {"driver": "tests/modes-browser.cjs", "sha256": "2503cc3ecc7a61edce55d50ca717e4e11e54b4e10b93ec2fd9d43ff59bd7e00a", "result": "PASS"},
+      {"driver": "tests/cheats-browser.cjs", "sha256": "35cf669290ed52fcac19fe10aba43c72afd8e3c453e20455375d318296be36ae", "result": "PASS"}
+    ],
+    "diff_whitespace_check": "PASS",
+    "rom_save_state_files_in_project_scan": "NONE_FOUND"
+  },
+  "limits": [
+    "Local activation only; no GitHub remote, push or Pages publication was performed.",
+    "The build remains experimental with report-specific gameplay acceptance; full story is not accepted.",
+    "Historical acquisition notes remain documentation claims, static shop rows do not prove every purchase, and the Rocket gift has no post-gift save/cold claim.",
+    "EV/IV editor probes and Kris are not included in the downloadable build."
+  ]
+}

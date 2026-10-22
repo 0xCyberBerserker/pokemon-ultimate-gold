@@ -1,0 +1,720 @@
+{
+  "schema": "portable-stat-editor-menu-textfix-reset-ev-acceptance/v1",
+  "status": "PASS_BOUNDED_RESET_EV_NO_YES_SAVE_COLD",
+  "summary_en": "On exact FIX6a textfix ROM 99810d…0684a, the native Bag flow reached Clefairy slot 0 with HP EV4. No returned through Back and Exit with Party, Bag, key item 118, and fixed reserves unchanged. Yes displayed the native six-EV reset result and matched the exact expected zero-EV Party transform; native Save advanced active MAIN counter 11→12 with valid CRC, and a separate fresh no-state cold reload retained six EVs at zero.",
+  "summary_es": "En la ROM FIX6a exacta con el texto corregido 99810d…0684a, el flujo nativo de Bolsa llegó a Clefairy, espacio 0, con EV de PS4. No volvió por Atrás y Salir sin cambios en equipo, Bolsa, objeto clave118 ni reservas fijas. Sí mostró el resultado nativo de reiniciar los seis EV y coincidió con la transformación exacta esperada del equipo; Guardar nativo avanzó el contador MAIN activo 11→12 con CRC válido, y una recarga fría independiente sin state conservó los seis EV en cero.",
+  "provenance": {
+    "rom": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-textfix/portable-stat-editor-menu-textfix-fix6a.nds",
+    "rom_sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a",
+    "runner": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "core": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "cheats": [],
+    "source_saved_ev4_dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+    "source_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+    "final_saved_dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-ev4-reset-overwrite-yes/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+    "final_saved_dsv_sha256": "56fdabaf3bd29ed31811d1040ce4364cff9aecb8df32855cebc16499736dcaf9"
+  },
+  "reset": {
+    "slot_zero_species_id": 35,
+    "pid": "0xe30363e2",
+    "record_header_flags": 0,
+    "source_checksum": 19311,
+    "ev_before": [
+      4,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ev_after": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ivs_preserved": [
+      15,
+      3,
+      10,
+      31,
+      21,
+      2
+    ],
+    "party_transform": "All six slot-0 EV bytes set to zero; all other decoded box fields, party tail, other party records and inactive bytes preserved; checksum re-encoded.",
+    "ram_success_text": "All six EV stats are now zero.",
+    "ram_party_transform": {
+      "exact_expected_reset_transform_or_cipher_boundary": true,
+      "records": [
+        {
+          "slot": 0,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 1,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 2,
+          "mode": "byte_exact"
+        }
+      ]
+    }
+  },
+  "no_branch": {
+    "special_vars_8000_800d": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      61166,
+      0
+    ],
+    "party_strict_unchanged": true,
+    "bag_exact": true,
+    "key_item_118_quantity": 1,
+    "returned_to_field": {
+      "field_system": "0x022a029c",
+      "task": "0x023bcc38",
+      "task_data": "0x02356c80",
+      "mode": 0,
+      "state": 1,
+      "mode_state_bytes_hex": "0001"
+    }
+  },
+  "save_and_cold": {
+    "main_slots": [
+      {
+        "base": 0,
+        "counter": 12,
+        "crc16": 29288,
+        "crc_valid": true
+      },
+      {
+        "base": 262144,
+        "counter": 11,
+        "crc16": 18636,
+        "crc_valid": true
+      }
+    ],
+    "source_counter": 11,
+    "saved_active_counter": 12,
+    "saved_active_crc16": 29288,
+    "dsv_sha256": "56fdabaf3bd29ed31811d1040ce4364cff9aecb8df32855cebc16499736dcaf9",
+    "party_exact_reset_transform": true,
+    "bag_exact": true,
+    "cold_reload_state_input": null,
+    "cold_reload_ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "cold_reload_party_strict_saved_dsv_match": true,
+    "cold_reload_ui": {
+      "field_system": "0x022a0218",
+      "task": "0x023bcc78",
+      "task_data": "0x02356c00",
+      "mode": 0,
+      "state": 1,
+      "mode_state_bytes_hex": "0001"
+    },
+    "source_to_saved_changed_bytes": 31,
+    "changed_ranges_half_open_without_extra_semantic_labels": [
+      [
+        36,
+        37
+      ],
+      [
+        44,
+        45
+      ],
+      [
+        136,
+        138
+      ],
+      [
+        9112,
+        9113
+      ],
+      [
+        9285,
+        9286
+      ],
+      [
+        9322,
+        9323
+      ],
+      [
+        63000,
+        63001
+      ],
+      [
+        63014,
+        63016
+      ],
+      [
+        137728,
+        137729
+      ],
+      [
+        192532,
+        192533
+      ],
+      [
+        192542,
+        192544
+      ],
+      [
+        196616,
+        196617
+      ],
+      [
+        196620,
+        196622
+      ],
+      [
+        197056,
+        197060
+      ],
+      [
+        197128,
+        197129
+      ],
+      [
+        197132,
+        197134
+      ],
+      [
+        197568,
+        197572
+      ],
+      [
+        454676,
+        454677
+      ],
+      [
+        454686,
+        454688
+      ]
+    ]
+  },
+  "checks": {
+    "runs": {
+      "cold": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-cold",
+        "result_sha256": "14c4d0aedff04c9a4c795156ccc50b985880dd24a1236d935aa850f3d3720e26",
+        "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+        "state_input_sha256": null,
+        "state_output_sha256": "3235425a8ebbf3750262f700a640ad157ebda6e3907236816441a5f49c67fd84",
+        "battery_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+        "frames": 5500,
+        "cheats": []
+      },
+      "prompt": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-open",
+        "result_sha256": "7bd21aac9935e1d734786e56b058b82a2c679fc7989dd8abef8f2e57a0e40276",
+        "input_script_sha256": "d84c1b30901ee990c3aea455883f07cb8a0cbd7730f26c6a811fb41cd94db03c",
+        "state_input_sha256": "3235425a8ebbf3750262f700a640ad157ebda6e3907236816441a5f49c67fd84",
+        "state_output_sha256": "aa1c50fb3fcefc5a3dccf2d0af61502a7313ff5d54670deb06057742a4628745",
+        "battery_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+        "frames": 3800,
+        "cheats": []
+      },
+      "no": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-no",
+        "result_sha256": "8854abcbff655842e565e982a187eda18559272e0aa0b87678648e9da3d05fa2",
+        "input_script_sha256": "7ce4df5eb4432dd26edda9873525f9043b83d5c859ae684337731f2ce797ecf9",
+        "state_input_sha256": "aa1c50fb3fcefc5a3dccf2d0af61502a7313ff5d54670deb06057742a4628745",
+        "state_output_sha256": "37642c33802d49d80f795cbf28c77fcf84c8b7e02421f193f0dd66efc94354e6",
+        "battery_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+        "frames": 650,
+        "cheats": []
+      },
+      "no_back": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-no-exit",
+        "result_sha256": "dff349224d67a491f240eba445305b29ed8fbf017100b282de9dcf6d44e47c4b",
+        "input_script_sha256": "c05ec6f9da492b53d85e91428d3840701085aea09d3dde4028cccd6ecae774ea",
+        "state_input_sha256": "37642c33802d49d80f795cbf28c77fcf84c8b7e02421f193f0dd66efc94354e6",
+        "state_output_sha256": "170effaba0eb793b4e5cdc5f96f6239fae60457ea397154475be47c7f66b83fc",
+        "battery_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+        "frames": 650,
+        "cheats": []
+      },
+      "no_exit": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-no-exit-field",
+        "result_sha256": "ebbf712f44a02ff0c516c60e805ba6ab368013022ff52ea4f22b58388f986135",
+        "input_script_sha256": "ddf5da9ac1201ecae73a989211708488d2014eca96e088756270b61fb620f007",
+        "state_input_sha256": "170effaba0eb793b4e5cdc5f96f6239fae60457ea397154475be47c7f66b83fc",
+        "state_output_sha256": "007890f9ab9a452325659d9d40dce510d7a620f7f8464edcb9b7d7642fe5ec66",
+        "battery_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+        "frames": 650,
+        "cheats": []
+      },
+      "yes": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-yes",
+        "result_sha256": "efc163be7b17efcf98c9324cf09c798f9ca50c90e4c0f6dcae47de6ce18bdb76",
+        "input_script_sha256": "0448ef37ea4c317b1efce7924ca243289f6890df9902a0a900cd4be059b91bde",
+        "state_input_sha256": "aa1c50fb3fcefc5a3dccf2d0af61502a7313ff5d54670deb06057742a4628745",
+        "state_output_sha256": "57ff29ecf0ee27d3ef59479e512c1822b13a6cb34350dae1609b63103250235b",
+        "battery_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+        "frames": 650,
+        "cheats": []
+      },
+      "yes_ack": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-yes-ack",
+        "result_sha256": "827ab5496adb11778ba2b19af76aa41c7bd7c661851bb584136737b755354d38",
+        "input_script_sha256": "4bf9e4bc91e0e003ccfe8fbf79b7c320fb98ba058ca2c1f48523f1c111491701",
+        "state_input_sha256": "57ff29ecf0ee27d3ef59479e512c1822b13a6cb34350dae1609b63103250235b",
+        "state_output_sha256": "b43a2b9e3c5cfdb7b59c59da5255458c7535582961df82846d9d753c8fc18128",
+        "battery_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+        "frames": 500,
+        "cheats": []
+      },
+      "yes_continue": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-yes-continue-ack",
+        "result_sha256": "d674b0d45eb93c533f01c9ed7fc1701a85bffcaf7f88bd765ddb7325e9828521",
+        "input_script_sha256": "3e6aaa5c9c469202e9eee4ec697356c3f319ef717465d29266aa8a4074158a3e",
+        "state_input_sha256": "b43a2b9e3c5cfdb7b59c59da5255458c7535582961df82846d9d753c8fc18128",
+        "state_output_sha256": "a0abee82959006bdaa4495c9a5e9f1c3ea8631374b3c3e5c01e5e6315ce87e93",
+        "battery_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+        "frames": 500,
+        "cheats": []
+      },
+      "yes_exit": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-yes-exit",
+        "result_sha256": "06494e06348354a16534dd14f6970b3a9031e4b8f2f159508671877bc829cef3",
+        "input_script_sha256": "f6ff3239a55c06f4c406a33937010e3cd76a23cb3d00908a00a6cd4196d9bc9f",
+        "state_input_sha256": "a0abee82959006bdaa4495c9a5e9f1c3ea8631374b3c3e5c01e5e6315ce87e93",
+        "state_output_sha256": "f0ee9c957260f8f3a7cf51bfac61ca8a8b46b5f80683d5ae8ccfb5a6c130d937",
+        "battery_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+        "frames": 650,
+        "cheats": []
+      },
+      "save_open": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-save-open",
+        "result_sha256": "4498d59f5561057e05ece43c6dde38c99953fb1ac93a1d942ec1478cb7a7669a",
+        "input_script_sha256": "3c2799f3d061ee353f59cadbe534a5d0fed11b27d23f63ef462bce02b2565ec8",
+        "state_input_sha256": "f0ee9c957260f8f3a7cf51bfac61ca8a8b46b5f80683d5ae8ccfb5a6c130d937",
+        "state_output_sha256": "04b03a51c97ed7792a3261ea467256717cb0924946a85560045b732dfef43f83",
+        "battery_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+        "frames": 650,
+        "cheats": []
+      },
+      "save_yes": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-save-yes",
+        "result_sha256": "0440087346292d8c56e70d8e2e70cd39ebde2914dd93793c7dfaebf7c95fe8ce",
+        "input_script_sha256": "a0f2ea2d2128d7f251c6ff4be954fb1c67b14ad94070dcd7aaab4f522f14535a",
+        "state_input_sha256": "04b03a51c97ed7792a3261ea467256717cb0924946a85560045b732dfef43f83",
+        "state_output_sha256": "eca0ec76f19d1da1f79e8d73798e6ec947f4da9e726ba4469e2f6f7dec274ae5",
+        "battery_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+        "frames": 650,
+        "cheats": []
+      },
+      "save_complete": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-overwrite-yes",
+        "result_sha256": "104974f98cc395b5c6094932f5ab8d03556e8ce95f121cd5ff760d569c209367",
+        "input_script_sha256": "b10dd317259eba095ecacd7cc8a652eba79a6975f51d164fea548c5cac21c792",
+        "state_input_sha256": "eca0ec76f19d1da1f79e8d73798e6ec947f4da9e726ba4469e2f6f7dec274ae5",
+        "state_output_sha256": "7b1efa60d0a55de9e17e9c5bb0526ecf4c9047ac9cd47b6df0419d1d67eaf109",
+        "battery_dsv_sha256": "56fdabaf3bd29ed31811d1040ce4364cff9aecb8df32855cebc16499736dcaf9",
+        "frames": 1000,
+        "cheats": []
+      },
+      "cold_reload": {
+        "run": "portable-stat-editor-menu-textfix-ev4-reset-cold-reload",
+        "result_sha256": "23f1db8eea2611635c1b27ea2932ef611527bbd8db93d7e760b8e45b4ba9227b",
+        "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+        "state_input_sha256": null,
+        "state_output_sha256": "380d964bc8a0a9def6098e4127b207733903de1c414550d389354ddecfe4e9c8",
+        "battery_dsv_sha256": "56fdabaf3bd29ed31811d1040ce4364cff9aecb8df32855cebc16499736dcaf9",
+        "frames": 5500,
+        "cheats": []
+      }
+    },
+    "party": {
+      "cold": {
+        "strict_source_match": true,
+        "array_sha256": "5b5935f4bde00e16cc6d1e8e1b2496d6d90e0d4c8a59e5eeb242d58686beea78"
+      },
+      "prompt": {
+        "strict_source_match": true,
+        "array_sha256": "59a60d83090a13b1b151b1c758d41b9f56d5fdb97fc65ee133e0f8ed9de1967b"
+      },
+      "no": {
+        "strict_source_match": true,
+        "array_sha256": "59a60d83090a13b1b151b1c758d41b9f56d5fdb97fc65ee133e0f8ed9de1967b"
+      },
+      "no_back": {
+        "strict_source_match": true,
+        "array_sha256": "59a60d83090a13b1b151b1c758d41b9f56d5fdb97fc65ee133e0f8ed9de1967b"
+      },
+      "no_exit": {
+        "strict_source_match": true,
+        "array_sha256": "b01a2728c666720828930d2de21faa978bca7621dce92f9b8b1553df2b643fc3"
+      },
+      "yes": {
+        "exact_expected_reset_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 1,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 2,
+            "mode": "byte_exact"
+          }
+        ]
+      },
+      "yes_ack": {
+        "exact_expected_reset_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 1,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 2,
+            "mode": "byte_exact"
+          }
+        ]
+      },
+      "yes_continue": {
+        "exact_expected_reset_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 1,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 2,
+            "mode": "byte_exact"
+          }
+        ]
+      },
+      "yes_exit": {
+        "exact_expected_reset_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 1,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 2,
+            "mode": "verified_two_byte_cipher_boundary",
+            "box": {
+              "mode": "plain_prefix",
+              "split_bytes": 58
+            },
+            "party_tail": {
+              "mode": "plain_suffix",
+              "split_bytes": 0
+            },
+            "decoded_checksum_valid": false,
+            "checksum": 46459
+          }
+        ]
+      },
+      "save_open": {
+        "exact_expected_reset_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 1,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 2,
+            "mode": "byte_exact"
+          }
+        ]
+      },
+      "save_yes": {
+        "exact_expected_reset_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 1,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 2,
+            "mode": "byte_exact"
+          }
+        ]
+      },
+      "save_complete": {
+        "exact_expected_reset_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 1,
+            "mode": "byte_exact"
+          },
+          {
+            "slot": 2,
+            "mode": "byte_exact"
+          }
+        ]
+      },
+      "cold_reload": {
+        "strict_saved_dsv_match": true,
+        "array_sha256": "0d2a1294d2e780e397aa52440f316bb12d23aed769113a48282abbe2b49b8d90"
+      }
+    },
+    "bag_sha256": {
+      "cold": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "prompt": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "no": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "no_back": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "no_exit": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "yes": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "yes_ack": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "yes_continue": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "yes_exit": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "save_open": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "save_yes": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "save_complete": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "cold_reload": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+    },
+    "key_item_118": {
+      "cold": 1,
+      "prompt": 1,
+      "no": 1,
+      "no_back": 1,
+      "no_exit": 1,
+      "yes": 1,
+      "yes_ack": 1,
+      "yes_continue": 1,
+      "yes_exit": 1,
+      "save_open": 1,
+      "save_yes": 1,
+      "save_complete": 1,
+      "cold_reload": 1
+    },
+    "reserve_hashes": {
+      "cold": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "prompt": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "no": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "no_back": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "no_exit": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "yes": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "yes_ack": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "yes_continue": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "yes_exit": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "save_open": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "save_yes": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "save_complete": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "cold_reload": {
+        "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "screenshots_sha256": {
+      "cold": {
+        "cold_final.png": "e0103c7fddf168139c8b1e3926a84bd536ad542d7afb015e50f74541bbcf5097"
+      },
+      "prompt": {
+        "prompt_stable.png": "fdba8c0ae69b4cdc590106e56a7d342ab68a31f74d0bf48e49c2a75e7ed306fe"
+      },
+      "no": {
+        "reset_no_stable.png": "e51a2df034fc7a12f4838b4193ab2572859027c36303d3df05bdb96d76df0bb0"
+      },
+      "no_exit": {
+        "field_stable.png": "b7e3342d4eabcd0d02a6fcf2d0d032657a82acc3135bf80363d3e2bf3aad4ab8"
+      },
+      "yes": {
+        "reset_yes_stable.png": "48d1dc02b8db1d696c54bd6f55892a152fac13ec4ff8eaa333b89eb5ce1f7d81"
+      },
+      "yes_continue": {
+        "repeat_exit_stable.png": "f5f1b9d47e02b37babc9d40bbbf721f09813c6fc866631f264f3f41da72ba7f9"
+      },
+      "yes_exit": {
+        "field_stable.png": "dd7af57dbd4cbd02a02e7d6d7a0e213789f9f6ace838cd607403444adef06cf9"
+      },
+      "save_open": {
+        "native_save_prompt_stable.png": "4f990fcbb4f1deb4370deb026db7caeb665493d535fe7358b066eb2a75a0683f"
+      },
+      "save_yes": {
+        "overwrite_prompt_or_save_result.png": "dbe68af155c9df527c1025c0bd3d4b96eb62c207e77facd6da3a76b20dd616b8"
+      },
+      "save_complete": {
+        "native_save_complete.png": "ccefc6a014599ef992521e06e9d0c5943b4bb567f52d04fe9d963426c7109984"
+      },
+      "cold_reload": {
+        "cold_final.png": "cd854c5561c4e1bd816c497ecf392dbf8c0708ef003830d45db8927108ed735e"
+      }
+    },
+    "yes_prompt_vars": {
+      "status_8004": 0,
+      "value_8005": 0,
+      "confirm_8006": 65535,
+      "slot_800C": 1,
+      "script_environment": {
+        "field_system": "0x022a029c",
+        "task_manager": "0x022c01d0",
+        "script_environment": "0x022a6bfc",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6cfc",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x020416e5",
+        "script_pc": "0x022aac10",
+        "script_pc_opcode_u16": 17,
+        "special_vars_8004_8005_800c": [
+          0,
+          0,
+          1
+        ]
+      },
+      "all_specials": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        65535,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "yes_result_vars": {
+      "status_8004": 0,
+      "value_8005": 0,
+      "confirm_8006": 0,
+      "slot_800C": 0,
+      "script_environment": {
+        "field_system": "0x022a029c",
+        "task_manager": "0x022c01d0",
+        "script_environment": "0x022a6bfc",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6cfc",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041001",
+        "script_pc": "0x022aadf3",
+        "script_pc_opcode_u16": 53,
+        "special_vars_8004_8005_800c": [
+          0,
+          0,
+          0
+        ]
+      },
+      "all_specials": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "limits": [
+    "Only slot-0 Clefairy EV reset was tested; no repeat/reset-other-Pokémon claim.",
+    "No visible derived-stat recalculation claim is made.",
+    "Runner gameplay_acceptance remains NOT_ASSESSED; this report covers the recorded native flow and battery reload."
+  ]
+}

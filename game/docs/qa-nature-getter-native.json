@@ -1,0 +1,518 @@
+{
+  "schema": "nature-getter-native-summary-smoke/v1",
+  "status": "PASS_BOUNDED_NATIVE_SUMMARY_FALLBACK_AND_ENCODED2",
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-getter-prototype/nature-getter-prototype-fix6a.nds",
+    "sha256": "ea9486f9465a4e20546a44729589b2ef822c9ce245eb5ee16ae756883c5b3209",
+    "static_build_json_sha256": "8959de6a1632bffc589f45cb65a9e259995cb0dceee12ac316c0916c7fa50f9c",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "cheats": []
+  },
+  "source_dsv": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-fixture/nature-party-probe-fix6a.dsv",
+    "sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+    "bytes": 524410
+  },
+  "fixtures": {
+    "fallback": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fixtures-fix2/fallback.dsv",
+      "sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "bytes": 524410,
+      "mains": [
+        {
+          "base": 0,
+          "counter": 10,
+          "crc16": 6003,
+          "pokemon_checksum": 61740,
+          "pokemon_checksum_valid": true,
+          "slot0_species_id": 35,
+          "slot0_pid": "0xE30363E2",
+          "slot0_field114_word": "0xA5C1",
+          "encoded_nature": 0,
+          "slot0_party_tail_sha256": "a41e27c1e15961c2983d3cee898c29a6047014cc96cd7d7d9ae6c8ebb5eb7ae0",
+          "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+        },
+        {
+          "base": 262144,
+          "counter": 9,
+          "crc16": 34385,
+          "pokemon_checksum": 61740,
+          "pokemon_checksum_valid": true,
+          "slot0_species_id": 35,
+          "slot0_pid": "0xE30363E2",
+          "slot0_field114_word": "0xA5C1",
+          "encoded_nature": 0,
+          "slot0_party_tail_sha256": "a41e27c1e15961c2983d3cee898c29a6047014cc96cd7d7d9ae6c8ebb5eb7ae0",
+          "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4"
+        }
+      ]
+    },
+    "override_encoded2": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fixtures-fix2/override2-lonely.dsv",
+      "sha256": "b56f061d8cbf906e49abfb6d27f8d9637228d85aa344491729f28329f27c740e",
+      "bytes": 524410,
+      "mains": [
+        {
+          "base": 0,
+          "counter": 10,
+          "crc16": 60095,
+          "pokemon_checksum": 61744,
+          "pokemon_checksum_valid": true,
+          "slot0_species_id": 35,
+          "slot0_pid": "0xE30363E2",
+          "slot0_field114_word": "0xA5C5",
+          "encoded_nature": 2,
+          "slot0_party_tail_sha256": "a41e27c1e15961c2983d3cee898c29a6047014cc96cd7d7d9ae6c8ebb5eb7ae0",
+          "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+        },
+        {
+          "base": 262144,
+          "counter": 9,
+          "crc16": 31645,
+          "pokemon_checksum": 61744,
+          "pokemon_checksum_valid": true,
+          "slot0_species_id": 35,
+          "slot0_pid": "0xE30363E2",
+          "slot0_field114_word": "0xA5C5",
+          "encoded_nature": 2,
+          "slot0_party_tail_sha256": "a41e27c1e15961c2983d3cee898c29a6047014cc96cd7d7d9ae6c8ebb5eb7ae0",
+          "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4"
+        }
+      ]
+    },
+    "override_diff_scope": "Only slot0 field114 block-B word in both MAINs, affected Pokémon checksums from re-encryption, and MAIN CRC fields; PID, flags, tail, Party peers, Bag, and all other bytes preserved."
+  },
+  "runs": {
+    "fallback": [
+      {
+        "run": "nature-getter-native-fallback-cold",
+        "frames": 6500,
+        "result_sha256": "88628b881d8978fe30b0d3bab9439845678abc0ca926b10d3054b17baee00e85",
+        "input_script_sha256": "35cf7a3111bcc8751135a99666a4b2a7665153831b649c3b9bed99505493dd8b",
+        "state_input_sha256": null,
+        "state_output_sha256": "ed3e3d6e2cf9afd1aace721ddf32d3291d4e10a747af6a929ffcb66c5e9429f9",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-cold/menu.state",
+        "ram_sha256": "ecb31f7d05b1454173871b3fb8bfbc1256231629d448414626a93c480aacf55e",
+        "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+        "battery_evidence_manifest_sha256": "ecd57f0500f009098eb22e0dcbc900477d1c2f54c77d0c4a32664abdc5567aeb",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-cold/cold_loaded.png",
+            "sha256": "953431d43a12ef44b76f8a956ac64b4844d5f46f3792ba48dae3fb0f99e8d309"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-cold/continue_accepted.png",
+            "sha256": "030df0be05965e3ff7032ee18210e6a1fc3f0c08bef6afbe0e22e2076c8fc40b"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-cold/continue_menu.png",
+            "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-cold/party_screen.png",
+            "sha256": "ee3cb04f7018eb8214f3fc3d057e5a895929eed9d92946bbe0e3165fc261bd07"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-cold/pre_title.png",
+            "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-cold/startup_message_dismissed.png",
+            "sha256": "3f4cb0c514403735182b1bdcbe3229e6e858ae4695c67f7d9a2b07c31828cd41"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-fallback-dialog-batch1",
+        "frames": 120,
+        "result_sha256": "490bce4e8d3b32a3a585c1fb5fbd15ca8546d1b16540cd2da61d77d0942bd3ad",
+        "input_script_sha256": "726b545ec5f0e34604fb9cb87ddffa07b85e1236149aa933e987521c91e68e36",
+        "state_input_sha256": "ed3e3d6e2cf9afd1aace721ddf32d3291d4e10a747af6a929ffcb66c5e9429f9",
+        "state_output_sha256": "ffa876bea67a4598606b04ae70c58833263e0ddd22edf9c0aa839291a6478621",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-dialog-batch1/menu.state",
+        "ram_sha256": "7f89da74a9db63226109ccec757931d989081cbb1d87dc796a651391b6d0acb8",
+        "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+        "battery_evidence_manifest_sha256": "fe2252ed63e6a1815b5d3fe033d989382e113ab5b2a8298a8a36590435e30d89",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-dialog-batch1/dialog_after_one_ack.png",
+            "sha256": "64f56c59865a0037fa03bc0048ebd963480c310267c1ba9529d096c3143836c3"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-dialog-batch1/dialog_before_ack.png",
+            "sha256": "d8fc6d9ad86700301b8fbd6702350079894e0cc8bd00a877fd96b80f7604b0d4"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-fallback-dialog-batch2",
+        "frames": 120,
+        "result_sha256": "6d763d712015385d58bfd5f271b798abbc0a3bdba53011f2b21556b11abd299a",
+        "input_script_sha256": "726b545ec5f0e34604fb9cb87ddffa07b85e1236149aa933e987521c91e68e36",
+        "state_input_sha256": "ffa876bea67a4598606b04ae70c58833263e0ddd22edf9c0aa839291a6478621",
+        "state_output_sha256": "8f978312b053a60826971aeee23f0152082f8295d1cdb7ba040be0bb55c96a0d",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-dialog-batch2/menu.state",
+        "ram_sha256": "15186e3d169b6f51b16e678470251f3c89fcabc8f790d6ec2130a556b7e25ae6",
+        "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+        "battery_evidence_manifest_sha256": "d04e068ec36852f37e895bac650d9868b4aa8394cb37d18cea8a76b451021c72",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-dialog-batch2/dialog_after_one_ack.png",
+            "sha256": "3155c689f531874e4ff4bb1b1720696047d7bb1d81ea33b8f007a5a4be414787"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-dialog-batch2/dialog_before_ack.png",
+            "sha256": "cebb0dddbcc3ce5bc7d5de2e6a7cc596302ab5a7a5415bf8cd4b0bc0bf3b2733"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-fallback-dialog-batch3",
+        "frames": 120,
+        "result_sha256": "f127ae68a3b5d15d08b8d4e97ffe8d8e9a468445f46b5e9653a706dcef14363a",
+        "input_script_sha256": "726b545ec5f0e34604fb9cb87ddffa07b85e1236149aa933e987521c91e68e36",
+        "state_input_sha256": "8f978312b053a60826971aeee23f0152082f8295d1cdb7ba040be0bb55c96a0d",
+        "state_output_sha256": "cb33404e7891f449840e49e28944b3eb3637a02dc1653aaed6691c4679c92c96",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-dialog-batch3/menu.state",
+        "ram_sha256": "f49f561cb0bb519c411d45d3fe7a8d51aa586e62a10467680c050afc67fa8c03",
+        "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+        "battery_evidence_manifest_sha256": "1a4daaccfdb64359c7e988b5be2f5b5a34419818ba4468bb8793a745884c539f",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-dialog-batch3/dialog_after_one_ack.png",
+            "sha256": "eb19a0fee4bcc52bcdd5a721f2a7595d35f46ef7d3620ec3620999fda87c40d2"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-dialog-batch3/dialog_before_ack.png",
+            "sha256": "c0e710d9a0737577bea349a843adf3afc42b82df14276b09a7453cf82292413e"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-fallback-party-open",
+        "frames": 400,
+        "result_sha256": "ff4aa0fbf7331f0550dae3a106b2d514ab72c8462af7410dfb7e4ab400937543",
+        "input_script_sha256": "427dfc4a85b924b83e5660aa49178fe503081ddd70a89000dbd1d21e975c73f4",
+        "state_input_sha256": "cb33404e7891f449840e49e28944b3eb3637a02dc1653aaed6691c4679c92c96",
+        "state_output_sha256": "a274785eb5cf3963e9433489ecd59a387475f6c9465d0f6b36ca33ace07cb9ec",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-party-open/party.state",
+        "ram_sha256": "64656e362df3f9d4527f505c399327558b327070357889a485f677ec4bcf747c",
+        "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+        "battery_evidence_manifest_sha256": "91ee815faf87303d21f00c44f2698006dc676bda7f181e21294eabbd3ab998f0",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-party-open/field_menu_before_party.png",
+            "sha256": "ed546aac4c88f6d7394bb74b8a3df4589c059a2094b45e80a3fe0d1e50d69f26"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-party-open/party_select_first_pokemon.png",
+            "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-fallback-party-context",
+        "frames": 900,
+        "result_sha256": "0c20a751635254e6b58830ee9dc91835cc3c54a51b52a1a57442e755168eca28",
+        "input_script_sha256": "c48ed2663b4e69f451b9478630024a228b059e281801165bc9904e9c6d9d94ab",
+        "state_input_sha256": "a274785eb5cf3963e9433489ecd59a387475f6c9465d0f6b36ca33ace07cb9ec",
+        "state_output_sha256": "1b6cc5e562f5557fd9013b9268462a78dfc073ee57fff95e2c7a322550ef84f3",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-party-context/context.state",
+        "ram_sha256": "2aab3f28e39d5badb21c688f6ec5639b1240749ad66137086b1de9c77bc2cbaf",
+        "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+        "battery_evidence_manifest_sha256": "eadd745a482549c239023445aefa1b1d0cb60df8638b2b09592890b8cf6ee762",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-party-context/party_before_context.png",
+            "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-party-context/party_context_summary_selected.png",
+            "sha256": "87d423fc52e0d1b4e99d2c7fab317247efdc5515e922b56a5ab8407df104bea0"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-fallback-summary",
+        "frames": 450,
+        "result_sha256": "dfbf6052e37e9cdd88c35d4485b2ecc9c959841302ea96533109b5693d3def62",
+        "input_script_sha256": "60c4422916afb267f4beba0d5802d07572b145881206e22a0680c2ff90797e44",
+        "state_input_sha256": "1b6cc5e562f5557fd9013b9268462a78dfc073ee57fff95e2c7a322550ef84f3",
+        "state_output_sha256": "9cbcc1e904b1ea7f0e7e434ced83ea46c7c897bec2f780eaba12ea01aadd4e2c",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-summary/summary.state",
+        "ram_sha256": "7f8620b5f820d6538aed4067e1077bb9767167949c14088b79989709a09e67b1",
+        "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+        "battery_evidence_manifest_sha256": "4488822749928f8dc0b31503618ac2d4d25cec93c933b0b1c3f0f367cfc73acb",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-summary/summary_choice_before_confirm.png",
+            "sha256": "223dc625fd6c8b5e89c986ef73404a08b27fafae727a8bfe15b15626ed3a6794"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-summary/summary_nature_visible.png",
+            "sha256": "198ef2c2f6ee407dd58048680fd65109cca464b85e4468b80f883eb31de369e6"
+          }
+        ]
+      }
+    ],
+    "override_encoded2": [
+      {
+        "run": "nature-getter-native-override-cold",
+        "frames": 5500,
+        "result_sha256": "c6741ad46b50890f4e0ee14354597f41c4874ef7c6246ee8ba07d32cb88fe2bd",
+        "input_script_sha256": "ff9e1120d6e5840557e6627099bb38614a24a80ebf120d3538a27a76ca8381ef",
+        "state_input_sha256": null,
+        "state_output_sha256": "870858b1926c6102e43ad7b8a689b7a6ba5770bb9a24122b23995aff4aad2f66",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-cold/dialog.state",
+        "ram_sha256": "ef79a56d36788eca6c4c1741a8308854918c70d2e6216ea9546439ddc0735c70",
+        "battery_sha256": "b56f061d8cbf906e49abfb6d27f8d9637228d85aa344491729f28329f27c740e",
+        "battery_evidence_manifest_sha256": "e4ae3b49a11dc97f3d1cca7f39525d7f0f494d32f8d873b9a266e882d7948ea9",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-cold/cold_loaded.png",
+            "sha256": "953431d43a12ef44b76f8a956ac64b4844d5f46f3792ba48dae3fb0f99e8d309"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-cold/continue_accepted.png",
+            "sha256": "030df0be05965e3ff7032ee18210e6a1fc3f0c08bef6afbe0e22e2076c8fc40b"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-cold/continue_menu.png",
+            "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-cold/pre_title.png",
+            "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-override-dialog-batch1",
+        "frames": 120,
+        "result_sha256": "28dbaf4c99adc7bb4fd13a33dff31ee477b8ef26be5748e14c2359db0306d467",
+        "input_script_sha256": "726b545ec5f0e34604fb9cb87ddffa07b85e1236149aa933e987521c91e68e36",
+        "state_input_sha256": "870858b1926c6102e43ad7b8a689b7a6ba5770bb9a24122b23995aff4aad2f66",
+        "state_output_sha256": "fbc961edbf98adf06b5551b558bffc621064c9ec241c9ae579066faddb7abb9f",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch1/dialog.state",
+        "ram_sha256": "4cfad767b8863ae6b59896db12cdd10ce1f17eac9b6838407b8973c2d2cb2a51",
+        "battery_sha256": "b56f061d8cbf906e49abfb6d27f8d9637228d85aa344491729f28329f27c740e",
+        "battery_evidence_manifest_sha256": "ec7681257a3c94eebee0d8c831b103a857df9f1304c77b82093094ffe399267e",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch1/dialog_after_one_ack.png",
+            "sha256": "5aa72448d07250c5aeecb6222a5948c133de947fc07ed92363de060c5a8eb576"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch1/dialog_before_ack.png",
+            "sha256": "3b40f5a315da21d61a6a7786be794d16cf321f935f1c090904aa7154bb0ae0ae"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-override-dialog-batch2",
+        "frames": 120,
+        "result_sha256": "7daa1408720a2c6ae4b25ee599d19ee49f7d44f859f95057a8a93cf912ec4d92",
+        "input_script_sha256": "726b545ec5f0e34604fb9cb87ddffa07b85e1236149aa933e987521c91e68e36",
+        "state_input_sha256": "fbc961edbf98adf06b5551b558bffc621064c9ec241c9ae579066faddb7abb9f",
+        "state_output_sha256": "1e7942501c427fb7c53de2b247deac7c2402c1b79745afaac31cdad3cbbfb148",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch2/dialog.state",
+        "ram_sha256": "b8815dd952fdd42a66a4f558977b5d85c73ce484d24e4246cf498100c6755313",
+        "battery_sha256": "b56f061d8cbf906e49abfb6d27f8d9637228d85aa344491729f28329f27c740e",
+        "battery_evidence_manifest_sha256": "f0cd35f5b263e45b025acb10bd1546c4c2581488fdc28606efa6fc9ce61483e7",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch2/dialog_after_one_ack.png",
+            "sha256": "537bbd149f87f92d703f625f7b02a073b089c3b7dee603b6ff52d6fca42be55c"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch2/dialog_before_ack.png",
+            "sha256": "2cbcd812b0ff56e2f664d533a65704c697d53164aa2ac418195ebaf9c71e0e2b"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-override-dialog-batch3",
+        "frames": 120,
+        "result_sha256": "f42e7534275e0b6c318d026e2db8823b29608f8a7d9f5390630489a03be78e6e",
+        "input_script_sha256": "726b545ec5f0e34604fb9cb87ddffa07b85e1236149aa933e987521c91e68e36",
+        "state_input_sha256": "1e7942501c427fb7c53de2b247deac7c2402c1b79745afaac31cdad3cbbfb148",
+        "state_output_sha256": "6d691b02e37c2a42984848e8f3759d2368b4d6a52fb03d6939e040ad00258bef",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch3/dialog.state",
+        "ram_sha256": "dbb4632e84b0bf1511646308f4ce00602d2eb6932de3a7d9414a08b7147752dd",
+        "battery_sha256": "b56f061d8cbf906e49abfb6d27f8d9637228d85aa344491729f28329f27c740e",
+        "battery_evidence_manifest_sha256": "ded26d009d2aa76889a3bd7935e6d50d632feef772abeef88c2261c89eb80576",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch3/dialog_after_one_ack.png",
+            "sha256": "ee143eecfef0cfbbc1b23a5fd528034fadaa20973b3e8129eec857e41d775190"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch3/dialog_before_ack.png",
+            "sha256": "7d1466c7fd92b0cb87c639ab609ce2610fda4a0f4b76a6200cc920a9dff5e780"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-override-dialog-batch4",
+        "frames": 120,
+        "result_sha256": "3cef39fe5f1cab298fa989daf7248b6dafe53beceffaf13a86e6ba93b76550b5",
+        "input_script_sha256": "726b545ec5f0e34604fb9cb87ddffa07b85e1236149aa933e987521c91e68e36",
+        "state_input_sha256": "6d691b02e37c2a42984848e8f3759d2368b4d6a52fb03d6939e040ad00258bef",
+        "state_output_sha256": "761a6154642ba571cbd28099fa0484b8e51bdc5c133789f51a075c157135ae2f",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch4/dialog.state",
+        "ram_sha256": "8d4d07bfeb5d9c4cf555d4ea180fb208f0f8acbf4950e16dc02d5bfb81ef491f",
+        "battery_sha256": "b56f061d8cbf906e49abfb6d27f8d9637228d85aa344491729f28329f27c740e",
+        "battery_evidence_manifest_sha256": "2f156e5980b11e60b717c370c494f5998e74902d13088fdeecae587a1565717f",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch4/dialog_after_one_ack.png",
+            "sha256": "0bb3964323c5d25ab0a820c00a62f70bd0146c775486432c2526a7638f08e886"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-dialog-batch4/dialog_before_ack.png",
+            "sha256": "2751ba45981c8658c61ce6695facac34b7851815d22e856f9d87d015e8fde499"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-override-party-open",
+        "frames": 400,
+        "result_sha256": "9cac1f0e03989d8f61dfcc12f069fc4b1106c70e31b0563cd4b00701b1fd6dd2",
+        "input_script_sha256": "427dfc4a85b924b83e5660aa49178fe503081ddd70a89000dbd1d21e975c73f4",
+        "state_input_sha256": "761a6154642ba571cbd28099fa0484b8e51bdc5c133789f51a075c157135ae2f",
+        "state_output_sha256": "26effc215c852a0880ce53ed0719bbea843773b38bbbf000e4f5bcb4b45d29e9",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-party-open/party.state",
+        "ram_sha256": "7d629aca6a612f7caba8c0d1ec20c76eb948231714f9923e95743f91b41705dc",
+        "battery_sha256": "b56f061d8cbf906e49abfb6d27f8d9637228d85aa344491729f28329f27c740e",
+        "battery_evidence_manifest_sha256": "aad7d05f1b9ba51cdc0930fc5b8109eb2f28af9a3e2ffc19fee2bbf06de88c26",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-party-open/field_menu_before_party.png",
+            "sha256": "27a1fab077634cce7b8acfed653a2dd88fe75c5ba6fd0acf404889b5b40e336e"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-party-open/party_select_first_pokemon.png",
+            "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-override-party-context",
+        "frames": 900,
+        "result_sha256": "4a2de47080f917858fc5d429a3553fa9259604e0a8f2d13cc3e0890ad3ec93fd",
+        "input_script_sha256": "c48ed2663b4e69f451b9478630024a228b059e281801165bc9904e9c6d9d94ab",
+        "state_input_sha256": "26effc215c852a0880ce53ed0719bbea843773b38bbbf000e4f5bcb4b45d29e9",
+        "state_output_sha256": "836b617a43e090de4ce95f6b11328d5a173308f981880b56b2b30b7fe66f990c",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-party-context/context.state",
+        "ram_sha256": "b5d792900423301562ccce59c68bf754554b810fa2499c80e08b4bd493b026bd",
+        "battery_sha256": "b56f061d8cbf906e49abfb6d27f8d9637228d85aa344491729f28329f27c740e",
+        "battery_evidence_manifest_sha256": "777cc6ab999b6033ba35888bf15bf89b74804dac3692472262acea5f6921caf9",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-party-context/party_before_context.png",
+            "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-party-context/party_context_summary_selected.png",
+            "sha256": "87d423fc52e0d1b4e99d2c7fab317247efdc5515e922b56a5ab8407df104bea0"
+          }
+        ]
+      },
+      {
+        "run": "nature-getter-native-override-summary",
+        "frames": 450,
+        "result_sha256": "84d2f5d1c5650f1bdafa8a4ebc055a24fee61ae5ccdad18d336560c8954e4bb1",
+        "input_script_sha256": "60c4422916afb267f4beba0d5802d07572b145881206e22a0680c2ff90797e44",
+        "state_input_sha256": "836b617a43e090de4ce95f6b11328d5a173308f981880b56b2b30b7fe66f990c",
+        "state_output_sha256": "db7c0ee397c4364b5e7cab6ef047bf87df4977d34345b144328e67e534117d97",
+        "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-summary/summary.state",
+        "ram_sha256": "5dac79d0f767f421bf8eb863c52abb4bc636fd589aefa9aa87f135a4dba2474a",
+        "battery_sha256": "b56f061d8cbf906e49abfb6d27f8d9637228d85aa344491729f28329f27c740e",
+        "battery_evidence_manifest_sha256": "2db1734ff918b3545ac8199d8caf46ce88fed311fe89467969a3b0493638fc81",
+        "screenshots": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-summary/summary_choice_before_confirm.png",
+            "sha256": "223dc625fd6c8b5e89c986ef73404a08b27fafae727a8bfe15b15626ed3a6794"
+          },
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-summary/summary_nature_visible.png",
+            "sha256": "c70ef8402e68d2b2a0de8c3027b7a8271baad208d50fc16848faa53e8747d4c6"
+          }
+        ]
+      }
+    ]
+  },
+  "summary_observations": {
+    "fallback_pid_mod_25_index_10": {
+      "run": "nature-getter-native-fallback-summary",
+      "fixture_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "runtime_party_sha256": "52da1f4d693a4ea8cf07532edb918606167c953317aca58bc3ef7741a5eeb123",
+      "fixture_party_sha256": "52da1f4d693a4ea8cf07532edb918606167c953317aca58bc3ef7741a5eeb123",
+      "all_party_records_strict_match": true,
+      "all_party_records_checksums_valid": true,
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "bag_exact_fixture_match": true,
+      "slot0": {
+        "species_id": 35,
+        "pid": "0xE30363E2",
+        "pid_mod_25": 10,
+        "field114_word": "0xA5C1",
+        "field114_masked": "0x0000",
+        "encoded_value": 0,
+        "expected_nature_index": 10,
+        "pokemon_checksum": 61740,
+        "pokemon_checksum_valid": true,
+        "party_tail_sha256": "a41e27c1e15961c2983d3cee898c29a6047014cc96cd7d7d9ae6c8ebb5eb7ae0"
+      },
+      "runtime_getter_payload_sha256": "9b69e8310d40aceb1e23cef90cad2eaba5fb151f255f633f14c908dd5039d4d3",
+      "runtime_getter_payload_exactly_matches_candidate": true,
+      "summary_visual_observation": {
+        "displayed_text": "Timid nature",
+        "visually_reviewed": true,
+        "screenshot": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-fallback-summary/summary_nature_visible.png",
+        "screenshot_sha256": "198ef2c2f6ee407dd58048680fd65109cca464b85e4468b80f883eb31de369e6"
+      },
+      "battery_unchanged_no_save": true
+    },
+    "encoded2_means_nature_index_1": {
+      "run": "nature-getter-native-override-summary",
+      "fixture_sha256": "b56f061d8cbf906e49abfb6d27f8d9637228d85aa344491729f28329f27c740e",
+      "runtime_party_sha256": "9955ebe9984b0d9ea7ec4c5e24c5723530af844cefc0ae47cc54a81d79c41bf7",
+      "fixture_party_sha256": "9955ebe9984b0d9ea7ec4c5e24c5723530af844cefc0ae47cc54a81d79c41bf7",
+      "all_party_records_strict_match": true,
+      "all_party_records_checksums_valid": true,
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "bag_exact_fixture_match": true,
+      "slot0": {
+        "species_id": 35,
+        "pid": "0xE30363E2",
+        "pid_mod_25": 10,
+        "field114_word": "0xA5C5",
+        "field114_masked": "0x0004",
+        "encoded_value": 2,
+        "expected_nature_index": 1,
+        "pokemon_checksum": 61744,
+        "pokemon_checksum_valid": true,
+        "party_tail_sha256": "a41e27c1e15961c2983d3cee898c29a6047014cc96cd7d7d9ae6c8ebb5eb7ae0"
+      },
+      "runtime_getter_payload_sha256": "9b69e8310d40aceb1e23cef90cad2eaba5fb151f255f633f14c908dd5039d4d3",
+      "runtime_getter_payload_exactly_matches_candidate": true,
+      "summary_visual_observation": {
+        "displayed_text": "Lonely nature",
+        "visually_reviewed": true,
+        "screenshot": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-getter-native-override-summary/summary_nature_visible.png",
+        "screenshot_sha256": "c70ef8402e68d2b2a0de8c3027b7a8271baad208d50fc16848faa53e8747d4c6"
+      },
+      "battery_unchanged_no_save": true
+    }
+  },
+  "limits": [
+    "Bounded native cold-boot and Summary getter/display observation only on this private candidate.",
+    "Fallback (field114 mask zero) displayed Timid, matching PID%25=10; encoded value 2 displayed Lonely, matching index 1.",
+    "Candidate getter payload was byte-exact in RAM at Summary; both Party arrays matched their DSVs at strict per-record cipher boundaries, and Bag arrays were exact.",
+    "No stats recalculation, battle behavior, PC round-trip, native Save, or save/cold persistence was tested.",
+    "PID-direct nature consumers remain unchanged; this is not full nature behavior or release acceptance.",
+    "An earlier fallback navigation run remained on the startup message; it is retained as an incomplete navigation attempt, not a boot/getter failure."
+  ]
+}

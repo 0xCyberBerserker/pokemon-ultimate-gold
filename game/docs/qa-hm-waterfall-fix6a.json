@@ -1,0 +1,724 @@
+{
+  "schema": "ultimate-gold-fix6a-waterfall-native-qa/v1",
+  "status": "PASS_NATIVE_PROMPT_AND_ASCENT",
+  "claim_boundary": "One native Waterfall use is confirmed by the prompt, party-member text, and runtime ascent from z=14 to z=12 across target z=13. No post-action save, cold reload, or broader story/map acceptance was performed.",
+  "rom": {
+    "path": "experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+    "sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+  },
+  "runtime": {
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_path": "qa/headless_runner_fix5.py",
+    "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+    "cheats": []
+  },
+  "static_preflight": {
+    "path": "qa/runs/hm-waterfall-fix6a-static/preflight.json",
+    "sha256": "5a72653faafaf42fb10a674984de9a8d35cad2c29a0dfd15ccb2bf8c921f53c6",
+    "map": {
+      "id": 126,
+      "name": "D45R0101",
+      "matrix_id": 151,
+      "model_id": 619
+    },
+    "standing": {
+      "xz": [
+        25,
+        14
+      ],
+      "facing": "north",
+      "PER_u16_le": "0x0015",
+      "behavior": "0x15",
+      "height_units": 0.5
+    },
+    "target": {
+      "xz": [
+        25,
+        13
+      ],
+      "PER_u16_le": "0x8013",
+      "behavior": "0x13",
+      "height_units": 0.5
+    },
+    "height_derivation": {
+      "current_y": 1,
+      "vec_y_fx32": 32768,
+      "runtime_observed_before_action": true
+    }
+  },
+  "fixture": {
+    "manifest_path": "qa/runs/hm-waterfall-fix6a-fixture/fixture.json",
+    "manifest_sha256": "f0b9f295d92d1d910d0e02ceb3dd7a5cfb0af655ec34446281f3eaa905d94cbf",
+    "source_dsv_sha256": "20fcb3875dee5a3b8f3c6c74924b1e49e5b62e6f51097a00dcf377dc119b375d",
+    "source_ram_sha256": "f7b1ea509126146a485304dcf6b5ccd3b31c95e20bed96c81c9255a9d4fa09cb",
+    "output_dsv_path": "qa/runs/hm-waterfall-fix6a-fixture/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+    "output_dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+    "profile_dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+    "selected_counter": 9,
+    "both_slot_crcs_valid": true,
+    "fallback_unchanged": true,
+    "source_map_environment": {
+      "map": 176,
+      "weather": 11,
+      "camera": 0
+    },
+    "target_map_environment": {
+      "map": 126,
+      "weather": 0,
+      "camera": 0
+    },
+    "item_426_qty": 1,
+    "rising_badge_bit7": true
+  },
+  "runs": [
+    {
+      "run": "hm-waterfall-fix6a-cold-start-corrected",
+      "result_sha256": "24a4c951b55a086fa13f3f7bc8588bf718bc7c024356f0d632d3d00c14e13a21",
+      "script": "hm_waterfall_fix6a_boot.json",
+      "script_sha256": "4eb1eabf48ce83e9f03ba321a009dbff5e435aff696ab0e99d5fb8c07c8c7b23",
+      "frames": 1500,
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "state_in_sha256": null,
+      "state_out_sha256": "97b2aeea3eec4c55b54c28565816bcff131c7264857d401623c29ce4387fe303",
+      "system_ram_sha256": "337ffb240f8c8a1e5817cd9f6cec9af99d9fb7f0bf0102f445f1ae5a9bdd224d",
+      "dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-waterfall-fix6a-cold-start-corrected/title_before_continue.png",
+          "sha256": "6b9148ca5ebc84f06e52cc3ecbf79ceacc3929790f9fe057efb7928e816bdfdf"
+        }
+      ]
+    },
+    {
+      "run": "hm-waterfall-fix6a-title-a",
+      "result_sha256": "b2b019342898e2546de4b821f9b32973c1b5425cf130ce3fcc835ffdc6587952",
+      "script": "hm_waterfall_fix6a_title_a.json",
+      "script_sha256": "9c68d5d693f6ca206081607177ba68067cbcd4aa14635eb7f4f19b73307fd13d",
+      "frames": 650,
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "state_in_sha256": "97b2aeea3eec4c55b54c28565816bcff131c7264857d401623c29ce4387fe303",
+      "state_out_sha256": "b92e2b74d0506ad1ecd5d198b483c1de46f32e2b1df64acf163d2761e2e9d91c",
+      "system_ram_sha256": "a066c526a6cc8e9c552b3c50898e3c7e11c90e5159271e41a494727f87802bdb",
+      "dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-waterfall-fix6a-title-a/title_a_settled.png",
+          "sha256": "728d1ef8d0969ae7a256fb5f751500e93d26cde841ca6149287fcc34fcabe0a3"
+        }
+      ]
+    },
+    {
+      "run": "hm-waterfall-fix6a-continue-menu",
+      "result_sha256": "44db659eb8c70d16c3b4e237ec1d9455d9b33192255df14b51ba944f9f3cd392",
+      "script": "hm_waterfall_fix6a_menu_a.json",
+      "script_sha256": "8a1f82ef78547fc3519a9c201bcb0199b4518277b6d7f6a49a42424d35d9c8cb",
+      "frames": 650,
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "state_in_sha256": "b92e2b74d0506ad1ecd5d198b483c1de46f32e2b1df64acf163d2761e2e9d91c",
+      "state_out_sha256": "acd50c361321ff02ef01b609345b731aafe4040f226e41ce6e39b486626ee089",
+      "system_ram_sha256": "31a389c321255d9aab66a5baac8becf14efbe4ecf71359a705d7ea8716f6f074",
+      "dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-waterfall-fix6a-continue-menu/continue_menu_settled.png",
+          "sha256": "69516f4618a09eee7e538760be1f146667c4975ca257ac888630f077f399cbb0"
+        }
+      ]
+    },
+    {
+      "run": "hm-waterfall-fix6a-continue",
+      "result_sha256": "bf5c15facb4a69c1d48592578a717637947cb68a3ae7a1ba96101c111a65c891",
+      "script": "hm_waterfall_fix6a_continue_a.json",
+      "script_sha256": "c9250eb7c4066ea26f3a38a3c510cb10c253f96b2671061496257237fe02899f",
+      "frames": 1400,
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "state_in_sha256": "acd50c361321ff02ef01b609345b731aafe4040f226e41ce6e39b486626ee089",
+      "state_out_sha256": "6ca64ae7b56aefdbea4cb2931ecd155327f02f886af2f8c6d6bbeb5bf958a6a3",
+      "system_ram_sha256": "0703e7da82687ccc20ba11ceb64a80a1c2b25a18a091f20c6905f51fc67c48d1",
+      "dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-waterfall-fix6a-continue/continued_settled.png",
+          "sha256": "1722d11397023e66afd620cdd8a9f68901908ab4a774af22e546477ccd6bf16e"
+        }
+      ]
+    },
+    {
+      "run": "hm-waterfall-fix6a-interact",
+      "result_sha256": "491bd3f8cb38e1b6cd5dcd435faa0727218a3572d23b153b587f6a37bce49f08",
+      "script": "hm_waterfall_fix6a_interact.json",
+      "script_sha256": "6ffced31ac801311193f59e1a71617527ca90d867297fbefb2c8e0c07ee3eea7",
+      "frames": 750,
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "state_in_sha256": "6ca64ae7b56aefdbea4cb2931ecd155327f02f886af2f8c6d6bbeb5bf958a6a3",
+      "state_out_sha256": "20c919ec3abbb6d445b1f00f269721f781d8742fdd908c9b3f0bd211e3694722",
+      "system_ram_sha256": "7e4e4c4d4e812d90a34ce6955bdce6e34aa8e97ca2164e686c9a80f414f773e6",
+      "dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-waterfall-fix6a-interact/waterfall_interaction_settled.png",
+          "sha256": "ba603d114a6ad010bf466ff6cd8a79b1555cfcde9a401fc7eb29e34464044688"
+        }
+      ]
+    },
+    {
+      "run": "hm-waterfall-fix6a-yes",
+      "result_sha256": "e7d5d0f67004ce23f0904859f3a18eaf3b9289ac3af52a9fae3530d3295b5dbf",
+      "script": "hm_waterfall_fix6a_yes.json",
+      "script_sha256": "6f3647d67719ccf479d41adcca93d93edcabc8ff4b3af5fdb2fa80f0a2c94ca4",
+      "frames": 750,
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "state_in_sha256": "20c919ec3abbb6d445b1f00f269721f781d8742fdd908c9b3f0bd211e3694722",
+      "state_out_sha256": "dca4ddfec842a61dd52dae6371041af66ce6d93c63c3ddab489747eb96e60aaf",
+      "system_ram_sha256": "a918c2a96363a9d3ec107ed624c437d81aa97307fde970a44147c779835ddd48",
+      "dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-waterfall-fix6a-yes/waterfall_yes_settled.png",
+          "sha256": "5701aa7abbb183d3a547b500afc31ea6542d426634f8ec4cf5e465a38c3a9e25"
+        }
+      ]
+    },
+    {
+      "run": "hm-waterfall-fix6a-dismiss",
+      "result_sha256": "f902b67c0551a7eba90cddbc769df4f0d4afb42dce91bf23e2949dee6dd0edc8",
+      "script": "hm_waterfall_fix6a_dismiss.json",
+      "script_sha256": "4a27002ce79d6c7607322584167714138d8d316a81741e50584a27dedf372dac",
+      "frames": 750,
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "state_in_sha256": "dca4ddfec842a61dd52dae6371041af66ce6d93c63c3ddab489747eb96e60aaf",
+      "state_out_sha256": "d89b0269707b650c55fc544308b5b54dad17284c09c708ddc792e63057fa71c5",
+      "system_ram_sha256": "ec3a2b0c82e14911f5759b92a30573417462d74e5d08995487cde17ef3473f39",
+      "dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+      "screenshots": [
+        {
+          "path": "qa/runs/hm-waterfall-fix6a-dismiss/waterfall_after_dismiss.png",
+          "sha256": "35359b9449d81a4a03d04f0a3f4b28b3a6e13b132b65b15e0182c39a0e9ca6d7"
+        }
+      ]
+    }
+  ],
+  "excluded_runner_argument_error": {
+    "run": "qa/runs/hm-waterfall-fix6a-cold-start",
+    "classification": "EXCLUDED_BEFORE_EMULATION",
+    "reason": "The ROM argument was resolved relative to the wrong working directory; retro_load_game failed before emulation. Corrected run used the verified exact ROM path.",
+    "rom_was_loaded": false,
+    "gameplay_evidence": false,
+    "input_script_sha256": "4eb1eabf48ce83e9f03ba321a009dbff5e435aff696ab0e99d5fb8c07c8c7b23"
+  },
+  "runtime_before_after": {
+    "baseline": {
+      "ram_sha256": "0703e7da82687ccc20ba11ceb64a80a1c2b25a18a091f20c6905f51fc67c48d1",
+      "location": [
+        126,
+        -1,
+        25,
+        14,
+        0
+      ],
+      "weather": 0,
+      "camera": 0,
+      "player": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          25,
+          1,
+          14
+        ],
+        "vec_y_fx32": 32768,
+        "facing_codes": [
+          0,
+          0,
+          0
+        ],
+        "avatar_state": 2
+      },
+      "rising_badge_bit7": true,
+      "hm07_item426_qty": 1,
+      "party": {
+        "reference_dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+        "selected_dsv_counter": 9,
+        "selected_slot_base": 262144,
+        "selected_dsv_party_offset": 262288,
+        "party_array_size": 1460,
+        "ram_dynamic_offset": "0xd080",
+        "source_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "ram_array_sha256": "3d3df42f9f72d79db64fec8fd1380956bc354f2df931ef4cf5ce94b474d62963",
+        "normalized_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "exact_record_match": true,
+        "party_count": 3,
+        "species_ids": [
+          35,
+          152,
+          66
+        ],
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves_in_source_party": true,
+        "cipher_phase_evidence": [
+          {
+            "party_slot": 0,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "party_slot": 1,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075"
+          },
+          {
+            "party_slot": 2,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 44
+            },
+            "party_tail_cipher_phase": {
+              "encrypted_prefix_bytes": 0
+            },
+            "ram_record_sha256": "f871e6bcb2a36be8b6ff42d574b62c1f76fb9662c6960722b2bd248ab79ef7cf"
+          }
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "prompt": {
+      "ram_sha256": "7e4e4c4d4e812d90a34ce6955bdce6e34aa8e97ca2164e686c9a80f414f773e6",
+      "location": [
+        126,
+        -1,
+        25,
+        14,
+        0
+      ],
+      "weather": 0,
+      "camera": 0,
+      "player": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          25,
+          1,
+          14
+        ],
+        "vec_y_fx32": 32768,
+        "facing_codes": [
+          0,
+          0,
+          0
+        ],
+        "avatar_state": 2
+      },
+      "rising_badge_bit7": true,
+      "hm07_item426_qty": 1,
+      "party": {
+        "reference_dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+        "selected_dsv_counter": 9,
+        "selected_slot_base": 262144,
+        "selected_dsv_party_offset": 262288,
+        "party_array_size": 1460,
+        "ram_dynamic_offset": "0xd080",
+        "source_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "ram_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "normalized_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "exact_record_match": true,
+        "party_count": 3,
+        "species_ids": [
+          35,
+          152,
+          66
+        ],
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves_in_source_party": true,
+        "cipher_phase_evidence": [
+          {
+            "party_slot": 0,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "party_slot": 1,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075"
+          },
+          {
+            "party_slot": 2,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "yes_result": {
+      "ram_sha256": "a918c2a96363a9d3ec107ed624c437d81aa97307fde970a44147c779835ddd48",
+      "location": [
+        126,
+        -1,
+        25,
+        14,
+        0
+      ],
+      "weather": 0,
+      "camera": 0,
+      "player": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          25,
+          1,
+          14
+        ],
+        "vec_y_fx32": 32768,
+        "facing_codes": [
+          0,
+          0,
+          0
+        ],
+        "avatar_state": 2
+      },
+      "rising_badge_bit7": true,
+      "hm07_item426_qty": 1,
+      "party": {
+        "reference_dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+        "selected_dsv_counter": 9,
+        "selected_slot_base": 262144,
+        "selected_dsv_party_offset": 262288,
+        "party_array_size": 1460,
+        "ram_dynamic_offset": "0xd080",
+        "source_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "ram_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "normalized_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "exact_record_match": true,
+        "party_count": 3,
+        "species_ids": [
+          35,
+          152,
+          66
+        ],
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves_in_source_party": true,
+        "cipher_phase_evidence": [
+          {
+            "party_slot": 0,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "party_slot": 1,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075"
+          },
+          {
+            "party_slot": 2,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "post_dismiss": {
+      "ram_sha256": "ec3a2b0c82e14911f5759b92a30573417462d74e5d08995487cde17ef3473f39",
+      "location": [
+        126,
+        -1,
+        25,
+        12,
+        0
+      ],
+      "weather": 0,
+      "camera": 0,
+      "player": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          25,
+          19,
+          12
+        ],
+        "vec_y_fx32": 622592,
+        "facing_codes": [
+          0,
+          0,
+          0
+        ],
+        "avatar_state": 2
+      },
+      "rising_badge_bit7": true,
+      "hm07_item426_qty": 1,
+      "party": {
+        "reference_dsv_sha256": "ce3df27c47f1636794b7bdb77801cf3a5a43650519f49943ba776e2b9c1ae271",
+        "selected_dsv_counter": 9,
+        "selected_slot_base": 262144,
+        "selected_dsv_party_offset": 262288,
+        "party_array_size": 1460,
+        "ram_dynamic_offset": "0xd080",
+        "source_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "ram_array_sha256": "9d380ad662c9972190887bafc1f791191bf6b68137ce4220634552305fe0949c",
+        "normalized_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+        "exact_record_match": true,
+        "party_count": 3,
+        "species_ids": [
+          35,
+          152,
+          66
+        ],
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves_in_source_party": true,
+        "cipher_phase_evidence": [
+          {
+            "party_slot": 0,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "party_slot": 1,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "party_tail_cipher_phase": {
+              "plaintext_prefix_bytes": 0
+            },
+            "ram_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075"
+          },
+          {
+            "party_slot": 2,
+            "box_cipher_phase": {
+              "plaintext_prefix_bytes": 46
+            },
+            "party_tail_cipher_phase": {
+              "encrypted_prefix_bytes": 0
+            },
+            "ram_record_sha256": "49e2b6ed0a57a18fc8064d0a7a83660e85f90490bf548ea036f359dbb322d8b5"
+          }
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "visual_observations": {
+      "prompt": "It's a large waterfall. Would you like to use Waterfall?",
+      "yes_text": "CLEFAIRY used Waterfall.",
+      "post_action": "Avatar climbed the waterfall; no directional input was issued after YES."
+    },
+    "ascent": {
+      "start_xz": [
+        25,
+        14
+      ],
+      "target_xz": [
+        25,
+        13
+      ],
+      "end_xz": [
+        25,
+        12
+      ],
+      "start_runtime_y": 1,
+      "end_runtime_y": 19,
+      "crossing_observed": true,
+      "manual_directional_input_after_yes": false
+    }
+  },
+  "preservation": {
+    "party_normalized_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+    "party_unchanged": true,
+    "party_count": 3,
+    "party_species_ids": [
+      35,
+      152,
+      66
+    ],
+    "party_moves_by_slot": [
+      [
+        27,
+        1,
+        0,
+        0
+      ],
+      [
+        33,
+        45,
+        0,
+        0
+      ],
+      [
+        67,
+        43,
+        0,
+        0
+      ]
+    ],
+    "party_contains_no_hm_moves": true,
+    "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+    "bag_unchanged": true,
+    "reserve_address_range": "0x023D7000-0x023D7FFF",
+    "reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+    "reserve_unchanged": true,
+    "post_action_save": "NOT_SAVED"
+  },
+  "scope_limits": [
+    "Only the exact Tohjo Falls approach/Waterfall tile was tested.",
+    "No post-action save or cold reload was performed.",
+    "No other maps, progression gates, or HM sites were tested."
+  ],
+  "consultation_unavailable": true
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "baseline_manifest_sha256": "0bdfd94361807d657c697089684b98f186640506ed966ac6289665a0cfb19915",
+  "scope": "Privacy redactions applied after immutable snapshot 04; baseline evidence remains historical.",
+  "game_files_unchanged": 1637,
+  "changes": [
+    {
+      "path": "game/CONTRIBUTING.md",
+      "snapshot04_sha256": "3670cb85958f2299e79d1f700974b0db1921ebe677f14a845a94498b0f6af21b",
+      "public_sha256": "16c5e1df1b358975f39434312da8669b3c2fc4dd96b0e9d1137fb67d11f699aa",
+      "size_bytes": 6275,
+      "reason": "Replace a personal review assignment with a generic reviewer role."
+    }
+  ]
+}

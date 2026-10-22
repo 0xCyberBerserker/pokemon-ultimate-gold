@@ -1,0 +1,18 @@
+{
+  "schema": "sacred-gold-qa/v1",
+  "date": "2026-10-21",
+  "status": "TESTED_PARTIAL",
+  "target_sha256": "fdb2fcabc4b51c4b98b0e4fcaf02740c81f32ede54c5a5bc0004d58c3133357e",
+  "battery_save_sha256": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+  "screenshots_sha256": {
+    "fairy_super_effective": "7db2449532ecf5449e960e5c4919ae8477430c667112dfa5ba8d9577377bb7a0",
+    "machop_dex_registration": "aaa79b92a02ee1f21db9e948c7e707f612e8790030ebf2c132bf1138487c45d2",
+    "fresh_process_team": "0940a5378dd8bb63eb35bd0eae481594e235ee9f1e603062986b1aab99d914dd",
+    "tm99_hm1": "9033791416f2b8dc4d3f9422ea44a27bd5ae1def0975ad264856fef6f721d96c"
+  },
+  "fixtures": ["cloned Clefairy", "seeded items", "official Machop encounter and level code"],
+  "fresh_restart": {"savestate_input": false, "active_cheats": false, "party_count": 3},
+  "tm_teaching": {"species_id": 35, "move_ids": [27, 1, 347, 0], "tm_id": 331, "tm_quantity": 99, "hm_id": 420, "hm_quantity": 1},
+  "browser": {"engine": "Chromium", "viewports": [[1280, 1000], [390, 844]], "network": "50 local GET requests; no uploads", "console_errors": 0},
+  "pending": ["full story", "Pokemon PC", "evolution", "Ghost versus Dark and Dragon live battles", "physical controls", "audio tempo", "HM field QoL"]
+}

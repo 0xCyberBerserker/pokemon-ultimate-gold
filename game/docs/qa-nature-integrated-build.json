@@ -1,0 +1,251 @@
+{
+  "schema": "stat-editor-nature-integration-build/v1",
+  "status": "PRIVATE_STATIC_INTEGRATED_NATIVE_QA_PENDING",
+  "parent": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-rocket-grant/portable-stat-editor-rocket-grant-fix6a.nds",
+    "sha256": "08e1d4e51599dc459600f1eff44e7915acbbaa111d74321be22a4800af629fcf",
+    "native_ui_51_item_menu": "VERIFIED_ON_PARENT",
+    "canonical_cache_60_slot_capacity": "PENDING_FOR_INTEGRATED_BUILD",
+    "save_cold_and_npc_grant": "PENDING"
+  },
+  "nature_donor": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-stat-recalc/fix2/nature-stat-recalc-fix6a.nds",
+    "sha256": "9e01938d9b27d453ec7a901c72d4f23a6d761a7a74b360deeb23ccdd56057636"
+  },
+  "menu": {
+    "source_sha256": "e7bb53419fa3b4800fa12cf9aafda96584456083d9d048c7a1588eaea7a1c122",
+    "bytecode_sha256": "25d356c9cfa352a3d89c214e6ea6486573e6ab3071539f423874a1976d155b5e",
+    "old_target_count": 73,
+    "global_script_id": 2072,
+    "global_script_index": 72,
+    "old_targets_0_71_byte_exact": true,
+    "new_target_offset": 23761,
+    "menu_bytecode_bytes": 19325,
+    "menu_bytecode_sha256": "25d356c9cfa352a3d89c214e6ea6486573e6ab3071539f423874a1976d155b5e",
+    "target_count_unchanged": true
+  },
+  "dispatch": {
+    "count_before": 857,
+    "count_after": 859,
+    "table_used_before": 3428,
+    "table_used_after": 3436,
+    "old_entries_0_856_byte_exact": true,
+    "new_entries_857_858_hex": "216b3d02a16c3d02",
+    "guard_preserved": true
+  },
+  "nature_payloads": [
+    {
+      "name": "party_writer",
+      "address": "0x23d6aa0",
+      "bytes": 124,
+      "sha256": "5350aa578b82c6788da17a227ccc6e8515d9d50678e4db30c1b287276aca9007",
+      "parent_preimage_zero": true
+    },
+    {
+      "name": "opcode_857_wrapper",
+      "address": "0x23d6b20",
+      "bytes": 204,
+      "sha256": "29299daac61ea99f099edf10abac49691873d0ab2520bd4cab82e5e7b48330cb",
+      "parent_preimage_zero": true
+    },
+    {
+      "name": "effective_nature_getter",
+      "address": "0x23d6c00",
+      "bytes": 68,
+      "sha256": "9b69e8310d40aceb1e23cef90cad2eaba5fb151f255f633f14c908dd5039d4d3",
+      "parent_preimage_zero": true
+    },
+    {
+      "name": "opcode_858_recalc_wrapper",
+      "address": "0x23d6ca0",
+      "bytes": 300,
+      "sha256": "17f86803bdef057be716a75f3546b51d50386575262e007d90f91066dc5e3cb5",
+      "parent_preimage_zero": true
+    }
+  ],
+  "hook": {
+    "address": "0x206fe04",
+    "before_hex": "70b5051cfdf7e6ff",
+    "after_hex": "004b1847016c3d02"
+  },
+  "messages": {
+    "old_messages": 152,
+    "existing_ev_iv_ids_preserved": [
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146
+    ],
+    "existing_catalog_vector_differences_preserved": [
+      137,
+      138,
+      143,
+      145
+    ],
+    "new_message_ids": [
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193
+    ],
+    "new_message_count": 42,
+    "old_vectors_exact": true,
+    "new_bank_messages": 194,
+    "bank_sha256": "88dc5f8fe6da6cdc6514ed498b7a80d02e006418d9fb7f872bf69bc44da1cd34"
+  },
+  "protected_rocket": {
+    "script_member": 842,
+    "script_sha256": "8b52cd2c1040cca28fd9538152a5dc951231e1f4c18bb686583e97e11bb91a9c",
+    "message_member": 542,
+    "message_sha256": "b9a7bc65e2880428f6984b50b38ed0f0b861b7df855e73902d3307e8126a8394",
+    "taken_byte_exact_from_parent": true
+  },
+  "changed_narc_members": {
+    "script_narc": [
+      3
+    ],
+    "text_narc": [
+      40
+    ]
+  },
+  "limits": [
+    "Static integration only; no native test was run on this output.",
+    "Parent UI showed 51 item entries; Save/cold behavior, NPC grant, and true 60-slot capacity on the integrated output remain pending.",
+    "No native acceptance or persistence is claimed."
+  ],
+  "output": {
+    "path": "../experiments/eviv/stat-editor-nature-integrated-rocket08e/ultimate-gold-stat-editor-nature-integrated-verified.nds",
+    "sha256": "2eaf226677be97b95175035917cb96aa47b761cd993aa5a1bdb0eb2619dbf43f",
+    "bytes": 127095072
+  },
+  "physical_diff": {
+    "changed_top_level_files": [
+      {
+        "file_id": 141,
+        "path": "a/0/1/2",
+        "before_sha256": "653c10a4749b7b6ff6d1110adfd443e71bd018005e5be2561d8fb68f779634cd",
+        "after_sha256": "77785fdada9926653b659af9530627142c16d4bd9a80b2fce0a7138e53e18f66"
+      },
+      {
+        "file_id": 156,
+        "path": "a/0/2/7",
+        "before_sha256": "07db3a8c74ba0d219d142465f0d5220abfb690d38b50adc0f0140f9551bc1fc6",
+        "after_sha256": "32be838e69cc62b72858cf80b3a87a65eb55684184f40e93cbc792eee58f31f3"
+      }
+    ],
+    "changed_script_narc_members": [
+      3
+    ],
+    "changed_text_narc_members": [
+      40
+    ],
+    "arm9_changed_sections": [
+      "0x2000000",
+      "0x23d6000",
+      "0x23d5000"
+    ],
+    "main_arm9_changed_addresses": [
+      "0x206fe04",
+      "0x206fe05",
+      "0x206fe06",
+      "0x206fe07",
+      "0x206fe08",
+      "0x206fe09",
+      "0x206fe0a",
+      "0x206fe0b",
+      "0x20fac90"
+    ],
+    "dispatch_table_changed_only_count_and_entries_857_858": true,
+    "nature_core_changed_only_reviewed_ranges": [
+      {
+        "address": "0x23d6aa0",
+        "bytes": 124,
+        "name": "party_writer"
+      },
+      {
+        "address": "0x23d6b20",
+        "bytes": 204,
+        "name": "opcode_857_wrapper"
+      },
+      {
+        "address": "0x23d6c00",
+        "bytes": 68,
+        "name": "effective_nature_getter"
+      },
+      {
+        "address": "0x23d6ca0",
+        "bytes": 300,
+        "name": "opcode_858_recalc_wrapper"
+      }
+    ],
+    "arm7_byte_exact": true,
+    "all_arm9_overlays_byte_and_metadata_exact": true,
+    "arm7_overlay_table_byte_exact": true,
+    "arm9_overlay_table_byte_exact": true,
+    "fnt_file_id_mapping_exact": true
+  }
+}

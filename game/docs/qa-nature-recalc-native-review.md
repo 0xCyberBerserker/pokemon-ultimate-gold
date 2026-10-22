@@ -1,0 +1,29 @@
+# Independent review: native nature/stat recalculation fix2
+
+## English
+
+**Verdict: bounded PASS for native RAM mutation and stat recalculation on the tested slot-0 Clefairy.** This does not establish Save persistence, a post-mutation cold reload, PC storage, other Party slots, or all nature consumers.
+
+The reviewed v1 artifacts are auditor SHA-256 `bcaf80bf49d3e9b417b31f1e3eb830f735fcc387b85113bab0496eb82a2f723b` and frozen acceptance JSON SHA-256 `6c88a53a6aee2b817641c19dde3d15309097645f5e404eb4ad4044642d902c27`. The exact candidate is `9e01938d9b27d453ec7a901c72d4f23a6d761a7a74b360deeb23ccdd56057636`.
+
+The evidence is stronger than decoded-stat assertions alone. `qa/nature_stat_recalc_native_fix2_acceptance.py:201-267` obtains Party and Bag through validated dynamic SaveArray headers, bounds-checks RAM slices via `internal/hm-qol/qa_fixtures.py:48-84`, validates each Pokémon checksum on decode (`:96-107`), then compares all 1460 Party bytes against the seed array with only slot 0 re-encoded to the expected record (`:217-244`). The Party header and non-target records are separately required to remain byte-exact. The whole dynamic Bag must equal the selected seed DSV Bag for all three snapshots (`:203-216`).
+
+The verified fixture is PID `E30363E2`, species 35, EXP 100, level 5, EVs all zero, IVs `[15,3,10,31,21,2]`. The cold/reset field word is `A5C1` (encoded zero; PID fallback nature 10) and stats are `[22,8,10,11,12,11]`; after opcode 858 the word is `A5C5` (encoded 2; nature 1) and stats are `[22,9,9,10,12,11]`. Reset returns to the exact cold Party hash. The run chain is cold → use → reset, with 6500/2000/100 frames, no cheats, matching ROM/core/runner identities, and unchanged DSV SHA `9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a`. This is RAM-state evidence; the unchanged battery is not evidence of persistence.
+
+**Correction to v1 provenance:** v1 reports personal data as ROM file 498 (`pbr/personal.narc`). The separate v2 report records the compiled retail route to `a/0/0/2`, FNT file 131, and notes that the PBR copy has the same six base-stat bytes for this species. Thus v1's provenance label is wrong, while its tested base-stat arithmetic is unchanged. The v2 JSON currently observed is `qa/runs/nature-stat-recalc-native-fix2-20261022/acceptance-v2.json`, SHA-256 `602cbe006b25f8843cd0ad9eda5aa7292e2cbf1fa08c35bac4892934777fb27a`; its loader analysis is attributed to the parallel review and was not re-audited here.
+
+Minor reproducibility limitation: v1 pins ROM/build/core/runner/DSV, but not imported helper source hashes (`qa/stat_editor_reset_native_acceptance.py`, `qa/dispatch_preview_sampled_acceptance.py`, `internal/hm-qol/qa_fixtures.py`). Their hashes at this review were respectively `e9495f73…`, `a1a2d298…`, and `ec653a1c…`. This does not invalidate the frozen, hash-checked result, but future auditor revisions should pin these parsing dependencies.
+
+## Español
+
+**Dictamen: PASS acotado para mutación de RAM nativa y recálculo de estadísticas en la Clefairy de slot 0 probada.** No demuestra persistencia al guardar, recarga en frío posterior, almacenamiento en PC, otros slots ni todos los consumidores de naturaleza.
+
+Los artefactos v1 revisados son el auditor SHA-256 `bcaf80bf49d3e9b417b31f1e3eb830f735fcc387b85113bab0496eb82a2f723b` y el JSON congelado SHA-256 `6c88a53a6aee2b817641c19dde3d15309097645f5e404eb4ad4044642d902c27`. La candidata exacta tiene SHA-256 `9e01938d9b27d453ec7a901c72d4f23a6d761a7a74b360deeb23ccdd56057636`.
+
+La evidencia va más allá de comprobar estadísticas decodificadas. `qa/nature_stat_recalc_native_fix2_acceptance.py:201-267` obtiene Party y Bag desde cabeceras SaveArray dinámicas validadas, comprueba límites de RAM mediante `internal/hm-qol/qa_fixtures.py:48-84`, valida checksum al decodificar cada Pokémon (`:96-107`) y compara los 1460 bytes de Party con el array de origen, re-codificando únicamente el registro de slot 0 al resultado esperado (`:217-244`). También exige cabecera Party y registros no objetivo idénticos byte a byte. El Bag dinámico completo debe coincidir con el del DSV semilla en las tres capturas (`:203-216`).
+
+Fixture verificada: PID `E30363E2`, especie 35, EXP 100, nivel 5, EV cero, IV `[15,3,10,31,21,2]`. En frío/reset, field114 es `A5C1` (codificado 0; fallback PID naturaleza 10) y las estadísticas son `[22,8,10,11,12,11]`. Tras opcode 858, pasa a `A5C5` (codificado 2; naturaleza 1) y `[22,9,9,10,12,11]`. Reset restaura el hash de Party de frío. La cadena es frío → uso → reset, con 6500/2000/100 frames, sin cheats, identidad ROM/core/runner coincidente y DSV sin cambios (`9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a`). Es evidencia de estado RAM; el DSV intacto no demuestra persistencia.
+
+**Corrección de procedencia de v1:** v1 atribuye los datos personales al archivo ROM 498 (`pbr/personal.narc`). El informe v2 separado identifica la ruta compilada retail `a/0/0/2`, FNT 131, y registra que la copia PBR comparte los seis bytes de estadísticas base para esta especie. La etiqueta de procedencia v1 es incorrecta; la aritmética de estadísticas probada no cambia. El JSON v2 observado está en `qa/runs/nature-stat-recalc-native-fix2-20261022/acceptance-v2.json`, SHA-256 `602cbe006b25f8843cd0ad9eda5aa7292e2cbf1fa08c35bac4892934777fb27a`; el análisis del loader pertenece a la revisión paralela y no se re-auditó aquí.
+
+Límite menor de reproducibilidad: v1 fija ROM/build/core/runner/DSV, pero no los hashes de los helpers importados (`qa/stat_editor_reset_native_acceptance.py`, `qa/dispatch_preview_sampled_acceptance.py`, `internal/hm-qol/qa_fixtures.py`). En esta revisión sus hashes fueron `e9495f73…`, `a1a2d298…` y `ec653a1c…`. Esto no invalida el resultado congelado y contrastado por hash; conviene fijar esas dependencias en una revisión futura del auditor.

@@ -1,0 +1,117 @@
+{
+  "schema": "ultimate-gold-item-description-audit/v1",
+  "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+  "dataset_sha256": "85f7f594b48304d25f2265beb2494ae6e1b357ea7bf91839a89d76a704c1d803",
+  "coverage": {
+    "items_total": 516,
+    "excluded_tm_hm_ids": 100,
+    "excluded_custom_ids": [
+      113,
+      114,
+      118
+    ],
+    "reviewed_items": 413,
+    "reviewed_pairs_with_both_texts": 413,
+    "explicit_es_fallback_ids": [],
+    "explicit_es_fallback_count": 0,
+    "english_missing_ids": [],
+    "english_missing_count": 0
+  },
+  "method": {
+    "en_reference": "HGSS-matched English source rows, except three exact-target custom records excluded",
+    "es_reference": "canonical cached Spanish rows with explicit HGSS-mechanics overrides; missing translations remain explicit fallback",
+    "checks": [
+      "agent-assisted semantic review in batches over the selected EN/ES pairs",
+      "numeric-effect consistency check",
+      "known generation-shift terms: healing amounts, X-item stages, encounter direction, party experience, held-stat effects, key-item behavior, berry confusion"
+    ],
+    "version_policy": {
+      "item_es_default_groups": [
+        10,
+        17,
+        18,
+        19,
+        20
+      ],
+      "hgss_mechanics_override_group": 15,
+      "english_source_group": 10,
+      "explicit_es_fallback": "No hay traducción española disponible para este objeto."
+    },
+    "source_overrides": [
+      {
+        "item_id": 68,
+        "kind": "own_translation_from_hgss_english",
+        "reason": "cached later Spanish row changes HGSS mechanic"
+      },
+      {
+        "item_id": 69,
+        "kind": "own_translation_from_hgss_english",
+        "reason": "cached later Spanish row changes HGSS mechanic"
+      },
+      {
+        "item_id": 216,
+        "kind": "own_translation_from_hgss_english",
+        "reason": "cached later Spanish row changes HGSS mechanic"
+      },
+      {
+        "item_id": 225,
+        "kind": "own_translation_from_hgss_english",
+        "reason": "cached later Spanish row changes HGSS mechanic"
+      },
+      {
+        "item_id": 504,
+        "kind": "own_translation_from_hgss_english",
+        "reason": "cached later Spanish row changes HGSS mechanic"
+      }
+    ]
+  },
+  "result": "TEXT_REVIEW_WITH_EXPLICIT_LIMITS",
+  "findings": [
+    {
+      "ids": [
+        68,
+        69,
+        216,
+        225,
+        504
+      ],
+      "status": "corrected_before_audit",
+      "note": "Spanish wording now follows the reviewed HGSS English mechanics."
+    },
+    {
+      "ids": [
+        76,
+        77,
+        79
+      ],
+      "status": "reviewed_no_mismatch",
+      "note": "Spanish omits literal step counts but preserves the relative duration semantics (Repel < Super Repel < Max Repel)."
+    },
+    {
+      "ids": [
+        22,
+        259,
+        471,
+        486,
+        487,
+        488,
+        489,
+        490,
+        491
+      ],
+      "status": "corrected_before_audit",
+      "note": "Target-label aliases joined to canonical Gen4 item IDs; EN/ES descriptions now come from matched references."
+    },
+    {
+      "ids": [216],
+      "status": "corrected_during_independent_rendered_review",
+      "note": "The first Spanish override still incorrectly said the whole party. It now follows the HGSS English reference: only the holder receives a share without battling. The regression test rejects the whole-party wording; this does not independently verify the target experience routine."
+    }
+  ],
+  "limits": [
+    "Coverage counts and agent review do not prove that every translation is correct; independent rendered review found and corrected a remaining Exp. Share error.",
+    "This is a text-semantic audit, not native ROM gameplay acceptance.",
+    "TM/HM descriptions were excluded because they have a separate move-translation audit.",
+    "The three custom Alpha2 records were excluded because their descriptions are target-bank records."
+  ]
+}

@@ -1,0 +1,1283 @@
+{
+  "schema": "portable-stat-editor-nature-integrated-phase1-acceptance/v1",
+  "status": "PASS_BOUNDED_NATIVE_FIRST_NATURE_CHANGE_NO_SAVE",
+  "summary_en": "On the exact private integrated ROM, Rocket granted item 119, the native item flow opened Nature, and the user selected Lonely (encoded 2) for party slot 0. The exact Gen 4 recalculated record matches the seed-derived expected transform; other party records and the BPAC cache are preserved. No save, reset, or cold reload followed the mutation.",
+  "summary_es": "En la ROM integrada privada exacta, Rocket entregó el objeto 119, su flujo nativo abrió Naturaleza y se seleccionó Lonely (codificado 2) para el slot 0. El registro recalculado coincide exactamente con la transformación Gen 4 esperada desde la semilla; los demás Pokémon y la caché BPAC se conservan. No hubo guardado, reset ni recarga en frío después del cambio.",
+  "scope": "Bounded native RAM acceptance through the first confirmed Lonely mutation only.",
+  "scope_es": "Aceptación nativa acotada en RAM hasta la primera mutación Lonely confirmada.",
+  "provenance": {
+    "rom": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/stat-editor-nature-integrated-rocket08e/ultimate-gold-stat-editor-nature-integrated.nds",
+      "sha256": "2eaf226677be97b95175035917cb96aa47b761cd993aa5a1bdb0eb2619dbf43f",
+      "bytes": 127095072
+    },
+    "verified_rom_copy_sha256": "2eaf226677be97b95175035917cb96aa47b761cd993aa5a1bdb0eb2619dbf43f",
+    "build_json": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/stat-editor-nature-integrated-rocket08e/build.json",
+      "sha256": "5e2e80e26d355b2fe32959e32e1c34436896c3f25995b70583b467ad240b5459"
+    },
+    "parent_rom_sha256": "08e1d4e51599dc459600f1eff44e7915acbbaa111d74321be22a4800af629fcf",
+    "nature_donor_rom_sha256": "9e01938d9b27d453ec7a901c72d4f23a6d761a7a74b360deeb23ccdd56057636",
+    "core": {
+      "path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+      "sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    "runner": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+      "sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    "menu_source_sha256": "e7bb53419fa3b4800fa12cf9aafda96584456083d9d048c7a1588eaea7a1c122",
+    "integration_builder_sha256": "96d92d70dd38237ef6cc1c6141c0c4f18707849c96f7fac2e8b787377b9e797f",
+    "sampled_parser_sha256": "a1a2d298ebd592a31850a4fa4281e80abafbfee6eb12a2bc1e3178630c75bc7e",
+    "no_runtime_cheats": true
+  },
+  "static_candidate": {
+    "build_json_sha256": "5e2e80e26d355b2fe32959e32e1c34436896c3f25995b70583b467ad240b5459",
+    "build_source_sha256": "96d92d70dd38237ef6cc1c6141c0c4f18707849c96f7fac2e8b787377b9e797f",
+    "menu_source_sha256": "e7bb53419fa3b4800fa12cf9aafda96584456083d9d048c7a1588eaea7a1c122",
+    "menu_bytecode_sha256": "25d356c9cfa352a3d89c214e6ea6486573e6ab3071539f423874a1976d155b5e",
+    "dispatch_table": {
+      "section_address": "0x023D5000",
+      "used_bytes": 3436,
+      "used_entries_sha256": "66ae89746061bdf178f3738b70dd11930e441f9075d01365560186c14054d080",
+      "entry_857_858_hex": "216b3d02a16c3d02",
+      "guard_verified": true
+    },
+    "nature_payloads": [
+      {
+        "name": "party_writer",
+        "address": "0x023D6AA0",
+        "bytes": 124,
+        "sha256": "5350aa578b82c6788da17a227ccc6e8515d9d50678e4db30c1b287276aca9007"
+      },
+      {
+        "name": "opcode_857_wrapper",
+        "address": "0x023D6B20",
+        "bytes": 204,
+        "sha256": "29299daac61ea99f099edf10abac49691873d0ab2520bd4cab82e5e7b48330cb"
+      },
+      {
+        "name": "effective_nature_getter",
+        "address": "0x023D6C00",
+        "bytes": 68,
+        "sha256": "9b69e8310d40aceb1e23cef90cad2eaba5fb151f255f633f14c908dd5039d4d3"
+      },
+      {
+        "name": "opcode_858_recalc_wrapper",
+        "address": "0x023D6CA0",
+        "bytes": 300,
+        "sha256": "17f86803bdef057be716a75f3546b51d50386575262e007d90f91066dc5e3cb5"
+      }
+    ],
+    "nature_hook_hex": "004b1847016c3d02",
+    "global_script": {
+      "file_id": 141,
+      "member": 3,
+      "global_id": 2072,
+      "target_offset": 23761,
+      "body_bytes": 19325,
+      "old_targets_0_71_equal_parent": true
+    },
+    "global_messages": {
+      "file_id": 156,
+      "member": 40,
+      "old_vectors_0_151_equal_parent": true,
+      "new_bank_messages": 194,
+      "bank_sha256": "88dc5f8fe6da6cdc6514ed498b7a80d02e006418d9fb7f872bf69bc44da1cd34"
+    }
+  },
+  "runs": [
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-cold-20261022-01",
+      "frames": 5500,
+      "result_sha256": "1c0f2904466be5c0257f3228a2e791e3da227fd4f84cd3e2c5e55daa3e56abef",
+      "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_input_sha256": null,
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-cold-20261022-01/cold.state",
+      "state_output_sha256": "fe96ff8d5366f97dc0fd27b766452ff0c7965d1fff2e5d4a38133f89c71544e3",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-cold-20261022-01/system_ram.bin",
+      "system_ram_sha256": "b4b28fc2a3001d6d724fa7f6b62923b73802952ee90251c1984f6dd9a995092b",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "1628092730fb67f097af6f9efeadfe88c0233022cd80477a41caf98cfd791d78",
+      "screenshots": [
+        {
+          "name": "cold_continue_accepted",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-cold-20261022-01/cold_continue_accepted.png",
+          "sha256": "9b0986b3a3215386da294d8f2a47b8be105e329de8c6215484cd01fcf8836874"
+        },
+        {
+          "name": "cold_continue_menu",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-cold-20261022-01/cold_continue_menu.png",
+          "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+        },
+        {
+          "name": "cold_final",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-cold-20261022-01/cold_final.png",
+          "sha256": "5d94df041327b9036346eb88c6d03ec655a5ea0185b0ddbbe9d5fbba4c4f13b0"
+        },
+        {
+          "name": "cold_loaded_field",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-cold-20261022-01/cold_loaded_field.png",
+          "sha256": "bce932f8af2d4531b10c2e25de78f862db6ce42fc75e83f70ae8f4a1705366ea"
+        },
+        {
+          "name": "cold_loaded_identity",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-cold-20261022-01/cold_loaded_identity.png",
+          "sha256": "c522334a1f491b6e54048e01718d17915c040e59e84ca13d7641e662dab0e0b2"
+        },
+        {
+          "name": "cold_pre_title_inputs",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-cold-20261022-01/cold_pre_title_inputs.png",
+          "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+        }
+      ],
+      "events": [
+        {
+          "frame": 180,
+          "button": "START",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-offer-20261022-01",
+      "frames": 180,
+      "result_sha256": "5e037daaecda51d63e5ccac7ae563a6ddafaab9cf100574555e89c78905f6a7d",
+      "input_script_sha256": "a2606087ed47e3ca2e4370ec77ec7050269fb6c18f72c65c193ea210e0e528b4",
+      "state_input_sha256": "fe96ff8d5366f97dc0fd27b766452ff0c7965d1fff2e5d4a38133f89c71544e3",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-offer-20261022-01/offer.state",
+      "state_output_sha256": "6124bbf6852fc1f20762c0b222f4ab9fefbeaeb259222fdab865dba505cb1440",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-offer-20261022-01/system_ram.bin",
+      "system_ram_sha256": "6a9a2997ed4d983f39f0ad6b47b2db18dfe680e75eee8ae84af8ed8e8787bb38",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "b7bc582738c5326dc7c58a43e0eb3fdcfce1dae7c4e030dc284fcf68c84689d3",
+      "screenshots": [
+        {
+          "name": "before_rocket_interaction",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-offer-20261022-01/before_rocket_interaction.png",
+          "sha256": "0f689eb9dcb59365efe8dd7a16f463e6f37c0293a90469089279c9129ca30500"
+        },
+        {
+          "name": "offer_or_dialogue",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-offer-20261022-01/offer_or_dialogue.png",
+          "sha256": "0f54a14aa9a9267fea522826d4a60f4207a1f3c5ac2a419f006f9958115c1cd8"
+        },
+        {
+          "name": "offer_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-offer-20261022-01/offer_stable.png",
+          "sha256": "ea9a1aaf5278f82b26200522acda23ca7f40b16ce864de7bf3644c8f2ff1cf44"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "A",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-grant-20261022-01",
+      "frames": 180,
+      "result_sha256": "8d41c7e42c2a773474277901d62994a4836b31c6ecfd0bfc798f594031afa204",
+      "input_script_sha256": "b71f87515e6bb945abdd9641ea087b97f89d1b6349528d098eb1bebf3de040bf",
+      "state_input_sha256": "6124bbf6852fc1f20762c0b222f4ab9fefbeaeb259222fdab865dba505cb1440",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-grant-20261022-01/grant.state",
+      "state_output_sha256": "36a0cc18f795e06190507e954e48b6c952d7455805f43d205707d54185e576ff",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-grant-20261022-01/system_ram.bin",
+      "system_ram_sha256": "975b76bb27bb1adda0aff488e930bf797b1292c346f0b1ac0f6c11f4cc679802",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "4f7e475b91a40b200eced8b72c3fca3e7a2b439326d323ba40ae365e08442044",
+      "screenshots": [
+        {
+          "name": "grant_result",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-grant-20261022-01/grant_result.png",
+          "sha256": "e21eed4ee317d07128692eb355c90641c2b503de450fb3d4d80b19f32f46c51a"
+        },
+        {
+          "name": "grant_result_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-grant-20261022-01/grant_result_stable.png",
+          "sha256": "54a2e2aae98b3cc2054aed973f403f2053cb4da09162cc53ac2aab69008b65e9"
+        },
+        {
+          "name": "yes_selected_before_confirm",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-grant-20261022-01/yes_selected_before_confirm.png",
+          "sha256": "86eeb82b4dac4c4e6338d145cfb964481e73fd1a29505f6d6f445e3ccd243f00"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "A",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-dismiss-20261022-01",
+      "frames": 180,
+      "result_sha256": "cb25b2bf22376f20df3294293d1ef9a0ea75295fd4ce9a0b925c82e99d196ad4",
+      "input_script_sha256": "80c20c487ccd3126b1bb1d0d4cf85879be528348a734aa0e15191aba35059a8b",
+      "state_input_sha256": "36a0cc18f795e06190507e954e48b6c952d7455805f43d205707d54185e576ff",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-dismiss-20261022-01/field.state",
+      "state_output_sha256": "4efd8a22acd39051aa2ea196340de2fb0e050eb46b0b33e2719cdb7f3c8b6575",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-dismiss-20261022-01/system_ram.bin",
+      "system_ram_sha256": "ff9ddb0791521428f7dbf440fb559a4012b7f029bfd64b87cfdc869ce6a8898b",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "64862aeb49fd9dd07249acfa8ac9d2e0a7dead655c69d3c2f37ea3fa66b73578",
+      "screenshots": [
+        {
+          "name": "field_after_grant_ack",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-dismiss-20261022-01/field_after_grant_ack.png",
+          "sha256": "350c40603d3962c9e9b453ef8b29fc8b42b9f418419ec8b13ae903a69b414ecf"
+        },
+        {
+          "name": "field_after_grant_ack_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-dismiss-20261022-01/field_after_grant_ack_stable.png",
+          "sha256": "301a981f8ca27da50482e77d863164bf39d47de3711a5c6a755047e86d79df36"
+        },
+        {
+          "name": "grant_message_before_ack",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-dismiss-20261022-01/grant_message_before_ack.png",
+          "sha256": "8693f55bebc22509c9a273c2ca9e441a032ad05b02898d8c161e919e02f56f71"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "A",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-bag-20261022-02",
+      "frames": 180,
+      "result_sha256": "d368df62426086a4d997123d694fb1603af635ecd2156ae2d3d97472d23f26b0",
+      "input_script_sha256": "043401ef101c070331d1defdd2b9c563bd9ddc65a78ec51eb2557b18cc6ee6dc",
+      "state_input_sha256": "4efd8a22acd39051aa2ea196340de2fb0e050eb46b0b33e2719cdb7f3c8b6575",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-bag-20261022-02/bag.state",
+      "state_output_sha256": "ee0dffd085dd04d0f5ab1c1ccce6def355c933cc6fd33421be8092e0122dc3f4",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-bag-20261022-02/system_ram.bin",
+      "system_ram_sha256": "83121b0bb83c2c88084c78bfe5900937df1615a3489883582d88475d0de25abc",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "6197beb9d68cb8e4ba4ba556ff7868ea1c3d470300355e0dcf7195bcee1f9e83",
+      "screenshots": [
+        {
+          "name": "bag_open",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-bag-20261022-02/bag_open.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        },
+        {
+          "name": "bag_open_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-bag-20261022-02/bag_open_stable.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        },
+        {
+          "name": "field_before_bag",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-bag-20261022-02/field_before_bag.png",
+          "sha256": "cdc266a6a3d0ff2709ef23bfd4710724d83eac6fb9ab52d934085c85a5ea807b"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "touch": [
+            43,
+            312
+          ],
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-keyitems-20261022-01",
+      "frames": 180,
+      "result_sha256": "9eab806eb007b53b0c0a7c2b07fa0ed918a1ef74a029139ba9fffc2fef2900ce",
+      "input_script_sha256": "50d9a8876eeabf007cf8d34c659c1a67003615a48eba015d8306e4b225f8de52",
+      "state_input_sha256": "ee0dffd085dd04d0f5ab1c1ccce6def355c933cc6fd33421be8092e0122dc3f4",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-keyitems-20261022-01/keyitems.state",
+      "state_output_sha256": "a1a859a935a271df303aa455cd8ac03e5b300d9e21de9eff4c6c811ea372d90d",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-keyitems-20261022-01/system_ram.bin",
+      "system_ram_sha256": "94cf5c9342bf943d680fb7aae263b8868d8a5a7f93cec9adafd4de9c064ce689",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "afeb80afe128c03e3f64b5a46aa8eb29d52908df2a4c5fddc18d6bf62efcf954",
+      "screenshots": [
+        {
+          "name": "bag_before_key_items",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-keyitems-20261022-01/bag_before_key_items.png",
+          "sha256": "181fa992ffde94d5f4181cba12b56441d31254d80da637018bf60c8639a7fd89"
+        },
+        {
+          "name": "key_items_open",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-keyitems-20261022-01/key_items_open.png",
+          "sha256": "c2c905a3746227d3ff7a72d3fa1b7082bd7f613541c0f4d98c4ac74972395ce7"
+        },
+        {
+          "name": "key_items_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-keyitems-20261022-01/key_items_stable.png",
+          "sha256": "838163db18fa944efe3a5f22e92b1734beeb33f7603c003015ae7afd41dd645c"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "touch": [
+            239,
+            208
+          ],
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01",
+      "frames": 1500,
+      "result_sha256": "dbf684e37a17325007ca49d5fb540fbbe95d3be0643b59d9c5cdb5d247651941",
+      "input_script_sha256": "7ca0cc18a5b0d560e1384f5995492d0b28390e1a8130ee70b96a25d5c75413c1",
+      "state_input_sha256": "a1a859a935a271df303aa455cd8ac03e5b300d9e21de9eff4c6c811ea372d90d",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/scan.state",
+      "state_output_sha256": "15ba2cb158f729832cacf8a1eac5ef815257657ba8e4905fc6a81985892d44c5",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/system_ram.bin",
+      "system_ram_sha256": "2b3c07f354e401236008102186a52db56ca1dde49867797f35363fcd0ce3be40",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "f2d41cc43f1cc9e28ae949de1c31ee174f796fe519a0185268ae1b78274b62b8",
+      "screenshots": [
+        {
+          "name": "key_page_1_before_next",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/key_page_1_before_next.png",
+          "sha256": "838163db18fa944efe3a5f22e92b1734beeb33f7603c003015ae7afd41dd645c"
+        },
+        {
+          "name": "key_page_2",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/key_page_2.png",
+          "sha256": "838163db18fa944efe3a5f22e92b1734beeb33f7603c003015ae7afd41dd645c"
+        },
+        {
+          "name": "key_page_3",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/key_page_3.png",
+          "sha256": "838163db18fa944efe3a5f22e92b1734beeb33f7603c003015ae7afd41dd645c"
+        },
+        {
+          "name": "key_page_4",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/key_page_4.png",
+          "sha256": "220860032d408ef1d70c97fd61d71d5c91518a11565481a5b4bd3c6840956f12"
+        },
+        {
+          "name": "key_page_5",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/key_page_5.png",
+          "sha256": "8ee1c8ca5d65821222543107472d203289882f0de2584a44a3da9b35e00cd4b6"
+        },
+        {
+          "name": "key_page_6",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/key_page_6.png",
+          "sha256": "838163db18fa944efe3a5f22e92b1734beeb33f7603c003015ae7afd41dd645c"
+        },
+        {
+          "name": "key_page_7",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/key_page_7.png",
+          "sha256": "838163db18fa944efe3a5f22e92b1734beeb33f7603c003015ae7afd41dd645c"
+        },
+        {
+          "name": "key_page_8",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/key_page_8.png",
+          "sha256": "838163db18fa944efe3a5f22e92b1734beeb33f7603c003015ae7afd41dd645c"
+        },
+        {
+          "name": "key_page_9",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/key_page_9.png",
+          "sha256": "ae5420f748453bedac6aefc91eaf7a8ac4d5a5ecb5d854760f9cbae1b83756e5"
+        },
+        {
+          "name": "key_page_final_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-key-scan-20261022-01/key_page_final_stable.png",
+          "sha256": "6b997a023bdf7a17402c795022cf5d91ccd62bd45e709583a4a2bf5f18b2c7c7"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "touch": [
+            60,
+            369
+          ],
+          "frames": 3
+        },
+        {
+          "frame": 200,
+          "touch": [
+            60,
+            369
+          ],
+          "frames": 3
+        },
+        {
+          "frame": 380,
+          "touch": [
+            60,
+            369
+          ],
+          "frames": 3
+        },
+        {
+          "frame": 560,
+          "touch": [
+            60,
+            369
+          ],
+          "frames": 3
+        },
+        {
+          "frame": 740,
+          "touch": [
+            60,
+            369
+          ],
+          "frames": 3
+        },
+        {
+          "frame": 920,
+          "touch": [
+            60,
+            369
+          ],
+          "frames": 3
+        },
+        {
+          "frame": 1100,
+          "touch": [
+            60,
+            369
+          ],
+          "frames": 3
+        },
+        {
+          "frame": 1280,
+          "touch": [
+            60,
+            369
+          ],
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-item-context-20261022-01",
+      "frames": 180,
+      "result_sha256": "572ad7ad957e97663fc162cd614fc2e156521f242fd08ea9bfe9445910b52371",
+      "input_script_sha256": "a29c7698a44ad9d0fa0ea5b19ee751bffbf5b1cebd808cb7bc4db82d337b6328",
+      "state_input_sha256": "15ba2cb158f729832cacf8a1eac5ef815257657ba8e4905fc6a81985892d44c5",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-item-context-20261022-01/context.state",
+      "state_output_sha256": "6f221c75ce112e3330daa2c5fa4575068535feb12b8e3b741ff0b06ada02cb39",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-item-context-20261022-01/system_ram.bin",
+      "system_ram_sha256": "7a87ced2e69c98c7cba4fdbd5f53853c158849b0dc726cce53efdb5e2746a030",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "be02e62f92dde3c5aed3c8f90f9d45c6c68fb679a410fae7a8d4ba08e2dcdfad",
+      "screenshots": [
+        {
+          "name": "stat_editor_before_select",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-item-context-20261022-01/stat_editor_before_select.png",
+          "sha256": "838163db18fa944efe3a5f22e92b1734beeb33f7603c003015ae7afd41dd645c"
+        },
+        {
+          "name": "stat_editor_context",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-item-context-20261022-01/stat_editor_context.png",
+          "sha256": "c9d73e7fd68174fdfbf16390fade4dcfb835e5b1eaa8a9ae236deaf19af979b1"
+        },
+        {
+          "name": "stat_editor_context_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-item-context-20261022-01/stat_editor_context_stable.png",
+          "sha256": "39c4919673f3692fc0a3b633ad66ce3d42dccb3749924416ecffd54410d612f7"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "touch": [
+            190,
+            327
+          ],
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-use-20261022-01",
+      "frames": 180,
+      "result_sha256": "f110cbd4996c541a7cf4fdda2aba91f8b2b6a9c5936d0247126dfdda992065d7",
+      "input_script_sha256": "229ec9a79a383cea264d2ecd9f18c7aa61ed8ce5fe0fa3a8daaa3a748c6221c7",
+      "state_input_sha256": "6f221c75ce112e3330daa2c5fa4575068535feb12b8e3b741ff0b06ada02cb39",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-use-20261022-01/party.state",
+      "state_output_sha256": "0641f0c4b78c0633241bf9b1da49aad2fbe04bf5e405615fadd8078535af3a0d",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-use-20261022-01/system_ram.bin",
+      "system_ram_sha256": "1ce2cc04f14d9a8233b65ecdcedac14a2de313c6a5fdf8ec4bc24baa3110fa05",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "1306cad38a65751b2b11deca4a4538490e88e661585708fdf7f780352f5df456",
+      "screenshots": [
+        {
+          "name": "party_selector_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-use-20261022-01/party_selector_stable.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        {
+          "name": "party_transition",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-use-20261022-01/party_transition.png",
+          "sha256": "f105c0deb25208638c800a8d4ae713690f050f9b56b3c526746386013001eade"
+        },
+        {
+          "name": "use_selected_before_confirm",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-use-20261022-01/use_selected_before_confirm.png",
+          "sha256": "39c4919673f3692fc0a3b633ad66ce3d42dccb3749924416ecffd54410d612f7"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "A",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-slot0-20261022-01",
+      "frames": 180,
+      "result_sha256": "fe12f3cea13eb5730b444f6e78507388dfb305d7bd7d863363c2a42d4a609d9e",
+      "input_script_sha256": "1910a98357b7a3f0fdf11e380fa2b0d8aaaa448644638ea667731d8673a7fdd9",
+      "state_input_sha256": "0641f0c4b78c0633241bf9b1da49aad2fbe04bf5e405615fadd8078535af3a0d",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-slot0-20261022-01/family.state",
+      "state_output_sha256": "6b3100ce1855247f00aff3eb58e0c66783dd8402b72640f18ed91b428ede5ae4",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-slot0-20261022-01/system_ram.bin",
+      "system_ram_sha256": "8a9c22ae859194061ce8ae7b85a3a7158439ebba4bfa5bf3f40a6b3e9d5d9afd",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "7515002d6241d4938d5455706fe03e709ba12715fe2e648247fb8be867e30e3f",
+      "screenshots": [
+        {
+          "name": "family_menu",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-slot0-20261022-01/family_menu.png",
+          "sha256": "b4b2ec7ca7ce1b4dfc82fb235116c09f572d0a1acb54b0859248d4c3dbb814bf"
+        },
+        {
+          "name": "family_menu_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-slot0-20261022-01/family_menu_stable.png",
+          "sha256": "78162abd84199c4b43c5ef507fe96477bf5d6b4a2f8c5d48a3e64bdd8dbeeda9"
+        },
+        {
+          "name": "party_slot0_before_select",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-slot0-20261022-01/party_slot0_before_select.png",
+          "sha256": "0a7316c52d09d0e60f3c0a4272e1c7e4a917f16f7f075a6fa40fb4633c842d82"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "A",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-nature-highlight-20261022-01",
+      "frames": 180,
+      "result_sha256": "d8d14b97844800d4a827330d3f1b8f89d6c4cdd546b9e2e35fd1c703f61794a3",
+      "input_script_sha256": "9f6d65eaac446482dc9ffa867f5597c1a4ede87d8c06eca435fd133a844a8812",
+      "state_input_sha256": "6b3100ce1855247f00aff3eb58e0c66783dd8402b72640f18ed91b428ede5ae4",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-highlight-20261022-01/nature.state",
+      "state_output_sha256": "3bd903096a2f1ff2c5de0e0188a4db2a7093d2a1f49b707ee5b85d10381508d7",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-highlight-20261022-01/system_ram.bin",
+      "system_ram_sha256": "93733f6dc8f24190c18dfa1bfe9720d0dac1885297355739a5097a87b88b6752",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "68e05627969f64712cbda4046ebbcaf12c157dec54df31e8210ed249496e32ae",
+      "screenshots": [
+        {
+          "name": "family_evs_selected",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-highlight-20261022-01/family_evs_selected.png",
+          "sha256": "d2547d3694dfe86fccfa24c703fca808c328bfd97d105528a033e300cf91976f"
+        },
+        {
+          "name": "family_ivs_selected",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-highlight-20261022-01/family_ivs_selected.png",
+          "sha256": "6c49c9151d32b9b4b11b245931f463f613d959ab7292bb68a5075abf4c1fab00"
+        },
+        {
+          "name": "family_nature_selected",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-highlight-20261022-01/family_nature_selected.png",
+          "sha256": "e16201e37b23c4cc9b86fdf01c966724d6a0621cbb8a66ac76583373e9a3b3d8"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "DOWN",
+          "frames": 3
+        },
+        {
+          "frame": 120,
+          "button": "DOWN",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-nature-actions-20261022-01",
+      "frames": 180,
+      "result_sha256": "6e79064fa463300416e48056953efd48669a62c8a8eac9ee9ea1f5b73382b9c6",
+      "input_script_sha256": "0220b4785ac65af221e1707d0ebe6fbe950d49077dd2bca3dd47053d95008827",
+      "state_input_sha256": "3bd903096a2f1ff2c5de0e0188a4db2a7093d2a1f49b707ee5b85d10381508d7",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-actions-20261022-01/actions.state",
+      "state_output_sha256": "a25b60f617d58f6ea015563c3ddecd94f7e5d034f707f4af4be9cea952ec3343",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-actions-20261022-01/system_ram.bin",
+      "system_ram_sha256": "640938eb2b0fac74f574a72d9760e573a888bb9bb5163fc220bcf0a6399f599b",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "83cc41d11b15713567fbe2a84eaa47f4ec630155947afda69a4d9c84ba8dd086",
+      "screenshots": [
+        {
+          "name": "nature_actions",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-actions-20261022-01/nature_actions.png",
+          "sha256": "4829abaad1468b52365bae8d15c4ca248116c8a439125c2f1f5cb6ae3484f62b"
+        },
+        {
+          "name": "nature_actions_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-actions-20261022-01/nature_actions_stable.png",
+          "sha256": "0520bb8b8cd71eabfb02f5135caf53612421b63d8dd497462ea0ab21d13f5a5e"
+        },
+        {
+          "name": "nature_selected_before_confirm",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-actions-20261022-01/nature_selected_before_confirm.png",
+          "sha256": "4ad7c0c93f0fd417f460ea1342e36f3266e281f0573d1d43561a148362a1bbee"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "A",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-nature-set-20261022-01",
+      "frames": 180,
+      "result_sha256": "a2db95cf837f6119640db13cb258821c93cb86a172f81a9501aa859b8fbdc58d",
+      "input_script_sha256": "9ebdadf007b2ffbd0a04362944d31aba6d5837932169d0963ad3daf263076e12",
+      "state_input_sha256": "a25b60f617d58f6ea015563c3ddecd94f7e5d034f707f4af4be9cea952ec3343",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-set-20261022-01/choice.state",
+      "state_output_sha256": "5dba1e4f2fd67c68e63593fa1a689aca3665689423433fbfdc09acf27aa3981d",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-set-20261022-01/system_ram.bin",
+      "system_ram_sha256": "daa33eb2242a7daece94e10e8793bf3788351b97c010eb324bcd9e784d29f5d6",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "300d1763efe2d778270c3723dd01354545968ff565d27946d65dfbe49add1d38",
+      "screenshots": [
+        {
+          "name": "nature_choice_page",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-set-20261022-01/nature_choice_page.png",
+          "sha256": "202672677a979e95b7fc9289da7a5db2aa34277c6baa25c3e8f6136f985aa846"
+        },
+        {
+          "name": "nature_choice_page_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-set-20261022-01/nature_choice_page_stable.png",
+          "sha256": "c045aa84f09d73457355913855a81fec4debdff2d1a0ef9031d15abdeaaabb38"
+        },
+        {
+          "name": "set_nature_before_confirm",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-set-20261022-01/set_nature_before_confirm.png",
+          "sha256": "1b1e73cc5eaa1493f6711c72d56deac6f2dfe28ffbf19a11b8be3007af3d2bc7"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "A",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-nature-ack-20261022-01",
+      "frames": 180,
+      "result_sha256": "3ac929c14739222e5f2d2020efb03819ee403d18fb84ebf91eb5be7d77126d2c",
+      "input_script_sha256": "2833bdcbd1a837853d5646b1e23530757745449d774ffd0ea5fa5c437a58b8bd",
+      "state_input_sha256": "5dba1e4f2fd67c68e63593fa1a689aca3665689423433fbfdc09acf27aa3981d",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-ack-20261022-01/ack.state",
+      "state_output_sha256": "17b14ea6a07c360c4a8641a40e15efd38e951c3c94f649c029d505c9c1c9a2b6",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-ack-20261022-01/system_ram.bin",
+      "system_ram_sha256": "3763c3d5a43dd6db2039a9edfb6fe5ddb9bcb41f8ea81f4ae41c4fe01e689ee9",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "236770aa1f9202885d6cbc11338c2d2d965f320933047deabfebfa1590a25453",
+      "screenshots": [
+        {
+          "name": "ack_before",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-ack-20261022-01/ack_before.png",
+          "sha256": "e093029cd6b8e756b769bdf514693e814c9f5a4e6cc9c1d25ff515c51a24bf6a"
+        },
+        {
+          "name": "nature_options_mid",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-ack-20261022-01/nature_options_mid.png",
+          "sha256": "6f02d76432a274212197254d89386ff179a0be2cc5cfb9ec0d70936971cbce76"
+        },
+        {
+          "name": "nature_options_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-ack-20261022-01/nature_options_stable.png",
+          "sha256": "6289a6f39c0b298549bf8f968d9130e60d312d55c735a7a3e53e0b5bb84f2d57"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "A",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-nature-lonely-highlight-20261022-01",
+      "frames": 180,
+      "result_sha256": "c12fea1a97c4632aa5ae5911f2ec0a83d8ce77d7a60f48bc10db10784553ffb1",
+      "input_script_sha256": "2c74fa186184dcff91733f241085aae9546c3d3697b52269cd68465152b587bd",
+      "state_input_sha256": "17b14ea6a07c360c4a8641a40e15efd38e951c3c94f649c029d505c9c1c9a2b6",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-highlight-20261022-01/lonely_highlight.state",
+      "state_output_sha256": "fe357b40d9982c32fc027e8f06d48844b0c5477f876f452b26aa1910ae9b077d",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-highlight-20261022-01/system_ram.bin",
+      "system_ram_sha256": "826b4463936ed83f2e17f88154ed2598c34965f88f6f52ddf0bbf218e8f85588",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "155424355b0a11b9fc728fa7eadd456b597458d986b76fb453c26f6a6434b8ff",
+      "screenshots": [
+        {
+          "name": "before_lone_highlight",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-highlight-20261022-01/before_lone_highlight.png",
+          "sha256": "9155d645305ded6592623ad0b8843788270879acca82ea4cde340aea566927aa"
+        },
+        {
+          "name": "lonely_highlight_mid",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-highlight-20261022-01/lonely_highlight_mid.png",
+          "sha256": "dd2903197ca434f862f64be421a1eec0d91aff3fa2e4a9857f340c08bb9bed31"
+        },
+        {
+          "name": "lonely_highlight_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-highlight-20261022-01/lonely_highlight_stable.png",
+          "sha256": "90026c0007170121519f04eb933d52e85d6bc98000e3afbbc5543a3b48ea6a34"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "RIGHT",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-nature-lonely-preview-20261022-01",
+      "frames": 180,
+      "result_sha256": "b456c2a1329a4a8a9c0d0391492668bca582fb87d49332706f6863d26ebb1c86",
+      "input_script_sha256": "790f6f966c122698e864c44b4b46aacd3e14132e1fd83b92e5f6c0b54701b897",
+      "state_input_sha256": "fe357b40d9982c32fc027e8f06d48844b0c5477f876f452b26aa1910ae9b077d",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-preview-20261022-01/lonely_preview.state",
+      "state_output_sha256": "280aa419e1c8e1ac19e1f38328e9251ebb1f78a1fbcabf1697353c39bbc43b33",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-preview-20261022-01/system_ram.bin",
+      "system_ram_sha256": "ffa57da4c710a84c7e41cbe6e63f82daad7519cd484d1dee464dcec28446a847",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "824649f4430a07be3da0f8d936cbf5ae9957ee885c729e7e0295ffa4b15a6c65",
+      "screenshots": [
+        {
+          "name": "lonely_before_select",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-preview-20261022-01/lonely_before_select.png",
+          "sha256": "8d4295f875c09af6e6205251206b046bf0980f1b4aaab95b73c0d03795e0cca0"
+        },
+        {
+          "name": "lonely_preview_mid",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-preview-20261022-01/lonely_preview_mid.png",
+          "sha256": "be99bffe43b7f307a8704e436570fbaaf48e5222815cd5fb6a135ac1db11678f"
+        },
+        {
+          "name": "lonely_preview_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-preview-20261022-01/lonely_preview_stable.png",
+          "sha256": "3fc401c2558619dfe89fa1f70067b9667c6f46a585dc0c0910f1ed4ba2c9c46c"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "A",
+          "frames": 3
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-nature-lonely-yes-20261022-01",
+      "frames": 180,
+      "result_sha256": "7681bb3735069c530d52177f20b4e075dd9c60abb5027ac0b4c14c74a88c6063",
+      "input_script_sha256": "66ac3513687a9472ca788eecbda02246a6747e4ff9c344051e40b53a4011dfa1",
+      "state_input_sha256": "280aa419e1c8e1ac19e1f38328e9251ebb1f78a1fbcabf1697353c39bbc43b33",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-yes-20261022-01/lonely_yes.state",
+      "state_output_sha256": "6f0814b7397cbe254ff03ec42e979f89ea5fd8f7689b1a3ebf92419e1185813b",
+      "system_ram": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-yes-20261022-01/system_ram.bin",
+      "system_ram_sha256": "be13d3216c4e91506e350207154bbbbc4820b7ed90dc110f7f5f7a3b20139923",
+      "battery_snapshot_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "422f5e85e5f285a17f97903e74eaa6d9a110eca9969f838f95f41329e90d98dc",
+      "screenshots": [
+        {
+          "name": "nature_after_yes_mid",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-yes-20261022-01/nature_after_yes_mid.png",
+          "sha256": "84d72140cfccfa006812268b4cac5409e88a8d5099aa8168a0bd3b502184126a"
+        },
+        {
+          "name": "nature_after_yes_stable",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-yes-20261022-01/nature_after_yes_stable.png",
+          "sha256": "134eace2443f721fbe0bf4e9f5558c69642a8a3f38dd77807e49dd9df69ed506"
+        },
+        {
+          "name": "yes_before_confirm",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-yes-20261022-01/yes_before_confirm.png",
+          "sha256": "65702eb8930433518d10a1dde86b064abe9d26c7b44200388b97706bc4dd5db0"
+        }
+      ],
+      "events": [
+        {
+          "frame": 20,
+          "button": "A",
+          "frames": 3
+        }
+      ]
+    }
+  ],
+  "native_acceptance": {
+    "seed": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-cold-20261022-01/profile/ultimate-gold-stat-editor-nature-integrated.dsv",
+      "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "bytes": 524410,
+      "selected_main": {
+        "base": 0,
+        "counter": 10,
+        "crc16": 17186
+      },
+      "battery_profile_after_phase1_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "no_save_or_cold_reload_after_mutation": true
+    },
+    "target_personal_data": {
+      "narc_path": "a/0/0/2",
+      "rom_file_id": 131,
+      "narc_sha256": "5f193d2eacddf0ffef9daf7acebd35dcdb21c30f59ab497759c3b7cc335f2d40",
+      "species_id": 35,
+      "entry_sha256": "3f46e2c070b8aefe09b26c31fb5193e1c31383d2c77c66dab4a4dd73872cbfca",
+      "base_stats_hp_atk_def_speed_spatk_spdef": [
+        70,
+        45,
+        48,
+        35,
+        60,
+        65
+      ],
+      "growth_rate_id": 4,
+      "growth_formula": "floor(level^3 * 4 / 5)"
+    },
+    "pre_change_slot0": {
+      "pid": "0xE30363E2",
+      "species_id": 35,
+      "experience": 100,
+      "level_saved": 5,
+      "level_from_exp": 5,
+      "evs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ivs_hp_atk_def_speed_spatk_spdef": [
+        15,
+        3,
+        10,
+        31,
+        21,
+        2
+      ],
+      "field114_word": "0x0000",
+      "pid_fallback_nature": 10,
+      "timid_stats_hp_atk_def_speed_spatk_spdef": [
+        22,
+        8,
+        10,
+        11,
+        12,
+        11
+      ]
+    },
+    "accepted_slot0": {
+      "pid": "0xE30363E2",
+      "field114_word": "0x0004",
+      "encoded_nature": 2,
+      "effective_nature_id": 1,
+      "effective_nature_name": "Lonely",
+      "level": 5,
+      "evs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ivs_hp_atk_def_speed_spatk_spdef": [
+        15,
+        3,
+        10,
+        31,
+        21,
+        2
+      ],
+      "hp_current_max_attack_defense_speed_spatk_spdef": [
+        22,
+        22,
+        9,
+        9,
+        10,
+        12,
+        11
+      ],
+      "expected_lonely_stats_hp_atk_def_speed_spatk_spdef": [
+        22,
+        9,
+        9,
+        10,
+        12,
+        11
+      ],
+      "current_hp_after_max_hp_rule": 22,
+      "pokemon_checksum_valid": true,
+      "exact_expected_slot0_record_match": true,
+      "other_party_records_byte_exact_to_seed": true,
+      "party_header_byte_exact_to_seed": true
+    },
+    "party_snapshots": {
+      "offer": {
+        "save_data": "0x0227C1E0",
+        "party_address": "0x0227C280",
+        "party_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "party_matches_seed": true,
+        "party_matches_expected_after_change": false
+      },
+      "grant": {
+        "save_data": "0x0227C1E0",
+        "party_address": "0x0227C280",
+        "party_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "party_matches_seed": true,
+        "party_matches_expected_after_change": false
+      },
+      "preview": {
+        "save_data": "0x0227C1E0",
+        "party_address": "0x0227C280",
+        "party_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "party_matches_seed": true,
+        "party_matches_expected_after_change": false
+      },
+      "accepted": {
+        "save_data": "0x0227C1E0",
+        "party_address": "0x0227C280",
+        "party_sha256": "63f77eca784485eb4699c858586f2f427c24079d563bbc618bcec352d8ee5127",
+        "party_matches_seed": false,
+        "party_matches_expected_after_change": true
+      }
+    },
+    "bag_snapshots": {
+      "portable-stat-editor-nature-integrated-rocket08e-grant-20261022-01": {
+        "ram_sha256": "975b76bb27bb1adda0aff488e930bf797b1292c346f0b1ac0f6c11f4cc679802",
+        "canonical_bag_bytes": 2376,
+        "canonical_bag_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "pocket_capacity": {
+          "items": 252,
+          "medicine": 42,
+          "balls": 30,
+          "tmhm": 102,
+          "berries": 66,
+          "mail": 12,
+          "battle": 30,
+          "key": 60
+        },
+        "positive_quantity_slots_by_pocket": {
+          "items": 3,
+          "medicine": 2,
+          "balls": 1,
+          "tmhm": 10,
+          "berries": 3,
+          "mail": 0,
+          "battle": 0,
+          "key": 6
+        },
+        "key_items": {
+          "450": 1,
+          "502": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1
+        },
+        "marker_118": {
+          "pocket": "key",
+          "slot": 4,
+          "item_id": 118,
+          "quantity": 1,
+          "bag_index": 538
+        },
+        "stat_editor_119": {
+          "pocket": "key",
+          "slot": 5,
+          "item_id": 119,
+          "quantity": 1,
+          "bag_index": 539
+        },
+        "dangling_zero_quantity_rows": [
+          {
+            "pocket": "tmhm",
+            "slot": 2,
+            "item_id": 330,
+            "quantity": 0,
+            "bag_index": 326
+          }
+        ]
+      },
+      "portable-stat-editor-nature-integrated-rocket08e-nature-lonely-preview-20261022-01": {
+        "ram_sha256": "ffa57da4c710a84c7e41cbe6e63f82daad7519cd484d1dee464dcec28446a847",
+        "canonical_bag_bytes": 2376,
+        "canonical_bag_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "pocket_capacity": {
+          "items": 252,
+          "medicine": 42,
+          "balls": 30,
+          "tmhm": 102,
+          "berries": 66,
+          "mail": 12,
+          "battle": 30,
+          "key": 60
+        },
+        "positive_quantity_slots_by_pocket": {
+          "items": 3,
+          "medicine": 2,
+          "balls": 1,
+          "tmhm": 10,
+          "berries": 3,
+          "mail": 0,
+          "battle": 0,
+          "key": 6
+        },
+        "key_items": {
+          "450": 1,
+          "502": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1
+        },
+        "marker_118": {
+          "pocket": "key",
+          "slot": 4,
+          "item_id": 118,
+          "quantity": 1,
+          "bag_index": 538
+        },
+        "stat_editor_119": {
+          "pocket": "key",
+          "slot": 5,
+          "item_id": 119,
+          "quantity": 1,
+          "bag_index": 539
+        },
+        "dangling_zero_quantity_rows": [
+          {
+            "pocket": "tmhm",
+            "slot": 2,
+            "item_id": 330,
+            "quantity": 0,
+            "bag_index": 326
+          }
+        ]
+      },
+      "portable-stat-editor-nature-integrated-rocket08e-nature-lonely-yes-20261022-01": {
+        "ram_sha256": "be13d3216c4e91506e350207154bbbbc4820b7ed90dc110f7f5f7a3b20139923",
+        "canonical_bag_bytes": 2376,
+        "canonical_bag_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "pocket_capacity": {
+          "items": 252,
+          "medicine": 42,
+          "balls": 30,
+          "tmhm": 102,
+          "berries": 66,
+          "mail": 12,
+          "battle": 30,
+          "key": 60
+        },
+        "positive_quantity_slots_by_pocket": {
+          "items": 3,
+          "medicine": 2,
+          "balls": 1,
+          "tmhm": 10,
+          "berries": 3,
+          "mail": 0,
+          "battle": 0,
+          "key": 6
+        },
+        "key_items": {
+          "450": 1,
+          "502": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1
+        },
+        "marker_118": {
+          "pocket": "key",
+          "slot": 4,
+          "item_id": 118,
+          "quantity": 1,
+          "bag_index": 538
+        },
+        "stat_editor_119": {
+          "pocket": "key",
+          "slot": 5,
+          "item_id": 119,
+          "quantity": 1,
+          "bag_index": 539
+        },
+        "dangling_zero_quantity_rows": [
+          {
+            "pocket": "tmhm",
+            "slot": 2,
+            "item_id": 330,
+            "quantity": 0,
+            "bag_index": 326
+          }
+        ]
+      }
+    },
+    "bpac_cache_links": {
+      "portable-stat-editor-nature-integrated-rocket08e-grant-20261022-01": {
+        "state": "0x023DD700",
+        "magic": "0x43415042",
+        "save_data": "0x0227C1E0",
+        "cache_save_link": "0x0227C1E0",
+        "projection": "0x0227C834",
+        "projection_expected": "0x0227C834",
+        "identity_and_projection_valid": true
+      },
+      "portable-stat-editor-nature-integrated-rocket08e-nature-lonely-preview-20261022-01": {
+        "state": "0x023DD700",
+        "magic": "0x43415042",
+        "save_data": "0x0227C1E0",
+        "cache_save_link": "0x0227C1E0",
+        "projection": "0x0227C834",
+        "projection_expected": "0x0227C834",
+        "identity_and_projection_valid": true
+      },
+      "portable-stat-editor-nature-integrated-rocket08e-nature-lonely-yes-20261022-01": {
+        "state": "0x023DD700",
+        "magic": "0x43415042",
+        "save_data": "0x0227C1E0",
+        "cache_save_link": "0x0227C1E0",
+        "projection": "0x0227C834",
+        "projection_expected": "0x0227C834",
+        "identity_and_projection_valid": true
+      }
+    },
+    "legacy_save_array3": {
+      "seed_matches_before_grant": true,
+      "grant_added_expected_key_item119_at_offset": "0x2A8",
+      "post_grant_array3_matches_only_expected_119_record": true,
+      "array_sha256_after_grant": "750ac1a7959a17a4bafc802295bff4c5f9097090c147ffa2986e9de3c89f7734",
+      "profile_dsv_unchanged_after_grant": true
+    },
+    "runtime_dispatch": {
+      "count": 859,
+      "count_pointer": "0x020FAC90",
+      "table_pointer": "0x023D5100",
+      "opcode_entries_857_858_hex": "216b3d02a16c3d02",
+      "dispatch_section_matches_rom": true,
+      "nature_core_matches_rom": true
+    },
+    "accepted_runtime": {
+      "context": {
+        "field_system": "0x022a01c8",
+        "task_manager": "0x022c00fc",
+        "script_environment": "0x022a6b28",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6c28",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041001",
+        "script_pc": "0x022b1505",
+        "script_pc_opcode_u16": 53,
+        "special_vars_8004_8005_800c": [
+          0,
+          2,
+          0
+        ]
+      },
+      "special_variables_8000_to_800D": {
+        "0x8000": 0,
+        "0x8001": 0,
+        "0x8002": 0,
+        "0x8003": 0,
+        "0x8004": 0,
+        "0x8005": 2,
+        "0x8006": 0,
+        "0x8007": 0,
+        "0x8008": 0,
+        "0x8009": 0,
+        "0x800A": 0,
+        "0x800B": 0,
+        "0x800C": 0,
+        "0x800D": 0
+      },
+      "accepted_message_waiting_for_ack": true
+    }
+  },
+  "visual_evidence": {
+    "rocket_grant": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-grant-20261022-01/grant_result_stable.png",
+      "sha256": "54a2e2aae98b3cc2054aed973f403f2053cb4da09162cc53ac2aab69008b65e9"
+    },
+    "bag_stat_editor_context": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-item-context-20261022-01/stat_editor_context_stable.png",
+      "sha256": "39c4919673f3692fc0a3b633ad66ce3d42dccb3749924416ecffd54410d612f7"
+    },
+    "party_slot0": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-slot0-20261022-01/party_slot0_before_select.png",
+      "sha256": "0a7316c52d09d0e60f3c0a4272e1c7e4a917f16f7f075a6fa40fb4633c842d82"
+    },
+    "nature_set_ack_title": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-set-20261022-01/nature_choice_page_stable.png",
+      "sha256": "c045aa84f09d73457355913855a81fec4debdff2d1a0ef9031d15abdeaaabb38"
+    },
+    "nature_options_visible_after_ack": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-ack-20261022-01/nature_options_stable.png",
+      "sha256": "6289a6f39c0b298549bf8f968d9130e60d312d55c735a7a3e53e0b5bb84f2d57"
+    },
+    "lonely_highlight": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-highlight-20261022-01/lonely_highlight_stable.png",
+      "sha256": "90026c0007170121519f04eb933d52e85d6bc98000e3afbbc5543a3b48ea6a34"
+    },
+    "lonely_yes_prompt": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-preview-20261022-01/lonely_preview_stable.png",
+      "sha256": "3fc401c2558619dfe89fa1f70067b9667c6f46a585dc0c0910f1ed4ba2c9c46c"
+    },
+    "accepted_message": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-lonely-yes-20261022-01/nature_after_yes_stable.png",
+      "sha256": "134eace2443f721fbe0bf4e9f5558c69642a8a3f38dd77807e49dd9df69ed506"
+    }
+  },
+  "interpretation_en": "The first screenshot after choosing Set Nature is the title message rendered before WaitAB acknowledgement; a single A reveals the page-1 options. It was a normal pending message, not an empty-list defect. The initial run was retained and its evidence remains in the chain.",
+  "interpretation_es": "La primera captura tras elegir Set Nature es el mensaje de título anterior al acuse WaitAB; un solo A revela las opciones de la página 1. Era un mensaje pendiente normal, no un fallo de lista vacía. El primer run y sus pruebas se conservaron en la cadena.",
+  "limits_en": [
+    "No battery Save or cold reload after the change.",
+    "No reset, second nature, PC-storage, or complete consumer acceptance.",
+    "Runner status PASS means execution completed; gameplay_acceptance remains NOT_ASSESSED."
+  ],
+  "limits_es": [
+    "No se guardó la batería ni se hizo una recarga en frío tras el cambio.",
+    "No se probó reset, otra naturaleza, almacenamiento PC ni aceptación completa de consumidores.",
+    "PASS del runner significa que la ejecución terminó; gameplay_acceptance sigue en NOT_ASSESSED."
+  ],
+  "auditor": {
+    "path": "qa/portable_stat_editor_nature_integrated_acceptance.py",
+    "sha256": "5f39a9ce73bcbb64ae9fca919ba40e9e3e2a8c792ac16f633dcc201ea6e70ee0"
+  }
+}

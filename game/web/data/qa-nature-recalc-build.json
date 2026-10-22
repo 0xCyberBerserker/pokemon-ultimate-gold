@@ -1,0 +1,264 @@
+{
+  "schema": "nature-stat-recalc-static-build/v1",
+  "status": "PASS_STATIC_AND_HOST_ONLY_NATIVE_PENDING",
+  "base": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-getter-prototype/nature-getter-prototype-fix6a.nds",
+    "sha256": "ea9486f9465a4e20546a44729589b2ef822c9ce245eb5ee16ae756883c5b3209"
+  },
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-stat-recalc/fix2/nature-stat-recalc-fix6a.nds",
+    "sha256": "9e01938d9b27d453ec7a901c72d4f23a6d761a7a74b360deeb23ccdd56057636",
+    "bytes": 127073568
+  },
+  "existing_components": {
+    "party_writer_address": "0x023D6AA0",
+    "party_writer_bytes": 124,
+    "party_writer_sha256": "5350aa578b82c6788da17a227ccc6e8515d9d50678e4db30c1b287276aca9007",
+    "opcode857_wrapper_address": "0x023D6B20",
+    "opcode857_wrapper_bytes": 204,
+    "opcode857_wrapper_sha256": "29299daac61ea99f099edf10abac49691873d0ab2520bd4cab82e5e7b48330cb",
+    "effective_nature_getter_address": "0x023D6C00",
+    "getter_bytes": 68,
+    "getter_sha256": "9b69e8310d40aceb1e23cef90cad2eaba5fb151f255f633f14c908dd5039d4d3",
+    "unchanged": true
+  },
+  "new_wrapper": {
+    "address": "0x023D6CA0",
+    "thumb_entry": "0x023D6CA1",
+    "bytes": 300,
+    "sha256": "17f86803bdef057be716a75f3546b51d50386575262e007d90f91066dc5e3cb5",
+    "object_sha256": "497bd917155a93f814cff6477bb84e3b531f405c88d6db2a60593f5767f142fc",
+    "elf_sha256": "bc8bfcf8f2651657b399fa649d8fd351a6075d04aabb72cd673528060d83b763",
+    "map_sha256": "db46521513f942f8ebaff106b20c10f95a192acc006e6a825051d8ee5343bf3d",
+    "undefined_symbols": [
+      "CalcMonLevelAndStats",
+      "GetMonData",
+      "GetVarPointer",
+      "NatureOverride_PartyWrite",
+      "Party_GetMonByIndex",
+      "SaveArray_Party_Get",
+      "ScriptReadHalfword"
+    ],
+    "native_calls": {
+      "ScriptReadHalfword": "0x0203FE2D",
+      "GetVarPointer": "0x02040375",
+      "SaveArray_Party_Get": "0x02074905",
+      "Party_GetMonByIndex": "0x02074645",
+      "GetMonData": "0x0206E541",
+      "NatureOverride_PartyWrite": "0x023D6AA1",
+      "CalcMonLevelAndStats": "0x0206E251"
+    },
+    "disassembly": "\n@TMP@/nature-stat-recalc-arm-k7ayevar/nature_recalc_dispatch.elf:\tfile format elf32-littlearm\n\ndisassembly of section .nature_recalc:\n\n023d6ca0 <scrcmd_natureoverrideandrecalc858>:\n 23d6ca0: b5fc         \tpush\t{r2, r3, r4, r5, r6, r7, lr}\n 23d6ca2: 2800         \tcmp\tr0, #0x0\n 23d6ca4: d046         \tbeq\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #0x8c\n 23d6ca6: 0005         \tmovs\tr5, r0\n 23d6ca8: 2080         \tmovs\tr0, #0x80\n 23d6caa: 5828         \tldr\tr0, [r5, r0]\n 23d6cac: 2800         \tcmp\tr0, #0x0\n 23d6cae: d041         \tbeq\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #0x82\n 23d6cb0: 4f40         \tldr\tr7, [pc, #0x100]        @ 0x23d6db4 <scrcmd_natureoverrideandrecalc858+0x114>\n 23d6cb2: 0028         \tmovs\tr0, r5\n 23d6cb4: 47b8         \tblx\tr7\n 23d6cb6: 0006         \tmovs\tr6, r0\n 23d6cb8: 0028         \tmovs\tr0, r5\n 23d6cba: 47b8         \tblx\tr7\n 23d6cbc: 0004         \tmovs\tr4, r0\n 23d6cbe: 0028         \tmovs\tr0, r5\n 23d6cc0: 47b8         \tblx\tr7\n 23d6cc2: 493f         \tldr\tr1, [pc, #0xfc]         @ 0x23d6dc0 <scrcmd_natureoverrideandrecalc858+0x120>\n 23d6cc4: 428e         \tcmp\tr6, r1\n 23d6cc6: d135         \tbne\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #0x6a\n 23d6cc8: 4f3c         \tldr\tr7, [pc, #0xf0]         @ 0x23d6dbc <scrcmd_natureoverrideandrecalc858+0x11c>\n 23d6cca: 42bc         \tcmp\tr4, r7\n 23d6ccc: d132         \tbne\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #0x64\n 23d6cce: 493a         \tldr\tr1, [pc, #0xe8]         @ 0x23d6db8 <scrcmd_natureoverrideandrecalc858+0x118>\n 23d6cd0: 1c49         \tadds\tr1, r1, #0x1\n 23d6cd2: 4a3c         \tldr\tr2, [pc, #0xf0]         @ 0x23d6dc4 <scrcmd_natureoverrideandrecalc858+0x124>\n 23d6cd4: 4011         \tands\tr1, r2\n 23d6cd6: 4288         \tcmp\tr0, r1\n 23d6cd8: d12c         \tbne\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #0x58\n 23d6cda: 3580         \tadds\tr5, #0x80\n 23d6cdc: 0039         \tmovs\tr1, r7\n 23d6cde: 3108         \tadds\tr1, #0x8\n 23d6ce0: 4838         \tldr\tr0, [pc, #0xe0]         @ 0x23d6dc4 <scrcmd_natureoverrideandrecalc858+0x124>\n 23d6ce2: 4001         \tands\tr1, r0\n 23d6ce4: 6828         \tldr\tr0, [r5]\n 23d6ce6: 4e38         \tldr\tr6, [pc, #0xe0]         @ 0x23d6dc8 <scrcmd_natureoverrideandrecalc858+0x128>\n 23d6ce8: 47b0         \tblx\tr6\n 23d6cea: 0004         \tmovs\tr4, r0\n 23d6cec: 6828         \tldr\tr0, [r5]\n 23d6cee: 0039         \tmovs\tr1, r7\n 23d6cf0: 47b0         \tblx\tr6\n 23d6cf2: 0032         \tmovs\tr2, r6\n 23d6cf4: 0006         \tmovs\tr6, r0\n 23d6cf6: 1c79         \tadds\tr1, r7, #0x1\n 23d6cf8: 4832         \tldr\tr0, [pc, #0xc8]         @ 0x23d6dc4 <scrcmd_natureoverrideandrecalc858+0x124>\n 23d6cfa: 4001         \tands\tr1, r0\n 23d6cfc: 6828         \tldr\tr0, [r5]\n 23d6cfe: 4790         \tblx\tr2\n 23d6d00: 0022         \tmovs\tr2, r4\n 23d6d02: 2c00         \tcmp\tr4, #0x0\n 23d6d04: d016         \tbeq\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #0x2c\n 23d6d06: 0034         \tmovs\tr4, r6\n 23d6d08: 2e00         \tcmp\tr6, #0x0\n 23d6d0a: d013         \tbeq\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #0x26\n 23d6d0c: 2800         \tcmp\tr0, #0x0\n 23d6d0e: d011         \tbeq\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #0x22\n 23d6d10: 42a2         \tcmp\tr2, r4\n 23d6d12: d00f         \tbeq\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #0x1e\n 23d6d14: 4282         \tcmp\tr2, r0\n 23d6d16: d00d         \tbeq\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #0x1a\n 23d6d18: 4284         \tcmp\tr4, r0\n 23d6d1a: d00b         \tbeq\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #0x16\n 23d6d1c: 4929         \tldr\tr1, [pc, #0xa4]         @ 0x23d6dc4 <scrcmd_natureoverrideandrecalc858+0x124>\n 23d6d1e: 8021         \tstrh\tr1, [r4]\n 23d6d20: 8816         \tldrh\tr6, [r2]\n 23d6d22: 2e06         \tcmp\tr6, #0x6\n 23d6d24: d301         \tblo\t0x23d6d2a <scrcmd_natureoverrideandrecalc858+0x8a> @ imm = #0x2\n 23d6d26: 2001         \tmovs\tr0, #0x1\n 23d6d28: e003         \tb\t0x23d6d32 <scrcmd_natureoverrideandrecalc858+0x92> @ imm = #0x6\n 23d6d2a: 8807         \tldrh\tr7, [r0]\n 23d6d2c: 2f1a         \tcmp\tr7, #0x1a\n 23d6d2e: d303         \tblo\t0x23d6d38 <scrcmd_natureoverrideandrecalc858+0x98> @ imm = #0x6\n 23d6d30: 2002         \tmovs\tr0, #0x2\n 23d6d32: 8020         \tstrh\tr0, [r4]\n 23d6d34: 2000         \tmovs\tr0, #0x0\n 23d6d36: bdfc         \tpop\t{r2, r3, r4, r5, r6, r7, pc}\n 23d6d38: 6828         \tldr\tr0, [r5]\n 23d6d3a: 68c0         \tldr\tr0, [r0, #0xc]\n 23d6d3c: 2800         \tcmp\tr0, #0x0\n 23d6d3e: d0f2         \tbeq\t0x23d6d26 <scrcmd_natureoverrideandrecalc858+0x86> @ imm = #-0x1c\n 23d6d40: f49d fde0    \tbl\t0x2074904 <party_getmonbyindex+0x2bf> @ imm = #-0x362440\n 23d6d44: 2800         \tcmp\tr0, #0x0\n 23d6d46: d0ee         \tbeq\t0x23d6d26 <scrcmd_natureoverrideandrecalc858+0x86> @ imm = #-0x24\n 23d6d48: 0005         \tmovs\tr5, r0\n 23d6d4a: 6840         \tldr\tr0, [r0, #0x4]\n 23d6d4c: 42b0         \tcmp\tr0, r6\n 23d6d4e: ddea         \tble\t0x23d6d26 <scrcmd_natureoverrideandrecalc858+0x86> @ imm = #-0x2c\n 23d6d50: 6828         \tldr\tr0, [r5]\n 23d6d52: 42b0         \tcmp\tr0, r6\n 23d6d54: dde7         \tble\t0x23d6d26 <scrcmd_natureoverrideandrecalc858+0x86> @ imm = #-0x32\n 23d6d56: 0028         \tmovs\tr0, r5\n 23d6d58: 0031         \tmovs\tr1, r6\n 23d6d5a: f49d fc73    \tbl\t0x2074644 <getmondata+0x6103> @ imm = #-0x36271a\n 23d6d5e: 2800         \tcmp\tr0, #0x0\n 23d6d60: d0e1         \tbeq\t0x23d6d26 <scrcmd_natureoverrideandrecalc858+0x86> @ imm = #-0x3e\n 23d6d62: 2103         \tmovs\tr1, #0x3\n 23d6d64: 2200         \tmovs\tr2, #0x0\n 23d6d66: 9000         \tstr\tr0, [sp]\n 23d6d68: 9101         \tstr\tr1, [sp, #0x4]\n 23d6d6a: f497 fbe9    \tbl\t0x206e540 <calcmonlevelandstats+0x2ef> @ imm = #-0x36882e\n 23d6d6e: 2800         \tcmp\tr0, #0x0\n 23d6d70: d001         \tbeq\t0x23d6d76 <scrcmd_natureoverrideandrecalc858+0xd6> @ imm = #0x2\n 23d6d72: 9801         \tldr\tr0, [sp, #0x4]\n 23d6d74: e7dd         \tb\t0x23d6d32 <scrcmd_natureoverrideandrecalc858+0x92> @ imm = #-0x46\n 23d6d76: 2172         \tmovs\tr1, #0x72\n 23d6d78: 2200         \tmovs\tr2, #0x0\n 23d6d7a: 9800         \tldr\tr0, [sp]\n 23d6d7c: f497 fbe0    \tbl\t0x206e540 <calcmonlevelandstats+0x2ef> @ imm = #-0x368840\n 23d6d80: 9001         \tstr\tr0, [sp, #0x4]\n 23d6d82: 0028         \tmovs\tr0, r5\n 23d6d84: 0031         \tmovs\tr1, r6\n 23d6d86: 003a         \tmovs\tr2, r7\n 23d6d88: f7ff fe8a    \tbl\t0x23d6aa0 <savearray_party_get+0x36219b> @ imm = #-0x2ec\n 23d6d8c: 2803         \tcmp\tr0, #0x3\n 23d6d8e: d900         \tbls\t0x23d6d92 <scrcmd_natureoverrideandrecalc858+0xf2> @ imm = #0x0\n 23d6d90: 2001         \tmovs\tr0, #0x1\n 23d6d92: 8020         \tstrh\tr0, [r4]\n 23d6d94: 2800         \tcmp\tr0, #0x0\n 23d6d96: d1cd         \tbne\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #-0x66\n 23d6d98: 2172         \tmovs\tr1, #0x72\n 23d6d9a: 2200         \tmovs\tr2, #0x0\n 23d6d9c: 9800         \tldr\tr0, [sp]\n 23d6d9e: f497 fbcf    \tbl\t0x206e540 <calcmonlevelandstats+0x2ef> @ imm = #-0x368862\n 23d6da2: 9901         \tldr\tr1, [sp, #0x4]\n 23d6da4: 4048         \teors\tr0, r1\n 23d6da6: 0400         \tlsls\tr0, r0, #0x10\n 23d6da8: d0c4         \tbeq\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #-0x78\n 23d6daa: 9800         \tldr\tr0, [sp]\n 23d6dac: f497 fa50    \tbl\t0x206e250 <getvarpointer+0x2dedb> @ imm = #-0x368b60\n 23d6db0: e7c0         \tb\t0x23d6d34 <scrcmd_natureoverrideandrecalc858+0x94> @ imm = #-0x80\n 23d6db2: 46c0         \tmov\tr8, r8\n 23d6db4: 2d fe 03 02  \t.word\t0x0203fe2d\n 23d6db8: 04 80 ff ff  \t.word\t0xffff8004\n 23d6dbc: 04 80 00 00  \t.word\t0x00008004\n 23d6dc0: 0c 80 00 00  \t.word\t0x0000800c\n 23d6dc4: ff ff 00 00  \t.word\t0x0000ffff\n 23d6dc8: 75 03 04 02  \t.word\t0x02040375\n",
+    "preimage_range": [
+      "0x023D6CA0",
+      "0x023D6F00"
+    ],
+    "preimage_zero": true,
+    "guard_at_0x023D6F00_preserved": true,
+    "no_PID_write_api": true
+  },
+  "autoload_gate": {
+    "status": "STATIC_SECTION_LOAD_PASS",
+    "source_report_path": "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-getter-prototype/build.json",
+    "source_report_sha256": "8959de6a1632bffc589f45cb65a9e259995cb0dceee12ac316c0916c7fa50f9c",
+    "copy_before_nitro_main": true,
+    "loaded_section_base": "0x023D6000",
+    "loaded_section_bytes": 4096,
+    "new_wrapper_in_loaded_section": true,
+    "runtime_init_not_exercised": true
+  },
+  "supersedes": {
+    "candidate_sha256": "c96eb795d8513a55d530f29d56532c940112799d72e5b79bc5168f3c802425c9",
+    "status": "REJECTED_STATIC_PRECHECK_ORDER",
+    "cause": "V1 queried Party_GetMonByIndex before checking slot against Party count; fix2 checks count and capacity first."
+  },
+  "retail_recalc": {
+    "symbol": "CalcMonLevelAndStats",
+    "thumb_entry": "0x0206E251",
+    "source": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/src/pokemon.c",
+      "sha256": "d485ada6131981327c19c651fac9734d685a582f273bc990657901614f3e39e5",
+      "definition": "CalcMonLevelAndStats calls CalcMonLevel and CalcMonStats"
+    },
+    "compiled_address_evidence": "Pinned nature-box-paths audit records CopyBoxPokemonToPokemon calling 0x0206E250 in c885 and Alpha2; c885 is the getter base and the exact EA948 candidate report limits its ARM9 changes to the getter trampoline/payload. HG Engine rom.ld independently maps RecalcPartyPokemonStats to 0x0206E250 | 1; report retains both source names without claiming a separate address.",
+    "compiled_map": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/internal/stat-editor-research/nature-box-paths-audit.json",
+      "sha256": "a018a8caa1713ad8f76ffe130aaed4dd0f3f2fb44df7eed923e54fd531eef802",
+      "getter_build_json_sha256": "8959de6a1632bffc589f45cb65a9e259995cb0dceee12ac316c0916c7fa50f9c",
+      "hg_engine_rom_ld_sha256": "ef8e4a62a5999a0dfae6393c23598a659d1056ba9ec4f13d9c95a4e7dd979a2e"
+    },
+    "call_only_when_writer_ok_and_word_changed": true,
+    "native_recalc_behavior": "NOT_EXECUTED; host tests exercise wrapper call gating only",
+    "HP_basis": "Nature does not enter the HP formula in CalcMonStats; with unchanged level/species/HP EV/IV, this should leave max HP and HP unchanged. This is source-based expectation, not runtime proof."
+  },
+  "dispatch": {
+    "count_before": 858,
+    "count_after": 859,
+    "new_opcode": 858,
+    "entry_address": "0x023D5E68",
+    "entry_thumb_pointer": "0x023D6CA1",
+    "old_entries_byte_exact": true,
+    "old_entries_sha256": "e85be9edc35f1dcfd8c2313b95484454eb13676c3ac84800ec9d3acd7319d2b0",
+    "new_table_extent_bytes": 3436,
+    "count_address": "0x020FAC90",
+    "table_guard_preserved": true,
+    "arenaHigh_unchanged": true
+  },
+  "probe_script": {
+    "global_id": 2074,
+    "bytecode_sha256": "5bee4ab2cc1f5fca78861e00935980290030d6d690a3ac0a7061c2f952a33ebe",
+    "script_bank_old_entries": 74,
+    "old_targets_and_bodies_exact": true,
+    "decoded_instructions": [
+      {
+        "offset": 0,
+        "opcode": 96,
+        "operands": []
+      },
+      {
+        "offset": 2,
+        "opcode": 41,
+        "operands": [
+          32780,
+          0
+        ]
+      },
+      {
+        "offset": 8,
+        "opcode": 41,
+        "operands": [
+          32772,
+          65535
+        ]
+      },
+      {
+        "offset": 14,
+        "opcode": 41,
+        "operands": [
+          32773,
+          2
+        ]
+      },
+      {
+        "offset": 20,
+        "opcode": 858,
+        "operands": [
+          32780,
+          32772,
+          32773
+        ]
+      },
+      {
+        "offset": 28,
+        "opcode": 49,
+        "operands": []
+      },
+      {
+        "offset": 30,
+        "opcode": 41,
+        "operands": [
+          32780,
+          0
+        ]
+      },
+      {
+        "offset": 36,
+        "opcode": 41,
+        "operands": [
+          32772,
+          65535
+        ]
+      },
+      {
+        "offset": 42,
+        "opcode": 41,
+        "operands": [
+          32773,
+          0
+        ]
+      },
+      {
+        "offset": 48,
+        "opcode": 858,
+        "operands": [
+          32780,
+          32772,
+          32773
+        ]
+      },
+      {
+        "offset": 56,
+        "opcode": 49,
+        "operands": []
+      },
+      {
+        "offset": 58,
+        "opcode": 97,
+        "operands": []
+      },
+      {
+        "offset": 60,
+        "opcode": 2,
+        "operands": []
+      }
+    ],
+    "operations": [
+      "slot0 encoded 2",
+      "WaitABPress",
+      "slot0 reset 0",
+      "WaitABPress"
+    ],
+    "launcher_literal": {
+      "address": "0x023D68B4",
+      "before": 2073,
+      "after": 2074
+    }
+  },
+  "host_test": {
+    "result": "PASS",
+    "output": "PASS: opcode-858 write/recalc order, reset, idempotence, bounds, checksum, preservation"
+  },
+  "diff": {
+    "changed_arm9_sections": [
+      "0x02000000",
+      "0x023D5000",
+      "0x023D6000"
+    ],
+    "changed_arm9_ranges": {
+      "0x02000000": [
+        "0x020FAC90..0x020FAC94"
+      ],
+      "0x023D5000": [
+        "opcode858 entry",
+        "table byte extent"
+      ],
+      "0x023D6000": [
+        "launcher ID word",
+        "new wrapper only"
+      ]
+    },
+    "changed_files": [
+      "a/0/1/2"
+    ],
+    "changed_script_member": 3,
+    "arm7_exact": true,
+    "overlay_tables_exact": true,
+    "arm9_overlays_exact": 129,
+    "all_other_script_bodies_exact": true,
+    "filename_table_exact": true
+  },
+  "limits": [
+    "Static ROM build and host wrapper tests only; no core/emulator run.",
+    "The probe changes only Party field 114 through opcode 858 and invokes the retail recalc on success when the word changes.",
+    "No UI behavior, field save/cold persistence, PC storage, battle behavior, or full nature-consumer acceptance is claimed."
+  ],
+  "inputs": {
+    "writer_binary_sha256": "5350aa578b82c6788da17a227ccc6e8515d9d50678e4db30c1b287276aca9007",
+    "writer_source_sha256": "141f62572554368edf314453cb898b773b05ffe10a8d1aa35860eb1669243f3e",
+    "opcode857_wrapper_sha256": "29299daac61ea99f099edf10abac49691873d0ab2520bd4cab82e5e7b48330cb",
+    "getter_payload_sha256": "9b69e8310d40aceb1e23cef90cad2eaba5fb151f255f633f14c908dd5039d4d3",
+    "nature_map_sha256": "a018a8caa1713ad8f76ffe130aaed4dd0f3f2fb44df7eed923e54fd531eef802",
+    "wrapper_source_sha256": "e5e274b859f3e2fc5be084f0047d985439690530e605273dfef40b62ea6c16d8",
+    "host_test_source_sha256": "a99cc6b2204145a22c0ae04a6d06c3156bf551553fab40e74af88d16e010755d"
+  }
+}

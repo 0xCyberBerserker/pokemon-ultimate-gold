@@ -1,0 +1,15 @@
+trainer_id,slot,data_kind,species_id,species_name,form,level,item_id,move_ids,move_source,changed_move_ids
+11,2,3,315,Roselia,0,21,0,345;73;447;78,explicit_trainer_record,345
+30,1,3,428,Lopunny,0,21,0,213;26;97;146,explicit_trainer_record,146
+40,0,1,233,Porygon2,0,35,0,60;161;160;176,explicit_trainer_record,160;176
+257,0,3,168,Ariados,0,58,0,450;97;169;226,explicit_trainer_record,169
+290,2,1,420,Cherubi,0,12,0,234;148;345;73,explicit_trainer_record,345
+316,0,1,102,Exeggcute,0,58,0,94;95;140;138,explicit_trainer_record,140
+504,2,1,45,Vileplume,0,37,0,76;79;51;236,explicit_trainer_record,236
+539,0,1,80,Slowbro,0,39,0,174;57;45;70,explicit_trainer_record,174
+697,4,3,282,Gardevoir,0,75,0,94;85;345;411,explicit_trainer_record,345
+705,3,3,197,Umbreon,0,80,158,371;281;174;273,explicit_trainer_record,174
+716,3,3,365,Walrein,0,70,0,157;89;174;420,explicit_trainer_record,174
+721,4,3,195,Quagsire,0,68,187,174;89;127;105,explicit_trainer_record,174
+724,2,3,168,Ariados,0,70,0,450;97;169;226,explicit_trainer_record,169
+726,2,3,324,Torkoal,0,72,214,89;315;34;174,explicit_trainer_record,174

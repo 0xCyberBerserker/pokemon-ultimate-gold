@@ -1,0 +1,935 @@
+{
+  "schema": "nature-party-probe-native-acceptance/v1",
+  "status": "PASS_BOUNDED_PARTY_STORAGE_RAM_ONLY",
+  "rom_sha256": "c8851a108d17222015fd34b078b6539a09a7948a4d4fd62e778406ce4b65357f",
+  "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+  "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+  "source_fixture_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+  "source_fixture_slot0": {
+    "pid": "0xE30363E2",
+    "species_id": 35,
+    "field114_word": "0xA5C1"
+  },
+  "dispatch_preflight": {
+    "cold_init_preserved_runtime_count_and_entry": true,
+    "count": 858,
+    "table_pointer": "0x023D5100",
+    "entry_index": 857,
+    "entry_thumb_pointer": "0x023D6B21",
+    "verified_at_cold_and_all_probe_snapshots": true,
+    "loader_rewrite_observed": false
+  },
+  "native_values": [
+    {
+      "input": 1,
+      "status": 0,
+      "field114_word": "0xA5C3",
+      "outside_mask_bits_preserved": true
+    },
+    {
+      "input": 25,
+      "status": 0,
+      "field114_word": "0xA5F3",
+      "outside_mask_bits_preserved": true
+    },
+    {
+      "input": 26,
+      "status": 2,
+      "field114_word": "0xA5F3",
+      "no_mutation": true
+    },
+    {
+      "input": 31,
+      "status": 2,
+      "field114_word": "0xA5F3",
+      "no_mutation": true
+    },
+    {
+      "input": 0,
+      "status": 0,
+      "field114_word": "0xA5C1",
+      "outside_mask_bits_preserved": true
+    }
+  ],
+  "final_party_strict_fixture_match": {
+    "run": "nature-party-probe-step-06",
+    "dsv_references": [
+      {
+        "label": "nature-sentinel-fixture",
+        "sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+        "selected_slot": {
+          "active_base": 0,
+          "active_counter": 10,
+          "active_crc16": 6003,
+          "both_slots_crc_valid": true,
+          "party_offset": 144
+        }
+      }
+    ],
+    "ram_party_array_sha256": "52da1f4d693a4ea8cf07532edb918606167c953317aca58bc3ef7741a5eeb123",
+    "dsv_party_array_sha256": "52da1f4d693a4ea8cf07532edb918606167c953317aca58bc3ef7741a5eeb123",
+    "all_records_strictly_match": true,
+    "all_records_checksum_valid": true,
+    "party_count": 3,
+    "moves_by_decodable_slot": [
+      [
+        27,
+        1,
+        0,
+        0
+      ],
+      [
+        33,
+        45,
+        0,
+        0
+      ],
+      [
+        67,
+        43,
+        0,
+        0
+      ]
+    ],
+    "decodable_slots_have_no_hm_moves": true,
+    "records": [
+      {
+        "slot": 0,
+        "expected_checksum": 61740,
+        "observed_checksum": 61740,
+        "observed_record_sha256": "24b3288494212646532cbcad244461c10751c1d156e209d1a26c222cae2bec8a",
+        "reference_candidates": [
+          {
+            "label": "nature-sentinel-fixture",
+            "dsv_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+            "slot": {
+              "active_base": 0,
+              "active_counter": 10,
+              "active_crc16": 6003,
+              "both_slots_crc_valid": true,
+              "party_offset": 144
+            },
+            "species_id": 35,
+            "expected_checksum": 61740,
+            "header_matches": true,
+            "record_bytes_equal": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "record_matches_cipher_boundary": true
+          }
+        ],
+        "observed_checksum_valid": true,
+        "decoded_semantic_match_sources": [
+          "nature-sentinel-fixture"
+        ],
+        "strict_exact_match": true
+      },
+      {
+        "slot": 1,
+        "expected_checksum": 56412,
+        "observed_checksum": 56412,
+        "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+        "reference_candidates": [
+          {
+            "label": "nature-sentinel-fixture",
+            "dsv_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+            "slot": {
+              "active_base": 0,
+              "active_counter": 10,
+              "active_crc16": 6003,
+              "both_slots_crc_valid": true,
+              "party_offset": 144
+            },
+            "species_id": 152,
+            "expected_checksum": 56412,
+            "header_matches": true,
+            "record_bytes_equal": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "record_matches_cipher_boundary": true
+          }
+        ],
+        "observed_checksum_valid": true,
+        "decoded_semantic_match_sources": [
+          "nature-sentinel-fixture"
+        ],
+        "strict_exact_match": true
+      },
+      {
+        "slot": 2,
+        "expected_checksum": 46459,
+        "observed_checksum": 46459,
+        "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+        "reference_candidates": [
+          {
+            "label": "nature-sentinel-fixture",
+            "dsv_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+            "slot": {
+              "active_base": 0,
+              "active_counter": 10,
+              "active_crc16": 6003,
+              "both_slots_crc_valid": true,
+              "party_offset": 144
+            },
+            "species_id": 66,
+            "expected_checksum": 46459,
+            "header_matches": true,
+            "record_bytes_equal": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "record_matches_cipher_boundary": true
+          }
+        ],
+        "observed_checksum_valid": true,
+        "decoded_semantic_match_sources": [
+          "nature-sentinel-fixture"
+        ],
+        "strict_exact_match": true
+      }
+    ]
+  },
+  "runs": [
+    {
+      "run": "nature-party-probe-cold-01",
+      "result_sha256": "3093541974351b2ca6f35e41e26fdd68aae16807e59ca530b68e01b1be249d61",
+      "ram_sha256": "661741afde88723be5a436daf3b8ccfcb0c11903035aec0496cb07fd31440ca5",
+      "input_script_sha256": "84f51b2b048369eea5ad483e8c15f3c60626594a08c6ad2fb87d6ef2dd0f5cc4",
+      "state_input_sha256": null,
+      "state_output_sha256": "41dc75bc0ac2b8e3dea4e55fe56d5c013fcfd24be6d4f8ea372cb4c48c7b301c",
+      "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-cold-01/cold_loaded.png",
+          "sha256": "62cf8fdb7359ac8ce0f53f68ea0128a7a8284fda69042eb471af6c896c5a4759"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-cold-01/continue_accepted.png",
+          "sha256": "da4ca22b87d95d77ba6d52b00920851ce6905cda59d58b378bef59581b1d8884"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-cold-01/continue_menu.png",
+          "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-cold-01/pre_title.png",
+          "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+        }
+      ],
+      "dispatcher": {
+        "count_pointer": "0x020FAC90",
+        "count": 858,
+        "table_pointer": "0x023D5100",
+        "entry857": "0x023D6B21",
+        "ram_table_equals_rom": true,
+        "ram_core_equals_rom": true
+      },
+      "field114_word": "0xA5C1",
+      "party_records_strict": [
+        {
+          "slot": 0,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 1,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 2,
+          "pid": "0x00000013",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        }
+      ],
+      "bag_array_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "special_vars_8000_800D": null,
+      "script_environment": null
+    },
+    {
+      "run": "nature-party-probe-use-01",
+      "result_sha256": "c55a522ca4059b8cf64a9d73ca970cda0382f322ad834c6927657dab1ae3bd44",
+      "ram_sha256": "8ceb85800c4898558a059554ae39db89d17f59bd6e30cf3e648961129178f42a",
+      "input_script_sha256": "60c659bf69f6e3cdf44ed9099b83a0e0b950acb85c74d778b071096fe0c38e39",
+      "state_input_sha256": "41dc75bc0ac2b8e3dea4e55fe56d5c013fcfd24be6d4f8ea372cb4c48c7b301c",
+      "state_output_sha256": "013fee12c4740e31359933db56534095842f74ccddae00b9652f7e2dada63c9c",
+      "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-use-01/bag_open.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-use-01/context_after_a.png",
+          "sha256": "2af69042c5095a25fdf1b40b73f399dec6ed4ddef7e4f48ffd2bf99692844a12"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-use-01/dismiss_initial_dialog_before.png",
+          "sha256": "98956f49c6c13959e01d38d7d3177fb3e179cf96942c6d8f2abd3128745bdbde"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-use-01/field_after_dialog.png",
+          "sha256": "9a555482eb921c838bbc95b92477cffe27eb56d48d9a08e6fd3c154d92ec34ec"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-use-01/field_before_bag.png",
+          "sha256": "0ff3bbf47f0023ccd634da9aadcc7e1790cd656dcd6b83bc2e67cd85e3243bd2"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-use-01/key_items_open.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-use-01/kit_context.png",
+          "sha256": "75e76d053b8c2941bec67a6c5099a95037cc9fdc8032eabb83da84603457d911"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-use-01/kit_selected.png",
+          "sha256": "26db0517b13732282a6446579a2122cfe1d603f9598aa8dc80031f0d5133b5cd"
+        }
+      ],
+      "dispatcher": {
+        "count_pointer": "0x020FAC90",
+        "count": 858,
+        "table_pointer": "0x023D5100",
+        "entry857": "0x023D6B21",
+        "ram_table_equals_rom": true,
+        "ram_core_equals_rom": true
+      },
+      "field114_word": "0xA5C3",
+      "party_records_strict": [
+        {
+          "slot": 0,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 1,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 2,
+          "pid": "0x00000013",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        }
+      ],
+      "bag_array_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "special_vars_8000_800D": {
+        "0x8000": 0,
+        "0x8001": 0,
+        "0x8002": 0,
+        "0x8003": 0,
+        "0x8004": 0,
+        "0x8005": 1,
+        "0x8006": 0,
+        "0x8007": 0,
+        "0x8008": 0,
+        "0x8009": 0,
+        "0x800A": 0,
+        "0x800B": 0,
+        "0x800C": 0,
+        "0x800D": 0
+      },
+      "script_environment": {
+        "field_system": "0x022a02a0",
+        "task_manager": "0x022c01d4",
+        "script_environment": "0x022a6c00",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6d00",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041001",
+        "script_pc": "0x022aca9d",
+        "script_pc_opcode_u16": 41,
+        "special_vars_8004_8005_800c": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "run": "nature-party-probe-step-02",
+      "result_sha256": "ad8c29c5c43a829fb8e5635c465d9ce4fa8a70997e3181f254d2feab5564c767",
+      "ram_sha256": "f2f37f3850591bcb361d9806d6d23e8ca0e7e86314945b3bbea215f7b51e83f8",
+      "input_script_sha256": "bbd24596db880dc3b653a030e2a7dc957e4dc4fa2bd78a2496ee060b1b1c36f9",
+      "state_input_sha256": "013fee12c4740e31359933db56534095842f74ccddae00b9652f7e2dada63c9c",
+      "state_output_sha256": "0f28c7c2cb098f1260428fc74e073296ca1a9177f2c4d47d0be65f77e34ad439",
+      "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-step-02/after_ack.png",
+          "sha256": "6974136109218070fde5df8da351548bf91a8e50e22e269c6cc4b99e20330f71"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-step-02/before_ack.png",
+          "sha256": "d3d57ac39242d6941e7d41a792d1735e0f38e351af9e835d40acc0d828516dc5"
+        }
+      ],
+      "dispatcher": {
+        "count_pointer": "0x020FAC90",
+        "count": 858,
+        "table_pointer": "0x023D5100",
+        "entry857": "0x023D6B21",
+        "ram_table_equals_rom": true,
+        "ram_core_equals_rom": true
+      },
+      "field114_word": "0xA5F3",
+      "party_records_strict": [
+        {
+          "slot": 0,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 1,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 2,
+          "pid": "0x00000013",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        }
+      ],
+      "bag_array_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "special_vars_8000_800D": {
+        "0x8000": 0,
+        "0x8001": 0,
+        "0x8002": 0,
+        "0x8003": 0,
+        "0x8004": 0,
+        "0x8005": 25,
+        "0x8006": 0,
+        "0x8007": 0,
+        "0x8008": 0,
+        "0x8009": 0,
+        "0x800A": 0,
+        "0x800B": 0,
+        "0x800C": 0,
+        "0x800D": 0
+      },
+      "script_environment": {
+        "field_system": "0x022a02a0",
+        "task_manager": "0x022c01d4",
+        "script_environment": "0x022a6c00",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6d00",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041001",
+        "script_pc": "0x022acab9",
+        "script_pc_opcode_u16": 41,
+        "special_vars_8004_8005_800c": [
+          0,
+          25,
+          0
+        ]
+      }
+    },
+    {
+      "run": "nature-party-probe-step-03",
+      "result_sha256": "a38e679f275f52b775f72bd9ba73f042e085ef49abcd88f34f66995428d5443e",
+      "ram_sha256": "afb682736665b5c93461aa60520f84a28cdd1ce9694075fe0df13c9085fb6e6f",
+      "input_script_sha256": "374d7e12f343783049893619d177f6b65b143240e5309f5078c2a8dcc228fa41",
+      "state_input_sha256": "0f28c7c2cb098f1260428fc74e073296ca1a9177f2c4d47d0be65f77e34ad439",
+      "state_output_sha256": "72913a6e537b020f0e0dbfca06fc6674a061c96debd25f4279a369f1e9d05836",
+      "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-step-03/after.png",
+          "sha256": "4ff7c77e91064ad83033625ac836d286981d5f5bcb59da113d0a1b41ccd7e862"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-step-03/before.png",
+          "sha256": "6545c2a3488df6ebfe62f5737d4c078f81ce1916f379f7e5cee9278324210c69"
+        }
+      ],
+      "dispatcher": {
+        "count_pointer": "0x020FAC90",
+        "count": 858,
+        "table_pointer": "0x023D5100",
+        "entry857": "0x023D6B21",
+        "ram_table_equals_rom": true,
+        "ram_core_equals_rom": true
+      },
+      "field114_word": "0xA5F3",
+      "party_records_strict": [
+        {
+          "slot": 0,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 1,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 2,
+          "pid": "0x00000013",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        }
+      ],
+      "bag_array_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "special_vars_8000_800D": null,
+      "script_environment": null
+    },
+    {
+      "run": "nature-party-probe-step-04",
+      "result_sha256": "825a1caf29a0a92c3d7fb452ccf27c8adaa3cabce2b66f1179a078d8ee93b116",
+      "ram_sha256": "f9b678625211204a838bc46ad9124b0d441463c95a4653c60fb4df8bfa99580e",
+      "input_script_sha256": "44db5aa14dde74868bbafad8259ced8b0b887f5f549d6101a26aa549b32abae5",
+      "state_input_sha256": "72913a6e537b020f0e0dbfca06fc6674a061c96debd25f4279a369f1e9d05836",
+      "state_output_sha256": "8860e5c087e1586f7d31b142decc144405e9d39e55da46ce2902bbe16b5d0b9e",
+      "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-step-04/after_ack.png",
+          "sha256": "383b150bd66de0785b4c0442f69a66d2ef35b24d960e1e9339165062283cf0fc"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-step-04/before_ack.png",
+          "sha256": "e289db8630073e0ff5f6ea0f42db2ecbf478d4871ef6594f035ea507f0caf02f"
+        }
+      ],
+      "dispatcher": {
+        "count_pointer": "0x020FAC90",
+        "count": 858,
+        "table_pointer": "0x023D5100",
+        "entry857": "0x023D6B21",
+        "ram_table_equals_rom": true,
+        "ram_core_equals_rom": true
+      },
+      "field114_word": "0xA5F3",
+      "party_records_strict": [
+        {
+          "slot": 0,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 1,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 2,
+          "pid": "0x00000013",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        }
+      ],
+      "bag_array_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "special_vars_8000_800D": {
+        "0x8000": 0,
+        "0x8001": 0,
+        "0x8002": 2,
+        "0x8003": 0,
+        "0x8004": 2,
+        "0x8005": 26,
+        "0x8006": 0,
+        "0x8007": 0,
+        "0x8008": 0,
+        "0x8009": 0,
+        "0x800A": 0,
+        "0x800B": 0,
+        "0x800C": 0,
+        "0x800D": 0
+      },
+      "script_environment": {
+        "field_system": "0x022a02a0",
+        "task_manager": "0x022c01d4",
+        "script_environment": "0x022a6c00",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6d00",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041001",
+        "script_pc": "0x022acad5",
+        "script_pc_opcode_u16": 41,
+        "special_vars_8004_8005_800c": [
+          2,
+          26,
+          0
+        ]
+      }
+    },
+    {
+      "run": "nature-party-probe-step-05",
+      "result_sha256": "932a8ef9788f1582a34f9d1cdd10c02a450b5dae6827edccbd8b0490964109d5",
+      "ram_sha256": "f5f0ad772a9590f3017e370ab7f33e0012c7a13e42c9b5e78390ff97b24e6d09",
+      "input_script_sha256": "44db5aa14dde74868bbafad8259ced8b0b887f5f549d6101a26aa549b32abae5",
+      "state_input_sha256": "8860e5c087e1586f7d31b142decc144405e9d39e55da46ce2902bbe16b5d0b9e",
+      "state_output_sha256": "b11ad79577445e63bae70fbfb418792ad38e982ecb925dcead961dc6ff573c9f",
+      "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-step-05/after_ack.png",
+          "sha256": "eaacf61b3640f0b9754a7e18ca803e57a4ade9410a422729c8d424dc949574f5"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-step-05/before_ack.png",
+          "sha256": "4d3459686c3ce66ecb1efacb9f5f6f0e764772f11e65db39744dc99d7f45bb74"
+        }
+      ],
+      "dispatcher": {
+        "count_pointer": "0x020FAC90",
+        "count": 858,
+        "table_pointer": "0x023D5100",
+        "entry857": "0x023D6B21",
+        "ram_table_equals_rom": true,
+        "ram_core_equals_rom": true
+      },
+      "field114_word": "0xA5F3",
+      "party_records_strict": [
+        {
+          "slot": 0,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 1,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 2,
+          "pid": "0x00000013",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        }
+      ],
+      "bag_array_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "special_vars_8000_800D": {
+        "0x8000": 0,
+        "0x8001": 0,
+        "0x8002": 2,
+        "0x8003": 2,
+        "0x8004": 2,
+        "0x8005": 31,
+        "0x8006": 0,
+        "0x8007": 0,
+        "0x8008": 0,
+        "0x8009": 0,
+        "0x800A": 0,
+        "0x800B": 0,
+        "0x800C": 0,
+        "0x800D": 0
+      },
+      "script_environment": {
+        "field_system": "0x022a02a0",
+        "task_manager": "0x022c01d4",
+        "script_environment": "0x022a6c00",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6d00",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041001",
+        "script_pc": "0x022acaf1",
+        "script_pc_opcode_u16": 41,
+        "special_vars_8004_8005_800c": [
+          2,
+          31,
+          0
+        ]
+      }
+    },
+    {
+      "run": "nature-party-probe-step-06",
+      "result_sha256": "b140e8ff55f7ffd757a73cbd1864e8ee9d9523898c592e7280c9411e1a0d1294",
+      "ram_sha256": "b103357fe686d8b9f36c2c522de857c96c16f2a90f6d48b196f5786d64cc08fa",
+      "input_script_sha256": "44db5aa14dde74868bbafad8259ced8b0b887f5f549d6101a26aa549b32abae5",
+      "state_input_sha256": "b11ad79577445e63bae70fbfb418792ad38e982ecb925dcead961dc6ff573c9f",
+      "state_output_sha256": "a23ac3ac3818b258eb4ca3dd786c4c3a72bb6f715e16f2cfa4a5b84a1b937393",
+      "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-step-06/after_ack.png",
+          "sha256": "d3d57ac39242d6941e7d41a792d1735e0f38e351af9e835d40acc0d828516dc5"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-step-06/before_ack.png",
+          "sha256": "2af69042c5095a25fdf1b40b73f399dec6ed4ddef7e4f48ffd2bf99692844a12"
+        }
+      ],
+      "dispatcher": {
+        "count_pointer": "0x020FAC90",
+        "count": 858,
+        "table_pointer": "0x023D5100",
+        "entry857": "0x023D6B21",
+        "ram_table_equals_rom": true,
+        "ram_core_equals_rom": true
+      },
+      "field114_word": "0xA5C1",
+      "party_records_strict": [
+        {
+          "slot": 0,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 1,
+          "pid": "0xE30363E2",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        },
+        {
+          "slot": 2,
+          "pid": "0x00000013",
+          "header_exact": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_all_bytes_exact": true
+        }
+      ],
+      "bag_array_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "special_vars_8000_800D": {
+        "0x8000": 0,
+        "0x8001": 0,
+        "0x8002": 2,
+        "0x8003": 2,
+        "0x8004": 0,
+        "0x8005": 0,
+        "0x8006": 0,
+        "0x8007": 0,
+        "0x8008": 0,
+        "0x8009": 0,
+        "0x800A": 0,
+        "0x800B": 0,
+        "0x800C": 0,
+        "0x800D": 0
+      },
+      "script_environment": {
+        "field_system": "0x022a02a0",
+        "task_manager": "0x022c01d4",
+        "script_environment": "0x022a6c00",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6d00",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041001",
+        "script_pc": "0x022acb0d",
+        "script_pc_opcode_u16": 97,
+        "special_vars_8004_8005_800c": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "battery": {
+    "unchanged_from_fixture": true,
+    "post_save_or_cold_reload": "NOT_TESTED",
+    "frozen_per_run": true
+  },
+  "limits": [
+    "This proves only RAM Party field-114 masked storage through opcode 857 on the exact candidate.",
+    "The probe has no nature getter, nature-effective battle/menu display, or stat recalculation hook.",
+    "Invalid values 26 and 31 were rejected; persistent save or cold reload after mutation was not tested.",
+    "The unchanged battery DSV is evidence that no native Save was performed, not persistence evidence.",
+    "This does not prove PC storage, all nature-field ownership across the codebase, or release acceptance."
+  ]
+}

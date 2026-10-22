@@ -1,0 +1,78 @@
+{
+  "schema": "nature-box-paths-audit/v1",
+  "scope": "Offline static source and ARM9 inspection. No ROM edits, emulator, PC runtime, or save mutation.",
+  "roms": [
+    {
+      "label": "Alpha2 FIX6a",
+      "sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "arm9_sha256": "b4502d070994cf04209344780391e8e26ee5ba8677dcac821ebf50430619d80b"
+    },
+    {
+      "label": "Nature Party probe c885",
+      "sha256": "c8851a108d17222015fd34b078b6539a09a7948a4d4fd62e778406ce4b65357f",
+      "arm9_sha256": "0b7d1f96f40cbb4c25a11dac2f1977a1074bb50b9dd3c4bb730d22f9756a8f98"
+    }
+  ],
+  "binary_ranges_identical": true,
+  "thunk_decode_reproduction": "For each pinned ROM, read bytes(NintendoDSRom.fromFile(path).arm9), assert arm9[0x6FDFC:0x6FE04] == bytes.fromhex('00 4b 18 47 05 fe 06 02'), then struct.unpack('<I', arm9[0x6FE00:0x6FE04])[0] == 0x0206FE05. The body begins at offset 0x6FE04, after the literal.",
+  "functions": {
+    "GetMonNature": {
+      "thumb_entry": "0x0206FDFD",
+      "entry_bytes": "00 4B 18 47 05 FE 06 02",
+      "entry_effect": "At ARM9 offset 0x6FDFC, 0x4B00 loads r3 from PC+0; 0x4718 branches through r3. The aligned literal at ARM9 offset 0x6FE00 is bytes 05 FE 06 02, unpacked as little-endian u32 0x0206FE05. Clearing Thumb bit 0 gives body address 0x0206FE04; the literal ends at 0x6FE04, so it does not overlap the body.",
+      "source": "engine/upstream/pokeheartgold/src/pokemon.c:1948-1949"
+    },
+    "GetBoxMonNature_body": {
+      "thumb_entry": "0x0206FE05",
+      "code_range": ["0x0206FE04", "0x0206FE2A"],
+      "sha256": "ff681270f7f83e2c83d4a9179e9b843f97bf40141f012f98171cd7e3770883ff",
+      "behavior": "Calls BoxMonSetFastModeOn, GetBoxMonData(field 0 / personality), BoxMonSetFastModeOff, then GetNatureFromPersonality.",
+      "source": "engine/upstream/pokeheartgold/src/pokemon.c:1952-1958",
+      "interpretation": "The current getter derives nature from PID; it does not read field 114."
+    },
+    "GetNatureFromPersonality": {
+      "thumb_entry": "0x0206FE2D",
+      "code_range": ["0x0206FE2C", "0x0206FE3A"],
+      "sha256": "cef5ac0d01076c49cd16435bb41181bba828489c1b02af589d668873696b04d1",
+      "behavior": "Unsigned remainder by 25; source returns pid % 25.",
+      "source": "engine/upstream/pokeheartgold/src/pokemon.c:1960-1962"
+    },
+    "GetBoxMonData": {
+      "thumb_entry": "0x0206E641",
+      "code_range": ["0x0206E640", "0x0206E6A0"],
+      "sha256": "05257b7170ffc5792c1d1d30e335b4146a7f074a066f8afcb2b9ba474e0dcb18",
+      "behavior": "Outer BoxMon wrapper; generic field dispatch is at 0x0206E6A0. Field-114 case 0x0206EA58 loads the halfword at block B + 0x1A.",
+      "source": "engine/upstream/pokeheartgold/src/pokemon.c:463-488"
+    },
+    "SetBoxMonData": {
+      "thumb_entry": "0x0206ED71",
+      "code_range": ["0x0206ED70", "0x0206EDE8"],
+      "sha256": "0bb5d218e9ca639188be99a2d496487b214697f839cf1cb0db1dbaeb30e427cd",
+      "behavior": "Outer BoxMon wrapper; generic setter is at 0x0206EDE8. Field-114 case 0x0206F234 writes the complete halfword at block B + 0x1A.",
+      "source": "engine/upstream/pokeheartgold/src/pokemon.c:953-988"
+    },
+    "CopyBoxPokemonToPokemon": {
+      "thumb_entry": "0x02071781",
+      "code_range": ["0x02071780", "0x02071808"],
+      "sha256": "2f930841863364f5bad04fc1b5a69441d2ca48ed4cd92d3cd98959ab49f7871b",
+      "behavior": "Copies 0x88 bytes (17 paired word transfers) from the BoxPokemon object to the destination box payload; then changes party-only fields and calls CalcMonLevelAndStats at 0x0206E250.",
+      "source": "engine/upstream/pokeheartgold/src/pokemon.c:3228-3244",
+      "limit": "Static binary confirms the copy and call target; it does not prove a live PC round trip."
+    }
+  },
+  "source_paths": {
+    "stats": "pokemon.c:370-386 calls GetMonNature for the five nature-adjusted stats; CopyBoxPokemonToPokemon calls CalcMonLevelAndStats after copying.",
+    "trainer_memo": "trainer_memo.c:333 calls GetMonNature for the summary memo nature line.",
+    "party_script": "scrcmd_party.c:211 and :224 call GetMonNature.",
+    "pc_into_party": "CopyBoxPokemonToPokemon performs the exact 0x88-byte copy before changing party-only fields and recalculating stats. Source: pokemon.c:3228-3245. The compiled ARM9 copy loop is byte-backed at 0x02071780-0x02071808.",
+    "party_into_box": "CopyPokemonToBoxPokemon assigns dest = src->box (pokemon.c:3284-3286); PCStorage placement copies the whole BoxPokemon value. RestoreBoxMonPP modifies only move PP (pokemon.c:4175-4186). This establishes source-level preservation of block B + 0x1A, but no target overlay disassembly or live PC test was made.",
+    "linker_symbols": "engine/upstream/hg-engine/rom.ld maps GetBoxMonData 0x0206E640, SetBoxMonData 0x0206ED70, GetMonNature 0x0206FDFC, and CopyBoxPokemonToPokemon 0x02071780. GetBoxMonNature is the thunk target/body at 0x0206FE04, matched by call flow and pinned source; it has no separate rom.ld symbol."
+  },
+  "next_hook": "If implementing effective nature, the narrow current getter hook is the GetBoxMonNature body at 0x0206FE04 (Thumb 0x0206FE05), preserving PID fallback when field-114 override is zero. Validate its callers and checksum/decryption behavior; stats and trainer memo use it, while PID-derived flavor/breeding paths may bypass it.",
+  "risks_and_limits": [
+    "Binary-identical ARM9 regions establish the same getter/wrapper behavior in Alpha2 and c885, not in every overlay or future build.",
+    "Source-level PC copy assignments preserve all BoxPokemon bytes, but the PC storage overlay was not disassembled or tested in-game.",
+    "Changing GetBoxMonNature alone does not change consumers that derive nature directly from PID.",
+    "This does not establish global ownership of mask 0x003E, effective nature behavior, save persistence, or PC round-trip acceptance."
+  ]
+}

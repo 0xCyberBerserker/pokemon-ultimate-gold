@@ -1,0 +1,793 @@
+{
+  "binding": {
+    "event_bank_member": 57,
+    "event_bank_sha256": "1944cfb192a69cce00b7bbfa2af3b32509542abc22f4e1e05cf92d79d2ed6725",
+    "map": "New Bark Town",
+    "map_id": 60,
+    "object_script_id": 16,
+    "resolved_entry": 15,
+    "rocket_object_fields": [
+      2,
+      222,
+      3,
+      0,
+      0,
+      16,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      685,
+      408,
+      0
+    ],
+    "script_bank_member": 842,
+    "source_dispatch": "scriptId - 1"
+  },
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-rocket-grant/portable-stat-editor-rocket-grant-fix6a.nds",
+    "sha256": "08e1d4e51599dc459600f1eff44e7915acbbaa111d74321be22a4800af629fcf",
+    "written_sha256": "08e1d4e51599dc459600f1eff44e7915acbbaa111d74321be22a4800af629fcf"
+  },
+  "existing_item_119": {
+    "field_pocket": 7,
+    "field_use_func": 5,
+    "flags": "0x03A0",
+    "member": 517,
+    "name_description_and_use_record": "preserved from parent candidate",
+    "record_sha256": "cf2166b33de86bae75cf84fca4233e9abaaeaee22b24417f344bbb411eb46d0e",
+    "selectable_register_bit_0x0040": false
+  },
+  "file_diff_allowlist": {
+    "all_other_narc_members_unchanged": true,
+    "arm9_arm7_unchanged": true,
+    "changed_message_members": [
+      40
+    ],
+    "changed_nds_paths": [
+      "a/0/1/2",
+      "a/0/2/7"
+    ],
+    "changed_script_members": [
+      842
+    ],
+    "event_bank_57_unchanged": true,
+    "item_narc_unchanged": true,
+    "source_parent_unchanged": true
+  },
+  "limits": [
+    "Static construction only; no native grant, full-pocket, save, or cold-recovery test.",
+    "Item 119 acquisition is not demonstrated by this build; the parent smoke used a synthetic disposable DSV.",
+    "The original gift chain is unchanged and runs only when item 118 is absent; item 119 is offered on a later Rocket interaction after the kit is acquired.",
+    "No completion event flag or capacity constant is added.",
+    "The parent candidate still has the game's question-mark placeholder icon."
+  ],
+  "messages": {
+    "bank_after_sha256": "96a6dc31b2767ce6af943ba5fb2f283294a86203a3184e4aee04e50aad071e5d",
+    "bank_before_sha256": "4b5d4b1d234c5f22c88aacdb124f07984e6a18ae8ce238d9a5892460558576b0",
+    "count_before_after": [
+      147,
+      152
+    ],
+    "member": 40,
+    "nds_path": "a/0/2/7",
+    "new_messages": [
+      {
+        "id": 147,
+        "key": "offer",
+        "max_line_characters": 21,
+        "text": "Take the Stat Editor?",
+        "words_sha256": "297a3e9374db61731a62f87d4d88fe15345ce707538f5ec547da05ad2e5bb545"
+      },
+      {
+        "id": 148,
+        "key": "already_owned",
+        "max_line_characters": 20,
+        "text": "You already have it.",
+        "words_sha256": "65ac17698f3773462049efdc2d30cfff82b0cbd629de635ceb9d1c310b6a026d"
+      },
+      {
+        "id": 149,
+        "key": "success",
+        "max_line_characters": 24,
+        "text": "You got the Stat Editor!",
+        "words_sha256": "39299705eee6a035fd9732d0bbd144a59e0e2b84d3a5fc600b4e04fc6e129c5d"
+      },
+      {
+        "id": 150,
+        "key": "no_space",
+        "max_line_characters": 23,
+        "text": "Bag is full. Make room.",
+        "words_sha256": "26f0cbe527c2c4d8441f58c1a2ca3afa844c8bbdaae26bebe559370bb59492c7"
+      },
+      {
+        "id": 151,
+        "key": "retry",
+        "max_line_characters": 22,
+        "text": "Item not added. Retry.",
+        "words_sha256": "8475cdf3bad5c4ea672097be901d113e0ff9120782862cf7a765625f5af1dba6"
+      }
+    ],
+    "old_entries_word_exact": true
+  },
+  "parent": {
+    "build_report_sha256": "13a48a59c227c983c70adb6ee636985c45e8b5f39d95146b18d480e95e78de05",
+    "no_register_smoke_report_sha256": "abfde0430ae654037fd88f3ee68e74d9847805c31194ef3c6fed48cc5181964c",
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-separate-item-noregister/portable-stat-editor-separate-item-noregister-fix6a.nds",
+    "sha256": "8bc4692eab0644a1b4366da4d7cae0f47ce09429953d198f1732fe0f96f81f62"
+  },
+  "runtime": "NOT_RUN",
+  "schema": "portable-stat-editor-rocket-grant-static-build/v1",
+  "scope": "Static Rocket item-119 offer/migration wrapper only; no core or runtime launched.",
+  "script_patch": {
+    "all_other_entry_targets_unchanged": true,
+    "appended_bytes": 241,
+    "appended_script_sha256": "8075b7c6ebe83bf2cead3a823e1bacf5519b5c97083463eb100ea96ffc2a8705",
+    "binary_dispatch": {
+      "dispatcher": {
+        "count": 857,
+        "count_address": "0x020FAC90",
+        "count_pointer_address": "0x020400E0",
+        "count_pointer_value": "0x020FAC90",
+        "entries_439_441": {
+          "439": "0x021EF0A5",
+          "440": "0x021EF0F1",
+          "441": "0x021EF155"
+        },
+        "section_base": "0x023D5000",
+        "section_sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "table_address": "0x023D5100",
+        "table_bytes": 3428,
+        "table_pointer_address": "0x020400E4",
+        "table_pointer_value": "0x023D5100",
+        "table_sha256": "50b211bfab274c6c0fa82ca8aeddb6611ebd545daacb7a944c9197bf5307fb9d"
+      },
+      "opcode_440_handler": {
+        "body_end_exclusive": "0x021EF154",
+        "body_sha256": "b41df39f685baadbf6498c597f4681edec206e630f55f2c96413d72ca2117455",
+        "body_start": "0x021EF0F0",
+        "disassembly_summary": [
+          "0x021EF0F0 push {r3,r4,r5,r6,lr}; sub sp,#4",
+          "reads the two script operands and calls the message-data loader",
+          "calls 0x021EF4DC(ctx,messageData,messageNum,TRUE,NULL)",
+          "destroys message data; installs native message task; returns TRUE"
+        ],
+        "overlay_id": 1,
+        "overlay_ram_base": "0x021E5900",
+        "overlay_sha256": "196ecc0cd86754d72a4cfbb0040b08c1036f9a2900049a15d15e02c1fab385b6",
+        "overlay_size": 148064,
+        "thumb_pointer": "0x021EF0F1"
+      },
+      "retail_script_use": {
+        "member_sha256": "959f4f863d3b373a86bbf396ea186a72633047f87041858030f44b2d87627f3a",
+        "occurrence_offsets": [
+          "0xD5E",
+          "0xDD6",
+          "0xDEB",
+          "0xE2F"
+        ],
+        "opcode_operand_bytes": "b80104800580",
+        "script_bank_member": 953,
+        "source_script": "scr_seq_0953.s"
+      },
+      "source_of_truth": "exact candidate 8bc ARM9 loaded section and overlay bytes"
+    },
+    "command_contract": {
+      "commands": {
+        "CloseMsg": {
+          "args": [],
+          "opcode": 53
+        },
+        "CompareVarToValue": {
+          "args": [
+            "var",
+            2
+          ],
+          "opcode": 17
+        },
+        "FacePlayer": {
+          "args": [],
+          "opcode": 104
+        },
+        "GiveItem": {
+          "args": [
+            "item",
+            "var",
+            "var"
+          ],
+          "opcode": 125
+        },
+        "GoTo": {
+          "args": [
+            "script"
+          ],
+          "opcode": 22
+        },
+        "GoToIf": {
+          "args": [
+            "condition",
+            "script"
+          ],
+          "opcode": 28
+        },
+        "HasItem": {
+          "args": [
+            "item",
+            "var",
+            "var"
+          ],
+          "opcode": 128
+        },
+        "HasSpaceForItem": {
+          "args": [
+            "item",
+            "var",
+            "var"
+          ],
+          "opcode": 127
+        },
+        "LockAll": {
+          "args": [],
+          "opcode": 96
+        },
+        "MsgBoxExtern": {
+          "args": [
+            "var",
+            "var"
+          ],
+          "opcode": 440
+        },
+        "ReleaseAll": {
+          "args": [],
+          "opcode": 97
+        },
+        "SetVar": {
+          "args": [
+            "var",
+            2
+          ],
+          "opcode": 41
+        },
+        "WaitButton": {
+          "args": [],
+          "opcode": 50
+        },
+        "YesNo": {
+          "args": [
+            "var"
+          ],
+          "opcode": 63
+        }
+      },
+      "give_item_result": "BOOL from Bag_AddItem, branch on returned VAR",
+      "message_external": "MsgBoxExtern loads a/0/2/7 NARC member by bank VAR",
+      "reconstructed_c_table_discrepancy": {
+        "expected_decomp_discrepancy": [
+          "ScrCmd_MsgBoxExtern",
+          "ScrCmd_441"
+        ],
+        "opcode_439": "ScrCmd_MsgBoxExtern",
+        "opcode_440": "ScrCmd_441"
+      },
+      "retail_script_sample": "scr_seq_0953.s uses MsgBoxExtern VAR_SPECIAL_x8004, VAR_SPECIAL_x8005",
+      "source_msgbox_extern_behavior": [
+        "u16 fileId = ScriptGetVar(ctx);",
+        "u16 messageNum = ScriptGetVar(ctx);",
+        "NewMsgDataFromNarc(MSGDATA_LOAD_LAZY, NARC_msgdata_msg, fileId, HEAP_ID_FIELD3)",
+        "ov01_021EF4DC(ctx, messageData, messageNum, TRUE, NULL);",
+        "DestroyMsgData(messageData);",
+        "SetupNativeScript(ctx, ov01_021EF348);",
+        "return TRUE;"
+      ],
+      "space_check": "preflight only; no capacity constant is embedded",
+      "yes_no": {
+        "no_or_cancel": 1,
+        "yes": 0
+      }
+    },
+    "entry_index": 15,
+    "entry_new_target": 8617,
+    "entry_old_target": 8084,
+    "legacy_118_give_offset": 8555,
+    "legacy_118_guard_offset": 8106,
+    "legacy_118_postcheck_offset": 8563,
+    "legacy_script_body_byte_exact": true,
+    "member": 842,
+    "member_after_sha256": "8b52cd2c1040cca28fd9538152a5dc951231e1f4c18bb686583e97e11bb91a9c",
+    "member_before_sha256": "fee04072a93fed6a957b75007ddf5fa6995b3019bfb2ed596d3077056ee50d57",
+    "member_bytes_before_after": [
+      8617,
+      8858
+    ],
+    "migration_semantics": {
+      "after_legacy_gift_118": "The next Rocket interaction offers item 119; this build does not splice into the legacy gift tail.",
+      "capacity": "No capacity number is encoded; retail HasSpaceForItem and GiveItem results govern behavior.",
+      "item_118_absent": "GoTo original entry-15 body; legacy gifts unchanged.",
+      "item_118_present_item_119_absent": "Offer Yes/No; No closes without mutation.",
+      "item_118_present_item_119_present": "Show already-owned text; do not add or re-run old gifts.",
+      "no_space_or_add_failure": "Show distinct retry text; no flag/marker is written.",
+      "yes": "Check HasSpaceForItem, then GiveItem; branch on each BOOL result."
+    },
+    "nds_path": "a/0/1/2",
+    "table_header_end": 74,
+    "wrapper": {
+      "branches": [
+        {
+          "from": 8631,
+          "relative": 6,
+          "size": 7,
+          "target": 8644
+        },
+        {
+          "from": 8638,
+          "relative": -560,
+          "size": 6,
+          "target": 8084
+        },
+        {
+          "from": 8662,
+          "relative": 163,
+          "size": 7,
+          "target": 8832
+        },
+        {
+          "from": 8697,
+          "relative": 6,
+          "size": 7,
+          "target": 8710
+        },
+        {
+          "from": 8726,
+          "relative": 26,
+          "size": 7,
+          "target": 8759
+        },
+        {
+          "from": 8773,
+          "relative": 26,
+          "size": 7,
+          "target": 8806
+        }
+      ],
+      "bytes": 241,
+      "commands": [
+        {
+          "offset": 8617,
+          "opcode": 128,
+          "operands": [
+            118,
+            1,
+            32775
+          ],
+          "size": 8
+        },
+        {
+          "offset": 8625,
+          "opcode": 17,
+          "operands": [
+            32775,
+            1
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8631,
+          "opcode": 28,
+          "operands": [
+            1
+          ],
+          "size": 7
+        },
+        {
+          "offset": 8638,
+          "opcode": 22,
+          "operands": [],
+          "size": 6
+        },
+        {
+          "offset": 8644,
+          "opcode": 96,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8646,
+          "opcode": 104,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8648,
+          "opcode": 128,
+          "operands": [
+            119,
+            1,
+            32775
+          ],
+          "size": 8
+        },
+        {
+          "offset": 8656,
+          "opcode": 17,
+          "operands": [
+            32775,
+            1
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8662,
+          "opcode": 28,
+          "operands": [
+            1
+          ],
+          "size": 7
+        },
+        {
+          "offset": 8669,
+          "opcode": 41,
+          "operands": [
+            32772,
+            40
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8675,
+          "opcode": 41,
+          "operands": [
+            32773,
+            147
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8681,
+          "opcode": 440,
+          "operands": [
+            32772,
+            32773
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8687,
+          "opcode": 63,
+          "operands": [
+            32774
+          ],
+          "size": 4
+        },
+        {
+          "offset": 8691,
+          "opcode": 17,
+          "operands": [
+            32774,
+            0
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8697,
+          "opcode": 28,
+          "operands": [
+            1
+          ],
+          "size": 7
+        },
+        {
+          "offset": 8704,
+          "opcode": 53,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8706,
+          "opcode": 97,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8708,
+          "opcode": 2,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8710,
+          "opcode": 53,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8712,
+          "opcode": 127,
+          "operands": [
+            119,
+            1,
+            32775
+          ],
+          "size": 8
+        },
+        {
+          "offset": 8720,
+          "opcode": 17,
+          "operands": [
+            32775,
+            1
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8726,
+          "opcode": 28,
+          "operands": [
+            1
+          ],
+          "size": 7
+        },
+        {
+          "offset": 8733,
+          "opcode": 41,
+          "operands": [
+            32772,
+            40
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8739,
+          "opcode": 41,
+          "operands": [
+            32773,
+            150
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8745,
+          "opcode": 440,
+          "operands": [
+            32772,
+            32773
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8751,
+          "opcode": 50,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8753,
+          "opcode": 53,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8755,
+          "opcode": 97,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8757,
+          "opcode": 2,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8759,
+          "opcode": 125,
+          "operands": [
+            119,
+            1,
+            32775
+          ],
+          "size": 8
+        },
+        {
+          "offset": 8767,
+          "opcode": 17,
+          "operands": [
+            32775,
+            1
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8773,
+          "opcode": 28,
+          "operands": [
+            1
+          ],
+          "size": 7
+        },
+        {
+          "offset": 8780,
+          "opcode": 41,
+          "operands": [
+            32772,
+            40
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8786,
+          "opcode": 41,
+          "operands": [
+            32773,
+            151
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8792,
+          "opcode": 440,
+          "operands": [
+            32772,
+            32773
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8798,
+          "opcode": 50,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8800,
+          "opcode": 53,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8802,
+          "opcode": 97,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8804,
+          "opcode": 2,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8806,
+          "opcode": 41,
+          "operands": [
+            32772,
+            40
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8812,
+          "opcode": 41,
+          "operands": [
+            32773,
+            149
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8818,
+          "opcode": 440,
+          "operands": [
+            32772,
+            32773
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8824,
+          "opcode": 50,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8826,
+          "opcode": 53,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8828,
+          "opcode": 97,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8830,
+          "opcode": 2,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8832,
+          "opcode": 41,
+          "operands": [
+            32772,
+            40
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8838,
+          "opcode": 41,
+          "operands": [
+            32773,
+            148
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8844,
+          "opcode": 440,
+          "operands": [
+            32772,
+            32773
+          ],
+          "size": 6
+        },
+        {
+          "offset": 8850,
+          "opcode": 50,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8852,
+          "opcode": 53,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8854,
+          "opcode": 97,
+          "operands": [],
+          "size": 2
+        },
+        {
+          "offset": 8856,
+          "opcode": 2,
+          "operands": [],
+          "size": 2
+        }
+      ],
+      "labels": {
+        "accept": 8710,
+        "add": 8759,
+        "already": 8832,
+        "editor": 8644,
+        "success": 8806
+      },
+      "legacy_target": 8084,
+      "sha256": "8075b7c6ebe83bf2cead3a823e1bacf5519b5c97083463eb100ea96ffc2a8705"
+    }
+  },
+  "source_hashes": {
+    "bag_commands": "0038bc1c9c36ba26e4f10854fb13baff50fb2383f8ccc890a366cf15a0f52ba6",
+    "charmap": "58861d34f40623fd2a9b29c10a79ee2ec872182285a288381759a3b251412ded",
+    "item_commands": "3dc0074f2f29cd571852f49066f3c6e2a550673dab51472f3a79068f00a904c7",
+    "item_getters": "09e9377f89adc9003711d3dc16a3912e476043a188e3d5c349369cb37f6fda49",
+    "item_layout": "ba3c9bc510e28baef172eae0f661549ceaa8860adb7c2689c7eff89fe5eaf822",
+    "map_constants": "9ebf1f2f6110af509b830cc33f271d4b5d257f309212345a6bb4557321634adb",
+    "map_headers": "fcdef6a96ffdf6b353377baaafb496a181059bdf88d1d9a6f71c197187edae9b",
+    "message_codec": "3f63b147cbdd86d5211afe5fb861d0a6599b9633cc2ffcf49d7081e29b23b62f",
+    "message_commands": "c3135e9e01de09d9fd5de277fcdde9b7e1de395da5f0a7938224ed2ad7e00b6d",
+    "message_renderer": "f71490d9dd5515444d099c01888cae6935098b67826a792959f1c8697ec3bada",
+    "script_commands": "1248d46548280a8f3c9c2d220788a915c03b4dc1951b4f7bb1c6317d07f45061",
+    "script_macros": "2ca4fafb309e3ae90aa4edd53211b5f91a50b0c4c9abb74fed196ee261e1857e",
+    "script_manager": "1c4e3149d742076b6bb0da9675bb53541e5f591090d515ac0fc6c0c646a3b6aa",
+    "script_sample_440": "ea8243c6795583c1dc6b80b26b595378317c4d9973ba595f7eb10f153a6b5abe",
+    "script_table": "77021bcda986632485ee0732a5edb9b1424884b7430b8d2377d5211bcc97c538",
+    "yes_no_command": "3eb39e0372d07d7e1f6517da89f9103b80b27d317af11b94d28a16f330a7362c"
+  },
+  "status": "STATIC_BUILD_PASS_RUNTIME_NOT_RUN"
+}

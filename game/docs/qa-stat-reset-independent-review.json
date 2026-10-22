@@ -1,0 +1,169 @@
+{
+  "schema": "stat-editor-reset-native-independent-review/v1",
+  "result": "PASS_BOUNDED_NATIVE_BRANCHES_CURRENT_ARTIFACTS",
+  "auditor_status": "PASS_BOUNDED_NATIVE_YES_NO_AND_RETURN; SAVE_COLD_NOT_TESTED",
+  "scope": "Independent offline review of ResetEV and ResetIV branch evidence; no emulator, ROM, core, or source edits.",
+  "artifacts": {
+    "auditor": {
+      "path": "qa/stat_editor_reset_native_acceptance.py",
+      "sha256": "e9495f733002e5a359fb1e17b9061052c03fd1a1b96539326f8df21fa2eee956"
+    },
+    "acceptance_report": {
+      "path": "qa/runs/stat-editor-reset-native/acceptance.json",
+      "sha256": "fd2d4b1af00053b8db9812f3d7e77676fc097fd0f502915cb7c50a73d7b6bf55"
+    },
+    "reset_ev": {
+      "rom": "experiments/eviv/stat-editor-confirm-probes-fix1/reset-ev/reset-ev.nds",
+      "rom_sha256": "5ec30de05b29e817b766d37be4cc7fbe2dded9e555259da7ca74539e4fb33e87",
+      "build_report_sha256": "cb7c61efbd4a1ce539d1057f94b43de0c38d3a6f7e93d4f023a07dfca6fb7415",
+      "source_dsv": "qa/runs/stat-editor-reset-ev-fixture/reset-ev-fixture.dsv",
+      "source_dsv_sha256": "e4767fc950bd991f1889f118b03e180c4f999d27432b6a632dd5bac7f9690d42",
+      "selected_main": {"base": "0x40000", "counter": 9, "crc16": 39757}
+    },
+    "reset_iv": {
+      "rom": "experiments/eviv/stat-editor-confirm-probes-fix1/reset-iv/reset-iv.nds",
+      "rom_sha256": "ecf95cbd0f7d10158c1bfc4d089b4bf7da96b5f315a47d9bcec5791578af0615",
+      "build_report_sha256": "a9416c7b9540835c3fe799f6eeb8823a2a27b7e2e539ecf6ed8d5f4626a522f7",
+      "source_dsv": "qa/runs/dispatch-preview-fixture/dispatch-preview-fix6a.dsv",
+      "source_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "selected_main": {"base": "0x40000", "counter": 9, "crc16": 53760}
+    },
+    "runner": {
+      "path": "qa/headless_runner_fix6a.py",
+      "sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26"
+    },
+    "core": {
+      "path": "../tools/usr/lib/libretro/desmume_libretro.so",
+      "sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    "reset_iv_personal_narc": {
+      "rom_file_id": 498,
+      "sha256": "9bc883e846af6cc0810251c8ce05663ceadacac0f47dd83a24a93fa0cea75392",
+      "species_id": 35,
+      "entry_sha256": "26be90f8cc7d05a63c384d94cb1d45f94025fd76831a7109a07136bee79eeefb"
+    }
+  },
+  "offline_replay": {
+    "status": "PASS",
+    "audit_main_status": "PASS_BOUNDED_NATIVE_YES_NO_AND_RETURN; SAVE_COLD_NOT_TESTED",
+    "canonical_json_matches_frozen_report": true,
+    "method": "Called the existing auditor main() without writing output, using a minimal in-memory NDS FAT/NARC reader because system Python has no ndspy. Extracted personal NARC and entry hashes matched the pinned values.",
+    "persistent_files_written": false
+  },
+  "state_lineage": {
+    "verified_chains": 10,
+    "all_input_states_match_parent_output": true,
+    "all_ancestors_match_operation_rom_runner_core_dsv_and_cheats_empty": true,
+    "all_chains_reach_a_run_with_no_navigation_state_input": true,
+    "meaning_of_cold": "Fresh emulator boot for these interaction chains; this does not mean battery-save cold reload.",
+    "chain_depths_including_branch_run": {"choice": 5, "yes": 6, "no": 7, "yes_ack": 7, "no_ack": 8},
+    "cold_roots": [
+      {
+        "operation": "reset-ev",
+        "run": "qa/runs/stat-editor-reset-native-reset-ev-cold",
+        "result_sha256": "2dd524d3a9a58ada9ab9d7455d6b86007b92ba8de2b5187780fee5f992112fa2",
+        "state_output_sha256": "97ba9005001f05051b6e9b3531474686173f6df529487e2913c9efade60284e3",
+        "rom_sha256": "5ec30de05b29e817b766d37be4cc7fbe2dded9e555259da7ca74539e4fb33e87"
+      },
+      {
+        "operation": "reset-iv",
+        "run": "qa/runs/stat-editor-reset-native-reset-iv-cold",
+        "result_sha256": "85fde57434620bfbec947669021f755bb5d1781d3e263dfb6313c41de445cde1",
+        "state_output_sha256": "d3ed6e41f4b3e76f79d2fd4dbd2ab17a93d07798fc7f479218b0aa4aa4cc5c2c",
+        "rom_sha256": "ecf95cbd0f7d10158c1bfc4d089b4bf7da96b5f315a47d9bcec5791578af0615"
+      }
+    ]
+  },
+  "branch_evidence": {
+    "runtime_specials_order": ["8004_status", "8005_value", "8006_confirm", "800C_slot"],
+    "yes_outputs": [0, 0, 0, 0],
+    "no_outputs": [65535, 0, 1, 0],
+    "no_status_sentinel": "8004=0xFFFF; 8006 records the No choice as 1.",
+    "reset_ev": {
+      "yes_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "no_party_array_sha256": "fd4a9b29f3ae1e53abb35fac1dd2a066dd2e7f686717e878387d836c09dfafd5",
+      "yes_is_exact_target_dsv_array": true,
+      "no_is_exact_source_dsv_array": true,
+      "input_slot0_species_pid_evs": {"species_id": 35, "pid": "0xe30363e2", "evs": [1, 2, 3, 1, 2, 3]},
+      "yes_slot0_evs": [0, 0, 0, 0, 0, 0],
+      "all_other_party_bytes_preserved": true
+    },
+    "reset_iv": {
+      "yes_party_array_sha256": "876086d7611b8f08564cfc7c0100060973b5614b732bda2f61ecd01eaa7509c5",
+      "no_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "yes_is_exact_derived_array": true,
+      "no_is_exact_source_dsv_array": true,
+      "species_id": 35,
+      "pid": "0xe30363e2",
+      "level": 5,
+      "nature_id": 10,
+      "base_stats_hp_atk_def_speed_spatk_spdef": [70, 45, 48, 35, 60, 65],
+      "ivs_before": [15, 3, 10, 31, 21, 2],
+      "ivs_after": [0, 0, 0, 0, 0, 0],
+      "evs_before_after": [0, 0, 0, 0, 0, 0],
+      "party_stats_before_hp_maxhp_atk_def_speed_spatk_spdef": [22, 22, 8, 10, 11, 12, 11],
+      "party_stats_after_expected": [22, 22, 8, 9, 8, 11, 11],
+      "formula": "floor((2*base+IV+floor(EV/4))*level/100); HP adds level+10, other stats add 5; nature 10 lowers Attack and raises Speed using floor(9/10) and floor(11/10).",
+      "all_other_party_bytes_preserved": true
+    },
+    "shared_bag_array_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+    "all_branch_bag_arrays_match_source_dsv": true,
+    "field_ack": {
+      "all_yes_no_ack_runs_task_manager": 0,
+      "location": [60, -1, 684, 409, 2]
+    },
+    "reserve_hashes_unchanged_across_choice_branches_and_ack": {
+      "0x023d5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+      "0x023d6000": "dd1864226b12c851477324aedab8cae1b3a6bd493920c7d56987882735169b2c",
+      "0x023d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "active_source_party_records_checksum_valid": true,
+    "source_dsv_main_crc_valid_and_counter_unambiguous": true
+  },
+  "ram_cipher_transitions": {
+    "policy": "Only accept a live party record when header and all bytes match an exact native/plaintext prefix or suffix at an even-byte boundary independently for box and tail.",
+    "reset_ev_yes_ack_slot2": {"box": {"mode": "plain_suffix", "split_bytes": 0}, "party_tail": {"mode": "plain_suffix", "split_bytes": 54}, "checksum_valid": false},
+    "reset_ev_no_ack_slot2": {"box": {"mode": "plain_suffix", "split_bytes": 0}, "party_tail": {"mode": "plain_suffix", "split_bytes": 48}, "checksum_valid": false},
+    "reset_iv_yes_ack_slot2": {"box": {"mode": "plain_suffix", "split_bytes": 0}, "party_tail": {"mode": "plain_suffix", "split_bytes": 0}, "checksum_valid": false},
+    "reset_iv_no_ack_slot2": {"box": {"mode": "plain_suffix", "split_bytes": 0}, "party_tail": {"mode": "plain_suffix", "split_bytes": 0}, "checksum_valid": false},
+    "all_other_active_slots_byte_exact": true,
+    "source_dsv_records_use_valid_pokemon_checksums": true
+  },
+  "negative_in_memory_probes": {
+    "reset_iv_rejects_unrelated_ev_change": true,
+    "reset_iv_rejects_alternate_pid_with_same_nature": true,
+    "reset_iv_rejects_party_stat_tail_change": true,
+    "reset_iv_rejects_other_party_record_change": true,
+    "reset_ev_rejects_unrequested_iv_change": true,
+    "altered_personal_entry_fails_pinned_provenance_sha": true,
+    "all_rejected": true
+  },
+  "auditability_notes": [
+    {
+      "id": "LINEAGE-GUARD",
+      "classification": "AUDITOR_GUARD_GAP; CURRENT_ARTIFACTS_VERIFIED",
+      "source": "qa/stat_editor_reset_native_acceptance.py:238-244",
+      "detail": "The auditor verifies that navigation_state_in exists and matches its reported SHA, but does not follow it to the parent result or require the parent ROM/core/runner/DSV to match. I independently followed all 10 current chains; every state is the recorded parent output, all ancestors use the operation ROM and exact fixture, and every chain reaches its no-state-input cold run.",
+      "current_acceptance_invalidated": false
+    },
+    {
+      "id": "EXCLUDED-SETUP",
+      "classification": "EXCLUDED_PREFLIGHT_ONLY_CAUSE_UNVERIFIED",
+      "run_dir": "qa/runs/stat-editor-reset-native-reset-iv-no-select",
+      "retained_files": [
+        {"path": "preflight.json", "sha256": "794282c290bd6a3dc056233d8252f3ba8d3665c2247c93578344ea3a7f9054c8"},
+        {"path": "input-script.json", "sha256": "0d6f1e86082f7228307f0a100fbb6ca8153a3e5266bfc9e36b1731e0d0654df3"}
+      ],
+      "result_or_failure_log_retained": false,
+      "detail": "The setup attempt is excluded from accepted runs. Its retained files do not prove the stated relative-ROM-path failure or that it stopped before retro_load_game; keep it classified as an incomplete preflight-only attempt unless execution logs are recovered.",
+      "current_acceptance_invalidated": false
+    }
+  ],
+  "persistence_scope": {
+    "battery_save_or_cold_reload": "NOT_TESTED",
+    "runner_save_memory_available": false,
+    "isolated_profile_dsv_remained_equal_to_fixture": true,
+    "repeated_operation": "NOT_TESTED",
+    "release_or_broad_species_acceptance": "NOT_ESTABLISHED"
+  }
+}

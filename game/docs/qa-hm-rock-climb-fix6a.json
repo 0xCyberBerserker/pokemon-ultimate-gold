@@ -1,0 +1,159 @@
+{
+  "schema": "ultimate-gold.hm-rock-climb-fix6a-qa/v1",
+  "status": {
+    "native_prompt": "VERIFIED",
+    "native_move_message": "VERIFIED",
+    "native_climb_position_change": "VERIFIED",
+    "normal_on_foot_approach": "NOT_TESTED_SURFING_FIXTURE",
+    "save_and_cold_persistence": "NOT_TESTED",
+    "story_access": "NOT_TESTED"
+  },
+  "summary_en": "With no active codes, Rock Climb was accepted at the exact FIX6a R47 tile. The game displayed its native prompt and 'CLEFAIRY used Rock Climb!' message; runtime field coordinates changed four tiles north, from (89,396) to (89,392).",
+  "summary_es": "Sin códigos activos, se aceptó Treparrocas en la casilla exacta de R47 de FIX6a. El juego mostró el aviso nativo y el mensaje «CLEFAIRY used Rock Climb!»; las coordenadas cambiaron cuatro casillas al norte, de (89,396) a (89,392). El fixture conservaba estado Surf; no acredita una aproximación normal a pie.",
+  "build": {
+    "rom_path": "@HOME@/Games/Sacred-Gold/experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+    "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "core_path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_path": "../../night-sprint/qa/headless_runner_fix6a.py",
+    "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+    "static_target_json": "../../night-sprint/qa/hm_tile_targets.json",
+    "static_target_json_sha256": "428fc0b7920fd7410e74009dcb4548a4c15ba843ddfb32c1cf353a56c870b622",
+    "static_height_json": "../../night-sprint/qa/hm_bdhc_height.json",
+    "static_height_json_sha256": "cba6bc900f1cde8fda626332c8c994b7c887c65711e5e05109d6d5e10158431f"
+  },
+  "fixture": {
+    "classification": "SYNTHETIC_POSITION_COPY_FROM_NATIVE_SAVE_NO_STORY_ACCEPTANCE",
+    "source_dsv_path": "../../night-sprint/qa/runs/hm-whirlpool-fix6a-native-save/profile/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+    "source_dsv_sha256": "20fcb3875dee5a3b8f3c6c74924b1e49e5b62e6f51097a00dcf377dc119b375d",
+    "corrected_dsv_path": "../../night-sprint/qa/runs/hm-rock-climb-fix6a-runtime-corrected/profile/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+    "corrected_dsv_sha256": "2cd6f7afa2cf083d1e586c97d58bdc189d86185e47d4672f5bab85906a3f66c9",
+    "fixture_manifest_path": "../../night-sprint/qa/runs/hm-rock-climb-fix6a-runtime-corrected/fixture.json",
+    "fixture_manifest_sha256": "464350e2c1ed22c9b920b834690c0285e98817911e9f56edc25bfd02d32a315f",
+    "changes": [
+      "Copied the DSV to a separate FIX6a-only profile; original source remained unchanged.",
+      "Set LocalFieldData.currentPosition to map 151, warp -1, X/Z 89/396, north-facing entry.",
+      "Set the saved avatar ID 255 to X/Y/Z 89/8/396, facing north, vecY_fx32 262144; retained native mapId 1.",
+      "Corrected inherited weather from Dark Cave value 11 to the exact R47 MapHeader value 0; camera type was already 0.",
+      "Recomputed the selected save-slot CRC16; the fallback slot was preserved."
+    ],
+    "environment_source": "FIX6a MapHeader map 151; weather 0, camera type 0. The earlier copied fixture retained Dark Cave weather 11 because direct-position setup bypassed the native warp recalculation. That earlier fixture is invalid and was not used for the accepted action.",
+    "codes": []
+  },
+  "target": {
+    "map_id": 151,
+    "map_name": "Route 47",
+    "target_global_xz": [89, 395],
+    "target_behavior": "0x4B",
+    "approach_global_xz": [89, 396],
+    "approach_behavior": "0x00",
+    "facing": "north",
+    "model_id": 79,
+    "target_bdhc_height_world_units": 4.5,
+    "approach_bdhc_height_world_units": 4.0,
+    "post_climb_global_xz": [89, 392],
+    "post_climb_bdhc": {
+      "model_local_xz": [25, 8],
+      "covering_plane_count": 1,
+      "plane_id": 10,
+      "normal_raw_xyz": [0, 4096, 0],
+      "height_world_units": 7.0
+    },
+    "post_climb_y_note": "Runtime tile XYZ and fixed-point MapObject position were both read directly. The observed final vecY_fx32 is 458752 (height 7.0); this agrees with the unique flat BDHC plane."
+  },
+  "runtime": {
+    "cold_start_run": "../../night-sprint/qa/runs/hm-rock-climb-fix6a-runtime-corrected-cold-title",
+    "cold_state_sha256": "af8594473e77c0a54cac06b45ed7e2c9dff9462690038c453bdcaada95b5f702",
+    "field_preaction_run": "../../night-sprint/qa/runs/hm-rock-climb-fix6a-runtime-corrected-menu-to-field",
+    "field_preaction_result_sha256": "4a137ef225e8a514d70db149109386951fa245aea9b7192a787cb376da55f0b4",
+    "field_preaction_state_sha256": "73108de573bb7a7a409c57fb9f60b548a85f3449cf2c948f7b960e224dc1b343",
+    "field_preaction_ram_sha256": "2601d838e1166c84de513d257e076ab4cdd30d94eddbe797be54777160cb31db",
+    "field_preaction_location": {
+      "source": "runtime RAM via fs pointer 0x021D4158 and fs+0x20",
+      "value_map_warp_x_z_direction": [151, -1, 89, 396, 0],
+      "saved_avatar_xyz": [89, 8, 396],
+      "saved_avatar_vecY_fx32": 262144
+    },
+    "runtime_avatar_xyz": {
+      "read_path": "unique field location pointer -> FieldSystem+0x40 avatar -> avatar+0x30 MapObject; xyz at MapObject+0x64",
+      "field_system_address": "0x022A028C",
+      "avatar_address": "0x022A6B44",
+      "map_object_address": "0x022A2024",
+      "before": [89, 8, 396],
+      "after": [89, 14, 392],
+      "tile_xyz_field_offset": "MapObject+0x64",
+      "fixed_position_field_offsets": {"x": "MapObject+0x70", "vecY_fx32": "MapObject+0x74", "z": "MapObject+0x78"},
+      "position_fx32_before_hex": ["0x00598000", "0x00040000", "0x018C8000"],
+      "position_fx32_after_hex": ["0x00598000", "0x00070000", "0x01888000"],
+      "vecY_fx32_before": 262144,
+      "vecY_fx32_after": 458752,
+      "direct_ram_read": true
+    },
+    "party_bag_reserve_audit": {
+      "audit_method": "CRC-valid selected DSV slot; decrypt each Gen-IV party record with its PID/checksum and require checksum-valid decode; compare runtime SaveArray2 against the encrypted DSV after only exact cipher-phase normalization.",
+      "audit_tools": [
+        {"path": "../../night-sprint/qa/hm_whirlpool_fix6a_acceptance.py", "sha256": "67c76a5cc6b3acc6f286c40ffdb5eeb6ccf679b06a9651767d9b05cf082f2961"},
+        {"path": "../../night-sprint/qa/hm_matrix.py", "sha256": "30df298252b180d01e5d324263724657e448dc2ec5cd1c03e920e449947051d4"},
+        {"path": "../../night-sprint/internal/hm-qol/qa_fixtures.py", "sha256": "ec653a1c6d1efe07d85feec5e539f60da909e9ab40ed58cb154542e48b1c1d01"}
+      ],
+      "selected_dsv_counter": 9,
+      "selected_dsv_slot_base": "0x40000",
+      "both_dsv_slots_crc_valid": true,
+      "party_count": 3,
+      "species_ids": [35, 152, 66],
+      "moves_by_slot": [[27, 1, 0, 0], [33, 45, 0, 0], [67, 43, 0, 0]],
+      "hm_move_ids_checked": [15, 19, 57, 70, 127, 249, 250, 431],
+      "no_hm_moves_in_any_party_slot": true,
+      "rock_climb_431_guard_regression": {"431_detected_as_hm": true, "non_hm_moves_not_flagged": true},
+      "runtime_party_exactly_matches_dsv_before_and_after": true,
+      "dsv_party_array_sha256": "842eb39bcefa2f31f46e12bbf43c79415e20906a448353e88164f64e5ae5ffa4",
+      "runtime_bag_sha256_before_after": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "runtime_bag_unchanged": true,
+      "legacy_and_canonical_hm_item_ids": [420, 421, 422, 423, 424, 425, 426, 427],
+      "badge_ids": [0, 1, 2, 3, 4, 6, 7, 15],
+      "reserve_0x023D7000_0x1000_sha256_before_after": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+      "reserve_unchanged": true,
+      "reserve_canaries_ok_before_after": {"lower_guard": true, "metadata": true, "hm_canary": true, "shop_canary": true, "upper_guard": true, "arena_high": true},
+      "battery_dsv_unchanged_during_action": true
+    },
+    "action_runs": [
+      {
+        "run": "../../night-sprint/qa/runs/hm-rock-climb-fix6a-native-action",
+        "input_script_sha256": "81bdced6226e58c38c1d50f1584c6c27df1501cdd3844d8caca1d10dfafbb335",
+        "input_state_sha256": "73108de573bb7a7a409c57fb9f60b548a85f3449cf2c948f7b960e224dc1b343",
+        "output_state_sha256": "199f7134a3c43464de0f0b923a60bcd26b2b7db48db2171ef922bfc8058bf725",
+        "observation": "One A at the wall opened the native Yes/No Rock Climb prompt."
+      },
+      {
+        "run": "../../night-sprint/qa/runs/hm-rock-climb-fix6a-native-confirm-yes",
+        "input_script_sha256": "6d6e1d12db15316ecbdaedd07e8eb66cca7687c9c141f5c84b463b0ef8218446",
+        "input_state_sha256": "199f7134a3c43464de0f0b923a60bcd26b2b7db48db2171ef922bfc8058bf725",
+        "output_state_sha256": "462530bbb1eddccbc7dcc57e4f5568a431119c522ca5fae2ce080d2ad19385bd",
+        "observation": "A accepted Yes; the game displayed 'CLEFAIRY used Rock Climb!' and awaited Next."
+      },
+      {
+        "run": "../../night-sprint/qa/runs/hm-rock-climb-fix6a-native-continue-message",
+        "input_script_sha256": "d8abd282a13e5597a0478a69e05f2b21f3da358c5cc13ed3ec14fbf02d95ef05",
+        "input_state_sha256": "462530bbb1eddccbc7dcc57e4f5568a431119c522ca5fae2ce080d2ad19385bd",
+        "output_state_sha256": "e8255c173da4ff55a5a111130c4965396c6afcff35fe7a418fbf3c40dc711ce8",
+        "ram_sha256": "2fb6479cf843c107df4a41686625c78bb7eddb4b12105ce02723710cfe40a8e7",
+        "post_climb_location_map_warp_x_z_direction": [151, -1, 89, 392, 0],
+        "observation": "A advanced the native message; the avatar was on the higher rock path. Runtime X/Z changed from (89,396) to (89,392), four tiles north."
+      }
+    ],
+    "codes": [],
+    "dsv_after_action_sha256": "2cd6f7afa2cf083d1e586c97d58bdc189d86185e47d4672f5bab85906a3f66c9",
+    "dsv_changed_during_action": false,
+    "preaction_screenshot": "../../night-sprint/qa/runs/hm-rock-climb-fix6a-runtime-corrected-menu-to-field/field_loaded.png",
+    "prompt_screenshot": "../../night-sprint/qa/runs/hm-rock-climb-fix6a-native-action/action_resolution.png",
+    "used_message_screenshot": "../../night-sprint/qa/runs/hm-rock-climb-fix6a-native-confirm-yes/message_after_yes.png",
+    "post_climb_screenshot": "../../night-sprint/qa/runs/hm-rock-climb-fix6a-native-continue-message/post_climb_resolution.png"
+  },
+  "limits": [
+    "The avatar position was placed synthetically in a copy of a native save; Route 47 story access was not tested.",
+    "No battery save, reset, or cold reload was performed after climbing; persistence is not assessed.",
+    "Direct runtime MapObject reads provided XYZ and vecY before and after the climb; the endpoint also matches its unique BDHC plane.",
+    "Avatar.state was 2 (PLAYER_STATE_SURFING) before, during and after this synthetic-position case. Normal on-foot approach remains untested by this report.",
+    "The runner records each emulator execution as gameplay_acceptance NOT_ASSESSED; action acceptance here is based on the native screenshots and exact-build runtime coordinate change."
+  ]
+}

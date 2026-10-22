@@ -1,0 +1,28 @@
+{
+  "schema": "ultimate-gold-browser-patcher-qa/v1",
+  "status": "PASS_REAL_BROWSER_LOCAL_PATCH_AND_DOWNLOAD",
+  "date": "2026-10-22",
+  "driver": "tests/patcher-browser.cjs",
+  "browser": "bundled Playwright Chromium, headless",
+  "site_base": "/web/",
+  "default_build_at_test": "alpha2",
+  "outputs": {
+    "alpha1": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+    "alpha2": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+  },
+  "checks": [
+    "Both selectable builds produce and download their exact target SHA-256.",
+    "The wiki-integrated patcher downloads the exact Alpha 2 output and follows the wiki's Spanish language selection.",
+    "A modified clean-ROM fixture is rejected without a download.",
+    "A truncated delta is rejected without a download.",
+    "Changing versions revokes the previous output link.",
+    "Build and source controls stay disabled during patching and are restored after a rejected delta.",
+    "English and Spanish labels and status are translated.",
+    "No page errors; all observed requests are same-origin GET requests."
+  ],
+  "limits": [
+    "Tests the local static site under a subdirectory; no GitHub Pages deployment has been published.",
+    "Browser patching acceptance does not establish full game-story acceptance.",
+    "External source and downloaded ROM fixtures are not kept in the repository."
+  ]
+}

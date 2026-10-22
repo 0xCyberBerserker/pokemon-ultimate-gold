@@ -1,0 +1,969 @@
+{
+  "schema": "portable-stat-editor-menu-textfix-native-acceptance/v1",
+  "status": "PASS_BOUNDED_NATIVE_SET_IV_SAVE_COLD",
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-textfix/portable-stat-editor-menu-textfix-fix6a.nds",
+    "sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a"
+  },
+  "runtime": {
+    "runner_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "core_path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "cheats": []
+  },
+  "seed_dsv": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-kit-launch-native-alpha2-seeded-cold/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+    "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "bytes": 524410,
+    "slots": [
+      {
+        "base": 0,
+        "counter": 10,
+        "crc16": 17186
+      },
+      {
+        "base": 262144,
+        "counter": 9,
+        "crc16": 53760
+      }
+    ],
+    "selected_counter": 10
+  },
+  "saved_dsv": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-save/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+    "sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf",
+    "bytes": 524410,
+    "slots": [
+      {
+        "base": 0,
+        "counter": 10,
+        "crc16": 17186
+      },
+      {
+        "base": 262144,
+        "counter": 11,
+        "crc16": 32926
+      }
+    ],
+    "selected_counter_increment": 1,
+    "cold_dsv_byte_exact": true
+  },
+  "runs": [
+    {
+      "label": "cold",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold",
+      "result_sha256": "f74eed6d47d674922d651f685c96fb6afee291c8133e063ef92853b9ef230a74",
+      "frames": 5500,
+      "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_in": null,
+      "state_out": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold/cold.state",
+        "sha256": "23cd6810dabc7f9c142a6ca67528822099a8d7d7d0604bc272bd1e27f3c43da9"
+      },
+      "system_ram_sha256": "068e1f347d3235086f36dd4967ab961e442e4ee4ffd8999ddb32fd117e1408db",
+      "battery_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "battery_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_sha256": "c4b86f800a6ba5ba89ddd1602ca9277aa6b9881fca243bd61c0d6eee533a8c7f"
+    },
+    {
+      "label": "preview",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-preview",
+      "result_sha256": "036ef02c1ea25517dd3574beffc0c6a070b17de4efcc985490dd4539d22e60b6",
+      "frames": 4300,
+      "input_script_sha256": "6492f9b4aad3088d17b016138f6d75e19f29ad3f343240f0ecb3544485775fe2",
+      "state_in": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold/cold.state",
+        "sha256": "23cd6810dabc7f9c142a6ca67528822099a8d7d7d0604bc272bd1e27f3c43da9"
+      },
+      "state_out": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-preview/preconfirm.state",
+        "sha256": "cd3973e81bbba71c94af8cf27dde26228e6c59e1e092163196c8d5b5143daa9b"
+      },
+      "system_ram_sha256": "c6201a1896a426b0113c71d2cd895c9221e2f9afc35ca7f7b53a76d42c80f9b3",
+      "battery_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "battery_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_sha256": "87a105505b31766b7ded355b8f2637d4c627dca41a005ce3cd9e00a0413b5bb0"
+    },
+    {
+      "label": "no",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-no",
+      "result_sha256": "b263bf3099d78d5a19a39cdd467a8e4b9d29c9e26e796d5cd80248e4391ec716",
+      "frames": 700,
+      "input_script_sha256": "013fd4790f6342ef3328c5afdf7449531c3b48b70bb0828304fedc565dcb020c",
+      "state_in": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-preview/preconfirm.state",
+        "sha256": "cd3973e81bbba71c94af8cf27dde26228e6c59e1e092163196c8d5b5143daa9b"
+      },
+      "state_out": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-no/no-result.state",
+        "sha256": "3e7b9c61ab0d75e3a04e2435f64524a63ac934a0dd964b240efd7b1a716cbe00"
+      },
+      "system_ram_sha256": "8e118bd4d59b0d5d5521995775771ce5dd836712682c50ab6c282cc7271524f0",
+      "battery_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "battery_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_sha256": "6002d1a68c9ed8a8692d8d8bc31041858c6b80a608b0e4a8fd50b5b119fe2fcf"
+    },
+    {
+      "label": "no_exit",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-exit",
+      "result_sha256": "7ce44637ed6f23aaff002eab3b3cbdf3c1acbeca60b65727f55ba02bdac770ce",
+      "frames": 1200,
+      "input_script_sha256": "2c2237884e67a3357a114f8a084e3d2f4fe819c48f171168d7f38f07c8ad4d11",
+      "state_in": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-no/no-result.state",
+        "sha256": "3e7b9c61ab0d75e3a04e2435f64524a63ac934a0dd964b240efd7b1a716cbe00"
+      },
+      "state_out": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-exit/field.state",
+        "sha256": "16ab646fd3ec9572b485ad20a1073c52f06e39e31f6d4d3aae91897ffbd99c96"
+      },
+      "system_ram_sha256": "62b0989c02d63f24d5db9e51e1910ad0c4f067e726651a6c3f88c7232d83b480",
+      "battery_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "battery_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_sha256": "a682186dcbc8f3059779b0cde04e0ce404d442243c09b7030cd0a0777fbf7c59"
+    },
+    {
+      "label": "yes",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes",
+      "result_sha256": "24ed5b088b480842b5c2ea6bd51b78e6817350733ed7b239df60bfed78f7eb50",
+      "frames": 600,
+      "input_script_sha256": "f40dddf1078dc9bc5eea94664dea96c53a14791371c3927fc11b775bef1fdcf1",
+      "state_in": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-preview/preconfirm.state",
+        "sha256": "cd3973e81bbba71c94af8cf27dde26228e6c59e1e092163196c8d5b5143daa9b"
+      },
+      "state_out": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes/yes-result.state",
+        "sha256": "aaadef73ec2204dbd3c70a564849e13120471ce6408daa33cbdc072a923953c8"
+      },
+      "system_ram_sha256": "10a2011fc3ad0c112a79cd5a268278b6b866e219599b9697fea73938d0385b13",
+      "battery_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "battery_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_sha256": "686a948679fdab24d2c4d376bb3ac3fb53b60630c6df58bfb50a2e83f1498ab4"
+    },
+    {
+      "label": "yes_ack",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-ack",
+      "result_sha256": "dc05e38f7676ed2b90ec856e3245888cbd6f56ebfff86f11bf37643d74f24f07",
+      "frames": 600,
+      "input_script_sha256": "02c42e52524b4af4abf3de830d9e6a8880ee83b6e81fa7d2ba035b708ce12a84",
+      "state_in": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes/yes-result.state",
+        "sha256": "aaadef73ec2204dbd3c70a564849e13120471ce6408daa33cbdc072a923953c8"
+      },
+      "state_out": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-ack/ack-result.state",
+        "sha256": "276df9212c154deee5821728b86850b49d39a9c4bdef780ceddf7308f8939ece"
+      },
+      "system_ram_sha256": "15d7dced15103ebf1d7898faa3692aab45e3e9107e4ae0204aabe9049740894b",
+      "battery_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-ack/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "battery_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_sha256": "a1fac6b9b198ae914c1c4c5a0c99a3fe23d0adea94da6e2e98ef0fb060ed2a7d"
+    },
+    {
+      "label": "yes_exit",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-exit",
+      "result_sha256": "48cbca1799cde4e60d03d3742cef396f8a48ec64d34a5fd3f71e1a0eb1a7af52",
+      "frames": 300,
+      "input_script_sha256": "037bab96363285be729cd975b39dc5b5b23b517a4c99f4405a89ccce085a6176",
+      "state_in": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-ack/ack-result.state",
+        "sha256": "276df9212c154deee5821728b86850b49d39a9c4bdef780ceddf7308f8939ece"
+      },
+      "state_out": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-exit/field.state",
+        "sha256": "3181b2f950bbf0cc494538181e31419238a6f1108623dfa8bf8eb35962a42086"
+      },
+      "system_ram_sha256": "0e3b3f597610c9e8f1399f9f3df90e803206f9c034d93b2549d09bd66b9890c5",
+      "battery_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-exit/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "battery_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_sha256": "5b4de4534973ca1c127f9618c1440cfa7265fc7fe4a371efac34f4f5fad4cd0d"
+    },
+    {
+      "label": "native_save",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-save",
+      "result_sha256": "4f2a4d60cffba9e81f72ea58d4738a710d2efa6fe7ecfc4faf5c119546842c06",
+      "frames": 2600,
+      "input_script_sha256": "8094b92af7c9b7c451ab2a2d214037f89b294e250293f57c1448f215a6fc2653",
+      "state_in": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-exit/field.state",
+        "sha256": "3181b2f950bbf0cc494538181e31419238a6f1108623dfa8bf8eb35962a42086"
+      },
+      "state_out": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-save/save-result.state",
+        "sha256": "cbecb26183730c7e869c415b5b96af72b5b7254af65656b5f6af0d5854b63643"
+      },
+      "system_ram_sha256": "4707b364bf9b2ebd42f8a3a081d56574852de6967dd1adb24898301077e3d218",
+      "battery_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-save/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "battery_sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf",
+      "battery_manifest_sha256": "9b360b3d5bc050ca73c6f063b3a24b6f59fb81faca17363da8cfe770ee2a6746"
+    },
+    {
+      "label": "cold_verify",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold-verify",
+      "result_sha256": "921bb81cfc278818cf196ecc71eda06cc359833a7b5ccbcfa6525f8e6bb7f568",
+      "frames": 5500,
+      "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_in": null,
+      "state_out": null,
+      "system_ram_sha256": "a13f51fffd5fe631eefd4b23cc8ac37010f6411830ad95944d2aee9ee8d97872",
+      "battery_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold-verify/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "battery_sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf",
+      "battery_manifest_sha256": "4f070dc3180f532ac94ff3436749788acd5c4e59cded9e74e00f9c6bd3950285"
+    }
+  ],
+  "checks": {
+    "preview_screen": "VISIBLE_15_TO_16",
+    "preview_screenshot": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-preview/preview_before_choice.png",
+      "sha256": "d08a65513240c73f11cbcdbcd331a57feb16b06e9d965dc473f6e5c982eceb5b"
+    },
+    "no_branch": {
+      "party_header_exact": true,
+      "inactive_party_exact": true,
+      "party_count": 3,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_hp_iv": 15,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "normalized_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          }
+        },
+        {
+          "slot": 1,
+          "expected_hp_iv": 15,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          }
+        },
+        {
+          "slot": 2,
+          "expected_hp_iv": 10,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        }
+      ],
+      "bag_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "item118_quantity": 1,
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "dynamic_ui_mode": {
+        "field_system": "0x022a01cc",
+        "task": "0x023bcb68",
+        "task_data": "0x02356bc0",
+        "mode": 3,
+        "state": 1,
+        "mode_state_bytes_hex": "0301"
+      },
+      "system_ram_sha256": "8e118bd4d59b0d5d5521995775771ce5dd836712682c50ab6c282cc7271524f0",
+      "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a"
+    },
+    "no_exit_field": {
+      "party_header_exact": true,
+      "inactive_party_exact": true,
+      "party_count": 3,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_hp_iv": 15,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "normalized_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          }
+        },
+        {
+          "slot": 1,
+          "expected_hp_iv": 15,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          }
+        },
+        {
+          "slot": 2,
+          "expected_hp_iv": 10,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_suffix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_suffix",
+              "split_bytes": 70
+            },
+            "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        }
+      ],
+      "bag_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "item118_quantity": 1,
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "dynamic_ui_mode": {
+        "field_system": "0x022a01cc",
+        "task": "0x023bcb68",
+        "task_data": "0x02356bc0",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      },
+      "system_ram_sha256": "62b0989c02d63f24d5db9e51e1910ad0c4f067e726651a6c3f88c7232d83b480",
+      "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a"
+    },
+    "yes_exit_field": {
+      "party_header_exact": true,
+      "inactive_party_exact": true,
+      "party_count": 3,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_hp_iv": 16,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "normalized_record_sha256": "622c4880534905a5cf62f5a2f9f2d6a4f06a28ccfd050698790fc628604f8442"
+          }
+        },
+        {
+          "slot": 1,
+          "expected_hp_iv": 15,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          }
+        },
+        {
+          "slot": 2,
+          "expected_hp_iv": 10,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_suffix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_suffix",
+              "split_bytes": 68
+            },
+            "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        }
+      ],
+      "bag_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "item118_quantity": 1,
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "dynamic_ui_mode": {
+        "field_system": "0x022a01cc",
+        "task": "0x023bcb68",
+        "task_data": "0x02356bc0",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      },
+      "system_ram_sha256": "0e3b3f597610c9e8f1399f9f3df90e803206f9c034d93b2549d09bd66b9890c5",
+      "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a"
+    },
+    "saved_party": {
+      "party_count": 3,
+      "array_header_exact": true,
+      "inactive_bytes_exact": true,
+      "records": [
+        {
+          "slot": 0,
+          "species_id": 35,
+          "hp_iv_before": 15,
+          "hp_iv_after": 16,
+          "iv_word_before": "0x055FA86F",
+          "iv_word_after": "0x055FA870",
+          "pid_and_flags_unchanged": true,
+          "other_iv_bits_unchanged": true,
+          "other_decoded_blocks_unchanged": true,
+          "party_tail_unchanged": true,
+          "party_tail_sha256": "a41e27c1e15961c2983d3cee898c29a6047014cc96cd7d7d9ae6c8ebb5eb7ae0"
+        },
+        {
+          "slot": 1,
+          "species_id": 152,
+          "record_byte_exact": true,
+          "party_tail_sha256": "53119f1a92578636365eab4c749f89d139089c7c4a0c6a7cd960a6d036f7cf19"
+        },
+        {
+          "slot": 2,
+          "species_id": 66,
+          "record_byte_exact": true,
+          "party_tail_sha256": "abe3835d17d6db94534a7b35fb690a13e1d955e1db7051a6469cc3b01bfbb465"
+        }
+      ]
+    },
+    "save_runtime": {
+      "party_header_exact": true,
+      "inactive_party_exact": true,
+      "party_count": 3,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_hp_iv": 16,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "normalized_record_sha256": "622c4880534905a5cf62f5a2f9f2d6a4f06a28ccfd050698790fc628604f8442"
+          }
+        },
+        {
+          "slot": 1,
+          "expected_hp_iv": 15,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          }
+        },
+        {
+          "slot": 2,
+          "expected_hp_iv": 10,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 88
+            },
+            "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        }
+      ],
+      "bag_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "item118_quantity": 1,
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "dynamic_ui_mode": {
+        "field_system": "0x022a01cc",
+        "task": "0x023bcb68",
+        "task_data": "0x02356bc0",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      },
+      "system_ram_sha256": "4707b364bf9b2ebd42f8a3a081d56574852de6967dd1adb24898301077e3d218",
+      "dsv_sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf"
+    },
+    "cold_runtime": {
+      "party_header_exact": true,
+      "inactive_party_exact": true,
+      "party_count": 3,
+      "party_records": [
+        {
+          "slot": 0,
+          "expected_hp_iv": 16,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "normalized_record_sha256": "622c4880534905a5cf62f5a2f9f2d6a4f06a28ccfd050698790fc628604f8442"
+          }
+        },
+        {
+          "slot": 1,
+          "expected_hp_iv": 15,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          }
+        },
+        {
+          "slot": 2,
+          "expected_hp_iv": 10,
+          "native_cipher_boundary": {
+            "header_exact": true,
+            "box_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "tail_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 64
+            },
+            "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        }
+      ],
+      "bag_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "item118_quantity": 1,
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "dynamic_ui_mode": {
+        "field_system": "0x022a0258",
+        "task": "0x023bccb8",
+        "task_data": "0x02356c40",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      },
+      "system_ram_sha256": "a13f51fffd5fe631eefd4b23cc8ac37010f6411830ad95944d2aee9ee8d97872",
+      "dsv_sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf"
+    },
+    "bag_array3_exact_seed_and_saved": true,
+    "native_save_crc_valid": true,
+    "whole_dsv_changed_bytes": 196,
+    "whole_dsv_changed_spans": 56,
+    "whole_dsv_changed_spans_unattributed": [
+      {
+        "start": 192532,
+        "end_exclusive": 192533,
+        "length": 1
+      },
+      {
+        "start": 192542,
+        "end_exclusive": 192544,
+        "length": 2
+      },
+      {
+        "start": 262180,
+        "end_exclusive": 262181,
+        "length": 1
+      },
+      {
+        "start": 262184,
+        "end_exclusive": 262185,
+        "length": 1
+      },
+      {
+        "start": 262188,
+        "end_exclusive": 262189,
+        "length": 1
+      },
+      {
+        "start": 262280,
+        "end_exclusive": 262282,
+        "length": 2
+      },
+      {
+        "start": 262302,
+        "end_exclusive": 262303,
+        "length": 1
+      },
+      {
+        "start": 262304,
+        "end_exclusive": 262430,
+        "length": 126
+      },
+      {
+        "start": 262431,
+        "end_exclusive": 262432,
+        "length": 1
+      },
+      {
+        "start": 263752,
+        "end_exclusive": 263753,
+        "length": 1
+      },
+      {
+        "start": 263754,
+        "end_exclusive": 263755,
+        "length": 1
+      },
+      {
+        "start": 263756,
+        "end_exclusive": 263757,
+        "length": 1
+      },
+      {
+        "start": 263758,
+        "end_exclusive": 263759,
+        "length": 1
+      },
+      {
+        "start": 264416,
+        "end_exclusive": 264417,
+        "length": 1
+      },
+      {
+        "start": 264418,
+        "end_exclusive": 264419,
+        "length": 1
+      },
+      {
+        "start": 264420,
+        "end_exclusive": 264421,
+        "length": 1
+      },
+      {
+        "start": 264422,
+        "end_exclusive": 264423,
+        "length": 1
+      },
+      {
+        "start": 264424,
+        "end_exclusive": 264425,
+        "length": 1
+      },
+      {
+        "start": 264426,
+        "end_exclusive": 264427,
+        "length": 1
+      },
+      {
+        "start": 265060,
+        "end_exclusive": 265061,
+        "length": 1
+      },
+      {
+        "start": 265062,
+        "end_exclusive": 265063,
+        "length": 1
+      },
+      {
+        "start": 265220,
+        "end_exclusive": 265221,
+        "length": 1
+      },
+      {
+        "start": 265222,
+        "end_exclusive": 265223,
+        "length": 1
+      },
+      {
+        "start": 265224,
+        "end_exclusive": 265225,
+        "length": 1
+      },
+      {
+        "start": 265226,
+        "end_exclusive": 265227,
+        "length": 1
+      },
+      {
+        "start": 265228,
+        "end_exclusive": 265229,
+        "length": 1
+      },
+      {
+        "start": 265230,
+        "end_exclusive": 265231,
+        "length": 1
+      },
+      {
+        "start": 265850,
+        "end_exclusive": 265851,
+        "length": 1
+      },
+      {
+        "start": 266812,
+        "end_exclusive": 266813,
+        "length": 1
+      },
+      {
+        "start": 266816,
+        "end_exclusive": 266817,
+        "length": 1
+      },
+      {
+        "start": 268248,
+        "end_exclusive": 268249,
+        "length": 1
+      },
+      {
+        "start": 271189,
+        "end_exclusive": 271191,
+        "length": 2
+      },
+      {
+        "start": 271214,
+        "end_exclusive": 271215,
+        "length": 1
+      },
+      {
+        "start": 271218,
+        "end_exclusive": 271219,
+        "length": 1
+      },
+      {
+        "start": 271269,
+        "end_exclusive": 271271,
+        "length": 2
+      },
+      {
+        "start": 271294,
+        "end_exclusive": 271295,
+        "length": 1
+      },
+      {
+        "start": 271298,
+        "end_exclusive": 271299,
+        "length": 1
+      },
+      {
+        "start": 271308,
+        "end_exclusive": 271309,
+        "length": 1
+      },
+      {
+        "start": 271310,
+        "end_exclusive": 271311,
+        "length": 1
+      },
+      {
+        "start": 271429,
+        "end_exclusive": 271430,
+        "length": 1
+      },
+      {
+        "start": 271466,
+        "end_exclusive": 271467,
+        "length": 1
+      },
+      {
+        "start": 271496,
+        "end_exclusive": 271497,
+        "length": 1
+      },
+      {
+        "start": 271509,
+        "end_exclusive": 271510,
+        "length": 1
+      },
+      {
+        "start": 281404,
+        "end_exclusive": 281406,
+        "length": 2
+      },
+      {
+        "start": 289033,
+        "end_exclusive": 289034,
+        "length": 1
+      },
+      {
+        "start": 325144,
+        "end_exclusive": 325145,
+        "length": 1
+      },
+      {
+        "start": 325158,
+        "end_exclusive": 325160,
+        "length": 2
+      },
+      {
+        "start": 399872,
+        "end_exclusive": 399873,
+        "length": 1
+      },
+      {
+        "start": 454676,
+        "end_exclusive": 454677,
+        "length": 1
+      },
+      {
+        "start": 454686,
+        "end_exclusive": 454688,
+        "length": 2
+      },
+      {
+        "start": 458760,
+        "end_exclusive": 458761,
+        "length": 1
+      },
+      {
+        "start": 458764,
+        "end_exclusive": 458766,
+        "length": 2
+      },
+      {
+        "start": 459200,
+        "end_exclusive": 459204,
+        "length": 4
+      },
+      {
+        "start": 459272,
+        "end_exclusive": 459273,
+        "length": 1
+      },
+      {
+        "start": 459276,
+        "end_exclusive": 459278,
+        "length": 2
+      },
+      {
+        "start": 459712,
+        "end_exclusive": 459716,
+        "length": 4
+      }
+    ],
+    "screenshots": {
+      "preview/preview_before_choice.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-preview/preview_before_choice.png",
+        "sha256": "d08a65513240c73f11cbcdbcd331a57feb16b06e9d965dc473f6e5c982eceb5b"
+      },
+      "no/no_selected.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-no/no_selected.png",
+        "sha256": "798fb7feb5253c0275eb85ba426317cb30d08c098c341d30bca36d82611ee477"
+      },
+      "no/no_result_stable.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-no/no_result_stable.png",
+        "sha256": "a6c1c6de99c1b543180472f4409a94f2fb2f930e60c328494327e2f2a093e7ee"
+      },
+      "no_exit/field_after_exit.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-exit/field_after_exit.png",
+        "sha256": "c7376990d1228ca27cc63b3da1e64c74e05832b49bf008adb05188de7b1e087d"
+      },
+      "no_exit/field_stable.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-exit/field_stable.png",
+        "sha256": "5dd8d1459990677cb2a772086c62d72c4e2e12b6d3f9f0895f185bc5f9298a3c"
+      },
+      "yes/yes_post_opcode_stable.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes/yes_post_opcode_stable.png",
+        "sha256": "ff052147a7fd495f639d0c96ca957dd356b5749a14c45d572cbbbf9c0b409d6c"
+      },
+      "yes_ack/ack_stable_599.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-ack/ack_stable_599.png",
+        "sha256": "cf25e34a18a444a62426ab94cf3da766131b7d08c22f0eaeb4ef01662779bc5b"
+      },
+      "yes_exit/repeat_menu_before_exit.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-exit/repeat_menu_before_exit.png",
+        "sha256": "4d3ba2cc6b0ac66424597366fef9f0738c2faebd11ece8b859ee97263314e5c0"
+      },
+      "yes_exit/field_after_exit.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-exit/field_after_exit.png",
+        "sha256": "83c36236f00c26da355f2b56158283fb95945dcabbb0fc13e202437cc3d10463"
+      },
+      "save/save_confirmation.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-save/save_confirmation.png",
+        "sha256": "666c9fb9a48c494e1233edbdfa75792a60d88213c0b031d4018d983315af4204"
+      },
+      "save/overwrite_confirmation.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-save/overwrite_confirmation.png",
+        "sha256": "06a2780e9d77ac3311fb388214c1a6388f893b12307d660e008d157d56b95e49"
+      },
+      "save/native_save_complete.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-save/native_save_complete.png",
+        "sha256": "eebc11233c0e51cf50c94866262819619526f921aa9bfde96b9d7aad2953a30e"
+      },
+      "cold_verify/cold_loaded_identity.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold-verify/cold_loaded_identity.png",
+        "sha256": "137b6737324b59333dc0406622f8dd662ed33850a988555ad4b546fc27bbbdda"
+      },
+      "cold_verify/cold_final.png": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold-verify/cold_final.png",
+        "sha256": "6896a9a401fd4401ab05d8a3dea1f0be8f56b364f06dc6f27308556291080bf7"
+      }
+    }
+  },
+  "limitations": [
+    "One native operation only: slot 0 HP IV 15 to 16; other stats, EVs, resets, caps, repeat use, and production use were not tested.",
+    "Runner gameplay_acceptance remains NOT_ASSESSED; this report covers the bounded native UI action, strict Party/Bag checks, native save, and same-ROM cold reload.",
+    "Of 196 changed bytes in 56 DSV spans, only Party, save-counter, and CRC changes are attributed; the remaining spans are listed without interpretation."
+  ]
+}

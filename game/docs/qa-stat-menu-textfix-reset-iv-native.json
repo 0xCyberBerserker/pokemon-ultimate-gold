@@ -1,0 +1,843 @@
+{
+  "schema": "portable-reset-iv-textfix-native-acceptance/v1",
+  "status": "VERIFIED_BOUNDED",
+  "scope": "One native Reset IV operation on Clefairy slot 0, with No/Exit control and native-save/cold persistence on the exact portable probe ROM.",
+  "limits": [
+    "The emulator runner labels gameplay_acceptance as NOT_ASSESSED; this report accepts only the listed input/UI/RAM/DSV evidence.",
+    "This proves one level-5 Timid Clefairy case, not all Pokémon, IV combinations, normal gameplay access, or a production/download feature.",
+    "The full DSV differs in 164 bytes across 25 spans; only active party slot 0 and the save header/CRC are interpreted here. Other changed bytes remain unclassified.",
+    "No EV, PID, nature, item, or other-slot edit was performed in this bounded case."
+  ],
+  "build": {
+    "rom": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-textfix/portable-stat-editor-menu-textfix-fix6a.nds",
+    "rom_sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a",
+    "runner": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "core": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+  },
+  "seed": {
+    "dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-save/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+    "dsv_sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf",
+    "active_main": {
+      "base": 262144,
+      "counter": 11,
+      "crc16": 32926
+    },
+    "party_count": 3,
+    "slot0": {
+      "species_id": 35,
+      "pid": "0xE30363E2",
+      "nature_id": 10,
+      "level": 5,
+      "evs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ivs_before": [
+        16,
+        3,
+        10,
+        31,
+        21,
+        2
+      ],
+      "party_stats_before_currenthp_maxhp_atk_def_speed_spatk_spdef": [
+        22,
+        22,
+        8,
+        10,
+        11,
+        12,
+        11
+      ]
+    }
+  },
+  "operation": {
+    "choice": "Yes",
+    "ivs_after": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "party_stats_after_currenthp_maxhp_atk_def_speed_spatk_spdef": [
+      22,
+      22,
+      8,
+      9,
+      8,
+      11,
+      11
+    ],
+    "pid_preserved": true,
+    "evs_preserved": true,
+    "other_active_party_slots_byte_exact": true,
+    "personal_narc": {
+      "rom_file_id": 498,
+      "sha256": "9bc883e846af6cc0810251c8ce05663ceadacac0f47dd83a24a93fa0cea75392",
+      "species_entry_id": 35,
+      "entry_sha256": "26be90f8cc7d05a63c384d94cb1d45f94025fd76831a7109a07136bee79eeefb",
+      "base_stats_hp_atk_def_speed_spatk_spdef": [
+        70,
+        45,
+        48,
+        35,
+        60,
+        65
+      ]
+    },
+    "derived_stat_formula": "floor((2*base+IV+floor(EV/4))*level/100); HP adds level+10, other stats add 5; Timid applies floor(9/10) Attack and floor(11/10) Speed",
+    "current_hp_policy": "current HP is preserved; max HP and five battle stats are recalculated"
+  },
+  "dsv": {
+    "no_exit": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-exit/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf",
+      "active_main_base": "0x40000",
+      "main_counter": 11,
+      "main_crc16": 32926,
+      "crc_valid": true,
+      "party_array_exact": true,
+      "bag_array_exact": true
+    },
+    "yes_exit": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-exit/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf",
+      "active_main_base": "0x40000",
+      "main_counter": 11,
+      "main_crc16": 32926,
+      "crc_valid": true,
+      "party_array_exact": true,
+      "bag_array_exact": true
+    },
+    "yes_save": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-save/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db",
+      "active_main_base": "0x0",
+      "main_counter": 12,
+      "main_crc16": 63143,
+      "crc_valid": true,
+      "party_array_exact": true,
+      "bag_array_exact": true
+    },
+    "cold_reload": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-cold-reload/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db",
+      "active_main_base": "0x0",
+      "main_counter": 12,
+      "main_crc16": 63143,
+      "crc_valid": true,
+      "party_array_exact": true,
+      "bag_array_exact": true
+    }
+  },
+  "save_delta": {
+    "source_main_counter": 11,
+    "saved_main_counter": 12,
+    "counter_increment": 1,
+    "full_dsv_changed_byte_count": 164,
+    "full_dsv_changed_span_count": 25,
+    "unclassified_bytes_attributed": false
+  },
+  "runs": {
+    "no_exit": {
+      "result": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-exit/result.json",
+      "sha256": "a9482c5026e566f2d276861f72d1153e84e4662a15bbb02ed2effa0966fdb1ca",
+      "frames": 1000,
+      "cheats": [],
+      "navigation_state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-family/no-family.state",
+      "navigation_state_output_sha256": "dced3e790ea6642d5003edbdb53c5ae860a2ca0e966dcf6760eac4a656091629"
+    },
+    "yes_exit": {
+      "result": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-exit/result.json",
+      "sha256": "3a4475b23c0164e8cb1886921ae8b89ce9c48b0c948ff4598d111723ebb01e70",
+      "frames": 1000,
+      "cheats": [],
+      "navigation_state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-ack-result/after-ack.state",
+      "navigation_state_output_sha256": "e783ed7575652b38e6346e85d789ead79a3036161c3c763f1b4a75ec47411e59"
+    },
+    "yes_save": {
+      "result": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-save/result.json",
+      "sha256": "87d441664228a70f6ff7225632f85c72d9119996dee1d77eab3b273a0160b0eb",
+      "frames": 2600,
+      "cheats": [],
+      "navigation_state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-exit/yes-exit.state",
+      "navigation_state_output_sha256": "ba091a37d4dfe5432d9019cf6c155f3b0e6218813d8d75b4ae6daf640a51a1c9"
+    },
+    "cold_reload": {
+      "result": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-cold-reload/result.json",
+      "sha256": "1fb626f125068ad007bb7ff0a613c5e6cfb91081cc04a5d28b51f5404bd5040d",
+      "frames": 5500,
+      "cheats": [],
+      "navigation_state_in": null,
+      "navigation_state_output_sha256": null
+    },
+    "preconfirm": {
+      "result": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-preconfirm/result.json",
+      "sha256": "261a823ffdbf01d2219593e0dc15ff41c6a2b63fc21ca21fd1e09c783899f293",
+      "frames": 4300,
+      "cheats": [],
+      "navigation_state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-cold/cold.state",
+      "navigation_state_output_sha256": "e284d99fce8d6ad860d5c5856750a70859ea930899c237d1bccc36918e72b506"
+    },
+    "no_confirm": {
+      "result": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-confirm/result.json",
+      "sha256": "5a3db0d9ecaf348b3b3df107825f9e93dff008e1c351fdf17e2935c83da650ad",
+      "frames": 700,
+      "cheats": [],
+      "navigation_state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-preconfirm/preconfirm.state",
+      "navigation_state_output_sha256": "404091adf11544867d5469a9bca7ea6a0ca466e9d04333904b304d5274c36cce"
+    },
+    "no_family": {
+      "result": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-family/result.json",
+      "sha256": "4b0483dd3589558692ba182e16797313ed3f944360d2650f9808bda79c8b715b",
+      "frames": 300,
+      "cheats": [],
+      "navigation_state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-confirm/no-menu.state",
+      "navigation_state_output_sha256": "e5bbeb8f6cf1b42194b1d9958ab98f0c082185cc175594640a76160a9cbff88c"
+    },
+    "yes_result": {
+      "result": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes/result.json",
+      "sha256": "2dcdef656f01feb29cff27f85aac91ca2f408ff0a12e6a913640d5c2c0f43b74",
+      "frames": 600,
+      "cheats": [],
+      "navigation_state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-preconfirm/preconfirm.state",
+      "navigation_state_output_sha256": "be5b1e89dd48533aafb94caa9668833ca43d636d1ee252f6b195c693aafe8cd4"
+    },
+    "yes_ack_result": {
+      "result": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-ack-result/result.json",
+      "sha256": "6368a46c2eaf360666762fe0cc3569090c45b7dad0a76a84df76bd52f0db900f",
+      "frames": 500,
+      "cheats": [],
+      "navigation_state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes/yes-result.state",
+      "navigation_state_output_sha256": "5ccfee2c05962e6e03ce8ff9d6cf1342e96bba3ebba3ec0c5658fd88fb274fe4"
+    }
+  },
+  "runtime_checks": {
+    "no_exit": {
+      "run": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-exit",
+      "result_sha256": "a9482c5026e566f2d276861f72d1153e84e4662a15bbb02ed2effa0966fdb1ca",
+      "input_script_sha256": "e2af412d824fa3db0d06d53752ca108e809343cec6fee2a3156d7d3cf10a9775",
+      "state_input": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-family/no-family.state",
+      "state_input_sha256": "e5bbeb8f6cf1b42194b1d9958ab98f0c082185cc175594640a76160a9cbff88c",
+      "state_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-exit/no-exit.state",
+          "sha256": "dced3e790ea6642d5003edbdb53c5ae860a2ca0e966dcf6760eac4a656091629"
+        }
+      ],
+      "system_ram_sha256": "f37bf492b0d0d2c34a13f3f0c3c86d13ad8f9ba351190a543ff9b964079659e3",
+      "party_array_sha256": "d1bd32f77e4324b928d4fd6819a7bb527e496b12ca65fdf1d7897616eccfcc27",
+      "party_records_exact_or_valid_cipher_boundary": true,
+      "party_slot_phases": [
+        {
+          "slot": 0,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 1,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 2,
+          "mode": "verified_two_byte_cipher_boundary",
+          "box": {
+            "mode": "plain_suffix",
+            "split_bytes": 0
+          },
+          "party_tail": {
+            "mode": "plain_suffix",
+            "split_bytes": 72
+          },
+          "decoded_checksum_valid": false,
+          "checksum": 46459
+        }
+      ],
+      "bag_savearray3_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "ui_mode": {
+        "field_system": "0x022a027c",
+        "task": "0x023bcc18",
+        "task_data": "0x02356c60",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      },
+      "location": [
+        60,
+        -1,
+        685,
+        408,
+        2
+      ],
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": {
+        "field": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-exit/visible_field_after_no_exit.png",
+          "sha256": "a9ee3e5e04c744061f81e9a24a30b38db875e60c2a2797f1b05bf99713097483"
+        }
+      },
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-exit/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf"
+        }
+      ]
+    },
+    "yes_exit": {
+      "run": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-exit",
+      "result_sha256": "3a4475b23c0164e8cb1886921ae8b89ce9c48b0c948ff4598d111723ebb01e70",
+      "input_script_sha256": "3a499db014225440ed656988ace71ae3cab77bb13a2db1a9230c3490e1c34458",
+      "state_input": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-ack-result/after-ack.state",
+      "state_input_sha256": "5ccfee2c05962e6e03ce8ff9d6cf1342e96bba3ebba3ec0c5658fd88fb274fe4",
+      "state_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-exit/yes-exit.state",
+          "sha256": "e783ed7575652b38e6346e85d789ead79a3036161c3c763f1b4a75ec47411e59"
+        }
+      ],
+      "system_ram_sha256": "cd52cfa1d440ee678a55ef1da915163201492290241e1e63e8743cfb2a59f426",
+      "party_array_sha256": "8960f3488061dae442f572ae24d3711d9b6f98f0d1264b6c3e69f170a50da72a",
+      "party_records_exact_or_valid_cipher_boundary": true,
+      "party_slot_phases": [
+        {
+          "slot": 0,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 1,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 2,
+          "mode": "verified_two_byte_cipher_boundary",
+          "box": {
+            "mode": "plain_suffix",
+            "split_bytes": 0
+          },
+          "party_tail": {
+            "mode": "plain_suffix",
+            "split_bytes": 68
+          },
+          "decoded_checksum_valid": false,
+          "checksum": 46459
+        }
+      ],
+      "bag_savearray3_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "ui_mode": {
+        "field_system": "0x022a027c",
+        "task": "0x023bcc18",
+        "task_data": "0x02356c60",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      },
+      "location": [
+        60,
+        -1,
+        685,
+        408,
+        2
+      ],
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": {
+        "field": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-exit/visible_field_after_editor_exit.png",
+          "sha256": "f40d783f08141cfed0eab07c24f181d3e41e6a93ad2b79bc423be001b8ce8701"
+        }
+      },
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-exit/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf"
+        }
+      ]
+    },
+    "yes_save": {
+      "run": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-save",
+      "result_sha256": "87d441664228a70f6ff7225632f85c72d9119996dee1d77eab3b273a0160b0eb",
+      "input_script_sha256": "8094b92af7c9b7c451ab2a2d214037f89b294e250293f57c1448f215a6fc2653",
+      "state_input": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-exit/yes-exit.state",
+      "state_input_sha256": "e783ed7575652b38e6346e85d789ead79a3036161c3c763f1b4a75ec47411e59",
+      "state_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-save/save-complete.state",
+          "sha256": "ba091a37d4dfe5432d9019cf6c155f3b0e6218813d8d75b4ae6daf640a51a1c9"
+        }
+      ],
+      "system_ram_sha256": "c7e06d14dda51c6c6c7389bcbba4f5301986335ee9eeac0db1762f3c363d9489",
+      "party_array_sha256": "091ff10cca4a6cb8bfc44d3d742cd96dc791e7e460d057348bf2b87e71b80719",
+      "party_records_exact_or_valid_cipher_boundary": true,
+      "party_slot_phases": [
+        {
+          "slot": 0,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 1,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 2,
+          "mode": "verified_two_byte_cipher_boundary",
+          "box": {
+            "mode": "plain_prefix",
+            "split_bytes": 66
+          },
+          "party_tail": {
+            "mode": "plain_suffix",
+            "split_bytes": 0
+          },
+          "decoded_checksum_valid": false,
+          "checksum": 46459
+        }
+      ],
+      "bag_savearray3_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "ui_mode": {
+        "field_system": "0x022a027c",
+        "task": "0x023bcc18",
+        "task_data": "0x02356c60",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      },
+      "location": [
+        60,
+        -1,
+        685,
+        408,
+        2
+      ],
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": {
+        "saved": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-save/native_save_complete.png",
+          "sha256": "4c281e55a2309c14b8467f540b882ff6681a1d78671962b18092eb0f48fcb20d"
+        }
+      },
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-save/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db"
+        }
+      ]
+    },
+    "cold_reload": {
+      "run": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-cold-reload",
+      "result_sha256": "1fb626f125068ad007bb7ff0a613c5e6cfb91081cc04a5d28b51f5404bd5040d",
+      "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_input": null,
+      "state_input_sha256": null,
+      "state_files": [],
+      "system_ram_sha256": "dae51f1976255de3e9ad121e536726a73638ace7d5fe434e5e0347a0b524ddf8",
+      "party_array_sha256": "7df7ca6a4bec170d6d5b73f0547d9062b5a0ab1cfe147b7fd836bbc764bc45db",
+      "party_records_exact_or_valid_cipher_boundary": true,
+      "party_slot_phases": [
+        {
+          "slot": 0,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 1,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 2,
+          "mode": "verified_two_byte_cipher_boundary",
+          "box": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail": {
+            "mode": "plain_prefix",
+            "split_bytes": 82
+          },
+          "decoded_checksum_valid": true,
+          "checksum": 46459
+        }
+      ],
+      "bag_savearray3_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "ui_mode": {
+        "field_system": "0x022a01e4",
+        "task": "0x023bcc44",
+        "task_data": "0x02356bc0",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      },
+      "location": [
+        60,
+        -1,
+        685,
+        408,
+        2
+      ],
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": {
+        "field": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-cold-reload/cold_final.png",
+          "sha256": "e0103c7fddf168139c8b1e3926a84bd536ad542d7afb015e50f74541bbcf5097"
+        },
+        "continue": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-cold-reload/cold_continue_accepted.png",
+          "sha256": "cb70e3582ac921da6aef2237cebd3971c538e8499328868e037b77814ff63e7f"
+        }
+      },
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-cold-reload/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db"
+        }
+      ]
+    },
+    "preconfirm": {
+      "run": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-preconfirm",
+      "result_sha256": "261a823ffdbf01d2219593e0dc15ff41c6a2b63fc21ca21fd1e09c783899f293",
+      "input_script_sha256": "edcace9232b217033c130a509a6a43dbba03503787dbd68e6ca3e27bfb20a526",
+      "state_input": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-cold/cold.state",
+      "state_input_sha256": "bd1c002db6e683ae730da33ca8c91f8f4055c9f22b9c8d0fc302584bc1ba9772",
+      "state_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-preconfirm/preconfirm.state",
+          "sha256": "e284d99fce8d6ad860d5c5856750a70859ea930899c237d1bccc36918e72b506"
+        }
+      ],
+      "system_ram_sha256": "2572d9db8d047153d4d0119c7ed7853cafb75bb633d4b32dfeeab2655918a5e3",
+      "party_array_sha256": "6fd2de773a6ecdcb72eb85112f287b72b9addcc42e8f7f85f2e7cdb16cd3255e",
+      "party_records_exact_or_valid_cipher_boundary": true,
+      "party_slot_phases": [
+        {
+          "slot": 0,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 1,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 2,
+          "mode": "byte_exact"
+        }
+      ],
+      "bag_savearray3_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "ui_mode": null,
+      "location": [
+        60,
+        -1,
+        685,
+        408,
+        2
+      ],
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": {
+        "prompt": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-preconfirm/reset_confirmation_stable.png",
+          "sha256": "28cbe5d488faed4074c829648d19ea0bba21caed83d62b24109b76e01f0b82fb"
+        }
+      },
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-preconfirm/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf"
+        }
+      ]
+    },
+    "no_confirm": {
+      "run": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-confirm",
+      "result_sha256": "5a3db0d9ecaf348b3b3df107825f9e93dff008e1c351fdf17e2935c83da650ad",
+      "input_script_sha256": "ef9f3e6aad8e075b7fff75fffa5e61e680c7278f4f1006c2fbce571264a4fd07",
+      "state_input": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-preconfirm/preconfirm.state",
+      "state_input_sha256": "e284d99fce8d6ad860d5c5856750a70859ea930899c237d1bccc36918e72b506",
+      "state_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-confirm/no-menu.state",
+          "sha256": "404091adf11544867d5469a9bca7ea6a0ca466e9d04333904b304d5274c36cce"
+        }
+      ],
+      "system_ram_sha256": "25fb27c115e8b14d958e8cc040266a02ecbc1cbbe2f7d9f59b56ba256eca8d1f",
+      "party_array_sha256": "6fd2de773a6ecdcb72eb85112f287b72b9addcc42e8f7f85f2e7cdb16cd3255e",
+      "party_records_exact_or_valid_cipher_boundary": true,
+      "party_slot_phases": [
+        {
+          "slot": 0,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 1,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 2,
+          "mode": "byte_exact"
+        }
+      ],
+      "bag_savearray3_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "ui_mode": null,
+      "location": [
+        60,
+        -1,
+        685,
+        408,
+        2
+      ],
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": {
+        "no_selected": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-confirm/confirm_no_selected.png",
+          "sha256": "b825e52d292a3932080e8221112f49b4da991a097f077643ed2c7aec19045dd1"
+        },
+        "returned_to_iv_menu": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-confirm/operation_menu_after_no.png",
+          "sha256": "df5de571434e13ed3c546655d2246ebde67fe055f820c8aaaf745ca817805aaa"
+        }
+      },
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-confirm/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf"
+        }
+      ]
+    },
+    "no_family": {
+      "run": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-family",
+      "result_sha256": "4b0483dd3589558692ba182e16797313ed3f944360d2650f9808bda79c8b715b",
+      "input_script_sha256": "1454e68b931ac5b47d4c6b27efeee0078edec71627c180a2bbc695668426e827",
+      "state_input": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-confirm/no-menu.state",
+      "state_input_sha256": "404091adf11544867d5469a9bca7ea6a0ca466e9d04333904b304d5274c36cce",
+      "state_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-family/no-family.state",
+          "sha256": "e5bbeb8f6cf1b42194b1d9958ab98f0c082185cc175594640a76160a9cbff88c"
+        }
+      ],
+      "system_ram_sha256": "3ff1bc3287f7593c45c659ec1a5a3076fdf3f8b555b1090116ce473c2fb6f529",
+      "party_array_sha256": "6fd2de773a6ecdcb72eb85112f287b72b9addcc42e8f7f85f2e7cdb16cd3255e",
+      "party_records_exact_or_valid_cipher_boundary": true,
+      "party_slot_phases": [
+        {
+          "slot": 0,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 1,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 2,
+          "mode": "byte_exact"
+        }
+      ],
+      "bag_savearray3_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "ui_mode": null,
+      "location": [
+        60,
+        -1,
+        685,
+        408,
+        2
+      ],
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": {
+        "family_menu": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-family/family_menu_stable.png",
+          "sha256": "e9544e8f6f43b5ad8df2b4eec389acc60e439444df669aa41f4c2120b19c8569"
+        }
+      },
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-no-family/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf"
+        }
+      ]
+    },
+    "yes_result": {
+      "run": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes",
+      "result_sha256": "2dcdef656f01feb29cff27f85aac91ca2f408ff0a12e6a913640d5c2c0f43b74",
+      "input_script_sha256": "2b359ef9ad8bb10e04c62bfe17c9cf04444147c3aa76492cc7bea2c898ce2976",
+      "state_input": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-preconfirm/preconfirm.state",
+      "state_input_sha256": "e284d99fce8d6ad860d5c5856750a70859ea930899c237d1bccc36918e72b506",
+      "state_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes/yes-result.state",
+          "sha256": "be5b1e89dd48533aafb94caa9668833ca43d636d1ee252f6b195c693aafe8cd4"
+        }
+      ],
+      "system_ram_sha256": "e97c06530806daa21b181bfc3ef18f55a58d1cddc28d2cbaedf8b77648ad66bb",
+      "party_array_sha256": "876086d7611b8f08564cfc7c0100060973b5614b732bda2f61ecd01eaa7509c5",
+      "party_records_exact_or_valid_cipher_boundary": true,
+      "party_slot_phases": [
+        {
+          "slot": 0,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 1,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 2,
+          "mode": "byte_exact"
+        }
+      ],
+      "bag_savearray3_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "ui_mode": null,
+      "location": [
+        60,
+        -1,
+        685,
+        408,
+        2
+      ],
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": {
+        "reset_message": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes/reset_result_stable.png",
+          "sha256": "2fcc686f8bb5e2d1123021568fea4b900fd3604d904fdb2e03fa63efd3d46ccb"
+        }
+      },
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf"
+        }
+      ]
+    },
+    "yes_ack_result": {
+      "run": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-ack-result",
+      "result_sha256": "6368a46c2eaf360666762fe0cc3569090c45b7dad0a76a84df76bd52f0db900f",
+      "input_script_sha256": "b73981f270618ab57705235055034aa144d97a0ad75d5a53f6341e0e1e025ccb",
+      "state_input": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes/yes-result.state",
+      "state_input_sha256": "be5b1e89dd48533aafb94caa9668833ca43d636d1ee252f6b195c693aafe8cd4",
+      "state_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-ack-result/after-ack.state",
+          "sha256": "5ccfee2c05962e6e03ce8ff9d6cf1342e96bba3ebba3ec0c5658fd88fb274fe4"
+        }
+      ],
+      "system_ram_sha256": "318372bfacc56e59d92bbb0594650ac999e4ba825ab63b22fcf72b8b9fdbd73e",
+      "party_array_sha256": "876086d7611b8f08564cfc7c0100060973b5614b732bda2f61ecd01eaa7509c5",
+      "party_records_exact_or_valid_cipher_boundary": true,
+      "party_slot_phases": [
+        {
+          "slot": 0,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 1,
+          "mode": "byte_exact"
+        },
+        {
+          "slot": 2,
+          "mode": "byte_exact"
+        }
+      ],
+      "bag_savearray3_exact_dsv": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "ui_mode": null,
+      "location": [
+        60,
+        -1,
+        685,
+        408,
+        2
+      ],
+      "reserve_sections_exact_rom": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "screenshots": {
+        "continue_message": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-ack-result/continue_message_or_menu.png",
+          "sha256": "a8658e396d127a731fb522e5d05502e59ac517499d38e8d40b79967c60ebcb88"
+        }
+      },
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-reset-iv-textfix-yes-ack-result/profile/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf"
+        }
+      ]
+    }
+  },
+  "acceptance": {
+    "no_then_exit": "PASS_NO_MUTATION",
+    "yes_exact_iv_reset": "PASS",
+    "native_save": "PASS",
+    "same_hash_cold_persistence": "PASS",
+    "party_bag_reserves_ui_mode": "PASS"
+  }
+}

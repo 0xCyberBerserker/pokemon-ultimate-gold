@@ -1,0 +1,498 @@
+{
+  "schema": "ultimate-gold-alpha2-frontier-outcome/v1",
+  "status": "BOUNDED_FIRST_MATCH_RETURN_SAVE_COLD_PASS",
+  "runtime": {
+    "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+    "cheats": []
+  },
+  "scope": "One registered Single match, legal touch/controller selections only, no battle codes.",
+  "observed_outcome": {
+    "opponent": "Remoraid Lv. 50",
+    "player_party_species": [
+      35,
+      152,
+      66
+    ],
+    "player_turns": 3,
+    "result_text": "No explicit win/loss result screen was captured.",
+    "classification": "All three selected party members were used; the post-match video prompt and return to the lobby indicate the match ended in defeat. Defeat is inferred, not asserted from an explicit result screen or hidden flag.",
+    "battle_video": "declined",
+    "rewards": "not tested or claimed",
+    "additional_facilities_or_streak": "not tested"
+  },
+  "native_return": {
+    "lobby_dialogue": "Thank you for playing!",
+    "party_after_return": [
+      {
+        "species": 35,
+        "level": 5,
+        "status": 0,
+        "hp": 22,
+        "max_hp": 22
+      },
+      {
+        "species": 152,
+        "level": 5,
+        "status": 0,
+        "hp": 20,
+        "max_hp": 20
+      },
+      {
+        "species": 66,
+        "level": 5,
+        "status": 0,
+        "hp": 22,
+        "max_hp": 22
+      }
+    ],
+    "save_array2_sha256": "9730878dbdeb5a9a406860b66a503944e8acaf932aeafdd64859aba9581f4576",
+    "bag_save_array3_sha256": "c6e70d7dda3e5e5dd1815778a070e6f6e8bfeb7cd750fd7c663a6c059e557bfa",
+    "save_array4_sha256": "cff139083692c7c9ca1745656bfeeb27ba16bc6e6e45d58c5240e873474c467f",
+    "var_404b": 118
+  },
+  "native_save_and_cold_reload": {
+    "post_save_dsv_sha256": "a15f0c19a0ca7fd491b253650c304ff79f54c656b24b094a0374bab1d2c9e3a5",
+    "post_save_frozen_evidence": {
+      "manifest": "night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-savewait/battery-evidence.json",
+      "manifest_sha256": "af2732dc26cc77e1f9794308b7055d6a0de05af5cfc042c7e8312c63926341f9",
+      "snapshot": "night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-savewait/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+      "sha256": "a15f0c19a0ca7fd491b253650c304ff79f54c656b24b094a0374bab1d2c9e3a5",
+      "bytes": 524410
+    },
+    "cold_reload_frozen_evidence": {
+      "manifest": "night-sprint/qa/runs/alpha2-frontier-outcome-cold-reload-corrected/battery-evidence.json",
+      "manifest_sha256": "e11421ae8f49d1dec9f0532167c51ac9b85f51cd6af495c2344ccaf537fb49a3",
+      "snapshot": "night-sprint/qa/runs/alpha2-frontier-outcome-cold-reload-corrected/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+      "sha256": "a15f0c19a0ca7fd491b253650c304ff79f54c656b24b094a0374bab1d2c9e3a5",
+      "bytes": 524410
+    },
+    "dsv_slots": [
+      {
+        "base": 0,
+        "counter": 8,
+        "crc16": 514,
+        "crc_valid": true
+      },
+      {
+        "base": 262144,
+        "counter": 7,
+        "crc16": 63004,
+        "crc_valid": true
+      }
+    ],
+    "cold_reload_frames": 5500,
+    "cold_boot_contract_checked": true,
+    "cold_loaded_lobby_menu": true,
+    "party_array2_equal_to_saved_dsv_and_return_ram": true,
+    "bag_array3_equal_to_saved_dsv_and_return_ram": true,
+    "party_after_cold": [
+      {
+        "species": 35,
+        "level": 5,
+        "status": 0,
+        "hp": 22,
+        "max_hp": 22
+      },
+      {
+        "species": 152,
+        "level": 5,
+        "status": 0,
+        "hp": 20,
+        "max_hp": 20
+      },
+      {
+        "species": 66,
+        "level": 5,
+        "status": 0,
+        "hp": 22,
+        "max_hp": 22
+      }
+    ],
+    "var_404b_after_cold": 118,
+    "cold_ram_sha256": "5c7f8af5e53cfb4ff7d2300e3e5725cf5f8fb458b9b2c465b920b6539a03eab4"
+  },
+  "runs": [
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-turn00-correction",
+      "result_sha256": "a22c300a5a47de75ab512b32d52a16e594f85463d03901c3100b5818c6bba791",
+      "input_script_sha256": "ec912a9980ff7e0cd9b8e6e9713ac24fd574f995b61169c690ef23cbc2cc9722",
+      "frames": 1000,
+      "state_input_sha256": "a4ad56f17b2f6354badbebb6e882b2c24bbc203faf08afe9e30090b68c5e7ec4",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-turn00/move-menu.state",
+      "state_output_sha256": "45aeaa027b12ed4e862b6509292210d79e2fd46c3baccf5a87798f45476bd7e1",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-turn00-correction/move-choice.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-turn01",
+      "result_sha256": "f0b15e388522b2c2988287adfa61279f722a270a07b4bf7f3158ac199b18653b",
+      "input_script_sha256": "1fa7f5e6f7269402ff8cc8a74d37271e3ac53d5e1ff7a2aeeebd5f13afd4f527",
+      "frames": 1000,
+      "state_input_sha256": "45aeaa027b12ed4e862b6509292210d79e2fd46c3baccf5a87798f45476bd7e1",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-turn00-correction/move-choice.state",
+      "state_output_sha256": "76d7a25f3dcef22cdb98bc43f87da96c90647fa4514b06841e45bd4d5fa0ea2d",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-turn01/turn01.state",
+      "main_ram_sha256": "e25465ec9965fb09c040b9bb2bb1642b425491eef4feca884a717b28ac4b3245",
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-turn01-wait",
+      "result_sha256": "5dbdb39f10311708ba4a77a6f02055242e041153a9b3ddd7192feea5707beaa8",
+      "input_script_sha256": "46e234329a2cd8d05b04320ee5f18202e2d2e7c78d7993d1a9bd3d3f04ebd0fd",
+      "frames": 1000,
+      "state_input_sha256": "76d7a25f3dcef22cdb98bc43f87da96c90647fa4514b06841e45bd4d5fa0ea2d",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-turn01/turn01.state",
+      "state_output_sha256": "fe8c4fe1786b0ab5dcfce97abde91a2bdb6280c093fa13e717788af9f2dc2498",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-turn01-wait/turn01-finished.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement1",
+      "result_sha256": "0f224a74d74276b0563b30a66abd16f3c30fcefb04dabb063956fa562b5a3b37",
+      "input_script_sha256": "78f9cf18f5cecede533413c5b9b136d6cc68243fc7ed4664c25f16aa41d8ca53",
+      "frames": 1000,
+      "state_input_sha256": "fe8c4fe1786b0ab5dcfce97abde91a2bdb6280c093fa13e717788af9f2dc2498",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-turn01-wait/turn01-finished.state",
+      "state_output_sha256": "af33a6cb8e5958bb342a8735594dc56e0cf6a3610ab652940d544791fe1e24b0",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement1/machop-select.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement2",
+      "result_sha256": "fe17e170c0554a5df51d327268b5c2eca5046ba91d8f8f7b3ff28d4c11fdbdaf",
+      "input_script_sha256": "d299d2090a15f9b5c6e7618a6f7165fe8df7169b331c3f0fb52ac9cc7250f261",
+      "frames": 1000,
+      "state_input_sha256": "af33a6cb8e5958bb342a8735594dc56e0cf6a3610ab652940d544791fe1e24b0",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-replacement1/machop-select.state",
+      "state_output_sha256": "a5e468bf25f4760216179c273c71e2aa7eb806bddc6e92c6e950eb1b5c66d7ed",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement2/machop-shift.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement3",
+      "result_sha256": "076c2012b127e1504a75ba4618b0905a97a7f8f2c4cbb45d5f3f4ca819bdfd82",
+      "input_script_sha256": "4db63030396070aae40ac5479faea0d21974f5314ac26c1a375b513cc5379ce5",
+      "frames": 1000,
+      "state_input_sha256": "a5e468bf25f4760216179c273c71e2aa7eb806bddc6e92c6e950eb1b5c66d7ed",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-replacement2/machop-shift.state",
+      "state_output_sha256": "fa2d3289a27560b5d24ba9e9f7eba38fd44a3a5b55ec033745533178f2cc4333",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement3/machop-ready.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-turn02-action",
+      "result_sha256": "d7bc7b88c6f4e73d50314810e7a18471bce99195b0b4854c29d4a6ef09654639",
+      "input_script_sha256": "c4a5ac3ebcdbc6a30d07a006d52777ebbba1744cc56a506836c847029ab03a3a",
+      "frames": 1000,
+      "state_input_sha256": "6766cf14760abb27c8c05fb2adb4548777cb250cdc54ef1260dd92ce1b187f5a",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-turn02/machop-moves.state",
+      "state_output_sha256": "817ea7e89eae79734d85c830cc02f707165be074b23faa731846fd8dde833873",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-turn02-action/turn02.state",
+      "main_ram_sha256": "d293e43356a3c6312e385477843f8fd267a326e1eb4edbc7ac94b672fd414b8a",
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-turn02-wait",
+      "result_sha256": "f6824f0cafb5eb48b02ef7bddf691ecc8537856c74054f9355aed88026f6e8ab",
+      "input_script_sha256": "71634bb03e2e1f704509025a8ab5c5e69c12a07d9fd1a165d75d9518c095cc46",
+      "frames": 1000,
+      "state_input_sha256": "817ea7e89eae79734d85c830cc02f707165be074b23faa731846fd8dde833873",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-turn02-action/turn02.state",
+      "state_output_sha256": "cd728c5d9d372572d042aaf919c2dfe9d7d0757a9969d0e400d46ae2bdee0216",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-turn02-wait/turn02-finished.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement4",
+      "result_sha256": "c121c51727d805f517277c550573e5f2ce9f18b55bf6364b9afdf88df0edc5e4",
+      "input_script_sha256": "58f48e932c14f2492b432278d3da769bf6e58e6b35868f8452f650019546418d",
+      "frames": 1000,
+      "state_input_sha256": "cd728c5d9d372572d042aaf919c2dfe9d7d0757a9969d0e400d46ae2bdee0216",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-turn02-wait/turn02-finished.state",
+      "state_output_sha256": "6a6154c09708885036d57717380a95171184872051dc6d75667c8913a1fc7ec4",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement4/chikorita-select.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement5",
+      "result_sha256": "8c73a6ab3145c5a9ab1d04a86ea1c61a6305b5c10a389f30482af1c170900d3d",
+      "input_script_sha256": "d16fa0a6637586da5c8ccf46cf3cf147d47e3145b67c9faacc3c971ac8455ab4",
+      "frames": 1000,
+      "state_input_sha256": "6a6154c09708885036d57717380a95171184872051dc6d75667c8913a1fc7ec4",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-replacement4/chikorita-select.state",
+      "state_output_sha256": "296f4a3800a8e6413c835991db7dc0573130e934f894ae2047aa10877926132c",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement5/chikorita-shift.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement6",
+      "result_sha256": "a0cb95724f6291c50259443c6d082716f2d60b14699e8fec810c4dd6f26986be",
+      "input_script_sha256": "a8d1da078c50a8bd72e698b541ce3954b2e3a6f0b39396c958c417897b3acd95",
+      "frames": 1000,
+      "state_input_sha256": "296f4a3800a8e6413c835991db7dc0573130e934f894ae2047aa10877926132c",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-replacement5/chikorita-shift.state",
+      "state_output_sha256": "b23e4221c48fd80c6d218dbec75130bb410ed2390730a91980f4b54f2a0eab01",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-replacement6/chikorita-ready.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-turn03-action",
+      "result_sha256": "2025ae75f767ba64ae108da74978bf0fd06df7850e2a6c89596f313e18ed0cc0",
+      "input_script_sha256": "a5ce9886417e88eabf470d1b58c3e757e579d0ace023379cad41f6abba99e7d7",
+      "frames": 1000,
+      "state_input_sha256": "f3ba2a480c0ccb681890632f109904d08ef8ef550f3d068ab33b569b90bda2a3",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-turn03/chikorita-moves.state",
+      "state_output_sha256": "e02872ff624daa36c6339fc81cbf3771d0c68e3849bd48e2743c843e67bde6c5",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-turn03-action/turn03.state",
+      "main_ram_sha256": "a3d910ddecb63b2f11228c19b6026a5aa672a16169a413e215acb4dce9bc35fb",
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-turn03-wait",
+      "result_sha256": "2ee2bbaf84700cefab21e5cbcaf9ab08e366f6dd97a9705fd0d4a7b9e1618fbc",
+      "input_script_sha256": "f7ad62341d5e9b6421d8c22d40f407f5981db6aa7dc7bc5784443605832dca76",
+      "frames": 1000,
+      "state_input_sha256": "e02872ff624daa36c6339fc81cbf3771d0c68e3849bd48e2743c843e67bde6c5",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-turn03-action/turn03.state",
+      "state_output_sha256": "7695ec42c11270c1f7ba5fc6d266f0aae1af9feb3fdc5868cfcef002895d4229",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-turn03-wait/turn03-finished.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-result1-correction",
+      "result_sha256": "c4188b1f605c9d27c7fb911496ea10b2458eab8662249e8015dd8f78c16d4350",
+      "input_script_sha256": "9cbebc499ea62f13b732360d5011a7005310a1bd3f62881157db8340a10f4e3a",
+      "frames": 1000,
+      "state_input_sha256": "2d545fa974bec1d105a2267dbe6c4a3b29243e8ed4038a99c36dec264ded319d",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-result1/post-prompt.state",
+      "state_output_sha256": "2446206df2c92b99715b615125a3d3b587acda9301bb8791f815cb158181e340",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-result1-correction/no-video.state",
+      "main_ram_sha256": "f3db90d1839263befb93a10a2ae04aa3fd62d9ecf69eedc243f4a96d90f12088",
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-result2",
+      "result_sha256": "7f3ffc868c9a4cefe6e5f1c3c9395452b49cc064169719367cc17702ca04923a",
+      "input_script_sha256": "397a5400f8e9c73c2cdabf42f2453ada5a19683bc2009829a9a1969229bd77b6",
+      "frames": 1000,
+      "state_input_sha256": "2446206df2c92b99715b615125a3d3b587acda9301bb8791f815cb158181e340",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-result1-correction/no-video.state",
+      "state_output_sha256": "ab9da8c5607505e56907756322a311e0260ed49beaed2d7d7c2abf7991f3b880",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-result2/result.state",
+      "main_ram_sha256": "2e187da09d1cc5cd3177219e5cb79aafce5f75f0e5fc6538eb38b322ff0d0590",
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-dismiss",
+      "result_sha256": "b52f8a910c6e5e1eb79e00c2ee002ba53574625547cd57ac27aa0804c89049ca",
+      "input_script_sha256": "c835bc79e6821bac5488b79e28e4a9ec23dd4ff71d053997404e43b558a20ba2",
+      "frames": 1000,
+      "state_input_sha256": "b58500044dfab967fe87e7d661272700efb0d283b38eb8613c9be9fbc01174c8",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-postbattle-menu/menu.state",
+      "state_output_sha256": "ca4a6610479fdc38204016223ea607ea3221351f6ffa582753f785824120bfd0",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-dismiss/dismissed.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "a15f0c19a0ca7fd491b253650c304ff79f54c656b24b094a0374bab1d2c9e3a5",
+      "dsv_snapshot_status": "CURRENT_FILE_MATCHES_RESULT_NOT_FROZEN",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-savewait",
+      "result_sha256": "72a55fc5a91403d9209cc2bbf79f23bad6e9eafb70c5709e3ef768f137127a09",
+      "input_script_sha256": "7a758f6f3987f896bf92e3a67f0ddc0f1e937764c7b4820f3a7b76278e1ea0fb",
+      "frames": 1000,
+      "state_input_sha256": "ca4a6610479fdc38204016223ea607ea3221351f6ffa582753f785824120bfd0",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-postbattle-dismiss/dismissed.state",
+      "state_output_sha256": "adecdc5f0a39b7b508dd9eba9f3317d71d4b943fd6d862ecf61a673005150b47",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-savewait/auto-saved.state",
+      "main_ram_sha256": "7034aef28ffc554ad6e0975f40875fbf7481ddc8afd383de49a8f4d0a4c92bc3",
+      "dsv_sha256": "a15f0c19a0ca7fd491b253650c304ff79f54c656b24b094a0374bab1d2c9e3a5",
+      "dsv_snapshot_status": "FROZEN",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-cold-reload-corrected",
+      "result_sha256": "924ad4eaf23f9f7c33633646c6426dc5462c4aba32da4554813b8ffad6cbbb11",
+      "input_script_sha256": "8585149159c5372f3c4216b751ad664a10544426e37b889670685c83e1467097",
+      "frames": 5500,
+      "state_input_sha256": null,
+      "state_input_path": null,
+      "state_output_sha256": "c6e58247171a3db2e87e44c4b11c3b573a6446687b6cc0cf56cfbbd4614fc87f",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-cold-reload-corrected/cold-loaded.state",
+      "main_ram_sha256": "5c7f8af5e53cfb4ff7d2300e3e5725cf5f8fb458b9b2c465b920b6539a03eab4",
+      "dsv_sha256": "a15f0c19a0ca7fd491b253650c304ff79f54c656b24b094a0374bab1d2c9e3a5",
+      "dsv_snapshot_status": "FROZEN",
+      "cheats": []
+    }
+  ],
+  "state_feeders": [
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-turn00",
+      "result_sha256": "f3f32f5e0d19feca37bea491da5b7d7a5778fcfc937520beb0ad7201c9f88c98",
+      "input_script_sha256": "aad2a2c64f4e613ac4cd9d69d368cae716175cb75c2813ae5d91b88fcce25ec5",
+      "frames": 1000,
+      "state_input_sha256": "2041526c35669422814297ebac0740295fb6f4e42549242b351d826ad30759ef",
+      "state_input_path": "qa/runs/alpha2-frontier-registration-stage23/battle-loaded.state",
+      "state_output_sha256": "a4ad56f17b2f6354badbebb6e882b2c24bbc203faf08afe9e30090b68c5e7ec4",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-turn00/move-menu.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-turn02",
+      "result_sha256": "c7b2f84a15f77a787a59fe538f8283374f1fab79766faccf23a1dc0461d9d01c",
+      "input_script_sha256": "f7a6d35ab433010c42d14fa322f0d61f67b59affdd6f1ee6ee9805094b7c1981",
+      "frames": 1000,
+      "state_input_sha256": "fa2d3289a27560b5d24ba9e9f7eba38fd44a3a5b55ec033745533178f2cc4333",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-replacement3/machop-ready.state",
+      "state_output_sha256": "6766cf14760abb27c8c05fb2adb4548777cb250cdc54ef1260dd92ce1b187f5a",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-turn02/machop-moves.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-turn03",
+      "result_sha256": "6e7cec450f5434fc1c1aadecccc7abb4be817be9c6167567cbd163f568f6baa6",
+      "input_script_sha256": "298153784c8a21ff7ce4de97eaec5d99bd5280919a105ff97dfc4b19a668e373",
+      "frames": 1000,
+      "state_input_sha256": "b23e4221c48fd80c6d218dbec75130bb410ed2390730a91980f4b54f2a0eab01",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-replacement6/chikorita-ready.state",
+      "state_output_sha256": "f3ba2a480c0ccb681890632f109904d08ef8ef550f3d068ab33b569b90bda2a3",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-turn03/chikorita-moves.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-result1",
+      "result_sha256": "5f32d9c53c184933263bb9b28ac76d371a4c29889e39a7b24c07eaa5bcf500df",
+      "input_script_sha256": "0a133b7e5d8a3f53d83dbdbefe0000b2fb84b781ea115bf62080b3a8579bd5fe",
+      "frames": 1000,
+      "state_input_sha256": "7695ec42c11270c1f7ba5fc6d266f0aae1af9feb3fdc5868cfcef002895d4229",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-turn03-wait/turn03-finished.state",
+      "state_output_sha256": "2d545fa974bec1d105a2267dbe6c4a3b29243e8ed4038a99c36dec264ded319d",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-result1/post-prompt.state",
+      "main_ram_sha256": "7f62d361c5b603a5bba4d3d37d353d9700ac84460ebd8db0d6bfa6d121168967",
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    },
+    {
+      "run": "night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-menu",
+      "result_sha256": "576eeb87e8385999d6615f6c7e4415045fbaa3cf3832b4ef464e1bcf30afb3b6",
+      "input_script_sha256": "0844f4f6719af1a95ad2d48d05f97a430a15e8b32acbed06dd20e7a344c40546",
+      "frames": 1000,
+      "state_input_sha256": "ab9da8c5607505e56907756322a311e0260ed49beaed2d7d7c2abf7991f3b880",
+      "state_input_path": "qa/runs/alpha2-frontier-outcome-result2/result.state",
+      "state_output_sha256": "b58500044dfab967fe87e7d661272700efb0d283b38eb8613c9be9fbc01174c8",
+      "state_output_path": "night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-menu/menu.state",
+      "main_ram_sha256": null,
+      "dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+      "dsv_snapshot_status": "RECORDED_HASH_ONLY_SNAPSHOT_UNAVAILABLE",
+      "cheats": []
+    }
+  ],
+  "captures": [
+    {
+      "file": "night-sprint/qa/runs/alpha2-frontier-outcome-turn00-correction/fight_button_after_touch.png",
+      "sha256": "bf226ff4f9fba1d8f3c79604839f0b7e3723b9d9036a46158fd6cc66f0e8322d"
+    },
+    {
+      "file": "night-sprint/qa/runs/alpha2-frontier-outcome-turn01/turn01_resolved.png",
+      "sha256": "519d49a5c4e2025b7e95b722970678c127dd079607fdcacf930cbb93f3ce2b86"
+    },
+    {
+      "file": "night-sprint/qa/runs/alpha2-frontier-outcome-turn01-wait/turn01_end.png",
+      "sha256": "0fb7a76ce299ad8b7c0301a54da6c0d68e2793c87a8c12d53fb333135a4e625f"
+    },
+    {
+      "file": "night-sprint/qa/runs/alpha2-frontier-outcome-turn02-action/turn02_result.png",
+      "sha256": "4780196e729d6944060ca57c888ab245dd9b77e218d3ffae2658f2296623adaf"
+    },
+    {
+      "file": "night-sprint/qa/runs/alpha2-frontier-outcome-turn02-wait/turn02_end.png",
+      "sha256": "4b5f40d2db2e1ad8c8d187577f0850cf93bbdc668cc88f98a22b9c15b0e5c24a"
+    },
+    {
+      "file": "night-sprint/qa/runs/alpha2-frontier-outcome-turn03-action/turn03_result.png",
+      "sha256": "34690583e42c17124526d264b23a7228d85da75f40131d7d7af88db7789e9680"
+    },
+    {
+      "file": "night-sprint/qa/runs/alpha2-frontier-outcome-turn03-wait/turn03_end.png",
+      "sha256": "c65d387ca50a511b71924b8c4398de265ec70c50e2c37dce7bbf8ed6587e3f50"
+    },
+    {
+      "file": "night-sprint/qa/runs/alpha2-frontier-outcome-result2/battle_result_transition_300.png",
+      "sha256": "ac5187145ec02a55cb5a531f2c59345dc40cc034e838072845077c63dd2a2e03"
+    },
+    {
+      "file": "night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-dismiss/postbattle_message_dismissed.png",
+      "sha256": "fb6cccd71b4387e244bf7fd4e2049c587849ebbdebb4d46051e51a10d94bfa25"
+    },
+    {
+      "file": "night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-savewait/auto_save_complete.png",
+      "sha256": "8ce61787c8f32809e839cd5e894b8c91d745d9085c4d1561dd4086d81fc7194e"
+    },
+    {
+      "file": "night-sprint/qa/runs/alpha2-frontier-outcome-cold-reload-corrected/loaded_location.png",
+      "sha256": "68706b5b2247c2a9b8b6ad68d841feed3fe7bf2b91887c39197c20c5eefcdee3"
+    }
+  ],
+  "excluded_attempt": {
+    "run": "night-sprint/qa/runs/alpha2-frontier-outcome-cold-reload",
+    "reason": "Only 1000 frames were run; the Continue inputs were scheduled later. Superseded by the corrected 5500-frame cold boot."
+  },
+  "limits": [
+    "The first Battle Tower match only was played; result classification is inferred because no explicit victory/defeat screen or outcome flag was captured.",
+    "No victory, reward, seven-match streak, additional facility, rejection, full-party replay, or trade-off claim is made.",
+    "The cold boot reached the lobby challenge menu. No additional menu selection or second battle was performed.",
+    "Local screenshots, RAM, emulator states, and DSV are not included in the website repository; filenames and hashes identify local evidence."
+  ]
+}

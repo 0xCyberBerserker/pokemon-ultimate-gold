@@ -1,0 +1,21 @@
+# Alpha2 Battle Tower: first-match outcome
+
+## English
+
+**Result: one native Single match ended and returned to the Battle Tower lobby; native save and cold reload passed.** The opponent was Remoraid Lv. 50. The three selected Pokémon were Clefairy, Chikorita, and Machop. Legal touch/controller inputs selected Pound, Low Kick, and Tackle across three turns. The interface showed the first two Pokémon fainting, then presented the post-match Battle Video prompt and returned to the lobby. The defeat is inferred from the match ending after all three selected Pokémon were used; no explicit win/loss result screen or hidden outcome flag was captured.
+
+After the return, the native lobby displayed “Thank you for playing!” and saved. The post-save DSV has valid CRCs in both slots, counters 8 and 7, and SHA-256 `a15f0c19a0ca7fd491b253650c304ff79f54c656b24b094a0374bab1d2c9e3a5`. Exact battery snapshots are frozen under `night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-savewait/battery-evidence/` and `night-sprint/qa/runs/alpha2-frontier-outcome-cold-reload-corrected/battery-evidence/`; their manifests are hashed in the JSON report. On cold reload, the game returned to the lobby challenge menu. SaveArray2 (party) and SaveArray3 (Bag) match byte-for-byte between the post-match RAM, cold RAM, and selected saved DSV. All three Pokémon had full HP and no status condition after the return and reload. `VAR404B` remained 118.
+
+The bounded machine-readable evidence, including ROM/core/runner hashes, run records, and screenshot hashes, is in [qa-alpha2-frontier-outcome.json](qa-alpha2-frontier-outcome.json). Screenshots, RAM dumps, states, and DSV files are retained locally under `night-sprint/qa/runs/alpha2-frontier-outcome-*`; these files are not included in the website repository.
+
+This covers one match only. It does not claim a victory, reward, seven-match streak, additional facility, repeat-entry behavior, or rejection/full-party behavior. The first 1,000-frame cold-start attempt did not reach its scheduled Continue inputs and is excluded; the corrected 5,500-frame Continue sequence is the one audited.
+
+## Español
+
+**Resultado: un combate Individual nativo terminó y volvió al vestíbulo de Battle Tower; el guardado nativo y la recarga en frío pasaron.** El rival fue Remoraid Nv. 50. El equipo seleccionado fue Clefairy, Chikorita y Machop. Con entradas táctiles y de mando válidas se eligieron Pound, Low Kick y Tackle durante tres turnos. La interfaz mostró la derrota de los dos primeros Pokémon y, después, el aviso para guardar el vídeo del combate; luego volvió al vestíbulo. Se infiere la derrota porque el combate terminó tras usar los tres Pokémon seleccionados; no se capturó una pantalla explícita de victoria/derrota ni una bandera interna del resultado.
+
+Al volver, el vestíbulo mostró «Thank you for playing!» y guardó de forma nativa. El DSV posterior al guardado tiene CRC válido en ambas ranuras, contadores 8 y 7, y SHA-256 `a15f0c19a0ca7fd491b253650c304ff79f54c656b24b094a0374bab1d2c9e3a5`. Las copias exactas del DSV están congeladas en `night-sprint/qa/runs/alpha2-frontier-outcome-postbattle-savewait/battery-evidence/` y `night-sprint/qa/runs/alpha2-frontier-outcome-cold-reload-corrected/battery-evidence/`; el JSON registra el hash de cada manifiesto. La recarga en frío volvió al menú de desafío del vestíbulo. SaveArray2 (equipo) y SaveArray3 (Bolsa) coinciden byte por byte entre la RAM tras el combate, la RAM en frío y la ranura seleccionada del DSV. Los tres Pokémon tenían todos sus PS y ningún problema de estado tras volver y recargar. `VAR404B` permaneció en 118.
+
+La evidencia legible por máquina —con hashes de ROM, core, runner, ejecuciones y capturas— está en [qa-alpha2-frontier-outcome.json](qa-alpha2-frontier-outcome.json). Las capturas, volcados de RAM, estados y DSV se conservan localmente en `night-sprint/qa/runs/alpha2-frontier-outcome-*`; estos archivos no se incluyen en el repositorio del sitio.
+
+La prueba cubre un solo combate. No afirma una victoria, recompensa, racha de siete combates, otra instalación, comportamiento de reentrada ni rechazo/equipo lleno. El primer arranque en frío de 1.000 fotogramas no alcanzó sus entradas Continue programadas y queda excluido; se audita la secuencia corregida de Continue de 5.500 fotogramas.

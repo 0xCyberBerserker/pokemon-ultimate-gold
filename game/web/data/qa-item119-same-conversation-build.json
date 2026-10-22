@@ -1,0 +1,82 @@
+{
+  "schema": "portable-stat-editor-rocket-same-conversation-static-build/v1",
+  "status": "STATIC_BUILD_PASS_NATIVE_QA_PENDING",
+  "runtime": "NOT_RUN",
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/stat-editor-nature-integrated-rocket08e-same-conversation/ultimate-gold-stat-editor-nature-integrated-same-conversation.nds",
+    "sha256": "bd50a9d18ebc4397316a58595710ed7ed205dea839af4666af975a0373bf3164",
+    "written_sha256": "bd50a9d18ebc4397316a58595710ed7ed205dea839af4666af975a0373bf3164"
+  },
+  "parent": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/stat-editor-nature-integrated-rocket08e/ultimate-gold-stat-editor-nature-integrated.nds",
+    "sha256": "2eaf226677be97b95175035917cb96aa47b761cd993aa5a1bdb0eb2619dbf43f",
+    "build_report_sha256": "5e2e80e26d355b2fe32959e32e1c34436896c3f25995b70583b467ad240b5459"
+  },
+  "scope": "One same-conversation hook after successful legacy item-118 grant; no core/runtime launched.",
+  "script_patch": {
+    "nds_path": "a/0/1/2",
+    "member": 842,
+    "member_before_sha256": "8b52cd2c1040cca28fd9538152a5dc951231e1f4c18bb686583e97e11bb91a9c",
+    "member_after_sha256": "734e524a9c47dafa5a7f33b5376a8faedade571e54fc8862832b8053a8eb9086",
+    "member_bytes_before_after": [
+      8858,
+      8868
+    ],
+    "entry_index": 15,
+    "entry_target_unchanged": 8617,
+    "all_18_entry_targets_unchanged": true,
+    "hook": {
+      "legacy_tail_range": [
+        8589,
+        8595
+      ],
+      "legacy_tail_preimage_hex": "350061000200",
+      "legacy_tail_replacement_hex": "160007010000",
+      "hook_target": 8858,
+      "trampoline_range": [
+        8858,
+        8868
+      ],
+      "trampoline_hex": "35006100160020ffffff",
+      "editor_target": 8644,
+      "failure_branch_target": 8595,
+      "legacy_gift_items": [
+        113,
+        114,
+        155,
+        154,
+        157,
+        50,
+        77,
+        78,
+        118
+      ],
+      "old_member_prefix_except_success_tail_byte_exact": true,
+      "existing_wrapper_byte_exact": true
+    },
+    "flow": {
+      "item_118_absent_at_entry": "Original nine-gift path runs unchanged.",
+      "item_118_give_and_postcheck_success": "Existing success message is acknowledged, then the existing item-119 offer branch runs in the same Rocket interaction.",
+      "item_118_give_or_postcheck_failure": "Existing failure branch at 0x2193 and its end remain byte-exact.",
+      "earlier_no_or_failed_gift": "Existing legacy path exits before the hook.",
+      "item_118_present_at_entry": "Existing wrapper offer/already-owned behavior is unchanged.",
+      "item_119_no_or_add_failure": "Existing wrapper exits without a flag; next interaction remains retryable."
+    }
+  },
+  "file_diff_allowlist": {
+    "changed_nds_paths": [
+      "a/0/1/2"
+    ],
+    "changed_script_members": [
+      842
+    ],
+    "text_bank_40_unchanged": true,
+    "event_narc_unchanged": true,
+    "item_narc_unchanged": true,
+    "arm9_arm7_unchanged": true
+  },
+  "limits": [
+    "Static ROM construction only; no native gameplay, save, or cold-recovery claim.",
+    "A QA core smoke is still required before accepting same-conversation behavior."
+  ]
+}

@@ -1,0 +1,881 @@
+{
+  "schema": "portable-stat-editor-nature-integrated-no-save-cold-acceptance/v1",
+  "status": "PASS_BOUNDED_NATIVE_NO_BRANCH_SAVE_COLD_SUMMARY",
+  "summary_en": "On the exact integrated ROM, declining Hardy preserved the already accepted Lonely Nature and its recalculated stats. The game then saved natively, cold-loaded the saved battery without a state input or cheats, and the Summary displayed Lonely for Clefairy. The original setter acceptance and this No/save/cold path remain bounded; this does not validate reset or PC storage.",
+  "summary_es": "En la ROM integrada exacta, rechazar Hardy conservó la naturaleza Lonely ya aceptada y sus estadísticas recalculadas. Después se guardó de forma nativa, se cargó en frío la batería sin estado de entrada ni códigos y el Resumen mostró Lonely para Clefairy. La aceptación inicial del setter y esta rama No/guardado/arranque en frío siguen acotadas; no validan reset ni almacenamiento PC.",
+  "provenance": {
+    "rom_sha256": "2eaf226677be97b95175035917cb96aa47b761cd993aa5a1bdb0eb2619dbf43f",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "no_runtime_cheats": true,
+    "phase1_report": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-phase1-audit-v3/acceptance.json",
+    "phase1_report_sha256": "69818946917e1615c9ac59dcb4e9f1a818b0f972b16cb611c790b6cc1c12ba1a",
+    "phase1_input_mutation_state_sha256": "6f0814b7397cbe254ff03ec42e979f89ea5fd8f7689b1a3ebf92419e1185813b",
+    "seed_battery_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "saved_battery_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+    "save_battery_sidecar": {
+      "sidecar_sha256": "5c65068ff4c683c78302028a2b1a7708fad069cef8cc862e0a5e1b25f8cc9ac6",
+      "result_sha256": "e311b1c9a63262c6f5f20d9a58153da091b122c3f28fe440fd556d004461669f",
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-overwrite-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+      "sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "bytes": 524410
+    },
+    "cold_battery_sidecar": {
+      "sidecar_sha256": "b9f4f42f563fababdd5bbf10d26ca36c7866d7f0e22f6c2cf3940353c541110d",
+      "result_sha256": "98d732a5c8eedeb4227c71f409d1e7a8abd651c133c11aa16b329dd0e29eaffa",
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-fresh-cold-save-corrected-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+      "sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "bytes": 524410
+    }
+  },
+  "no_branch": {
+    "party_array_sha256": "63f77eca784485eb4699c858586f2f427c24079d563bbc618bcec352d8ee5127",
+    "party_equal_to_lonely_yes_baseline": true,
+    "no_confirmation_runtime": {
+      "pc": "0x022B14A0",
+      "pc_offset": 19203,
+      "opcode": 53,
+      "script_context_mode": 2,
+      "vars_8004_8005_800C": [
+        0,
+        1,
+        1
+      ],
+      "confirm_var_8006": 1,
+      "nature_recalc_opcode_858_offset": 19272,
+      "branch_at_closemsg_bypasses_recalc": true
+    }
+  },
+  "native_save_and_cold": {
+    "save_dsv": {
+      "base": 262144,
+      "counter": 11,
+      "crc16": 15391
+    },
+    "cold_loaded_dsv": {
+      "base": 262144,
+      "counter": 11,
+      "crc16": 15391
+    },
+    "dsv_saved_equals_cold_loaded": true,
+    "cold_party_strict_cipher_boundary": {
+      "selected_dsv_counter": 11,
+      "selected_dsv_crc16": 15391,
+      "source_array_sha256": "63f77eca784485eb4699c858586f2f427c24079d563bbc618bcec352d8ee5127",
+      "observed_array_sha256": "558dfa1d4a454cbe7812a82dde79b1fd05b49a5c9c0b858f943e45c33c27ed62",
+      "strict_cipher_boundary_match": true,
+      "party_count": 3,
+      "records": [
+        {
+          "slot": 0,
+          "record_sha256": "f3bbb76efad4afe227095d7901eb8ea9e03e4d20f4ef0fba88187fca8575fd5f",
+          "record_equal": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": true,
+          "decoded_fields_match_when_decodable": true
+        },
+        {
+          "slot": 1,
+          "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+          "record_equal": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": true,
+          "decoded_fields_match_when_decodable": true
+        },
+        {
+          "slot": 2,
+          "record_sha256": "797338abf4d8e6c26ce54f9e5f5dae69ac99c2081b96c73482bb363e24802540",
+          "record_equal": false,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 18
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_suffix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": false,
+          "decoded_fields_match_when_decodable": false
+        }
+      ],
+      "decoded_fields": [
+        {
+          "slot": 0,
+          "semantic_match": true
+        },
+        {
+          "slot": 1,
+          "semantic_match": true
+        }
+      ]
+    },
+    "slot0": {
+      "pid": "0xE30363E2",
+      "species_id": 35,
+      "field114_word": "0x0004",
+      "encoded_nature": 2,
+      "effective_nature": "Lonely",
+      "stats_hp_current_max_atk_def_spd_spatk_spdef": [
+        22,
+        22,
+        9,
+        9,
+        10,
+        12,
+        11
+      ],
+      "checksum_valid": true,
+      "record_byte_exact_to_saved_dsv": true
+    },
+    "save_array3_byte_exact_to_saved_dsv": true,
+    "bpac": {
+      "bytes": 2376,
+      "sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+      "cache_magic": "0x43415042",
+      "projection_matches_save_array3": true,
+      "key_item_118": 1,
+      "editor_item_119": 1,
+      "key_pocket_occupied": 6
+    }
+  },
+  "no_branch_runs": [
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-no-ack-20261022-01",
+      "frames": 1000,
+      "result_sha256": "a1aed68bfb30dbc04b478a4aed98fe3dccdfc4620d63bbee4c5c5f22f831fc25",
+      "input_script_sha256": "1872b24971efeb4af6cf004cabdbedd33b4e664218594fcf4dfd380eb9984ed2",
+      "state_input_sha256": "6f0814b7397cbe254ff03ec42e979f89ea5fd8f7689b1a3ebf92419e1185813b",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-ack-20261022-01/acknowledged.state",
+      "state_output_sha256": "0cf654cf01fd96629a383a5c26b6c197952f12ed705dcae69de2158c7f6503da",
+      "system_ram_sha256": "833e0c573e6fc8ab85c5b8e73980cb7cfb2b4202dab73ed60d39a8a344fb2c89",
+      "battery_snapshot": {
+        "sidecar_sha256": "e8e10d98a5759ae106b3e587d39ffe1cf4cdecd65ee2db99bee12b37edb6fe43",
+        "result_sha256": "a1aed68bfb30dbc04b478a4aed98fe3dccdfc4620d63bbee4c5c5f22f831fc25",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-ack-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "ack_before.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-ack-20261022-01/ack_before.png",
+          "sha256": "401a054f3518fdff3d161695b6d0033318ce676fa7f509e70281e3be6f3f6cb6"
+        },
+        {
+          "name": "after_ack_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-ack-20261022-01/after_ack_mid.png",
+          "sha256": "0e563810b6ea40025c25c3a30e489838d9391bca3543a99785b9ef58b69453d6"
+        },
+        {
+          "name": "after_ack_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-ack-20261022-01/after_ack_stable.png",
+          "sha256": "1fc86c0b2678e7434bc8e395ed82ef562978a45a686c98d341186d7b76dd9c63"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-set-reopen-20261022-01",
+      "frames": 1000,
+      "result_sha256": "629f7eb38295eeaee40c74cb4834fa9fca3ca865e5ece2a44414ee46cd472103",
+      "input_script_sha256": "bfcba4b070c98b9656415f8a2634b38ccf689120a007a4bb72081c97f93110e6",
+      "state_input_sha256": "0cf654cf01fd96629a383a5c26b6c197952f12ed705dcae69de2158c7f6503da",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-set-reopen-20261022-01/set.state",
+      "state_output_sha256": "200fd19b64ce7e8daaf4526332cc12e7a6941ae2aad2ef5852ae6ac8329cc583",
+      "system_ram_sha256": "20f0067a319561fb0d0e18f8730441b5c6c02f184f298fd1f49ae3225a1cba94",
+      "battery_snapshot": {
+        "sidecar_sha256": "843a5aa095f31d2aef1f097a5137382c6977fe90721ab6c67ffcc6e9cb610224",
+        "result_sha256": "629f7eb38295eeaee40c74cb4834fa9fca3ca865e5ece2a44414ee46cd472103",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-set-reopen-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "set_before.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-set-reopen-20261022-01/set_before.png",
+          "sha256": "d5fe4bf06f67952a305d6619a11b3ab8fd647fa2c6411248341a29522cad8459"
+        },
+        {
+          "name": "set_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-set-reopen-20261022-01/set_mid.png",
+          "sha256": "55becb7c341f9699032c5004224e3f07c216cee664dacdf5a53815067b54703e"
+        },
+        {
+          "name": "set_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-set-reopen-20261022-01/set_stable.png",
+          "sha256": "34682763069771dc4834babc792f3c8c0d334de20b13628bc260d8c268e83cbd"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-nature-no-ack-20261022-01",
+      "frames": 1000,
+      "result_sha256": "3d33bd04c1fdd9e8841d575140ef5188a03f7b351aa6df1503fd681e50ece569",
+      "input_script_sha256": "88cc36c65a534c18d698eee73dc296de062b2275746952c846074dd4db6aab61",
+      "state_input_sha256": "200fd19b64ce7e8daaf4526332cc12e7a6941ae2aad2ef5852ae6ac8329cc583",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-no-ack-20261022-01/options.state",
+      "state_output_sha256": "ac773b01685f26740afdfdc8a6dee5827890c45d84ada55fa726df319decfa50",
+      "system_ram_sha256": "86266e993567b8b9532c5130d576e5440b1de284522e8b4b945a1dac3dc204c7",
+      "battery_snapshot": {
+        "sidecar_sha256": "3f9f7ab303e6dd9419a88bfd95e670fe7af3393bdf807619d5733ecc8b7311b7",
+        "result_sha256": "3d33bd04c1fdd9e8841d575140ef5188a03f7b351aa6df1503fd681e50ece569",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-no-ack-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "page_before_ack.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-no-ack-20261022-01/page_before_ack.png",
+          "sha256": "600e49535705236066ecef333ea4f1c4b084c416fb354cbcee0ce150f6638e86"
+        },
+        {
+          "name": "page_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-no-ack-20261022-01/page_mid.png",
+          "sha256": "c21b4695233f63b22af9fbb715a1816c5030c56c667b6ae4d8001db24ace3662"
+        },
+        {
+          "name": "page_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-nature-no-ack-20261022-01/page_stable.png",
+          "sha256": "f85e0c748334b8620d3bd5572034136addb4f99868c3023560bd6b0348629ba9"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-no-hardy-20261022-01",
+      "frames": 1000,
+      "result_sha256": "0af83c707433e753640756c54a9f9ef515a749a494af29e47983dbe884dfa347",
+      "input_script_sha256": "93847de3c67641669c1b4fda4c053d344d620069ef11040011f1bd5303e9cbc0",
+      "state_input_sha256": "ac773b01685f26740afdfdc8a6dee5827890c45d84ada55fa726df319decfa50",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-hardy-20261022-01/hardy_preview.state",
+      "state_output_sha256": "5f08a5642a50e4787edadbe5ca3c7a9f18fe4652d72372cfe789a3b43ccd6fa9",
+      "system_ram_sha256": "6d7a708029f12ef480af5be70319de348e859884c27fb5b53562f1c95beab75e",
+      "battery_snapshot": {
+        "sidecar_sha256": "845d396865cdf5f8c3652dc831eab72dc251d83d31dffb53b6ff296eb273f38a",
+        "result_sha256": "0af83c707433e753640756c54a9f9ef515a749a494af29e47983dbe884dfa347",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-hardy-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "hardy_before.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-hardy-20261022-01/hardy_before.png",
+          "sha256": "05e422f21c6bef1f159d82238330537fadf68715715545f1d36e2995eb0fe2b9"
+        },
+        {
+          "name": "hardy_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-hardy-20261022-01/hardy_mid.png",
+          "sha256": "c555d78edfb27367c1fde4b18fcee268139bfc1e5e971e3b44da8b04ccb13f92"
+        },
+        {
+          "name": "hardy_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-hardy-20261022-01/hardy_stable.png",
+          "sha256": "3fc401c2558619dfe89fa1f70067b9667c6f46a585dc0c0910f1ed4ba2c9c46c"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-no-select-20261022-01",
+      "frames": 1000,
+      "result_sha256": "9be8ad2f62554c681c9ce32ca23cd251391af891a23747c1c285564dd6d90344",
+      "input_script_sha256": "7450d6c89f0ed12562088f1e769f8a335ff38833d727f27516abafa4cb231616",
+      "state_input_sha256": "5f08a5642a50e4787edadbe5ca3c7a9f18fe4652d72372cfe789a3b43ccd6fa9",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-select-20261022-01/no_selected.state",
+      "state_output_sha256": "fbbcb461de8ec1f1351596cd91b6604b9a262cae9e5c935c69ec6cae2e26aee5",
+      "system_ram_sha256": "807c91c18b1e39b9eb58adfcdc51266d0ce1a1341d24d1c75463a9c0a7ebdc73",
+      "battery_snapshot": {
+        "sidecar_sha256": "1077fad2c2cbc4344fecdbfba0c4d1161b6bee7909a8d41e5c26c784fa1051cf",
+        "result_sha256": "9be8ad2f62554c681c9ce32ca23cd251391af891a23747c1c285564dd6d90344",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-select-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "no_selected_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-select-20261022-01/no_selected_mid.png",
+          "sha256": "db0c9c267559ee4f9ce6a31ddb3fec5001a4681bc76c2afc5d291fccdcef69d0"
+        },
+        {
+          "name": "no_selected_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-select-20261022-01/no_selected_stable.png",
+          "sha256": "691a7c1d30cd1390704947e0161e29ee7ff37396d541a5d3cb01f6d0071a1a40"
+        },
+        {
+          "name": "yes_before_down.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-select-20261022-01/yes_before_down.png",
+          "sha256": "61839bcb5bd6de18eeb8e7cb4cf01f8e6fc18a4c0814416126a5178190bdf5a4"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-no-confirm-20261022-01",
+      "frames": 1000,
+      "result_sha256": "114ca43a6bb4d700d45a98cd43236e2182ff9fbb8931ad8ebcaa71953f635a61",
+      "input_script_sha256": "926c720597d2b50ea46b002cfe29cc4ad69329a81e1987588db51c46c48555e2",
+      "state_input_sha256": "fbbcb461de8ec1f1351596cd91b6604b9a262cae9e5c935c69ec6cae2e26aee5",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-confirm-20261022-01/no_confirmed.state",
+      "state_output_sha256": "05c269e10b95ddffc0dbf0bec101f2a0922a6716ba747bd9d8da11501278fa36",
+      "system_ram_sha256": "45a634bd931d64b0f1dd730a27a5894e629352774759b6905a951d54f608a859",
+      "battery_snapshot": {
+        "sidecar_sha256": "ec034c892558d846809e01ad32f09da8a4f6b0aca64e9ad374f35b566bc113f6",
+        "result_sha256": "114ca43a6bb4d700d45a98cd43236e2182ff9fbb8931ad8ebcaa71953f635a61",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-confirm-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "cancelled_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-confirm-20261022-01/cancelled_mid.png",
+          "sha256": "b327848397772b2035c462deab17167924b11ce9f9e323d67731125645d4dc6a"
+        },
+        {
+          "name": "cancelled_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-confirm-20261022-01/cancelled_stable.png",
+          "sha256": "833c277020dd37a372ee94f9920521d80004d22636d86a67e8de27d1d37bf933"
+        },
+        {
+          "name": "no_before_confirm.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-confirm-20261022-01/no_before_confirm.png",
+          "sha256": "993ae5c558b84135985ed98e79d202236e259d165160638eea4b6d35c01215fe"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-no-ack-cancel-20261022-01",
+      "frames": 1000,
+      "result_sha256": "8be11c11f97d7297feff65ed6a8d2caae589cb4784025ebe9341ce14380966a5",
+      "input_script_sha256": "32bf804bbbd090cedfcf2196d4c05c5ec2cd7e884ff086ab4347498a6a30c519",
+      "state_input_sha256": "05c269e10b95ddffc0dbf0bec101f2a0922a6716ba747bd9d8da11501278fa36",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-ack-cancel-20261022-01/action.state",
+      "state_output_sha256": "555e20cf7cf8ec6fe9417dd9efdd2fbc9ecf8e19ff40802e0eb29cd17f0cb54e",
+      "system_ram_sha256": "f5b3989620fa24ef4315558e38e1c2e14c1ca2defa8348f3bacd6011b63c9f3f",
+      "battery_snapshot": {
+        "sidecar_sha256": "9fda958d906ad128d18b7d73fed0bd3d6085fd318c92740a9f53c1360c413e26",
+        "result_sha256": "8be11c11f97d7297feff65ed6a8d2caae589cb4784025ebe9341ce14380966a5",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-ack-cancel-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "action_menu_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-ack-cancel-20261022-01/action_menu_mid.png",
+          "sha256": "c79f628dc738be4e665499ef2601ac8c152f2b4d167e04bc7213799878e4fa2e"
+        },
+        {
+          "name": "action_menu_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-ack-cancel-20261022-01/action_menu_stable.png",
+          "sha256": "6297830bcd8aa9aa73dbde6bc31af11ec5f934c1d02e70cb7e1548b74a383630"
+        },
+        {
+          "name": "cancel_before_ack.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-ack-cancel-20261022-01/cancel_before_ack.png",
+          "sha256": "9db2f38ceb84369d230cc2aec0b8a3174f60b3d13f2f7e753f9027fdf92181df"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-no-action-down1-20261022-01",
+      "frames": 1000,
+      "result_sha256": "6b7f272cca6ea1a8415b365937086115ebcc4b3450f63f89890ec9ffd8272e8d",
+      "input_script_sha256": "1905d9f0bd42cd8bebab821221eab11fb27b47e6d8a6535736ca9466b9946512",
+      "state_input_sha256": "555e20cf7cf8ec6fe9417dd9efdd2fbc9ecf8e19ff40802e0eb29cd17f0cb54e",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-action-down1-20261022-01/down1.state",
+      "state_output_sha256": "f5bdef4fbff79d557a7235c9005ca0cdc9cfa43fe7da1db46391acb97e24bf6e",
+      "system_ram_sha256": "7ac43307395aa15cd58610a08e9b41f9bb2f7e4d685f8ac28520fb8a341d2cde",
+      "battery_snapshot": {
+        "sidecar_sha256": "90c3240fd9e3369f017a4391a94c588cbf8420bbc00afadfbd4e12a226bc9f4c",
+        "result_sha256": "6b7f272cca6ea1a8415b365937086115ebcc4b3450f63f89890ec9ffd8272e8d",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-action-down1-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "action_before_down.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-action-down1-20261022-01/action_before_down.png",
+          "sha256": "3d940670180d7d287cb1046510b8e25296ae7eb72539f8585f8d271bad224b39"
+        },
+        {
+          "name": "reset_highlight_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-action-down1-20261022-01/reset_highlight_mid.png",
+          "sha256": "eec09be1a5687e95da5e4a7c8e83661f305618abd7e95e11e5b4b88c83abdf88"
+        },
+        {
+          "name": "reset_highlight_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-action-down1-20261022-01/reset_highlight_stable.png",
+          "sha256": "dd176a377ecb416873647a51680245a9879952beb6866844dab43cc297d1ae35"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-no-action-down2-20261022-01",
+      "frames": 1000,
+      "result_sha256": "fd2522f4c06a7f3d8e1b3cebebae9d16005873437c901877e387f6bd1334380a",
+      "input_script_sha256": "941ad9ed321272ae5c16552494adf96ac3314432503ddf8be0b38355e5972d1a",
+      "state_input_sha256": "f5bdef4fbff79d557a7235c9005ca0cdc9cfa43fe7da1db46391acb97e24bf6e",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-action-down2-20261022-01/down2.state",
+      "state_output_sha256": "64b8462465a4f3434fe3d38f80f41343cfdd88a0a812518ca8351ddb1a4b05f7",
+      "system_ram_sha256": "bfbd4b008d7002e7a3c067e67646bcf2749754591b896e847e99f99399bad3ad",
+      "battery_snapshot": {
+        "sidecar_sha256": "5443486fb8ed5c3598d8dbb630e556d69caf02b1a81cd82200336b1f1a531dab",
+        "result_sha256": "fd2522f4c06a7f3d8e1b3cebebae9d16005873437c901877e387f6bd1334380a",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-action-down2-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "back_highlight_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-action-down2-20261022-01/back_highlight_mid.png",
+          "sha256": "4088e9bc93ae8232c7030927ff59409e68d8d2a0c330053baf4e6c426cd9d2a2"
+        },
+        {
+          "name": "back_highlight_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-action-down2-20261022-01/back_highlight_stable.png",
+          "sha256": "4fbe8588e10100deacf8363f752856e4325f69900cdfe1a51d6dc41eda18c1b6"
+        },
+        {
+          "name": "reset_before_down.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-action-down2-20261022-01/reset_before_down.png",
+          "sha256": "aa6026386991ede5f74ca3138eb7d85c7e2aa29ba578889fb13a324ed781e4f1"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-family-back-20261022-01",
+      "frames": 1000,
+      "result_sha256": "9547bef417f28775c6ae50f31270a13dd0d82a6c637b0e6aa28a77d4fdbcf798",
+      "input_script_sha256": "657d30db54c94cff12d99df985ee76ea88664e7cb24b1d91a7b344b2d564340d",
+      "state_input_sha256": "64b8462465a4f3434fe3d38f80f41343cfdd88a0a812518ca8351ddb1a4b05f7",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-family-back-20261022-01/family.state",
+      "state_output_sha256": "913566463c37e214a557feb547a75feff10974dd2ccd74d89b76495ce1a40f97",
+      "system_ram_sha256": "5f74f72a021a578afc4b1a061a75a4904fabeabd52caad2b21e612c0d9e64108",
+      "battery_snapshot": {
+        "sidecar_sha256": "133eee79d1fb5345af78adf6817cf1765f8130fedd1f2b6891ec0f7c0db8927f",
+        "result_sha256": "9547bef417f28775c6ae50f31270a13dd0d82a6c637b0e6aa28a77d4fdbcf798",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-family-back-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "back_before.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-family-back-20261022-01/back_before.png",
+          "sha256": "d623f7db52cef466a0ce62fb3708bebf19ed76df834ccb3f7d488a5baae2ed2c"
+        },
+        {
+          "name": "family_menu_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-family-back-20261022-01/family_menu_mid.png",
+          "sha256": "a7f327cb3c11b018ffc6da5c22427b6572176f2dbb16f3169c0fa2524c0847fa"
+        },
+        {
+          "name": "family_menu_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-family-back-20261022-01/family_menu_stable.png",
+          "sha256": "8a253b25dc65065177da7e97d5b8cd5d3e48a71306c9e086eb9bf75c6fafc551"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-family-exit-highlight-20261022-01",
+      "frames": 1000,
+      "result_sha256": "ffe2799d8bb0f10a5f39ab08706fe74aa6e55d4c9f61d38f0c0896682b5b8dab",
+      "input_script_sha256": "90c1f9e1278cfe7939bdceed2e0057715c2ddff7510f8a00399ac3f78e431d5c",
+      "state_input_sha256": "913566463c37e214a557feb547a75feff10974dd2ccd74d89b76495ce1a40f97",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-family-exit-highlight-20261022-01/exit_highlight.state",
+      "state_output_sha256": "3461ea0cee9097b2e43f88e9de2dedfe191a4b72e08f06c274cce4a8f408de56",
+      "system_ram_sha256": "ee5ef5333fbe2bfc0ccd9d30ce288679377b1830b07c937690c873d81f64ece7",
+      "battery_snapshot": {
+        "sidecar_sha256": "57e37e897f44c979d11574776d1b8b6a03deb5c9852185d8da535faeca1b7165",
+        "result_sha256": "ffe2799d8bb0f10a5f39ab08706fe74aa6e55d4c9f61d38f0c0896682b5b8dab",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-family-exit-highlight-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "exit_highlight_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-family-exit-highlight-20261022-01/exit_highlight_mid.png",
+          "sha256": "1bca72ec3650bcb426d4991a30078527cae963e0ee605d60d61ec0368112f0a6"
+        },
+        {
+          "name": "exit_highlight_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-family-exit-highlight-20261022-01/exit_highlight_stable.png",
+          "sha256": "2da4f6c7af203e17ff10600e2bc5b6f8eeffba5339d393028f103551d2446fc7"
+        },
+        {
+          "name": "family_before_downs.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-family-exit-highlight-20261022-01/family_before_downs.png",
+          "sha256": "a6eb9a02ed00c418598ff2477ac0dc12a94053e83e8d791b36e740a5851e3cfd"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-native-exit-20261022-01",
+      "frames": 1000,
+      "result_sha256": "d7d85d63bc0bac75f19d5fd0a5b6aca4533f77550e7966691e7e19d3e19f5943",
+      "input_script_sha256": "d5de244b2f7ceb11a7acbd04458963694498c1e2f644eba9a4b601d93605b84a",
+      "state_input_sha256": "3461ea0cee9097b2e43f88e9de2dedfe191a4b72e08f06c274cce4a8f408de56",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-native-exit-20261022-01/field.state",
+      "state_output_sha256": "ffc924c10962d8ed813b8c39c9cc0fcb8479bfa0416cba61964c7758c9a61d49",
+      "system_ram_sha256": "47954c24f532908d6647665dbbf45b601a4192968173c57912ebfae19aa16a9d",
+      "battery_snapshot": {
+        "sidecar_sha256": "ca216365b63cdcfaa1f644eefabbb6d1b01b8435a5f4982f43973d9fb60ac746",
+        "result_sha256": "d7d85d63bc0bac75f19d5fd0a5b6aca4533f77550e7966691e7e19d3e19f5943",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-native-exit-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "exit_before.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-native-exit-20261022-01/exit_before.png",
+          "sha256": "7530bcbf7d36b05df0c5fd06a0d4b55c8d2e3096eed6682ab037d68bcc1e639f"
+        },
+        {
+          "name": "field_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-native-exit-20261022-01/field_mid.png",
+          "sha256": "38f1f87f83e2f1c8a7543114922203f1fa7ebfe5f3dba8347be9bd302ec3c2f2"
+        },
+        {
+          "name": "field_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-native-exit-20261022-01/field_stable.png",
+          "sha256": "ce3af95d8deb0e2391f5de4b991a1c03aecce5eda23bd56a6b244d65c8fcef84"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-save-open-20261022-01",
+      "frames": 1000,
+      "result_sha256": "7ecbd780f83ce48cb002b7425adbce837918b9fa92efe81623ad940daa4c6fab",
+      "input_script_sha256": "c3ed911463743f1ae842738f9963e971734ab92c1b4e498797cdee9573dc9850",
+      "state_input_sha256": "ffc924c10962d8ed813b8c39c9cc0fcb8479bfa0416cba61964c7758c9a61d49",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-open-20261022-01/save_prompt.state",
+      "state_output_sha256": "20ff748e578d75d45c80a4e51b7c523fbf41eb4f69d12240fb62c8d0162a5dbe",
+      "system_ram_sha256": "d97b557625d3b770292ced45ff4aa8563d2dcd6b89aaccdad985045051cbdf04",
+      "battery_snapshot": {
+        "sidecar_sha256": "a835a6a93d6e3130bd589df1bea8385b1da0c1378606ffe4571fe197d5626de3",
+        "result_sha256": "7ecbd780f83ce48cb002b7425adbce837918b9fa92efe81623ad940daa4c6fab",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-open-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "field_before_save_touch.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-open-20261022-01/field_before_save_touch.png",
+          "sha256": "e0697f22716f61812062b5f9d929022b2889e1c3baab746d5fe1c5040172ae74"
+        },
+        {
+          "name": "save_prompt_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-open-20261022-01/save_prompt_mid.png",
+          "sha256": "f7c0ce355d96ac8923f2a4d31b5a74bb7026c8248734a4e8bc58b20dbdd29e07"
+        },
+        {
+          "name": "save_prompt_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-open-20261022-01/save_prompt_stable.png",
+          "sha256": "734d0ae39042f5cab1e94e99f9f3f45c03822327eedb08a07bf9cdf25accd954"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-save-confirm-20261022-01",
+      "frames": 1000,
+      "result_sha256": "e75be78dd4c3bcf6b2da5396c35f1bc9ef241c084aadcbb42962508c1d793041",
+      "input_script_sha256": "193fdabe452d0f257b9d40366a90aea40554979a253dab0a0a50c663050f8061",
+      "state_input_sha256": "20ff748e578d75d45c80a4e51b7c523fbf41eb4f69d12240fb62c8d0162a5dbe",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-confirm-20261022-01/save_confirmed.state",
+      "state_output_sha256": "5a77fa8d80101dceadacef47621127fab94d794a733c378013168214629e0beb",
+      "system_ram_sha256": "ff62cfa08bec76e09f66f99fe64d7cdf589241b6712743340546af5cce411e4d",
+      "battery_snapshot": {
+        "sidecar_sha256": "eacdce3f3a65e8420ec674389fe41184e4cbf9490e72094d909f292766818b32",
+        "result_sha256": "e75be78dd4c3bcf6b2da5396c35f1bc9ef241c084aadcbb42962508c1d793041",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-confirm-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "save_after_yes_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-confirm-20261022-01/save_after_yes_mid.png",
+          "sha256": "e13d6cf6134ee5e9bbc592a3ec5bbff8fc516c764c1640732739a6a1f9d19195"
+        },
+        {
+          "name": "save_after_yes_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-confirm-20261022-01/save_after_yes_stable.png",
+          "sha256": "00c9b368e41210811cc97a6d61d7e1b915a1149fd82a3894faab43ed51a4c354"
+        },
+        {
+          "name": "save_prompt_before_yes.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-confirm-20261022-01/save_prompt_before_yes.png",
+          "sha256": "d5c023cbf9e1cdff7ab086bb803b29342a643e20c2c6f326f3644c810ff8d337"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-save-overwrite-20261022-01",
+      "frames": 1000,
+      "result_sha256": "e311b1c9a63262c6f5f20d9a58153da091b122c3f28fe440fd556d004461669f",
+      "input_script_sha256": "eb3724107f8e9dcfb894506fb11700465b5e7a888c1811267f175ca710ca5bcc",
+      "state_input_sha256": "5a77fa8d80101dceadacef47621127fab94d794a733c378013168214629e0beb",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-overwrite-20261022-01/saved_field.state",
+      "state_output_sha256": "c46e50bd5993854f96ff8fa4ee672445fbf5c2c83036c6647a94a932ba3070dd",
+      "system_ram_sha256": "c168a4ab7abcbc6fa830c5fd2effdd19fd91a19b92d785bff83b14f768b236c5",
+      "battery_snapshot": {
+        "sidecar_sha256": "5c65068ff4c683c78302028a2b1a7708fad069cef8cc862e0a5e1b25f8cc9ac6",
+        "result_sha256": "e311b1c9a63262c6f5f20d9a58153da091b122c3f28fe440fd556d004461669f",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-overwrite-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "native_save_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-overwrite-20261022-01/native_save_mid.png",
+          "sha256": "a5af05ddf5e8b1db0ec8975a259b3d1f3a0ad1672fe0fcea879609afbcd90e43"
+        },
+        {
+          "name": "native_save_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-overwrite-20261022-01/native_save_stable.png",
+          "sha256": "3d7629f5b19afc106988ad557216678278d08364be69d7f7a880a829eb9d3776"
+        },
+        {
+          "name": "overwrite_before_yes.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-overwrite-20261022-01/overwrite_before_yes.png",
+          "sha256": "86780b54f7b86b7ac8b3438d88ceebe127b6dc8ea84a63a7f7eb46001ca36d2e"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    }
+  ],
+  "cold_run": {
+    "run": "portable-stat-editor-nature-integrated-rocket08e-fresh-cold-save-corrected-20261022-01",
+    "frames": 5500,
+    "result_sha256": "98d732a5c8eedeb4227c71f409d1e7a8abd651c133c11aa16b329dd0e29eaffa",
+    "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+    "state_input_sha256": null,
+    "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-fresh-cold-save-corrected-20261022-01/fresh_cold.state",
+    "state_output_sha256": "84be9b92ada3655faca1dd0c9a13e6dcc3e0c10da2694cc68bf2582b7d882e7a",
+    "system_ram_sha256": "a4af0b6d7c0be3883a1e2b18b39e589bc6aac43c799e056d85548d861bb6b39d",
+    "battery_snapshot": {
+      "sidecar_sha256": "b9f4f42f563fababdd5bbf10d26ca36c7866d7f0e22f6c2cf3940353c541110d",
+      "result_sha256": "98d732a5c8eedeb4227c71f409d1e7a8abd651c133c11aa16b329dd0e29eaffa",
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-fresh-cold-save-corrected-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+      "sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "bytes": 524410
+    },
+    "screenshots": [
+      {
+        "name": "cold_continue_accepted.png",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-fresh-cold-save-corrected-20261022-01/cold_continue_accepted.png",
+        "sha256": "a4317c5c70718f19edbf43a011d3c2d0e6567f2041137b0cf91ac5b28affb170"
+      },
+      {
+        "name": "cold_continue_menu.png",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-fresh-cold-save-corrected-20261022-01/cold_continue_menu.png",
+        "sha256": "932ed9e444feb02e5cda79b073cabebeaa668fa2533e503e666a92c44ec55454"
+      },
+      {
+        "name": "cold_final.png",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-fresh-cold-save-corrected-20261022-01/cold_final.png",
+        "sha256": "370710a434ad193d64cf2a0b2dea4d92591a3607428c226ffab79d55791ddc54"
+      },
+      {
+        "name": "cold_loaded_field.png",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-fresh-cold-save-corrected-20261022-01/cold_loaded_field.png",
+        "sha256": "15b3bc843d5b8a3da22500e88171c3d5b2423610aa03d34d486d0bc580c71b06"
+      },
+      {
+        "name": "cold_loaded_identity.png",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-fresh-cold-save-corrected-20261022-01/cold_loaded_identity.png",
+        "sha256": "a722816703ab2517e6ba8533b14ba438fb3c82e4fea6188e62bf968fad84bf1c"
+      },
+      {
+        "name": "cold_pre_title_inputs.png",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-fresh-cold-save-corrected-20261022-01/cold_pre_title_inputs.png",
+        "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+      }
+    ],
+    "runner_gameplay_acceptance": "NOT_ASSESSED"
+  },
+  "summary_runs": [
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-summary-open-20261022-01",
+      "frames": 1000,
+      "result_sha256": "4afc861fa7daba49b3cab488181dcb8ba61f2d457069f1f2b8bc5933c96b649f",
+      "input_script_sha256": "02a4f635235b74dc20236bb124ce1b4d9d9e7d222162cc0664b547bd29cfe1db",
+      "state_input_sha256": "84be9b92ada3655faca1dd0c9a13e6dcc3e0c10da2694cc68bf2582b7d882e7a",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-open-20261022-01/party.state",
+      "state_output_sha256": "3c5ee2277f637d4f494302a7ab1bc53022d0dcf25c6d08a57acc640479499c8e",
+      "system_ram_sha256": "819e66eed92df8a52d17d91b7c28a7e99f0d195f2d388466d09a027f0d4213c1",
+      "battery_snapshot": {
+        "sidecar_sha256": "acce6622e40763b7203b5f2993247af64cfc72c35674bcf80e039000a15a2826",
+        "result_sha256": "4afc861fa7daba49b3cab488181dcb8ba61f2d457069f1f2b8bc5933c96b649f",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-open-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "field_before_party.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-open-20261022-01/field_before_party.png",
+          "sha256": "22fd6791aa2b0dcf66afb2b9c6034ea83febed38984ef6f88eaa704d4b602268"
+        },
+        {
+          "name": "party_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-open-20261022-01/party_mid.png",
+          "sha256": "0940a5378dd8bb63eb35bd0eae481594e235ee9f1e603062986b1aab99d914dd"
+        },
+        {
+          "name": "party_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-open-20261022-01/party_stable.png",
+          "sha256": "e00e1c25f41768d5adc2d3559b06ce4da78188057db0a0c264cef56e327b3419"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-summary-choice-20261022-01",
+      "frames": 1000,
+      "result_sha256": "693df744b132ff1bea1fcc36906f701590234581c86f33b6ebc0e475d94f59c5",
+      "input_script_sha256": "90d22212e157d6c178bc8cd488a87066208ea33572a656614adf04515c8471b9",
+      "state_input_sha256": "3c5ee2277f637d4f494302a7ab1bc53022d0dcf25c6d08a57acc640479499c8e",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-choice-20261022-01/choice.state",
+      "state_output_sha256": "0577418fb74d78e73c98716bc1e6091366385041abc1089130a303fe98776654",
+      "system_ram_sha256": "2c78a0483e45aa66a287cf942da423a2ee648a1eb2ad429e3b5b3125d49fa21d",
+      "battery_snapshot": {
+        "sidecar_sha256": "847e0fe9688ed782fd5e618dce7c09437a5bd73a622cfac99ce7e95c351c5fe2",
+        "result_sha256": "693df744b132ff1bea1fcc36906f701590234581c86f33b6ebc0e475d94f59c5",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-choice-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "command_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-choice-20261022-01/command_mid.png",
+          "sha256": "223dc625fd6c8b5e89c986ef73404a08b27fafae727a8bfe15b15626ed3a6794"
+        },
+        {
+          "name": "command_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-choice-20261022-01/command_stable.png",
+          "sha256": "87d423fc52e0d1b4e99d2c7fab317247efdc5515e922b56a5ab8407df104bea0"
+        },
+        {
+          "name": "party_before_a.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-choice-20261022-01/party_before_a.png",
+          "sha256": "e00e1c25f41768d5adc2d3559b06ce4da78188057db0a0c264cef56e327b3419"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "portable-stat-editor-nature-integrated-rocket08e-summary-open-2-20261022-01",
+      "frames": 1000,
+      "result_sha256": "82bd8ed8a26e35ad5e60751a57c66637ba3db4f7c97f9f4c2eb9f33ca68aefc6",
+      "input_script_sha256": "bbb7d7c38f2f4751a67e865ff719f5d40a006d71ae954a185d21413dffb7eefb",
+      "state_input_sha256": "0577418fb74d78e73c98716bc1e6091366385041abc1089130a303fe98776654",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-open-2-20261022-01/summary.state",
+      "state_output_sha256": "014c2f6a793127c0c8c84c51dc17dba675086b5f4aa15c1a7d63cc65e864b7bf",
+      "system_ram_sha256": "a48dd5d162a9bde40d2497f0a60be07b81c1e29e644dcbfa37a09ecf1fc24528",
+      "battery_snapshot": {
+        "sidecar_sha256": "885b9068bd4c6c98c85cf953c12a178de18cb2299dde62813086a35db4dc5b79",
+        "result_sha256": "82bd8ed8a26e35ad5e60751a57c66637ba3db4f7c97f9f4c2eb9f33ca68aefc6",
+        "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-open-2-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated.dsv",
+        "sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+        "bytes": 524410
+      },
+      "screenshots": [
+        {
+          "name": "summary_before_a.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-open-2-20261022-01/summary_before_a.png",
+          "sha256": "87d423fc52e0d1b4e99d2c7fab317247efdc5515e922b56a5ab8407df104bea0"
+        },
+        {
+          "name": "summary_mid.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-open-2-20261022-01/summary_mid.png",
+          "sha256": "2c50bb4fa42b103aa92aab4f789f48e64548078e65314df4111a1872ce22b4e7"
+        },
+        {
+          "name": "summary_stable.png",
+          "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-open-2-20261022-01/summary_stable.png",
+          "sha256": "c70ef8402e68d2b2a0de8c3027b7a8271baad208d50fc16848faa53e8747d4c6"
+        }
+      ],
+      "runner_gameplay_acceptance": "NOT_ASSESSED"
+    }
+  ],
+  "visual_evidence": {
+    "no_selected_before_confirm": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-select-20261022-01/no_selected_stable.png",
+      "sha256": "691a7c1d30cd1390704947e0161e29ee7ff37396d541a5d3cb01f6d0071a1a40"
+    },
+    "no_cancelled_message": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-no-confirm-20261022-01/cancelled_stable.png",
+      "sha256": "833c277020dd37a372ee94f9920521d80004d22636d86a67e8de27d1d37bf933"
+    },
+    "native_save_returned_to_field": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-save-overwrite-20261022-01/native_save_stable.png",
+      "sha256": "3d7629f5b19afc106988ad557216678278d08364be69d7f7a880a829eb9d3776"
+    },
+    "cold_continue_accepted": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-fresh-cold-save-corrected-20261022-01/cold_continue_accepted.png",
+      "sha256": "a4317c5c70718f19edbf43a011d3c2d0e6567f2041137b0cf91ac5b28affb170"
+    },
+    "summary_lonely_nature": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-rocket08e-summary-open-2-20261022-01/summary_stable.png",
+      "sha256": "c70ef8402e68d2b2a0de8c3027b7a8271baad208d50fc16848faa53e8747d4c6"
+    }
+  },
+  "summary_visual_review": {
+    "reviewer": "root",
+    "observed_en": "The frozen Summary capture displays Lonely nature for Clefairy Lv. 5.",
+    "observed_es": "La captura congelada del Resumen muestra Lonely nature para Clefairy de nivel 5.",
+    "screenshot_sha256": "c70ef8402e68d2b2a0de8c3027b7a8271baad208d50fc16848faa53e8747d4c6"
+  },
+  "limits_en": [
+    "The runner marks gameplay_acceptance as NOT_ASSESSED; screenshots and RAM are source evidence for this bounded native flow.",
+    "Cold Party record 2 was captured at an in-progress encryption boundary; the audit accepts only the strict native cipher-boundary match, not a bypassed checksum.",
+    "No Reset, second mutation after Save, PC-storage, or full consumer coverage was tested."
+  ],
+  "limits_es": [
+    "El runner deja gameplay_acceptance en NOT_ASSESSED; las capturas y la RAM sustentan este flujo nativo acotado.",
+    "El registro 2 del equipo en frío se capturó durante una frontera de cifrado; la auditoría acepta solo la coincidencia estricta de frontera nativa, sin omitir checksum.",
+    "No se probaron Reset, una segunda mutación tras guardar, almacenamiento PC ni cobertura completa de consumidores."
+  ],
+  "auditor": {
+    "path": "qa/portable_stat_editor_nature_integrated_no_cold_acceptance.py",
+    "sha256": "3a7f91f0d4b455688cbd86cbb841f19373210620346a62fc4ea626a3d2b21c3c"
+  }
+}

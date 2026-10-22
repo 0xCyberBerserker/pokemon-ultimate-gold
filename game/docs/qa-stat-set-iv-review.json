@@ -1,0 +1,132 @@
+{
+  "schema": "ultimate-gold-stat-editor-set-iv-independent-review/v1",
+  "verdict": "PASS_WITH_LIMITS",
+  "scope": "Read-only independent review of the bounded native Set-IV confirmation run and its offline auditor. No ROM, core, runner, evidence, or auditor files were changed.",
+  "artifact_pins": {
+    "auditor": {
+      "path": "qa/set_iv_confirm_acceptance.py",
+      "sha256": "0df48aa1e053cdab647824e54b6cc904e583259a6b726cd18c770716ddfcd2c8"
+    },
+    "acceptance": {
+      "path": "qa/runs/stat-editor-confirm-set-iv-audit/acceptance.json",
+      "sha256": "5294b65ed85d99bb652e141b31b41d7aaf9319cbec57471fc6503fdf2d1ba021"
+    },
+    "rom": {
+      "path": "../experiments/eviv/stat-editor-confirm-probes-fix1/set-iv/set-iv.nds",
+      "sha256": "ef41db697c047c8a1488b87ff3549d80025bdf9c524d3b4cb573058c87da7a4f"
+    },
+    "build_report": {
+      "path": "../experiments/eviv/stat-editor-confirm-probes-fix1/set-iv/build.json",
+      "sha256": "8e4138a580a931935a09e70172ba0e75b495326f42f8ece04b3596d516f1caae",
+      "runtime_field": "NOT_RUN",
+      "changed_rom_files": ["a/0/1/2", "a/0/2/7"],
+      "parent_rom_sha256": "27f3a1f0aa5e2dabc3244af399e2d899e887aa89f8d812c088664d1860781131"
+    },
+    "core": {
+      "path": "../tools/usr/lib/libretro/desmume_libretro.so",
+      "sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    "runner": {
+      "path": "qa/dispatch_preview_sampled_runner.py",
+      "sha256": "9d3daba8c3026167d97142510a34f58b48615b289fa8759e819980c9c35cb3e4"
+    },
+    "seed_dsv": {
+      "path": "qa/runs/dispatch-preview-fixture/dispatch-preview-fix6a.dsv",
+      "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "selected_slot": {"base": "0x40000", "counter": 9, "crc16": "0xD200"}
+    },
+    "mutator_static_build": {
+      "path": "../experiments/eviv/stat-editor-mutators-fix2/build.json",
+      "sha256": "0b795ac67ab7b074666246435aacd6f660f6875d562e9d00008dd9b8708bb679"
+    }
+  },
+  "reproduction": {
+    "method": "Read-only replay of the pinned auditor's load_run and checkpoint functions, compared to the frozen acceptance rows; separate direct extraction and comparison of the source DSV, Yes/No RAM snapshots, and reserve bytes. The auditor main() was not called because it writes the acceptance file.",
+    "python": "engine/upstream/hg-engine/.venv/bin/python",
+    "result": "PASS",
+    "runs_replayed": 8,
+    "ram_checkpoints_replayed": 9,
+    "run_and_checkpoint_rows_match_frozen_acceptance": true,
+    "all_physical_references_resolved_and_hash_matched": true,
+    "evidence_or_source_modified": false,
+    "negative_guards_in_memory": [
+      {"case": "nonempty runtime cheats", "result": "REJECTED_BY_RUN_IDENTITY"},
+      {"case": "state import on the cold run", "result": "REJECTED_BY_COLD_PROVENANCE"},
+      {"case": "HP IV delta of +2 instead of +1", "result": "REJECTED_BY_EXACT_DECODED_DELTA"}
+    ]
+  },
+  "runs": [
+    {"id": "cold", "frames": 5500, "result_sha256": "38588e94adf89ddaa9c2972950884b1fb05a96753a5f6c2123cb368fc74508f4", "input_script_sha256": "920754f82d8a853158eb8be90f4a4fd6c59267f45369e2c78b1dd92603fbde2b", "state_input_sha256": null, "state_output_sha256": "1452ffa2ceffcc8de8407aeb2a2e6745b175ff8e28c8f92e170fcdf3157d10b1", "system_ram_sha256": "c71e651df9dbd66a558dd15c353721fa691ac4a8936402c596ff5a1604e285b9", "battery_manifest_sha256": "c2e45fa29e808ec198853e1c3e74dcf777c6b3ff01fd2f85ecae376a4ddb65d5"},
+    {"id": "align", "frames": 100, "result_sha256": "4018250f3006e208b72bcf0de4d98ee8266589f5ba708bd058e5f47f67dbd906", "input_script_sha256": "4881b477b91ec4424792788d04e4949505c35ad018681b5953fb95eba78b2433", "state_input_sha256": "1452ffa2ceffcc8de8407aeb2a2e6745b175ff8e28c8f92e170fcdf3157d10b1", "state_output_sha256": "de1d3585667a6a8e5f6654b5ca4fb3a933ab7b00e4cf447689651ae279045bc9", "system_ram_sha256": "99c8153a92ad761b5e54bf6ce3989034d089129725645f7641a436a69b59f9ab", "battery_manifest_sha256": "c2028e29a309c8a42489f0c189f135b41b6efd4abe7bb6d08ba938cb2869e1b1"},
+    {"id": "dialogue", "frames": 140, "result_sha256": "8c786e55528c2ec8167493cbf657d9f93a8b045f5b7d178a6f093eab0d4d459c", "input_script_sha256": "f4f2e896c4efde4832d1523b6effb5131fea133273fadfb858ec5dfa8d5f07b4", "state_input_sha256": "de1d3585667a6a8e5f6654b5ca4fb3a933ab7b00e4cf447689651ae279045bc9", "state_output_sha256": "cc41204f6e642bce9a1b3e21e20668464144f1f3bcd3dcd175b2f86129445786", "system_ram_sha256": "cb4e6c46fdd677f524cb6212d80bb7b09174b45854d1e8f4074d5a5e57f429d6", "battery_manifest_sha256": "0f60abf1d3541b21881d6851a69009bc4bdddf7d418b7a44aa4675ebec4da077"},
+    {"id": "confirm", "frames": 120, "result_sha256": "2b668c8bdc38d08e94ddfe7e9420edeaa7e539f582a826df8ea8324d459c099c", "input_script_sha256": "5d271204dd1f312ea5ebf4787327fe682f1d5aa8a176102f60830582584116b2", "state_input_sha256": "cc41204f6e642bce9a1b3e21e20668464144f1f3bcd3dcd175b2f86129445786", "state_output_sha256": "950492aed766eae4a89eedc246753a8cfc58c2a8ad6782799a91d42b6205e19d", "system_ram_sha256": "6644fa161fbd19a4b21a7a2a189aeba4ee1ddb13fa4d334bf652d3d120f4c887", "battery_manifest_sha256": "ffda2e7ea9d273bd3892647ff3583d3c37f5e3a44df705c5df625e589eb44174"},
+    {"id": "yes", "frames": 80, "result_sha256": "e7f3025e2917afdb686553437a28570f86a017d94fd31b329823f0e6625d52f2", "input_script_sha256": "939a9fdc02f5b797d1dc513291fe6d5564e9138c42bff0fd1acab9f9a7eb902d", "state_input_sha256": "950492aed766eae4a89eedc246753a8cfc58c2a8ad6782799a91d42b6205e19d", "state_output_sha256": "37617bab9c43565c2b6cb50d956bf8f559b763efcb921a433f55f471aec3b2e0", "system_ram_sha256": "912f652f255085d01aef10910f8c7aabd5717b5eae11ef921723a454df3e1e70", "battery_manifest_sha256": "4eb599aee61acadf3e7b8c7f46a4d84c677159aad289ecf3e4cb1e69012a58e8"},
+    {"id": "no", "frames": 100, "result_sha256": "4b388720c4949664ebfb28ea24ae8ef2d16f42c5386beeb6068a925909b35b4c", "input_script_sha256": "6d27f60983c8bd14b0b7019eca53914521aa7b42f0173577dd372949a416b9a3", "state_input_sha256": "950492aed766eae4a89eedc246753a8cfc58c2a8ad6782799a91d42b6205e19d", "state_output_sha256": "9d87b9ec1ce35b322469220fe62175e2319406956d7a23da818806fbe6484e3b", "system_ram_sha256": "db4733be7d0fc089980389c09db6b775e98d16684a004628aafd27aae6875766", "battery_manifest_sha256": "822f9a22e12d6308a98c0ab43b343de37b6f7968dfe4e42ac163081cd7125644"},
+    {"id": "yes_ack", "frames": 100, "result_sha256": "3e51c1eb03168c07d462ed2dece79fec2405d934b1c776db9554f5ea61b6b23b", "input_script_sha256": "67d7856de262c972c125da149bf97721b0ae97d0f36f1dc598a31d918917fd6a", "state_input_sha256": "37617bab9c43565c2b6cb50d956bf8f559b763efcb921a433f55f471aec3b2e0", "state_output_sha256": "2476dd673d3651bac454f1b4a082a716b172e68f364e967729ed8826a94ac24c", "system_ram_sha256": "401245a6e46a58a7aae48f0a6d81002332ba38be11e2eb48c148339238d85db1", "battery_manifest_sha256": "274ff3dbe9b45903d2841b9df096028784989fc9070f276e318e8bd801c19d84"},
+    {"id": "no_ack", "frames": 100, "result_sha256": "796329988e829c00ad19cab957ae41471e096a4d4c632e45ab5b8c4e36113f03", "input_script_sha256": "67d7856de262c972c125da149bf97721b0ae97d0f36f1dc598a31d918917fd6a", "state_input_sha256": "9d87b9ec1ce35b322469220fe62175e2319406956d7a23da818806fbe6484e3b", "state_output_sha256": "8cf6ef43bd347772c10e27ab595d39c1c20d8356088831488083ad716e80c019", "system_ram_sha256": "001ce7edc5e3ac0afb28a2a3cc67d18d1c292205ecdfc39e479fdc4ab7804731", "battery_manifest_sha256": "0bae2fed280b93908575d732f2d2585ade098ce951acbc8c3f7fdb63b124d912"}
+  ],
+  "observations": {
+    "cold_lineage": "Cold run has no input savestate; seven follow-up runs consume the previous state output and retain the same ROM/core/runner and source DSV hashes.",
+    "runner_identity": {"validation": "EMULATED", "result": "PASS", "execution_status": "COMPLETED", "gameplay_acceptance": "NOT_ASSESSED", "cheats": []},
+    "party_seed": {"counter": 9, "crc16": "0xD200", "slot_count": 3, "species_ids": [35, 152, 66], "slot0_hp_iv": 15},
+    "yes_branch": {
+      "script_vars_before": {"8004": 0, "8005": 16, "8006": "0xFFFF", "800C": 0},
+      "script_vars_after": {"8004": 0, "8005": 16, "8006": 0, "800C": 0},
+      "changed_party_record": 0,
+      "old_iv_word": "0x055FA86F",
+      "new_iv_word": "0x055FA870",
+      "hp_iv_before_after": [15, 16],
+      "pid_flags_species_unchanged": true,
+      "other_iv_bits_unchanged": true,
+      "other_decrypted_blocks_unchanged": true,
+      "party_tail_unchanged": true,
+      "non_target_party_records_byte_exact": true
+    },
+    "no_branch": {
+      "script_vars_after": {"8004_status": 0, "8005_preview": 16, "8006_yes_no_result": 1, "800C_slot": 0},
+      "party_array_byte_exact_to_seed_before_ack": true,
+      "party_records_match_at_ack_valid_cipher_boundary": true,
+      "status_interpretation": "No returns 1 in 0x8006. Status 0x8004 remains 0 because opcode 854 is bypassed on No; do not report No as status=cancel1."
+    },
+    "bag": {"save_array3_byte_exact_to_seed": true, "sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4"},
+    "battery": {"all_eight_runs_match_seed_dsv_byte_exact": true, "seed_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"},
+    "reserve_runtime_checks": {
+      "result": "PASS",
+      "ram_snapshots_checked": 24,
+      "arena_high_address": "0x020D2BB0",
+      "arena_high_value": "0x023D5000",
+      "dispatch_count_address": "0x020FAC90",
+      "dispatch_count": 856,
+      "dispatch_table_sha256": "ef63b80c78dbd591607c4c42ed262e1ea2f2edec8cc40c2c1672a43c234748b6",
+      "dispatch_guard": {"address": "0x023D5F00", "value": "DISPATCH-HIGH\\0 + 0x5A padding", "passed": true},
+      "code_guard": {"address": "0x023D6F00", "value": "EVIV-HIGH-GUARD\\0 + 0x5A padding", "passed": true},
+      "resident_code_sha256": {
+        "helper_0x023D6100_840_bytes": "990b3a16b67cac7218458a438b1d2169544b22642b0e946217cc51b43a3b8d92",
+        "preview_0x023D6448_220_bytes": "6f3e68671fe0b77025952d3f5d1e9f48359dd831d96b5a2bbf26ca9c4ad9157b",
+        "mutators_0x023D6540_524_bytes": "fc65aa142670d5b9ce0b6fc031e6ac493379545dd80c2d1ccf2acedc178e9f2e"
+      }
+    },
+    "visual_evidence": [
+      {"label": "bilingual confirmation with continuation indicator", "path": "qa/runs/stat-editor-confirm-set-iv-confirm/confirmation_stable_2.png", "sha256": "504cf7a8c051ddadb21c9f450ca3222e5388d998610d3c717737c5975296acd8"},
+      {"label": "Yes acknowledgement returned to field", "path": "qa/runs/stat-editor-confirm-set-iv-yes-ack/field_stable.png", "sha256": "8a5814bf47bb059cde682f007faa26af855b6c2c7d9235b2b9f0aa5137c69f3f"},
+      {"label": "No acknowledgement returned to field", "path": "qa/runs/stat-editor-confirm-set-iv-no-ack/field_stable.png", "sha256": "4d927dfec064d2c180439bd9f2d3c479478edd49d5630c11bc1c5ccf4f9a813f"}
+    ]
+  },
+  "limits": [
+    "Verified only fixed script slot 0 and one HP IV increment, 15 to 16; other stats, slots, caps, and Reset-EV/Reset-IV were not tested.",
+    "No save-and-cold persistence test is included here; the battery snapshots remain the seed DSV. QA1 is handling that separately.",
+    "No visible derived-stat recalculation was demonstrated; the party tail is unchanged in this fixture.",
+    "This is an isolated experimental candidate, not the portable selector, production UI, downloadable Alpha 2, or full-game acceptance.",
+    "The captured bilingual prompt shows a continuation marker; the complete text is not visible in a single frame."
+  ],
+  "status_by_claim": {
+    "native_yes_one_hp_iv_increment": "VERIFIED",
+    "native_no_party_unchanged": "VERIFIED",
+    "cold_same_rom_state_lineage_and_no_cheats": "VERIFIED",
+    "bag_battery_and_reserve_guards": "VERIFIED",
+    "save_cold_persistence": "PENDING_SEPARATE_QA1_RUN",
+    "ev_reset_iv_reset_other_stats_and_slots": "NOT_TESTED",
+    "full_prompt_visibility": "PARTIAL",
+    "production_selector_and_release_acceptance": "PENDING"
+  }
+}

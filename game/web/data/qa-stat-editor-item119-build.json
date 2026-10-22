@@ -1,0 +1,406 @@
+{
+  "acquisition_migration": {
+    "contract_path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-separate-item-noregister/item119-existing-save-migration.md",
+    "contract_sha256": "c8ff3c0dcffe83aa492fea27526afbcc1dc12280bf5956cb2f24a2836f60f9ac",
+    "existing_save_recovery": "Check Key Items pocket for item 119 independently of the legacy gift-complete marker.",
+    "fixtures": [
+      {
+        "expected": "add once; preserve original gifts and e625",
+        "item_119": false,
+        "key_item_slots_used": 59,
+        "legacy_e625": true,
+        "name": "legacy_complete_room"
+      },
+      {
+        "expected": "no completion marker; allow later retry",
+        "item_119": false,
+        "key_item_slots_used": 60,
+        "legacy_e625": true,
+        "name": "legacy_complete_full"
+      },
+      {
+        "expected": "no duplicate; do not replay original gifts",
+        "item_119": true,
+        "key_item_slots_used": null,
+        "legacy_e625": true,
+        "name": "legacy_complete_present"
+      },
+      {
+        "expected": "preserve original flow; grant path remains independent",
+        "item_119": false,
+        "key_item_slots_used": null,
+        "legacy_e625": false,
+        "name": "fresh_save"
+      }
+    ],
+    "full_pocket_behavior": "Do not write a new completion marker unless item addition succeeds; permit retry.",
+    "legacy_gift_marker": "e625 must remain unchanged",
+    "native_npc_grant": "NOT_PRESENT_IN_CANDIDATE",
+    "runtime_status": "PENDING_STATIC_REVIEW_AND_NATIVE_QA",
+    "status": "DESIGN_ONLY_NOT_IMPLEMENTED"
+  },
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-separate-item-noregister/portable-stat-editor-separate-item-noregister-fix6a.nds",
+    "sha256": "8bc4692eab0644a1b4366da4d7cae0f47ce09429953d198f1732fe0f96f81f62",
+    "size": 127073056
+  },
+  "donor_arm9_delta": {
+    "file_offsets": [
+      "0x0010054c",
+      "0x0010054d",
+      "0x0011d0d6"
+    ],
+    "item_119_map_row_address": "0x0210054c",
+    "item_119_map_row_before_after": [
+      [
+        0,
+        793,
+        794,
+        0
+      ],
+      [
+        517,
+        793,
+        794,
+        0
+      ]
+    ],
+    "nature_reserved_range_zero": true,
+    "only_item_119_mapping_and_marker_comparison_changed_from_textfix_donor": true,
+    "virtual_addresses": [
+      "0x0210054c",
+      "0x0210054d",
+      "0x023d6816"
+    ]
+  },
+  "editor_messages": {
+    "appended_count": 30,
+    "bank": "a/0/2/7 member 40",
+    "explicit_wrapping": {
+      "continue": "Change complete.\\nChoose Repeat or Exit.",
+      "limit": "No increase is available.\\nNo change was made.",
+      "read_error": "This value cannot be edited.\\nNo change was made.",
+      "readback_error": "The new value did not pass its\\nread-back check."
+    },
+    "generator_test_output": "stat-editor menu script host tests: PASS\n{'bytes': 17594, 'sha256': 'de457ad35f9ea352091db4de66992fb348e599cd1071f2fd724130180b8e3d94', 'commands': 2910, 'messages': 30, 'runtime': 'NOT_TESTED'}",
+    "line_break_code": "0xe000",
+    "line_wrap_encoding_verified": true,
+    "message_134_preserved_from_validated_donor": true,
+    "message_ids": [
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146
+    ],
+    "original_117_message_vectors_preserved": true,
+    "original_count": 117
+  },
+  "f439_no_register_correction": {
+    "all_existing_item_members_byte_exact": true,
+    "arm7_byte_exact": true,
+    "arm9_byte_exact": true,
+    "changed_narc_paths": [
+      "a/0/1/7"
+    ],
+    "historical_build_flags_before_after": [
+      "0x03a0",
+      "0x03e0"
+    ],
+    "historical_f439_sha256": "f43916ab420c4254eadd48ad5e57a8fb319f8181627b034f1a8186b3f63ce80d",
+    "item_119_flags_before_after": [
+      "0x03e0",
+      "0x03a0"
+    ],
+    "item_119_flags_xor": "0x0040",
+    "item_119_member": 517,
+    "item_119_record_changed_offsets": [
+      8
+    ],
+    "review_finding": "0x0040 is SELECTABLE and independently controls Bag REGISTER/DESELECT; fieldUse=5 remains the USE gate.",
+    "review_finding_source_sha256": "49fcd2d34cd7f599eaac3dbe7d4656c0e3c2d9dfe232237a6ede7a7ed56d6218",
+    "serialized_item_narc_changed_byte_count": 1,
+    "serialized_item_narc_changed_ranges": [
+      [
+        22820,
+        22820
+      ]
+    ]
+  },
+  "file_diff_allowlist": {
+    "arm7_unchanged": true,
+    "changed_item_members": [
+      517
+    ],
+    "changed_narc_paths": [
+      "a/0/1/2",
+      "a/0/1/7",
+      "a/0/2/7"
+    ],
+    "changed_script_members": [
+      3
+    ],
+    "changed_text_members": [
+      40,
+      221,
+      222,
+      223
+    ],
+    "original_alpha2_rom_unchanged": true,
+    "other_narc_members_and_paths_unchanged": true
+  },
+  "historical_f439_comparison": {
+    "all_existing_item_members_byte_exact": true,
+    "arm7_byte_exact": true,
+    "arm9_byte_exact": true,
+    "changed_narc_paths": [
+      "a/0/1/7"
+    ],
+    "historical_f439_sha256": "f43916ab420c4254eadd48ad5e57a8fb319f8181627b034f1a8186b3f63ce80d",
+    "item_119_flags_before_after": [
+      "0x03e0",
+      "0x03a0"
+    ],
+    "item_119_flags_xor": "0x0040",
+    "item_119_member": 517,
+    "item_119_record_changed_offsets": [
+      8
+    ],
+    "serialized_item_narc_changed_byte_count": 1,
+    "serialized_item_narc_changed_ranges": [
+      [
+        22820,
+        22820
+      ]
+    ]
+  },
+  "inputs": {
+    "alpha2_fix6a": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+      "sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    "eviv_textfix_donor": {
+      "build_json_sha256": "a15a6dd1e85294b87a2a8b0dfe094ed532eed76b9623626eb96bc14218086e75",
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-textfix/portable-stat-editor-menu-textfix-fix6a.nds",
+      "sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a"
+    },
+    "historical_f439": {
+      "build_json_path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-separate-item/build.json",
+      "build_json_sha256": "0750a35d52bb2f990432ae816a567789d7e4ca93de087fefdd1339be24b057c0",
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-separate-item/portable-stat-editor-separate-item-fix6a.nds",
+      "sha256": "f43916ab420c4254eadd48ad5e57a8fb319f8181627b034f1a8186b3f63ce80d"
+    },
+    "launch_header_sha256": "503032cbd0ee39eb18f268b82d027b29f54063bcb62335cc3de14759d1a19be1",
+    "launch_source_sha256": "7abbfcb6de0a491761935830a788b9e3dfb515e9c96bd1d6100431201d430b88",
+    "menu_generator_sha256": "004c4241321aaaa876c7bf63524d7633633aca15678ff4d43035d2237294328e",
+    "menu_test_sha256": "10247bf50e43f22a16650dd613aecb823fcdad5bbda2ac69c416ee5648169e8f",
+    "noregister_source_review": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/internal/stat-editor-research/portable-stat-editor-menu-noregister-static-review.json",
+      "sha256": "49fcd2d34cd7f599eaac3dbe7d4656c0e3c2d9dfe232237a6ede7a7ed56d6218"
+    }
+  },
+  "item_119": {
+    "derived_from_item_118": "1cf8eee2ecda52c9c1497b829af7c1d03eb226eb6c795534c1ca53830e7fd303",
+    "field_use_func": 5,
+    "flags_before_after": [
+      "0x03a0",
+      "0x03a0"
+    ],
+    "mapping_after": [
+      517,
+      793,
+      794,
+      0
+    ],
+    "mapping_before": [
+      0,
+      793,
+      794,
+      0
+    ],
+    "pocket": "Key Items",
+    "record_bytes": 34,
+    "record_member": 517,
+    "record_sha256": "cf2166b33de86bae75cf84fca4233e9abaaeaee22b24417f344bbb411eb46d0e",
+    "register_action": "not offered by the selectable flag; native Bag smoke pending",
+    "selectable_flag_cleared_from_f439": "0x0040",
+    "selectable_flag_present": false,
+    "slot_status": "prototype only; no exhaustive global grant/shop/callback consumer audit proves ID 119 free"
+  },
+  "launcher": {
+    "arm9_compile_disassembly_item119": "@HOME@/Games/Sacred-Gold/experiments/eviv/separate-item-check-gvuezdyq/launcher-119/launcher.elf:\tfile format elf32-littlearm\n\nDisassembly of section .text:\n\n023d6800 <PortableKitLaunch_ItemFieldUse>:\n 23d6800: b57e         \tpush\t{r1, r2, r3, r4, r5, r6, lr}\n 23d6802: 4a1b         \tldr\tr2, [pc, #0x6c]         @ 0x23d6870 <PortableKitLaunch_ItemFieldUse+0x70>\n 23d6804: 9202         \tstr\tr2, [sp, #0x8]\n 23d6806: 2200         \tmovs\tr2, #0x0\n 23d6808: 9201         \tstr\tr2, [sp, #0x4]\n 23d680a: 466a         \tmov\tr2, sp\n 23d680c: 230c         \tmovs\tr3, #0xc\n 23d680e: 8013         \tstrh\tr3, [r2]\n 23d6810: 2800         \tcmp\tr0, #0x0\n 23d6812: d029         \tbeq\t0x23d6868 <PortableKitLaunch_ItemFieldUse+0x68> @ imm = #0x52\n 23d6814: 8882         \tldrh\tr2, [r0, #0x4]\n 23d6816: 2a77         \tcmp\tr2, #0x77\n 23d6818: d127         \tbne\t0x23d686a <PortableKitLaunch_ItemFieldUse+0x6a> @ imm = #0x4e\n 23d681a: 6804         \tldr\tr4, [r0]\n 23d681c: 2c00         \tcmp\tr4, #0x0\n 23d681e: d023         \tbeq\t0x23d6868 <PortableKitLaunch_ItemFieldUse+0x68> @ imm = #0x46\n 23d6820: 4e15         \tldr\tr6, [pc, #0x54]         @ 0x23d6878 <PortableKitLaunch_ItemFieldUse+0x78>\n 23d6822: 0031         \tmovs\tr1, r6\n 23d6824: 318c         \tadds\tr1, #0x8c\n 23d6826: 0020         \tmovs\tr0, r4\n 23d6828: 4788         \tblx\tr1\n 23d682a: 0005         \tmovs\tr5, r0\n 23d682c: 0031         \tmovs\tr1, r6\n 23d682e: 3190         \tadds\tr1, #0x90\n 23d6830: 0020         \tmovs\tr0, r4\n 23d6832: 4788         \tblx\tr1\n 23d6834: 2d00         \tcmp\tr5, #0x0\n 23d6836: d017         \tbeq\t0x23d6868 <PortableKitLaunch_ItemFieldUse+0x68> @ imm = #0x2e\n 23d6838: 0004         \tmovs\tr4, r0\n 23d683a: 2800         \tcmp\tr0, #0x0\n 23d683c: d014         \tbeq\t0x23d6868 <PortableKitLaunch_ItemFieldUse+0x68> @ imm = #0x28\n 23d683e: 0028         \tmovs\tr0, r5\n 23d6840: 47b0         \tblx\tr6\n 23d6842: 20d5         \tmovs\tr0, #0xd5\n 23d6844: 0080         \tlsls\tr0, r0, #0x2\n 23d6846: 1820         \tadds\tr0, r4, r0\n 23d6848: a902         \tadd\tr1, sp, #0x8\n 23d684a: 2504         \tmovs\tr5, #0x4\n 23d684c: 4e0b         \tldr\tr6, [pc, #0x2c]         @ 0x23d687c <PortableKitLaunch_ItemFieldUse+0x7c>\n 23d684e: 002a         \tmovs\tr2, r5\n 23d6850: 47b0         \tblx\tr6\n 23d6852: 2007         \tmovs\tr0, #0x7\n 23d6854: 01c0         \tlsls\tr0, r0, #0x7\n 23d6856: 1820         \tadds\tr0, r4, r0\n 23d6858: a901         \tadd\tr1, sp, #0x4\n 23d685a: 002a         \tmovs\tr2, r5\n 23d685c: 47b0         \tblx\tr6\n 23d685e: 3426         \tadds\tr4, #0x26\n 23d6860: 4669         \tmov\tr1, sp\n 23d6862: 2202         \tmovs\tr2, #0x2\n 23d6864: 0020         \tmovs\tr0, r4\n 23d6866: 47b0         \tblx\tr6\n 23d6868: bd7e         \tpop\t{r1, r2, r3, r4, r5, r6, pc}\n 23d686a: 4a02         \tldr\tr2, [pc, #0x8]          @ 0x23d6874 <PortableKitLaunch_ItemFieldUse+0x74>\n 23d686c: 4790         \tblx\tr2\n 23d686e: bd7e         \tpop\t{r1, r2, r3, r4, r5, r6, pc}\n 23d6870: 81 68 3d 02  \t.word\t0x023d6881\n 23d6874: 41 80 3d 02  \t.word\t0x023d8041\n 23d6878: c1 05 05 02  \t.word\t0x020505c1\n 23d687c: bd 68 3d 02  \t.word\t0x023d68bd\n\n023d6880 <PortableKitLaunch_RunScript>:\n 23d6880: b570         \tpush\t{r4, r5, r6, lr}\n 23d6882: 2401         \tmovs\tr4, #0x1\n 23d6884: 2800         \tcmp\tr0, #0x0\n 23d6886: d010         \tbeq\t0x23d68aa <PortableKitLaunch_RunScript+0x2a> @ imm = #0x20\n 23d6888: 0005         \tmovs\tr5, r0\n 23d688a: 4909         \tldr\tr1, [pc, #0x24]         @ 0x23d68b0 <PortableKitLaunch_RunScript+0x30>\n 23d688c: 4788         \tblx\tr1\n 23d688e: 2800         \tcmp\tr0, #0x0\n 23d6890: d00b         \tbeq\t0x23d68aa <PortableKitLaunch_RunScript+0x2a> @ imm = #0x16\n 23d6892: 6801         \tldr\tr1, [r0]\n 23d6894: 2900         \tcmp\tr1, #0x0\n 23d6896: d108         \tbne\t0x23d68aa <PortableKitLaunch_RunScript+0x2a> @ imm = #0x10\n 23d6898: 2101         \tmovs\tr1, #0x1\n 23d689a: 6001         \tstr\tr1, [r0]\n 23d689c: 4905         \tldr\tr1, [pc, #0x14]         @ 0x23d68b4 <PortableKitLaunch_RunScript+0x34>\n 23d689e: 2400         \tmovs\tr4, #0x0\n 23d68a0: 4e05         \tldr\tr6, [pc, #0x14]         @ 0x23d68b8 <PortableKitLaunch_RunScript+0x38>\n 23d68a2: 0028         \tmovs\tr0, r5\n 23d68a4: 0022         \tmovs\tr2, r4\n 23d68a6: 0023         \tmovs\tr3, r4\n 23d68a8: 47b0         \tblx\tr6\n 23d68aa: 0020         \tmovs\tr0, r4\n 23d68ac: bd70         \tpop\t{r4, r5, r6, pc}\n 23d68ae: 46c0         \tmov\tr8, r8\n 23d68b0: 55 06 05 02  \t.word\t0x02050655\n 23d68b4: 18 08 00 00  \t.word\t0x00000818\n 23d68b8: d5 fe 03 02  \t.word\t0x0203fed5\n\n023d68bc <CopyBytes>:\n 23d68bc: 2a00         \tcmp\tr2, #0x0\n 23d68be: d005         \tbeq\t0x23d68cc <CopyBytes+0x10> @ imm = #0xa\n 23d68c0: 780b         \tldrb\tr3, [r1]\n 23d68c2: 7003         \tstrb\tr3, [r0]\n 23d68c4: 1e52         \tsubs\tr2, r2, #0x1\n 23d68c6: 1c40         \tadds\tr0, r0, #0x1\n 23d68c8: 1c49         \tadds\tr1, r1, #0x1\n 23d68ca: e7f7         \tb\t0x23d68bc <CopyBytes>   @ imm = #-0x12\n 23d68cc: 4770         \tbx\tlr\n 23d68ce: d4d4         \tbmi\t0x23d687a <PortableKitLaunch_ItemFieldUse+0x7a> @ imm = #-0x58",
+    "arm_object_sha256_item118": "030ddaae5ac5432be11190a766fbd4038d3c8f4a0c5d622b46efd8cf6ca09f1e",
+    "arm_object_sha256_item119": "e25538a5d5cc6a3069bee51967ecdda2f7d62e9af3a9c88770537b5375178595",
+    "assigned_end_exclusive": "0x023d68d0",
+    "bag_consumption_call_added": false,
+    "callback_alpha2": "0x023d8041",
+    "callback_candidate": "0x023d6801",
+    "callback_slot": "0x020fe2a0",
+    "item_113_114_118": "Delegated unchanged to original callback 0x023D8041.",
+    "item_118_alpha2_record_unchanged": true,
+    "link_base": "0x023d6800",
+    "link_end_exclusive": "0x023d68d0",
+    "marker_item_id": 119,
+    "marker_only_binary_delta": [
+      {
+        "item_118": "0x76",
+        "item_119": "0x77",
+        "offset": "0x16"
+      }
+    ],
+    "script_id": 2072,
+    "source_review_status": "PASS_SOURCE_AND_HOST_ONLY_NATIVE_LAUNCH_PENDING",
+    "target_preimages": {
+      "FieldSystem_LoadFieldOverlay": "004b1847f1de0302",
+      "QueueScript": "f0b583b0061c0f1c",
+      "TaskManager_GetEnvironment": "c0687047",
+      "TaskManager_GetFieldSystem": "80697047",
+      "TaskManager_GetStatePtr": "08307047"
+    }
+  },
+  "limits": [
+    "Static construction only; no native UI, item use, save, or gameplay acceptance.",
+    "A free global item-119 ID is not proven; the candidate remains isolated and experimental.",
+    "The item-113 description is new copy grounded in its verified refill range (TM 328-419, HMs untouched).",
+    "Original item 118 remains on its Alpha2 record and script path; the shared field callback delegates 113/114/118 to its original function."
+  ],
+  "lineage": {
+    "added_sections": {
+      "0x023d5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+      "0x023d6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e"
+    },
+    "dispatcher": {
+      "arena_high": "0x023d5000",
+      "count": 857,
+      "table": "0x023d5100"
+    },
+    "donor_build_sha256": "a15a6dd1e85294b87a2a8b0dfe094ed532eed76b9623626eb96bc14218086e75",
+    "existing_sections_byte_exact_except_main_dispatch_fields": true,
+    "nature_reserved_bytes_zero": true,
+    "original_item_callback_in_donor": "0x023d6801",
+    "uimode_build_sha256": "cdb53ef7cf2c4688f849ffd67b27e2935c745677d08004222d7699770e78cc48"
+  },
+  "runtime": "NOT_RUN",
+  "schema": "portable-stat-editor-separate-item-noregister-static-build/v1",
+  "scope": "Experimental static no-REGISTER candidate; native item use and UI smoke are pending.",
+  "script_2072": {
+    "after_sha256": "447a69262ad5da64aa4143c467e311d2db3d68142e248ede7f1a97d80dbe1410",
+    "bank": "a/0/1/2 member 3",
+    "before_sha256": "fdde73cfa414a6e773f15b1ba04c9e1615669eda1ea3a73250c17b869f70e98a",
+    "existing_global_entries_preserved_uniform_plus4": true,
+    "generated_script_bytes": 17594,
+    "generated_script_sha256": "de457ad35f9ea352091db4de66992fb348e599cd1071f2fd724130180b8e3d94",
+    "new_entry_count": 73,
+    "old_entry_count": 72,
+    "script_source_checks": {
+      "handler_checks": {
+        "A/B poll checks only new A or B key presses": true,
+        "End stops current script": true,
+        "LockAll has explicit null last-interacted branch": true,
+        "ReleaseAll does not use last-interacted object": true,
+        "ReleaseAll only unpauses map-object movement": true,
+        "SetVar writes a script variable": true,
+        "WaitABPress waits through native A/B handler": true
+      },
+      "handler_source": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/src/scrcmd_c.c",
+      "handler_source_sha256": "3eb39e0372d07d7e1f6517da89f9103b80b27d317af11b94d28a16f330a7362c",
+      "macro_source": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/asm/macros/script.inc",
+      "macro_source_sha256": "6d0a137c96dfd1ee987d75e1594e538bab91112d9980248bc08fd5ac2dd7d732",
+      "npc_requirement": "No NPC required: QueueScript passes NULL; LockAll takes the null branch; other handlers use script/field context only.",
+      "opcodes": {
+        "End": [
+          2
+        ],
+        "LockAll": [
+          96
+        ],
+        "ReleaseAll": [
+          97
+        ],
+        "SetVar": [
+          41
+        ],
+        "WaitABPress": [
+          49
+        ]
+      },
+      "wait_command": "WaitABPress opcode 49, no operands"
+    }
+  },
+  "status": "STATIC_BUILD_PASS_RUNTIME_PENDING",
+  "text_banks": {
+    "article_bank_223": {
+      "113": "a {COLOR:255}TM Refill{COLOR:0}",
+      "114": "a {COLOR:255}Party Healer{COLOR:0}",
+      "118": "a {COLOR:255}Cheat Kit{COLOR:0}",
+      "119": "a {COLOR:255}Stat Editor{COLOR:0}"
+    },
+    "bank_change_scope": {
+      "221_description_ids": [
+        113,
+        114,
+        118,
+        119
+      ],
+      "222_name_ids": [
+        119
+      ],
+      "223_article_ids": [
+        114,
+        118,
+        119
+      ],
+      "other_word_vectors_preserved": true
+    },
+    "description_bank_221": {
+      "113": "Refills owned TMs to 99. HMs are unaffected.",
+      "114": "Fully restores the HP and PP of your party.",
+      "118": "Enables reusable Rare Candy, Repels, Escape Rope, and Berries.",
+      "119": "Edit the EVs and IVs of your Pokemon."
+    },
+    "misplaced_alpha2_bank223_texts_moved_to_descriptions": [
+      114,
+      118
+    ],
+    "name_bank_222": {
+      "119": "Stat Editor",
+      "existing_113_114_118_preserved": true
+    },
+    "source_getters": {
+      "item.c": {
+        "description_getter": "GetItemDescIntoString -> msg_0221 (bank 221)",
+        "name_getter": "GetItemNameIntoString -> msg_0222 (bank 222)",
+        "sha256": "09e9377f89adc9003711d3dc16a3912e476043a188e3d5c349369cb37f6fda49"
+      },
+      "message_format.c": {
+        "article_getter": "BufferItemNameWithIndefArticle -> msg_0223 (bank 223)",
+        "sha256": "b4e269bd91d425ea8d9dcd5f560042f416aeb08f53ca98ee30f137a6f61b4b1b"
+      }
+    }
+  }
+}

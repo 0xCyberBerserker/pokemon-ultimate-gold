@@ -1,0 +1,89 @@
+{
+  "schema": "ultimate-gold-alpha2-gift-independent-review/v1",
+  "verdict": "PASS_BOUNDED_NATIVE_GIFT_WITH_LIMITS",
+  "review_mode": "read-only; no emulator/core run",
+  "evidence": {
+    "primary_report": {
+      "path": "docs/qa-alpha2-gift.json",
+      "sha256": "536089678104335b246edd63cb8f05b961932ff591840b3483f1dd2e266e1b69"
+    },
+    "acceptance_driver": {
+      "path": "night-sprint/qa/alpha2_gift_acceptance.py",
+      "sha256": "3dd43377ba35da956debb2209e9de18873ee9333db9cdd0eb3ff2e18a1ac799b"
+    },
+    "fixture_driver": {
+      "path": "night-sprint/qa/alpha2_gift_fixture.py",
+      "sha256": "2f6f64697db64542a9b9a25be477f4dde3c8dd85a6e15993de7c7c6409d03da8"
+    },
+    "fixture_manifest": {
+      "path": "night-sprint/qa/runs/alpha2-gift-source-fixture/fixture.json",
+      "sha256": "6d092726461e83233f2f608645510e9ab796df5a20f36e6843367a78450d72e8"
+    },
+    "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+    "source_dsv_sha256": "b0abcdee72b020e3ad11f10978ab64f002a843e518d36a8b0fe33185461c7f47",
+    "gift_fixture_dsv_sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6"
+  },
+  "checks": {
+    "exact_rom_core_runner_hashes": true,
+    "nine_run_result_script_ram_state_chains": true,
+    "six_screenshot_hashes": true,
+    "runtime_cheats_empty": true,
+    "runner_gameplay_acceptance_not_assessed": true,
+    "no_cross_rom_state_import": true,
+    "gift_items": [
+      {"pocket": "items", "item_id": 77, "quantity": 1},
+      {"pocket": "items", "item_id": 78, "quantity": 1},
+      {"pocket": "medicine", "item_id": 50, "quantity": 1},
+      {"pocket": "berries", "item_id": 154, "quantity": 1},
+      {"pocket": "berries", "item_id": 155, "quantity": 1},
+      {"pocket": "berries", "item_id": 157, "quantity": 1},
+      {"pocket": "key", "item_id": 113, "quantity": 1},
+      {"pocket": "key", "item_id": 114, "quantity": 1},
+      {"pocket": "key", "item_id": 118, "quantity": 1}
+    ],
+    "canonical_bag_slots": 594,
+    "gift_stacks_added_only_to_empty_slots": true,
+    "marker_118_last_key_pocket_slot": 4,
+    "save_array3_only_expected_gift_records_changed": true,
+    "reserved_region_bytes_compared": 4096,
+    "reserved_region_unchanged": true,
+    "party": {
+      "cold_native_cipher_boundary_match": true,
+      "post_party_checksums_valid": true,
+      "party_byte_identical_claim_rejected": true,
+      "machop_species_id": 66,
+      "machop_friendship": [70, 71],
+      "only_decoded_party_delta": "Machop PokemonDataBlockA friendship at decoded byte offset 12; party tail and PID/flags unchanged"
+    },
+    "friendship_step_variable": {
+      "name": "VAR_FRIENDSHIP_STEPS / VAR 0x404B",
+      "save_array": 4,
+      "observed_values": {"cold_baseline": 122, "after_navigation_stage1": 9, "after_gift_acceptance": 26},
+      "interpretation": "The 122-to-9 transition crosses the 128-step wrap; the final value 26 includes subsequent route steps.",
+      "source_reference": "night-sprint/engine/upstream/pokeheartgold/src/field/field_control.c:766-785"
+    }
+  },
+  "limits": [
+    "One focused native Rocket NPC gift offer and acceptance was reviewed.",
+    "No post-gift battery save or cold reload was run.",
+    "No decline, repeat, full-bag, or other story path was tested.",
+    "The source DSV fixture is local evidence and does not imply acceptance for another ROM or build."
+  ],
+  "review_execution": {
+    "independent_static_recomputation": true,
+    "core_used": false,
+    "reviewed_runs": [
+      "alpha2-gift-clean-cold-field",
+      "alpha2-gift-nav-stage1",
+      "alpha2-gift-nav-stage2",
+      "alpha2-gift-nav-stage3",
+      "alpha2-gift-nav-stage4",
+      "alpha2-gift-interact-stage2",
+      "alpha2-gift-interact-stage3",
+      "alpha2-gift-interact-stage4",
+      "alpha2-gift-accept-yes"
+    ]
+  }
+}

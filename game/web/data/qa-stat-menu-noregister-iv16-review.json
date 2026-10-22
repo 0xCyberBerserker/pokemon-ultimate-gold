@@ -1,0 +1,55 @@
+{
+  "schema": "ultimate-gold-portable-stat-editor-iv16-independent-review/v1",
+  "status": "PASS_BOUNDED_WITH_TRANSIENT_COLD_SLOT2_LIMIT",
+  "source_report": "@HOME@/Games/Sacred-Gold/night-sprint/internal/stat-editor-research/portable-stat-editor-menu-noregister-iv16.json",
+  "source_report_sha256": "e708c74c6203e3be1902821a9d9cd863295a762d881643c4ae1970581523cdca",
+  "acceptance_auditor_sha256": "972eff330907211149a75a901794dca3676c038adc543e7eee2cb7213586671b",
+  "rom_sha256": "03d8711445a32868a64b5c34abbd094c2f4be7a0d40d09fafcc54460a257c620",
+  "seed_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+  "saved_dsv_sha256": "eb024a81f4bf4eb0d3069ccfa7be9411d59bff3533980c14175d0752eeabd0e9",
+  "lineage": [
+    "portable-stat-editor-noregister-iv16-cold-01",
+    "portable-stat-editor-noregister-iv16-preview-01",
+    "portable-stat-editor-noregister-iv16-yes-01",
+    "portable-stat-editor-noregister-iv16-ack-01",
+    "portable-stat-editor-noregister-iv16-exit-01",
+    "portable-stat-editor-noregister-iv16-save-01",
+    "portable-stat-editor-noregister-iv16-cold-reload-01"
+  ],
+  "lineage_assertions": {
+    "seed_to_hp_iv_15_to_16": true,
+    "no_exit_before_save": true,
+    "save_counters": [
+      10,
+      11
+    ],
+    "fresh_cold_same_saved_dsv": true
+  },
+  "strict_boundary_checks": {
+    "preconfirmation": true,
+    "yes": true,
+    "cold_reload": true,
+    "party_slots": 3,
+    "slot0_delta_only": true,
+    "bag_seed_byte_exact": true,
+    "cheats": [],
+    "battery_snapshots_frozen": true
+  },
+  "cold_slot2_transient": {
+    "observed_split_bytes": 16,
+    "checksum_valid": false,
+    "decoded_claim": false,
+    "scope": "only strict cipher boundaries are accepted; slot2 is retained as a transient limitation, not a decoded outcome."
+  },
+  "artifacts_verified": {
+    "source_report_exists": true,
+    "seed_dsv_exists": true,
+    "saved_dsv_exists": true,
+    "rom_exists": true
+  },
+  "limits": [
+    "Only slot 0 HP IV 15 to 16 was tested.",
+    "No repeat, reset, boundary, other-stat, or other-slot operation was tested.",
+    "The run does not establish full-gameplay or release acceptance."
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "nature-storage-target-audit/v1",
+  "status": "NOT_PROVEN",
+  "decision": "The tested Party records have zero in the proposed 0x003E bits, but exact-target access semantics and global ownership are not established. Do not allocate or write the field yet.",
+  "target": {
+    "name": "Ultimate Gold experimental stat-editor menu textfix FIX6a",
+    "rom_sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a",
+    "plus_source_commit": "5b90a788ac3c7d1e4733b4d175a97811cc6745a3",
+    "plus_source_path": "@HOME@/Games/Sacred-Gold/night-sprint/sources/sacred-gold-plus/source",
+    "plus_tracked_c_h_s_inc_files": 44
+  },
+  "proposed_storage": {
+    "retail_field_id": 114,
+    "retail_names": ["MON_DATA_UNUSED_114", "MON_DATA_RESERVED_114"],
+    "pokemon_data_block": "B",
+    "byte_offset": "0x1A",
+    "width_bytes": 2,
+    "hg_engine_source_commit": "fafdb1830a74e82862e89d0ea931bbb97ae1598d",
+    "mask": "0x003E",
+    "raw_mask_formula": "stored=(raw_u16 & 0x003E) >> 1",
+    "encoding_policy": {
+      "zero": "no override",
+      "1_to_25": "valid; represents nature indices 0 through 24 as stored value minus one",
+      "26_to_31": "invalid; reject before any nature-table indexing",
+      "other_bits": "preserve with read-modify-write; known HG Engine users also allocate bits outside this mask"
+    },
+    "reference_sources": {
+      "hg_engine_header": "engine/upstream/hg-engine/include/pokemon.h:26-28,96-111",
+      "hg_engine_getter": "engine/upstream/hg-engine/src/pokemon.c:1790-1807",
+      "retail_block_layout": "engine/upstream/pokeheartgold/include/pokemon_types_def.h:68",
+      "retail_getter_case": "engine/upstream/pokeheartgold/src/pokemon.c:728-732",
+      "retail_setter_case": "engine/upstream/pokeheartgold/src/pokemon.c:1190-1194",
+      "pokeheartgold_commit": "6988158691eb6178cff697cda0428045ddcba5fb"
+    }
+  },
+  "sample_method": {
+    "decoder": "Existing qa/internal/hm-qol/qa_fixtures.py decoder loaded through qa/hm_matrix.py; no parser added.",
+    "main_validation": "Both 0xF628-byte MAIN copies were checked for size, magic 0x20060623, slot 0 and CRC16; the larger valid counter was selected.",
+    "party_validation": "Every active 236-byte Party record decoded with valid encrypted-box checksum.",
+    "field_read": "Little-endian u16 at decoded block B offset 0x1A; also reported (value & 0x003E) and shifted encoding.",
+    "scope_limit": "Only active Party records in the four requested DSV samples were measured. This does not cover PC boxes, daycare, battle copies, temporary decrypted RAM or other save states."
+  },
+  "samples": [
+    {
+      "label": "e625 seed / seeded cold source",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-kit-launch-native-alpha2-seeded-cold/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+      "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "size_bytes": 524410,
+      "main_counters": [10, 9],
+      "main_crcs_valid": [true, true],
+      "selected_counter": 10,
+      "party": [
+        {"slot": 0, "species_id": 35, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0},
+        {"slot": 1, "species_id": 152, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0},
+        {"slot": 2, "species_id": 66, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0}
+      ]
+    },
+    {
+      "label": "610e native cold verification",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold-verify/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf",
+      "size_bytes": 524410,
+      "main_counters": [10, 11],
+      "main_crcs_valid": [true, true],
+      "selected_counter": 11,
+      "party": [
+        {"slot": 0, "species_id": 35, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0},
+        {"slot": 1, "species_id": 152, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0},
+        {"slot": 2, "species_id": 66, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0}
+      ]
+    },
+    {
+      "label": "7fb650a HPEV4 saved source",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+      "size_bytes": 524410,
+      "main_counters": [10, 11],
+      "main_crcs_valid": [true, true],
+      "selected_counter": 11,
+      "party": [
+        {"slot": 0, "species_id": 35, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0},
+        {"slot": 1, "species_id": 152, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0},
+        {"slot": 2, "species_id": 66, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0}
+      ]
+    },
+    {
+      "label": "56fdab reset-EV saved source",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-ev4-reset-overwrite-yes/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+      "sha256": "56fdabaf3bd29ed31811d1040ce4364cff9aecb8df32855cebc16499736dcaf9",
+      "size_bytes": 524410,
+      "main_counters": [12, 11],
+      "main_crcs_valid": [true, true],
+      "selected_counter": 12,
+      "party": [
+        {"slot": 0, "species_id": 35, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0},
+        {"slot": 1, "species_id": 152, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0},
+        {"slot": 2, "species_id": 66, "decoded_checksum_valid": true, "unused2_u16": "0x0000", "masked_value": "0x0000", "encoded_value": 0}
+      ]
+    }
+  ],
+  "target_source_search": {
+    "search_scope": "Pinned Plus source tree, C/H/assembly/include files; exact target source commit listed above.",
+    "symbolic_results": "No MON_DATA_UNUSED_114, MON_DATA_RESERVED_114, unused2, or nature override implementation/use was found in target source. Generic GetMonData/GetBoxMonData/SetMonData/SetBoxMonData accessors are not present in this 44-file source subset.",
+    "offset_results": "No candidate Pokemon block offset 0x1A/0x001A use was found in target C/H/assembly/include files; incidental matches were unrelated UI palette offset or native-guide info+26 fields.",
+    "limit": "The Plus source subset and source grep cannot prove absence of raw uses in untracked retail engine code, compiled ARM9, overlays, runtime data paths, PC storage, daycare or battle copies. No exact-target getter/setter address/disassembly was established here."
+  },
+  "status_reason": "All measured values are zero and the reference field mapping is established, but exact target read/write semantics and ownership outside these sampled party records remain unverified.",
+  "next_gate": "Resolve the exact-target field-114 getter/setter paths against FIX6a ARM9/overlays (using verified symbols/preimages or disassembly), including Party and BoxPokemon access. Then establish whether any existing Plus feature owns bits 0x003E and preserve all other bits. Do not implement a mint until that gate and consumer-policy review pass."
+}

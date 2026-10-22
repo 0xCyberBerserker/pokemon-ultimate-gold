@@ -1,0 +1,210 @@
+{
+  "schema": "sacred-gold-type-sprites/v1",
+  "source_repo": "PokeAPI/sprites",
+  "source_commit": "97a7832d307311c0e1c6ea9035308bf80cc94f81",
+  "variant": "generation-viii/sword-shield/small (icon-only, no labels)",
+  "ui_contract": "../sprites/types/{nds_type_id}.png",
+  "nds_to_pokeapi_type_id": {
+    "0": 1,
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 5,
+    "5": 6,
+    "6": 7,
+    "7": 8,
+    "8": 9,
+    "9": 18,
+    "10": 10,
+    "11": 11,
+    "12": 12,
+    "13": 13,
+    "14": 14,
+    "15": 15,
+    "16": 16,
+    "17": 17
+  },
+  "sprites": [
+    {
+      "nds_type_id": 0,
+      "name": "normal",
+      "pokeapi_type_id": 1,
+      "path": "web/sprites/types/0.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/1.png",
+      "bytes": 3872,
+      "sha256": "de02fc1e79cdf624a0f816a518e69c936b346d5e4ee089bafd4ef1e5d6d92881",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 1,
+      "name": "fighting",
+      "pokeapi_type_id": 2,
+      "path": "web/sprites/types/1.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/2.png",
+      "bytes": 3186,
+      "sha256": "5e641fcaf0bb515a89f915e88dca94a0c38669319de3782a9a8e0bc5e411e6e4",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 2,
+      "name": "flying",
+      "pokeapi_type_id": 3,
+      "path": "web/sprites/types/2.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/3.png",
+      "bytes": 3701,
+      "sha256": "52346312fd23a412832a46076925e36a539e1580f6da5dc6e2d26b5a8ed39290",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 3,
+      "name": "poison",
+      "pokeapi_type_id": 4,
+      "path": "web/sprites/types/3.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/4.png",
+      "bytes": 4385,
+      "sha256": "38b284167a89219b61b6ec70d6057529dddf1cce90eed4348503101990f7c0fc",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 4,
+      "name": "ground",
+      "pokeapi_type_id": 5,
+      "path": "web/sprites/types/4.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/5.png",
+      "bytes": 3603,
+      "sha256": "55ba86c99bab9bbab8065877893277afb18fa94aaccdd5486b1948e2c93f5ba8",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 5,
+      "name": "rock",
+      "pokeapi_type_id": 6,
+      "path": "web/sprites/types/5.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/6.png",
+      "bytes": 4016,
+      "sha256": "1645f09258e90666d4ca2d5ddd49ba1d036a0585b9b7c2442cb63e04f054dadb",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 6,
+      "name": "bug",
+      "pokeapi_type_id": 7,
+      "path": "web/sprites/types/6.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/7.png",
+      "bytes": 4393,
+      "sha256": "a97db6cd77c34b2a457a2ba7af5a2c998c47a80b43d88a40c0f850cd33269542",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 7,
+      "name": "ghost",
+      "pokeapi_type_id": 8,
+      "path": "web/sprites/types/7.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/8.png",
+      "bytes": 4192,
+      "sha256": "8fa78945484a23cc797a064c89a2d9b82ff790e0b77aa61ea2ac22c2c474a56d",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 8,
+      "name": "steel",
+      "pokeapi_type_id": 9,
+      "path": "web/sprites/types/8.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/9.png",
+      "bytes": 3832,
+      "sha256": "6a491f70cc6f46b051b61791f4c03dc68826942b460ec2720ac0ae97da0d0c21",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 9,
+      "name": "fairy",
+      "pokeapi_type_id": 18,
+      "path": "web/sprites/types/9.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/18.png",
+      "bytes": 4065,
+      "sha256": "72bcb8cb3365aadd7c15433d70cb800f4048e0b404f1f3cd02ce6e7b16a1c982",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 10,
+      "name": "fire",
+      "pokeapi_type_id": 10,
+      "path": "web/sprites/types/10.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/10.png",
+      "bytes": 3706,
+      "sha256": "a0b4eeeb26254e6ffeb44d5cc599ba97c7e044e62f4d006795ef80d94c01b91a",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 11,
+      "name": "water",
+      "pokeapi_type_id": 11,
+      "path": "web/sprites/types/11.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/11.png",
+      "bytes": 3826,
+      "sha256": "6d900ed3f6529962468d4997b67bb5b64d3355423310c7aa99bdd1913a7fcb4b",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 12,
+      "name": "grass",
+      "pokeapi_type_id": 12,
+      "path": "web/sprites/types/12.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/12.png",
+      "bytes": 4662,
+      "sha256": "c171c40e1e64f3737a9e9bfbbf0876f6e737024671dbf77c0599b8e5c6f5d12d",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 13,
+      "name": "electric",
+      "pokeapi_type_id": 13,
+      "path": "web/sprites/types/13.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/13.png",
+      "bytes": 3227,
+      "sha256": "af3e8839eca934db431625c75ce0a364472982d424c036783eda8abd4581232e",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 14,
+      "name": "psychic",
+      "pokeapi_type_id": 14,
+      "path": "web/sprites/types/14.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/14.png",
+      "bytes": 4331,
+      "sha256": "bba03681ffa450092fe04ba48fb2ca050f2d470c8b9c1b00b1e6710043c3ff5f",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 15,
+      "name": "ice",
+      "pokeapi_type_id": 15,
+      "path": "web/sprites/types/15.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/15.png",
+      "bytes": 4112,
+      "sha256": "b48b4013daecedeefaaa1f2d9ddd4a0c001d8a90f6b5a2a14cd119471ce7ff36",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 16,
+      "name": "dragon",
+      "pokeapi_type_id": 16,
+      "path": "web/sprites/types/16.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/16.png",
+      "bytes": 4594,
+      "sha256": "fd55ba89efacb8da844d52f09527fb585fc2754f902e89655ff2769537865f0b",
+      "status": "official_icon_only"
+    },
+    {
+      "nds_type_id": 17,
+      "name": "dark",
+      "pokeapi_type_id": 17,
+      "path": "web/sprites/types/17.png",
+      "source_url": "https://raw.githubusercontent.com/PokeAPI/sprites/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/types/generation-viii/sword-shield/small/17.png",
+      "bytes": 3885,
+      "sha256": "19cbffd03aa9316bd3f68474461d1e54ff6e1f7566b041d84d34d18ce6b8f5d6",
+      "status": "official_icon_only"
+    }
+  ],
+  "rights_note": "Source attribution follows the pinned repository; no ownership claim."
+}

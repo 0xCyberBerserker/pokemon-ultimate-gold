@@ -1,0 +1,26 @@
+{
+  "schema": "ultimate-gold-alpha2-shop-review/v1",
+  "status": "PASS_ROOT_OFFLINE_REVIEW",
+  "date": "2026-10-22",
+  "report": "qa-alpha2-shop.json",
+  "report_sha256": "939507da49726aad09c452692cf421e8445a7f05f5c36b0848f1823fdeaa2cc6",
+  "auditor_local": "qa/alpha2_shop_acceptance.py",
+  "auditor_sha256": "adfb80eee41c0a5519a163c81a810bda5887d087dca424ab48f80d2faf131ce1",
+  "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+  "checks": [
+    "Read the auditor's input, purchase, inventory, party, save and cold assertions.",
+    "Regenerated the report in a temporary location from all 22 preserved exact-target runs; parsed reports matched exactly.",
+    "Inspected native Moon Stone and Covenant Orb purchase-confirmation images, including prices and initial quantities."
+  ],
+  "location_image": {
+    "public_asset": "web/assets/locations/alpha2-evolution-shop.png",
+    "source_local": "qa/runs/alpha2-shop-moonstone-confirm/moonstone_buy_confirmation.png",
+    "sha256": "12ecfe01f1cf1fa368aa7475aebfecd12cd47906492f719b2e7f3aa2d897dbe0",
+    "display": "Upper DS screen via wiki CSS; source image is preserved byte-for-byte."
+  },
+  "limits": [
+    "One unit each of two items, one native save and one state-free cold reload.",
+    "Five reserve guards are compared; this review does not claim every RAM byte is immutable.",
+    "The copied shop-position fixture does not prove normal campaign access or all shop purchases."
+  ]
+}

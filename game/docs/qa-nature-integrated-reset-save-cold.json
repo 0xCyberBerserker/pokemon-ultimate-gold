@@ -1,0 +1,844 @@
+{
+  "schema": "portable-stat-editor-nature-reset-same-conversation/v2",
+  "status": "PASS_BOUNDED_NATIVE_RESET_SAVE_COLD",
+  "summary_en": "On the exact bd50 integrated ROM, Reset Nature cleared Clefairy slot 0's encoded override, restored PID-derived Timid stats, preserved the other Party records and Bag, then survived native Save and a state-free cold reload. Summary visibly reports Timid nature.",
+  "summary_es": "En la ROM integrada bd50 exacta, Reset Nature borró la anulación codificada de la Clefairy del slot 0, restauró las estadísticas Timid derivadas del PID y conservó el resto del equipo y la Bolsa; el cambio sobrevivió al guardado nativo y a una recarga en frío sin estado. El resumen muestra Timid nature.",
+  "scope": "One Reset Nature confirmation on the existing Lonely slot0 fixture, followed by native save, fresh cold load, and Summary screen.",
+  "scope_es": "Una confirmación de Reset Nature sobre la fixture Lonely existente del slot0, seguida de guardado nativo, recarga en frío y pantalla de resumen.",
+  "provenance": {
+    "rom": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/stat-editor-nature-integrated-rocket08e-same-conversation/ultimate-gold-stat-editor-nature-integrated-same-conversation.nds",
+      "sha256": "bd50a9d18ebc4397316a58595710ed7ed205dea839af4666af975a0373bf3164",
+      "bytes": 127095072
+    },
+    "core": {
+      "path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+      "sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    "runner": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+      "sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    "seed_dsv": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-cold-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated-same-conversation.dsv",
+      "sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "bytes": 524410,
+      "main_counter": 11,
+      "main_crc16": 15391
+    },
+    "saved_dsv_sha256": "e574dd71fd0618221ea312bd3b425a68bc8d994f30f3fccb1498456f36ca44e6",
+    "no_cheats": true,
+    "state_input_cold_runs": 0,
+    "only_same_rom_state_continuations": true
+  },
+  "run_chain": {
+    "portable-stat-editor-nature-integrated-same-conversation-reset-cold-20261022-01": {
+      "frames": 5500,
+      "result_sha256": "19ef2e94b5cac207ad6027114fd77ab5d0d08ec122287d911642b43bf7e7cfab",
+      "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_input_sha256": null,
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-cold-20261022-01/cold.state",
+      "state_output_sha256": "204eecab147ad010bfcfc24c421ad7979064fbdf87d5626d41009e53a8215a2b",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": {
+        "manifest_sha256": "632cfb69a9aeee89c8f2ddede2a27cf7a66d824a60ff25599c3a50663187c07b",
+        "snapshot_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356"
+      },
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-bag-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "7be515d7cae483b1e771fcbcf65ea98bc21640a67333b8d1f61a3893a8aba2dc",
+      "input_script_sha256": "09c8e572372088fa7cc18bc2bb46c73e2b3b7352d48bca92915a3103a9ddcb98",
+      "state_input_sha256": "204eecab147ad010bfcfc24c421ad7979064fbdf87d5626d41009e53a8215a2b",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-bag-20261022-01/bag.state",
+      "state_output_sha256": "7c9e89f46f02b97df8f0862de7c85eb7ca64a0a69c55ec8b292b1ccb991fd227",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-keyitems-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "5e3d7bd30c73a25dc42b383f7a958695db7a9b113652ab6dbc7e307a704e1893",
+      "input_script_sha256": "84429487e866efe79223ae4dab32b9f51479fbd957f3c818fbde62fb0b54e53a",
+      "state_input_sha256": "7c9e89f46f02b97df8f0862de7c85eb7ca64a0a69c55ec8b292b1ccb991fd227",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-keyitems-20261022-01/keyitems.state",
+      "state_output_sha256": "aaaeb128a8f5c5a74924e4b32c5cd18f31ed3ee1da9221eff92afd094c185981",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-context-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "d6fded126a3b8b9b824197e2abf3ecdae68feb0b014c810964682f31308be6b9",
+      "input_script_sha256": "53d839734c6d32d822624056a99b13d569ee7abbdd0e3c5ff22c694334b2b25d",
+      "state_input_sha256": "aaaeb128a8f5c5a74924e4b32c5cd18f31ed3ee1da9221eff92afd094c185981",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-context-20261022-01/context.state",
+      "state_output_sha256": "742c27b56ec2e9872a3eeed5538059a78fb518c2fdbe7ec20cfc3da472f0920b",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-use-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "1b8758f8587ed7cb54ca22329bbfde8c3f9720f91e561678546166220916171e",
+      "input_script_sha256": "8d08f1bfd3704a09b899c316bf04cc1ed4f28fa439612bc91622581e6880f9e6",
+      "state_input_sha256": "742c27b56ec2e9872a3eeed5538059a78fb518c2fdbe7ec20cfc3da472f0920b",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-use-20261022-01/use.state",
+      "state_output_sha256": "7edcaa1d3f33a56a5afa59f1bbb0e6e5fcdafcfa6b1411166df31285e58cf264",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-slot0-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "02c64e26cd34059207b1a6bec6dc841584a69d40b3db579cbf8a4481b7e6e2f4",
+      "input_script_sha256": "fca30e5a8bc126accfa23399bdb271947eb798ccf7150ae6edc98420d82dae46",
+      "state_input_sha256": "7edcaa1d3f33a56a5afa59f1bbb0e6e5fcdafcfa6b1411166df31285e58cf264",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-slot0-20261022-01/slot0.state",
+      "state_output_sha256": "09fedfdb4ade2ef546699f940a4d79b968d74162f5df2dadf82a94f91a2aa463",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-nature-menu-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "f54709b9572ebd732b346fe6a7316b64597cc4e8b945d1cc9f5f385091c6033d",
+      "input_script_sha256": "777187124964076c527fb5110f45ccf294c20f85057f191a5dfb9702a6ce88d5",
+      "state_input_sha256": "09fedfdb4ade2ef546699f940a4d79b968d74162f5df2dadf82a94f91a2aa463",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-nature-menu-20261022-01/nature_action.state",
+      "state_output_sha256": "23732a2f40c4c37511de0fa82ea42a5bcbe605757d82092203ca6886f204bd33",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-reset-highlight-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "4bc79fed1bbc053b8988a25164e8b5c42b230d0e1280a325ad7de5736e9bb291",
+      "input_script_sha256": "880defa1865d81f9ecba43de5bfc3f0fd78b89fcfcfbf11cd57aba5f0e4b43d2",
+      "state_input_sha256": "23732a2f40c4c37511de0fa82ea42a5bcbe605757d82092203ca6886f204bd33",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-reset-highlight-20261022-01/reset_confirmation.state",
+      "state_output_sha256": "27da7d1aabcc3e181cc275c304f97e9f3997017a7a45fa73727fadf9acb56b2e",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-yes-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "646ac549cc52d17dd1d8aa1e80dc241457848c59882641e30e1afa032fde895f",
+      "input_script_sha256": "cdd1e6f6fcd965d4eea552ec50e7309a92e660c2b283739a6f6e3b956120cdb6",
+      "state_input_sha256": "27da7d1aabcc3e181cc275c304f97e9f3997017a7a45fa73727fadf9acb56b2e",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-yes-20261022-01/reset_yes.state",
+      "state_output_sha256": "c81125fc61757db395a3edf0b31f31d882954f2074710cb9df1946050613d965",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-ack-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "5281f71d8bc66f4777fbaee08b4043b8ff79d1183667eb35b87262b583b7ca84",
+      "input_script_sha256": "2ae3816c659649c5c90b079353523ca8a124df90776853d0494534659586ae17",
+      "state_input_sha256": "c81125fc61757db395a3edf0b31f31d882954f2074710cb9df1946050613d965",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-ack-20261022-01/action_menu.state",
+      "state_output_sha256": "dbc55f58b245848f34f193efced4c90663f97a25dbc9cc5274773c41351a51fd",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-back-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "c642fe7776c8bac39b324c2645e7e33ff2e5e0eb989a33acb4d39abfc66894e0",
+      "input_script_sha256": "3ca52d61f54a7087246666f7a620909b66d49f9ded8b802561f3d77dfd22a29b",
+      "state_input_sha256": "dbc55f58b245848f34f193efced4c90663f97a25dbc9cc5274773c41351a51fd",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-back-20261022-01/family_menu.state",
+      "state_output_sha256": "11b280a6aada62ac809b08a30d52e371db5bb04665aa7fda658af5fdb6df9a38",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-exit-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "54aae59cccc659458b82f5b028670ab03378bdaf37b0a798a1b577a5f6116992",
+      "input_script_sha256": "d0fd04832ce987d6ec740bf3c03e2e0e9b95ba969d83286c17052fca4bb43723",
+      "state_input_sha256": "11b280a6aada62ac809b08a30d52e371db5bb04665aa7fda658af5fdb6df9a38",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-exit-20261022-01/field.state",
+      "state_output_sha256": "98186566d58611caf723044202558768176ce8702bda379cb9cb02b57a47967d",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-save-open-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "afadea0d23a72a65d05e322fd70257455a3623b432ed88a441b102a68c5852d7",
+      "input_script_sha256": "9a955bdf3a8244dcb5017150442f996948f4680b2f150fab7fcfc2cced2c63e9",
+      "state_input_sha256": "98186566d58611caf723044202558768176ce8702bda379cb9cb02b57a47967d",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-save-open-20261022-01/save_prompt.state",
+      "state_output_sha256": "bf52438bb8c274ceda3b8e8708bb7434672dd66c7dece3ae60159ebc12faf8b0",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-save-confirm-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "478694180f174c79b54ec4978352731485b2aeb3e18f59a4044953c5f91ffb77",
+      "input_script_sha256": "7409fdd1b422e33e8c75afd9773039a2f88a3a3c6afe389faf3982b6d8efdb78",
+      "state_input_sha256": "bf52438bb8c274ceda3b8e8708bb7434672dd66c7dece3ae60159ebc12faf8b0",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-save-confirm-20261022-01/overwrite_prompt.state",
+      "state_output_sha256": "b09a35c569eb07d3793622ab623de2993d539e934b23845ac26dc81170434cdf",
+      "battery_result_sha256": "8c3ae1675f2dd0f52f77b9da785416163d444363eee70348c75e3648b20fe356",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-save-final-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "1a27195d55304d200adc7aa78293d64be25318958e3b805e41e3ec99645fa0e2",
+      "input_script_sha256": "c1a867df60febff00ddd5b031817f91c13125acf2581401cfc13659b188c3f5f",
+      "state_input_sha256": "b09a35c569eb07d3793622ab623de2993d539e934b23845ac26dc81170434cdf",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-save-final-20261022-01/saved_field.state",
+      "state_output_sha256": "020c02e9014105556ef9811b67dbebeeb21402dbefdba832aba70850ffc32bb4",
+      "battery_result_sha256": "e574dd71fd0618221ea312bd3b425a68bc8d994f30f3fccb1498456f36ca44e6",
+      "frozen_sidecar": {
+        "manifest_sha256": "f3bee0a768e03d50ab2e1d7d186540a840df6fa4c0b3f2f8f9693a91bd194c09",
+        "snapshot_sha256": "e574dd71fd0618221ea312bd3b425a68bc8d994f30f3fccb1498456f36ca44e6"
+      },
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-cold-save-20261022-01": {
+      "frames": 5500,
+      "result_sha256": "d89f84d8668a4cec97be974b07dd20a054e4b28f15019cc56a77def1fcc3e4c6",
+      "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_input_sha256": null,
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-cold-save-20261022-01/cold.state",
+      "state_output_sha256": "d0c7b994f365fbaec7fbad8f8b6c2b5c7fd86f366f5770388bcd21796759e3c6",
+      "battery_result_sha256": "e574dd71fd0618221ea312bd3b425a68bc8d994f30f3fccb1498456f36ca44e6",
+      "frozen_sidecar": {
+        "manifest_sha256": "82c201b1acdcdfafeb6a30d73e9aac9b12518b5ec0d3ea2e0198066d187b6a17",
+        "snapshot_sha256": "e574dd71fd0618221ea312bd3b425a68bc8d994f30f3fccb1498456f36ca44e6"
+      },
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-summary-party-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "ec27f1060e7e197e9b9c86e636d9df6cbbb5c96dab1e1d7a7aa15217f5b583a7",
+      "input_script_sha256": "435373f1a9630c0ce9a5069624841431b76d00d7a44c231f82d56e0a0f279e8c",
+      "state_input_sha256": "d0c7b994f365fbaec7fbad8f8b6c2b5c7fd86f366f5770388bcd21796759e3c6",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-summary-party-20261022-01/party.state",
+      "state_output_sha256": "5b1bc7341181b25b0fff6987c5d46aca33a485ef5ce45aa050359da2da96941a",
+      "battery_result_sha256": "e574dd71fd0618221ea312bd3b425a68bc8d994f30f3fccb1498456f36ca44e6",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-summary-choice-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "727b1e0483c06943347d1c52f2e643b8c78c8fc68805ae3c594f970efd8f5a62",
+      "input_script_sha256": "3f2792c34e9865a89c7e1a20cf6b6798f4e7691bc7c36021103d30a44dae9910",
+      "state_input_sha256": "5b1bc7341181b25b0fff6987c5d46aca33a485ef5ce45aa050359da2da96941a",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-summary-choice-20261022-01/choice.state",
+      "state_output_sha256": "63023f8419ecdc27944f7c20447312fed9911e7ee67cf46c285ed7f3cf71cca2",
+      "battery_result_sha256": "e574dd71fd0618221ea312bd3b425a68bc8d994f30f3fccb1498456f36ca44e6",
+      "frozen_sidecar": null,
+      "cheats": []
+    },
+    "portable-stat-editor-nature-integrated-same-conversation-reset-summary-open-20261022-01": {
+      "frames": 1000,
+      "result_sha256": "d9c8cec65e8c43abad17365465a5b115d518e91dd85b2816db36b035256181ef",
+      "input_script_sha256": "9ac220fa756d5f4577f88a94b793859174de8e9f19efd8b417331a0915bb9291",
+      "state_input_sha256": "63023f8419ecdc27944f7c20447312fed9911e7ee67cf46c285ed7f3cf71cca2",
+      "state_output": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-summary-open-20261022-01/summary.state",
+      "state_output_sha256": "a89bc4374acec5485e2ea6354b8ab091de6818daf16be1b281517bc33ad1d976",
+      "battery_result_sha256": "e574dd71fd0618221ea312bd3b425a68bc8d994f30f3fccb1498456f36ca44e6",
+      "frozen_sidecar": {
+        "manifest_sha256": "7be7d47e5244ad481b601501772fbccfe113b6bb4add1ee6076ddcae95d766a6",
+        "snapshot_sha256": "e574dd71fd0618221ea312bd3b425a68bc8d994f30f3fccb1498456f36ca44e6"
+      },
+      "cheats": []
+    }
+  },
+  "nature_reset": {
+    "status_vars_8004_8005_800C": [
+      0,
+      0,
+      0
+    ],
+    "before": {
+      "nature": "Lonely",
+      "field114_override": 4,
+      "stats": [
+        22,
+        22,
+        9,
+        9,
+        10,
+        12,
+        11
+      ]
+    },
+    "after": {
+      "nature": "Timid",
+      "field114_override": 0,
+      "stats": [
+        22,
+        22,
+        8,
+        10,
+        11,
+        12,
+        11
+      ]
+    },
+    "pid": "0xE30363E2",
+    "species_id": 35,
+    "level": 5,
+    "experience": 100,
+    "evs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ivs": [
+      15,
+      3,
+      10,
+      31,
+      21,
+      2
+    ],
+    "current_hp_rule": "preserved because Max HP remained 22",
+    "personal_entry_sha256": "3f46e2c070b8aefe09b26c31fb5193e1c31383d2c77c66dab4a4dd73872cbfca",
+    "base_stats": [
+      70,
+      45,
+      48,
+      35,
+      60,
+      65
+    ],
+    "exact_expected_party_record": true,
+    "peer_party_records_preserved": true
+  },
+  "runtime_snapshots": {
+    "cold_seed": {
+      "save_data": "0x0227C1F4",
+      "party_address": "0x0227C294",
+      "party_sha256": "1630b1823a2f747fef88772de4e8cb18aafd7d5a2a002d7c9c8e9c652c81676d",
+      "slot0": {
+        "pid": "0xE30363E2",
+        "species_id": 35,
+        "field114_word": "0x0004",
+        "nature_override": 4,
+        "effective_nature": "Lonely",
+        "evs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ivs": [
+          15,
+          3,
+          10,
+          31,
+          21,
+          2
+        ],
+        "level": 5,
+        "stats_hp_current_max_atk_def_spe_spa_spd": [
+          22,
+          22,
+          9,
+          9,
+          10,
+          12,
+          11
+        ],
+        "checksum_valid": true
+      },
+      "bpac": {
+        "magic": "0x43415042",
+        "save_link": "0x0227C1F4",
+        "projection": "0x0227C848",
+        "bag_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "marker118_qty": 1,
+        "editor119_qty": 1,
+        "occupied_key_items": 6
+      },
+      "save_array3_matches_seed": true,
+      "strict_party_cipher_boundary": {
+        "selected_dsv_counter": 11,
+        "selected_dsv_crc16": 15391,
+        "source_array_sha256": "63f77eca784485eb4699c858586f2f427c24079d563bbc618bcec352d8ee5127",
+        "observed_array_sha256": "1630b1823a2f747fef88772de4e8cb18aafd7d5a2a002d7c9c8e9c652c81676d",
+        "strict_cipher_boundary_match": true,
+        "party_count": 3,
+        "records": [
+          {
+            "slot": 0,
+            "record_sha256": "f3bbb76efad4afe227095d7901eb8ea9e03e4d20f4ef0fba88187fca8575fd5f",
+            "record_equal": true,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": true,
+            "decoded_fields_match_when_decodable": true
+          },
+          {
+            "slot": 1,
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+            "record_equal": true,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": true,
+            "decoded_fields_match_when_decodable": true
+          },
+          {
+            "slot": 2,
+            "record_sha256": "63b566f9d226371d72ee98d48a313b78942097b167baa1a71cf18b6c6fb480da",
+            "record_equal": false,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 4
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_suffix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": false,
+            "decoded_fields_match_when_decodable": false
+          }
+        ],
+        "decoded_fields": [
+          {
+            "slot": 0,
+            "semantic_match": true
+          },
+          {
+            "slot": 1,
+            "semantic_match": true
+          }
+        ]
+      }
+    },
+    "reset_yes": {
+      "save_data": "0x0227C1F4",
+      "party_address": "0x0227C294",
+      "party_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "slot0": {
+        "pid": "0xE30363E2",
+        "species_id": 35,
+        "field114_word": "0x0000",
+        "nature_override": 0,
+        "effective_nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ivs": [
+          15,
+          3,
+          10,
+          31,
+          21,
+          2
+        ],
+        "level": 5,
+        "stats_hp_current_max_atk_def_spe_spa_spd": [
+          22,
+          22,
+          8,
+          10,
+          11,
+          12,
+          11
+        ],
+        "checksum_valid": true
+      },
+      "bpac": {
+        "magic": "0x43415042",
+        "save_link": "0x0227C1F4",
+        "projection": "0x0227C848",
+        "bag_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "marker118_qty": 1,
+        "editor119_qty": 1,
+        "occupied_key_items": 6
+      },
+      "save_array3_matches_seed": true,
+      "strict_party_cipher_boundary": {
+        "selected_dsv_counter": 12,
+        "selected_dsv_crc16": 59927,
+        "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "strict_cipher_boundary_match": true,
+        "party_count": 3,
+        "records": [
+          {
+            "slot": 0,
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "record_equal": true,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": true,
+            "decoded_fields_match_when_decodable": true
+          },
+          {
+            "slot": 1,
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+            "record_equal": true,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": true,
+            "decoded_fields_match_when_decodable": true
+          },
+          {
+            "slot": 2,
+            "record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+            "record_equal": true,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": true,
+            "decoded_fields_match_when_decodable": true
+          }
+        ],
+        "decoded_fields": [
+          {
+            "slot": 0,
+            "semantic_match": true
+          },
+          {
+            "slot": 1,
+            "semantic_match": true
+          },
+          {
+            "slot": 2,
+            "semantic_match": true
+          }
+        ]
+      }
+    },
+    "saved_cold": {
+      "save_data": "0x0227C274",
+      "party_address": "0x0227C314",
+      "party_sha256": "7fa5e2927b936e291e1669d919e5207ce65e1fd335cfcb649fbde6b7767f16c6",
+      "slot0": {
+        "pid": "0xE30363E2",
+        "species_id": 35,
+        "field114_word": "0x0000",
+        "nature_override": 0,
+        "effective_nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ivs": [
+          15,
+          3,
+          10,
+          31,
+          21,
+          2
+        ],
+        "level": 5,
+        "stats_hp_current_max_atk_def_spe_spa_spd": [
+          22,
+          22,
+          8,
+          10,
+          11,
+          12,
+          11
+        ],
+        "checksum_valid": true
+      },
+      "bpac": {
+        "magic": "0x43415042",
+        "save_link": "0x0227C274",
+        "projection": "0x0227C8C8",
+        "bag_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "marker118_qty": 1,
+        "editor119_qty": 1,
+        "occupied_key_items": 6
+      },
+      "save_array3_matches_seed": true,
+      "strict_party_cipher_boundary": {
+        "selected_dsv_counter": 12,
+        "selected_dsv_crc16": 59927,
+        "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_array_sha256": "7fa5e2927b936e291e1669d919e5207ce65e1fd335cfcb649fbde6b7767f16c6",
+        "strict_cipher_boundary_match": true,
+        "party_count": 3,
+        "records": [
+          {
+            "slot": 0,
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "record_equal": true,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": true,
+            "decoded_fields_match_when_decodable": true
+          },
+          {
+            "slot": 1,
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+            "record_equal": true,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": true,
+            "decoded_fields_match_when_decodable": true
+          },
+          {
+            "slot": 2,
+            "record_sha256": "dd057e9965ff5d3f469689d6a926197c02d91758272d52a31c6a5c8fe9b90f26",
+            "record_equal": false,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 34
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_suffix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": false,
+            "decoded_fields_match_when_decodable": false
+          }
+        ],
+        "decoded_fields": [
+          {
+            "slot": 0,
+            "semantic_match": true
+          },
+          {
+            "slot": 1,
+            "semantic_match": true
+          }
+        ]
+      }
+    },
+    "summary": {
+      "save_data": "0x0227C274",
+      "party_address": "0x0227C314",
+      "party_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "slot0": {
+        "pid": "0xE30363E2",
+        "species_id": 35,
+        "field114_word": "0x0000",
+        "nature_override": 0,
+        "effective_nature": "Timid",
+        "evs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ivs": [
+          15,
+          3,
+          10,
+          31,
+          21,
+          2
+        ],
+        "level": 5,
+        "stats_hp_current_max_atk_def_spe_spa_spd": [
+          22,
+          22,
+          8,
+          10,
+          11,
+          12,
+          11
+        ],
+        "checksum_valid": true
+      },
+      "bpac": {
+        "magic": "0x43415042",
+        "save_link": "0x0227C274",
+        "projection": "0x0227C8C8",
+        "bag_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "marker118_qty": 1,
+        "editor119_qty": 1,
+        "occupied_key_items": 6
+      },
+      "save_array3_matches_seed": true,
+      "strict_party_cipher_boundary": {
+        "selected_dsv_counter": 12,
+        "selected_dsv_crc16": 59927,
+        "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "strict_cipher_boundary_match": true,
+        "party_count": 3,
+        "records": [
+          {
+            "slot": 0,
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "record_equal": true,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": true,
+            "decoded_fields_match_when_decodable": true
+          },
+          {
+            "slot": 1,
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+            "record_equal": true,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": true,
+            "decoded_fields_match_when_decodable": true
+          },
+          {
+            "slot": 2,
+            "record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+            "record_equal": true,
+            "box_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "party_tail_cipher_boundary": {
+              "mode": "plain_prefix",
+              "split_bytes": 0
+            },
+            "observed_checksum_valid": true,
+            "decoded_fields_match_when_decodable": true
+          }
+        ],
+        "decoded_fields": [
+          {
+            "slot": 0,
+            "semantic_match": true
+          },
+          {
+            "slot": 1,
+            "semantic_match": true
+          },
+          {
+            "slot": 2,
+            "semantic_match": true
+          }
+        ]
+      }
+    }
+  },
+  "saved_battery": {
+    "path": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-save-final-20261022-01/battery-evidence/ultimate-gold-stat-editor-nature-integrated-same-conversation.dsv",
+    "sha256": "e574dd71fd0618221ea312bd3b425a68bc8d994f30f3fccb1498456f36ca44e6",
+    "active_main_counter": 12,
+    "active_main_crc16": 59927,
+    "both_main_crc_valid": true,
+    "mains": [
+      {
+        "base": 0,
+        "counter": 12,
+        "crc16": 59927,
+        "crc16_valid": true
+      },
+      {
+        "base": 262144,
+        "counter": 11,
+        "crc16": 15391,
+        "crc16_valid": true
+      }
+    ],
+    "party_matches_expected_single_slot_transform": true,
+    "cold_reload_dsv_byte_exact": true,
+    "save_array3_unchanged": true
+  },
+  "visual_evidence": {
+    "reset_yes_prompt": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-reset-highlight-20261022-01/reset_confirmation.png",
+      "sha256": "ab2b9f0ff9943a3cf1fa0cb408180d4ceff5d5720d23daeeb4add948c496e119"
+    },
+    "reset_accepted": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-yes-20261022-01/reset_after_yes.png",
+      "sha256": "9efd8afa5b4e734c7072f07ecff964b72445e1a2dde21f8694d67cb001448d06"
+    },
+    "native_save_complete": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-save-final-20261022-01/save_complete.png",
+      "sha256": "965490d9ea03626bd8b627d9a2e86b69ea32bed053a0c5461f2aec0ce072ad53"
+    },
+    "cold_summary": {
+      "path": "qa/runs/portable-stat-editor-nature-integrated-same-conversation-reset-summary-open-20261022-01/summary.png",
+      "sha256": "198ef2c2f6ee407dd58048680fd65109cca464b85e4468b80f883eb31de369e6"
+    }
+  },
+  "limits_en": [
+    "No PC-storage test or additional nature edits.",
+    "This is one bounded native flow; it does not establish all consumers or general gameplay acceptance.",
+    "Runner gameplay_acceptance remains NOT_ASSESSED; cold Party slot2 can be sampled at a native cipher boundary, while the saved DSV validates the complete records."
+  ],
+  "limits_es": [
+    "No se probó almacenamiento en PC ni más cambios de naturaleza.",
+    "Es un flujo nativo acotado; no acredita todos los consumidores ni la aceptación general del juego.",
+    "gameplay_acceptance del runner sigue en NOT_ASSESSED; el slot2 del equipo en frío puede estar en una frontera nativa de cifrado, mientras que el DSV guardado valida los registros completos."
+  ],
+  "auditor": {
+    "path": "qa/portable_stat_editor_nature_reset_same_conversation_acceptance.py",
+    "sha256": "83cf6f0562eefb2e99444e24fffc8f5bca0fd5e66cab2f699cca8d17e7afc838"
+  }
+}

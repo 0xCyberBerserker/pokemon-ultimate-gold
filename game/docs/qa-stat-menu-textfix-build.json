@@ -1,0 +1,89 @@
+{
+  "schema": "portable-stat-editor-menu-textfix/v1",
+  "status": "STATIC_BUILD_PASS_RUNTIME_NOT_TESTED",
+  "inputs": {
+    "uimode_candidate": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-uimode/portable-stat-editor-menu-uimode-fix6a.nds",
+      "sha256": "5a61083689668f3efcf46c4821b77b336875af5237a36f9985eb4cc159bd7d44"
+    },
+    "uimode_build": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-uimode/build.json",
+      "sha256": "cdb53ef7cf2c4688f849ffd67b27e2935c745677d08004222d7699770e78cc48"
+    },
+    "preimages": {
+      "stat_editor_menu_script.py": {
+        "sha256": "3b27a630851a72d1e19231aea6d4ffe28be240e92161d96f60218d9e3cc41457",
+        "size": 30277
+      },
+      "test_stat_editor_menu_script.py": {
+        "sha256": "ae33b8b080ae41927600caf9ae0c25066b4628fb922914f544d588be16383b3d",
+        "size": 22716
+      },
+      "portable_stat_editor_menu_uimode_build.py": {
+        "sha256": "3fc767e72c54a1c2412b72f88640debadb08e77d95d228daeae4ff6d2849eacb",
+        "size": 42183
+      },
+      "portable-stat-editor-menu-uimode-fix6a.nds": {
+        "sha256": "5a61083689668f3efcf46c4821b77b336875af5237a36f9985eb4cc159bd7d44",
+        "size": 127073056
+      },
+      "build.json": {
+        "sha256": "cdb53ef7cf2c4688f849ffd67b27e2935c745677d08004222d7699770e78cc48",
+        "size": 9739
+      }
+    },
+    "generator_sha256": "004c4241321aaaa876c7bf63524d7633633aca15678ff4d43035d2237294328e",
+    "host_test_sha256": "10247bf50e43f22a16650dd613aecb823fcdad5bbda2ac69c416ee5648169e8f",
+    "script_2072_sha256": "de457ad35f9ea352091db4de66992fb348e599cd1071f2fd724130180b8e3d94",
+    "builder_sha256": "a5986085b226fe0e4fbefecc6bfc4081b8d02f17099274eda576f37b2d004e8e"
+  },
+  "candidate": {
+    "file": "portable-stat-editor-menu-textfix-fix6a.nds",
+    "sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a",
+    "size": 127073056
+  },
+  "runtime": "NOT_TESTED",
+  "diff": {
+    "changed_nds_files": [
+      "a/0/2/7"
+    ],
+    "changed_text_narc_members": [
+      40
+    ],
+    "changed_message_id": 134,
+    "old_messages_0_116_byte_vectors_semantically_exact": true,
+    "other_appended_messages_semantically_exact": true,
+    "message_134_word_count_growth": 6,
+    "bank_40_raw_size_delta_bytes": 12,
+    "script_2072_byte_exact": true,
+    "arm9_arm7_byte_exact": true
+  },
+  "message_134": {
+    "bufferint_slot_to_field": {
+      "1": "CURRENT 0x8008",
+      "2": "PROPOSAL 0x8005"
+    },
+    "strvar_controls": [
+      {
+        "control": "0x0300",
+        "args": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "control": "0x0400",
+        "args": [
+          2,
+          0,
+          0
+        ]
+      }
+    ],
+    "retail_expansion_contract": "StringExpandPlaceholders reads arg0 as the direct MessageFormat.fields index; BufferInt passes its u8 slot directly to SetStringAsPlaceholder."
+  },
+  "limits": [
+    "Static NARC/ROM construction only; no core, native UI, or gameplay execution."
+  ]
+}

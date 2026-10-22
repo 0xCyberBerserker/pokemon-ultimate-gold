@@ -1,0 +1,85 @@
+{
+  "schema": "ultimate-gold-stat-editor-native-qa/v1",
+  "status": "QA_ONLY_SINGLE_NATIVE_SET_SAVE_COLD_RELOAD_PASS",
+  "summary": {
+    "en": "One QA-only native HP-IV edit, normal save, and cold reload passed on the same isolated candidate hash.",
+    "es": "Una edición nativa de IV de PS exclusiva de QA, el guardado normal y la recarga en frío pasaron con el mismo hash de candidata aislada."
+  },
+  "candidate": {
+    "parent_sha256": "dec58721ea4ad1d34fd5d195c0618529bf21b14e0e8bdc017bf98af8dad8911c",
+    "probe_sha256": "7470bc4fd963996660ec919acad4293d18d7de285d2b6d277a430205bf053701",
+    "downloadable": false,
+    "player_rom_or_release_changed": false,
+    "alpha2_acceptance": false
+  },
+  "native_action": {
+    "hook": "Temporary QA-only callback replacement for Party Healer item 114",
+    "cheats": [],
+    "action_result": "STAT_EDITOR_OK",
+    "result_marker_address": "0x023D6E00",
+    "result_marker_words": ["0x53544500", 0, 31],
+    "target": {
+      "party_slot": 0,
+      "species_id": 35,
+      "pid_before_and_after": "e30363e2",
+      "stat": "HP IV",
+      "before": {"iv": 15, "hp": 22, "max_hp": 22, "checksum": 19307},
+      "after": {"iv": 31, "hp": 23, "max_hp": 23, "checksum": 19323},
+      "checksum_valid": true
+    },
+    "non_target_party_records_byte_identical": true
+  },
+  "native_save_and_cold_reload": {
+    "source_dsv_sha256": "38d7a65bfa0bad447d82505e6a224548de33daa99a960395eaeb80f2522ca4cf",
+    "saved_dsv_sha256": "c5b174ea827ca9a80e1d8a6999de300890487f5e9d06b080f12d3cfa4e269cc0",
+    "save_counter": {"before": 9, "after": 10},
+    "both_dsv_slots_crc16_valid": true,
+    "cold_candidate_sha256": "7470bc4fd963996660ec919acad4293d18d7de285d2b6d277a430205bf053701",
+    "cold_frames": 15000,
+    "cold_state_input": null,
+    "cold_cheats": [],
+    "cold_dsv_sha256": "c5b174ea827ca9a80e1d8a6999de300890487f5e9d06b080f12d3cfa4e269cc0",
+    "runtime_party_matches_saved_dsv": true
+  },
+  "runtime_integrity": {
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+    "helper_sha256": "990b3a16b67cac7218458a438b1d2169544b22642b0e946217cc51b43a3b8d92",
+    "callback_sha256": "b5b304ba0a55ee8468fa70ab5720ba302965cb6a6fa8633a85abff2a256f2dbd",
+    "callback_table_entry": "0x023d6501",
+    "low_and_high_guards_valid": true,
+    "adjacent_hm_shop_repel_reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+  },
+  "evidence": {
+    "external_local_audit": "Sacred-Gold/night-sprint/qa/runs/stat-editor-callback-cold-verify-fix6a/runtime_audit.json",
+    "audit_sha256": "5f2d89890c287467407508159c5656e0c4decf6c5f8a21973a65a95f0cdf0267",
+    "action_result_sha256": "acc9de6578a1c83192554cd6d41bcd97ca0bd381e3702693015fd5e64b3bdbc4",
+    "native_save_result_sha256": "c213a5a8392c1c3c186680aaa025e0f04470275afeaef344b366090b64879b57",
+    "cold_result_sha256": "50948e0b16fff80a21d9b10ac1ef01bbae506eaaec6a10f1e389df98e284efd1",
+    "screenshots": {
+      "before_use_sha256": "f851dcf1773ad32af3853859f3ff2dc350b363ad5401a92b54456513a13a8a93",
+      "callback_returned_sha256": "f6257718d0d74d85441b2ac452802b4bbfc6714fc168518964fe3217ba11e05b",
+      "native_save_confirmation_sha256": "0b3fd57562c2e125245b6e08b547db66a3d01dce2f9147651432714c7aa8d1b3",
+      "overwrite_confirmation_sha256": "85d90cd30c4d442474a00f634d30a323870305d64f9d41de49108f088f2d7e05",
+      "native_save_complete_sha256": "80f7b18450d8f57716f8a6efc8c7a996b30b8f1310a783367a95798b4f3193dc",
+      "cold_loaded_field_sha256": "80f7b18450d8f57716f8a6efc8c7a996b30b8f1310a783367a95798b4f3193dc"
+    }
+  },
+  "host_only_coverage": {
+    "test": "qa/stat_editor_host_test.py",
+    "status": "PASS",
+    "preview_reset_and_bounds_runtime": "PENDING"
+  },
+  "limits": {
+    "en": [
+      "This is one HP-IV edit through a temporary QA callback, not a production editor menu.",
+      "Runtime preview, reset, bounds, EV editing, PC storage, and Alpha2 acceptance were not tested.",
+      "The external run data and screenshots remain outside this project repository and release."
+    ],
+    "es": [
+      "Es una sola edición de IV de PS mediante un callback temporal de QA, no un menú editor de producción.",
+      "No se probaron en runtime la previsualización, los reinicios, los límites, la edición EV, el almacenamiento del PC ni la aceptación Alpha2.",
+      "Los datos de ejecución y las capturas externos permanecen fuera de este repositorio y de la publicación."
+    ]
+  }
+}

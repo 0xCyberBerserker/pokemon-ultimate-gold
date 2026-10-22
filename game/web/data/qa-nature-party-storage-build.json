@@ -1,0 +1,139 @@
+{
+  "schema": "nature-party-override-static-build/v1",
+  "status": "PARTY_STORAGE_PRIMITIVE_HOST_AND_ARM_BUILD_PASS_RUNTIME_AND_DISPATCH_PENDING",
+  "base": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-noregister/portable-stat-editor-menu-noregister-fix6a.nds",
+    "sha256": "03d8711445a32868a64b5c34abbd094c2f4be7a0d40d09fafcc54460a257c620"
+  },
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-party-override/nature-party-override-fix6a.nds",
+    "sha256": "3c48a769ee812db566e9a12535b2fcbd078ad153f94d5db90b762cd73b389107",
+    "size": 127073056,
+    "changed_rom_components": [
+      "ARM9 MainCodeFile section at 0x023D6AA0"
+    ],
+    "section_base": "0x023D6000",
+    "section_size": 4096,
+    "payload_offset": "0xAA0",
+    "payload_preimage_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+    "payload_preimage_bytes": 1120,
+    "payload_postimage_sha256": "5350aa578b82c6788da17a227ccc6e8515d9d50678e4db30c1b287276aca9007",
+    "payload_written_bytes": 124,
+    "existing_code_and_guards_preserved": true,
+    "arm7_and_overlay_tables_preserved": true,
+    "arm9_overlays_preserved": 129,
+    "filesystem_byte_exact": true
+  },
+  "primitive": {
+    "function": "NatureOverride_PartyWrite",
+    "encoding": "field114 mask 0x003E stores encodedOverride << 1; 0 clears the field mask",
+    "valid_inputs": {
+      "reset": 0,
+      "override_range": [
+        1,
+        25
+      ]
+    },
+    "reject_range": [
+      26,
+      31
+    ],
+    "read_modify_write_preserves_other_bits": true,
+    "pid_api_or_stats_recalculation_referenced": false,
+    "checksum_failure_rejected_before_write": true,
+    "host_vectors": [
+      "no override/reset",
+      "encoded 1",
+      "encoded 25",
+      "reject 26..31",
+      "unrelated-bit sentinels",
+      "idempotent write",
+      "checksum failure",
+      "clear an existing value 25 while preserving outside-mask sentinels"
+    ],
+    "host_test_result": "PASS; re-run after final test and source update",
+    "abi": "Thumb ARMv5TE / ARM946E-S / APCS-GNU; native PartyPokemon ABI from hg-engine headers",
+    "native_symbols": {
+      "bytes": 124,
+      "sha256": "5350aa578b82c6788da17a227ccc6e8515d9d50678e4db30c1b287276aca9007",
+      "address": "0x023D6AA0",
+      "object_sha256": "d0bd28d6f7e5c78fd03db86984da086a64d7694747fcc2baa4fe8b6dc1a87047",
+      "elf_sha256": "41ca75895414c46142baa00f4ab9a4307b39dbcb5bc25e5df149331b58a40a3c",
+      "map_sha256": "b3f1b25d65283857d71d0494e917c29311ff1d330f823148318eb83933edd02f",
+      "undefined_symbols": [
+        "GetMonData",
+        "Party_GetMonByIndex",
+        "SetMonData"
+      ],
+      "native_calls": {
+        "Party_GetMonByIndex": "0x02074645",
+        "GetMonData": "0x0206E541",
+        "SetMonData": "0x0206EC41"
+      },
+      "disassembly": "\n@TMP@/nature-override-arm-g8gc4qjb/nature_override.elf:\tfile format elf32-littlearm\n\ndisassembly of section .nature_override:\n\n023d6aa0 <natureoverride_partywrite>:\n 23d6aa0: b5f8         \tpush\t{r3, r4, r5, r6, r7, lr}\n 23d6aa2: 2601         \tmovs\tr6, #0x1\n 23d6aa4: 2800         \tcmp\tr0, #0x0\n 23d6aa6: d032         \tbeq\t0x23d6b0e <natureoverride_partywrite+0x6e> @ imm = #0x64\n 23d6aa8: 2900         \tcmp\tr1, #0x0\n 23d6aaa: d430         \tbmi\t0x23d6b0e <natureoverride_partywrite+0x6e> @ imm = #0x60\n 23d6aac: 2905         \tcmp\tr1, #0x5\n 23d6aae: d82e         \tbhi\t0x23d6b0e <natureoverride_partywrite+0x6e> @ imm = #0x5c\n 23d6ab0: 0014         \tmovs\tr4, r2\n 23d6ab2: 6842         \tldr\tr2, [r0, #0x4]\n 23d6ab4: 4291         \tcmp\tr1, r2\n 23d6ab6: da2a         \tbge\t0x23d6b0e <natureoverride_partywrite+0x6e> @ imm = #0x54\n 23d6ab8: 6802         \tldr\tr2, [r0]\n 23d6aba: 4291         \tcmp\tr1, r2\n 23d6abc: da27         \tbge\t0x23d6b0e <natureoverride_partywrite+0x6e> @ imm = #0x4e\n 23d6abe: 2702         \tmovs\tr7, #0x2\n 23d6ac0: 2c00         \tcmp\tr4, #0x0\n 23d6ac2: d425         \tbmi\t0x23d6b10 <natureoverride_partywrite+0x70> @ imm = #0x4a\n 23d6ac4: 2c19         \tcmp\tr4, #0x19\n 23d6ac6: d823         \tbhi\t0x23d6b10 <natureoverride_partywrite+0x70> @ imm = #0x46\n 23d6ac8: f49d fdbc    \tbl\t0x2074644 <setmondata+0x5a03> @ imm = #-0x362488\n 23d6acc: 2800         \tcmp\tr0, #0x0\n 23d6ace: 46b4         \tmov\tr12, r6\n 23d6ad0: 4667         \tmov\tr7, r12\n 23d6ad2: d01d         \tbeq\t0x23d6b10 <natureoverride_partywrite+0x70> @ imm = #0x3a\n 23d6ad4: 0005         \tmovs\tr5, r0\n 23d6ad6: 2703         \tmovs\tr7, #0x3\n 23d6ad8: 2600         \tmovs\tr6, #0x0\n 23d6ada: 0039         \tmovs\tr1, r7\n 23d6adc: 0032         \tmovs\tr2, r6\n 23d6ade: f497 fd2f    \tbl\t0x206e540               @ imm = #-0x3685a2\n 23d6ae2: 2800         \tcmp\tr0, #0x0\n 23d6ae4: d114         \tbne\t0x23d6b10 <natureoverride_partywrite+0x70> @ imm = #0x28\n 23d6ae6: 2172         \tmovs\tr1, #0x72\n 23d6ae8: 0028         \tmovs\tr0, r5\n 23d6aea: 0032         \tmovs\tr2, r6\n 23d6aec: f497 fd28    \tbl\t0x206e540               @ imm = #-0x3685b0\n 23d6af0: 4908         \tldr\tr1, [pc, #0x20]         @ 0x23d6b14 <natureoverride_partywrite+0x74>\n 23d6af2: 4001         \tands\tr1, r0\n 23d6af4: 0062         \tlsls\tr2, r4, #0x1\n 23d6af6: 430a         \torrs\tr2, r1\n 23d6af8: 4669         \tmov\tr1, sp\n 23d6afa: 800a         \tstrh\tr2, [r1]\n 23d6afc: 4906         \tldr\tr1, [pc, #0x18]         @ 0x23d6b18 <natureoverride_partywrite+0x78>\n 23d6afe: 4001         \tands\tr1, r0\n 23d6b00: 428a         \tcmp\tr2, r1\n 23d6b02: d004         \tbeq\t0x23d6b0e <natureoverride_partywrite+0x6e> @ imm = #0x8\n 23d6b04: 2172         \tmovs\tr1, #0x72\n 23d6b06: 466a         \tmov\tr2, sp\n 23d6b08: 0028         \tmovs\tr0, r5\n 23d6b0a: f498 f899    \tbl\t0x206ec40 <getmondata+0x6ff> @ imm = #-0x367ece\n 23d6b0e: 0037         \tmovs\tr7, r6\n 23d6b10: 0038         \tmovs\tr0, r7\n 23d6b12: bdf8         \tpop\t{r3, r4, r5, r6, r7, pc}\n 23d6b14: c1 ff 00 00  \t.word\t0x0000ffc1\n 23d6b18: ff ff 00 00  \t.word\t0x0000ffff\n",
+      "linker_script": "Party_GetMonByIndex = 0x2074645;\nGetMonData = 0x206e541;\nSetMonData = 0x206ec41;\nSECTIONS { .nature_override 0x23d6aa0 : { KEEP(*(.text.NatureOverride_PartyWrite)) *(.text*) *(.rodata*) } /DISCARD/ : { *(.comment) *(.ARM.attributes) *(.ARM.exidx*) } }\n"
+    },
+    "runtime_dispatch": "NONE; the function is deliberately unreachable until a separate opcode/callsite is validated",
+    "zero_clears_existing_override": true
+  },
+  "next_gate": "Review and implement a small opcode-857 wrapper at the recorded next table slot, preserving all 857 old entries and guards. Then use an isolated validated script harness to set/read/reset field 114 and compare full word plus PID before/after on a disposable Party slot. Do not hook nature calculation or claim persistence/PC safety.",
+  "sources": {
+    "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-party-override/nature_override.c": "141f62572554368edf314453cb898b773b05ffe10a8d1aa35860eb1669243f3e",
+    "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-party-override/nature_override.h": "f2e0b928020ec70e539528d340559382a812cc65f228592e959964b84554a9d9",
+    "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-party-override/nature_override_host_test.c": "d78693f9a7e581f722478ea92887ae575d2e554791a9f044a345163e6e2cd35e"
+  },
+  "builder_sha256": "b8b4aa1499ecf04d592c53c2050cada0553a9a3b6ef1ef3fa95e0c9b62586347",
+  "target_provenance": {
+    "field114_compiled_map": {
+      "path": "internal/stat-editor-research/nature-field114-compiled-map.json",
+      "sha256": "98f95c1e00676fc2804d886db3b55a0bd832026d1a302d0022be336572db86df",
+      "finding": "Party field 114 maps to the full u16 at blockB+0x1A; target getter 0x0206E541 and setter 0x0206EC41."
+    },
+    "native_flow_contract": {
+      "path": "internal/stat-editor/native-flow-contract.md",
+      "sha256": "acec2e01bec4f9b913233c0df34f53e18da613941a7d92d460e9ec290b0425b5",
+      "party_getter": "0x02074645",
+      "get_mon_data": "0x0206E541",
+      "set_mon_data": "0x0206EC41"
+    },
+    "hg_engine_pokemon_header_sha256": "9e2d2f1bb2021b9823656df64a5427d96ae11eb1fe803726693110d23a965ea1",
+    "retail_pokemon_source_sha256": "d485ada6131981327c19c651fac9734d685a582f273bc990657901614f3e39e5",
+    "field_enum": "HG Engine MON_DATA_RESERVED_114 (value 114)",
+    "mask_source": "DUMMY_P2_2_NATURE_OVERRIDE = 0x003E in hg-engine/include/pokemon.h"
+  },
+  "static_diff_verification": {
+    "method": "Independent ndspy comparison of parent and candidate section tables, ARM7, overlay tables, ARM9 overlays, and files.",
+    "changed_arm9_sections": [
+      {
+        "index": 5,
+        "base": "0x023D6000",
+        "size": 4096,
+        "changed_range": "0x023D6AA0..0x023D6B1C"
+      }
+    ],
+    "all_other_arm9_sections_exact": true,
+    "arm7_and_overlay_tables_exact": true,
+    "arm9_overlays_exact": 129,
+    "filesystem_files_exact": true
+  },
+  "next_gate_contract": {
+    "current_script_dispatch_count_address": "0x020FAC90",
+    "current_count": 857,
+    "current_table_base": "0x023D5100",
+    "next_opcode_index": 857,
+    "next_table_entry_address": "0x023D5E64",
+    "high_guard_address": "0x023D5F00",
+    "existing_table_capacity_before_guard_entries": 896,
+    "candidate_wrapper_address": "0x023D6B20",
+    "candidate_wrapper_free_end": "0x023D6F00",
+    "required_wrapper_operands": "slotVarId, statusVarId, encodedOverrideVarId; validate variable IDs/pointers before Party access; call Party_GetMonByIndex through primitive contract and report result.",
+    "status": "UNIMPLEMENTED; no dispatch entry, wrapper, or script caller is present in this candidate."
+  },
+  "reverification": {
+    "host_test_command": "cc -std=c99 -Wall -Wextra -Werror -fpack-struct=4 -fno-builtin -Wno-attributes -Wno-builtin-declaration-mismatch, with the pinned HG Engine headers",
+    "host_vectors_after_test_update": "PASS; includes clearing an existing 25 override and asserts the header mask is exactly 0x003E",
+    "thumb_payload_recompile": "PASS; byte-identical to embedded binary after using the pinned HG Engine mask macro",
+    "thumb_payload_sha256": "5350aa578b82c6788da17a227ccc6e8515d9d50678e4db30c1b287276aca9007",
+    "candidate_static_section_comparison": "PASS; independently compared all 7 ARM9 sections, only section index 5 at 0x023D6000 differs; ARM7, overlay tables, all 129 ARM9 overlays, and all filesystem files are exact."
+  }
+}

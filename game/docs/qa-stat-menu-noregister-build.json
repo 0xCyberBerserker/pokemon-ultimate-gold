@@ -1,0 +1,75 @@
+{
+  "schema": "portable-stat-editor-menu-noregister/v1",
+  "status": "STATIC_BUILD_PASS_RUNTIME_NOT_TESTED",
+  "inputs": {
+    "parent_rom": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-textfix/portable-stat-editor-menu-textfix-fix6a.nds",
+      "sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a"
+    },
+    "item_narc": {
+      "path": "a/0/1/7",
+      "sha256": "59c44020ea18408cd9fac5efc5383addce8925074d73bccc67a64ac9a6e41ffa"
+    }
+  },
+  "candidate": {
+    "file": "portable-stat-editor-menu-noregister-fix6a.nds",
+    "sha256": "03d8711445a32868a64b5c34abbd094c2f4be7a0d40d09fafcc54460a257c620",
+    "size": 127073056
+  },
+  "item_118": {
+    "nds_path": "a/0/1/7",
+    "nds_file_id": 146,
+    "arm9_mapping_row": {
+      "row_address": "0x02100544",
+      "row_u16": [
+        515,
+        793,
+        794,
+        0
+      ]
+    },
+    "narc_member_id_from_arm9_mapping": 515,
+    "record_size": 34,
+    "record_before_sha256": "00886a28ba8f8b93c086bc3b1502cd025d8eb072c03d9dc939bf6fe35fe954fc",
+    "record_after_sha256": "cf2166b33de86bae75cf84fca4233e9abaaeaee22b24417f344bbb411eb46d0e",
+    "flags_before": "0x03e0",
+    "flags_after": "0x03a0",
+    "field_use_before_and_after": 5,
+    "changed_record_offsets": [
+      8
+    ],
+    "changed_byte_xor": "0x40"
+  },
+  "preservation": {
+    "changed_nds_paths": [
+      "a/0/1/7"
+    ],
+    "changed_item_narc_members": [
+      515
+    ],
+    "other_item_records_byte_exact": true,
+    "items_113_114_mapping_preserved": true,
+    "arm9_arm7_byte_exact": true,
+    "nds_file_count_and_size_preserved": true
+  },
+  "limits": [
+    "Static ROM/NARC construction only; no emulator or native UI run.",
+    "Source evidence explains REGISTER gating, but this build alone does not prove UI behavior."
+  ],
+  "builder_sha256": "d6651661c8d82bc87d4050ff7c477f522b9ae7503af0d835cc5eb0f483c9288c",
+  "source_basis": {
+    "bag_context_menu": {
+      "path": "engine/upstream/pokeheartgold/src/application/bag/bag_app_main.c",
+      "sha256": "05dbbebce9c69ac5af8d7f827c1420a0ec232f8d71c1a76b7bd7466c3e38dd06",
+      "lines": "1668, 1691-1697",
+      "finding": "USE is added when ITEMATTR_FIELDUSEFUNC resolves to a non-NULL callback; REGISTER is added independently when ITEMATTR_SELECTABLE is set."
+    },
+    "item_attribute_getter": {
+      "path": "engine/upstream/pokeheartgold/src/item.c",
+      "sha256": "09e9377f89adc9003711d3dc16a3912e476043a188e3d5c349369cb37f6fda49",
+      "lines": "engine/upstream/pokeheartgold/src/item.c:796-812; engine/upstream/pokeheartgold/include/constants/items.h:55-57",
+      "finding": "SELECTABLE is a dedicated item-attribute bit; clearing 0x0040 leaves fieldUseFunc at byte 0x0A unchanged."
+    }
+  },
+  "test_sha256": "ec328740800de5ba1ed732a23fa62b12a4e56feb2e460549fc97146817ab1419"
+}
