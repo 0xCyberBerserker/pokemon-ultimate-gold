@@ -16,12 +16,14 @@ sys.path.insert(0, str(ROOT / "docs"))
 sys.path.insert(0, str(ROOT / "tools"))
 from generate_mod_tables import Rom, narc
 from build_shop_locations import ITEM_MAP, MAP_TABLE, SHOP_POINTER_TABLE, inventory, mapped_reader
+from build_species_stat_comparison import validate_comparison
 
 TARGET_SHA = "fdb2fcabc4b51c4b98b0e4fcaf02740c81f32ede54c5a5bc0004d58c3133357e"
 NATIVE_TARGET_SHA = "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
 ALPHA1_SHOP_REPORT_SHA = "44d5e7c52922bcc0e7556d15dd6bfe5226d178fab270e90729ebe1560741eaca"
 ITEM_LOCATION_DOC_SHA = "5073d5b4356e992a1dbfb0fd3cd212323999ee927c1d2484c1f8475c42a67033"
 ALPHA2_TARGET_SHA = "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+SPECIES_STAT_COMPARISON_SHA = "f2d3431d8c85a2aaf2558809891a2964cd15b97a1552aeb55dc1e6325630ebed"
 ALPHA2_BUILD_REPORT_SHA = "12f76a7c3afff0942ea7bc920fda4c0c45341c162d80f60627b8bba5787301a3"
 ALPHA2_SHOP_REPORT_SHA = "f2dfd66a494c262d80af5b2781439b2f7df093dfe4cccdec36573ecca433225d"
 ALPHA1_TRAINER_JOURNEY_SHA = "c339162a24793c97fc09eadb4fd5603626f2e0bff9dd7c83b33d5817a0b0719c"
@@ -59,6 +61,23 @@ def digest(path):
 
 def digest_bytes(data):
     return hashlib.sha256(data).hexdigest()
+
+def load_species_stat_comparison(target_hash, species_doc):
+    if target_hash != ALPHA2_TARGET_SHA:
+        return None
+    path = ROOT / "docs/species-stat-comparison.json"
+    if digest(path) != SPECIES_STAT_COMPARISON_SHA:
+        raise ValueError("Species stat comparison differs from its reviewed derived-data pin")
+    comparison = json.loads(path.read_text(encoding="utf-8"))
+    validate_comparison(comparison)
+    rows = {row["id"]: row for row in comparison["species"]}
+    entries = {entry["national_id"]: entry for entry in species_doc["species"]}
+    if set(rows) != set(entries):
+        raise ValueError("Species stat comparison and wiki species IDs do not match")
+    for species_id, row in rows.items():
+        if entries[species_id]["base_stats"] != row["target_stats"]:
+            raise ValueError(f"Alpha2 species stats differ from the comparison for #{species_id}")
+    return comparison
 
 def load_alpha2_build_audit():
     """Require the exact reviewed Alpha1-to-FIX6a NARC comparison."""
@@ -879,16 +898,23 @@ def main():
             flavors["items"].setdefault(ident, {})["es"] = item_es_hgss_mechanics[ident]["es"]
     by_name = {kind:{normalize(n["en"]):ident for ident,n in entries.items() if n.get("en")} for kind,entries in names.items()}
     species_doc = json.loads((ROOT/"docs/species-493.json").read_text())
+    species_stat_comparison = load_species_stat_comparison(target_hash, species_doc)
+    stat_comparisons = ({row["id"]: row for row in species_stat_comparison["species"]}
+                        if species_stat_comparison else {})
     species = []
     for entry in species_doc["species"]:
         ident = entry["national_id"]
-        species.append({"id":ident,"name":names["species"].get(ident,{"en":entry["name"],"es":entry["name"]}),
-                        "stats":entry["base_stats"],"types":list(dict.fromkeys(entry["types"])),
-                        "abilities":[x for x in dict.fromkeys(entry["abilities"]) if x],"learnset":entry["levelup_moves"],
-                        "ability_slots":[{"slot":slot + 1,"kind":"standard","ability_id":ability or None} for slot,ability in enumerate(entry["abilities"])],
-                        "hidden_ability":{"ability_id":None,"status":"not_implemented_in_target_format"},
-                        "evolutions":[{"method":e["method_id"],"param":e["param"],"target":e["target_species_id"]} for e in entry["evolutions"]],
-                        "generation":1 if ident<=151 else 2 if ident<=251 else 3 if ident<=386 else 4})
+        species_entry = {"id":ident,"name":names["species"].get(ident,{"en":entry["name"],"es":entry["name"]}),
+                         "stats":entry["base_stats"],"types":list(dict.fromkeys(entry["types"])),
+                         "abilities":[x for x in dict.fromkeys(entry["abilities"]) if x],"learnset":entry["levelup_moves"],
+                         "ability_slots":[{"slot":slot + 1,"kind":"standard","ability_id":ability or None} for slot,ability in enumerate(entry["abilities"])],
+                         "hidden_ability":{"ability_id":None,"status":"not_implemented_in_target_format"},
+                         "evolutions":[{"method":e["method_id"],"param":e["param"],"target":e["target_species_id"]} for e in entry["evolutions"]],
+                         "generation":1 if ident<=151 else 2 if ident<=251 else 3 if ident<=386 else 4}
+        comparison = stat_comparisons.get(ident)
+        if comparison and comparison["status"] != "unchanged":
+            species_entry["stat_comparison"] = {key: value for key, value in comparison.items() if key != "id"}
+        species.append(species_entry)
     moves = {}
     for ident, raw in enumerate(move_records):
         if not ident or ident >= len(move_labels):
@@ -1085,6 +1111,11 @@ def main():
                               "ability_slots":"Exact target standard ability slots 1/2; the native personal format and selector do not expose a third hidden-ability slot. A canonically hidden ability placed in slot 2 by the hack remains a standard slot in this build.",
                               "descriptions":"English item descriptions use HGSS-matched references except three project custom strings stored in bank 223. Spanish descriptions use matched references and project translations with HGSS-mechanics corrections. These are wiki references, not proof of native target-ROM effects or Bag text.",
                               "sprites":"Pinned PokeAPI sprites; separate provenance manifests.","runtime":"NOT_RUN"}}
+    if species_stat_comparison:
+        result["species_stat_comparison"] = {
+            key: species_stat_comparison[key]
+            for key in ("schema", "sources", "record_layout", "criterion", "counts")
+        }
     if target_hash == ALPHA2_TARGET_SHA:
         result["source_notes"].update({
             "item_descriptions":"Item names come from bank 222. Wiki English text for three custom items uses project strings patched into bank 223. The exact Alpha2 native Bag getter at 0x02077D64 reads bank 221, where entries 113, 114 and 118 are empty: this is a confirmed text-bank bug awaiting the integration build. Other item English descriptions use matched HGSS references; text does not prove native effects.",

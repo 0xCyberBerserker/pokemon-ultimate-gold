@@ -20,7 +20,7 @@ Data: [493 species](species-493.csv), [15 changed moves](moves-final.csv), [all 
 
 Cross-checks: [Drayano baseline](drayano-crosscheck.md), [all included components](mods-crosscheck.md), [pChal community resources](pchal-resources.md). Our tables take precedence over outside documents when describing this exact build.
 
-Current status: [QA results](qa-493.md). Planned features: [evolution-item shops](evolution-items-qol.md), [complete cheat catalog](cheat-codes.md), [HM field actions without learned moves](hm-field-qol.md).
+Current status: [project QA results](qa-493.md), [Stat Editor verification](qa-editor-current-status.md), and [bounded EV cap cases](qa-editor-ev-caps.md). Planned features: [evolution-item shops](evolution-items-qol.md), [complete cheat catalog](cheat-codes.md), [HM field actions without learned moves](hm-field-qol.md).
 
 Made with 🖤 in Barcelona City 🇪🇸
 
@@ -34,4 +34,4 @@ Empieza con [el patcher web](web-patcher.md). La wiki generada incorpora estas g
 
 Contrastes: [base Drayano](drayano-crosscheck.md), [componentes integrados](mods-crosscheck.md) y [recursos comunitarios de pChal](pchal-resources.md). Nuestros datos extraídos tienen prioridad para describir esta ROM exacta. La documentación separa herencia, cambios propios, verificación runtime y pendientes.
 
-Estado actual: [resultados QA](qa-493.md). Funciones previstas: [tiendas de objetos evolutivos](evolution-items-qol.md), [catálogo de trucos](cheat-codes.md) y [uso de MO sin aprenderlas](hm-field-qol.md).
+Estado actual: [resultados QA del proyecto](qa-493.md), [verificación del Stat Editor](qa-editor-current-status.md) y [casos acotados de topes EV](qa-editor-ev-caps.md). Funciones previstas: [tiendas de objetos evolutivos](evolution-items-qol.md), [catálogo de trucos](cheat-codes.md) y [uso de MO sin aprenderlas](hm-field-qol.md).

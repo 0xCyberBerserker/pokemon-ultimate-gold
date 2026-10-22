@@ -1,7 +1,7 @@
 {
   "schema": "ultimate-gold-item-description-audit/v1",
   "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
-  "dataset_sha256": "85f7f594b48304d25f2265beb2494ae6e1b357ea7bf91839a89d76a704c1d803",
+  "dataset_sha256": "a5c0e26db0b32636df85d9dd4c1fb4d4008b293b6e1d056422784e6db20c2248",
   "coverage": {
     "items_total": 516,
     "excluded_tm_hm_ids": 100,

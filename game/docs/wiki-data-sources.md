@@ -13,6 +13,14 @@ Catalog coverage does not establish complete gameplay acceptance.
 ability slots, TM/HM assignments and English names. The Normal/Plus selector reflects documented
 native level scaling, not invented EV spreads or hidden abilities.
 
+The Pokédex's Alpha 2 stat filter compares the six base stats in the exact clean HeartGold USA
+ROM (`65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105`) and Alpha 2 FIX6a
+(`24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`). It labels a species
+“boosted” only when its base-stat total rises; same-total changes appear separately as
+redistributions. Individual decreases remain visible as trade-offs. Type, ability and move changes
+are outside this score. The derived comparison is hash-pinned in
+[`species-stat-comparison.json`](species-stat-comparison.json).
+
 The PokeAPI cache is pinned to commit `2bf639e5572812a67d2b94903fdcb9d095f5aeb2`.
 English/Spanish language IDs are 9/7; HGSS is version group 10. Generation-4 item joins check
 indices against names and explicit old-name aliases. Spanish combines matched references and
@@ -57,6 +65,14 @@ miembros. Cubrir el catálogo no demuestra aceptación de toda la aventura.
 `tools/build_wiki_data.py` lee registros de combate, equipos, espacios de habilidades estándar,
 asignaciones MT/MO y nombres ingleses del objetivo exacto. Normal/Plus refleja el escalado nativo
 documentado; no inventa repartos EV ni habilidades ocultas.
+
+El filtro de estadísticas de la Pokédex compara las seis estadísticas base de la ROM limpia
+HeartGold USA (`65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105`) y Alpha 2
+FIX6a (`24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`). Solo etiqueta una
+especie como “mejorada” si aumenta el total base; los cambios con el mismo total aparecen aparte
+como redistribuciones. Las bajadas individuales siguen visibles como compensaciones. Tipos,
+habilidades y movimientos no forman parte de esta puntuación. La comparación derivada conserva su
+hash en [`species-stat-comparison.json`](species-stat-comparison.json).
 
 La caché PokeAPI está fijada al commit `2bf639e5572812a67d2b94903fdcb9d095f5aeb2`.
 Los idiomas English/Español usan IDs 9/7 y HGSS es el grupo de versiones 10. Los objetos se
