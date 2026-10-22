@@ -1,0 +1,42 @@
+{
+  "schema": "portable-kit-launch-seeded-independent-review/v1",
+  "verdict": "PASS_BOUNDED_NATIVE_GIFT_SAVE_COLD_AND_TWO_USE_PROBE",
+  "auditor": {
+    "path": "qa/portable_kit_launch_native_seeded_audit.py",
+    "sha256": "e0690bcb0a6cb02d897907060cb342926268015f0a8f9eb6a0f648c631065da8",
+    "frozen_acceptance_path": "qa/runs/portable-kit-launch-native-seeded-audit/acceptance.json",
+    "frozen_acceptance_sha256": "5df276619b51652ced92c61af30a35d650e7ad591773445c44cbd8709267e3c9",
+    "offline_rerun_matches_frozen_json_byte_exact": true
+  },
+  "artifacts": {
+    "alpha2_rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "portable_rom_sha256": "604101b971d182902928b73f3b9717ff26751aed1bc5a933e65b40f85425a79f",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "alpha2_runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+    "portable_runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "build_report_sha256": "859e0ffef0204d435f225e5dad0c605f1582bcd5e97e3d17aa316c458bf18966",
+    "static_review_sha256": "818a1cd2ec18343cccf64e3214994521144415dafbdb1cb017acd251e4912baa"
+  },
+  "verified": {
+    "alpha2_native_gift_save_and_fresh_cold": true,
+    "seed_dsv": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+    "saved_cold_dsv": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "main_counter": "9_to_10",
+    "marker_118_is_last_key_item_and_quantity_one": true,
+    "portable_run_cold_seed_is_native_saved_alpha2_dsv": true,
+    "portable_script": "global 2072, bank member 3, bytecode 6000290007804755310061000200",
+    "native_use_acknowledgements": ["A", "B"],
+    "post_use_marker_118_quantity": 1,
+    "canonical_bag_and_party_boundary_checks": true,
+    "fixed_probe_reserves_5000_6000_7000_unchanged": true,
+    "scratch_range_8000_changes_reported_without_immutability_claim": true,
+    "all_state_battery_script_ram_and_capture_chains_recomputed": true
+  },
+  "limits": [
+    "Gameplay acceptance remains NOT_ASSESSED; this is a captured, bounded native callback probe.",
+    "The portable item-use path was tested twice, but registered-item use, production menu integration, IDs 113/114 callback regression, and portable post-use save/cold were not tested.",
+    "The portable candidate was seeded from Alpha2's native saved DSV; the probe candidate itself did not natively award the kit.",
+    "Party RAM acceptance uses exact per-byte encrypted/plain two-byte boundaries against the frozen DSV; no semantic normalization is used.",
+    "0x023D8000 contains recorded runtime scratch changes and is not asserted immutable."
+  ]
+}

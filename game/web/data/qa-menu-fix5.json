@@ -1,0 +1,156 @@
+{
+  "schema": "ultimate-gold-fix5-independent-qa/v1",
+  "review_date": "2026-10-22",
+  "status": "PARTIAL_PASS_VISUAL; ACCEPTANCE_PENDING",
+  "summary": {
+    "en": "FIX5 passed a read-only ROM read-back and bounded UI checks for cold startup with a copied battery file, menu entry, two-page rendering, Back, Cancel, and B exit. Strength and Cancel are fully readable in the narrow layout. This is partial menu/UI evidence, not gameplay or release acceptance.",
+    "es": "FIX5 superó una lectura de ROM de solo lectura y comprobaciones acotadas de UI: arranque en frío con una copia de batería, entrada al menú, representación de dos páginas, Back, Cancel y salida con B. Strength y Cancel se leen completos en el diseño estrecho. Es evidencia parcial de menú/UI, no aceptación del juego ni de la release."
+  },
+  "evidence_root": "@HOME@/Games/Sacred-Gold",
+  "rom": {
+    "source": "experiments/evolution-shop/qa-kit-shop.nds",
+    "source_sha256": "231a0a2fe3f873d0d369f6adbde6e6f69abe74e6d4bf9642fe1b1df8c8a7e514",
+    "target": "experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix5.nds",
+    "target_sha256": "2a1b5acac2e98e3bc0d18f600b7d91eb1e8298fdd436d132706e175bebf97c7f",
+    "build_report": "night-sprint/internal/hm-qol/build-report-fix5.json",
+    "build_report_sha256": "0c4dc83e789386ac0ce146473413ed3115a1e3aef9b94cc2472f34d9b86ef349"
+  },
+  "static_readback": {
+    "result": "PASS",
+    "method": {
+      "en": "Offline ndspy inspection of source/target ROM filesystem, ARM9 patch addresses, and overlay 1. Restoring the four declared route-hook instruction words in overlay 1 reproduced the source overlay bytes.",
+      "es": "Inspección offline con ndspy del filesystem de las ROM fuente/destino, direcciones de parche ARM9 y overlay 1. Restaurar las cuatro palabras de instrucción declaradas para los hooks de ruta en overlay 1 recuperó los bytes del overlay fuente."
+    },
+    "filesystem_files": 513,
+    "changed_file_ids": [1],
+    "other_files_unchanged": true,
+    "arm7_unchanged": true,
+    "arm9_post_data_unchanged": true,
+    "overlay_metadata_unchanged": true,
+    "overlay_1_changes_limited_to_four_declared_route_hooks": true,
+    "preimages_and_expectations": [
+      {
+        "address": "0x020D2BB0",
+        "purpose": "arena-high pointer in preserved existing section",
+        "actual_source_preimage": "0x023D7000",
+        "expected_result": "0x023D7000 (unchanged)",
+        "result": "PASS"
+      },
+      {
+        "address": "0x0207B07E",
+        "purpose": "native menu hook",
+        "actual_source_preimage_bytes": "02 f0 31 f8",
+        "expected_result_bytes": "5c f3 3f f8",
+        "result": "PASS"
+      },
+      {
+        "address": "0x020FAF34",
+        "purpose": "script actor command pointer",
+        "actual_source_preimage": "0x0204D3CD",
+        "expected_result": "0x023D74C5",
+        "result": "PASS"
+      },
+      {
+        "address": "0x0210FA4C",
+        "purpose": "evolution shop pointer",
+        "actual_source_preimage": "0x023D7C00",
+        "expected_result": "0x023D7C00 (unchanged)",
+        "result": "PASS"
+      },
+      {
+        "address": "0x021E6BB8 / 0x021E6BBE",
+        "purpose": "Waterfall route hooks, overlay 1",
+        "actual_source_preimage_bytes": ["8d f6 a4 fe", "6d f6 93 fb"],
+        "expected_result_bytes": ["20 1c c0 46", "f0 f1 2f fc"],
+        "result": "PASS"
+      },
+      {
+        "address": "0x021E753E / 0x021E7544",
+        "purpose": "Surf route hooks, overlay 1",
+        "actual_source_preimage_bytes": ["8d f6 e1 f9", "6c f6 d0 fe"],
+        "expected_result_bytes": ["28 1c c0 46", "ef f1 6c ff"],
+        "result": "PASS"
+      }
+    ],
+    "helper_bytes": 2792,
+    "helper_capacity_bytes": 2800,
+    "remaining_margin_bytes": 8,
+    "preimage_note": {
+      "en": "The source ROM already contains 0x023D7000 at 0x020D2BB0. It is a preserved existing section; the actual preimage is not 0x023D8000.",
+      "es": "La ROM fuente ya contiene 0x023D7000 en 0x020D2BB0. Pertenece a una sección existente conservada; el preimage real no es 0x023D8000."
+    }
+  },
+  "runtime": {
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "cheats_used": false,
+    "cold_start": {
+      "result": "PASS",
+      "runner_pid": 3162836,
+      "frames": 5000,
+      "input_script": "night-sprint/qa/menu_fix5_cold_boot.json",
+      "input_script_sha256": "60c0ab1107f9ddab6316695a53b294e2789805d122f0e6b7be2fd9bbbf7ee030",
+      "result_file": "night-sprint/qa/runs/menu-fix5-cold-boot/result.json",
+      "result_sha256": "cd845a39ef6140a264436d0f5c68db966e38f904ba1d162c22451b2a41ae7977",
+      "navigation_state_input": null,
+      "navigation_state_output_sha256": "34f9dfb12dbb89e3e84f93d56a81be0e1cb18814b288315e34e3cc91acee0278",
+      "battery_copy": "night-sprint/qa/runs/menu-fix5-profile/qa-kit-shop-owned-hm-paged-fix5.dsv",
+      "battery_copy_bytes": 524410,
+      "battery_copy_sha256": "e2366b6eb035a67c2d8987d6f7ce9bb73f5e847234789ac1e2055e09c24db0f6",
+      "battery_save_load": "NOT_TESTED",
+      "checkpoints": ["title_or_menu", "continue_or_load", "loaded_identity", "loaded_location"]
+    },
+    "menu_pages": {
+      "result": "PASS",
+      "runner_pid": 3163821,
+      "frames": 3300,
+      "input_script": "night-sprint/qa/menu_fix5_pages.json",
+      "input_script_sha256": "9997b9dee52e2b0589866caaa9772861d81da062e3ff5ee3ccb3683c70d1236a",
+      "result_file": "night-sprint/qa/runs/menu-fix5-pages/result.json",
+      "result_sha256": "a3c8e8f1748675c78f2fc71c9cad6c2f3d7cb5ce4dc17d71ffccc52bc0a74387",
+      "navigation_state_input_sha256": "34f9dfb12dbb89e3e84f93d56a81be0e1cb18814b288315e34e3cc91acee0278",
+      "navigation_state_output_sha256": "88d2d1b84816022a6daa4d028a19f1d1eb0e57274154ed46fe39fc6d51d73a7d",
+      "battery_copy_sha256_after": "e2366b6eb035a67c2d8987d6f7ce9bb73f5e847234789ac1e2055e09c24db0f6",
+      "checkpoints": ["main_menu", "page_one", "page_two", "page_back", "cancelled"]
+    },
+    "screenshots_modified": false
+  },
+  "visual_evidence": [
+    {
+      "checkpoint": "page_one",
+      "path": "night-sprint/qa/runs/menu-fix5-pages/page_one.png",
+      "sha256": "ff73cb1c98906913f11bd1b37537081564b2f28384e1c899b796cfeea8ef6ee5",
+      "observation": {
+        "en": "Composed 256x384 DS screenshot: Strength fully readable at its relocated row, Cancel fully readable in the short-label position, Next, and the status screen.",
+        "es": "Captura compuesta de DS de 256x384: Strength se lee completo en su fila recolocada, Cancel completo en la posición de etiqueta corta, Next y la pantalla de estado."
+      }
+    },
+    {
+      "checkpoint": "page_two",
+      "path": "night-sprint/qa/runs/menu-fix5-pages/page_two.png",
+      "sha256": "924bc21ff8745825b10af811de8d457a3d3b8774258b6ac7e812ae48fa7cb450"
+    },
+    {
+      "checkpoint": "page_back",
+      "path": "night-sprint/qa/runs/menu-fix5-pages/page_back.png",
+      "sha256": "1f2ee58e083d5aad785f0c19e6c8a4738b86134f5616aca7c3da61233726a136"
+    },
+    {
+      "checkpoint": "cancelled",
+      "path": "night-sprint/qa/runs/menu-fix5-pages/cancelled.png",
+      "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+    },
+    {
+      "checkpoint": "main_menu",
+      "path": "night-sprint/qa/runs/menu-fix5-pages/main_menu.png",
+      "sha256": "87d423fc52e0d1b4e99d2c7fab317247efdc5515e922b56a5ab8407df104bea0"
+    }
+  ],
+  "acceptance": {
+    "status": "PENDING",
+    "limits": {
+      "en": "The runner reports battery_save_load=NOT_TESTED and save/RTC instrumentation unavailable. A copied DSV was present and its reported hash remained stable, but this does not prove battery persistence or a save/reload cycle. Only menu UI/navigation was exercised; individual HM actions, map/badge/item gates, learning, combined shop purchase/save regression, and full-game acceptance remain untested here. Screenshot counts are evidence checkpoints, not independent gameplay trials.",
+      "es": "El runner informa battery_save_load=NOT_TESTED y que la instrumentación de save/RTC no está disponible. Había una copia DSV y su hash informado se mantuvo estable, pero esto no demuestra persistencia de batería ni un ciclo de guardado/carga. Solo se ejercitó la UI/navegación del menú; las acciones individuales de MO, límites de mapa/medalla/objeto, aprendizaje, regresión combinada de compra/guardado de tienda y aceptación del juego completo siguen sin probarse aquí. Las capturas son puntos de evidencia, no ensayos independientes de juego."
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "schema": "ultimate-gold-runtime-preview-independent-review/v1",
+  "status": "PASS_BOUNDED_PREVIEW_SAMPLE_RUNNER_REVIEW",
+  "review_scope": "Offline review of the sampled preview QA artifacts and the sample runner delta only; no emulation or shared QA artifact edits.",
+  "identities": {
+    "candidate_rom": {
+      "path": "experiments/eviv/dispatch-preview-sampled/dispatch-preview-sampled-fix6a.nds",
+      "sha256": "f1ab9f71c73903802f4185760d97923db720b2bdf1a92d2904ac21fa510d09d9"
+    },
+    "previous_preview_candidate_sha256": "64d3dcd3340b4f540bc369b84608cdfecbe86768c7a81d119c19554a84728969",
+    "build_report": {
+      "path": "experiments/eviv/dispatch-preview-sampled/build.json",
+      "sha256": "ba06090fa4040d4f5ece44a726cef5f728612774a062ffc049e124fe6317e5e7"
+    },
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "baseline_runner": {
+      "path": "night-sprint/qa/headless_runner_fix6a.py",
+      "sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+      "role": "Cold-boot and alignment runs; this is the baseline runner identified by the QA record."
+    },
+    "sample_runner": {
+      "path": "night-sprint/qa/dispatch_preview_sampled_runner.py",
+      "sha256": "9d3daba8c3026167d97142510a34f58b48615b289fa8759e819980c9c35cb3e4",
+      "role": "Yes/No sampled branches."
+    },
+    "acceptance_auditor": {
+      "path": "night-sprint/qa/dispatch_preview_sampled_acceptance.py",
+      "sha256": "a1a2d298ebd592a31850a4fa4281e80abafbfee6eb12a2bc1e3178630c75bc7e"
+    },
+    "acceptance_json": {
+      "path": "night-sprint/qa/runs/dispatch-preview-sampled-acceptance.json",
+      "sha256": "978c02f3205c1d91fb083f45baa2f3eb846a3bedbb1b1cd2e58ee27241ec4835"
+    },
+    "source_fixture_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+    "preview_handler_sha256": "6f3e68671fe0b77025952d3f5d1e9f48359dd831d96b5a2bbf26ca9c4ad9157b"
+  },
+  "sample_runner_delta_review": {
+    "comparison": "Unified diff of dispatch_preview_sampled_runner.py against headless_runner_fix6a.py; baseline and sample runner hashes above were independently recomputed.",
+    "additions": [
+      "Builds a frame-to-name map from input-script ram_checkpoints.",
+      "At a requested frame, obtains libretro memory region 2 and copies it with ctypes.string_at, then writes that snapshot to a .ram.bin file in the run directory.",
+      "Adds the names of those RAM checkpoints to the result metadata."
+    ],
+    "negative_checks": [
+      "The diff leaves the input event schedule, button mapping, frame loop, retro_run calls, state input/output, and handler code/operands unchanged.",
+      "The added memory access is a read-only retro_get_memory_data/retro_get_memory_size plus ctypes.string_at copy; no RAM write API, pointer assignment, or mutation of guest memory is added.",
+      "No code forces or synthesizes handler output variables; output values are sampled from guest RAM by the separate audit after the run."
+    ],
+    "verdict": "The sample runner delta adds observation checkpoints and host-side evidence files only. It does not force the preview handler outputs or write guest RAM. This is a static diff finding, not a claim that a runner is intrinsically side-effect free beyond the inspected code."
+  },
+  "reviewed_runtime_record": {
+    "report_status": "PASS_BOUNDED_PREVIEW_AND_CANCEL_NO_MUTATION",
+    "cold_boot": {
+      "frames": 5500,
+      "state_input_sha256": null,
+      "result_json_sha256": "13b24b0a4cd01052699a9657d841f262a3534506f9276e96470f53703ddffee1",
+      "input_script_sha256": "8585149159c5372f3c4216b751ad664a10544426e37b889670685c83e1467097",
+      "state_output_sha256": "13ae6caba230b07def9e10848c885d0616d6297ef5a329c21507daa1aa7e2062",
+      "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26"
+    },
+    "alignment": {
+      "frames": 100,
+      "state_input_sha256": "13ae6caba230b07def9e10848c885d0616d6297ef5a329c21507daa1aa7e2062",
+      "result_json_sha256": "f1a1b3d2007e4054b5f2825ffd60dc3910395e9ea09b49a292af983ad563924b",
+      "input_script_sha256": "e91d07a9ced4ba882b26cee29780700b18fe031886694d6bf06363d30ad82910",
+      "state_output_sha256": "31e7f2fde1d2c4df4fe33d02f7f70a59d27da29fede6292b9befa0c233c06bbc",
+      "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26"
+    },
+    "yes_branch": {
+      "frames": 500,
+      "state_input_sha256": "31e7f2fde1d2c4df4fe33d02f7f70a59d27da29fede6292b9befa0c233c06bbc",
+      "result_json_sha256": "dac026194a09723fb5e4c223a1ec316feeae5dfcb51bea106c95a9b47cb776dd",
+      "input_script_sha256": "0ed1b4f07eb79b8fc1b234c043914608f6c0fd4a2723bb55defbc236a0f4d513",
+      "state_output_sha256": "a4fa1014fe441f314e261539538b8a2b6e204806875787e803b861199718bd4c",
+      "outputs_pre": [
+        0,
+        0,
+        0
+      ],
+      "outputs_post": [
+        0,
+        16,
+        0
+      ],
+      "runner_sha256": "9d3daba8c3026167d97142510a34f58b48615b289fa8759e819980c9c35cb3e4"
+    },
+    "no_branch": {
+      "frames": 500,
+      "state_input_sha256": "31e7f2fde1d2c4df4fe33d02f7f70a59d27da29fede6292b9befa0c233c06bbc",
+      "result_json_sha256": "79a3fe3e19a0b8c6ca55893b4707e0fdc084824c684490ea38c447b5af262645",
+      "input_script_sha256": "b6e25044614117a7b4a6df617b0bc005447237285e1b42530fddd7249497856f",
+      "state_output_sha256": "530ff218d042c3653856b8031b05db3f3eb581147d5d441084c272b6e24ea766",
+      "outputs_pre": [
+        0,
+        0,
+        0
+      ],
+      "outputs_post": [
+        1,
+        65535,
+        255
+      ],
+      "runner_sha256": "9d3daba8c3026167d97142510a34f58b48615b289fa8759e819980c9c35cb3e4"
+    },
+    "source_dsv": {
+      "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "selected_save_counter": 9,
+      "both_slots_crc_valid": true
+    },
+    "preview_source_match": {
+      "slot": 0,
+      "species_id": 35,
+      "species_name": "Clefairy",
+      "hp_iv": 15,
+      "step": 1,
+      "observed_yes_value": 16
+    },
+    "integrity_summary": "Audit report records SaveArray3 exact DSV match at both sampled captures, strict party record/cipher-boundary matching, and unchanged reserve-section fingerprints. Slot 2 of the No branch is mid-encryption and checksum-invalid at that instant; its exact native boundary match is recorded, so no decoded semantic claim is made for that record.",
+    "cheats": []
+  },
+  "limits": [
+    "No emulation was rerun during this independent review.",
+    "This is an isolated preview-only opcode probe: no EV/IV setter or reset, production item/menu integration, save/cold persistence after preview, or full-game acceptance is established.",
+    "The static runner-diff conclusion is scoped to the exact two runner files and hashes recorded above."
+  ]
+}

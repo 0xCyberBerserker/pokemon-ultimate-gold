@@ -1,0 +1,595 @@
+{
+  "schema": "ultimate-gold-alpha2-native-rocket-gift/v1",
+  "verdict": "NATIVE_GIFT_ACTION_CONFIRMED_WITH_LIMITS",
+  "scope": "Focused code-free native NPC offer and gift action on Alpha2 FIX6a.",
+  "target": {
+    "rom": "experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+    "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner": "night-sprint/qa/headless_runner_fix6a.py",
+    "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26"
+  },
+  "source": {
+    "original_dsv": "night-sprint/qa/runs/repel-fix6a-profile/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+    "original_dsv_sha256": "b0abcdee72b020e3ad11f10978ab64f002a843e518d36a8b0fe33185461c7f47",
+    "original_cold_run": "night-sprint/qa/runs/alpha2-gift-cold-full-continue",
+    "original_cold_ram_sha256": "f8ecb8115c902959e0e30b603ae526216b30f91566d94ee481f92812e7deae41",
+    "source_slots": [
+      {
+        "base": 0,
+        "save_counter": 8,
+        "crc16": 41892,
+        "crc_valid": true
+      },
+      {
+        "base": 262144,
+        "save_counter": 9,
+        "crc16": 33916,
+        "crc_valid": true
+      }
+    ],
+    "source_save_array3_matches_cold_runtime": true
+  },
+  "fixture": {
+    "path": "night-sprint/qa/runs/alpha2-gift-source-fixture/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+    "sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6",
+    "classification": "DISPOSABLE_NATIVE_DSV_COPY_WITH_GIFT_ITEMS_CLEARED",
+    "slots": [
+      {
+        "base": 0,
+        "save_counter": 8,
+        "crc16": 28220,
+        "crc_valid": true
+      },
+      {
+        "base": 262144,
+        "save_counter": 9,
+        "crc16": 18916,
+        "crc_valid": true
+      }
+    ],
+    "cleared_item_stacks": 18,
+    "cleared_item_ids": [
+      50,
+      77,
+      78,
+      113,
+      114,
+      118,
+      154,
+      155,
+      157
+    ],
+    "save_array3_dsv_offset": "0x644",
+    "state_imported": false,
+    "runtime_codes_during_gift": false,
+    "only_cleared_slots_and_native_slot_crcs_changed": true
+  },
+  "runs": [
+    {
+      "run": "alpha2-gift-clean-cold-field",
+      "result_sha256": "af13a5ad7a3bcf9e6b2b442bc022aaef31e25edd6180978e4249e2cd0b388163",
+      "input_script_sha256": "6a55b8876bf0de714fae7df61cc400a20a77c62ab62723dc5348790464cbdb79",
+      "state_input_sha256": null,
+      "state_output": "night-sprint/qa/runs/alpha2-gift-clean-cold-field/field.state",
+      "state_output_sha256": "4fc11bbcc02e396fb5bccdbe63d9e33a831886bf61c76f77ee9c33ab3ff284c8",
+      "ram_sha256": "d476abd3591a195376942e54b04cc911ef13c56a732f33e93dee5477eb85f32f",
+      "battery_dsv_sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6",
+      "cheats": [],
+      "frames": 12500
+    },
+    {
+      "run": "alpha2-gift-nav-stage1",
+      "result_sha256": "75e76f5004d61be45e345daec577cdf4b6ced47c56ffd8be3dfc3e48f6d7918a",
+      "input_script_sha256": "c1b46f6f03ed55f3087bdc3723d673be3cc406b06fb0c5a803805db82ad27eca",
+      "state_input_sha256": "4fc11bbcc02e396fb5bccdbe63d9e33a831886bf61c76f77ee9c33ab3ff284c8",
+      "state_output": "night-sprint/qa/runs/alpha2-gift-nav-stage1/west.state",
+      "state_output_sha256": "f870d8b38ff8237817ebbd35d16018c305c97e9c4b3ee2ed0db5ea8a98200f18",
+      "ram_sha256": "3aa79a71630d9ec413ac922a64e0683b25f473711bf71603b63f0def24be8e00",
+      "battery_dsv_sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6",
+      "cheats": [],
+      "frames": 450
+    },
+    {
+      "run": "alpha2-gift-nav-stage2",
+      "result_sha256": "47bf96454b24a2c78c52bea62d3339c6a0e72be42957b2ad461f958fed7986da",
+      "input_script_sha256": "de67e2b19a51e0569187b748d0e2c7d3ae10f2d4383c5f53afa8f2c32fa95810",
+      "state_input_sha256": "f870d8b38ff8237817ebbd35d16018c305c97e9c4b3ee2ed0db5ea8a98200f18",
+      "state_output": "night-sprint/qa/runs/alpha2-gift-nav-stage2/south.state",
+      "state_output_sha256": "9acea6ffc810a1e0eac9d8d9988f8d3dca1f767be2664c43568d1e832b6c9ec9",
+      "ram_sha256": "fe4721a3e1bf9e73512b01ec637bfe771cd8640b6f5574ad91319e74be9bb0ad",
+      "battery_dsv_sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6",
+      "cheats": [],
+      "frames": 180
+    },
+    {
+      "run": "alpha2-gift-nav-stage3",
+      "result_sha256": "953c5d9be7c95fb92f7f80a259be5bc9c0f008a5c501ee25bb67f2893a5246a3",
+      "input_script_sha256": "bc505eebb0ebc263e6eb76bfbbd4228228e6f606592e9d1dd383651a0fdaa6f4",
+      "state_input_sha256": "9acea6ffc810a1e0eac9d8d9988f8d3dca1f767be2664c43568d1e832b6c9ec9",
+      "state_output": "night-sprint/qa/runs/alpha2-gift-nav-stage3/npc.state",
+      "state_output_sha256": "51cfd33b040ff4429f297ecdf653fdc8b1d194a5408ec487aeaad532dc98649e",
+      "ram_sha256": "cd79d1e58b9d2019b658e3d5a6aa4e8b13d8ba766665f75adf151da4f38004bb",
+      "battery_dsv_sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6",
+      "cheats": [],
+      "frames": 100
+    },
+    {
+      "run": "alpha2-gift-nav-stage4",
+      "result_sha256": "5c8d49a56b095b0bc47d6eb18c31a0e04a8c9a1df236782848f7660cdb4df99b",
+      "input_script_sha256": "75ff13348f544d6cfce7dbceb3737243ad6c4bc703d4d522eadd97e9c04f3916",
+      "state_input_sha256": "51cfd33b040ff4429f297ecdf653fdc8b1d194a5408ec487aeaad532dc98649e",
+      "state_output": "night-sprint/qa/runs/alpha2-gift-nav-stage4/target.state",
+      "state_output_sha256": "9797b3f47fe3a25c3d2b6bab347e395dca2c46ee2344e8a125e0bfff6976a0b9",
+      "ram_sha256": "64f202e0aa0d7dbc7b3cf64ea3b6dd89f16015da0f481cf354823443fe51fa97",
+      "battery_dsv_sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6",
+      "cheats": [],
+      "frames": 100
+    },
+    {
+      "run": "alpha2-gift-interact-stage2",
+      "result_sha256": "be61d6c85eb3b698c550fa3a72e4f8fdbd25ad9f56feb63c99fd787fbe7b1dcc",
+      "input_script_sha256": "23f23728c50d068722d37e1366bbb1542dfd5e291999a2f51a333530247561b7",
+      "state_input_sha256": "9797b3f47fe3a25c3d2b6bab347e395dca2c46ee2344e8a125e0bfff6976a0b9",
+      "state_output": "night-sprint/qa/runs/alpha2-gift-interact-stage2/dialogue.state",
+      "state_output_sha256": "6a44b91290c9db6f5c01b87d80847e9474b1998af6d46c43456741d4696176f8",
+      "ram_sha256": "8629beac61047ce33de26a5464856e13086be6888b529fb1400db61e2c6219a6",
+      "battery_dsv_sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6",
+      "cheats": [],
+      "frames": 180
+    },
+    {
+      "run": "alpha2-gift-interact-stage3",
+      "result_sha256": "1573f8caa55e871676350f9bec56eaa654fc7a7fc1ea0b6c276f45b449d11811",
+      "input_script_sha256": "74defbc74de9c59554cf4d9639d62abda922a5325c7601fcef4fb6e0b0758c34",
+      "state_input_sha256": "6a44b91290c9db6f5c01b87d80847e9474b1998af6d46c43456741d4696176f8",
+      "state_output": "night-sprint/qa/runs/alpha2-gift-interact-stage3/offer.state",
+      "state_output_sha256": "b81a7e3163a0d668592dc605c8a6e8480da72ec4ae0b154ac600cf437cd46fcd",
+      "ram_sha256": "40007b80515ae9ebf611e66100c025faa777d7e59137f36725874a02255ef708",
+      "battery_dsv_sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6",
+      "cheats": [],
+      "frames": 160
+    },
+    {
+      "run": "alpha2-gift-interact-stage4",
+      "result_sha256": "60d701000d17cb21ae67bc36992876b3446952a16672235d472b51bf5de9c77c",
+      "input_script_sha256": "f3fa7e70c2f511a704b048b608353fa65f819b5c19f6faec51cf0fbf446f196a",
+      "state_input_sha256": "b81a7e3163a0d668592dc605c8a6e8480da72ec4ae0b154ac600cf437cd46fcd",
+      "state_output": "night-sprint/qa/runs/alpha2-gift-interact-stage4/offer.state",
+      "state_output_sha256": "7908a366c76a75afc4f1abb9788e98c31c0820e988bb3f9750a6da36349f17fa",
+      "ram_sha256": "d883b3a5e74a4cbd020c7af74d25e00e15ff65fd8fd2ac287935e0e639a4ca1e",
+      "battery_dsv_sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6",
+      "cheats": [],
+      "frames": 160
+    },
+    {
+      "run": "alpha2-gift-accept-yes",
+      "result_sha256": "40acaefba9c97ac1c242ded6ce7ecdc369f1df752b448c6d8833f49fb4714aba",
+      "input_script_sha256": "9dbaf18b6d69580f268b40899fbe51051976b76854dd829b821f09563892f421",
+      "state_input_sha256": "7908a366c76a75afc4f1abb9788e98c31c0820e988bb3f9750a6da36349f17fa",
+      "state_output": "night-sprint/qa/runs/alpha2-gift-accept-yes/result.state",
+      "state_output_sha256": "efb03f3a733e2f47e1144abfaffab8839ce2d63ad158b7c52a65fd1632890a33",
+      "ram_sha256": "8a0ed3e4231f6e53aefc8673ee9032c62017fe9803d2122033f050eceb04a5b9",
+      "battery_dsv_sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6",
+      "cheats": [],
+      "frames": 150
+    }
+  ],
+  "screenshots": {
+    "cold_field_loaded": {
+      "path": "night-sprint/qa/runs/alpha2-gift-clean-cold-field/cold_field_loaded.png",
+      "sha256": "4c2fe3cf034258e0c2201d339857d23958d3f4a7484816c193b55edbce8ed763"
+    },
+    "rocket_dialogue": {
+      "path": "night-sprint/qa/runs/alpha2-gift-interact-stage2/rocket_dialogue.png",
+      "sha256": "97fffb60a2b85883eb5c2a1e8f0a81a85e12256794a70076d536248dd83204f2"
+    },
+    "offer_dialogue": {
+      "path": "night-sprint/qa/runs/alpha2-gift-interact-stage3/offer_prompt.png",
+      "sha256": "3b60398507feb3fe7e392f1f42ccfd253ebce5206264f281c57f32cb21020a83"
+    },
+    "yes_offer": {
+      "path": "night-sprint/qa/runs/alpha2-gift-interact-stage4/gift_offer_text.png",
+      "sha256": "53168ddfe98d5024a10f4374fd8ddf0149e499ab313921f1182654c1371e48ec"
+    },
+    "yes_selected": {
+      "path": "night-sprint/qa/runs/alpha2-gift-accept-yes/yes_selected_before_accept.png",
+      "sha256": "927ded67149cd62729615e11e7f0044d4123d5e18dbbcbf7e5a431a770d7e626"
+    },
+    "gift_result": {
+      "path": "night-sprint/qa/runs/alpha2-gift-accept-yes/gift_result_text.png",
+      "sha256": "b60407b1c6ae5912394bc2395eefaf1988e7c705db1654163bf52b9d30e3445e"
+    }
+  },
+  "native_action": {
+    "offer_yes_no_visible": true,
+    "yes_selected_before_accept": true,
+    "accept_input": [
+      {
+        "frame": 20,
+        "button": "A",
+        "frames": 3
+      }
+    ],
+    "visible_result_excerpt": "The kit is yours. Its marker keeps the li…",
+    "gift_items": [
+      {
+        "item_id": 154,
+        "name": "Leppa Berry",
+        "pocket": "berries",
+        "quantity_before": 0,
+        "quantity_after": 1
+      },
+      {
+        "item_id": 155,
+        "name": "Oran Berry",
+        "pocket": "berries",
+        "quantity_before": 0,
+        "quantity_after": 1
+      },
+      {
+        "item_id": 157,
+        "name": "Lum Berry",
+        "pocket": "berries",
+        "quantity_before": 0,
+        "quantity_after": 1
+      },
+      {
+        "item_id": 77,
+        "name": "Max Repel",
+        "pocket": "items",
+        "quantity_before": 0,
+        "quantity_after": 1
+      },
+      {
+        "item_id": 78,
+        "name": "Escape Rope",
+        "pocket": "items",
+        "quantity_before": 0,
+        "quantity_after": 1
+      },
+      {
+        "item_id": 113,
+        "name": "TM Refill",
+        "pocket": "key",
+        "quantity_before": 0,
+        "quantity_after": 1
+      },
+      {
+        "item_id": 114,
+        "name": "Party Healer",
+        "pocket": "key",
+        "quantity_before": 0,
+        "quantity_after": 1
+      },
+      {
+        "item_id": 118,
+        "name": "Cheat Kit marker",
+        "pocket": "key",
+        "quantity_before": 0,
+        "quantity_after": 1
+      },
+      {
+        "item_id": 50,
+        "name": "Rare Candy",
+        "pocket": "medicine",
+        "quantity_before": 0,
+        "quantity_after": 1
+      }
+    ],
+    "canonical_bag": {
+      "before_sha256": "ac4e9719b870df50bdf52bb28e5cd00e46650a485605563cc4f9a6fb17994b51",
+      "after_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "expected_quantity_deltas": [
+        {
+          "pocket": "berries",
+          "item_id": 154,
+          "name": "Leppa Berry",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "berries",
+          "item_id": 155,
+          "name": "Oran Berry",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "berries",
+          "item_id": 157,
+          "name": "Lum Berry",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "items",
+          "item_id": 77,
+          "name": "Max Repel",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "items",
+          "item_id": 78,
+          "name": "Escape Rope",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "key",
+          "item_id": 113,
+          "name": "TM Refill",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "key",
+          "item_id": 114,
+          "name": "Party Healer",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "key",
+          "item_id": 118,
+          "name": "Cheat Kit marker",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "medicine",
+          "item_id": 50,
+          "name": "Rare Candy",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "changed_slots": [
+        {
+          "pocket": "items",
+          "slot": 1,
+          "item_id": 77,
+          "quantity": 1
+        },
+        {
+          "pocket": "items",
+          "slot": 2,
+          "item_id": 78,
+          "quantity": 1
+        },
+        {
+          "pocket": "medicine",
+          "slot": 0,
+          "item_id": 50,
+          "quantity": 1
+        },
+        {
+          "pocket": "berries",
+          "slot": 0,
+          "item_id": 154,
+          "quantity": 1
+        },
+        {
+          "pocket": "berries",
+          "slot": 1,
+          "item_id": 155,
+          "quantity": 1
+        },
+        {
+          "pocket": "berries",
+          "slot": 2,
+          "item_id": 157,
+          "quantity": 1
+        },
+        {
+          "pocket": "key",
+          "slot": 2,
+          "item_id": 113,
+          "quantity": 1
+        },
+        {
+          "pocket": "key",
+          "slot": 3,
+          "item_id": 114,
+          "quantity": 1
+        },
+        {
+          "pocket": "key",
+          "slot": 4,
+          "item_id": 118,
+          "quantity": 1
+        }
+      ],
+      "key_pocket_gift_order": [
+        {
+          "slot": 2,
+          "item_id": 113
+        },
+        {
+          "slot": 3,
+          "item_id": 114
+        },
+        {
+          "slot": 4,
+          "item_id": 118
+        }
+      ],
+      "marker_118_last_in_key_pocket": true,
+      "all_other_bag_quantities_unchanged": true,
+      "only_previously_empty_slots_used": true
+    },
+    "native_save_array3": {
+      "size": 1952,
+      "cold_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+      "post_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "matches_fixture_before": true,
+      "post_matches_exact_expected_gift_slots": true,
+      "changed_records": [
+        {
+          "item_id": 77,
+          "quantity": 1,
+          "pocket": "items",
+          "slot": 1
+        },
+        {
+          "item_id": 78,
+          "quantity": 1,
+          "pocket": "items",
+          "slot": 2
+        },
+        {
+          "item_id": 113,
+          "quantity": 1,
+          "pocket": "key",
+          "slot": 2
+        },
+        {
+          "item_id": 114,
+          "quantity": 1,
+          "pocket": "key",
+          "slot": 3
+        },
+        {
+          "item_id": 118,
+          "quantity": 1,
+          "pocket": "key",
+          "slot": 4
+        },
+        {
+          "item_id": 50,
+          "quantity": 1,
+          "pocket": "medicine",
+          "slot": 0
+        },
+        {
+          "item_id": 154,
+          "quantity": 1,
+          "pocket": "berries",
+          "slot": 0
+        },
+        {
+          "item_id": 155,
+          "quantity": 1,
+          "pocket": "berries",
+          "slot": 1
+        },
+        {
+          "item_id": 157,
+          "quantity": 1,
+          "pocket": "berries",
+          "slot": 2
+        }
+      ],
+      "all_other_save_array3_bytes_unchanged": true
+    },
+    "reserved_4kib_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+    "reserved_4kib_unchanged": true,
+    "party": {
+      "reference_dsv_sha256": "baad64ede7df4f1756c41f1ccecd8c24d1317abdd6b4780bce3c0443d6b5c4a6",
+      "selected_dsv_slot_base": 262144,
+      "selected_dsv_counter": 9,
+      "selected_dsv_crc16": 18916,
+      "source_records": [
+        {
+          "slot": 0,
+          "species_id": 35,
+          "moves": [
+            27,
+            1,
+            0,
+            0
+          ],
+          "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+        },
+        {
+          "slot": 1,
+          "species_id": 152,
+          "moves": [
+            33,
+            45,
+            0,
+            0
+          ],
+          "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "slot": 2,
+          "species_id": 66,
+          "moves": [
+            67,
+            43,
+            0,
+            0
+          ],
+          "record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+        }
+      ],
+      "cold": {
+        "all_records_exact_cipher_boundary": true,
+        "all_source_records_checksum_valid": true,
+        "direct_ram_checksum_valid": false,
+        "slot2_cipher_phase": {
+          "box": {
+            "mode": "plain_suffix",
+            "split": 0
+          },
+          "tail": {
+            "mode": "plain_suffix",
+            "split": 50
+          }
+        }
+      },
+      "post": {
+        "all_records_checksum_valid": true,
+        "slots_0_1_byte_exact": true,
+        "slot2_header_checksum_before": 46459,
+        "slot2_header_checksum_after": 46460,
+        "slot2_decoded_changes": [
+          {
+            "block_index": 0,
+            "byte_offset": 12,
+            "field": "PokemonDataBlockA.friendship",
+            "before": 70,
+            "after": 71
+          }
+        ],
+        "slot2_party_tail_unchanged": true,
+        "slot2_pid_flags_unchanged": true,
+        "moves": [
+          67,
+          43,
+          0,
+          0
+        ],
+        "no_hm_moves": true
+      },
+      "friendship_steps": {
+        "cold": 122,
+        "after_nav_stage1": 9,
+        "after_accept": 26,
+        "one_native_128_step_wrap": true,
+        "variable": "VAR_FRIENDSHIP_STEPS (0x404B)",
+        "source": "night-sprint/engine/upstream/pokeheartgold/src/field/field_control.c:766-785"
+      },
+      "scope_note": "Party is not reported unchanged: one native +1 friendship change occurred during the route."
+    },
+    "post_gift_battery_save_and_cold_reload": "NOT_TESTED",
+    "runner_battery_save_load": "NOT_TESTED"
+  },
+  "limits": [
+    "One focused New Bark Town offer and acceptance path was tested.",
+    "The gift was verified in runtime RAM and SaveArray3; no post-gift battery save or cold reload was tested.",
+    "Party is not described as unchanged: one native +1 Machop friendship event occurred while walking.",
+    "No decline/repeat, arbitrary story progression, or whole-game acceptance is claimed."
+  ]
+}

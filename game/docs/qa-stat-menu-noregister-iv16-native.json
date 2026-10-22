@@ -1,0 +1,744 @@
+{
+  "schema": "ultimate-gold-portable-stat-editor-iv16-noregister/v1",
+  "status": "PASS_BOUNDED_NATIVE_HP_IV_WRITE_SAVE_COLD",
+  "gameplay_acceptance": "NOT_ASSESSED",
+  "scope": "One slot-0 HP IV increment, 15 to 16, through item 118 USE on the exact no-REGISTER candidate; native save and fresh-process cold reload. No state crossed ROM hashes; no cheats.",
+  "build": {
+    "rom": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-noregister/portable-stat-editor-menu-noregister-fix6a.nds",
+    "rom_sha256": "03d8711445a32868a64b5c34abbd094c2f4be7a0d40d09fafcc54460a257c620",
+    "core": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "once_wrapper": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_once.py",
+    "once_wrapper_sha256": "88d9254e8291486e4c78d2585976497d9ad9a69e224179b411aedbb55c959181",
+    "auditor": "@HOME@/Games/Sacred-Gold/night-sprint/qa/portable_stat_editor_noregister_iv16_acceptance.py",
+    "auditor_sha256": "972eff330907211149a75a901794dca3676c038adc543e7eee2cb7213586671b"
+  },
+  "profile": {
+    "directory": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/portable-stat-editor-noregister-iv16-20261022",
+    "dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/portable-stat-editor-noregister-iv16-20261022/portable-stat-editor-menu-noregister-fix6a.dsv",
+    "seed_dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-kit-launch-native-alpha2-seeded-cold/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+    "seed_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "saved_sha256": "eb024a81f4bf4eb0d3069ccfa7be9411d59bff3533980c14175d0752eeabd0e9",
+    "source_slot": {
+      "base": 0,
+      "counter": 10,
+      "crc16": 17186
+    },
+    "saved_slots": [
+      {
+        "base": 0,
+        "counter": 10,
+        "crc16": 17186
+      },
+      {
+        "base": 262144,
+        "counter": 11,
+        "crc16": 28161
+      }
+    ],
+    "selected_counter_delta": 1
+  },
+  "input_recipe_note": "Cold and cold-reload recipes come from the same-hash no-REGISTER smoke. Intermediate timing recipes were copied as input-only templates from the text-fix candidate; all executed states and battery data in this chain belong to the exact 03d871... candidate.",
+  "runs": {
+    "cold": {
+      "run_id": "portable-stat-editor-noregister-iv16-cold-01",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-01",
+      "frames": 5500,
+      "result_sha256": "0b471cf96f2f8b2c0f6b9e7c3379217803e75fb19c53b33ecb3c51eb4674353e",
+      "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/stat_editor_noregister_iv16_cold_20261022.json",
+      "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "input_recipe_source": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-noregister-smoke-cold-01/input-script.json",
+      "input_recipe_source_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_input_path": null,
+      "state_input_sha256": null,
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-01/cold.state",
+      "state_output_sha256": "5a143b68897ee9880c35c1f16311a6ccff1849acc8c1d4367015571795015371",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-01/system_ram.bin",
+      "ram_sha256": "8404c138c4b5c0ee07943debcd1826423127342ae914109f726287f30f6e1d30",
+      "profile_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/portable-stat-editor-noregister-iv16-20261022/portable-stat-editor-menu-noregister-fix6a.dsv",
+      "profile_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-01/battery-evidence.json",
+      "battery_manifest_sha256": "33307f85098c690bde26a3c49369029c10a0d4c5612b238ba166ea5bcd9302bb",
+      "screenshots": {
+        "cold_loaded_field": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-01/cold_loaded_field.png",
+          "sha256": "20ec701d62c2075bf9e9aeb19200475f266453c96dbf4cb3bde1510f151fc0d6"
+        },
+        "cold_loaded_identity": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-01/cold_loaded_identity.png",
+          "sha256": "1eb3c53389eb50f3241c55a4e776be8395aede9fab9b82f09fe9e09543f528fa"
+        }
+      }
+    },
+    "preview": {
+      "run_id": "portable-stat-editor-noregister-iv16-preview-01",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01",
+      "frames": 4300,
+      "result_sha256": "4d93b8620e9fa119f47d4a1fcaa56642bd010e148dbb17e1cce7b58ed60bb79c",
+      "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/stat_editor_noregister_iv16_preview_20261022.json",
+      "input_script_sha256": "6492f9b4aad3088d17b016138f6d75e19f29ad3f343240f0ecb3544485775fe2",
+      "input_recipe_source": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-preview/input-script.json",
+      "input_recipe_source_sha256": "6492f9b4aad3088d17b016138f6d75e19f29ad3f343240f0ecb3544485775fe2",
+      "state_input_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-01/cold.state",
+      "state_input_sha256": "5a143b68897ee9880c35c1f16311a6ccff1849acc8c1d4367015571795015371",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/preconfirm.state",
+      "state_output_sha256": "c20a8f4fe672cff50206527b4deffe08262a00fe2dd6c5fbac95941b3a46a4f3",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/system_ram.bin",
+      "ram_sha256": "76f7bc8949fcf3b6e33991bb7ca71795ecdf0b044ccb1df9404864e4a9fee6be",
+      "profile_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/portable-stat-editor-noregister-iv16-20261022/portable-stat-editor-menu-noregister-fix6a.dsv",
+      "profile_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/battery-evidence.json",
+      "battery_manifest_sha256": "3f54b000a9780165e778c135d25f8ba7fc4ad7cf8267152d36d455d6fb09ac6d",
+      "screenshots": {
+        "cheat_kit_popup": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/cheat_kit_popup.png",
+          "sha256": "1381fb7bda0ea437ffbf3a54255ba6b2c2e9bed8266d9fbcc52813a19d86992c"
+        },
+        "party_slot0_visible": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/party_slot0_visible.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        "family_menu_visible": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/family_menu_visible.png",
+          "sha256": "f8ad44a4662368079674ff069fa0637ecf6d39306cc287cc124e02245ef288ba"
+        },
+        "iv_highlight_visible": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/iv_highlight_visible.png",
+          "sha256": "0c881d73b836978d165218baead9d963d82f0488154a80816f933c14f6fd223b"
+        },
+        "iv_actions_visible": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/iv_actions_visible.png",
+          "sha256": "6e7706ef959aff79d7e9ecab8b69e53e352403fbc0a9e001a5a081e77faaed3c"
+        },
+        "iv_stats_visible": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/iv_stats_visible.png",
+          "sha256": "d4abb8bcbb8d04e320fb465947b8262924b36baf10a1beb9a7bac7921ca8e7c4"
+        },
+        "hp_value_menu_visible": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/hp_value_menu_visible.png",
+          "sha256": "aa683cd73cfcaad145e29658d77e3ad68323cf17fd1ef8992b5c08f2fc3e5ef4"
+        },
+        "preview_before_choice": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/preview_before_choice.png",
+          "sha256": "6731fb01e638451eba463b48eb8b4933f71df3e735248af2b7b6999045fcdbb0"
+        }
+      }
+    },
+    "yes": {
+      "run_id": "portable-stat-editor-noregister-iv16-yes-01",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-yes-01",
+      "frames": 600,
+      "result_sha256": "90aac3e60201b2e8119e8ff7e8a7172576917c29fd2ef7cf2409a02732959425",
+      "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/stat_editor_noregister_iv16_yes_20261022.json",
+      "input_script_sha256": "f40dddf1078dc9bc5eea94664dea96c53a14791371c3927fc11b775bef1fdcf1",
+      "input_recipe_source": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes/input-script.json",
+      "input_recipe_source_sha256": "f40dddf1078dc9bc5eea94664dea96c53a14791371c3927fc11b775bef1fdcf1",
+      "state_input_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/preconfirm.state",
+      "state_input_sha256": "c20a8f4fe672cff50206527b4deffe08262a00fe2dd6c5fbac95941b3a46a4f3",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-yes-01/yes-wait.state",
+      "state_output_sha256": "cdd43cfc7eddef8bfcbeace41f6e3f97de1e777eb7a868c5c842ab5763ead901",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-yes-01/system_ram.bin",
+      "ram_sha256": "47001002ed41f4d0a4e10368290f1227abb0841ceaf5338449613b3138991302",
+      "profile_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/portable-stat-editor-noregister-iv16-20261022/portable-stat-editor-menu-noregister-fix6a.dsv",
+      "profile_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-yes-01/battery-evidence.json",
+      "battery_manifest_sha256": "55afa8ceda05ae961e6539d21caad73db023d1662f3b764af6935e6acd1931a3",
+      "screenshots": {
+        "yes_wait_before_ack": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-yes-01/yes_wait_before_ack.png",
+          "sha256": "5ce946815171ab64756f304ac586e242e88ed3c93722343940b8afac0871658f"
+        }
+      }
+    },
+    "ack": {
+      "run_id": "portable-stat-editor-noregister-iv16-ack-01",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-ack-01",
+      "frames": 600,
+      "result_sha256": "bccc5ecf3d02157ac14cf0e9c4b772a1e750293610d5387d7fba73311c7c22df",
+      "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/stat_editor_noregister_iv16_ack_20261022.json",
+      "input_script_sha256": "02c42e52524b4af4abf3de830d9e6a8880ee83b6e81fa7d2ba035b708ce12a84",
+      "input_recipe_source": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-ack/input-script.json",
+      "input_recipe_source_sha256": "02c42e52524b4af4abf3de830d9e6a8880ee83b6e81fa7d2ba035b708ce12a84",
+      "state_input_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-yes-01/yes-wait.state",
+      "state_input_sha256": "cdd43cfc7eddef8bfcbeace41f6e3f97de1e777eb7a868c5c842ab5763ead901",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-ack-01/ack-result.state",
+      "state_output_sha256": "f803ae31d72c39a9f3ebdaeb43aa5e767e2ee7867ba5fddabb13fbf38941050d",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-ack-01/system_ram.bin",
+      "ram_sha256": "60baad68919774931b38284d10752b2d5559dfc2f4f37fa5c88e16ce8da0bfbb",
+      "profile_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/portable-stat-editor-noregister-iv16-20261022/portable-stat-editor-menu-noregister-fix6a.dsv",
+      "profile_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-ack-01/battery-evidence.json",
+      "battery_manifest_sha256": "96ac8800a6fd47ba776e8461f6fec08aad0b7557449d9c36d176053229542e56",
+      "screenshots": {
+        "ack_stable_599": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-ack-01/ack_stable_599.png",
+          "sha256": "773deb04b837b748b8af38a82ef47c40c9d516cb00cad55dd79a8c36afc3cb02"
+        }
+      }
+    },
+    "exit": {
+      "run_id": "portable-stat-editor-noregister-iv16-exit-01",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-exit-01",
+      "frames": 300,
+      "result_sha256": "af77e51686d771f9c9808209b9441e53f0f9776a788cc812fa034bf924366a21",
+      "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/stat_editor_noregister_iv16_exit_20261022.json",
+      "input_script_sha256": "037bab96363285be729cd975b39dc5b5b23b517a4c99f4405a89ccce085a6176",
+      "input_recipe_source": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-exit/input-script.json",
+      "input_recipe_source_sha256": "037bab96363285be729cd975b39dc5b5b23b517a4c99f4405a89ccce085a6176",
+      "state_input_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-ack-01/ack-result.state",
+      "state_input_sha256": "f803ae31d72c39a9f3ebdaeb43aa5e767e2ee7867ba5fddabb13fbf38941050d",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-exit-01/field.state",
+      "state_output_sha256": "843e43bacc745a42cfae80066d0eaaf33f46a4a62d52f83b659bb2de296d5a1e",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-exit-01/system_ram.bin",
+      "ram_sha256": "5a305f40f025ab978753bf5162b07d9494a0f015e7b2dcd177a74dad2fbef9ed",
+      "profile_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/portable-stat-editor-noregister-iv16-20261022/portable-stat-editor-menu-noregister-fix6a.dsv",
+      "profile_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-exit-01/battery-evidence.json",
+      "battery_manifest_sha256": "9288bea7120a466b3b83273b0b05eb1150996e9ab56b08bdbde9c0adc6c39cfd",
+      "screenshots": {
+        "field_after_exit": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-exit-01/field_after_exit.png",
+          "sha256": "518282559c660e98338a8632a619ec2a1802bd4cfae0cab6fde8d24a14fe2124"
+        }
+      }
+    },
+    "save": {
+      "run_id": "portable-stat-editor-noregister-iv16-save-01",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-save-01",
+      "frames": 2600,
+      "result_sha256": "a847084415a30ef8a24b200d4f2b57e8a60d71c598edd9d4223fae848119825c",
+      "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/stat_editor_noregister_iv16_save_20261022.json",
+      "input_script_sha256": "8094b92af7c9b7c451ab2a2d214037f89b294e250293f57c1448f215a6fc2653",
+      "input_recipe_source": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-yes-save/input-script.json",
+      "input_recipe_source_sha256": "8094b92af7c9b7c451ab2a2d214037f89b294e250293f57c1448f215a6fc2653",
+      "state_input_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-exit-01/field.state",
+      "state_input_sha256": "843e43bacc745a42cfae80066d0eaaf33f46a4a62d52f83b659bb2de296d5a1e",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-save-01/save-result.state",
+      "state_output_sha256": "3476b86ddb75e35a5cc8d23bd6533edcf587d0986992d06004a32e3949d7b765",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-save-01/system_ram.bin",
+      "ram_sha256": "80019d0d019a291d9b8d5a6943146af1053ddf9032ec092a51d20bdbaff6025c",
+      "profile_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/portable-stat-editor-noregister-iv16-20261022/portable-stat-editor-menu-noregister-fix6a.dsv",
+      "profile_dsv_sha256": "eb024a81f4bf4eb0d3069ccfa7be9411d59bff3533980c14175d0752eeabd0e9",
+      "battery_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-save-01/battery-evidence.json",
+      "battery_manifest_sha256": "1a6851c68993a1d8f2964634d00a5bdd878b4a2c1ce85c3fd0d75154460a982b",
+      "screenshots": {
+        "save_confirmation": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-save-01/save_confirmation.png",
+          "sha256": "1d388387b7e5517480a3a5af9002dadc6812d1b50e86761b38df71f9180288f0"
+        },
+        "overwrite_confirmation": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-save-01/overwrite_confirmation.png",
+          "sha256": "5107e228ecf857067cf6401d20a1a915b175fd1773421708b407599153c9fdb3"
+        },
+        "native_save_complete": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-save-01/native_save_complete.png",
+          "sha256": "7277e93b1565e92e0803bf40eb34320304fe491220149108703d24abcdfd753f"
+        }
+      }
+    },
+    "cold_reload": {
+      "run_id": "portable-stat-editor-noregister-iv16-cold-reload-01",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-reload-01",
+      "frames": 5500,
+      "result_sha256": "365ad3c64cbedbc6bf8338ff726744b0fbe9f88c4e2fb5122a709223c9e3293e",
+      "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/stat_editor_noregister_iv16_cold-reload_20261022.json",
+      "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "input_recipe_source": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-cold-verify/input-script.json",
+      "input_recipe_source_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_input_path": null,
+      "state_input_sha256": null,
+      "state_output_path": null,
+      "state_output_sha256": null,
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-reload-01/system_ram.bin",
+      "ram_sha256": "82d00a9000460941c4ec6bc8f62c80ff68cfe9712fa28af01ee9ef3af82573ad",
+      "profile_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/portable-stat-editor-noregister-iv16-20261022/portable-stat-editor-menu-noregister-fix6a.dsv",
+      "profile_dsv_sha256": "eb024a81f4bf4eb0d3069ccfa7be9411d59bff3533980c14175d0752eeabd0e9",
+      "battery_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-reload-01/battery-evidence.json",
+      "battery_manifest_sha256": "fd4ce7bd69e12068d95676e9e99446472d3a6a80b3ec69f54e8ba6e4e222aaa5",
+      "screenshots": {
+        "cold_loaded_field": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-reload-01/cold_loaded_field.png",
+          "sha256": "20ec701d62c2075bf9e9aeb19200475f266453c96dbf4cb3bde1510f151fc0d6"
+        },
+        "cold_loaded_identity": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-reload-01/cold_loaded_identity.png",
+          "sha256": "1eb3c53389eb50f3241c55a4e776be8395aede9fab9b82f09fe9e09543f528fa"
+        },
+        "cold_final": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-reload-01/cold_final.png",
+          "sha256": "e0103c7fddf168139c8b1e3926a84bd536ad542d7afb015e50f74541bbcf5097"
+        }
+      }
+    }
+  },
+  "screenshots": {
+    "cold": {
+      "cold_loaded_field": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-01/cold_loaded_field.png",
+        "sha256": "20ec701d62c2075bf9e9aeb19200475f266453c96dbf4cb3bde1510f151fc0d6"
+      },
+      "cold_loaded_identity": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-01/cold_loaded_identity.png",
+        "sha256": "1eb3c53389eb50f3241c55a4e776be8395aede9fab9b82f09fe9e09543f528fa"
+      }
+    },
+    "preview": {
+      "cheat_kit_popup": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/cheat_kit_popup.png",
+        "sha256": "1381fb7bda0ea437ffbf3a54255ba6b2c2e9bed8266d9fbcc52813a19d86992c"
+      },
+      "party_slot0_visible": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/party_slot0_visible.png",
+        "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+      },
+      "family_menu_visible": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/family_menu_visible.png",
+        "sha256": "f8ad44a4662368079674ff069fa0637ecf6d39306cc287cc124e02245ef288ba"
+      },
+      "iv_highlight_visible": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/iv_highlight_visible.png",
+        "sha256": "0c881d73b836978d165218baead9d963d82f0488154a80816f933c14f6fd223b"
+      },
+      "iv_actions_visible": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/iv_actions_visible.png",
+        "sha256": "6e7706ef959aff79d7e9ecab8b69e53e352403fbc0a9e001a5a081e77faaed3c"
+      },
+      "iv_stats_visible": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/iv_stats_visible.png",
+        "sha256": "d4abb8bcbb8d04e320fb465947b8262924b36baf10a1beb9a7bac7921ca8e7c4"
+      },
+      "hp_value_menu_visible": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/hp_value_menu_visible.png",
+        "sha256": "aa683cd73cfcaad145e29658d77e3ad68323cf17fd1ef8992b5c08f2fc3e5ef4"
+      },
+      "preview_before_choice": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-preview-01/preview_before_choice.png",
+        "sha256": "6731fb01e638451eba463b48eb8b4933f71df3e735248af2b7b6999045fcdbb0"
+      }
+    },
+    "yes": {
+      "yes_wait_before_ack": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-yes-01/yes_wait_before_ack.png",
+        "sha256": "5ce946815171ab64756f304ac586e242e88ed3c93722343940b8afac0871658f"
+      }
+    },
+    "ack": {
+      "ack_stable_599": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-ack-01/ack_stable_599.png",
+        "sha256": "773deb04b837b748b8af38a82ef47c40c9d516cb00cad55dd79a8c36afc3cb02"
+      }
+    },
+    "exit": {
+      "field_after_exit": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-exit-01/field_after_exit.png",
+        "sha256": "518282559c660e98338a8632a619ec2a1802bd4cfae0cab6fde8d24a14fe2124"
+      }
+    },
+    "save": {
+      "save_confirmation": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-save-01/save_confirmation.png",
+        "sha256": "1d388387b7e5517480a3a5af9002dadc6812d1b50e86761b38df71f9180288f0"
+      },
+      "overwrite_confirmation": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-save-01/overwrite_confirmation.png",
+        "sha256": "5107e228ecf857067cf6401d20a1a915b175fd1773421708b407599153c9fdb3"
+      },
+      "native_save_complete": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-save-01/native_save_complete.png",
+        "sha256": "7277e93b1565e92e0803bf40eb34320304fe491220149108703d24abcdfd753f"
+      }
+    },
+    "cold_reload": {
+      "cold_loaded_field": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-reload-01/cold_loaded_field.png",
+        "sha256": "20ec701d62c2075bf9e9aeb19200475f266453c96dbf4cb3bde1510f151fc0d6"
+      },
+      "cold_loaded_identity": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-reload-01/cold_loaded_identity.png",
+        "sha256": "1eb3c53389eb50f3241c55a4e776be8395aede9fab9b82f09fe9e09543f528fa"
+      },
+      "cold_final": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-iv16-cold-reload-01/cold_final.png",
+        "sha256": "e0103c7fddf168139c8b1e3926a84bd536ad542d7afb015e50f74541bbcf5097"
+      }
+    }
+  },
+  "runtime_checks": {
+    "cold": {
+      "party_sha256": "d827f6d07335ac8ebaa052417c0af55467eee1f239723c80cda6331287f500dd",
+      "party_validation": {
+        "mode": "seed_cipher_boundary",
+        "passed": true
+      },
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "bag_matches_expected_dsv_byte_exact": true,
+      "key_item_118_quantity": 1,
+      "rom_reserves_match": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "preview": {
+      "party_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "party_validation": {
+        "mode": "seed_cipher_boundary",
+        "passed": true
+      },
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "bag_matches_expected_dsv_byte_exact": true,
+      "key_item_118_quantity": 1,
+      "rom_reserves_match": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "yes": {
+      "party_sha256": "6fd2de773a6ecdcb72eb85112f287b72b9addcc42e8f7f85f2e7cdb16cd3255e",
+      "party_validation": {
+        "mode": "saved_dsv_cipher_boundary",
+        "passed": true
+      },
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "bag_matches_expected_dsv_byte_exact": true,
+      "key_item_118_quantity": 1,
+      "rom_reserves_match": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "ack": {
+      "party_sha256": "6fd2de773a6ecdcb72eb85112f287b72b9addcc42e8f7f85f2e7cdb16cd3255e",
+      "party_validation": {
+        "mode": "saved_dsv_cipher_boundary",
+        "passed": true
+      },
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "bag_matches_expected_dsv_byte_exact": true,
+      "key_item_118_quantity": 1,
+      "rom_reserves_match": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "exit": {
+      "party_sha256": "cdc142f4db2f8941078cb3429600aa4a1a0b85a0156d4ade6b17a0989d0c7f33",
+      "party_validation": {
+        "mode": "saved_dsv_cipher_boundary",
+        "passed": true
+      },
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "bag_matches_expected_dsv_byte_exact": true,
+      "key_item_118_quantity": 1,
+      "rom_reserves_match": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "save": {
+      "party_sha256": "2edfbbd89db589ed051b284c774ed7e17702a64c169b09d35f39666a8a408d7a",
+      "party_validation": {
+        "mode": "saved_dsv_cipher_boundary",
+        "passed": true
+      },
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "bag_matches_expected_dsv_byte_exact": true,
+      "key_item_118_quantity": 1,
+      "rom_reserves_match": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "cold_reload": {
+      "party_sha256": "e801193002868d7ebfda092b40a5155156e80ed6314766aacda7439e3e705c2c",
+      "party_validation": {
+        "mode": "saved_dsv_cipher_boundary",
+        "passed": true
+      },
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "bag_matches_expected_dsv_byte_exact": true,
+      "key_item_118_quantity": 1,
+      "rom_reserves_match": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    }
+  },
+  "checks": {
+    "preconfirmation_vars_8004_8005_8006_800c": {
+      "values": {
+        "8004": 0,
+        "8005": 16,
+        "8006": 65535,
+        "800C": 0
+      },
+      "script_mode": 2,
+      "script_pc": "0x022aaf8a",
+      "pc_opcode_u16": 17
+    },
+    "preconfirmation_party_byte_exact_to_seed": true,
+    "preconfirmation_strict_cipher_boundary": {
+      "selected_dsv_counter": 10,
+      "selected_dsv_crc16": 17186,
+      "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "observed_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "strict_cipher_boundary_match": true,
+      "party_count": 3,
+      "records": [
+        {
+          "slot": 0,
+          "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+          "record_equal": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": true,
+          "decoded_fields_match_when_decodable": true
+        },
+        {
+          "slot": 1,
+          "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+          "record_equal": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": true,
+          "decoded_fields_match_when_decodable": true
+        },
+        {
+          "slot": 2,
+          "record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+          "record_equal": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": true,
+          "decoded_fields_match_when_decodable": true
+        }
+      ],
+      "decoded_fields": [
+        {
+          "slot": 0,
+          "semantic_match": true
+        },
+        {
+          "slot": 1,
+          "semantic_match": true
+        },
+        {
+          "slot": 2,
+          "semantic_match": true
+        }
+      ]
+    },
+    "yes_vars_8004_8005_8006_800c": {
+      "values": {
+        "8004": 0,
+        "8005": 16,
+        "8006": 0,
+        "800C": 0
+      },
+      "script_mode": 2,
+      "script_pc": "0x022ab0b7",
+      "pc_opcode_u16": 53
+    },
+    "yes_party_matches_native_saved_dsv_at_cipher_boundary": {
+      "selected_dsv_counter": 11,
+      "selected_dsv_crc16": 28161,
+      "source_array_sha256": "6fd2de773a6ecdcb72eb85112f287b72b9addcc42e8f7f85f2e7cdb16cd3255e",
+      "observed_array_sha256": "6fd2de773a6ecdcb72eb85112f287b72b9addcc42e8f7f85f2e7cdb16cd3255e",
+      "strict_cipher_boundary_match": true,
+      "party_count": 3,
+      "records": [
+        {
+          "slot": 0,
+          "record_sha256": "622c4880534905a5cf62f5a2f9f2d6a4f06a28ccfd050698790fc628604f8442",
+          "record_equal": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": true,
+          "decoded_fields_match_when_decodable": true
+        },
+        {
+          "slot": 1,
+          "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+          "record_equal": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": true,
+          "decoded_fields_match_when_decodable": true
+        },
+        {
+          "slot": 2,
+          "record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+          "record_equal": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": true,
+          "decoded_fields_match_when_decodable": true
+        }
+      ],
+      "decoded_fields": [
+        {
+          "slot": 0,
+          "semantic_match": true
+        },
+        {
+          "slot": 1,
+          "semantic_match": true
+        },
+        {
+          "slot": 2,
+          "semantic_match": true
+        }
+      ]
+    },
+    "saved_party_delta": {
+      "party_count": 3,
+      "array_header_exact": true,
+      "inactive_bytes_exact": true,
+      "records": [
+        {
+          "slot": 0,
+          "species_id": 35,
+          "hp_iv_before": 15,
+          "hp_iv_after": 16,
+          "iv_word_before": "0x055FA86F",
+          "iv_word_after": "0x055FA870",
+          "pid_and_flags_unchanged": true,
+          "other_iv_bits_unchanged": true,
+          "other_decoded_blocks_unchanged": true,
+          "party_tail_unchanged": true,
+          "party_tail_sha256": "a41e27c1e15961c2983d3cee898c29a6047014cc96cd7d7d9ae6c8ebb5eb7ae0"
+        },
+        {
+          "slot": 1,
+          "species_id": 152,
+          "record_byte_exact": true,
+          "party_tail_sha256": "53119f1a92578636365eab4c749f89d139089c7c4a0c6a7cd960a6d036f7cf19"
+        },
+        {
+          "slot": 2,
+          "species_id": 66,
+          "record_byte_exact": true,
+          "party_tail_sha256": "abe3835d17d6db94534a7b35fb690a13e1d955e1db7051a6469cc3b01bfbb465"
+        }
+      ]
+    },
+    "saved_bag_matches_seed_byte_exact": true,
+    "cold_reload_party_matches_saved_dsv_at_native_cipher_boundaries": {
+      "selected_dsv_counter": 11,
+      "selected_dsv_crc16": 28161,
+      "source_array_sha256": "6fd2de773a6ecdcb72eb85112f287b72b9addcc42e8f7f85f2e7cdb16cd3255e",
+      "observed_array_sha256": "e801193002868d7ebfda092b40a5155156e80ed6314766aacda7439e3e705c2c",
+      "strict_cipher_boundary_match": true,
+      "party_count": 3,
+      "records": [
+        {
+          "slot": 0,
+          "record_sha256": "622c4880534905a5cf62f5a2f9f2d6a4f06a28ccfd050698790fc628604f8442",
+          "record_equal": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": true,
+          "decoded_fields_match_when_decodable": true
+        },
+        {
+          "slot": 1,
+          "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+          "record_equal": true,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": true,
+          "decoded_fields_match_when_decodable": true
+        },
+        {
+          "slot": 2,
+          "record_sha256": "6f74b714971fee8d6a2f0d7e33239b8b78d29d906eed071b11c284f48f080a9e",
+          "record_equal": false,
+          "box_cipher_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 16
+          },
+          "party_tail_cipher_boundary": {
+            "mode": "plain_suffix",
+            "split_bytes": 0
+          },
+          "observed_checksum_valid": false,
+          "decoded_fields_match_when_decodable": false
+        }
+      ],
+      "decoded_fields": [
+        {
+          "slot": 0,
+          "semantic_match": true
+        },
+        {
+          "slot": 1,
+          "semantic_match": true
+        }
+      ]
+    },
+    "cold_reload_used_no_savestate": true,
+    "cheats_during_all_runs": [],
+    "all_profile_battery_snapshots_frozen": true
+  },
+  "limits": [
+    "Only slot 0 HP IV 15 to 16 was tested.",
+    "No repeat, reset, boundary, other-stat, or other-slot operation was tested.",
+    "The run does not establish full-gameplay or release acceptance."
+  ]
+}

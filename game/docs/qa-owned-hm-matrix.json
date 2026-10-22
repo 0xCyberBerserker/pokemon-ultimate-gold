@@ -1,0 +1,540 @@
+{
+  "status": "EMULATED_FIXTURES_CAPTURED_NOT_GAMEPLAY_ACCEPTED",
+  "candidate_rom": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix2.nds",
+    "sha256": "b9a5d0ba12b7bdd61d6c85561be0720e81855c87fa1c992723a2d136a5c263e6"
+  },
+  "baseline_state": {
+    "path": "qa/runs/hm-paged-fix2-party-baseline-ready/navigation.state",
+    "sha256": "621600068e80d91af6b02331ec9dc09d424ed391e14c9861c99ea9dc41793e2b"
+  },
+  "reopen_script": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/hm-reopen-party-context.json",
+    "sha256": "a0fe3ca58c109b43507aadd6e0be8d1e109fc6a5f21f6b956e61353b9d731dcc"
+  },
+  "canonical_fixture_manifest": {
+    "path": "qa/fixtures/hm-paged-fix2-canonical/manifest.json",
+    "sha256": "0254eef57b73a1e00ce984d9a946b621a39879c99d03620f43c97eeb4d538399"
+  },
+  "golden_save": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/kit-v3-battery-profile/cheat-kit-npc-candidate-healer-guarded2.dsv",
+    "sha256_before": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+    "sha256_after": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384"
+  },
+  "reserve_guard_checks": {
+    "lower_guard": true,
+    "metadata": true,
+    "hm_canary": true,
+    "shop_canary": true,
+    "upper_guard": true,
+    "arena_high": true
+  },
+  "fixtures_are_live_ram_only": true,
+  "save_directories_are_independent": true,
+  "runs_are_sequential": true,
+  "checks": {
+    "menu_visibility_and_surf_waterfall_actions": "Human visual review confirmed Surf and Waterfall rows only in their owned+badged cases; their missing-item and missing-badge cases omit the row. No action execution was tested.",
+    "surf_waterfall_execution": "NOT_TESTED; root owns natural route/heap debugging.",
+    "native_map_story_tile_gates": "NOT_TESTED by these party-menu fixtures.",
+    "all_egg_actor_rejection": "NOT_ASSESSED: RAM fixture has exactly one Egg, but the Party/menu screenshot is stale and shows the pre-fixture roster."
+  },
+  "summary_en": "Captured and visually reviewed independent temporary party-menu fixtures. Surf and Waterfall visibility follows owned HM item plus the matching badge in the normal-actor cases. The Egg-only RAM fixture is present, but its GUI is stale, so Egg rejection remains unassessed. No action execution or final acceptance is claimed.",
+  "summary_es": "Se capturaron y revisaron visualmente fixtures temporales e independientes del menú del equipo. Surf y Waterfall aparecen al poseer la MO y su medalla en los casos con actor normal. La RAM del caso de sólo huevo está aplicada, pero la GUI quedó obsoleta, así que el rechazo del huevo queda sin evaluar. No se afirma ejecución de acciones ni aceptación final.",
+  "limitations_en": "The runner completed all eight cases and captured 16 screenshots; all eight owned-HM context screenshots were visually reviewed. The Egg-only RAM state is verified, but its screenshot shows the pre-fixture roster; Egg menu filtering cannot be concluded. Field action execution and native map/story gates were not tested.",
+  "limitations_es": "El runner completó los ocho casos y capturó 16 imágenes; se revisaron visualmente las ocho capturas del menú de MO. El estado de RAM de sólo huevo está verificado, pero su captura muestra el equipo previo al fixture; no puede concluirse el filtrado del huevo en el menú. No se probaron la ejecución de acciones ni las barreras nativas de mapa/historia.",
+  "cases": [
+    {
+      "id": "menu-no-hms-owned",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/menu-no-hms-owned",
+      "runner_exit_code": 0,
+      "rom_sha256": "b9a5d0ba12b7bdd61d6c85561be0720e81855c87fa1c992723a2d136a5c263e6",
+      "rom_matches_expected": true,
+      "baseline_state_sha256": "621600068e80d91af6b02331ec9dc09d424ed391e14c9861c99ea9dc41793e2b",
+      "fixture_sha256": "561e7ad1374cf5daac7d2b16490a89b33ffe115f0f34ecec5db0583d1ddec67a",
+      "runtime_memory": {
+        "sha256": "a7db99220c4aecda046d196bddee0b617927f5f9429f490112c3e7b03a97c7ca",
+        "save_pointer": "0x0227c228",
+        "array_offsets": {
+          "1": {
+            "size": 48,
+            "offset": "0xd050"
+          },
+          "2": {
+            "size": 1460,
+            "offset": "0xd080"
+          },
+          "3": {
+            "size": 1952,
+            "offset": "0xd634"
+          }
+        },
+        "party_count": 3,
+        "party_slot0_is_egg": false,
+        "party_slot0_moves": [
+          27,
+          1,
+          0,
+          0
+        ],
+        "bag_hm_items": [],
+        "badge_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          15
+        ],
+        "item_state_matches_fixture": true,
+        "badge_state_matches_fixture": true,
+        "party_state_matches_fixture": true,
+        "fixture_state_verified": true
+      },
+      "screenshots": {
+        "party_without_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/menu-no-hms-owned/party_without_context.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        "owned_hm_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/menu-no-hms-owned/owned_hm_context.png",
+          "sha256": "3e8355827067c312503c32cdc023949140bec034934f5987bcb8f08e7f1b7c1b"
+        }
+      },
+      "golden_save_copy_sha256_before": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "golden_save_copy_sha256_after": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "save_copy_unchanged": true,
+      "runner_errors": "",
+      "gameplay_action_claim": "NOT_ASSESSED",
+      "visual_review_en": "Reviewed: no Surf or Waterfall row appears.",
+      "visual_review_es": "Revisado: no aparecen las filas Surf ni Waterfall."
+    },
+    {
+      "id": "surf-owned-badged",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/surf-owned-badged",
+      "runner_exit_code": 0,
+      "rom_sha256": "b9a5d0ba12b7bdd61d6c85561be0720e81855c87fa1c992723a2d136a5c263e6",
+      "rom_matches_expected": true,
+      "baseline_state_sha256": "621600068e80d91af6b02331ec9dc09d424ed391e14c9861c99ea9dc41793e2b",
+      "fixture_sha256": "4c3c35654af4d467fa0afd754af6d8828279ab5327446e213b94f357ef42510d",
+      "runtime_memory": {
+        "sha256": "da074023323baa3633948dada6e72b120903779fb592efa012412f4f1f261a9e",
+        "save_pointer": "0x0227c228",
+        "array_offsets": {
+          "1": {
+            "size": 48,
+            "offset": "0xd050"
+          },
+          "2": {
+            "size": 1460,
+            "offset": "0xd080"
+          },
+          "3": {
+            "size": 1952,
+            "offset": "0xd634"
+          }
+        },
+        "party_count": 3,
+        "party_slot0_is_egg": false,
+        "party_slot0_moves": [
+          27,
+          1,
+          0,
+          0
+        ],
+        "bag_hm_items": [
+          422
+        ],
+        "badge_ids": [
+          3
+        ],
+        "item_state_matches_fixture": true,
+        "badge_state_matches_fixture": true,
+        "party_state_matches_fixture": true,
+        "fixture_state_verified": true
+      },
+      "screenshots": {
+        "party_without_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/surf-owned-badged/party_without_context.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        "owned_hm_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/surf-owned-badged/owned_hm_context.png",
+          "sha256": "ca3ba894d6da20910e3e37d09d529befe63af7c7799a72e4866648bf168bef6a"
+        }
+      },
+      "golden_save_copy_sha256_before": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "golden_save_copy_sha256_after": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "save_copy_unchanged": true,
+      "runner_errors": "",
+      "gameplay_action_claim": "NOT_ASSESSED",
+      "visual_review_en": "Reviewed: Surf row appears.",
+      "visual_review_es": "Revisado: aparece la fila Surf."
+    },
+    {
+      "id": "surf-missing-item",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/surf-missing-item",
+      "runner_exit_code": 0,
+      "rom_sha256": "b9a5d0ba12b7bdd61d6c85561be0720e81855c87fa1c992723a2d136a5c263e6",
+      "rom_matches_expected": true,
+      "baseline_state_sha256": "621600068e80d91af6b02331ec9dc09d424ed391e14c9861c99ea9dc41793e2b",
+      "fixture_sha256": "b20089243df250ffc3b4229a42b14b668daf979777d8484b1318cdd0e8f5bbba",
+      "runtime_memory": {
+        "sha256": "1a6848afd4bded7f92d3a359a5bca5a7180b91835aae87db62bbf3762252d6c9",
+        "save_pointer": "0x0227c228",
+        "array_offsets": {
+          "1": {
+            "size": 48,
+            "offset": "0xd050"
+          },
+          "2": {
+            "size": 1460,
+            "offset": "0xd080"
+          },
+          "3": {
+            "size": 1952,
+            "offset": "0xd634"
+          }
+        },
+        "party_count": 3,
+        "party_slot0_is_egg": false,
+        "party_slot0_moves": [
+          27,
+          1,
+          0,
+          0
+        ],
+        "bag_hm_items": [],
+        "badge_ids": [
+          3
+        ],
+        "item_state_matches_fixture": true,
+        "badge_state_matches_fixture": true,
+        "party_state_matches_fixture": true,
+        "fixture_state_verified": true
+      },
+      "screenshots": {
+        "party_without_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/surf-missing-item/party_without_context.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        "owned_hm_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/surf-missing-item/owned_hm_context.png",
+          "sha256": "3e8355827067c312503c32cdc023949140bec034934f5987bcb8f08e7f1b7c1b"
+        }
+      },
+      "golden_save_copy_sha256_before": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "golden_save_copy_sha256_after": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "save_copy_unchanged": true,
+      "runner_errors": "",
+      "gameplay_action_claim": "NOT_ASSESSED",
+      "visual_review_en": "Reviewed: Surf row is absent without the owned item.",
+      "visual_review_es": "Revisado: Surf no aparece sin el objeto MO."
+    },
+    {
+      "id": "surf-missing-badge",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/surf-missing-badge",
+      "runner_exit_code": 0,
+      "rom_sha256": "b9a5d0ba12b7bdd61d6c85561be0720e81855c87fa1c992723a2d136a5c263e6",
+      "rom_matches_expected": true,
+      "baseline_state_sha256": "621600068e80d91af6b02331ec9dc09d424ed391e14c9861c99ea9dc41793e2b",
+      "fixture_sha256": "0a7ab0e6ebc79cc7c94918321054c1c26d3880f076d34a0f1fadfcc9656d1010",
+      "runtime_memory": {
+        "sha256": "d054eb01cd2d8dab1a9a2e6aed67c13e5e27bcb4b66a5da160eec848db1ba427",
+        "save_pointer": "0x0227c228",
+        "array_offsets": {
+          "1": {
+            "size": 48,
+            "offset": "0xd050"
+          },
+          "2": {
+            "size": 1460,
+            "offset": "0xd080"
+          },
+          "3": {
+            "size": 1952,
+            "offset": "0xd634"
+          }
+        },
+        "party_count": 3,
+        "party_slot0_is_egg": false,
+        "party_slot0_moves": [
+          27,
+          1,
+          0,
+          0
+        ],
+        "bag_hm_items": [
+          422
+        ],
+        "badge_ids": [],
+        "item_state_matches_fixture": true,
+        "badge_state_matches_fixture": true,
+        "party_state_matches_fixture": true,
+        "fixture_state_verified": true
+      },
+      "screenshots": {
+        "party_without_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/surf-missing-badge/party_without_context.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        "owned_hm_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/surf-missing-badge/owned_hm_context.png",
+          "sha256": "3e8355827067c312503c32cdc023949140bec034934f5987bcb8f08e7f1b7c1b"
+        }
+      },
+      "golden_save_copy_sha256_before": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "golden_save_copy_sha256_after": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "save_copy_unchanged": true,
+      "runner_errors": "",
+      "gameplay_action_claim": "NOT_ASSESSED",
+      "visual_review_en": "Reviewed: Surf row is absent without the badge.",
+      "visual_review_es": "Revisado: Surf no aparece sin la medalla."
+    },
+    {
+      "id": "waterfall-owned-badged",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/waterfall-owned-badged",
+      "runner_exit_code": 0,
+      "rom_sha256": "b9a5d0ba12b7bdd61d6c85561be0720e81855c87fa1c992723a2d136a5c263e6",
+      "rom_matches_expected": true,
+      "baseline_state_sha256": "621600068e80d91af6b02331ec9dc09d424ed391e14c9861c99ea9dc41793e2b",
+      "fixture_sha256": "505ee4161c8d4209ce8715ddada952dec84ba9f95982ca22976afaf470d4ad40",
+      "runtime_memory": {
+        "sha256": "2943c6971df37f062c69ca9fe5879ace0cc1884850cbc0847740c5d057b10aed",
+        "save_pointer": "0x0227c228",
+        "array_offsets": {
+          "1": {
+            "size": 48,
+            "offset": "0xd050"
+          },
+          "2": {
+            "size": 1460,
+            "offset": "0xd080"
+          },
+          "3": {
+            "size": 1952,
+            "offset": "0xd634"
+          }
+        },
+        "party_count": 3,
+        "party_slot0_is_egg": false,
+        "party_slot0_moves": [
+          27,
+          1,
+          0,
+          0
+        ],
+        "bag_hm_items": [
+          426
+        ],
+        "badge_ids": [
+          7
+        ],
+        "item_state_matches_fixture": true,
+        "badge_state_matches_fixture": true,
+        "party_state_matches_fixture": true,
+        "fixture_state_verified": true
+      },
+      "screenshots": {
+        "party_without_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/waterfall-owned-badged/party_without_context.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        "owned_hm_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/waterfall-owned-badged/owned_hm_context.png",
+          "sha256": "39a22ef239de6efb63ef49d227dfd14a24a8ee3a22bba7e7d1c21c54f122700d"
+        }
+      },
+      "golden_save_copy_sha256_before": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "golden_save_copy_sha256_after": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "save_copy_unchanged": true,
+      "runner_errors": "",
+      "gameplay_action_claim": "NOT_ASSESSED",
+      "visual_review_en": "Reviewed: Waterfall row appears.",
+      "visual_review_es": "Revisado: aparece la fila Waterfall."
+    },
+    {
+      "id": "waterfall-missing-item",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/waterfall-missing-item",
+      "runner_exit_code": 0,
+      "rom_sha256": "b9a5d0ba12b7bdd61d6c85561be0720e81855c87fa1c992723a2d136a5c263e6",
+      "rom_matches_expected": true,
+      "baseline_state_sha256": "621600068e80d91af6b02331ec9dc09d424ed391e14c9861c99ea9dc41793e2b",
+      "fixture_sha256": "161446c87f6e665818cd9d4bea051501b2a688d62bece900b1dfd81eb57b5e24",
+      "runtime_memory": {
+        "sha256": "4e81abc970bbec0f34206b38645ec1915ee95a5a0825ca7f9fe6bc86542d994f",
+        "save_pointer": "0x0227c228",
+        "array_offsets": {
+          "1": {
+            "size": 48,
+            "offset": "0xd050"
+          },
+          "2": {
+            "size": 1460,
+            "offset": "0xd080"
+          },
+          "3": {
+            "size": 1952,
+            "offset": "0xd634"
+          }
+        },
+        "party_count": 3,
+        "party_slot0_is_egg": false,
+        "party_slot0_moves": [
+          27,
+          1,
+          0,
+          0
+        ],
+        "bag_hm_items": [],
+        "badge_ids": [
+          7
+        ],
+        "item_state_matches_fixture": true,
+        "badge_state_matches_fixture": true,
+        "party_state_matches_fixture": true,
+        "fixture_state_verified": true
+      },
+      "screenshots": {
+        "party_without_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/waterfall-missing-item/party_without_context.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        "owned_hm_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/waterfall-missing-item/owned_hm_context.png",
+          "sha256": "3e8355827067c312503c32cdc023949140bec034934f5987bcb8f08e7f1b7c1b"
+        }
+      },
+      "golden_save_copy_sha256_before": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "golden_save_copy_sha256_after": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "save_copy_unchanged": true,
+      "runner_errors": "",
+      "gameplay_action_claim": "NOT_ASSESSED",
+      "visual_review_en": "Reviewed: Waterfall row is absent without the owned item.",
+      "visual_review_es": "Revisado: Waterfall no aparece sin el objeto MO."
+    },
+    {
+      "id": "waterfall-missing-badge",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/waterfall-missing-badge",
+      "runner_exit_code": 0,
+      "rom_sha256": "b9a5d0ba12b7bdd61d6c85561be0720e81855c87fa1c992723a2d136a5c263e6",
+      "rom_matches_expected": true,
+      "baseline_state_sha256": "621600068e80d91af6b02331ec9dc09d424ed391e14c9861c99ea9dc41793e2b",
+      "fixture_sha256": "cae26b6ccfa9bee68019b2ae5d7861dc4e85b91fa0c5e915898d5114f1ac3e81",
+      "runtime_memory": {
+        "sha256": "cb7d0c7f2b08f1375ab821d2d4acc70ec6897e5070315f6f510b331ba50af19c",
+        "save_pointer": "0x0227c228",
+        "array_offsets": {
+          "1": {
+            "size": 48,
+            "offset": "0xd050"
+          },
+          "2": {
+            "size": 1460,
+            "offset": "0xd080"
+          },
+          "3": {
+            "size": 1952,
+            "offset": "0xd634"
+          }
+        },
+        "party_count": 3,
+        "party_slot0_is_egg": false,
+        "party_slot0_moves": [
+          27,
+          1,
+          0,
+          0
+        ],
+        "bag_hm_items": [
+          426
+        ],
+        "badge_ids": [],
+        "item_state_matches_fixture": true,
+        "badge_state_matches_fixture": true,
+        "party_state_matches_fixture": true,
+        "fixture_state_verified": true
+      },
+      "screenshots": {
+        "party_without_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/waterfall-missing-badge/party_without_context.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        "owned_hm_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/waterfall-missing-badge/owned_hm_context.png",
+          "sha256": "3e8355827067c312503c32cdc023949140bec034934f5987bcb8f08e7f1b7c1b"
+        }
+      },
+      "golden_save_copy_sha256_before": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "golden_save_copy_sha256_after": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "save_copy_unchanged": true,
+      "runner_errors": "",
+      "gameplay_action_claim": "NOT_ASSESSED",
+      "visual_review_en": "Reviewed: Waterfall row is absent without the badge.",
+      "visual_review_es": "Revisado: Waterfall no aparece sin la medalla."
+    },
+    {
+      "id": "party-one-egg-surf-owned-badged",
+      "run_dir": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/party-one-egg-surf-owned-badged",
+      "runner_exit_code": 0,
+      "rom_sha256": "b9a5d0ba12b7bdd61d6c85561be0720e81855c87fa1c992723a2d136a5c263e6",
+      "rom_matches_expected": true,
+      "baseline_state_sha256": "621600068e80d91af6b02331ec9dc09d424ed391e14c9861c99ea9dc41793e2b",
+      "fixture_sha256": "b5bdcb7d0e1b402cb429cca46517cbb9a800f9b6fb179f12836ea4bab62faa67",
+      "runtime_memory": {
+        "sha256": "367f19a02ba96e9bbf4bcdf2bced13d079a89e57a4737bb2d3b7be2a92108ca5",
+        "save_pointer": "0x0227c228",
+        "array_offsets": {
+          "1": {
+            "size": 48,
+            "offset": "0xd050"
+          },
+          "2": {
+            "size": 1460,
+            "offset": "0xd080"
+          },
+          "3": {
+            "size": 1952,
+            "offset": "0xd634"
+          }
+        },
+        "party_count": 1,
+        "party_slot0_is_egg": true,
+        "party_slot0_moves": [
+          27,
+          1,
+          0,
+          0
+        ],
+        "bag_hm_items": [
+          422
+        ],
+        "badge_ids": [
+          3
+        ],
+        "item_state_matches_fixture": true,
+        "badge_state_matches_fixture": true,
+        "party_state_matches_fixture": true,
+        "fixture_state_verified": true
+      },
+      "screenshots": {
+        "party_without_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/party-one-egg-surf-owned-badged/party_without_context.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        "owned_hm_context": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-matrix-fix2-20261022-r2/party-one-egg-surf-owned-badged/owned_hm_context.png",
+          "sha256": "ca3ba894d6da20910e3e37d09d529befe63af7c7799a72e4866648bf168bef6a"
+        }
+      },
+      "golden_save_copy_sha256_before": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "golden_save_copy_sha256_after": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+      "save_copy_unchanged": true,
+      "runner_errors": "",
+      "gameplay_action_claim": "NOT_ASSESSED",
+      "visual_review_en": "RAM verifies one Egg, but the captured Party/menu shows the pre-fixture roster and Surf row. Egg actor filtering is NOT_ASSESSED because the GUI state is stale relative to fixture RAM.",
+      "visual_review_es": "La RAM confirma un huevo, pero el equipo/menú capturado muestra el equipo previo al fixture y la fila Surf. El filtro de actor huevo queda SIN EVALUAR porque la GUI no refleja la RAM del fixture."
+    }
+  ]
+}

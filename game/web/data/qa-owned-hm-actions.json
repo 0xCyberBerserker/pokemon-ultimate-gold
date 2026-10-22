@@ -1,0 +1,459 @@
+{
+  "schema": "ultimate-gold-owned-hm-actions/v1",
+  "status": "PARTIAL_NATIVE_ACTIONS_TESTED",
+  "rom_sha256": "c64dc998bf97c621027bd3e9f16e7526309db3fc69b99c8198d28b1614b75304",
+  "runs": [
+    {
+      "run": "hm-paged-fix4-cold-boot",
+      "result_sha256": "615f9d9f68c374216530b2fd1230f0613a5e1488f5209e387c0c5d3038e24936",
+      "ram_sha256": "28b6b3fd83dd2d30099dba3045e0e3000381007ff073afb00ce1a14d347dd2d0",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        60,
+        -1,
+        685,
+        409,
+        0
+      ],
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [],
+      "temporary_setup_codes": [],
+      "persistent_fingerprint_sha256": "1c54c4ab2abb45b4467538c7d1b50964dc4c01f512e4c0745ccc8f19aa8487bd",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-paged-fix4-profile/qa-kit-shop-owned-hm-paged-fix4.dsv",
+          "bytes": 524410,
+          "sha256": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384"
+        }
+      ],
+      "state_input": null,
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-paged-fix4-cold-boot/continue_or_load.png",
+          "sha256": "b6aa0e1c355c72e399a1d54479106c38cf00ac12502bd33d9958995142e16c8a"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-paged-fix4-cold-boot/loaded_identity.png",
+          "sha256": "2f160321ec9c5552bcd6617f87e16428a0ee51d434b53d01282b1441f9aa5249"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-paged-fix4-cold-boot/loaded_location.png",
+          "sha256": "0e0d7887e1ce40840921a58e13301c146856049de81e0591b7e1660899cfc0c9"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-paged-fix4-cold-boot/title_or_menu.png",
+          "sha256": "9b566bc3afb5559e99471626b10bacec317fed0cb7de823aac7ce53772c4a71b"
+        }
+      ]
+    },
+    {
+      "run": "hm-fix4-fly-native-action",
+      "result_sha256": "2939731ca5e748eea8d11efa8665d3d59d1edea0939819c3d6977a6dec0f5a44",
+      "ram_sha256": "c8b51e42487f3a580ed7c36114de33af6ce83e9b13ba13a47b04e9edadfe5cb5",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        60,
+        -1,
+        695,
+        397,
+        1
+      ],
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [],
+      "temporary_setup_codes": [
+        {
+          "sha256": "0db2f4eb5aae06d61bf64dce8f59c94964590ec9a72186df593190cdbcfbcffe",
+          "start": 0,
+          "end": 1
+        }
+      ],
+      "persistent_fingerprint_sha256": "bd84408907eaf22ac1c899852c77d3f316997e981512a26233fc876ca0620e76",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-paged-fix4-profile/qa-kit-shop-owned-hm-paged-fix4.dsv",
+          "bytes": 524410,
+          "sha256": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384"
+        }
+      ],
+      "state_input": "runs/hm-paged-fix4-cold-boot/navigation.state",
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-fly-native-action/fly_arrival.png",
+          "sha256": "df9aade864bb75979aa5a771b4bcda8fa2442b2bc16a76c75506bec3620da0f5"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-fly-native-action/fly_map.png",
+          "sha256": "74028c4e1c326af72e7c21c0f67b51b770d6bc3522d027bd9c18a7446d42e6ba"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-fly-native-action/party_context.png",
+          "sha256": "87d423fc52e0d1b4e99d2c7fab317247efdc5515e922b56a5ab8407df104bea0"
+        }
+      ]
+    },
+    {
+      "run": "hm-fix4-surf-native-action",
+      "result_sha256": "f4c37079e4ceec25856ab0d5557b54b6015ca1ab75154ad273e5b9a11ec73ff6",
+      "ram_sha256": "7129ad97305354db51f75e78502165719c9a02b7b60d75b5e93a81660b912eea",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        31,
+        -1,
+        704,
+        399,
+        2
+      ],
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [],
+      "temporary_setup_codes": [],
+      "persistent_fingerprint_sha256": "bd84408907eaf22ac1c899852c77d3f316997e981512a26233fc876ca0620e76",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-paged-fix4-profile/qa-kit-shop-owned-hm-paged-fix4.dsv",
+          "bytes": 524410,
+          "sha256": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384"
+        }
+      ],
+      "state_input": "runs/hm-fix4-fly-native-action/navigation.state",
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-surf-native-action/land_return.png",
+          "sha256": "021493b4e6e7f16ef46a3a915947bbcf1a8edca9da7a26ad5a6a48d1a2f587d7"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-surf-native-action/surf_actor.png",
+          "sha256": "0d3a356cfb9fa3cba51be771e68407d74528cab8bb544966b9c5ac1c513f0e90"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-surf-native-action/surf_moved.png",
+          "sha256": "564c13251ee4e0994941761821726e541b6a1c14d79f615bbd02424c6a1a0acc"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-surf-native-action/surf_prompt.png",
+          "sha256": "61d4698a0471c1a93f689ff3f8c0ab1f3dd103318ae0f7e215c288a01ac5fe2f"
+        }
+      ]
+    },
+    {
+      "run": "hm-fix4-surf-land-return",
+      "result_sha256": "6c7c74fb779b51d6fa56eebfc39e965dd7fae186e9bab25f0ec0446466cce43f",
+      "ram_sha256": "db36083909954c97d6d55e849d9cf4d581acead33da42811fe8d2b14c20c3523",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        60,
+        -1,
+        698,
+        399,
+        1
+      ],
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [],
+      "temporary_setup_codes": [],
+      "persistent_fingerprint_sha256": "bd84408907eaf22ac1c899852c77d3f316997e981512a26233fc876ca0620e76",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-paged-fix4-profile/qa-kit-shop-owned-hm-paged-fix4.dsv",
+          "bytes": 524410,
+          "sha256": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384"
+        }
+      ],
+      "state_input": "runs/hm-fix4-fly-native-action/navigation.state",
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-surf-land-return/land_return.png",
+          "sha256": "d581977ba76368a8fcefd622423db2fc2c5d3471b4c232e8ac8ac9de9c8757cf"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-surf-land-return/surf_actor.png",
+          "sha256": "0d3a356cfb9fa3cba51be771e68407d74528cab8bb544966b9c5ac1c513f0e90"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-surf-land-return/surf_prompt.png",
+          "sha256": "61d4698a0471c1a93f689ff3f8c0ab1f3dd103318ae0f7e215c288a01ac5fe2f"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-surf-land-return/surf_started.png",
+          "sha256": "0561be6a5cef93e052d7240d6d38e38b59356b2c14ae8c881f442b3f0af2b99b"
+        }
+      ]
+    },
+    {
+      "run": "hm-fix4-native-save",
+      "result_sha256": "e8ba309a60066943379719b0c4563d48303fb7c39d8fc1905a70d0b9018f34de",
+      "ram_sha256": "f539541f504de41c8e5d52d3d505245adbbf3ad4ba7ab785b5dac5bd80718cb8",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        60,
+        -1,
+        698,
+        399,
+        2
+      ],
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [],
+      "temporary_setup_codes": [],
+      "persistent_fingerprint_sha256": "bd84408907eaf22ac1c899852c77d3f316997e981512a26233fc876ca0620e76",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-paged-fix4-profile/qa-kit-shop-owned-hm-paged-fix4.dsv",
+          "bytes": 524410,
+          "sha256": "e2366b6eb035a67c2d8987d6f7ce9bb73f5e847234789ac1e2055e09c24db0f6"
+        }
+      ],
+      "state_input": "runs/hm-fix4-surf-land-return/navigation.state",
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-save/overwrite_prompt.png",
+          "sha256": "6c2a8ae451f6c8c3537a8127551718d99a6c43d79bc22b3a40d179507779d54f"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-save/save_prompt.png",
+          "sha256": "5e60228ca225ca8d2262a8e232bebd810b8b0be19acb54f5b5092b7fa6e09dc5"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-save/save_result.png",
+          "sha256": "ac2b06c2d6bfa4cdd087df3147497ee0a5ff0471ab6adc8c56c51f242717722a"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-save/saving.png",
+          "sha256": "879e51f30782cf6c1f37ac072ad1ab6e3435f9d155f70dc5a79e865d930ac4ac"
+        }
+      ]
+    },
+    {
+      "run": "hm-fix4-native-cold-reload",
+      "result_sha256": "f1e867edeaf76e835f1b535a35fda0d3420ec71e43af06c0579da2568605cd09",
+      "ram_sha256": "bfffcadf0fa3fe567d65ded8f5d8495ff0ba4a1a2d2beb3a95d236ef0dc3b83d",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        60,
+        -1,
+        698,
+        399,
+        2
+      ],
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [
+        2
+      ],
+      "temporary_setup_codes": [],
+      "persistent_fingerprint_sha256": "bd84408907eaf22ac1c899852c77d3f316997e981512a26233fc876ca0620e76",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-paged-fix4-profile/qa-kit-shop-owned-hm-paged-fix4.dsv",
+          "bytes": 524410,
+          "sha256": "e2366b6eb035a67c2d8987d6f7ce9bb73f5e847234789ac1e2055e09c24db0f6"
+        }
+      ],
+      "state_input": null,
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-cold-reload/continue_or_load.png",
+          "sha256": "b38e267a3157ecd8424abb7789530bff0690258e37de1293e4922a048d33fb83"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-cold-reload/loaded_identity.png",
+          "sha256": "91b934ba72f13de1c9c5b8e2a4e0dcaefdd6e2c8104515715304ecbe1bc9b885"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-cold-reload/loaded_location.png",
+          "sha256": "cfe78b72c36676ada26dc546bf9e23437f9848a8780c8347ee61bb8d5fb2f695"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-cold-reload/title_or_menu.png",
+          "sha256": "bf030b239fc0bf90727de4722a4e9b4ddb2ec69be4be72b618910a05c006ade0"
+        }
+      ]
+    },
+    {
+      "run": "hm-fix4-native-pagination",
+      "result_sha256": "45314217b616e45f7ddfbc8412db71fc8ef8c67375e62e04f236d53ed97d996d",
+      "ram_sha256": "8c1ef82f987fad14693d6f51ace3f28925eb0582443d376b360b7b669687f910",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        60,
+        -1,
+        698,
+        399,
+        2
+      ],
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [],
+      "temporary_setup_codes": [],
+      "persistent_fingerprint_sha256": "bd84408907eaf22ac1c899852c77d3f316997e981512a26233fc876ca0620e76",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-paged-fix4-profile/qa-kit-shop-owned-hm-paged-fix4.dsv",
+          "bytes": 524410,
+          "sha256": "e2366b6eb035a67c2d8987d6f7ce9bb73f5e847234789ac1e2055e09c24db0f6"
+        }
+      ],
+      "state_input": "runs/hm-fix4-native-cold-reload/navigation.state",
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-pagination/cancelled.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-pagination/main_menu.png",
+          "sha256": "87d423fc52e0d1b4e99d2c7fab317247efdc5515e922b56a5ab8407df104bea0"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-pagination/page_back.png",
+          "sha256": "c76a3e197071c3ffaf0f889f4bef3a36bc8c408430c3a080c16e4d94393d8f2e"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-pagination/page_one.png",
+          "sha256": "3213205a1d8fdb40a07161f0817a456de063bb96aeab769f04928b6773720393"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix4-native-pagination/page_two.png",
+          "sha256": "924bc21ff8745825b10af811de8d457a3d3b8774258b6ac7e812ae48fa7cb450"
+        }
+      ]
+    }
+  ],
+  "golden_save_unchanged": true,
+  "native_save_cold_reload": "PASS: unchanged canonical inventory, party, badges and location; fresh process with no savestate or codes.",
+  "visual_checks": {
+    "fly": "Reviewed native destination map, animation and arrival outside Elm's lab.",
+    "surf": "Reviewed CLEFAIRY used Surf text, surfing sprite and movement on water.",
+    "land_return": "Reviewed separate native water-entry/shore-return run: walking sprite and follower restored on land; no active codes.",
+    "earlier_land_attempt": "Wild encounter interrupted the longer water route; retained as encounter evidence, not shore-return proof.",
+    "pagination": "Reviewed first page, Next, second page, Back and B cancellation; state and inventory preserved."
+  },
+  "known_ui_defects": [
+    "Strength is clipped in the native narrow Quit window (row 3); move Cancel into this slot before final release."
+  ],
+  "limitations_en": [
+    "Setup uses temporary inventory/badge fixtures, not normal story acquisition.",
+    "Only Fly and Surf native actions assessed; other six actions remain pending.",
+    "All map gates, six other HM actions, HM learning and combined-shop/kit regressions remain pending.",
+    "This prototype is not included in the Alpha 1 download."
+  ],
+  "limitations_es": [
+    "La preparación usa inventario/medallas temporales, no adquisición normal por historia.",
+    "Solo se evaluaron las acciones nativas Fly y Surf; faltan otras seis.",
+    "Faltan límites de mapa, seis acciones de MO, enseñanza y regresión de tiendas/kit en el combinado.",
+    "Este prototipo no forma parte de la descarga Alfa 1."
+  ]
+}

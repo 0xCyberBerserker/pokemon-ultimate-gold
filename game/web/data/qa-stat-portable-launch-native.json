@@ -1,0 +1,3070 @@
+{
+  "schema": "ultimate-gold-portable-kit-native-seeded-runtime/v1",
+  "status": "VERIFIED_ISOLATED_NATIVE_ACQUISITION_AND_TWO_USE_PROBE",
+  "scope": "Alpha2 native gift/save/cold plus isolated portable item callback/global-script probe; no production integration claim.",
+  "artifacts": {
+    "alpha2_rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "portable_candidate_sha256": "604101b971d182902928b73f3b9717ff26751aed1bc5a933e65b40f85425a79f",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "alpha2_runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+    "portable_runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "portable_build_json_sha256": "859e0ffef0204d435f225e5dad0c605f1582bcd5e97e3d17aa316c458bf18966",
+    "static_review_sha256": "818a1cd2ec18343cccf64e3214994521144415dafbdb1cb017acd251e4912baa",
+    "portable_static_script": {
+      "global_script_id": 2072,
+      "bank_member": 3,
+      "bytecode_hex": "6000290007804755310061000200",
+      "item_118_field_use_func": 5
+    }
+  },
+  "native_alpha2_acquisition": {
+    "source_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+    "saved_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "source_slot": {
+      "base": 262144,
+      "counter": 9,
+      "crc16": 53760
+    },
+    "saved_slot": {
+      "base": 0,
+      "counter": 10,
+      "crc16": 17186
+    },
+    "native_save_array3": {
+      "source_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+      "saved_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "changed_bytes": 18,
+      "runtime_after_native_save_matches_dsv": true,
+      "runtime_after_fresh_cold_matches_dsv": true
+    },
+    "gift_result": {
+      "visible": "The kit is yours. Its marker keeps the li…",
+      "bag_delta": {
+        "before_sha256": "ac4e9719b870df50bdf52bb28e5cd00e46650a485605563cc4f9a6fb17994b51",
+        "after_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "expected_quantity_deltas": [
+          {
+            "pocket": "berries",
+            "item_id": 154,
+            "name": "Leppa Berry",
+            "before": 0,
+            "after": 1,
+            "delta": 1
+          },
+          {
+            "pocket": "berries",
+            "item_id": 155,
+            "name": "Oran Berry",
+            "before": 0,
+            "after": 1,
+            "delta": 1
+          },
+          {
+            "pocket": "berries",
+            "item_id": 157,
+            "name": "Lum Berry",
+            "before": 0,
+            "after": 1,
+            "delta": 1
+          },
+          {
+            "pocket": "items",
+            "item_id": 77,
+            "name": "Max Repel",
+            "before": 0,
+            "after": 1,
+            "delta": 1
+          },
+          {
+            "pocket": "items",
+            "item_id": 78,
+            "name": "Escape Rope",
+            "before": 0,
+            "after": 1,
+            "delta": 1
+          },
+          {
+            "pocket": "key",
+            "item_id": 113,
+            "name": "TM Refill",
+            "before": 0,
+            "after": 1,
+            "delta": 1
+          },
+          {
+            "pocket": "key",
+            "item_id": 114,
+            "name": "Party Healer",
+            "before": 0,
+            "after": 1,
+            "delta": 1
+          },
+          {
+            "pocket": "key",
+            "item_id": 118,
+            "name": "Cheat Kit marker",
+            "before": 0,
+            "after": 1,
+            "delta": 1
+          },
+          {
+            "pocket": "medicine",
+            "item_id": 50,
+            "name": "Rare Candy",
+            "before": 0,
+            "after": 1,
+            "delta": 1
+          }
+        ],
+        "changed_slots": [
+          {
+            "pocket": "items",
+            "slot": 1,
+            "item_id": 77,
+            "quantity": 1
+          },
+          {
+            "pocket": "items",
+            "slot": 2,
+            "item_id": 78,
+            "quantity": 1
+          },
+          {
+            "pocket": "medicine",
+            "slot": 0,
+            "item_id": 50,
+            "quantity": 1
+          },
+          {
+            "pocket": "berries",
+            "slot": 0,
+            "item_id": 154,
+            "quantity": 1
+          },
+          {
+            "pocket": "berries",
+            "slot": 1,
+            "item_id": 155,
+            "quantity": 1
+          },
+          {
+            "pocket": "berries",
+            "slot": 2,
+            "item_id": 157,
+            "quantity": 1
+          },
+          {
+            "pocket": "key",
+            "slot": 2,
+            "item_id": 113,
+            "quantity": 1
+          },
+          {
+            "pocket": "key",
+            "slot": 3,
+            "item_id": 114,
+            "quantity": 1
+          },
+          {
+            "pocket": "key",
+            "slot": 4,
+            "item_id": 118,
+            "quantity": 1
+          }
+        ],
+        "key_pocket_gift_order": [
+          {
+            "slot": 2,
+            "item_id": 113
+          },
+          {
+            "slot": 3,
+            "item_id": 114
+          },
+          {
+            "slot": 4,
+            "item_id": 118
+          }
+        ],
+        "marker_118_last_in_key_pocket": true,
+        "all_other_bag_quantities_unchanged": true,
+        "only_previously_empty_slots_used": true
+      },
+      "saved_cold_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "saved_cold_key_item_118_quantity": 1,
+      "native_save_and_same_hash_fresh_cold": "VERIFIED"
+    },
+    "state_chain": [
+      {
+        "name": "portable-kit-launch-native-alpha2-cold",
+        "frames": 5500,
+        "result_sha256": "6fed21078d7ccd6aa5f0bd8fb3133a282b7461dd94752f235a12aa959970ebb9",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-cold/input-script.json",
+          "sha256": "ee9a4fa7ec676af4233bf4be877e142441918831c059f63a9d3a5679397d66c4"
+        },
+        "state_in_sha256": null,
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-cold/cold.state",
+          "sha256": "4a00ab95f372ec25cfdb1bb899a4b5e9d17b8ba836c12004af8950596e029f9c"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-cold/system_ram.bin",
+          "sha256": "ed06968bd967c9d2b350cbf0d4bbdd8d500dffe628283cab6ad15538ea4f1245"
+        },
+        "battery_dsv": {
+          "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-cold/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "sidecar_sha256": "265843751c01671551d17da313f7404c0df0ff3d42af89f149ee1f837e1e5544"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-cold/cold_continue_or_load.png",
+            "sha256": "ecfaa4a17e423d46b8b5c8fcd6ac232fc187571afabb1101823116179b47c6a6"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-cold/cold_final.png",
+            "sha256": "da4b9e3a9ac99986d44b717897d83fe5a17257aa9dea77ccc9f990dbbe33d655"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-cold/cold_loaded_field.png",
+            "sha256": "c8bfe77cb69e8e12098dbdd37876b7b0a120f10cac3a01a5dfbfe9f747474da3"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-cold/cold_loaded_identity.png",
+            "sha256": "714c56e634ff73ba1d4d4f62dd6502271288a1eff39df53d62bce30d5361a21d"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-cold/cold_pre_title_inputs.png",
+            "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-cold/cold_title_or_continue.png",
+            "sha256": "60cebe104afd7bc667a6b871ec74ef05a49d58966d09bb0ca1b3a398b50b0776"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-alpha2-approach",
+        "frames": 120,
+        "result_sha256": "dbd4066903319a3a62649f26617edb95fa01a894cbc48aa3ffe4c18ff3babd9c",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-approach/input-script.json",
+          "sha256": "3480244eb41c00ec947b0591f3458823f2c28cfdc5580ad4aba1887599bbc781"
+        },
+        "state_in_sha256": "4a00ab95f372ec25cfdb1bb899a4b5e9d17b8ba836c12004af8950596e029f9c",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-approach/approach.state",
+          "sha256": "a24a1b62afc306c94d8d18a614c9a2b28495c2296325e46a4a18b27a71130164"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-approach/system_ram.bin",
+          "sha256": "37c99b8d3ffb3e1632403abdb35608d3d03a93a6e4c8c79b02925ba94c86beec"
+        },
+        "battery_dsv": {
+          "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-approach/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "sidecar_sha256": "eab0f3aa23a82dc6e557cdb0391ae1dbfd681ab44cca8e35c3102b1c4fe21023"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-approach/cold_field_start.png",
+            "sha256": "08a35c2974060b91937703461c3ef8a1de47afe338b04d8a7be05f8ce1e56bd6"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-approach/dialogue_result.png",
+            "sha256": "20ac15e347e536309cd34525e6c7672be99ef3ae81387c2f2373a5859860ae91"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-approach/east_step.png",
+            "sha256": "88e5951f745e2621e45c2f51e86f908800f96aad8e57449563afb07b57c80c20"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-approach/north_facing_approach.png",
+            "sha256": "f1ba404743ac2259793a33e64adad2ef8e59e66e69807f373f43585f539f4056"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-approach/pre_interaction.png",
+            "sha256": "3d9c5c12cde0216219099238caa628ead87cde1d2947a1e578cd374a7a109fa1"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-alpha2-dialogue-correction",
+        "frames": 100,
+        "result_sha256": "7efbbdf58f413067108d27b4d6bd27f43f7ffb377bcc32ce1f8a67bad38e7e39",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-dialogue-correction/input-script.json",
+          "sha256": "b2c3a5e622d37d5590b9e817c65a3e6d1e05f73c0891a4fedaf6d79a167a1ad1"
+        },
+        "state_in_sha256": "a24a1b62afc306c94d8d18a614c9a2b28495c2296325e46a4a18b27a71130164",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-dialogue-correction/dialogue.state",
+          "sha256": "8fad45a99b69cb8f710e36f3e823e887822d8bfaddbd2b7426c8538bc45863d7"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-dialogue-correction/system_ram.bin",
+          "sha256": "acf0ffe89bf28aa33d6882b08ead7441caece7aeeea49c48a30be634ba078458"
+        },
+        "battery_dsv": {
+          "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-dialogue-correction/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "sidecar_sha256": "f31e950c5a3f08ee1bef4e34be2cc71420fa70950ccc4ceb2ef670812cae6e25"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-dialogue-correction/dialogue.png",
+            "sha256": "69a64852864dc110f4c82a1e817c811691e6040507913ac8802516bb58b90f49"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-dialogue-correction/facing_west.png",
+            "sha256": "88978e74eb23300bd42ef55857f226916d4d25c7a8d3abc9af59e3b6ecfcc1d0"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-dialogue-correction/pre_interaction.png",
+            "sha256": "49fdd835133bf2d5f0456bc5ee5aa07421616686d0f3f2717a39ea6c9a90b391"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-dialogue-correction/pre_turn.png",
+            "sha256": "35be5154e759c1d56286bb8672961a29e1bbad8495a8e37e0523195bed64d2ea"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-alpha2-rocket-approach",
+        "frames": 100,
+        "result_sha256": "4f34642aec4aa5cb74aadcf5041525d76d6ae93a902966d3853b32d6561b14f7",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-rocket-approach/input-script.json",
+          "sha256": "931a98d02decb418b30b8621830904ad501cca142949aff0b74de33a66306d66"
+        },
+        "state_in_sha256": "8fad45a99b69cb8f710e36f3e823e887822d8bfaddbd2b7426c8538bc45863d7",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-rocket-approach/rocket.state",
+          "sha256": "3d48b25100fd788ce5119add0063f2047e75f491b4aea4eacb0027c2c4fff5d0"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-rocket-approach/system_ram.bin",
+          "sha256": "e6fedb8f3a9f160eec27afa41ebb3b2b2211a5649b5fd403d3f00dda8c06066f"
+        },
+        "battery_dsv": {
+          "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-rocket-approach/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "sidecar_sha256": "b3e89f8abe93c8d54c9b70f04e95f78724a8db39564877ce50c31664ad348132"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-rocket-approach/adjacent_pre_a.png",
+            "sha256": "5e82973b2c115dbb8b5ce036675e6ba184c3e59130ce125207e8e8fb5bc8aa5c"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-rocket-approach/before_west_step.png",
+            "sha256": "7a476ee5b291416f2db6f41da35f0527c7534b24a7a0d7fd44dc55317f15404c"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-rocket-approach/interaction_result.png",
+            "sha256": "edecc40004f6801a0988c152db045f326ee9bc4dfe904bc13ac9d26fc10edfac"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-rocket-approach/pre_interaction.png",
+            "sha256": "9a3e6c6c4339a2704b0ea1935d6f470aa2b1654c9677d769397f6873cf17e7e4"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-alpha2-greeting",
+        "frames": 150,
+        "result_sha256": "e10166b8f0753ab569f0fdca341675381b9597e9e2c3f67f502fcde9c3aaaabf",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-greeting/input-script.json",
+          "sha256": "95f68744a59cd4ebb7dfaa294b044068b2cd0afb5bdf414033eb7ee17765a7bb"
+        },
+        "state_in_sha256": "3d48b25100fd788ce5119add0063f2047e75f491b4aea4eacb0027c2c4fff5d0",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-greeting/greeting.state",
+          "sha256": "4b27203c971df1aefade08367455d04edf4073a058c8fbcbad98f182ae6dbcfd"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-greeting/system_ram.bin",
+          "sha256": "fa5ccf931209afe3a8cc645f9468ae87f5aa77e0a40cda17b12c2e7a2542f306"
+        },
+        "battery_dsv": {
+          "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-greeting/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "sidecar_sha256": "43494674aae19a98547dd26bd12301d9a3eb3fd919111f71cd2d7b4ab973dbf6"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-greeting/greeting_before_advance.png",
+            "sha256": "f14753f4bc494109941e84d484202838b9dc23dce687dfae413ce42cfcae21fb"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-greeting/offer_prompt.png",
+            "sha256": "54c851cbc002d44ef4da482da3c6035a248282401ac6f9210c77f82004a18210"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-alpha2-gift-offer",
+        "frames": 150,
+        "result_sha256": "3e3105da8c2e3f6664c28a956be2c9673404a708abdfd9a01b5c336a6582c171",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-gift-offer/input-script.json",
+          "sha256": "4b87ba21d0f9e10791486e0807c2286f56539d6ded3f18a45b22bf8bc7b4c45d"
+        },
+        "state_in_sha256": "4b27203c971df1aefade08367455d04edf4073a058c8fbcbad98f182ae6dbcfd",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-gift-offer/offer.state",
+          "sha256": "8fbb5c834eaf2308356d6c89af86e974b00144dc1dc204eb98d0477099bf2b26"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-gift-offer/system_ram.bin",
+          "sha256": "78ebfc31fb9a612f2cb8ced32d3ea174918d2760322b99f882498fe4d8d96573"
+        },
+        "battery_dsv": {
+          "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-gift-offer/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "sidecar_sha256": "144da15c29948a00b00a7e9cd9a42fc6065f95f4e9dee639d7c974bc33f8334b"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-gift-offer/gift_yes_no_offer.png",
+            "sha256": "554a1f298a2256ac2cda47a286842ff45a9d49405d61051584c511335c510cd1"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-gift-offer/offer_text_before_advance.png",
+            "sha256": "b6d3f88f1fecebb294c9cc87195aa08a5fb940804ab385c91a4b9a2d74a88632"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-alpha2-gift-accepted",
+        "frames": 150,
+        "result_sha256": "b20d22e00ff1dc04778bc8e05c60413e475a8842bd34033127661c04616be5a9",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-gift-accepted/input-script.json",
+          "sha256": "fc05081ededf3301062db4ee0b0d9bc9df763fde1c058e75a98df38f4fcc2e19"
+        },
+        "state_in_sha256": "8fbb5c834eaf2308356d6c89af86e974b00144dc1dc204eb98d0477099bf2b26",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-gift-accepted/result.state",
+          "sha256": "888f24f58826bc36d121f70b5a73e5d40d09ecbd5e2c4511f8b6f5d5a6998b48"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-gift-accepted/system_ram.bin",
+          "sha256": "518f356c185faaf6a1e5648253814eeda791bcf16ab387b98af1df120fa97d54"
+        },
+        "battery_dsv": {
+          "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-gift-accepted/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "sidecar_sha256": "be500ee739406e4fcc458ed81d222f71e04271fd4868aa7d7713fb5e1759883c"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-gift-accepted/gift_result_text.png",
+            "sha256": "e1e3ae2a54e947e1badeb3212352ca14a296a06a0c7d57f5cb8a532136e528ea"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-gift-accepted/yes_selected_before_accept.png",
+            "sha256": "a3c5027d43fb485cc624c03a865b4709c8c57bc031459f7780c03a65a3b54011"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-alpha2-gift-dismiss",
+        "frames": 150,
+        "result_sha256": "480ff0d2b05d5e595636eba99c7cbaf53aa6631284a8615a1d1817475e08e96c",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-gift-dismiss/input-script.json",
+          "sha256": "ce02fc355df3c88c58b402cfa717a55539eea6552d1ce9a69313bb61d00d3695"
+        },
+        "state_in_sha256": "888f24f58826bc36d121f70b5a73e5d40d09ecbd5e2c4511f8b6f5d5a6998b48",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-gift-dismiss/field.state",
+          "sha256": "0a29f8b2d4ee76813b901b0b3dd529d26e6f083533c5aa8903cb38f694e5562b"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-gift-dismiss/system_ram.bin",
+          "sha256": "6e100c0c9430240efcf1c88a5c6cf61e5160a9401b46a1e36bdecfd3033a7ff5"
+        },
+        "battery_dsv": {
+          "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-gift-dismiss/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "sidecar_sha256": "093bee6a3d3af4f90fb13aad3cfc6a6276358d98873b5ee3851c19abecc38b5f"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-gift-dismiss/field_after_gift.png",
+            "sha256": "b5e5ae3b570a3c57d3ca5a53e8c69b9275dc4c24f765778ceba456a3e6b5c229"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-gift-dismiss/gift_result_before_dismiss.png",
+            "sha256": "45b2323c39c77fa8ecfd4eefeac5f400cbade30547dc0248648bba85e031cee7"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-alpha2-save-prompt",
+        "frames": 350,
+        "result_sha256": "b2762e93bbdc89e1f9f6a19cbedbec04b030fc5fd1619d91097a8593e2dad626",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-save-prompt/input-script.json",
+          "sha256": "5fc6b2b6aa6ca2a48806a3f186dd56668d700717bbba0249ceb13156fc37d88b"
+        },
+        "state_in_sha256": "0a29f8b2d4ee76813b901b0b3dd529d26e6f083533c5aa8903cb38f694e5562b",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-save-prompt/prompt.state",
+          "sha256": "4fbaaa3fe1606bf7d5e27491215459efb306112637f53cf21455238270e091f3"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-save-prompt/system_ram.bin",
+          "sha256": "1544d8e01754d6f02cbb993e6e30975891525c83feef543d1264ac105f0f6429"
+        },
+        "battery_dsv": {
+          "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-save-prompt/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "sidecar_sha256": "c7b3c1c402231f52ddc7ed08371183857b602bef9b85f1e862ee73cd2c20adbc"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-save-prompt/native_save_prompt.png",
+            "sha256": "629a89cf8bc5a15e17a299a50d6fc43a86a888fd6ee6d5e58de6161072beed25"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-alpha2-save-overwrite",
+        "frames": 400,
+        "result_sha256": "94a72eef6f4707ffd174c4cd1f79f93131bdf62e7d6cb1801745675800e69daf",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-save-overwrite/input-script.json",
+          "sha256": "aabb9e086204d6c3e78c29cd0912e2ba7de075a026c3358443dd7511a0d11751"
+        },
+        "state_in_sha256": "4fbaaa3fe1606bf7d5e27491215459efb306112637f53cf21455238270e091f3",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-save-overwrite/overwrite.state",
+          "sha256": "57974d412889e64ce30f8b0d31e5800746ee2ca69477d67cef5b4b3eaa7e458a"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-save-overwrite/system_ram.bin",
+          "sha256": "9748bb96699d5cddd3858aba7ec7f17551d555296b91dfa247667f1aafad5338"
+        },
+        "battery_dsv": {
+          "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-save-overwrite/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "sidecar_sha256": "6b50135031ace5158896bf0e23477132895ed42671b2ed282b0de3a7938f94e7"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-save-overwrite/native_save_overwrite_prompt.png",
+            "sha256": "65030954086dbbce4f123c899a1ed071db6cb49811f5d4d397216c83aaae7137"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-alpha2-save-yes",
+        "frames": 800,
+        "result_sha256": "ed9bc080323b6af68579d9239e1f74b2d9146cd49955ba212f7b533108124b50",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-save-yes/input-script.json",
+          "sha256": "194ee85653b2c973b949559be99d9b88f8945908496d4182f0504cf49264ceef"
+        },
+        "state_in_sha256": "57974d412889e64ce30f8b0d31e5800746ee2ca69477d67cef5b4b3eaa7e458a",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-save-yes/saved.state",
+          "sha256": "45132a8e108a011a0d443301e609694e9b862cbceba6f84b14fbcdf408af60ca"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-save-yes/system_ram.bin",
+          "sha256": "938247e7276e017c481f07eb25307dd12a54ddc0ca9b7fd155b9538b400cffcd"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-save-yes/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "sidecar_sha256": "99449deaa4533e9000da00592908269fe802c5ee3747a73c5fe28459758fe4e0"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-save-yes/native_save_complete.png",
+            "sha256": "c505400a837ed240ea4eb47ab423e66d6553c2bd3877c56a7ae87058eb2ebdde"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-save-yes/save_final.png",
+            "sha256": "bef2f750bcbb52213d97d20042ce9c5718ec86fd5c89a746e909de1a09a0ea79"
+          }
+        ]
+      }
+    ],
+    "fresh_cold_reload": {
+      "name": "portable-kit-launch-native-alpha2-persist-cold",
+      "frames": 5500,
+      "result_sha256": "30f825681852978a06737aed61a31ff53e03ebcc881ef6de03b124145981a789",
+      "input_script": {
+        "path": "qa/runs/portable-kit-launch-native-alpha2-persist-cold/input-script.json",
+        "sha256": "ee9a4fa7ec676af4233bf4be877e142441918831c059f63a9d3a5679397d66c4"
+      },
+      "state_in_sha256": null,
+      "state_out": {
+        "path": "qa/runs/portable-kit-launch-native-alpha2-persist-cold/cold.state",
+        "sha256": "796c518ae4a4e3e0d0026422fb81bf96cc787085440a7eb47033c87507f139c8"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-kit-launch-native-alpha2-persist-cold/system_ram.bin",
+        "sha256": "eb321598aae8f05084ac2645a77cb253853a7918024f1086cfaa9f590d73a9d2"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-persist-cold/battery-evidence/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+        "sidecar_sha256": "023e6e242088f92ae3d4910fdaf6b6f697df1c88bad54a8273b15546c4cf744a"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-persist-cold/cold_continue_or_load.png",
+          "sha256": "f2175f9c918a577ea0e921e5e9b0bc16800b85ec4fe8aa4cb071a334a7a32d8e"
+        },
+        {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-persist-cold/cold_final.png",
+          "sha256": "cc27f8d57acb2ec3473514f1b63fb451620a0e8c99c49f4adfa21141228264b8"
+        },
+        {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-persist-cold/cold_loaded_field.png",
+          "sha256": "732fca4b9b4d33a92936c7e023e534b2ea2012ad37dbdce585aed64d94cf4b15"
+        },
+        {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-persist-cold/cold_loaded_identity.png",
+          "sha256": "74f0fea36a184913f2791be2f57404eeb329bee72789a8c82eb5f95079a83bab"
+        },
+        {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-persist-cold/cold_pre_title_inputs.png",
+          "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+        },
+        {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-persist-cold/cold_title_or_continue.png",
+          "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+        }
+      ]
+    }
+  },
+  "portable_probe": {
+    "seed_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "fresh_cold": {
+      "frames": 5500,
+      "state_imported": false,
+      "cheats": [],
+      "ram_sha256": "3c0be85d9d0e9d014d7388e0b274c7f38896f57093561b30e92e791729c4d205",
+      "bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "party": {
+        "strict_cipher_boundary_match": true,
+        "party_array_sha256": "0d2a1294d2e780e397aa52440f316bb12d23aed769113a48282abbe2b49b8d90",
+        "party_count": 3,
+        "record_count": 3,
+        "decoded_slots_have_no_hm_moves": true,
+        "records": [
+          {
+            "slot": 0,
+            "expected_checksum": 19307,
+            "observed_checksum": 19307,
+            "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "reference_candidates": [
+              {
+                "label": "native-alpha2-saved-dsv",
+                "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 10,
+                  "active_crc16": 17186,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 35,
+                "expected_checksum": 19307,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "native-alpha2-saved-dsv"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 1,
+            "expected_checksum": 56412,
+            "observed_checksum": 56412,
+            "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+            "reference_candidates": [
+              {
+                "label": "native-alpha2-saved-dsv",
+                "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 10,
+                  "active_crc16": 17186,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 152,
+                "expected_checksum": 56412,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "native-alpha2-saved-dsv"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 2,
+            "expected_checksum": 46459,
+            "observed_checksum": 46459,
+            "observed_record_sha256": "ed9f1ab9ed16fadecc57fdcb15ba81f11ce8f1258fe737858f2c09c30da40c16",
+            "reference_candidates": [
+              {
+                "label": "native-alpha2-saved-dsv",
+                "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 10,
+                  "active_crc16": 17186,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 66,
+                "expected_checksum": 46459,
+                "header_matches": true,
+                "record_bytes_equal": false,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 6
+                },
+                "tail_phase": {
+                  "mode": "plain_suffix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": false,
+            "decode_error": "party Pokémon checksum failed",
+            "decoded_semantic_match_sources": [],
+            "strict_exact_match": true
+          }
+        ]
+      }
+    },
+    "two_native_uses": {
+      "item_id": 118,
+      "quantity_before_and_after_each_use": 1,
+      "canonical_bag_unchanged": true,
+      "first_use_wait": {
+        "field_system": "0x022a0210",
+        "task_manager": "0x022c0144",
+        "script_environment": "0x022a6b70",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6c70",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041001",
+        "script_pc": "0x022a8535",
+        "script_pc_opcode_u16": 97,
+        "special_vars_8004_8005_800c": [
+          0,
+          0,
+          0
+        ],
+        "active_script_number": 2072,
+        "special_var_8007": "0x5547",
+        "runtime_bytecode_start": "0x022a852b",
+        "runtime_bytecode_hex": "6000290007804755310061000200",
+        "script_context_id": 0
+      },
+      "first_acknowledgement": "A returned to visible field",
+      "second_use_wait": {
+        "field_system": "0x022a0210",
+        "task_manager": "0x022c0144",
+        "script_environment": "0x022a6b70",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6c70",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041001",
+        "script_pc": "0x022a8535",
+        "script_pc_opcode_u16": 97,
+        "special_vars_8004_8005_800c": [
+          0,
+          0,
+          0
+        ],
+        "active_script_number": 2072,
+        "special_var_8007": "0x5547",
+        "runtime_bytecode_start": "0x022a852b",
+        "runtime_bytecode_hex": "6000290007804755310061000200",
+        "script_context_id": 0
+      },
+      "second_acknowledgement": "B returned to visible field",
+      "field_return_runtime": {
+        "portable-kit-launch-native-seeded-use-ack-a": {
+          "field_system": "0x022a0210",
+          "task_manager": "0x00000000",
+          "active_script_environment": false,
+          "reason": "TaskManager pointer outside MainRAM"
+        },
+        "portable-kit-launch-native-seeded-second-use-ack-b": {
+          "field_system": "0x022a0210",
+          "task_manager": "0x00000000",
+          "active_script_environment": false,
+          "reason": "TaskManager pointer outside MainRAM"
+        }
+      },
+      "bag_by_run": {
+        "portable-kit-launch-native-alpha2-seeded-cold": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        },
+        "portable-kit-launch-native-seeded-bag-open": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        },
+        "portable-kit-launch-native-seeded-pocket-next": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        },
+        "portable-kit-launch-native-seeded-key-items-r6": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        },
+        "portable-kit-launch-native-seeded-cheat-kit-select": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        },
+        "portable-kit-launch-native-seeded-use-wait": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        },
+        "portable-kit-launch-native-seeded-use-ack-a": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        },
+        "portable-kit-launch-native-seeded-second-key-items": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        },
+        "portable-kit-launch-native-seeded-second-pocket-correction": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        },
+        "portable-kit-launch-native-seeded-second-cheat-kit-select": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        },
+        "portable-kit-launch-native-seeded-second-use-wait": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        },
+        "portable-kit-launch-native-seeded-second-use-ack-b": {
+          "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+          "key_item_118": 1,
+          "key_items": {
+            "450": 1,
+            "502": 1,
+            "113": 1,
+            "114": 1,
+            "118": 1
+          }
+        }
+      },
+      "strict_party_by_run": {
+        "portable-kit-launch-native-alpha2-seeded-cold": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "0d2a1294d2e780e397aa52440f316bb12d23aed769113a48282abbe2b49b8d90",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "ed9f1ab9ed16fadecc57fdcb15ba81f11ce8f1258fe737858f2c09c30da40c16",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": false,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 6
+                  },
+                  "tail_phase": {
+                    "mode": "plain_suffix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": false,
+              "decode_error": "party Pokémon checksum failed",
+              "decoded_semantic_match_sources": [],
+              "strict_exact_match": true
+            }
+          ]
+        },
+        "portable-kit-launch-native-seeded-bag-open": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            }
+          ]
+        },
+        "portable-kit-launch-native-seeded-pocket-next": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            }
+          ]
+        },
+        "portable-kit-launch-native-seeded-key-items-r6": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            }
+          ]
+        },
+        "portable-kit-launch-native-seeded-cheat-kit-select": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            }
+          ]
+        },
+        "portable-kit-launch-native-seeded-use-wait": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            }
+          ]
+        },
+        "portable-kit-launch-native-seeded-use-ack-a": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "f155fa0c2fe9efd118ae3db21083e72d12d89c5c3c4b0de13bb45e492980906a",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "f515797e896ee7470841f1f0515e47b81e7e8aa8ea99b8d451a579a2fbd44d6a",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": false,
+                  "box_phase": {
+                    "mode": "plain_suffix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_suffix",
+                    "split": 58
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": false,
+              "decode_error": "party Pokémon checksum failed",
+              "decoded_semantic_match_sources": [],
+              "strict_exact_match": true
+            }
+          ]
+        },
+        "portable-kit-launch-native-seeded-second-key-items": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            }
+          ]
+        },
+        "portable-kit-launch-native-seeded-second-pocket-correction": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            }
+          ]
+        },
+        "portable-kit-launch-native-seeded-second-cheat-kit-select": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            }
+          ]
+        },
+        "portable-kit-launch-native-seeded-second-use-wait": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            }
+          ]
+        },
+        "portable-kit-launch-native-seeded-second-use-ack-b": {
+          "strict_cipher_boundary_match": true,
+          "party_array_sha256": "8144826e8210ce4bcd422f69f276400b90e5683125301f167e11e2e0e9b38c83",
+          "party_count": 3,
+          "record_count": 3,
+          "decoded_slots_have_no_hm_moves": true,
+          "records": [
+            {
+              "slot": 0,
+              "expected_checksum": 19307,
+              "observed_checksum": 19307,
+              "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 35,
+                  "expected_checksum": 19307,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 1,
+              "expected_checksum": 56412,
+              "observed_checksum": 56412,
+              "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 152,
+                  "expected_checksum": 56412,
+                  "header_matches": true,
+                  "record_bytes_equal": true,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [
+                "native-alpha2-saved-dsv"
+              ],
+              "strict_exact_match": true
+            },
+            {
+              "slot": 2,
+              "expected_checksum": 46459,
+              "observed_checksum": 46459,
+              "observed_record_sha256": "43ba38c88e7f42782ca18d97a8b322d0516af2137efe54d8184c9e42047cf808",
+              "reference_candidates": [
+                {
+                  "label": "native-alpha2-saved-dsv",
+                  "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+                  "slot": {
+                    "active_base": 0,
+                    "active_counter": 10,
+                    "active_crc16": 17186,
+                    "both_slots_crc_valid": true,
+                    "party_offset": 144
+                  },
+                  "species_id": 66,
+                  "expected_checksum": 46459,
+                  "header_matches": true,
+                  "record_bytes_equal": false,
+                  "box_phase": {
+                    "mode": "plain_prefix",
+                    "split": 0
+                  },
+                  "tail_phase": {
+                    "mode": "plain_prefix",
+                    "split": 82
+                  },
+                  "record_matches_cipher_boundary": true
+                }
+              ],
+              "observed_checksum_valid": true,
+              "decoded_semantic_match_sources": [],
+              "strict_exact_match": true
+            }
+          ]
+        }
+      },
+      "reserve_4k_sha256_by_run": {
+        "portable-kit-launch-native-alpha2-seeded-cold": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "930b8ef1b28f1c07ccdb5fc11e7ab5c65b11208a98bf096a438180daee543d8f"
+        },
+        "portable-kit-launch-native-seeded-bag-open": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "940af3ff3bf807bb3a01a670b099c8d580be9d83ee531daf0e325feb62385a7c"
+        },
+        "portable-kit-launch-native-seeded-pocket-next": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "940af3ff3bf807bb3a01a670b099c8d580be9d83ee531daf0e325feb62385a7c"
+        },
+        "portable-kit-launch-native-seeded-key-items-r6": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "940af3ff3bf807bb3a01a670b099c8d580be9d83ee531daf0e325feb62385a7c"
+        },
+        "portable-kit-launch-native-seeded-cheat-kit-select": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "940af3ff3bf807bb3a01a670b099c8d580be9d83ee531daf0e325feb62385a7c"
+        },
+        "portable-kit-launch-native-seeded-use-wait": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "861b234ddd4f008280a03a6d7ee7bfe709c09e8939b34efacfaf95d607260e2a"
+        },
+        "portable-kit-launch-native-seeded-use-ack-a": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "1bc102a7a0afd2cea03f13d5db52be64c5cc08e7b4745282c1b8f96149094491"
+        },
+        "portable-kit-launch-native-seeded-second-key-items": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "446b73c2d46df470e5c09dda4a2f1719bcb18f0ff25f4e3163264213049eda8c"
+        },
+        "portable-kit-launch-native-seeded-second-pocket-correction": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "446b73c2d46df470e5c09dda4a2f1719bcb18f0ff25f4e3163264213049eda8c"
+        },
+        "portable-kit-launch-native-seeded-second-cheat-kit-select": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "446b73c2d46df470e5c09dda4a2f1719bcb18f0ff25f4e3163264213049eda8c"
+        },
+        "portable-kit-launch-native-seeded-second-use-wait": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "0ca6a0a561b51494b13da52b8fdf290edf5d63f1d02e2e7c249fff645a6c5f22"
+        },
+        "portable-kit-launch-native-seeded-second-use-ack-b": {
+          "0x023D5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x023D6000": "a7127aa6d5f09d2d957ef64e8b551076f165d4540ac95d8b01a9f7493bdd28a7",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "0x023D8000": "4d53b84f5df09a0f1134f55e3ec535f1cd10eca880d53b3a31d1bbf55be3fb77"
+        }
+      },
+      "0x023D8000_runtime_scratch_deltas": {
+        "first_use_pre_to_wait": {
+          "changed_bytes": 3,
+          "changed_offsets": [
+            "0x9E6",
+            "0x9E8",
+            "0x9E9"
+          ],
+          "before_sha256": "940af3ff3bf807bb3a01a670b099c8d580be9d83ee531daf0e325feb62385a7c",
+          "after_sha256": "861b234ddd4f008280a03a6d7ee7bfe709c09e8939b34efacfaf95d607260e2a"
+        },
+        "return_to_second_item_screen": {
+          "changed_bytes": 2,
+          "changed_offsets": [
+            "0x9E8",
+            "0x9E9"
+          ],
+          "before_sha256": "1bc102a7a0afd2cea03f13d5db52be64c5cc08e7b4745282c1b8f96149094491",
+          "after_sha256": "446b73c2d46df470e5c09dda4a2f1719bcb18f0ff25f4e3163264213049eda8c"
+        },
+        "second_use_pre_to_wait": {
+          "changed_bytes": 3,
+          "changed_offsets": [
+            "0x9E6",
+            "0x9E8",
+            "0x9E9"
+          ],
+          "before_sha256": "446b73c2d46df470e5c09dda4a2f1719bcb18f0ff25f4e3163264213049eda8c",
+          "after_sha256": "0ca6a0a561b51494b13da52b8fdf290edf5d63f1d02e2e7c249fff645a6c5f22"
+        },
+        "second_wait_to_field": {
+          "changed_bytes": 2,
+          "changed_offsets": [
+            "0x9E8",
+            "0x9E9"
+          ],
+          "before_sha256": "0ca6a0a561b51494b13da52b8fdf290edf5d63f1d02e2e7c249fff645a6c5f22",
+          "after_sha256": "4d53b84f5df09a0f1134f55e3ec535f1cd10eca880d53b3a31d1bbf55be3fb77"
+        }
+      },
+      "battery_dsv_unchanged": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a"
+    },
+    "state_chain": [
+      {
+        "name": "portable-kit-launch-native-alpha2-seeded-cold",
+        "frames": 5500,
+        "result_sha256": "e495a8abc3d1a1011dc4649991e3ac76730bfbb703275b75d591609cb821dd29",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/input-script.json",
+          "sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a"
+        },
+        "state_in_sha256": null,
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/cold.state",
+          "sha256": "da5e641e306cd81c82940136af7a0049b862051f345865912efff04605778ef1"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/system_ram.bin",
+          "sha256": "3c0be85d9d0e9d014d7388e0b274c7f38896f57093561b30e92e791729c4d205"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "cc2e8c6cd2cea7d2a492f80fa59f1b56533970d95b82febf2739d1b1c498abd1"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/cold_continue_accepted.png",
+            "sha256": "b9fa2774b4fe1764088098343e8f735baaa7104fc9a02b5f6570eff33d6ad5e7"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/cold_continue_menu.png",
+            "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/cold_final.png",
+            "sha256": "b24a8d609ba7ca4c9e138a646791cd424d0a47322747042ee45838f073383dfc"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/cold_loaded_field.png",
+            "sha256": "19dcd0bdb1601d9bdbfed41d1055fa0513e022bfc104affac76ed436300960c8"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/cold_loaded_identity.png",
+            "sha256": "adfd494bb03e07f44a289c1a0bfeb5bd6e6974b969727a9a35a98a2a072f6a6d"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/cold_pre_title_inputs.png",
+            "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-seeded-bag-open",
+        "frames": 300,
+        "result_sha256": "2cd063c51442f43b3d3a8c8b6b9fa46edb86a121c08862e8fa0e5cc33b106fe5",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-bag-open/input-script.json",
+          "sha256": "60bb34f9bf92c6e0c4c552caaa9142fa60afab85bc2909d479395ab646f365f5"
+        },
+        "state_in_sha256": "da5e641e306cd81c82940136af7a0049b862051f345865912efff04605778ef1",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-bag-open/navigation.state",
+          "sha256": "1659a887a342a1560448b6bb614458cba896eb7a032dbafac71ad085c736eb38"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-bag-open/system_ram.bin",
+          "sha256": "855d09715d31fa85ab5968edd9035b5e05c98cbdcf0a0d3d05d1442396c3f7a9"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-seeded-bag-open/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "8c16f92e0169d13638e7c6a3a98c1594125d163a52593e5e98bfd4c42adcb098"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-bag-open/bag_before_touch.png",
+            "sha256": "6cc962bafd599bbd0110b37f87da2c373dad958d2b996931ded67bcccea2fcd6"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-bag-open/bag_open_feedback.png",
+            "sha256": "b85b873071f052e9c10ae5bc843098bfa0bf629a04f582ee20e2b8aaec79f5f2"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-bag-open/bag_open_final.png",
+            "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-seeded-pocket-next",
+        "frames": 300,
+        "result_sha256": "01156a96402a9d8550b4229fe67aa8b235bf5bfb15cf2605470e0f48084684b0",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-pocket-next/input-script.json",
+          "sha256": "65c5fc9bfb28d62c50eea6c7c4b9cbad2aaba00e7aa8a065bb97bf565cbfeb4f"
+        },
+        "state_in_sha256": "1659a887a342a1560448b6bb614458cba896eb7a032dbafac71ad085c736eb38",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-pocket-next/navigation.state",
+          "sha256": "845b193120c33d0dc4f284b707c300939a187e7f249ce9dac99b31faddddec2b"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-pocket-next/system_ram.bin",
+          "sha256": "e8368b96b707568039ef8aa67c37e818c4394f1db975b0046c6b163d60d3dca1"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-seeded-pocket-next/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "5deca2da82b4cd9138c77d1576819f4e6a5cf2e9db7878d3aa0427281472c1e3"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-pocket-next/pocket_after_r.png",
+            "sha256": "4bd843b85b73f0a478b5f503c672d77a04a6334d6d5288693b6d86e0a6b0688e"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-pocket-next/pocket_before_r.png",
+            "sha256": "053756ac5f65244d341740eb7767188a8d2845e91c14b9d83c7d76ce681530b5"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-pocket-next/pocket_r_final.png",
+            "sha256": "7ccfe03c3c33ff2e81c0f55f0343c5a66d5ddb59d5cfdc1f7122705997d99bb4"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-seeded-key-items-r6",
+        "frames": 300,
+        "result_sha256": "c3817c44ea4e50fe1b9edbf3a4b0cf107693d2aa8886fd3aacb12267bef8b251",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-key-items-r6/input-script.json",
+          "sha256": "fe0853d941b345a4ce0734341900d39cbc2b8a74dca8552e60624c1c74d3fd11"
+        },
+        "state_in_sha256": "845b193120c33d0dc4f284b707c300939a187e7f249ce9dac99b31faddddec2b",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-key-items-r6/navigation.state",
+          "sha256": "56e52d0e626ec0045c83df071dd811fb4c76cbda84ff26bca48769368edbc04a"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-key-items-r6/system_ram.bin",
+          "sha256": "28a0b1f652333378b67915adb5268bcf151a30f140523c81153d33fa808162eb"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-seeded-key-items-r6/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "33ad2780b144cfe77359d50367465306868fb5f393310253b59aa73eb122b657"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-key-items-r6/key_items_r6_before.png",
+            "sha256": "10a6bc4b907578f89fef261d765937a4c391c3f01b36b2d9c58f679f90218000"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-key-items-r6/key_items_r6_final.png",
+            "sha256": "1599d172418d78d3905ac792b2ebf90ca0bd41692ab273d7c2387cab944438d9"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-key-items-r6/key_items_r6_progress.png",
+            "sha256": "f9e5ad350b9c001f21d06034075699e179726501eff16e35a158a99b735b4728"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-seeded-cheat-kit-select",
+        "frames": 300,
+        "result_sha256": "2dabe36e7d20e67365e9d497875bf5108c267cefb9dc1a88bb629f8223ce6d78",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-cheat-kit-select/input-script.json",
+          "sha256": "c403b2056495219bc99f102aa85a809b32c09ebf70c80a5cdc356f72b375f24f"
+        },
+        "state_in_sha256": "56e52d0e626ec0045c83df071dd811fb4c76cbda84ff26bca48769368edbc04a",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-cheat-kit-select/navigation.state",
+          "sha256": "2cbc9ca6e29ba410406f8c1343d6e0d57081cd858307dad35397a7b56c70b0f2"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-cheat-kit-select/system_ram.bin",
+          "sha256": "99a49ebe755fabe4e234893b1596faed38b722befe919d4026bbb06e31a3085d"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-seeded-cheat-kit-select/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "61ae255d9a8fb2c069a128e9b1dff652e45c0fe9015717fdb226151b0138e5b0"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-cheat-kit-select/kit_before_select.png",
+            "sha256": "1ece4127909a81428071970c5ae5858fc91c901e60f158b6c11a4a4da1cc8c44"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-cheat-kit-select/kit_select_feedback.png",
+            "sha256": "fa21267260538374c7a4fd238a20b59c7bfb9bb8e5e57eeb43ffe6a1f7fe9bbd"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-cheat-kit-select/kit_select_final.png",
+            "sha256": "fa21267260538374c7a4fd238a20b59c7bfb9bb8e5e57eeb43ffe6a1f7fe9bbd"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-seeded-use-wait",
+        "frames": 500,
+        "result_sha256": "ec4e871c2b793849a8c65ca97ef726381e6c153acbc37702bd68823b33a5adcd",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-use-wait/input-script.json",
+          "sha256": "069edf1e0a9b620dd50285ed1cf2be0cc2cb225255eed8417197308fe5a89f1d"
+        },
+        "state_in_sha256": "2cbc9ca6e29ba410406f8c1343d6e0d57081cd858307dad35397a7b56c70b0f2",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-use-wait/navigation.state",
+          "sha256": "637038467e83a8e5d11f1eb384d8bfedf0f1e1ffe1ec310eb2897c6d3126d99b"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-use-wait/system_ram.bin",
+          "sha256": "797322ebcdd7fd51be8d9993f80742a25216c4fe1778b7acc0b8ee049478c7ce"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-seeded-use-wait/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "4524e5f89c52e801c3f2d39e53a642cd835f3cda1810232faeda43c0653ee262"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-use-wait/use_before_touch.png",
+            "sha256": "fa21267260538374c7a4fd238a20b59c7bfb9bb8e5e57eeb43ffe6a1f7fe9bbd"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-use-wait/use_wait_entry.png",
+            "sha256": "8c673a01c6b54e083707f2b42128de398691d012df46ca78dfa10d9baeaceb43"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-use-wait/use_wait_final.png",
+            "sha256": "0da29c965813937c6cd44ec641055cbdd8c7c8b0676500c2c592df3ae59d9d1e"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-use-wait/use_wait_stable.png",
+            "sha256": "8afda6c81f3fae2a23a38a6616a1bc5109dc7cae5f9ea1c1aee02e3576353cd5"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-seeded-use-ack-a",
+        "frames": 300,
+        "result_sha256": "450ff745ec6768e048f0caa8d56d7caed115bcc9ee4b0cbd0fccd5d1be5c3f77",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-use-ack-a/input-script.json",
+          "sha256": "9dbf1b25dd6a071c9bbb57dc351532e4d30169df023989004ba36fd05b42805f"
+        },
+        "state_in_sha256": "637038467e83a8e5d11f1eb384d8bfedf0f1e1ffe1ec310eb2897c6d3126d99b",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-use-ack-a/navigation.state",
+          "sha256": "4d3a6aa8056be4d37c54bd3f6615b9359937cb65d1c716fe8a8c55b3af559074"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-use-ack-a/system_ram.bin",
+          "sha256": "ae3f4eb56c874005fd9b47e6523b898085f38448a76af07e05b271c3192eba1d"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-seeded-use-ack-a/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "90ce48a4655c6cd8a7847dde6c1eef967967fdd87fc6ae3d257438c173ac8c30"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-use-ack-a/field_after_a.png",
+            "sha256": "ac7739dbe351131835330925abe44672d4ac69c31e5cf4ba0641eb000454b84e"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-use-ack-a/field_final.png",
+            "sha256": "24d257b2f04d0906940d578800629a611a5677d64b7d5357d542fbd957b2226d"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-use-ack-a/wait_before_ack.png",
+            "sha256": "a5354e645495250ed22d8ba3e8751b0599f661d3ec63556d78354f4fae6e535a"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-seeded-second-key-items",
+        "frames": 600,
+        "result_sha256": "b4a2f1072c7a75859ab45befc7226701a92ce8a64d13458df986c35844625555",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-key-items/input-script.json",
+          "sha256": "7de18d231c691de583492e33dd8096098f48721394c37402cf776b4cd6c1ecb8"
+        },
+        "state_in_sha256": "4d3a6aa8056be4d37c54bd3f6615b9359937cb65d1c716fe8a8c55b3af559074",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-key-items/navigation.state",
+          "sha256": "6eda48d5c2493d724b49b177456a04a0e646048bbf4438e6a1b75746edc8885b"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-key-items/system_ram.bin",
+          "sha256": "5ee86b49f23c3f184d6a2d9c0e8a546531c8ef92a72eb5c46b3d1b4ea8a6c6c2"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-seeded-second-key-items/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "971b1908718887957b61cc11da2db18e22e6abd769dd3503c0fbf3f997b342a6"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-key-items/bag_transition.png",
+            "sha256": "50f0b1f63f90f09f2996e0b21dd6e37c79655d9601efa7f96984d01b2c33138b"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-key-items/field_before_bag.png",
+            "sha256": "a7fd3dcda0f8d75dc540c8a2afa4c37f0893b3895d2bf81442cb5a4689223b50"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-key-items/key_items_final.png",
+            "sha256": "2816003f52421534fdd914d36b88a6436fe7c0743554a6ae665b1d472bc56aad"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-key-items/key_items_r6.png",
+            "sha256": "f0db0b3aa0f098c82c0bcc4f86437f157b63e31f8fe97074d233dbee679beaf8"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-key-items/medicine_pocket.png",
+            "sha256": "f46554e14d5d1194a9af9dc45e77c2259b3fb167152c0c4fc0cb4aa52c9f76f1"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-seeded-second-pocket-correction",
+        "frames": 160,
+        "result_sha256": "955662460403a11d9bee416f4eb9f666013d84c0268fdd4b9402f068cc8242e7",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-pocket-correction/input-script.json",
+          "sha256": "da2e08b42d8b57e208be821108fc89d9c35d55f5286f54f56560a1f02044045c"
+        },
+        "state_in_sha256": "6eda48d5c2493d724b49b177456a04a0e646048bbf4438e6a1b75746edc8885b",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-pocket-correction/navigation.state",
+          "sha256": "a2346e93af7193d342e55d1670ea0716ac549fe04a46c150e49739604ecc1b36"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-pocket-correction/system_ram.bin",
+          "sha256": "809addac761dc6553fd42838b8a85459ac90e0647dbfa075f89c6d8fa8ddd9fb"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-seeded-second-pocket-correction/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "e1bcb3a54e5481e54cdb976bd79ba9c59700271563c8b161de56560b25876387"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-pocket-correction/adjacent_pocket_before.png",
+            "sha256": "f0db0b3aa0f098c82c0bcc4f86437f157b63e31f8fe97074d233dbee679beaf8"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-pocket-correction/key_items_after_one_r.png",
+            "sha256": "14507e203f11f54c748551bd278624b04b8d22c6b9884264caf80cadb04c3d0b"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-pocket-correction/key_items_final.png",
+            "sha256": "b33e93cd4b8da8788c875cc90ee2a82614d5357da7a15568e3de72566cfb26a6"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-seeded-second-cheat-kit-select",
+        "frames": 300,
+        "result_sha256": "fe7a45c1f3feae0a367f651153d432261e0c9ffbeb3ca7b18c9e0f67f1070cc8",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-cheat-kit-select/input-script.json",
+          "sha256": "8c2d1bba56e17836456781a927ecb7ecb2c750a6dcfd622e8073863c6c0a6c38"
+        },
+        "state_in_sha256": "a2346e93af7193d342e55d1670ea0716ac549fe04a46c150e49739604ecc1b36",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-cheat-kit-select/navigation.state",
+          "sha256": "bf2c1a965d797c7883bfdc79bc2f85bbeb3c6bc395de11b92c91c26d775e9795"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-cheat-kit-select/system_ram.bin",
+          "sha256": "c741dada5cae4139d656e3488c84a75f2759d2d0469b63a599e72efd25d10950"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-seeded-second-cheat-kit-select/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "0fe2495dd848cb906abc37859dbde7cb6a6566196417b0e33948ba8b53f6733b"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-cheat-kit-select/second_kit_before_select.png",
+            "sha256": "14507e203f11f54c748551bd278624b04b8d22c6b9884264caf80cadb04c3d0b"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-cheat-kit-select/second_kit_selected_feedback.png",
+            "sha256": "fa21267260538374c7a4fd238a20b59c7bfb9bb8e5e57eeb43ffe6a1f7fe9bbd"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-cheat-kit-select/second_kit_selected_final.png",
+            "sha256": "fa21267260538374c7a4fd238a20b59c7bfb9bb8e5e57eeb43ffe6a1f7fe9bbd"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-seeded-second-use-wait",
+        "frames": 500,
+        "result_sha256": "b73d3f5979fb2369c6108eabc15d56b473c338b70b160f32d161e58cdbc8d77d",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-use-wait/input-script.json",
+          "sha256": "8b9149c04821cca3fd781127f7401801c2149fb4269837ef3972f8c585a021c3"
+        },
+        "state_in_sha256": "bf2c1a965d797c7883bfdc79bc2f85bbeb3c6bc395de11b92c91c26d775e9795",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-use-wait/navigation.state",
+          "sha256": "54dbb1efed6f4a6a1b4df070dd1ba249f8d00118ec16b499de655d737f5795d4"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-use-wait/system_ram.bin",
+          "sha256": "56f49d2058623bb5549661841d61a3e7da413f541c9a2129ec731a14f75e5aee"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-seeded-second-use-wait/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "a568bfba4c79a138eeb6b4807d9bca7efe765c33f4739821bb01793236b81668"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-use-wait/second_use_before.png",
+            "sha256": "fa21267260538374c7a4fd238a20b59c7bfb9bb8e5e57eeb43ffe6a1f7fe9bbd"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-use-wait/second_use_wait_entry.png",
+            "sha256": "456e99e6912b1a4c10ff2a838b5a14e69108ae0ed68897b56764859c5e977a6f"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-use-wait/second_use_wait_final.png",
+            "sha256": "2377eedb457956c48113ca285dafeaa5a148977789169e614de55065f3465b54"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-use-wait/second_use_wait_stable.png",
+            "sha256": "33c87e645b0c63beda23097f8c86d932014c3c149b4516deb71aca95ffe3e1f2"
+          }
+        ]
+      },
+      {
+        "name": "portable-kit-launch-native-seeded-second-use-ack-b",
+        "frames": 300,
+        "result_sha256": "7658f90f65af7176764527090ef2e715f13247dd115d4b656de4ffe6da1f6811",
+        "input_script": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-use-ack-b/input-script.json",
+          "sha256": "a5de3782881bd8fcc8c6d1328cd4d9543a93b013433b935a20f6978a6351783c"
+        },
+        "state_in_sha256": "54dbb1efed6f4a6a1b4df070dd1ba249f8d00118ec16b499de655d737f5795d4",
+        "state_out": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-use-ack-b/navigation.state",
+          "sha256": "8b007bfb7298cf53920c0768879ac4fd62876bd7eabf6d01942ced387bcc330b"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-kit-launch-native-seeded-second-use-ack-b/system_ram.bin",
+          "sha256": "62bb03e7aea7e63abf9e9dc0af2650ecc0068c67ab69cb135d58317df79bbc3f"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-kit-launch-native-seeded-second-use-ack-b/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+          "sidecar_sha256": "b6eb4591680a21c9adcb4ea2bd1aa32a7e93f5d3d370b05bd6519060c446ca52"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-use-ack-b/second_field_after_b.png",
+            "sha256": "4ac1e515652d2303a52f7200187e14a2b3475eec570e9305b1e1e8d50c57b095"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-use-ack-b/second_field_final.png",
+            "sha256": "a32fc9c61ff38cfb777676122486744ed71668e0c6e78c7c0c8c3dfbebcd64ec"
+          },
+          {
+            "path": "qa/runs/portable-kit-launch-native-seeded-second-use-ack-b/second_wait_before_ack.png",
+            "sha256": "3ee2e73fac5fbd42bbb6cee523880c3ff97229826a501595e061ea86a9fcabec"
+          }
+        ]
+      }
+    ],
+    "excluded_navigation": {
+      "portable-kit-launch-native-alpha2-approach": "initial player route overshot the live Rocket; corrected using runtime SavedMapObject position",
+      "portable-kit-launch-native-seeded-second-key-items": "pocket memory landed on a blank adjacent pocket; one observed R reached the visible Key Items tab"
+    }
+  },
+  "screenshots": {
+    "portable-kit-launch-native-alpha2-gift-offer/gift_yes_no_offer.png": {
+      "path": "qa/runs/portable-kit-launch-native-alpha2-gift-offer/gift_yes_no_offer.png",
+      "sha256": "554a1f298a2256ac2cda47a286842ff45a9d49405d61051584c511335c510cd1"
+    },
+    "portable-kit-launch-native-alpha2-gift-accepted/gift_result_text.png": {
+      "path": "qa/runs/portable-kit-launch-native-alpha2-gift-accepted/gift_result_text.png",
+      "sha256": "e1e3ae2a54e947e1badeb3212352ca14a296a06a0c7d57f5cb8a532136e528ea"
+    },
+    "portable-kit-launch-native-alpha2-save-yes/native_save_complete.png": {
+      "path": "qa/runs/portable-kit-launch-native-alpha2-save-yes/native_save_complete.png",
+      "sha256": "c505400a837ed240ea4eb47ab423e66d6553c2bd3877c56a7ae87058eb2ebdde"
+    },
+    "portable-kit-launch-native-alpha2-persist-cold/cold_loaded_field.png": {
+      "path": "qa/runs/portable-kit-launch-native-alpha2-persist-cold/cold_loaded_field.png",
+      "sha256": "732fca4b9b4d33a92936c7e023e534b2ea2012ad37dbdce585aed64d94cf4b15"
+    },
+    "portable-kit-launch-native-alpha2-seeded-cold/cold_loaded_field.png": {
+      "path": "qa/runs/portable-kit-launch-native-alpha2-seeded-cold/cold_loaded_field.png",
+      "sha256": "19dcd0bdb1601d9bdbfed41d1055fa0513e022bfc104affac76ed436300960c8"
+    },
+    "portable-kit-launch-native-seeded-key-items-r6/key_items_r6_final.png": {
+      "path": "qa/runs/portable-kit-launch-native-seeded-key-items-r6/key_items_r6_final.png",
+      "sha256": "1599d172418d78d3905ac792b2ebf90ca0bd41692ab273d7c2387cab944438d9"
+    },
+    "portable-kit-launch-native-seeded-cheat-kit-select/kit_select_feedback.png": {
+      "path": "qa/runs/portable-kit-launch-native-seeded-cheat-kit-select/kit_select_feedback.png",
+      "sha256": "fa21267260538374c7a4fd238a20b59c7bfb9bb8e5e57eeb43ffe6a1f7fe9bbd"
+    },
+    "portable-kit-launch-native-seeded-use-wait/use_wait_stable.png": {
+      "path": "qa/runs/portable-kit-launch-native-seeded-use-wait/use_wait_stable.png",
+      "sha256": "8afda6c81f3fae2a23a38a6616a1bc5109dc7cae5f9ea1c1aee02e3576353cd5"
+    },
+    "portable-kit-launch-native-seeded-use-ack-a/field_after_a.png": {
+      "path": "qa/runs/portable-kit-launch-native-seeded-use-ack-a/field_after_a.png",
+      "sha256": "ac7739dbe351131835330925abe44672d4ac69c31e5cf4ba0641eb000454b84e"
+    },
+    "portable-kit-launch-native-seeded-second-pocket-correction/key_items_after_one_r.png": {
+      "path": "qa/runs/portable-kit-launch-native-seeded-second-pocket-correction/key_items_after_one_r.png",
+      "sha256": "14507e203f11f54c748551bd278624b04b8d22c6b9884264caf80cadb04c3d0b"
+    },
+    "portable-kit-launch-native-seeded-second-cheat-kit-select/second_kit_selected_feedback.png": {
+      "path": "qa/runs/portable-kit-launch-native-seeded-second-cheat-kit-select/second_kit_selected_feedback.png",
+      "sha256": "fa21267260538374c7a4fd238a20b59c7bfb9bb8e5e57eeb43ffe6a1f7fe9bbd"
+    },
+    "portable-kit-launch-native-seeded-second-use-wait/second_use_wait_stable.png": {
+      "path": "qa/runs/portable-kit-launch-native-seeded-second-use-wait/second_use_wait_stable.png",
+      "sha256": "33c87e645b0c63beda23097f8c86d932014c3c149b4516deb71aca95ffe3e1f2"
+    },
+    "portable-kit-launch-native-seeded-second-use-ack-b/second_field_after_b.png": {
+      "path": "qa/runs/portable-kit-launch-native-seeded-second-use-ack-b/second_field_after_b.png",
+      "sha256": "4ac1e515652d2303a52f7200187e14a2b3475eec570e9305b1e1e8d50c57b095"
+    }
+  },
+  "limits": [
+    "The portable script only sets volatile special variable 0x8007 to 0x5547, waits for A/B, releases movement, and ends; this is not the EV/IV editor.",
+    "The portable candidate was seeded from the separately saved Alpha2 DSV; it does not prove native acquisition on the probe candidate.",
+    "Party RAM snapshots are accepted only when every byte of every 236-byte record matches an exact even-byte encrypted/plain cipher boundary against the frozen DSV; records caught mid-transition are not semantically decoded or normalized.",
+    "The item screen exposes REGISTER, but item 118 has no fieldUseFunc callback for that path; REGISTER is unsupported and was not tested. Only USE was exercised.",
+    "No final production composition, GUI/menu integration, 113/114 callback regression, or portable post-use save/cold persistence was tested.",
+    "0x023D5000, 0x023D6000, and 0x023D7000 stayed byte-identical across the sampled runtime chain; 0x023D8000 has recorded menu/task scratch changes and is not claimed immutable.",
+    "Runner gameplay_acceptance remains NOT_ASSESSED; this report accepts only the explicit captured native item-use probe."
+  ]
+}

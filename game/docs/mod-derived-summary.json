@@ -1,0 +1,14 @@
+{
+  "scope": "493 original species; exact Plus/Drayano candidate",
+  "target_sha256": "fdb2fcabc4b51c4b98b0e4fcaf02740c81f32ede54c5a5bc0004d58c3133357e",
+  "components": {
+    "drayano_1_05": {"kind": "inherited", "story_resources_pending": 15},
+    "plus_1_2_3": {"kind": "pinned", "commit": "5b90a788ac3c7d1e4733b4d175a97811cc6745a3", "overlays_preserved": 129, "species_scope": 493},
+    "speedup": {"kind": "official_author_component", "guarded_arm9_bytes": 18, "runtime_pacing": "pending"},
+    "owned_tm_refill": {"kind": "project_owned", "fixture_tm_id_range": [328, 419], "quantity": 99, "teaching_ui": "pending"},
+    "owned_typechart_fix1": {"kind": "project_owned", "static_pairs_pass": 324, "static_pairs_total": 324, "corrected_ghost_interactions": 2, "live_battles": "pending"}
+  },
+  "move_trainer_crosscheck": {"plus_reused_move_records": 15, "explicit_trainer_references": 14, "full_coverage": false},
+  "official_spreadsheets": {"plus": "not found in official sources inspected", "speedup": "not found in official sources inspected"},
+  "excluded": ["HG Engine", "HeartGold Generations", "ROM sites", "unattributed community sheets"]
+}

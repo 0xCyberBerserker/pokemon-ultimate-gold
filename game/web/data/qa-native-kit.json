@@ -1,0 +1,91 @@
+{
+  "schema": "ultimate-gold-native-kit-qa/v1",
+  "status": "PASS_WITH_TRACEABILITY_LIMITATIONS",
+  "generated_at_utc": "2026-10-21T21:44:47.332559+00:00",
+  "acceptance_record": {
+    "path": "../../night-sprint/qa/kit-v3-acceptance.json",
+    "sha256": "5253b5eba10598c72b3be5603993327cc0600b5c0194e6b8674d69a866f3a705",
+    "assertions": {
+      "passed": 288,
+      "failed": 0,
+      "total": 288
+    }
+  },
+  "scope": "Guarded Rocket NPC/item-kit engineering QA. Synthetic inventory fixtures verify controlled edge cases, not organic story progression or release acceptance.",
+  "download_target_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+  "candidate_sha256": "25bfdc764457dc895bcca9d4cadf67c575b3309bdd671fd72892d3744efaf87f",
+  "candidate_published": false,
+  "current_runtime_files": {
+    "core": {
+      "path": "../../tools/usr/lib/libretro/desmume_libretro.so",
+      "sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    "runner": {
+      "path": "../../night-sprint/qa/headless_runner_kit_v3.py",
+      "sha256": "26b1b4c681cded1a18e12fc521b325314051b5b49782109cdfe96e0e9f62bf54"
+    },
+    "shared_runner_sha256": "26b1b4c681cded1a18e12fc521b325314051b5b49782109cdfe96e0e9f62bf54"
+  },
+  "cases": [
+    {
+      "id": "npc_gift_decline_repeat",
+      "result": "PASS",
+      "evidence_items": 10,
+      "scope": "Normal gift quantities are correct; decline preserves the starting bag; repeating the offer does not duplicate gifts."
+    },
+    {
+      "id": "full_key_pocket_rejection",
+      "result": "PASS",
+      "evidence_items": 4,
+      "scope": "A synthetic fixture of 60 unique valid key items excludes 114/118. Canonical storage is full before interaction; the no-code offer leaves all 60 unchanged and grants neither custom item."
+    },
+    {
+      "id": "one_free_slot_retry",
+      "result": "PASS",
+      "evidence_items": 7,
+      "scope": "A synthetic 59/60 bag receives item 114 in its last slot and withholds marker 118. After a separate slot is freed, a no-code retry grants 118 while preserving pre-owned quantities."
+    },
+    {
+      "id": "candy_healer_and_ordinary_candy",
+      "result": "PASS",
+      "evidence_items": 6,
+      "scope": "Party Healer restores status, HP, and PP. Marker 118 enables Rare Candy reuse; without the marker, ordinary Rare Candy is consumed."
+    },
+    {
+      "id": "tm_refill_and_hm_exclusion",
+      "result": "PASS",
+      "evidence_items": 4,
+      "scope": "Canonical and native readback: TM 328/329 change from 2/98 to 99/99, absent TM 330 stays 0, and HM 420 stays 1; no active codes."
+    },
+    {
+      "id": "battery_save_reload_and_reuse",
+      "result": "PASS",
+      "evidence_items": 10,
+      "scope": "A fresh process without state input or active codes loads the same battery save. Native inventory persists and Rare Candy remains reusable."
+    },
+    {
+      "id": "loaded_candidate_bytecode",
+      "result": "PASS",
+      "evidence_items": 2,
+      "scope": "The candidate script body is uniquely loaded and active in RAM and matches the candidate bytes; comparison result is 1."
+    }
+  ],
+  "traceability_limitations": {
+    "legacy_result_runs_missing_one_or_both_core_runner_hashes": 14,
+    "recorded_run_hashes_backfilled": false,
+    "report_level_hashes_not_retroactive": true,
+    "preserved_runner_snapshot": {
+      "path": "../../night-sprint/qa/headless_runner_kit_v3.py",
+      "sha256": "26b1b4c681cded1a18e12fc521b325314051b5b49782109cdfe96e0e9f62bf54",
+      "note": "Byte-identical acceptance instrument; this hash is not retroactively attributed to archived runs."
+    },
+    "input_state_hashes": "All 14 archived results without per-run core/runner hashes also lack a recorded input-state hash. The acceptance audit hashes available input files separately without backfilling those records. Newer battery reload runs intentionally have no state input."
+  },
+  "limits": [
+    "Synthetic inventory cases are controlled fixtures, not organic campaign progress.",
+    "Runner result PASS means emulation completed; gameplay acceptance comes from the independent assertions in the acceptance record.",
+    "The isolated candidate is unpublished and does not replace the accepted download target.",
+    "Full story progression, PC inventory, held berries in battle, Escape Rope in a cave, and physical controls remain outside this acceptance.",
+    "The EV/IV/Nature editor is a separate feasibility scope and is not implemented in this candidate."
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "schema": "ultimate-gold-item-acquisition-evidence/v1",
+  "target_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+  "entries": [
+    {
+      "kind": "npc_gift",
+      "item_id": 113,
+      "location_id": 60,
+      "scope": "native_exact_target_gift",
+      "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+      "screenshots": [
+        {
+          "path": "../assets/locations/tm-refill-gift-dialogue.png",
+          "sha256": "d372a7c802afd9adf02a8a04de5c358fb5693b84cac1aa086abf2b8601bd182b",
+          "alt": "Gift dialogue / Diálogo de regalo con el NPC de Pueblo Primavera"
+        }
+      ],
+      "report": {
+        "source": "docs/qa-native-tm.json",
+        "path": "../data/qa-native-tm.json",
+        "sha256": "22d60ba6b03d20b0a287fa4d83714dbcb01d2fc9c6ec509453d01a996afa3d30"
+      }
+    },
+    {
+      "kind": "prototype_location",
+      "shop_id": 4,
+      "location_id": 192,
+      "scope": "prototype_location",
+      "rom_sha256": "231a0a2fe3f873d0d369f6adbde6e6f69abe74e6d4bf9642fe1b1df8c8a7e514",
+      "screenshots": [
+        {
+          "path": "../assets/locations/goldenrod-dept-store-2f.png",
+          "sha256": "304e3700ef017a916a84f9b3d74f5eefce436e5a40528a74f96325cc49d7b641",
+          "alt": "Goldenrod Department Store second floor / Centro Comercial de Ciudad Trigal, segunda planta"
+        }
+      ],
+      "report": {
+        "source": "docs/qa-evolution-shop.json",
+        "path": "../data/qa-evolution-shop.json",
+        "sha256": "a776d68a97a71fd9900330b620a5739faa895dba1941f8b9bb7bc02bdc060e7b"
+      }
+    }
+  ],
+  "additional_targets": {
+    "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6": {
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "entries": [
+        {
+          "kind": "npc_gift",
+          "item_id": 113,
+          "location_id": 60,
+          "scope": "native_gift_runtime_only",
+          "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+          "screenshots": [
+            {
+              "path": "../assets/locations/alpha2-rocket-gift-offer.png",
+              "sha256": "53168ddfe98d5024a10f4374fd8ddf0149e499ab313921f1182654c1371e48ec",
+              "alt": "Native Alpha2 Rocket gift offer / Oferta de regalo nativo del Team Rocket en Alpha2"
+            }
+          ],
+          "report": {
+            "source": "docs/qa-alpha2-gift.json",
+            "source_sha256": "536089678104335b246edd63cb8f05b961932ff591840b3483f1dd2e266e1b69",
+            "path": "../data/qa-alpha2-gift.json",
+            "sha256": "536089678104335b246edd63cb8f05b961932ff591840b3483f1dd2e266e1b69"
+          },
+          "review": {
+            "source": "docs/qa-alpha2-gift-review.json",
+            "source_sha256": "89b877c54f29ad379e5b685eb945e432b6e3f2569068631129a0861850c25483",
+            "path": "../data/qa-alpha2-gift-review.json",
+            "sha256": "89b877c54f29ad379e5b685eb945e432b6e3f2569068631129a0861850c25483"
+          }
+        },
+        {
+          "kind": "npc_gift",
+          "item_id": 114,
+          "location_id": 60,
+          "scope": "native_gift_runtime_only",
+          "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+          "screenshots": [
+            {
+              "path": "../assets/locations/alpha2-rocket-gift-offer.png",
+              "sha256": "53168ddfe98d5024a10f4374fd8ddf0149e499ab313921f1182654c1371e48ec",
+              "alt": "Native Alpha2 Rocket gift offer / Oferta de regalo nativo del Team Rocket en Alpha2"
+            }
+          ],
+          "report": {
+            "source": "docs/qa-alpha2-gift.json",
+            "source_sha256": "536089678104335b246edd63cb8f05b961932ff591840b3483f1dd2e266e1b69",
+            "path": "../data/qa-alpha2-gift.json",
+            "sha256": "536089678104335b246edd63cb8f05b961932ff591840b3483f1dd2e266e1b69"
+          },
+          "review": {
+            "source": "docs/qa-alpha2-gift-review.json",
+            "source_sha256": "89b877c54f29ad379e5b685eb945e432b6e3f2569068631129a0861850c25483",
+            "path": "../data/qa-alpha2-gift-review.json",
+            "sha256": "89b877c54f29ad379e5b685eb945e432b6e3f2569068631129a0861850c25483"
+          }
+        },
+        {
+          "kind": "npc_gift",
+          "item_id": 118,
+          "location_id": 60,
+          "scope": "native_gift_runtime_only",
+          "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+          "screenshots": [
+            {
+              "path": "../assets/locations/alpha2-rocket-gift-offer.png",
+              "sha256": "53168ddfe98d5024a10f4374fd8ddf0149e499ab313921f1182654c1371e48ec",
+              "alt": "Native Alpha2 Rocket gift offer / Oferta de regalo nativo del Team Rocket en Alpha2"
+            }
+          ],
+          "report": {
+            "source": "docs/qa-alpha2-gift.json",
+            "source_sha256": "536089678104335b246edd63cb8f05b961932ff591840b3483f1dd2e266e1b69",
+            "path": "../data/qa-alpha2-gift.json",
+            "sha256": "536089678104335b246edd63cb8f05b961932ff591840b3483f1dd2e266e1b69"
+          },
+          "review": {
+            "source": "docs/qa-alpha2-gift-review.json",
+            "source_sha256": "89b877c54f29ad379e5b685eb945e432b6e3f2569068631129a0861850c25483",
+            "path": "../data/qa-alpha2-gift-review.json",
+            "sha256": "89b877c54f29ad379e5b685eb945e432b6e3f2569068631129a0861850c25483"
+          }
+        },
+        {
+          "kind": "native_shop_purchase",
+          "item_id": 81,
+          "shop_id": 4,
+          "location_id": 192,
+          "scope": "native_purchase_save_cold_bounded",
+          "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+          "price": 2100,
+          "screenshots": [
+            {
+              "path": "../assets/locations/alpha2-evolution-shop.png",
+              "sha256": "12ecfe01f1cf1fa368aa7475aebfecd12cd47906492f719b2e7f3aa2d897dbe0",
+              "alt": "Moon Stone purchase confirmation at Goldenrod Department Store / Confirmación de compra de Piedra Lunar en Ciudad Trigal"
+            }
+          ],
+          "report": {
+            "source": "docs/qa-alpha2-shop.json",
+            "source_sha256": "939507da49726aad09c452692cf421e8445a7f05f5c36b0848f1823fdeaa2cc6",
+            "path": "../data/qa-alpha2-shop-review.json",
+            "sha256": "3075ccf74f99678336c2026ccfd57c04203f722bcda7aeae0809088a0d424029"
+          },
+          "review": {
+            "source": "docs/qa-alpha2-shop-review.json",
+            "source_sha256": "3075ccf74f99678336c2026ccfd57c04203f722bcda7aeae0809088a0d424029",
+            "path": "../data/qa-alpha2-shop-review.json",
+            "sha256": "3075ccf74f99678336c2026ccfd57c04203f722bcda7aeae0809088a0d424029"
+          }
+        },
+        {
+          "kind": "native_shop_purchase",
+          "item_id": 467,
+          "shop_id": 4,
+          "location_id": 192,
+          "scope": "native_purchase_save_cold_bounded",
+          "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+          "price": 3500,
+          "screenshots": [],
+          "report": {
+            "source": "docs/qa-alpha2-shop.json",
+            "source_sha256": "939507da49726aad09c452692cf421e8445a7f05f5c36b0848f1823fdeaa2cc6",
+            "path": "../data/qa-alpha2-shop-review.json",
+            "sha256": "3075ccf74f99678336c2026ccfd57c04203f722bcda7aeae0809088a0d424029"
+          },
+          "review": {
+            "source": "docs/qa-alpha2-shop-review.json",
+            "source_sha256": "3075ccf74f99678336c2026ccfd57c04203f722bcda7aeae0809088a0d424029",
+            "path": "../data/qa-alpha2-shop-review.json",
+            "sha256": "3075ccf74f99678336c2026ccfd57c04203f722bcda7aeae0809088a0d424029"
+          }
+        }
+      ],
+      "fixed_shop_stock_report": {
+        "path": "docs/shop-locations-alpha2.json",
+        "sha256": "f2dfd66a494c262d80af5b2781439b2f7df093dfe4cccdec36573ecca433225d"
+      }
+    }
+  }
+}

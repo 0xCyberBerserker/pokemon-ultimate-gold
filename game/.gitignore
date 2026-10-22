@@ -1,0 +1,15 @@
+*.nds
+*.NDS
+*.gba
+*.GBA
+*.sav
+*.dsv
+*.state
+*.states
+*.zip
+*.7z
+*.rar
+*.tmp
+*.part
+__pycache__/
+.pytest_cache/

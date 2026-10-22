@@ -1,0 +1,78 @@
+{
+  "schema": "portable-stat-editor-menu-uimode-independent-review/v1",
+  "verdict": "PASS_REPRODUCIBLE_BOUNDED_PATH_WITH_VISIBLE_PREVIEW_FAIL",
+  "review_type": "offline_read_only",
+  "acceptance": {
+    "auditor_path": "qa/portable_stat_editor_menu_uimode_acceptance.py",
+    "auditor_sha256": "35c919b50e9fb063ded125c36450590a1c7828191a1ebf98d68a1d44df34d0f3",
+    "frozen_report_path": "qa/runs/portable-stat-editor-menu-uimode-final-review/acceptance.json",
+    "frozen_report_sha256": "12dc6a0ac7d270622626e3078865d8f4813845b2e7cfe1c59bb31f53cb65b9b3",
+    "offline_replay": "PASS",
+    "replayed_json_equals_frozen_report": true,
+    "runs_verified": 18,
+    "status": "PARTIAL"
+  },
+  "provenance": {
+    "rom_sha256": "5a61083689668f3efcf46c4821b77b336875af5237a36f9985eb4cc159bd7d44",
+    "runner_path": "qa/headless_runner_uimode.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "runner_no_cheat_review_path": "internal/stat-editor-research/headless-general-no-cheat-runner-review.json",
+    "runner_no_cheat_review_sha256": "bc28b018cf58d3435740f5d20c8fb8393a57789fd41ae9948ff206bc60f2cf42",
+    "runner_no_cheat_review_verdict": "PASS_FOR_DECLARED_EMPTY_CHEAT_BRANCH_ONLY",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "cheats": [],
+    "seed_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "seed_dsv_counter": 10,
+    "seed_dsv_crc16": 17186
+  },
+  "verified": {
+    "state_chain_and_physical_state_inputs": "PASS",
+    "result_ram_and_input_script_hashes": "PASS",
+    "battery_snapshots_bound_to_results": "PASS",
+    "bag_open_attempt": "EXCLUDED_NAVIGATION_POKEGEAR",
+    "corrected_bag_route": "PASS",
+    "family_menu_ui_mode_state": [
+      3,
+      1
+    ],
+    "preview_runtime_vars": {
+      "0x8004": 0,
+      "0x8005": 16,
+      "0x8006": 65535,
+      "0x8008": 15,
+      "0x8009": 16,
+      "0x800C": 0
+    },
+    "no_path_runtime_vars": {
+      "0x8004": 0,
+      "0x8005": 16,
+      "0x8006": 1,
+      "0x8008": 15,
+      "0x8009": 16,
+      "0x800C": 61166
+    },
+    "field_exit_ui_mode_state": [
+      0,
+      1
+    ],
+    "party_strict_cipher_boundary_against_seed_dsv": "PASS",
+    "save_array3_and_canonical_bag": "PASS",
+    "key_item_118_quantity": 1,
+    "reserve_sections_0x023D5000_6000_7000": "MATCH_ROM_ALL_RUNS",
+    "visible_current_proposed_text": "FAIL_GARBLED_GLYPHS"
+  },
+  "negative_control": {
+    "case": "wrong_expected_state_hash_for_bag_correction",
+    "result": "REJECTED",
+    "error": "state chain mismatch: portable-stat-editor-menu-uimode-bag-correction"
+  },
+  "not_tested": [
+    "Yes/write branch",
+    "save and cold persistence after editor use"
+  ],
+  "limits": [
+    "Backend values 15→16 do not establish a readable on-screen preview.",
+    "Runner equivalence is limited to empty-cheat runs.",
+    "The Pokégear-opening navigation attempt is excluded from the accepted route."
+  ]
+}

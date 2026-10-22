@@ -1,0 +1,787 @@
+{
+  "status": "VERIFIED_BOUNDED_NATIVE_REPEAT_IV10_SAVE_COLD",
+  "gameplay_acceptance": "NOT_ASSESSED",
+  "rom_sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a",
+  "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+  "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+  "once_wrapper_sha256": "88d9254e8291486e4c78d2585976497d9ad9a69e224179b411aedbb55c959181",
+  "state_chain": [
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-confirm10",
+      "result_sha256": "c7417870f27748af979a16f0cc420bc2e5d15f5cbd1efbde9d1040d471757d18",
+      "input_sha256": "8b5e302397d3a7b6ecf7e0b42edb0cd49fec3c77957f1e315b0cafc423105694",
+      "state_in_sha256": "ef43b100ae1023287d78a8447f8829d578613a818ec8a15a6ef93a8afb895bf0",
+      "state_out_sha256": "9f49ce1d44c717609bb67a998ce47d45a9d13bd56f7423f0fcc03d335a9979c6",
+      "ram_sha256": "b92a17144a5ad901c339761f4474253ab4b6f51cf61b0095b2c85e41b5af4568",
+      "battery_sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db",
+      "battery_sidecar_sha256": "d7a82e8dedf4170d24de578779fe7ce7ea22848a68b1812d705fa42fa846837c",
+      "state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-plus5-repeat-textfix-preview-five-to-ten/preview-5-to-10.state",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-confirm10/after-repeat.state"
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-ack-updated",
+      "result_sha256": "0e123c429edbda38d19329b2ddc4092e1df9b2255863c940640508de24988e7b",
+      "input_sha256": "38c29ea9dbe59879e7f68c424a0021491cf8089fa7502563589312110c4e2163",
+      "state_in_sha256": "9f49ce1d44c717609bb67a998ce47d45a9d13bd56f7423f0fcc03d335a9979c6",
+      "state_out_sha256": "c8a9d734657e1e9fb26866588f9c82e177b47b360bdcbb2ef15f13d531fcbb64",
+      "ram_sha256": "043f5a2fdfc2107854c11a09520badc1aa61e8cd5ed6bdb7df1edc35ea009eb5",
+      "battery_sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db",
+      "battery_sidecar_sha256": "50211b102fdddcf067d7042da51db44a8d549b67925e547a0874238c7a087fb2",
+      "state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-confirm10/after-repeat.state",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-ack-updated/ack-updated.state"
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-ack-choice",
+      "result_sha256": "8b8c48dd05234aae8a4b1df11f5def014187d679ad056f6e400534876cf386f9",
+      "input_sha256": "9a7c3882aa9e2a456093a71f0cc2fd85cd6ba74b2f4ae37b1782ef4109853194",
+      "state_in_sha256": "c8a9d734657e1e9fb26866588f9c82e177b47b360bdcbb2ef15f13d531fcbb64",
+      "state_out_sha256": "4fc6e7d84139d874f4b74a781c45b6e6066c93727bb8900ebfe84fe2bf3a6e76",
+      "ram_sha256": "f8b12c895238c9f32f5c29a9e45085f75dc98cc75f07be2b074bc9c1f2b9f075",
+      "battery_sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db",
+      "battery_sidecar_sha256": "26cb84a4fbc00857bb41cef93f9e84ab8bafb6f6250204d151c04329c22f6b6a",
+      "state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-ack-updated/ack-updated.state",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-ack-choice/choice.state"
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-exit-select",
+      "result_sha256": "7755e0a55b44169efecab52e88c264f5e7ae8c952da98e94035170446d3e204b",
+      "input_sha256": "b63df01e71a610a78ef2c7277851f444b1102b62e3f0897081cfdc312e829dd7",
+      "state_in_sha256": "4fc6e7d84139d874f4b74a781c45b6e6066c93727bb8900ebfe84fe2bf3a6e76",
+      "state_out_sha256": "c4a3730b53c942d1d991e3e77e881e56ba97cc06244f5b33e375a644babbf367",
+      "ram_sha256": "2b87521bd9944d6b9c865142e53358a5ee25ed7960a2374d0cecfeb453b6d366",
+      "battery_sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db",
+      "battery_sidecar_sha256": "ffa9ed9a5310ce70e29eb1fb56f0152a977ccc02d1d762984b67cb24337ad740",
+      "state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-ack-choice/choice.state",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-exit-select/exit-select.state"
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-exit-confirm",
+      "result_sha256": "a05861e09677c4a92094525af4c17a72a5c559d4635ae10f25cc1453c55fbccd",
+      "input_sha256": "505a71957d37b89a04c940907c2235538da7b9d377ce16209b7cd2568d056e46",
+      "state_in_sha256": "c4a3730b53c942d1d991e3e77e881e56ba97cc06244f5b33e375a644babbf367",
+      "state_out_sha256": "ff18bc77195893aaa9dd6ca46c186679c5be074663290575782a71a30342e426",
+      "ram_sha256": "65c5a01eab809b868e3b0c9be5d495f43c10fc51eab5f83fd783d5bc96efc9c9",
+      "battery_sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db",
+      "battery_sidecar_sha256": "2a631cafcc115434540b42566029357749d422c65499ab668649700a5eb0d162",
+      "state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-exit-select/exit-select.state",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-exit-confirm/exit-confirm.state"
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-native-save",
+      "result_sha256": "dd0d9cec2e83940b9518f069b0153c0255bb891611c6685039c00c0a7be2f8dc",
+      "input_sha256": "2b7dfbbf354ce5a00ad0c19b429aa0300b65635ca3ff6d3297bd66dd4dc3a645",
+      "state_in_sha256": "ff18bc77195893aaa9dd6ca46c186679c5be074663290575782a71a30342e426",
+      "state_out_sha256": "e88b95c6b812f5eba389be345189ec69f480f80a5b1c23f6985a91a2c84993c0",
+      "ram_sha256": "3faf9626b45b44527e78f4024d11bf657d039ba19dbccc5cf290c718afcc3e0f",
+      "battery_sha256": "bce1dd052e8aa1a43f6e981a79b17b2e2576228e87f8230ed1d086c99a4417ca",
+      "battery_sidecar_sha256": "ded1a339a2436dc7856d120f78857a98ddee319de051fa52b9bc6cc3462dbd92",
+      "state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-exit-confirm/exit-confirm.state",
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-native-save/save-complete.state"
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-cold",
+      "result_sha256": "e70ab93427946f3551dc40d921afe498bf91b2c7b85995449f078fc03e5408e0",
+      "input_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_in_sha256": null,
+      "state_out_sha256": "bfba4b59ff50c309f6c7b9b35996224d132e035f9d447e0a00397f3276d38e4f",
+      "ram_sha256": "bbcf6e963a543adaf5c8d14c3bc97e6e7573e167b03fa88aedb4c47da7b44dd6",
+      "battery_sha256": "bce1dd052e8aa1a43f6e981a79b17b2e2576228e87f8230ed1d086c99a4417ca",
+      "battery_sidecar_sha256": "d50ea3ab719203c757f68fe142c05a5adbdf8d06e3ad3c7d2a906a2b1334212d",
+      "state_in": null,
+      "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-iv-repeat-clean-cold/cold.state"
+    }
+  ],
+  "preconfirm_parent": {
+    "state": "qa/runs/portable-stat-editor-iv-plus5-repeat-textfix-preview-five-to-ten/preview-5-to-10.state",
+    "state_sha256": "ef43b100ae1023287d78a8447f8829d578613a818ec8a15a6ef93a8afb895bf0",
+    "ram_sha256": "d644bb69436bdaed1d8eed9f7f4ba1d1177cf960a26b69ff435c5b1dde452af1",
+    "ram_target_iv_word": "0x00000005",
+    "battery_sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db"
+  },
+  "iv_result": {
+    "party_slot": 0,
+    "species_id": 35,
+    "seed_ivs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "intermediate_hp_iv": 5,
+    "final_ivs": [
+      10,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pid_unchanged": true,
+    "other_party_slots_byte_exact": true,
+    "party_tail_unchanged": true,
+    "seed_record_sha256": "619fae5961ac21282094683ece814b3103a800a5fd8cc8fb4872ad7cfb39c3de",
+    "final_record_sha256": "6c8d47c02081f881cf00e38dda009266db3351329e8a7a411666c126bd2282aa",
+    "source_derived_intermediate_record": {
+      "pid": 3808650210,
+      "flags": 0,
+      "hp_iv_before_from_seed": 0,
+      "hp_iv_expected": 5,
+      "iv_word_before": "0x00000000",
+      "iv_word_expected": "0x00000005",
+      "expected_record_sha256": "468565705d453cf492a04105a91c24c533f28e40867015fa556c79b1d5886725"
+    },
+    "source_derived_final_record": {
+      "pid": 3808650210,
+      "flags": 0,
+      "hp_iv_before_from_seed": 0,
+      "hp_iv_expected": 10,
+      "iv_word_before": "0x00000000",
+      "iv_word_expected": "0x0000000A",
+      "expected_record_sha256": "6c8d47c02081f881cf00e38dda009266db3351329e8a7a411666c126bd2282aa"
+    },
+    "zero_reference": {
+      "pid": 3808650210,
+      "flags": 0,
+      "hp_iv_before_from_seed": 0,
+      "hp_iv_expected": 0,
+      "iv_word_before": "0x00000000",
+      "iv_word_expected": "0x00000000",
+      "expected_record_sha256": "619fae5961ac21282094683ece814b3103a800a5fd8cc8fb4872ad7cfb39c3de"
+    }
+  },
+  "native_save": {
+    "seed_dsv_sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db",
+    "saved_dsv_sha256": "bce1dd052e8aa1a43f6e981a79b17b2e2576228e87f8230ed1d086c99a4417ca",
+    "cold_dsv_sha256": "bce1dd052e8aa1a43f6e981a79b17b2e2576228e87f8230ed1d086c99a4417ca",
+    "main_counter_transition": [
+      12,
+      13,
+      13
+    ],
+    "both_slots_crc_valid": true,
+    "bag_array_byte_exact": true,
+    "changed_dsv_byte_count": 164,
+    "changed_dsv_range_count": 23,
+    "unmapped_changes_attribution": "UNATTRIBUTED; only slot0 HP-IV field/record checksum is semantically attributed"
+  },
+  "runtime_checkpoints": [
+    {
+      "run": "portable-stat-editor-iv-plus5-repeat-textfix-preview-five-to-ten",
+      "party_sha256": "064428331a983bb7a16c41464e93b05c62801ac79b3466f02b68284d7e6191d8",
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "party_matches_expected_cipher_boundaries": true,
+      "record_phases": [
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "468565705d453cf492a04105a91c24c533f28e40867015fa556c79b1d5886725"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+        }
+      ],
+      "ui_mode": {
+        "field_system": "0x022a0208",
+        "task": "0x023bcba4",
+        "task_data": "0x02356be0",
+        "mode": 3,
+        "state": 1,
+        "mode_state_bytes_hex": "0301"
+      }
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-confirm10",
+      "party_sha256": "92b60d11458df2b8de0b6af10f6f651216523177a54e6973da0b970b41e4d64f",
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "party_matches_expected_cipher_boundaries": true,
+      "record_phases": [
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "6c8d47c02081f881cf00e38dda009266db3351329e8a7a411666c126bd2282aa"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+        }
+      ],
+      "ui_mode": {
+        "field_system": "0x022a0208",
+        "task": "0x023bcba4",
+        "task_data": "0x02356be0",
+        "mode": 3,
+        "state": 1,
+        "mode_state_bytes_hex": "0301"
+      }
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-ack-updated",
+      "party_sha256": "92b60d11458df2b8de0b6af10f6f651216523177a54e6973da0b970b41e4d64f",
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "party_matches_expected_cipher_boundaries": true,
+      "record_phases": [
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "6c8d47c02081f881cf00e38dda009266db3351329e8a7a411666c126bd2282aa"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+        }
+      ],
+      "ui_mode": {
+        "field_system": "0x022a0208",
+        "task": "0x023bcba4",
+        "task_data": "0x02356be0",
+        "mode": 3,
+        "state": 1,
+        "mode_state_bytes_hex": "0301"
+      }
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-ack-choice",
+      "party_sha256": "92b60d11458df2b8de0b6af10f6f651216523177a54e6973da0b970b41e4d64f",
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "party_matches_expected_cipher_boundaries": true,
+      "record_phases": [
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "6c8d47c02081f881cf00e38dda009266db3351329e8a7a411666c126bd2282aa"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+        }
+      ],
+      "ui_mode": {
+        "field_system": "0x022a0208",
+        "task": "0x023bcba4",
+        "task_data": "0x02356be0",
+        "mode": 3,
+        "state": 1,
+        "mode_state_bytes_hex": "0301"
+      }
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-exit-select",
+      "party_sha256": "92b60d11458df2b8de0b6af10f6f651216523177a54e6973da0b970b41e4d64f",
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "party_matches_expected_cipher_boundaries": true,
+      "record_phases": [
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "6c8d47c02081f881cf00e38dda009266db3351329e8a7a411666c126bd2282aa"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+        }
+      ],
+      "ui_mode": {
+        "field_system": "0x022a0208",
+        "task": "0x023bcba4",
+        "task_data": "0x02356be0",
+        "mode": 3,
+        "state": 1,
+        "mode_state_bytes_hex": "0301"
+      }
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-exit-confirm",
+      "party_sha256": "c37653a59093b24df90c201f7cec5b08ca0c23a389082319c96a7051c2e5ee55",
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "party_matches_expected_cipher_boundaries": true,
+      "record_phases": [
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "6c8d47c02081f881cf00e38dda009266db3351329e8a7a411666c126bd2282aa"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 58
+          },
+          "tail_boundary": {
+            "mode": "plain_suffix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+        }
+      ],
+      "ui_mode": {
+        "field_system": "0x022a0208",
+        "task": "0x023bcba4",
+        "task_data": "0x02356be0",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      }
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-native-save",
+      "party_sha256": "f312b1b45aea372593f72834ea10651ed8a97da0bba43a4170a86e35d0f10d82",
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "party_matches_expected_cipher_boundaries": true,
+      "record_phases": [
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "6c8d47c02081f881cf00e38dda009266db3351329e8a7a411666c126bd2282aa"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_suffix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_suffix",
+            "split_bytes": 66
+          },
+          "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+        }
+      ],
+      "ui_mode": {
+        "field_system": "0x022a0208",
+        "task": "0x023bcba4",
+        "task_data": "0x02356be0",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      }
+    },
+    {
+      "run": "portable-stat-editor-iv-repeat-clean-cold",
+      "party_sha256": "6d09bea49d88fa42dc30310cd0229b1da83fb4c868677dbe11fd7c5599986720",
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "party_matches_expected_cipher_boundaries": true,
+      "record_phases": [
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "6c8d47c02081f881cf00e38dda009266db3351329e8a7a411666c126bd2282aa"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "tail_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "header_exact": true,
+          "box_boundary": {
+            "mode": "plain_prefix",
+            "split_bytes": 10
+          },
+          "tail_boundary": {
+            "mode": "plain_suffix",
+            "split_bytes": 0
+          },
+          "normalized_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+        }
+      ],
+      "ui_mode": {
+        "field_system": "0x022a0210",
+        "task": "0x023bcc70",
+        "task_data": "0x02356c00",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      }
+    }
+  ],
+  "reserve_ranges": [
+    {
+      "address": "0x023D5000",
+      "size": 4096,
+      "rom_section_sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+      "checkpoints": [
+        {
+          "run": "portable-stat-editor-iv-plus5-repeat-textfix-preview-five-to-ten",
+          "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-confirm10",
+          "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-ack-updated",
+          "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-ack-choice",
+          "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-exit-select",
+          "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-exit-confirm",
+          "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-native-save",
+          "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-cold",
+          "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "matches_exact_ROM_section": true
+        }
+      ]
+    },
+    {
+      "address": "0x023D6000",
+      "size": 4096,
+      "rom_section_sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+      "checkpoints": [
+        {
+          "run": "portable-stat-editor-iv-plus5-repeat-textfix-preview-five-to-ten",
+          "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-confirm10",
+          "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-ack-updated",
+          "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-ack-choice",
+          "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-exit-select",
+          "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-exit-confirm",
+          "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-native-save",
+          "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-cold",
+          "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "matches_exact_ROM_section": true
+        }
+      ]
+    },
+    {
+      "address": "0x023D7000",
+      "size": 4096,
+      "rom_section_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+      "checkpoints": [
+        {
+          "run": "portable-stat-editor-iv-plus5-repeat-textfix-preview-five-to-ten",
+          "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-confirm10",
+          "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-ack-updated",
+          "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-ack-choice",
+          "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-exit-select",
+          "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-exit-confirm",
+          "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-native-save",
+          "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "matches_exact_ROM_section": true
+        },
+        {
+          "run": "portable-stat-editor-iv-repeat-clean-cold",
+          "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "matches_exact_ROM_section": true
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "qa/runs/portable-stat-editor-iv-plus5-repeat-textfix-preview-five-to-ten/preview_5_to_10.png",
+      "sha256": "66d5b88e0d1180049e2124c8ac291e668eef686ea5fa58f3cbe27f076967d4fa",
+      "visual_note": "Prompt viewed: current 5, proposed 10."
+    },
+    {
+      "path": "qa/runs/portable-stat-editor-iv-repeat-clean-ack-updated/after_ack_updated.png",
+      "sha256": "2cdfcf34d3e633959310ca4944fae2d1bc22048b655a69ceb27636766429cfc5",
+      "visual_note": "Acknowledgement offers Repeat or Exit."
+    },
+    {
+      "path": "qa/runs/portable-stat-editor-iv-repeat-clean-ack-choice/after_ack_choice.png",
+      "sha256": "6d2e5feba3e3e96eb159bc1df22b8363564b60546117ecd6a065a17835deb2e9",
+      "visual_note": "Repeat is highlighted; no second increment is triggered."
+    },
+    {
+      "path": "qa/runs/portable-stat-editor-iv-repeat-clean-exit-select/after_exit_select.png",
+      "sha256": "367798cf5eca45900afd07f63ea96741e7bffffd663a98f545fa90607661cca3",
+      "visual_note": "Exit is highlighted."
+    },
+    {
+      "path": "qa/runs/portable-stat-editor-iv-repeat-clean-exit-confirm/after_exit_confirm.png",
+      "sha256": "659186312deffc151eb5956d1b188f1f955622e45dc237770d7087278192b68f",
+      "visual_note": "Field returned with the touchscreen menu open."
+    },
+    {
+      "path": "qa/runs/portable-stat-editor-iv-repeat-clean-native-save/save_confirmation.png",
+      "sha256": "1190ea26ca3b8b9cbbc4d8cd0d3a919f55c5b2bca3d55ef6dc539c99987e13a1",
+      "visual_note": "Native save confirmation."
+    },
+    {
+      "path": "qa/runs/portable-stat-editor-iv-repeat-clean-native-save/overwrite_confirmation.png",
+      "sha256": "1f58df974d048457357f86d6acf07e2c6b20013746d7abc75e8420f3caad876e",
+      "visual_note": "Native overwrite confirmation."
+    },
+    {
+      "path": "qa/runs/portable-stat-editor-iv-repeat-clean-native-save/native_save_complete.png",
+      "sha256": "7f6c7a099f39fb917651b3092e89e3c75d25d69659d785186bc99eb7b906ffb9",
+      "visual_note": "Field/menu visible after native save."
+    },
+    {
+      "path": "qa/runs/portable-stat-editor-iv-repeat-clean-cold/cold_continue_menu.png",
+      "sha256": "30fcd8247bd8a3a11984b174cced5d2e3f706e2433897f5c9e3f36fd9f469731",
+      "visual_note": "Continue selected on fresh cold load."
+    },
+    {
+      "path": "qa/runs/portable-stat-editor-iv-repeat-clean-cold/cold_final.png",
+      "sha256": "e0103c7fddf168139c8b1e3926a84bd536ad542d7afb015e50f74541bbcf5097",
+      "visual_note": "Field visible after cold load."
+    }
+  ],
+  "excluded_duplicate": {
+    "path": "qa/runs/portable-stat-editor-iv-plus5-repeat-textfix-confirm-ten/duplicate-run-note.json",
+    "sha256": "90b9adf3176121bbe3cf4a97a342853ff41c157428d9cd62108117a1452d7be4",
+    "status": "EXCLUDED_OVERWRITTEN_FORK"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema": "nature-field114-compiled-map/v1",
+  "status": "PARTY_GETTER_SETTER_MAPPED_MASK_OWNERSHIP_UNPROVEN",
+  "scope": "Offline ARM9 inspection only; no ROM, code, save, or runtime mutation.",
+  "target": {
+    "rom_sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a",
+    "rom_path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-textfix/portable-stat-editor-menu-textfix-fix6a.nds",
+    "arm9_ram_base": "0x02000000",
+    "arm9_decompressed_size": 1173768,
+    "arm9_sha256": "ac8bef02dff0bc055b184cb84f7ce21bed6f89636b1c8725a546f424b179bbdd"
+  },
+  "comparators": [
+    {
+      "role": "clean Plus 1.2.3 ROM",
+      "path": "@HOME@/Games/Sacred-Gold/Pokemon-Sacred-Gold-Plus-1.2.3.nds",
+      "rom_sha256": "05518fbab1d27b87a6ef7081b3d16661e4e163e44eca1546a632370b21f1d4b9",
+      "arm9_size": 1161444,
+      "arm9_sha256": "7fbd679de6939406e30a4d7c56073a719f123938a2792cb0238fa97a80cc76e2"
+    },
+    {
+      "role": "pinned Plus-derived FIX6a owned-HM base",
+      "path": "@HOME@/Games/Sacred-Gold/experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "arm9_size": 1165552,
+      "arm9_sha256": "b4502d070994cf04209344780391e8e26ee5ba8677dcac821ebf50430619d80b"
+    },
+    {
+      "role": "immediate textfix parent",
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-uimode/portable-stat-editor-menu-uimode-fix6a.nds",
+      "rom_sha256": "5a61083689668f3efcf46c4821b77b336875af5237a36f9985eb4cc159bd7d44",
+      "arm9_size": 1173768,
+      "arm9_sha256": "ac8bef02dff0bc055b184cb84f7ce21bed6f89636b1c8725a546f424b179bbdd"
+    }
+  ],
+  "extraction_and_tools": {
+    "method": "Read ARM9 with existing ndspy NintendoDSRom API and decompressed ARM9 buffer. Temporary ELF wrapper was used only to disassemble selected raw ARM9 addresses with the installed LLVM objcopy/objdump; no new parser or ROM write was made.",
+    "python_runtime": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/hg-engine/.venv/bin/python",
+    "disassembler": "llvm-objdump 23.1.1",
+    "target_regions_match_all_comparators": true,
+    "whole_arm9_comparison": "The target and immediate parent ARM9 buffers are identical. Clean Plus/base ARM9 buffers differ in size and whole-buffer hash, but all listed getter/setter wrapper, dispatch, table-entry and field-114 case ranges are byte-identical across all four ROMs."
+  },
+  "field114_target_mapping": {
+    "party_getter": {
+      "symbol_address_thumb": "0x0206E541",
+      "wrapper_range": ["0x0206E540", "0x0206E5B8"],
+      "wrapper_bytes": 120,
+      "wrapper_sha256": "7d88f5974d9ca615e5602e1e9b89a594f6fc8e78d4c36cf5660f7cc9f12f02b0",
+      "dispatch_range": ["0x0206E6A0", "0x0206EC3C"],
+      "dispatch_bytes": 1436,
+      "dispatch_sha256": "c244a260160d3b072b7f0ce741a3cbf900cde393c55d152305c88132a67eb293",
+      "table": {
+        "range_start": "0x0206E6F6",
+        "field_min": 0,
+        "field_max": 187,
+        "field_id": 114,
+        "entry_address": "0x0206E7DA",
+        "entry_arm9_offset": "0x0006E7DA",
+        "entry_bytes_little_endian": "60 03",
+        "signed_entry": "0x0360",
+        "dispatch_pc_base": "0x0206E6F8",
+        "resolved_case_address": "0x0206EA58",
+        "entry_sha256": "07060149296c18b5684056facdb3e0172823fde3a737f2446b86d8b85cc6f1ba"
+      },
+      "case": {
+        "address": "0x0206EA58",
+        "arm9_offset": "0x0006EA58",
+        "bytes": "74 8B EC E0",
+        "sha256": "96f62c373121cfce96fea38593c623ed4dfbc085be8d42698ca5a171fe925f35",
+        "instructions": ["ldrh r4, [r6, #0x1A]", "b 0x0206EC36"],
+        "block_resolution": "The generic dispatcher obtains substructure index 1 into r6 before the field switch; its source layout identifies substructure index 1 as PokemonDataBlockB.",
+        "effect": "Returns the 16-bit word at PokemonDataBlockB+0x1A."
+      }
+    },
+    "party_setter": {
+      "symbol_address_thumb": "0x0206EC41",
+      "wrapper_range": ["0x0206EC40", "0x0206ECD0"],
+      "wrapper_bytes": 144,
+      "wrapper_sha256": "365880ef636701cab999ff69420b96e656e9b20d135d4b22e6e4c2881ae0a2e5",
+      "dispatch_range": ["0x0206EDE8", "0x0206F554"],
+      "dispatch_bytes": 1900,
+      "dispatch_sha256": "3184cb1601168f09ded92e33ff1144ceb11cd1cb5004d3a5d847dbf84afbd33a",
+      "table": {
+        "range_start": "0x0206EE3C",
+        "field_min": 0,
+        "field_max": 187,
+        "field_id": 114,
+        "entry_address": "0x0206EF20",
+        "entry_arm9_offset": "0x0006EF20",
+        "entry_bytes_little_endian": "F6 03",
+        "signed_entry": "0x03F6",
+        "dispatch_pc_base": "0x0206EE3E",
+        "resolved_case_address": "0x0206F234",
+        "entry_sha256": "2805951c6f5b178377fd5133e0017c56dc851c56cadd937725ff0689bb6e171d"
+      },
+      "case": {
+        "address": "0x0206F234",
+        "arm9_offset": "0x0006F234",
+        "bytes": "20 88 14 B0 68 83",
+        "sha256": "1d666926db12f8f5abb91fbae48b63b952f1fa7f043251da09f327bda7e7f722",
+        "instructions": ["ldrh r0, [r4]", "add sp, #0x50", "strh r0, [r5, #0x1A]"],
+        "block_resolution": "The generic dispatcher obtains substructure index 1 into r5 before the field switch; its source layout identifies substructure index 1 as PokemonDataBlockB.",
+        "effect": "Writes the supplied 16-bit value directly to PokemonDataBlockB+0x1A; the case does not mask, validate, or preserve subfields itself."
+      }
+    },
+    "comparison_hashes": {
+      "all_ranges_equal_across_clean_plus_target_base_parent_and_target": true,
+      "hashes_are_shared_by_all_four": true
+    }
+  },
+  "box_helpers": {
+    "target_internal_helpers": {
+      "getter_symbol": "GetBoxMonDataInternal",
+      "getter_address": "0x0206E6A0",
+      "getter_resolution": "Mapped from the Party GetMonDataInternal default call at 0x0206E58E and the four substructure pointer loads plus field switch matching pinned PokeHeartGold pokemon.c:481-488.",
+      "setter_symbol": "SetBoxMonDataInternal",
+      "setter_address": "0x0206EDE8",
+      "setter_resolution": "Mapped from the Party SetMonDataInternal default call at 0x0206EDC0 and the four substructure pointer loads plus field switch matching pinned PokeHeartGold pokemon.c:972-988.",
+      "field114_case_addresses": ["0x0206EA58", "0x0206F234"]
+    },
+    "reference_mapping": "Pinned retail PokeHeartGold source maps GetBoxMonData/SetBoxMonData field 114 to blockB.unused2 at +0x1A (getter pokemon.c:728-732; setter pokemon.c:1190-1194). Party getters/setters delegate non-party fields to these corresponding BoxMon internal functions (pokemon.c:410-460 and 886-951).",
+    "wrapper_limit": "The outer target GetBoxMonData/SetBoxMonData wrapper entry points were not independently symbol-mapped in this bounded pass. The internal field-dispatch functions and Party fallback routes are byte-backed; this does not certify every PC/daycare live path or its outer checksum/decryption wrapper.",
+    "next_step": "If global availability requires proving all Box paths, resolve outer BoxMon wrapper callsites and audit PC/daycare callers separately; the field-114 internal getter/setter mapping itself is established."
+  },
+  "mask_ownership": {
+    "status": "UNPROVEN",
+    "mask": "0x003E",
+    "reason": "The accessor case operates on the whole u16 and contains no mask-specific validation. Exact matching getter/setter bytes only establish the storage mapping; they do not show whether another target consumer owns bits 1-5.",
+    "not_examined": ["all ARM9 and overlay references to raw field offsets", "all target consumers of bits 0x003E", "Box and daycare live paths", "runtime behavior"]
+  },
+  "source_pins": {
+    "plus_commit": "5b90a788ac3c7d1e4733b4d175a97811cc6745a3",
+    "pokeheartgold_commit": "6988158691eb6178cff697cda0428045ddcba5fb",
+    "hg_engine_commit": "fafdb1830a74e82862e89d0ea931bbb97ae1598d",
+    "retail_layout": "engine/upstream/pokeheartgold/include/pokemon_types_def.h:68",
+    "retail_getter": "engine/upstream/pokeheartgold/src/pokemon.c:728-732",
+    "retail_setter": "engine/upstream/pokeheartgold/src/pokemon.c:1190-1194",
+    "retail_box_getter_internal": "engine/upstream/pokeheartgold/src/pokemon.c:481-488",
+    "retail_box_setter_internal": "engine/upstream/pokeheartgold/src/pokemon.c:972-988",
+    "plus_party_addresses": "Existing verified call contract in internal/stat-editor/native-flow-contract.md:11."
+  },
+  "conclusion": "The exact target Party getter/setter and their BoxMon internal field dispatchers map field 114 to the same 16-bit blockB+0x1A word as retail. This resolves the storage mapping, not global availability of mask 0x003E or every outer BoxPokemon runtime path. Nature implementation remains gated on a separate ownership/consumer audit."
+}

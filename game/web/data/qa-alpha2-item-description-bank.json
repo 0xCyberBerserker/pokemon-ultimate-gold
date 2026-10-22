@@ -1,0 +1,37 @@
+{
+  "schema": "ultimate-gold-item-description-bank-audit/v1",
+  "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+  "status": "CONFIRMED_STATIC_TEXT_BANK_BUG",
+  "summary": {
+    "en": "The three Alpha2 custom Bag descriptions are empty. Their intended project text was patched into a different message bank.",
+    "es": "Las tres descripciones custom de la Bolsa están vacías en Alpha2. Sus textos previstos se escribieron en otro banco de mensajes."
+  },
+  "getter": {
+    "name": "GetItemDescIntoString",
+    "thumb_address": "0x02077D64",
+    "first_32_bytes_hex": "70b5051c0c1c131c01201b21dd2293f7c1fe061c211c2a1c93f7f6fe301c93f7",
+    "bank_load_offset": 12,
+    "bank_load_halfword": "0x22DD",
+    "instruction": "movs r2, #221",
+    "source": "src/item.c:781-784",
+    "source_commit": "6988158691eb6178cff697cda0428045ddcba5fb",
+    "source_sha256": "09e9377f89adc9003711d3dc16a3912e476043a188e3d5c349369cb37f6fda49"
+  },
+  "message_archive": "a/0/2/7",
+  "name_bank": 222,
+  "native_description_bank": 221,
+  "bank_221_entry_count": 537,
+  "custom_items": [
+    {"id": 113, "bank_221": "", "bank_223": "a TM Refill"},
+    {"id": 114, "bank_221": "", "bank_223": "Fully restores the HP and PP of your party."},
+    {"id": 118, "bank_221": "", "bank_223": "Enables reusable Rare Candy, Repels, Escape Rope, and Berries."}
+  ],
+  "fix_contract": {
+    "en": "Populate bank 221 for the custom items in a separate candidate; keep bank 222 names and use appropriate name/article text in bank 223. Preserve the frozen Alpha2 ROM and patch.",
+    "es": "Completar el banco 221 de los objetos custom en una candidata separada; conservar nombres del banco 222 y textos de nombre/artículo adecuados en el 223. Preservar la ROM y el parche Alpha2 congelados."
+  },
+  "limits": [
+    "Static source and exact-target instruction/message inspection; no native item-description screen was captured in this audit.",
+    "This finding concerns displayed text, not acceptance of the items' gameplay effects."
+  ]
+}

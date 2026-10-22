@@ -1,0 +1,1362 @@
+{
+  "schema": "ultimate-gold-cheat-runtime-qa/v1",
+  "status": "PASS_EMULATED_MEMORY_EFFECTS_CODE_OFF_RELOAD_NOT_BATTERY_PERSISTENCE",
+  "gameplay_acceptance": "NOT_ASSESSED",
+  "format_en": "Nintendo DS Action Replay; these are not GBA GameShark codes.",
+  "format_es": "Action Replay de Nintendo DS; no son códigos GameShark de GBA.",
+  "candidate_rom": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/internal/tm-refill-item/tm-refill-npc-candidate.nds",
+    "sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+    "accepted_alpha1_hash_match": true
+  },
+  "catalog": {
+    "path": "@HOME@/Games/Sacred-Gold/project/docs/cheat-catalog.json",
+    "sha256": "fcd7557c4bc9105c592b2fa71db4c3bbc8030a351d1c246ddeccfa803003dc09",
+    "source_title": "Sacred Gold Plus 1.2.3 EN Action Replay catalog",
+    "source_xml_sha256": "c0a0f0710060271c652577866806491125b2a7d82d40c3b4c46348b7e7a002fe",
+    "upstream_commit": "5b90a788ac3c7d1e4733b4d175a97811cc6745a3",
+    "audited_entry_count": 2110
+  },
+  "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+  "runner_sha256": "53bdab6991e9de62fad0f295a6086614daa5a4b46abc14f949fe5e3acfc8242d",
+  "baseline": {
+    "run": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/tm-npc-seed",
+    "result_sha256": "d783e75a62223d344fb74a1b6988ffe7750aa11121526d57c56b7ac985a5eae2",
+    "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+    "navigation_state": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/tm-npc-seed/navigation.state",
+    "navigation_state_sha256": "b52cb4e9de5ea386f9679655c2cc7ffdb88b6f61638ee4542561b74c1f26502a",
+    "system_ram": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/tm-npc-seed/system_ram.bin",
+    "system_ram_sha256": "58bebb0067c3d18f2c7fff7a4738c63d03d2acff9d9d235dbd2047ca561868a5",
+    "dsv": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/tm-native-profile/tm-refill-npc-candidate.dsv",
+    "dsv_sha256": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+    "money": 3000,
+    "rare_candy_item_50": [
+      {
+        "slot": 0,
+        "quantity": 20
+      }
+    ],
+    "canonical_bag": {
+      "magic": "0x43415042",
+      "save_pointer": "0x0227c20c",
+      "native_projection_pointer": "0x0227c860",
+      "medicine_address": "0x023ddb04",
+      "medicine_slots": 42,
+      "medicine_items": [
+        {
+          "slot": 0,
+          "item_id": 50,
+          "quantity": 20
+        },
+        {
+          "slot": 1,
+          "item_id": 17,
+          "quantity": 5
+        }
+      ],
+      "rare_candy_slots": [
+        {
+          "slot": 0,
+          "quantity": 20
+        }
+      ],
+      "medicine_sha256": "df89cb4ded355361ef100e3b32d45e27ae505c6271a952f0d726e8b5e12fd41a",
+      "other_pockets_sha256": "94f518f629790e92e322095b5a078db53c957a501d6597c9883c91714f2690e9",
+      "all_pockets_sha256": "d7e67c6629389cea5c6b08befb18ee2f3c9772b495b60e4d90aa6a7f1dc5558d"
+    }
+  },
+  "static_checks": {
+    "target_rom_hash_matches_catalog": true,
+    "save_global_pointer": "0x0227c20c",
+    "action_replay_base_pointer": "0x0226f22c",
+    "action_replay_base_nonzero_and_in_ram": true,
+    "money_destination_equals_player_profile_money": "0x0227c294",
+    "money_baseline": 3000,
+    "save_array3": {
+      "id": 3,
+      "size": 1952,
+      "relative_offset": 1604,
+      "crc16": 32432,
+      "active_slot": 0,
+      "bag_base": 36161632
+    },
+    "medicine_pocket_offset_and_capacity": {
+      "offset": "0xDB54",
+      "slots": 40
+    },
+    "all_medicine_write_slots_within_pocket": true,
+    "no_dedicated_rare_candy_entry": true,
+    "trainer_capture_30_004": "NOT_TESTED",
+    "canonical_bag_magic": "0x43415042",
+    "canonical_bag_save_pointer_matches": true,
+    "canonical_bag_native_pointer_matches": true,
+    "canonical_medicine_pocket": {
+      "address": "0x023ddb04",
+      "slots": 42,
+      "baseline_rare_candy": [
+        {
+          "slot": 0,
+          "quantity": 20
+        }
+      ]
+    },
+    "canonical_baseline_candy_item_50_quantity_20": true
+  },
+  "cases": [
+    {
+      "id": "00-006",
+      "case": "money-999999-select",
+      "activation_buttons": [
+        "SELECT"
+      ],
+      "catalog_code_sha256": "eaf6a22ed8c1838df2eceba45ca16ecf889c750946bdbbc2b1060b912ad910d1",
+      "activated": {
+        "phase": "activated",
+        "completed": true,
+        "runner_exit_code": 0,
+        "result_sha256": "dff23b62a928e3926a85105e3cc3175cc40dfd0cfc1effe7ba52a1e631500da4",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "53bdab6991e9de62fad0f295a6086614daa5a4b46abc14f949fe5e3acfc8242d",
+        "navigation_state_sha256": "b52cb4e9de5ea386f9679655c2cc7ffdb88b6f61638ee4542561b74c1f26502a",
+        "cheats": [
+          {
+            "sha256": "eaf6a22ed8c1838df2eceba45ca16ecf889c750946bdbbc2b1060b912ad910d1",
+            "start": 0,
+            "end": 120
+          }
+        ],
+        "screenshots": {
+          "before_activation": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/money-999999-select/activated/before_activation.png",
+            "sha256": "6f660fd85db943e04670c8a59a7898aef44d204cb8b8c691c0dd24279925682a"
+          },
+          "after_activation": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/money-999999-select/activated/after_activation.png",
+            "sha256": "6f660fd85db943e04670c8a59a7898aef44d204cb8b8c691c0dd24279925682a"
+          },
+          "after_code_disabled": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/money-999999-select/activated/after_code_disabled.png",
+            "sha256": "6f660fd85db943e04670c8a59a7898aef44d204cb8b8c691c0dd24279925682a"
+          }
+        },
+        "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/money-999999-select/activated/code-off.state",
+        "state_out_sha256": "8a1f4fa204cc44bbfeb740f9342ffcd655f262bb1721be09485c50bd9c3f5492",
+        "ram": {
+          "ram_sha256": "fd36185a1f1082de027cf7a045f48c93c8836be8071c752d371d04ed83203607",
+          "save_pointer": "0x0227c20c",
+          "action_replay_base": "0x0226f22c",
+          "money_address": "0x0227c294",
+          "money": 999999,
+          "save_array3": {
+            "id": 3,
+            "size": 1952,
+            "relative_offset": 1604,
+            "crc16": 32432,
+            "active_slot": 0,
+            "bag_base": 36161632
+          },
+          "medicine_items": [
+            {
+              "slot": 0,
+              "item_id": 50,
+              "quantity": 20
+            },
+            {
+              "slot": 1,
+              "item_id": 17,
+              "quantity": 5
+            }
+          ],
+          "rare_candy_slots": [
+            {
+              "slot": 0,
+              "quantity": 20
+            }
+          ],
+          "bag_pocket_hashes": {
+            "items": "d637e14bddfc7c31bb71e2ac1abc382b4d15f8841b496fe14c981962466d644e",
+            "key": "bb0e5a03738af4ef4167d987404288b29cc6188f3351e1b420b88a6172ae4b99",
+            "tm": "b9d99ab209bb1530e7242f3f7ca6fd22340587be15818bf43191f9772c002da3",
+            "mail": "dd6ba8ca0d87656a9b662af55042ab3929548bc0874d97dd1bb3183413809f07",
+            "medicine": "eba8899543e850fe58889a8055affc32bf652df110a00d6e68fe6e23308fc176",
+            "berries": "88f1e55d691a8c9031ebeafb2e9b4e8d4c61f691753e5c17de5ee993a101d7c8",
+            "balls": "eb71dbb846413f80ae694721311ee2ba5a78f087556e9eef87cbcf465c623ae7",
+            "battle": "fead0de4861297f21a04b972f6b5cc4c360ca581432388a5afa6926c2cf7576c"
+          },
+          "canonical_bag": {
+            "magic": "0x43415042",
+            "save_pointer": "0x0227c20c",
+            "native_projection_pointer": "0x0227c860",
+            "medicine_address": "0x023ddb04",
+            "medicine_slots": 42,
+            "medicine_items": [
+              {
+                "slot": 0,
+                "item_id": 50,
+                "quantity": 20
+              },
+              {
+                "slot": 1,
+                "item_id": 17,
+                "quantity": 5
+              }
+            ],
+            "rare_candy_slots": [
+              {
+                "slot": 0,
+                "quantity": 20
+              }
+            ],
+            "medicine_sha256": "df89cb4ded355361ef100e3b32d45e27ae505c6271a952f0d726e8b5e12fd41a",
+            "other_pockets_sha256": "94f518f629790e92e322095b5a078db53c957a501d6597c9883c91714f2690e9",
+            "all_pockets_sha256": "d7e67c6629389cea5c6b08befb18ee2f3c9772b495b60e4d90aa6a7f1dc5558d"
+          }
+        },
+        "save_copy_sha256_before": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+        "save_copy_sha256_after": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+        "save_copy_recorded_by_runner": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/money-999999-select/activated/saves/tm-refill-npc-candidate.dsv",
+          "bytes": 524410,
+          "sha256": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d"
+        },
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "after_code_disabled_in_same_process": true,
+        "code_off_frame": 120
+      },
+      "assertions": {
+        "money_exact": true,
+        "bag_unchanged": true,
+        "canonical_bag_unchanged": true,
+        "reloaded_money_persists_with_no_cheat_loaded": true,
+        "reloaded_bag_unchanged": true,
+        "reloaded_canonical_bag_unchanged": true,
+        "reloaded_code_list_empty": true
+      },
+      "reopened_without_code": {
+        "phase": "reopened_without_code",
+        "completed": true,
+        "runner_exit_code": 0,
+        "result_sha256": "96b6c75140f27632c198ffa44cafa219b3ab8e5ae5101795a4a0bfb87f6ac8df",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "53bdab6991e9de62fad0f295a6086614daa5a4b46abc14f949fe5e3acfc8242d",
+        "navigation_state_sha256": "8a1f4fa204cc44bbfeb740f9342ffcd655f262bb1721be09485c50bd9c3f5492",
+        "cheats": [],
+        "screenshots": {},
+        "state_out": null,
+        "state_out_sha256": null,
+        "ram": {
+          "ram_sha256": "50e12101e137b709c697129db736efc4b61fb8e99b0761b76163501d87a01e9f",
+          "save_pointer": "0x0227c20c",
+          "action_replay_base": "0x0226f22c",
+          "money_address": "0x0227c294",
+          "money": 999999,
+          "save_array3": {
+            "id": 3,
+            "size": 1952,
+            "relative_offset": 1604,
+            "crc16": 32432,
+            "active_slot": 0,
+            "bag_base": 36161632
+          },
+          "medicine_items": [
+            {
+              "slot": 0,
+              "item_id": 50,
+              "quantity": 20
+            },
+            {
+              "slot": 1,
+              "item_id": 17,
+              "quantity": 5
+            }
+          ],
+          "rare_candy_slots": [
+            {
+              "slot": 0,
+              "quantity": 20
+            }
+          ],
+          "bag_pocket_hashes": {
+            "items": "d637e14bddfc7c31bb71e2ac1abc382b4d15f8841b496fe14c981962466d644e",
+            "key": "bb0e5a03738af4ef4167d987404288b29cc6188f3351e1b420b88a6172ae4b99",
+            "tm": "b9d99ab209bb1530e7242f3f7ca6fd22340587be15818bf43191f9772c002da3",
+            "mail": "dd6ba8ca0d87656a9b662af55042ab3929548bc0874d97dd1bb3183413809f07",
+            "medicine": "eba8899543e850fe58889a8055affc32bf652df110a00d6e68fe6e23308fc176",
+            "berries": "88f1e55d691a8c9031ebeafb2e9b4e8d4c61f691753e5c17de5ee993a101d7c8",
+            "balls": "eb71dbb846413f80ae694721311ee2ba5a78f087556e9eef87cbcf465c623ae7",
+            "battle": "fead0de4861297f21a04b972f6b5cc4c360ca581432388a5afa6926c2cf7576c"
+          },
+          "canonical_bag": {
+            "magic": "0x43415042",
+            "save_pointer": "0x0227c20c",
+            "native_projection_pointer": "0x0227c860",
+            "medicine_address": "0x023ddb04",
+            "medicine_slots": 42,
+            "medicine_items": [
+              {
+                "slot": 0,
+                "item_id": 50,
+                "quantity": 20
+              },
+              {
+                "slot": 1,
+                "item_id": 17,
+                "quantity": 5
+              }
+            ],
+            "rare_candy_slots": [
+              {
+                "slot": 0,
+                "quantity": 20
+              }
+            ],
+            "medicine_sha256": "df89cb4ded355361ef100e3b32d45e27ae505c6271a952f0d726e8b5e12fd41a",
+            "other_pockets_sha256": "94f518f629790e92e322095b5a078db53c957a501d6597c9883c91714f2690e9",
+            "all_pockets_sha256": "d7e67c6629389cea5c6b08befb18ee2f3c9772b495b60e4d90aa6a7f1dc5558d"
+          }
+        },
+        "save_copy_sha256_before": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+        "save_copy_sha256_after": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+        "save_copy_recorded_by_runner": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/money-999999-select/reopened_without_code/saves/tm-refill-npc-candidate.dsv",
+          "bytes": 524410,
+          "sha256": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d"
+        },
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "80-002",
+      "case": "rare-candy-via-all-medicine",
+      "activation_buttons": [
+        "SELECT",
+        "UP"
+      ],
+      "catalog_code_sha256": "93df73591cd53bbd4cf5f6d2e5b02f250da3df43fce8eb15ab4775f19cc2852c",
+      "activated": {
+        "phase": "activated",
+        "completed": true,
+        "runner_exit_code": 0,
+        "result_sha256": "eafd2b5799c9e5b01e1c4c1a779184a8ace4f9b5c004dbfa5b0ff0cb8bea13ab",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "53bdab6991e9de62fad0f295a6086614daa5a4b46abc14f949fe5e3acfc8242d",
+        "navigation_state_sha256": "b52cb4e9de5ea386f9679655c2cc7ffdb88b6f61638ee4542561b74c1f26502a",
+        "cheats": [
+          {
+            "sha256": "93df73591cd53bbd4cf5f6d2e5b02f250da3df43fce8eb15ab4775f19cc2852c",
+            "start": 0,
+            "end": 120
+          }
+        ],
+        "screenshots": {
+          "before_activation": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/rare-candy-via-all-medicine/activated/before_activation.png",
+            "sha256": "6f660fd85db943e04670c8a59a7898aef44d204cb8b8c691c0dd24279925682a"
+          },
+          "after_activation": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/rare-candy-via-all-medicine/activated/after_activation.png",
+            "sha256": "374ceccdb41670e9341d07d8d0e3cb12d41413a2c24355749f4be4ce05e3e8bd"
+          },
+          "after_code_disabled": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/rare-candy-via-all-medicine/activated/after_code_disabled.png",
+            "sha256": "374ceccdb41670e9341d07d8d0e3cb12d41413a2c24355749f4be4ce05e3e8bd"
+          }
+        },
+        "state_out": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/rare-candy-via-all-medicine/activated/code-off.state",
+        "state_out_sha256": "7cada9c045d23ffa41850c8d1c8db737ca5f76a90f70baa52a1de8562cf7d5e7",
+        "ram": {
+          "ram_sha256": "97ae85d84a951ca059b6c7cd9456bc65577fe743029c78344fd3549235ba2242",
+          "save_pointer": "0x0227c20c",
+          "action_replay_base": "0x0226f22c",
+          "money_address": "0x0227c294",
+          "money": 3000,
+          "save_array3": {
+            "id": 3,
+            "size": 1952,
+            "relative_offset": 1604,
+            "crc16": 32432,
+            "active_slot": 0,
+            "bag_base": 36161632
+          },
+          "medicine_items": [
+            {
+              "slot": 0,
+              "item_id": 17,
+              "quantity": 999
+            },
+            {
+              "slot": 1,
+              "item_id": 18,
+              "quantity": 999
+            },
+            {
+              "slot": 2,
+              "item_id": 19,
+              "quantity": 999
+            },
+            {
+              "slot": 3,
+              "item_id": 20,
+              "quantity": 999
+            },
+            {
+              "slot": 4,
+              "item_id": 21,
+              "quantity": 999
+            },
+            {
+              "slot": 5,
+              "item_id": 22,
+              "quantity": 999
+            },
+            {
+              "slot": 6,
+              "item_id": 23,
+              "quantity": 999
+            },
+            {
+              "slot": 7,
+              "item_id": 24,
+              "quantity": 999
+            },
+            {
+              "slot": 8,
+              "item_id": 25,
+              "quantity": 999
+            },
+            {
+              "slot": 9,
+              "item_id": 26,
+              "quantity": 999
+            },
+            {
+              "slot": 10,
+              "item_id": 27,
+              "quantity": 999
+            },
+            {
+              "slot": 11,
+              "item_id": 28,
+              "quantity": 999
+            },
+            {
+              "slot": 12,
+              "item_id": 29,
+              "quantity": 999
+            },
+            {
+              "slot": 13,
+              "item_id": 30,
+              "quantity": 999
+            },
+            {
+              "slot": 14,
+              "item_id": 31,
+              "quantity": 999
+            },
+            {
+              "slot": 15,
+              "item_id": 32,
+              "quantity": 999
+            },
+            {
+              "slot": 16,
+              "item_id": 33,
+              "quantity": 999
+            },
+            {
+              "slot": 17,
+              "item_id": 34,
+              "quantity": 999
+            },
+            {
+              "slot": 18,
+              "item_id": 35,
+              "quantity": 999
+            },
+            {
+              "slot": 19,
+              "item_id": 36,
+              "quantity": 999
+            },
+            {
+              "slot": 20,
+              "item_id": 37,
+              "quantity": 999
+            },
+            {
+              "slot": 21,
+              "item_id": 38,
+              "quantity": 999
+            },
+            {
+              "slot": 22,
+              "item_id": 39,
+              "quantity": 999
+            },
+            {
+              "slot": 23,
+              "item_id": 40,
+              "quantity": 999
+            },
+            {
+              "slot": 24,
+              "item_id": 41,
+              "quantity": 999
+            },
+            {
+              "slot": 25,
+              "item_id": 42,
+              "quantity": 999
+            },
+            {
+              "slot": 26,
+              "item_id": 43,
+              "quantity": 999
+            },
+            {
+              "slot": 27,
+              "item_id": 44,
+              "quantity": 999
+            },
+            {
+              "slot": 28,
+              "item_id": 45,
+              "quantity": 999
+            },
+            {
+              "slot": 29,
+              "item_id": 46,
+              "quantity": 999
+            },
+            {
+              "slot": 30,
+              "item_id": 47,
+              "quantity": 999
+            },
+            {
+              "slot": 31,
+              "item_id": 48,
+              "quantity": 999
+            },
+            {
+              "slot": 32,
+              "item_id": 49,
+              "quantity": 999
+            },
+            {
+              "slot": 33,
+              "item_id": 50,
+              "quantity": 999
+            },
+            {
+              "slot": 34,
+              "item_id": 51,
+              "quantity": 999
+            },
+            {
+              "slot": 35,
+              "item_id": 52,
+              "quantity": 999
+            },
+            {
+              "slot": 36,
+              "item_id": 53,
+              "quantity": 999
+            },
+            {
+              "slot": 37,
+              "item_id": 54,
+              "quantity": 999
+            }
+          ],
+          "rare_candy_slots": [
+            {
+              "slot": 33,
+              "quantity": 999
+            }
+          ],
+          "bag_pocket_hashes": {
+            "items": "d637e14bddfc7c31bb71e2ac1abc382b4d15f8841b496fe14c981962466d644e",
+            "key": "bb0e5a03738af4ef4167d987404288b29cc6188f3351e1b420b88a6172ae4b99",
+            "tm": "b9d99ab209bb1530e7242f3f7ca6fd22340587be15818bf43191f9772c002da3",
+            "mail": "dd6ba8ca0d87656a9b662af55042ab3929548bc0874d97dd1bb3183413809f07",
+            "medicine": "39d6b09fd423cb6e02054b27adf64060aa2dff1cc4028a8a8d2051af7ff4055d",
+            "berries": "88f1e55d691a8c9031ebeafb2e9b4e8d4c61f691753e5c17de5ee993a101d7c8",
+            "balls": "eb71dbb846413f80ae694721311ee2ba5a78f087556e9eef87cbcf465c623ae7",
+            "battle": "fead0de4861297f21a04b972f6b5cc4c360ca581432388a5afa6926c2cf7576c"
+          },
+          "canonical_bag": {
+            "magic": "0x43415042",
+            "save_pointer": "0x0227c20c",
+            "native_projection_pointer": "0x0227c860",
+            "medicine_address": "0x023ddb04",
+            "medicine_slots": 42,
+            "medicine_items": [
+              {
+                "slot": 0,
+                "item_id": 17,
+                "quantity": 999
+              },
+              {
+                "slot": 1,
+                "item_id": 18,
+                "quantity": 999
+              },
+              {
+                "slot": 2,
+                "item_id": 19,
+                "quantity": 999
+              },
+              {
+                "slot": 3,
+                "item_id": 20,
+                "quantity": 999
+              },
+              {
+                "slot": 4,
+                "item_id": 21,
+                "quantity": 999
+              },
+              {
+                "slot": 5,
+                "item_id": 22,
+                "quantity": 999
+              },
+              {
+                "slot": 6,
+                "item_id": 23,
+                "quantity": 999
+              },
+              {
+                "slot": 7,
+                "item_id": 24,
+                "quantity": 999
+              },
+              {
+                "slot": 8,
+                "item_id": 25,
+                "quantity": 999
+              },
+              {
+                "slot": 9,
+                "item_id": 26,
+                "quantity": 999
+              },
+              {
+                "slot": 10,
+                "item_id": 27,
+                "quantity": 999
+              },
+              {
+                "slot": 11,
+                "item_id": 28,
+                "quantity": 999
+              },
+              {
+                "slot": 12,
+                "item_id": 29,
+                "quantity": 999
+              },
+              {
+                "slot": 13,
+                "item_id": 30,
+                "quantity": 999
+              },
+              {
+                "slot": 14,
+                "item_id": 31,
+                "quantity": 999
+              },
+              {
+                "slot": 15,
+                "item_id": 32,
+                "quantity": 999
+              },
+              {
+                "slot": 16,
+                "item_id": 33,
+                "quantity": 999
+              },
+              {
+                "slot": 17,
+                "item_id": 34,
+                "quantity": 999
+              },
+              {
+                "slot": 18,
+                "item_id": 35,
+                "quantity": 999
+              },
+              {
+                "slot": 19,
+                "item_id": 36,
+                "quantity": 999
+              },
+              {
+                "slot": 20,
+                "item_id": 37,
+                "quantity": 999
+              },
+              {
+                "slot": 21,
+                "item_id": 38,
+                "quantity": 999
+              },
+              {
+                "slot": 22,
+                "item_id": 39,
+                "quantity": 999
+              },
+              {
+                "slot": 23,
+                "item_id": 40,
+                "quantity": 999
+              },
+              {
+                "slot": 24,
+                "item_id": 41,
+                "quantity": 999
+              },
+              {
+                "slot": 25,
+                "item_id": 42,
+                "quantity": 999
+              },
+              {
+                "slot": 26,
+                "item_id": 43,
+                "quantity": 999
+              },
+              {
+                "slot": 27,
+                "item_id": 44,
+                "quantity": 999
+              },
+              {
+                "slot": 28,
+                "item_id": 45,
+                "quantity": 999
+              },
+              {
+                "slot": 29,
+                "item_id": 46,
+                "quantity": 999
+              },
+              {
+                "slot": 30,
+                "item_id": 47,
+                "quantity": 999
+              },
+              {
+                "slot": 31,
+                "item_id": 48,
+                "quantity": 999
+              },
+              {
+                "slot": 32,
+                "item_id": 49,
+                "quantity": 999
+              },
+              {
+                "slot": 33,
+                "item_id": 50,
+                "quantity": 999
+              },
+              {
+                "slot": 34,
+                "item_id": 51,
+                "quantity": 999
+              },
+              {
+                "slot": 35,
+                "item_id": 52,
+                "quantity": 999
+              },
+              {
+                "slot": 36,
+                "item_id": 53,
+                "quantity": 999
+              },
+              {
+                "slot": 37,
+                "item_id": 54,
+                "quantity": 999
+              }
+            ],
+            "rare_candy_slots": [
+              {
+                "slot": 33,
+                "quantity": 999
+              }
+            ],
+            "medicine_sha256": "5f799e3fd14745786d2a071ea7b36b678ff17eedab47fed597a42474e396c604",
+            "other_pockets_sha256": "94f518f629790e92e322095b5a078db53c957a501d6597c9883c91714f2690e9",
+            "all_pockets_sha256": "09eda034e9f0385eb343142bcf688dcd414b62f1635a9b3031adec968303c1a7"
+          }
+        },
+        "save_copy_sha256_before": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+        "save_copy_sha256_after": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+        "save_copy_recorded_by_runner": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/rare-candy-via-all-medicine/activated/saves/tm-refill-npc-candidate.dsv",
+          "bytes": 524410,
+          "sha256": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d"
+        },
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "after_code_disabled_in_same_process": true,
+        "code_off_frame": 120
+      },
+      "assertions": {
+        "all_medicine_rows_match": true,
+        "rare_candy_item_50_quantity_999": true,
+        "other_bag_pockets_unchanged": true,
+        "canonical_medicine_has_42_slots": true,
+        "canonical_medicine_rows_match": true,
+        "canonical_rare_candy_item_50_quantity_999": true,
+        "canonical_medicine_trailing_slots_38_to_41_unchanged": true,
+        "canonical_other_pockets_unchanged": true,
+        "canonical_source_candy_was_20": true,
+        "reloaded_rare_candy_persists_with_no_cheat_loaded": true,
+        "reloaded_medicine_pocket_persists_with_no_cheat_loaded": true,
+        "reloaded_other_bag_pockets_unchanged": true,
+        "reloaded_canonical_medicine_persists_with_no_cheat_loaded": true,
+        "reloaded_canonical_rare_candy_persists_with_no_cheat_loaded": true,
+        "reloaded_canonical_other_pockets_unchanged": true,
+        "reloaded_canonical_medicine_trailing_slots_38_to_41_unchanged": true,
+        "reloaded_code_list_empty": true
+      },
+      "reopened_without_code": {
+        "phase": "reopened_without_code",
+        "completed": true,
+        "runner_exit_code": 0,
+        "result_sha256": "33b8a4d7fd76f508789e721806a3c20575b7d89871cf83b2d96cc315dad3a889",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "53bdab6991e9de62fad0f295a6086614daa5a4b46abc14f949fe5e3acfc8242d",
+        "navigation_state_sha256": "7cada9c045d23ffa41850c8d1c8db737ca5f76a90f70baa52a1de8562cf7d5e7",
+        "cheats": [],
+        "screenshots": {},
+        "state_out": null,
+        "state_out_sha256": null,
+        "ram": {
+          "ram_sha256": "87516db301e0ee5819b9c8e0fa2adfdaed31a2456ee6ea4f3133d489dba2bbeb",
+          "save_pointer": "0x0227c20c",
+          "action_replay_base": "0x0226f22c",
+          "money_address": "0x0227c294",
+          "money": 3000,
+          "save_array3": {
+            "id": 3,
+            "size": 1952,
+            "relative_offset": 1604,
+            "crc16": 32432,
+            "active_slot": 0,
+            "bag_base": 36161632
+          },
+          "medicine_items": [
+            {
+              "slot": 0,
+              "item_id": 17,
+              "quantity": 999
+            },
+            {
+              "slot": 1,
+              "item_id": 18,
+              "quantity": 999
+            },
+            {
+              "slot": 2,
+              "item_id": 19,
+              "quantity": 999
+            },
+            {
+              "slot": 3,
+              "item_id": 20,
+              "quantity": 999
+            },
+            {
+              "slot": 4,
+              "item_id": 21,
+              "quantity": 999
+            },
+            {
+              "slot": 5,
+              "item_id": 22,
+              "quantity": 999
+            },
+            {
+              "slot": 6,
+              "item_id": 23,
+              "quantity": 999
+            },
+            {
+              "slot": 7,
+              "item_id": 24,
+              "quantity": 999
+            },
+            {
+              "slot": 8,
+              "item_id": 25,
+              "quantity": 999
+            },
+            {
+              "slot": 9,
+              "item_id": 26,
+              "quantity": 999
+            },
+            {
+              "slot": 10,
+              "item_id": 27,
+              "quantity": 999
+            },
+            {
+              "slot": 11,
+              "item_id": 28,
+              "quantity": 999
+            },
+            {
+              "slot": 12,
+              "item_id": 29,
+              "quantity": 999
+            },
+            {
+              "slot": 13,
+              "item_id": 30,
+              "quantity": 999
+            },
+            {
+              "slot": 14,
+              "item_id": 31,
+              "quantity": 999
+            },
+            {
+              "slot": 15,
+              "item_id": 32,
+              "quantity": 999
+            },
+            {
+              "slot": 16,
+              "item_id": 33,
+              "quantity": 999
+            },
+            {
+              "slot": 17,
+              "item_id": 34,
+              "quantity": 999
+            },
+            {
+              "slot": 18,
+              "item_id": 35,
+              "quantity": 999
+            },
+            {
+              "slot": 19,
+              "item_id": 36,
+              "quantity": 999
+            },
+            {
+              "slot": 20,
+              "item_id": 37,
+              "quantity": 999
+            },
+            {
+              "slot": 21,
+              "item_id": 38,
+              "quantity": 999
+            },
+            {
+              "slot": 22,
+              "item_id": 39,
+              "quantity": 999
+            },
+            {
+              "slot": 23,
+              "item_id": 40,
+              "quantity": 999
+            },
+            {
+              "slot": 24,
+              "item_id": 41,
+              "quantity": 999
+            },
+            {
+              "slot": 25,
+              "item_id": 42,
+              "quantity": 999
+            },
+            {
+              "slot": 26,
+              "item_id": 43,
+              "quantity": 999
+            },
+            {
+              "slot": 27,
+              "item_id": 44,
+              "quantity": 999
+            },
+            {
+              "slot": 28,
+              "item_id": 45,
+              "quantity": 999
+            },
+            {
+              "slot": 29,
+              "item_id": 46,
+              "quantity": 999
+            },
+            {
+              "slot": 30,
+              "item_id": 47,
+              "quantity": 999
+            },
+            {
+              "slot": 31,
+              "item_id": 48,
+              "quantity": 999
+            },
+            {
+              "slot": 32,
+              "item_id": 49,
+              "quantity": 999
+            },
+            {
+              "slot": 33,
+              "item_id": 50,
+              "quantity": 999
+            },
+            {
+              "slot": 34,
+              "item_id": 51,
+              "quantity": 999
+            },
+            {
+              "slot": 35,
+              "item_id": 52,
+              "quantity": 999
+            },
+            {
+              "slot": 36,
+              "item_id": 53,
+              "quantity": 999
+            },
+            {
+              "slot": 37,
+              "item_id": 54,
+              "quantity": 999
+            }
+          ],
+          "rare_candy_slots": [
+            {
+              "slot": 33,
+              "quantity": 999
+            }
+          ],
+          "bag_pocket_hashes": {
+            "items": "d637e14bddfc7c31bb71e2ac1abc382b4d15f8841b496fe14c981962466d644e",
+            "key": "bb0e5a03738af4ef4167d987404288b29cc6188f3351e1b420b88a6172ae4b99",
+            "tm": "b9d99ab209bb1530e7242f3f7ca6fd22340587be15818bf43191f9772c002da3",
+            "mail": "dd6ba8ca0d87656a9b662af55042ab3929548bc0874d97dd1bb3183413809f07",
+            "medicine": "39d6b09fd423cb6e02054b27adf64060aa2dff1cc4028a8a8d2051af7ff4055d",
+            "berries": "88f1e55d691a8c9031ebeafb2e9b4e8d4c61f691753e5c17de5ee993a101d7c8",
+            "balls": "eb71dbb846413f80ae694721311ee2ba5a78f087556e9eef87cbcf465c623ae7",
+            "battle": "fead0de4861297f21a04b972f6b5cc4c360ca581432388a5afa6926c2cf7576c"
+          },
+          "canonical_bag": {
+            "magic": "0x43415042",
+            "save_pointer": "0x0227c20c",
+            "native_projection_pointer": "0x0227c860",
+            "medicine_address": "0x023ddb04",
+            "medicine_slots": 42,
+            "medicine_items": [
+              {
+                "slot": 0,
+                "item_id": 17,
+                "quantity": 999
+              },
+              {
+                "slot": 1,
+                "item_id": 18,
+                "quantity": 999
+              },
+              {
+                "slot": 2,
+                "item_id": 19,
+                "quantity": 999
+              },
+              {
+                "slot": 3,
+                "item_id": 20,
+                "quantity": 999
+              },
+              {
+                "slot": 4,
+                "item_id": 21,
+                "quantity": 999
+              },
+              {
+                "slot": 5,
+                "item_id": 22,
+                "quantity": 999
+              },
+              {
+                "slot": 6,
+                "item_id": 23,
+                "quantity": 999
+              },
+              {
+                "slot": 7,
+                "item_id": 24,
+                "quantity": 999
+              },
+              {
+                "slot": 8,
+                "item_id": 25,
+                "quantity": 999
+              },
+              {
+                "slot": 9,
+                "item_id": 26,
+                "quantity": 999
+              },
+              {
+                "slot": 10,
+                "item_id": 27,
+                "quantity": 999
+              },
+              {
+                "slot": 11,
+                "item_id": 28,
+                "quantity": 999
+              },
+              {
+                "slot": 12,
+                "item_id": 29,
+                "quantity": 999
+              },
+              {
+                "slot": 13,
+                "item_id": 30,
+                "quantity": 999
+              },
+              {
+                "slot": 14,
+                "item_id": 31,
+                "quantity": 999
+              },
+              {
+                "slot": 15,
+                "item_id": 32,
+                "quantity": 999
+              },
+              {
+                "slot": 16,
+                "item_id": 33,
+                "quantity": 999
+              },
+              {
+                "slot": 17,
+                "item_id": 34,
+                "quantity": 999
+              },
+              {
+                "slot": 18,
+                "item_id": 35,
+                "quantity": 999
+              },
+              {
+                "slot": 19,
+                "item_id": 36,
+                "quantity": 999
+              },
+              {
+                "slot": 20,
+                "item_id": 37,
+                "quantity": 999
+              },
+              {
+                "slot": 21,
+                "item_id": 38,
+                "quantity": 999
+              },
+              {
+                "slot": 22,
+                "item_id": 39,
+                "quantity": 999
+              },
+              {
+                "slot": 23,
+                "item_id": 40,
+                "quantity": 999
+              },
+              {
+                "slot": 24,
+                "item_id": 41,
+                "quantity": 999
+              },
+              {
+                "slot": 25,
+                "item_id": 42,
+                "quantity": 999
+              },
+              {
+                "slot": 26,
+                "item_id": 43,
+                "quantity": 999
+              },
+              {
+                "slot": 27,
+                "item_id": 44,
+                "quantity": 999
+              },
+              {
+                "slot": 28,
+                "item_id": 45,
+                "quantity": 999
+              },
+              {
+                "slot": 29,
+                "item_id": 46,
+                "quantity": 999
+              },
+              {
+                "slot": 30,
+                "item_id": 47,
+                "quantity": 999
+              },
+              {
+                "slot": 31,
+                "item_id": 48,
+                "quantity": 999
+              },
+              {
+                "slot": 32,
+                "item_id": 49,
+                "quantity": 999
+              },
+              {
+                "slot": 33,
+                "item_id": 50,
+                "quantity": 999
+              },
+              {
+                "slot": 34,
+                "item_id": 51,
+                "quantity": 999
+              },
+              {
+                "slot": 35,
+                "item_id": 52,
+                "quantity": 999
+              },
+              {
+                "slot": 36,
+                "item_id": 53,
+                "quantity": 999
+              },
+              {
+                "slot": 37,
+                "item_id": 54,
+                "quantity": 999
+              }
+            ],
+            "rare_candy_slots": [
+              {
+                "slot": 33,
+                "quantity": 999
+              }
+            ],
+            "medicine_sha256": "5f799e3fd14745786d2a071ea7b36b678ff17eedab47fed597a42474e396c604",
+            "other_pockets_sha256": "94f518f629790e92e322095b5a078db53c957a501d6597c9883c91714f2690e9",
+            "all_pockets_sha256": "09eda034e9f0385eb343142bcf688dcd414b62f1635a9b3031adec968303c1a7"
+          }
+        },
+        "save_copy_sha256_before": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+        "save_copy_sha256_after": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+        "save_copy_recorded_by_runner": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022/rare-candy-via-all-medicine/reopened_without_code/saves/tm-refill-npc-candidate.dsv",
+          "bytes": 524410,
+          "sha256": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d"
+        },
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      "status": "PASS"
+    }
+  ],
+  "golden_dsv_sha256_before": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+  "golden_dsv_sha256_after": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d",
+  "golden_dsv_unchanged": true,
+  "run_group": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/cheat-runtime-alpha1-20261022",
+  "summary_en": "The Money 999999 code changed the canonical money field to exactly 999999. The catalog has no candy-only entry; All medicine ×999 changed Rare Candy (item 50) from 20 to 999 in both the 40-slot native projection and the 42-slot canonical Medicine pocket. The other canonical Bag pockets were byte-identical to baseline, and both effects remained in RAM after a later process loaded with no active cheats. No battery-save persistence or gameplay acceptance is claimed.",
+  "summary_es": "El código Money 999999 cambió el campo canónico de dinero exactamente a 999999. El catálogo no tiene una entrada exclusiva para caramelos; All medicine ×999 cambió el Caramelo Raro (objeto 50) de 20 a 999 tanto en la proyección nativa de 40 posiciones como en la bolsa canónica de Medicinas de 42 posiciones. Las demás bolsas canónicas coincidieron byte a byte con el baseline y ambos efectos siguieron en RAM tras abrir un proceso posterior sin trucos activos. No se afirma persistencia en batería ni aceptación de juego.",
+  "limitations_en": "All Medicine changes slots 0–37 of the 40-slot native medicine projection to item IDs 17–54 at quantity 999; this overwrites existing medicines. The canonical expanded Medicine pocket has 42 slots; canonical slots 38–41 remained unchanged. Turning the code off does not undo RAM changes. The no-code relaunch loads a serialized emulator state, not a saved game; battery persistence and real player files were not tested. Trainer capture 30-004 remains NOT_TESTED because it requires a battle.",
+  "limitations_es": "All Medicine cambia las posiciones 0–37 de la proyección nativa de 40 medicinas por objetos 17–54 con cantidad 999; sobrescribe las medicinas existentes. La bolsa canónica ampliada tiene 42 posiciones; las posiciones canónicas 38–41 no cambiaron. Desactivar el código no revierte la RAM. El proceso sin código carga un estado serializado del emulador, no una partida guardada; no se probaron la persistencia en batería ni archivos de jugador. La captura de entrenador 30-004 sigue SIN PROBAR porque requiere un combate.",
+  "qa_purpose_en": {
+    "00-006": "A deterministic smoke check for the Action Replay trigger and canonical money-field mapping; it does not test economy balance.",
+    "80-002": "A broad medicine-pocket write test for SaveArray mapping; because it replaces many medicines, it is unsuitable for isolated Rare Candy testing."
+  },
+  "qa_purpose_es": {
+    "00-006": "Comprobación determinista del disparador Action Replay y del campo canónico de dinero; no prueba el equilibrio de la economía.",
+    "80-002": "Prueba de escritura amplia de la bolsa de medicinas y del mapeo SaveArray; como reemplaza muchas medicinas, no sirve para probar el Caramelo Raro de forma aislada."
+  },
+  "canonical_bag_verification": {
+    "status": "PASS_EXISTING_RUN_OUTPUTS_REPARSED_OFFLINE",
+    "core_runs_added": 0,
+    "method_en": "Reparsed the existing baseline, activated, and code-off MainRAM dumps after validating their recorded hashes, ROM identity, cheat schedules, states, and isolated DSV copies.",
+    "method_es": "Se volvieron a analizar los volcados MainRAM existentes de baseline, activación y recarga sin código, tras validar sus hashes registrados, identidad de ROM, programación de códigos, estados y copias aisladas del DSV.",
+    "medicine_address": "0x023ddb04",
+    "medicine_slots": 42,
+    "baseline_rare_candy_item_50": [
+      {
+        "slot": 0,
+        "quantity": 20
+      }
+    ],
+    "activated_rare_candy_item_50": [
+      {
+        "slot": 33,
+        "quantity": 999
+      }
+    ],
+    "reopened_rare_candy_item_50": [
+      {
+        "slot": 33,
+        "quantity": 999
+      }
+    ],
+    "writes_item_ids_17_through_54_at_quantity_999": true,
+    "slots_38_through_41_unchanged": true,
+    "other_canonical_pockets_unchanged": true,
+    "all_medicine_case_checks": {
+      "activated": {
+        "all_medicine_rows_match": true,
+        "rare_candy_item_50_quantity_999": true,
+        "other_bag_pockets_unchanged": true,
+        "canonical_medicine_has_42_slots": true,
+        "canonical_medicine_rows_match": true,
+        "canonical_rare_candy_item_50_quantity_999": true,
+        "canonical_medicine_trailing_slots_38_to_41_unchanged": true,
+        "canonical_other_pockets_unchanged": true,
+        "canonical_source_candy_was_20": true
+      },
+      "reopened_without_code": {
+        "rare_candy_persists_with_no_cheat_loaded": true,
+        "medicine_pocket_persists_with_no_cheat_loaded": true,
+        "other_bag_pockets_unchanged": true,
+        "canonical_medicine_persists_with_no_cheat_loaded": true,
+        "canonical_rare_candy_persists_with_no_cheat_loaded": true,
+        "canonical_other_pockets_unchanged": true,
+        "canonical_medicine_trailing_slots_38_to_41_unchanged": true,
+        "code_list_empty": true
+      }
+    },
+    "baseline_ram_sha256": "58bebb0067c3d18f2c7fff7a4738c63d03d2acff9d9d235dbd2047ca561868a5",
+    "activated_ram_sha256": "97ae85d84a951ca059b6c7cd9456bc65577fe743029c78344fd3549235ba2242",
+    "reopened_without_code_ram_sha256": "87516db301e0ee5819b9c8e0fa2adfdaed31a2456ee6ea4f3133d489dba2bbeb",
+    "golden_dsv_sha256": "28359c545d49453fa9fc0428520a7a635f501b5ce4f8b63d43575447d009db8d"
+  },
+  "inspection_en": "This report refresh reused existing captured outputs; no emulator/core process was started.",
+  "inspection_es": "Este informe reutilizó capturas existentes; no se inició ningún proceso de emulador/core."
+}

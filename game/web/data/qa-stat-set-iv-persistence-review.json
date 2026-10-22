@@ -1,0 +1,121 @@
+{
+  "schema": "stat-editor-set-iv-persistence-independent-review/v1",
+  "status": "PASS_BOUNDED_PERSISTENCE; NO_RELEASE_CLAIM",
+  "scope": "Offline, read-only review of the pinned native Set-IV persistence audit and its frozen evidence.",
+  "reviewed_artifacts": {
+    "acceptance_auditor": {
+      "path": "qa/set_iv_confirm_persistence_acceptance.py",
+      "sha256": "c4481bf5b8d15279df5bdc31691822c92f1407b371a950f9f8c2d4694d0d2f3b"
+    },
+    "original_acceptance": {
+      "path": "qa/runs/stat-editor-confirm-set-iv-persist-audit/acceptance.json",
+      "sha256": "e2bac1345c8639419b1a852b94440133ada4d3a48b22e8d60e6fc9fcc01fcbb2"
+    },
+    "candidate_rom_sha256": "ef41db697c047c8a1488b87ff3549d80025bdf9c524d3b4cb573058c87da7a4f",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_sha256": "9d3daba8c3026167d97142510a34f58b48615b289fa8759e819980c9c35cb3e4",
+    "source_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+    "source_yes_ack_state_sha256": "2476dd673d3651bac454f1b4a082a716b172e68f364e967729ed8826a94ac24c"
+  },
+  "offline_reproduction": {
+    "command": "engine/upstream/hg-engine/.venv/bin/python -c '<import auditor; set OUTPUT to TemporaryDirectory; call main()>'",
+    "temporary_report_sha256": "e2bac1345c8639419b1a852b94440133ada4d3a48b22e8d60e6fc9fcc01fcbb2",
+    "matches_frozen_report_byte_for_byte": true,
+    "original_auditor_and_evidence_modified": false
+  },
+  "native_chain": {
+    "same_rom_yes_ack_source": {
+      "run": "qa/runs/stat-editor-confirm-set-iv-yes-ack",
+      "result_sha256": "3e51c1eb03168c07d462ed2dece79fec2405d934b1c776db9554f5ea61b6b23b",
+      "state_sha256": "2476dd673d3651bac454f1b4a082a716b172e68f364e967729ed8826a94ac24c",
+      "frozen_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": []
+    },
+    "native_save": {
+      "run": "qa/runs/stat-editor-confirm-set-iv-persist-save",
+      "result_sha256": "b30d23a860de88e8ffd53ed4a6af1d1ce9521e6551bf03413ce90710a761599d",
+      "frames": 2600,
+      "input_state_sha256": "2476dd673d3651bac454f1b4a082a716b172e68f364e967729ed8826a94ac24c",
+      "dsv_seed_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "saved_dsv_sha256": "04d5c4500547e044d63d6dceeed63bd255eeb91bfbcb74143b697e918dea41ec",
+      "selected_main_counter": {
+        "before": 9,
+        "after": 10
+      },
+      "both_main_crcs_valid": true,
+      "cheats": []
+    },
+    "fresh_process_cold_load": {
+      "run": "qa/runs/stat-editor-confirm-set-iv-persist-cold",
+      "result_sha256": "34ddb51a8640a34322ab3ae0028dfa68d707fadc9840b477f1ffb3e7535891f0",
+      "frames": 5500,
+      "state_input": null,
+      "cheats": [],
+      "input_and_output_dsv_sha256": "04d5c4500547e044d63d6dceeed63bd255eeb91bfbcb74143b697e918dea41ec",
+      "saved_and_cold_dsv_byte_exact": true,
+      "prompt_reopened_without_confirmation": true,
+      "hp_iv_16_persisted_at_all_captured_ram_checkpoints": true
+    }
+  },
+  "independent_data_checks": {
+    "party": {
+      "count": 3,
+      "slot0": {
+        "species_id": 35,
+        "pid": "0xE30363E2",
+        "stored_checksum_before": "0x4B6B",
+        "stored_checksum_after": "0x4B6C",
+        "iv_word_before": "0x055FA86F",
+        "iv_word_after": "0x055FA870",
+        "hp_iv_before_after": [15, 16],
+        "pid_flags_other_iv_bits_and_other_substructures_preserved": true,
+        "party_tail_byte_exact": true
+      },
+      "slots_1_and_2_byte_exact": true,
+      "all_target_and_other_party_records_decrypt_with_valid_checksums": true,
+      "stats_visible_or_recalculated_claimed": false
+    },
+    "bag_save_array3_byte_exact": true,
+    "reserve_table_code_and_guard_bytes_match_candidate_at_all_six_checkpoints": true,
+    "unattributed_native_save_payload_deltas": [
+      {"offset": "0x24", "before": "02", "after": "07"},
+      {"offset": "0x28", "before": "12", "after": "24"},
+      {"offset": "0x2C", "before": "35", "after": "0C"},
+      {"offset": "0x88", "before": "21", "after": "22"},
+      {"offset": "0x89", "before": "1D", "after": "24"},
+      {"offset": "0x1244", "before": "02", "after": "00"},
+      {"offset": "0x2355", "before": "03", "after": "00"},
+      {"offset": "0x2356", "before": "03", "after": "00"},
+      {"offset": "0x2445", "before": "01", "after": "03"},
+      {"offset": "0x246A", "before": "1B", "after": "25"},
+      {"offset": "0x2488", "before": "41", "after": "61"},
+      {"offset": "0x2495", "before": "02", "after": "01"}
+    ],
+    "unattributed_payload_semantics": "Not inferred"
+  },
+  "negative_guards": {
+    "cold_state_import": {
+      "method": "Called verify_result on the cold run while requiring the Yes-ACK state hash.",
+      "rejected": true,
+      "error": "candidate-local state lineage mismatch: stat-editor-confirm-set-iv-persist-cold"
+    },
+    "wrong_seed_dsv": {
+      "method": "Changed the expected seed SHA only in the imported auditor module's memory and reran main().",
+      "rejected": true,
+      "error": "Yes-ACK state/frozen DSV is not the pinned same-candidate source",
+      "files_modified": false
+    },
+    "wrong_hp_iv": {
+      "method": "Changed the in-memory saved Clefairy HP IV from 16 to 17, recomputed its checksum/encryption, and passed it to compare_decoded_party().",
+      "rejected": true,
+      "error": "saved target is not exactly the checksum-valid HP IV 15-to-16 change",
+      "files_modified": false
+    }
+  },
+  "review_limits": [
+    "This independently confirms one Set-IV persistence chain only; it does not expand operation coverage.",
+    "The cold boot reopened the confirmation prompt, so the review verifies the saved value and does not infer a second mutation.",
+    "The 12 listed non-Party/non-Bag payload bytes remain unattributed; no semantic explanation is asserted.",
+    "No stats screen, release readiness, reset, EV, or full-game claim is included."
+  ]
+}

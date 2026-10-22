@@ -1,0 +1,81 @@
+{
+  "schema": "ultimate-gold-stat-editor-mutators-independent-review/v1",
+  "status": "PASS_HOST_REVIEW_TARGET_ABI_AND_RUNTIME_PENDING",
+  "scope": "Read-only review of mutator handlers, native adapter/core contracts, and host tests; no emulator core or ROM used.",
+  "reviewed_artifacts": {
+    "handler_c": {
+      "path": "internal/stat-editor-mutators/stat_editor_mutators.c",
+      "sha256": "13a56e934afda13e9dde78ed360554f3fbac6c683f3653d71b8d4db8b9f04be8"
+    },
+    "handler_h": {
+      "path": "internal/stat-editor-mutators/stat_editor_mutators.h",
+      "sha256": "c5d2d31a15a4ca6ac70fe63c8e30921c3b3e02abfabe336acb3878445c1ef1a1"
+    },
+    "native_core": {
+      "path": "internal/stat-editor/stat_editor.c",
+      "sha256": "5ffdaf4bf223516b0b9ad4eccd2437f207459539d67a9c0995912d5dba3a8776"
+    },
+    "native_adapter": {
+      "path": "internal/stat-editor/stat_editor_native.c",
+      "sha256": "ed819da3941b0c515f1140c25a6f19548f5abb7d95ff5bb9f9f8de23fe22bcb8"
+    },
+    "native_flow_contract": {
+      "path": "internal/stat-editor/native-flow-contract.md",
+      "sha256": "5550a9e060ccb74db94028fb8d20bfb7990459fdc21bdd824397df0d96999a51"
+    },
+    "mutator_host_test_c": {
+      "path": "qa/stat_editor_mutators_host_test.c",
+      "sha256": "a80a7156fde44e689966a4f11e0d35d6740b8451746edea0c554fc599c6ad33c"
+    },
+    "mutator_host_test_py": {
+      "path": "qa/stat_editor_mutators_host_test.py",
+      "sha256": "c5ebbb26d874bf6fd069e2bb07f6da621889788f4c2d1cebbc6542f65b978f57"
+    }
+  },
+  "contract_review": {
+    "set_854_operands_u16": ["slot_var_id", "status_var_id", "value_var_id", "confirmation_var_id", "kind_immediate", "stat_immediate"],
+    "reset_855_operands_u16": ["slot_var_id", "status_var_id", "confirmation_var_id", "kind_immediate"],
+    "confirmation": "Only value 0 permits mutation; 1 and 0xFFFF return CANCELLED without Party lookup or native mutation.",
+    "cancel_slot": 255,
+    "operand_ids": "All variable IDs are range-checked and distinct before GetVarPointer calls; all resolved pointers must be non-null and pairwise distinct before Party lookup/native calls.",
+    "party_access": "SaveArray_Party_Get is called only after confirmation, slot, kind/stat, and saveData validation. The native adapter resolves the selected member and rejects malformed Party counts, empty slots, eggs, and invalid targets.",
+    "mutation": "Set delegates one EV/IV field update and one stat recalculation. Reset clears exactly six values from one family and recalculates once. No direct Pokémon-data access, PID write, or cross-family reset exists in the handlers/core.",
+    "bounds": "Core enforces per-EV 255, total EV 510, and IV 31; invalid stored EV totals and out-of-range values return before writes."
+  },
+  "findings": [
+    {
+      "severity": "none",
+      "summary": "No functional defect found in the reviewed handler logic or delegation to the native adapter/core.",
+      "evidence": "Static inspection plus passing host suites; cancellation, pointer guards, single-target writes, family isolation, PID preservation, bounds, and one recalculation are covered across handler/core tests."
+    },
+    {
+      "severity": "coverage_improvement",
+      "summary": "The existing suite did not exercise Reset-specific invalid variable IDs, null pointers, pointer aliasing, invalid target, empty/egg target, or null saveData paths.",
+      "resolution": "Added TestResetVariableGuardsAndInvalidTargets to qa/stat_editor_mutators_host_test.c. No handler source was changed."
+    }
+  ],
+  "verification": [
+    {
+      "command": "python qa/stat_editor_mutators_host_test.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python qa/stat_editor_host_test.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python qa/stat_editor_native_host_test.py",
+      "result": "PASS"
+    }
+  ],
+  "limitations": [
+    "The host tests use stubs and do not prove encrypted save-record behavior or live-game side effects.",
+    "The conditional STAT_EDITOR_MUTATORS_ARM_ABI_TEST layout assertions are not enabled by the host-test runner; source struct declarations show fieldSystem at ScriptContext offset 0x80 and saveData at FieldSystem offset 0x0C, but no target-ABI compile was run.",
+    "Opcodes 854/855 are not registered or linked into a ROM; dispatch, UI confirmation wiring, save/cold behavior, and runtime acceptance remain untested."
+  ],
+  "changed_files": ["qa/stat_editor_mutators_host_test.c"],
+  "review_files": [
+    "internal/stat-editor-mutators/independent-review.json",
+    "internal/stat-editor-mutators/independent-review.md"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "schema": "ultimate-gold-item119-npc-migration-plan/v1",
+  "status": "NATIVE_GRANT_UI_SAVE_COLD_BOUNDED_FRESH_AND_REAL_FULL_PENDING",
+  "candidate_sha256": "08e1d4e51599dc459600f1eff44e7915acbbaa111d74321be22a4800af629fcf",
+  "candidate_evidence": [
+    "qa-item119-npc-build.json",
+    "qa-item119-npc-static-review.md"
+  ],
+  "review_sha256": "05f3bec1b620a16342dccba4fe87ff8603e25abdf1bb8d6ff16d67a11a6171bf",
+  "review_source": "night-sprint/internal/stat-editor-research/item119-rocket-migration-review-20261022.md",
+  "verified_state": "The old Rocket gift route checks possession of item 118, not a new completion flag. e625 is a source-save SHA prefix, not a flag ID.",
+  "script": {
+    "archive": "a/0/1/2",
+    "member": 842,
+    "entry": 15,
+    "has_118_offset": "0x1FAA",
+    "old_received_target": "0x219E",
+    "give_118_offset": "0x216B"
+  },
+  "native_commands": {
+    "GiveItem": 125,
+    "HasSpaceForItem": 127,
+    "HasItem": 128
+  },
+  "native_success_contract": "GiveItem stores the actual Bag_AddItem BOOL in a script variable. Space preflight alone is insufficient; test the real result and keep failures retryable.",
+  "capacity_evidence": {
+    "runtime_key_item_slots": 60,
+    "retail_projection_key_item_slots": 50,
+    "expanded_pocket_counts": [
+      252,
+      42,
+      30,
+      102,
+      66,
+      12,
+      30,
+      60
+    ],
+    "canonical_slots": 594,
+    "canonical_bytes": 2376,
+    "cap_state_address": "0x023DD700",
+    "payload_address": "0x023DD714",
+    "identity_checks": [
+      "magic 0x43415042",
+      "current SaveData association",
+      "current SaveArray3 projection association"
+    ],
+    "expanded_review": "qa-item119-expanded-bag-review.md",
+    "retail_projection_evidence": {
+      "roms": [
+        "Alpha2 24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+        "item119 8bc4692eab0644a1b4366da4d7cae0f47ce09429953d198f1732fe0f96f81f62"
+      ],
+      "table_address": "0x021000BC",
+      "table_bytes": "a50028001800650040000c001e003200",
+      "consumer_instruction": "0x02077B72 ldrh",
+      "key_item_pocket_index": 7,
+      "key_item_slots": 50,
+      "full_pocket_test_cases": [
+        "49-to-50 retail projection boundary only",
+        "50-to-51 expanded grant; not a full pocket"
+      ],
+      "scope": "RETAIL_PROJECTION_ONLY_NOT_EXPANDED_COMMAND_CAPACITY"
+    }
+  },
+  "planned_behavior": [
+    "Offer item 119 by Yes/No to existing kit owners",
+    "Offer it after a new player receives the original kit",
+    "Check possession first to avoid duplicates",
+    "Do not repeat the old nine gifts in the editor-only branch",
+    "Use native capacity checks and actual grant result without a hardcoded capacity",
+    "Cancel or failed grants leave no completion state and permit retry"
+  ],
+  "limits": [
+    "Bounded native evidence only; not complete feature or campaign acceptance",
+    "Fresh-recipient flow and actual 60-slot refusal/retry remain pending",
+    "One intermediate close-Bag transition has no battery sidecar; limitation is declared in persistence review",
+    "No release integration",
+    "Item 119 is not proven globally unused"
+  ],
+  "runtime_command_dispatch": {
+    "give_item_125_thumb": "0x023DAD09",
+    "has_space_127_thumb": "0x023DAD01",
+    "shared_handler": "0x023DAD1C",
+    "bag_getter_hook": "0x0207879C -> 0x023DC6AD",
+    "scope": "Custom expanded-Bag handlers; the retail table is not the active capacity contract."
+  },
+  "native_acceptance": {
+    "parent_sha256": "08e1d4e51599dc459600f1eff44e7915acbbaa111d74321be22a4800af629fcf",
+    "scope": "Existing recipient, No/Yes/recheck and expanded extra-slot grant; native Save/cold of already acquired item.",
+    "expanded_key_slot_50": {
+      "item_id": 119,
+      "quantity": 1,
+      "global_slot": 584,
+      "visible_entries": 51
+    },
+    "persistence_report": "qa-item119-extra-slot-persistence.json",
+    "root_review": "qa-item119-extra-slot-persistence-review.md",
+    "save_counter_before": 10,
+    "save_counter_after": 11,
+    "originals_preserved": true,
+    "trace_limit": "One intermediate close-Bag run lacks its battery sidecar; adjacent frozen copies match its recorded DSV hash."
+  }
+}

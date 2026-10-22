@@ -1,0 +1,49 @@
+{
+  "title": "Headless runner once guard fix2 review",
+  "verdict": "PASS_WITH_NARROW_STATE_OUT_EDGE",
+  "scope": "Offline review of fix2 for pre-existing evidence protection and state-output ownership. No emulator/core was started.",
+  "artifacts": {
+    "wrapper": {
+      "path": "qa/headless_runner_once.py",
+      "sha256": "651150f00d4eb65aadf50d69bd72c8510b7535fa609b56cdcfe79678f714a48c"
+    },
+    "tests": {
+      "path": "qa/test_headless_runner_once.py",
+      "sha256": "bbd88dbb64fb0b0ae131434ab9cf615fad5bd8bba523732eeba95e8585111e13"
+    },
+    "pinned_runner": {
+      "path": "qa/headless_runner_uimode.py",
+      "sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+      "matches_wrapper_pin": true
+    }
+  },
+  "verification": {
+    "command": "engine/upstream/hg-engine/.venv/bin/python qa/test_headless_runner_once.py",
+    "result": "PASS",
+    "tests_passed": 11,
+    "emulator_started": false,
+    "temporary_probe": "reserve_outputs accepts state_out equal to the new run directory; verified in a temporary directory."
+  },
+  "confirmed_fixes": [
+    "The output run directory must not exist; mkdir is the atomic, permanent reservation, including after child failure.",
+    "Any pre-existing run directory is rejected, covering stale logs, DSVs, inputs, and empty directories without output-name allowlists.",
+    "A state-out path must be absent and resolve beneath the newly reserved run directory, preventing shared external state paths.",
+    "The pinned runner SHA-256 is checked before reservation or launch."
+  ],
+  "finding": {
+    "severity": "low",
+    "id": "RUN-ONCE-02",
+    "summary": "A state-out path equal to the run directory itself is accepted, although it is not a file path strictly below that directory.",
+    "evidence": [
+      "state_out.resolve().relative_to(run_dir) succeeds when both resolved paths are equal, returning an empty relative path.",
+      "A temporary-directory probe confirmed reserve_outputs returns successfully and creates the run directory for this input.",
+      "The pinned runner later calls write_bytes on state_out after processing frames; if state_out is the run directory, that write fails as a directory."
+    ],
+    "impact": "An invalid invocation can run the emulator before failing during state serialization, leaving a reserved partial run. This does not re-open the prior-output overwrite issue.",
+    "recommendation": "Require the resolved state-out path to be a strict descendant of run_dir, rejecting equality before child launch."
+  },
+  "limits": [
+    "No emulator/runtime run was performed.",
+    "The original pre-existing-evidence overwrite finding is closed by requiring a new run directory; this review does not cover general process concurrency or filesystem policy."
+  ]
+}

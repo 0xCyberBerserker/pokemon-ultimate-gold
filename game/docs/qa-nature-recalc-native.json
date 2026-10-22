@@ -1,0 +1,468 @@
+{
+  "schema": "nature-stat-recalc-native-fix2-acceptance/v2",
+  "status": "PASS_BOUNDED_NATIVE_RAM_AND_RECALC",
+  "summary_en": "On the exact isolated FIX6a candidate, opcode 858 wrote encoded nature 2 (Lonely), retail recalculation produced the exact Gen 4 stats, and resetting to 0 restored PID-fallback Timid stats. Current/max HP and level remained stable. No save or cold reload after mutation was tested.",
+  "summary_es": "En la candidata FIX6a aislada exacta, el opcode 858 escribió la naturaleza codificada 2 (Lonely), el recálculo retail produjo las estadísticas Gen 4 esperadas y el reset a 0 restauró las estadísticas Timid derivadas del PID. HP actual/máximo y nivel permanecieron estables. No se probó guardado ni recarga en frío después de modificar.",
+  "rom": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/nature-stat-recalc/fix2/nature-stat-recalc-fix6a.nds",
+    "sha256": "9e01938d9b27d453ec7a901c72d4f23a6d761a7a74b360deeb23ccdd56057636",
+    "bytes": 127073568,
+    "build_report_sha256": "b8b966ecd367fd006e41a095a2281ab717f324340f5b166b7e29344ef0315acd"
+  },
+  "core": {
+    "path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+  },
+  "runner": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+    "sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+  },
+  "seed_dsv": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-party-probe-fixture/nature-party-probe-fix6a.dsv",
+    "sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+    "profile_after_all_runs_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+    "active_main_counter": 10,
+    "active_main_crc16": 6003
+  },
+  "probe": {
+    "global_script_id": 2074,
+    "opcode": 858,
+    "sequence": [
+      "encoded2",
+      "WaitABPress",
+      "reset0",
+      "WaitABPress"
+    ],
+    "status_exact_zero_each_call": true,
+    "slot": 0
+  },
+  "runs": [
+    {
+      "run": "cold",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/cold",
+      "frames": 6500,
+      "result_sha256": "766d1bf3efe64bba2814eea9b6bfc692f41a2f429178ea6a4a4083b4e99d837e",
+      "input_script_sha256": "84f51b2b048369eea5ad483e8c15f3c60626594a08c6ad2fb87d6ef2dd0f5cc4",
+      "state_input_sha256": null,
+      "state_output_sha256": "4129b7a5e22afbd1fb632c661c1cab402555c5fbd2beee4505d42103b2a61029",
+      "ram_sha256": "c73825c2ed102ef9a525f985cfd289b2867d74cb65c0a086c4d70c3be1b43643",
+      "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "battery_evidence_sha256": "d1f7461e06ad19e92bb894cbbb4ef44ccc21084cc5a34c5187b2f3491f462368",
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/cold/cold_loaded.png",
+          "sha256": "df289ac8236fa5885ed26c0c0ecec20aa8e027290d6ef8fa9cfa863d2e7bd6eb"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/cold/continue_accepted.png",
+          "sha256": "5a0a6a6bee5ea4aa3de406e72dc7900a1f4958e0f620ef3e684ad5135838b1a1"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/cold/continue_menu.png",
+          "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/cold/pre_title.png",
+          "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+        }
+      ]
+    },
+    {
+      "run": "use",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/use",
+      "frames": 2000,
+      "result_sha256": "8d1e99f3a2002d7e766985f97f2551b10512be064fa9c90198d96a1fc21ba0a8",
+      "input_script_sha256": "60c659bf69f6e3cdf44ed9099b83a0e0b950acb85c74d778b071096fe0c38e39",
+      "state_input_sha256": "4129b7a5e22afbd1fb632c661c1cab402555c5fbd2beee4505d42103b2a61029",
+      "state_output_sha256": "68b0ea7a83c3c6063a151fcd9ffbebf6184f4175106e98627e6b1e5d7a6a268b",
+      "ram_sha256": "e27a62e05ac257f8cef0c6fdf3c5f6c7246754b035d8bf955a6352f10058b325",
+      "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "battery_evidence_sha256": "b220c74e84fa25db071aaa20847c99d33e35cea6547c7d2174bef4dad61beacb",
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/use/bag_open.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/use/context_after_a.png",
+          "sha256": "908ac2cc68cd0d3e01ae0aaf9dd3acfcfe6c93087e11971816bd5acc832b9640"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/use/dismiss_initial_dialog_before.png",
+          "sha256": "5a0a6a6bee5ea4aa3de406e72dc7900a1f4958e0f620ef3e684ad5135838b1a1"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/use/field_after_dialog.png",
+          "sha256": "aedb952f3114bb238f476651fa570fc08e1287ffc2853f12e51e8241e7daf145"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/use/field_before_bag.png",
+          "sha256": "a0bf264223c090d4e35210c7888d367bc0990f04d285164097c3fa6f78e2d375"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/use/key_items_open.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/use/kit_context.png",
+          "sha256": "75e76d053b8c2941bec67a6c5099a95037cc9fdc8032eabb83da84603457d911"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/use/kit_selected.png",
+          "sha256": "26db0517b13732282a6446579a2122cfe1d603f9598aa8dc80031f0d5133b5cd"
+        }
+      ]
+    },
+    {
+      "run": "reset",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/reset",
+      "frames": 100,
+      "result_sha256": "d254f7118195aecf4ca82922210c48845b89d81e5051b7bd25ea692cd07c9748",
+      "input_script_sha256": "4090bb4c883133a88eef67ca03caaf758971bb08e3bab504956bea711c7b3af8",
+      "state_input_sha256": "68b0ea7a83c3c6063a151fcd9ffbebf6184f4175106e98627e6b1e5d7a6a268b",
+      "state_output_sha256": "ff7a3472474872a904a64619687fa8279e26a34fd8cb820716b13bde710a76fa",
+      "ram_sha256": "e13eea3a4545854375b55c9c7aa45f8959840c6f16cb29fe147b220b9d5c402d",
+      "battery_sha256": "9c8193fe37871850f999a2e66f40d9c482a828ca5d99155fb195c54cc6adf46a",
+      "battery_evidence_sha256": "051d4beb6498130c89178ec160972cd8e316e710f722405a8c24a08c1cc8a794",
+      "screenshots": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/reset/after_reset_wait.png",
+          "sha256": "c025861cf650db523cb613860744bd587ba8142d6bf26e3f9aef59d733302d63"
+        },
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/nature-stat-recalc-native-fix2-20261022/reset/before_reset_ack.png",
+          "sha256": "3fbfea3db65d2aa88db5bbec8d5992ad7eb937e3934f6886b427d0ec3237c07d"
+        }
+      ]
+    }
+  ],
+  "personal_data": {
+    "narc_rom_file_id": 131,
+    "narc_path": "a/0/0/2",
+    "narc_sha256": "5f193d2eacddf0ffef9daf7acebd35dcdb21c30f59ab497759c3b7cc335f2d40",
+    "species_member": 35,
+    "member_length": 44,
+    "member_sha256": "3f46e2c070b8aefe09b26c31fb5193e1c31383d2c77c66dab4a4dd73872cbfca",
+    "base_stats_hp_atk_def_speed_spatk_spdef": [
+      70,
+      45,
+      48,
+      35,
+      60,
+      65
+    ],
+    "growth_rate_field_offset": 19,
+    "growth_rate_id": 4,
+    "pbr_copy": {
+      "narc_rom_file_id": 498,
+      "narc_path": "pbr/personal.narc",
+      "narc_sha256": "9bc883e846af6cc0810251c8ce05663ceadacac0f47dd83a24a93fa0cea75392",
+      "species_member_sha256": "26be90f8cc7d05a63c384d94cb1d45f94025fd76831a7109a07136bee79eeefb",
+      "same_first_six_base_stats": true,
+      "selected_by_retail_personal_accessor": false
+    },
+    "growth_formula": "floor(level^3 * 4 / 5) for verified GROWTH_FAST group 4",
+    "growth_thresholds_level_4_to_6": [
+      51,
+      100,
+      172
+    ]
+  },
+  "compiled_personal_data_route": {
+    "arm9_sha256": "68073bdd0c2cb8ae046337b7f88f4147e8a00863a9bdef40ab021909078e5e0d",
+    "retail_accessor": "PokePersonalParaGet",
+    "retail_accessor_addr": "0x0206FBE8",
+    "archive_id_immediate": 2,
+    "archive_id_symbol": "NARC_poketool_personal_personal",
+    "rom_fnt_resolution": {
+      "file_id": 131,
+      "path": "a/0/0/2",
+      "sha256": "5f193d2eacddf0ffef9daf7acebd35dcdb21c30f59ab497759c3b7cc335f2d40"
+    },
+    "disassembly_basis": "At 0x020725A4, the compiled wrapper loads ReadWholeNarcMemberByIdPair (literal 0x02007509), sets r1=2, and branches through r3; the following wrapper also passes r1=2 to 0x02007509.",
+    "binary_ranges": {
+      "PokePersonalParaGet": {
+        "address_start": "0x0206FBE8",
+        "address_end_exclusive": "0x0206FC06",
+        "bytes_hex": "38b50c1c0021fff74dff051c211cfff757ff041c281cfff7d7ff201c38bd",
+        "sha256": "4100b503bd0cef5628d84a8fc50b52bc6355dedaac571010ee1a9115a2e627fe"
+      },
+      "personal_archive_id_wrapper": {
+        "address_start": "0x020725A4",
+        "address_end_exclusive": "0x020725B4",
+        "bytes_hex": "024b021c081c02211847c04609750002",
+        "sha256": "57e6deb573789a511b67d3a73fcd2b3ce3ba9f0f67a7c391f5b443eaf113a6de"
+      },
+      "personal_archive_read_call": {
+        "address_start": "0x020725B4",
+        "address_end_exclusive": "0x020725C8",
+        "bytes_hex": "10b5141c00f03cf8021c201c022194f7a1ff10bd",
+        "sha256": "468c17b336bc4755fc5a1067c450d88588256b11aface0cc8614d962cb9f1886"
+      }
+    },
+    "source_pins": {
+      "pokeheartgold_src_pokemon_c_sha256": "d485ada6131981327c19c651fac9734d685a582f273bc990657901614f3e39e5",
+      "filesystem_files_def_sha256": "f2506f75fd52a8e40209cec4ca07d291cee18cb9036169a05db62aaa3a9df9cd",
+      "heartgold_filesystem_csv_sha256": "e971e18fdbd8867a27a13bc3cd8152d46711097af770c83a6cfe58f2ce7928bd",
+      "personal_struct_layout_sha256": "520368854d02e4ca8726c38077f71b6fc7700a5b6437891c279cfd55afe7521c",
+      "target_rom_ld_sha256": "ef8e4a62a5999a0dfae6393c23598a659d1056ba9ec4f13d9c95a4e7dd979a2e"
+    },
+    "historical_v1_report_sha256": "6c88a53a6aee2b817641c19dde3d15309097645f5e404eb4ad4044642d902c27",
+    "historical_v1_report_note": "v1 used PBR copy file ID 498 as the stats source; preserved unchanged. v2 selects a/0/0/2 based on the compiled archive-ID call path. Both records have the same six base-stat bytes for species 35."
+  },
+  "inputs": {
+    "pid": "0xE30363E2",
+    "species_id": 35,
+    "experience": 100,
+    "growth_level_from_exp": 5,
+    "stored_level_before": 5,
+    "evs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ivs_hp_atk_def_speed_spatk_spdef": [
+      15,
+      3,
+      10,
+      31,
+      21,
+      2
+    ],
+    "field114_before": "0xA5C1",
+    "pid_fallback_nature": 10
+  },
+  "formula": {
+    "timid_nature_id": 10,
+    "lonely_nature_id": 1,
+    "expected_stats_timid_fallback": [
+      22,
+      8,
+      10,
+      11,
+      12,
+      11
+    ],
+    "expected_stats_lonely_override": [
+      22,
+      9,
+      9,
+      10,
+      12,
+      11
+    ]
+  },
+  "snapshots": {
+    "cold": {
+      "save_data": "0x0227C240",
+      "party_address": "0x0227C2E0",
+      "bag_address": "0x0227C894",
+      "party_sha256": "52da1f4d693a4ea8cf07532edb918606167c953317aca58bc3ef7741a5eeb123",
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "context": {
+        "field_system": "0x022a0228",
+        "task_manager": "0x022c01c0",
+        "script_environment": "0x022a6b88",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6c88",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041075",
+        "script_pc": "0x022a8ecf",
+        "script_pc_opcode_u16": 53,
+        "special_vars_8004_8005_800c": [
+          0,
+          0,
+          1
+        ]
+      },
+      "target": {
+        "pid": "0xE30363E2",
+        "species_id": 35,
+        "field114_word": "0xA5C1",
+        "encoded_nature": 0,
+        "effective_nature": 10,
+        "level_saved": 5,
+        "level_from_exp": 5,
+        "hp_current": 22,
+        "hp_max": 22,
+        "attack": 8,
+        "defense": 10,
+        "speed": 11,
+        "sp_attack": 12,
+        "sp_defense": 11,
+        "evs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ivs": [
+          15,
+          3,
+          10,
+          31,
+          21,
+          2
+        ],
+        "pokemon_checksum_valid": true
+      },
+      "other_party_records_byte_exact_to_seed": true
+    },
+    "use": {
+      "save_data": "0x0227C240",
+      "party_address": "0x0227C2E0",
+      "bag_address": "0x0227C894",
+      "party_sha256": "06fad3ddf6d333eec46959ffbd44452e322878bd54378c54a5dc0456dab51ea3",
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "context": {
+        "field_system": "0x022a0228",
+        "task_manager": "0x022c015c",
+        "script_environment": "0x022a6b88",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6c88",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041001",
+        "script_pc": "0x022acabb",
+        "script_pc_opcode_u16": 41,
+        "special_vars_8004_8005_800c": [
+          0,
+          2,
+          0
+        ]
+      },
+      "target": {
+        "pid": "0xE30363E2",
+        "species_id": 35,
+        "field114_word": "0xA5C5",
+        "encoded_nature": 2,
+        "effective_nature": 1,
+        "level_saved": 5,
+        "level_from_exp": 5,
+        "hp_current": 22,
+        "hp_max": 22,
+        "attack": 9,
+        "defense": 9,
+        "speed": 10,
+        "sp_attack": 12,
+        "sp_defense": 11,
+        "evs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ivs": [
+          15,
+          3,
+          10,
+          31,
+          21,
+          2
+        ],
+        "pokemon_checksum_valid": true
+      },
+      "other_party_records_byte_exact_to_seed": true
+    },
+    "reset": {
+      "save_data": "0x0227C240",
+      "party_address": "0x0227C2E0",
+      "bag_address": "0x0227C894",
+      "party_sha256": "52da1f4d693a4ea8cf07532edb918606167c953317aca58bc3ef7741a5eeb123",
+      "bag_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+      "context": {
+        "field_system": "0x022a0228",
+        "task_manager": "0x022c015c",
+        "script_environment": "0x022a6b88",
+        "environment_magic": 222271,
+        "environment_state": 1,
+        "script_context": "0x022a6c88",
+        "script_context_mode": 2,
+        "native_wait_callback": "0x02041001",
+        "script_pc": "0x022acad7",
+        "script_pc_opcode_u16": 97,
+        "special_vars_8004_8005_800c": [
+          0,
+          0,
+          0
+        ]
+      },
+      "target": {
+        "pid": "0xE30363E2",
+        "species_id": 35,
+        "field114_word": "0xA5C1",
+        "encoded_nature": 0,
+        "effective_nature": 10,
+        "level_saved": 5,
+        "level_from_exp": 5,
+        "hp_current": 22,
+        "hp_max": 22,
+        "attack": 8,
+        "defense": 10,
+        "speed": 11,
+        "sp_attack": 12,
+        "sp_defense": 11,
+        "evs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ivs": [
+          15,
+          3,
+          10,
+          31,
+          21,
+          2
+        ],
+        "pokemon_checksum_valid": true
+      },
+      "other_party_records_byte_exact_to_seed": true
+    }
+  },
+  "runtime_dispatch": {
+    "cold": {
+      "dispatcher_count": 859,
+      "dispatcher_table_pointer": "0x023D5100",
+      "opcode858_entry_thumb": "0x023D6CA1",
+      "dispatch_section_sha256": "3a39eef214ef31c68fbc6775a558610953cf7d7bbd45f55449ff7c8418af2dd1",
+      "core_section_sha256": "1d628264e7040fd5f9ca1dfc3d37140e9725ff3a55dcedc5641231ff96f46b26",
+      "runtime_sections_exact_to_ROM": true,
+      "high_guard_intact": true
+    },
+    "use": {
+      "dispatcher_count": 859,
+      "dispatcher_table_pointer": "0x023D5100",
+      "opcode858_entry_thumb": "0x023D6CA1",
+      "dispatch_section_sha256": "3a39eef214ef31c68fbc6775a558610953cf7d7bbd45f55449ff7c8418af2dd1",
+      "core_section_sha256": "1d628264e7040fd5f9ca1dfc3d37140e9725ff3a55dcedc5641231ff96f46b26",
+      "runtime_sections_exact_to_ROM": true,
+      "high_guard_intact": true
+    },
+    "reset": {
+      "dispatcher_count": 859,
+      "dispatcher_table_pointer": "0x023D5100",
+      "opcode858_entry_thumb": "0x023D6CA1",
+      "dispatch_section_sha256": "3a39eef214ef31c68fbc6775a558610953cf7d7bbd45f55449ff7c8418af2dd1",
+      "core_section_sha256": "1d628264e7040fd5f9ca1dfc3d37140e9725ff3a55dcedc5641231ff96f46b26",
+      "runtime_sections_exact_to_ROM": true,
+      "high_guard_intact": true
+    }
+  },
+  "limits": [
+    "RAM-only native evidence; no battery Save or post-mutation cold reload.",
+    "Only the tested slot-0 Clefairy is covered.",
+    "No acceptance of full nature consumers, PC storage, or UI behavior."
+  ]
+}

@@ -1,0 +1,404 @@
+{
+  "schema": "ultimate-gold-owned-hm-actions/v1",
+  "status": "PARTIAL_NATIVE_ACTIONS_TESTED",
+  "auditor_sha256": "022ebf30b951b01d5124d5985262f637953fbbecddc5cf46c272f40e6319d923",
+  "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+  "rom_sha256": "2a1b5acac2e98e3bc0d18f600b7d91eb1e8298fdd436d132706e175bebf97c7f",
+  "runs": [
+    {
+      "run": "hm-fix5-fly-native-action",
+      "result_sha256": "380c08124b2439048cb8d883b92560c24272aea117dfc15725ac4f066d754b4b",
+      "ram_sha256": "bdf359801a467ae54c7d1519acb22d2f6fa2dda313c1280533cc0560f0bf1500",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        60,
+        -1,
+        695,
+        397,
+        1
+      ],
+      "location_source": "LocalFieldData.currentPosition; cached saved position, not a direct field-map read",
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [],
+      "native_save_equivalent_encryption_phases": [],
+      "temporary_setup_codes": [],
+      "persistent_fingerprint_sha256": "bd84408907eaf22ac1c899852c77d3f316997e981512a26233fc876ca0620e76",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-fix5-action-profile/qa-kit-shop-owned-hm-paged-fix5.dsv",
+          "bytes": 524410,
+          "sha256": "e2366b6eb035a67c2d8987d6f7ce9bb73f5e847234789ac1e2055e09c24db0f6"
+        }
+      ],
+      "state_input": "qa/runs/menu-fix5-cold-boot/navigation.state",
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-fly-native-action/fly_arrival.png",
+          "sha256": "a3d37e4396a6b013d8e9fc6687f6f3b627314891ab12117d6db6636cccf671bc"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-fly-native-action/fly_map.png",
+          "sha256": "74028c4e1c326af72e7c21c0f67b51b770d6bc3522d027bd9c18a7446d42e6ba"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-fly-native-action/party_context.png",
+          "sha256": "87d423fc52e0d1b4e99d2c7fab317247efdc5515e922b56a5ab8407df104bea0"
+        }
+      ]
+    },
+    {
+      "run": "hm-fix5-surf-land-return",
+      "result_sha256": "9439670388559c33d5621b38ddc9538da25a7d6d734bef119cff3ae07447d60d",
+      "ram_sha256": "d5108ea0d1b98a23e4320ce40e2dc5e44d285e5687243c77706ed345680e3cb8",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        60,
+        -1,
+        699,
+        399,
+        1
+      ],
+      "location_source": "LocalFieldData.currentPosition; cached saved position, not a direct field-map read",
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [],
+      "native_save_equivalent_encryption_phases": [],
+      "temporary_setup_codes": [],
+      "persistent_fingerprint_sha256": "bd84408907eaf22ac1c899852c77d3f316997e981512a26233fc876ca0620e76",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-fix5-action-profile/qa-kit-shop-owned-hm-paged-fix5.dsv",
+          "bytes": 524410,
+          "sha256": "e2366b6eb035a67c2d8987d6f7ce9bb73f5e847234789ac1e2055e09c24db0f6"
+        }
+      ],
+      "state_input": "qa/runs/hm-fix5-fly-native-action/arrival.state",
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-surf-land-return/land_return.png",
+          "sha256": "bd5341c70e2d85eac94bc0b3dda848d700b6133667b1312cc69fadd85f7ef8e1"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-surf-land-return/surf_actor.png",
+          "sha256": "d346f350d6acb5a6c366169ee6bc7a146758bc6f4fd24d51317dee715a7b72ea"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-surf-land-return/surf_prompt.png",
+          "sha256": "09865e9456852161be6340cadd93f3e69b2bed2a116a64c00a44c804b831f439"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-surf-land-return/surf_started.png",
+          "sha256": "c1ebc0b350168f63457db5839a43f39b6fd9b22bc9f105a3ea3008b724b5ca78"
+        }
+      ]
+    },
+    {
+      "run": "hm-fix5-native-save",
+      "result_sha256": "755a6e26b463224a3af203731e2d7ef1673f57405fa585337eef2944d3b01a44",
+      "ram_sha256": "66d1f8c1d3dfd3e8da7977ba047f7ce1a510549874fc8c76d47763b977f20abb",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        60,
+        -1,
+        699,
+        399,
+        2
+      ],
+      "location_source": "LocalFieldData.currentPosition; cached saved position, not a direct field-map read",
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [],
+      "native_save_equivalent_encryption_phases": [],
+      "temporary_setup_codes": [],
+      "persistent_fingerprint_sha256": "bd84408907eaf22ac1c899852c77d3f316997e981512a26233fc876ca0620e76",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-fix5-action-profile/qa-kit-shop-owned-hm-paged-fix5.dsv",
+          "bytes": 524410,
+          "sha256": "3824e502529e166d394541da586144bcbaa8f3832319076d199041a8059f70b8"
+        }
+      ],
+      "state_input": "qa/runs/hm-fix5-surf-land-return/land.state",
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-save/overwrite_prompt.png",
+          "sha256": "9443cd0f15d2d01636de590c72300e6f59b791e4ca2cc395f57eda1701632b04"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-save/save_prompt.png",
+          "sha256": "928d560d1223976026639c7b39ba728ee2b072ca5134dace53ae133ae521f06b"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-save/save_result.png",
+          "sha256": "8b0c134071d7e6fad0e9f967cb79035ffa00f4b7d98b3a93f244bacc0675ec04"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-save/saving.png",
+          "sha256": "1b7733f9e16486d2943cc9fd46e4ec5ebba6e0eadeb434afa8f86be832b4f2d5"
+        }
+      ]
+    },
+    {
+      "run": "hm-fix5-native-cold-reload",
+      "result_sha256": "0b0f9458a41cd27f4d0abce89a8a784e1cb65f1e841b494c2c2d2057b8aa7f72",
+      "ram_sha256": "ef6c0c5261b1c31a7b9fb7eb0a7963f75e3ba4b18444dca388f931dbe83095aa",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        60,
+        -1,
+        699,
+        399,
+        2
+      ],
+      "location_source": "LocalFieldData.currentPosition; cached saved position, not a direct field-map read",
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [],
+      "native_save_equivalent_encryption_phases": [
+        {
+          "slot": 0,
+          "box": {
+            "plaintext_prefix_bytes": 0
+          },
+          "tail": {
+            "plaintext_prefix_bytes": 0
+          },
+          "observed_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+        },
+        {
+          "slot": 1,
+          "box": {
+            "plaintext_prefix_bytes": 0
+          },
+          "tail": {
+            "plaintext_prefix_bytes": 0
+          },
+          "observed_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "slot": 2,
+          "box": {
+            "encrypted_prefix_bytes": 0
+          },
+          "tail": {
+            "encrypted_prefix_bytes": 42
+          },
+          "observed_sha256": "e46a7b18505ba5a6c59b18c0e189be57c9530e978ba3632a747d6492a2cdd500"
+        }
+      ],
+      "temporary_setup_codes": [],
+      "persistent_fingerprint_sha256": "bd84408907eaf22ac1c899852c77d3f316997e981512a26233fc876ca0620e76",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-fix5-action-profile/qa-kit-shop-owned-hm-paged-fix5.dsv",
+          "bytes": 524410,
+          "sha256": "3824e502529e166d394541da586144bcbaa8f3832319076d199041a8059f70b8"
+        }
+      ],
+      "state_input": null,
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-cold-reload/continue_or_load.png",
+          "sha256": "18ada65ef4685b33e259fd154599811e78bdf2c73cafdcd03fc86409a344157c"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-cold-reload/loaded_identity.png",
+          "sha256": "cccab4db8def97d31253e66e2763e905d24866dde9d7c02c7626ed59ce0680d7"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-cold-reload/loaded_location.png",
+          "sha256": "2bf376a4d4c153244477a5f7408b36ce096581303a4ea7057a7c9f03991242da"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-cold-reload/title_or_menu.png",
+          "sha256": "8a173bab6ca32f108b42e9e85d9610d312e68c4787247a45e36b0b9724b08c05"
+        }
+      ]
+    },
+    {
+      "run": "hm-fix5-native-cold-reload-stable",
+      "result_sha256": "d653a23a55ca8103763af47919e2492cbd0439bc16e3f7aaceac1b24e53bf468",
+      "ram_sha256": "7fe0a1b3972eeadbd52d1bc5a65df9fc2451450fed418e1c432a8f4152c92926",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "guards": {
+        "lower": true,
+        "upper": true,
+        "hm": true,
+        "shop": true,
+        "free": true,
+        "arena": true,
+        "canonical_bag": true,
+        "script_actor": true
+      },
+      "location": [
+        60,
+        -1,
+        699,
+        399,
+        2
+      ],
+      "location_source": "LocalFieldData.currentPosition; cached saved position, not a direct field-map read",
+      "party_count": 3,
+      "actor_moves": [
+        27,
+        1,
+        0,
+        0
+      ],
+      "ram_party_transient_plaintext_slots": [],
+      "native_save_equivalent_encryption_phases": [
+        {
+          "slot": 0,
+          "box": {
+            "plaintext_prefix_bytes": 0
+          },
+          "tail": {
+            "plaintext_prefix_bytes": 0
+          },
+          "observed_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+        },
+        {
+          "slot": 1,
+          "box": {
+            "plaintext_prefix_bytes": 0
+          },
+          "tail": {
+            "plaintext_prefix_bytes": 0
+          },
+          "observed_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "slot": 2,
+          "box": {
+            "encrypted_prefix_bytes": 0
+          },
+          "tail": {
+            "encrypted_prefix_bytes": 34
+          },
+          "observed_sha256": "b34ede930197d23096f4067f6b40a8d995cdadb3cd6329f4a1ba4d8ba8283058"
+        }
+      ],
+      "temporary_setup_codes": [],
+      "persistent_fingerprint_sha256": "bd84408907eaf22ac1c899852c77d3f316997e981512a26233fc876ca0620e76",
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-fix5-action-profile/qa-kit-shop-owned-hm-paged-fix5.dsv",
+          "bytes": 524410,
+          "sha256": "3824e502529e166d394541da586144bcbaa8f3832319076d199041a8059f70b8"
+        }
+      ],
+      "state_input": null,
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-cold-reload-stable/continue_or_load.png",
+          "sha256": "18ada65ef4685b33e259fd154599811e78bdf2c73cafdcd03fc86409a344157c"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-cold-reload-stable/loaded_identity.png",
+          "sha256": "cccab4db8def97d31253e66e2763e905d24866dde9d7c02c7626ed59ce0680d7"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-cold-reload-stable/loaded_location.png",
+          "sha256": "2bf376a4d4c153244477a5f7408b36ce096581303a4ea7057a7c9f03991242da"
+        },
+        {
+          "path": "night-sprint/qa/runs/hm-fix5-native-cold-reload-stable/title_or_menu.png",
+          "sha256": "8a173bab6ca32f108b42e9e85d9610d312e68c4787247a45e36b0b9724b08c05"
+        }
+      ]
+    }
+  ],
+  "golden_save_unchanged": true,
+  "ram_comparison": "Cold samples can stop during native box/party-tail u16 encryption loops. The header and every segment byte must exactly match the native-save record with at most one encryption boundary per segment; no field changes are ignored. Original RAM captures are retained.",
+  "input_cold_boot": {
+    "report": "qa-menu-fix5.json",
+    "state_sha256": "34f9dfb12dbb89e3e84f93d56a81be0e1cb18814b288315e34e3cc91acee0278",
+    "ram_dump_available": false
+  },
+  "setup": "Copied native fix4 battery e2366b6e; fresh fix5 cold boot. State links are fix5 only; no runtime codes in these runs.",
+  "native_save_cold_reload": "PASS: unchanged canonical inventory, party, badges and location; fresh process with no savestate or codes.",
+  "visual_checks": {
+    "fly": "Reviewed native destination map, animation and arrival outside Elm's lab.",
+    "surf": "Reviewed CLEFAIRY used Surf text and native surfing sprite before returning to shore.",
+    "land_return": "Reviewed separate native water-entry/shore-return run: walking sprite and follower restored on land; no active codes."
+  },
+  "menu_evidence": "qa-menu-fix5.json; independently checked two-page layout and navigation.",
+  "limitations_en": [
+    "Input battery has fixture-derived inventory/badges, not normal story acquisition.",
+    "Only Fly and Surf native actions assessed; other six actions remain pending.",
+    "All map gates, six other HM actions, HM learning and combined-shop/kit regressions remain pending.",
+    "This prototype is not included in the Alpha 1 download."
+  ],
+  "limitations_es": [
+    "La batería de entrada contiene inventario/medallas preparados, no adquisición normal por historia.",
+    "Solo se evaluaron las acciones nativas Fly y Surf; faltan otras seis.",
+    "Faltan límites de mapa, seis acciones de MO, enseñanza y regresión de tiendas/kit en el combinado.",
+    "Este prototipo no forma parte de la descarga Alfa 1."
+  ]
+}

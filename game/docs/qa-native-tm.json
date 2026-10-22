@@ -1,0 +1,21 @@
+{
+  "schema": "ultimate-gold-native-tm-qa/v1",
+  "date": "2026-10-21",
+  "status": "TESTED_PARTIAL",
+  "base_sha256": "fdb2fcabc4b51c4b98b0e4fcaf02740c81f32ede54c5a5bc0004d58c3133357e",
+  "target_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+  "item_id": 113,
+  "native_use": {"active_cheats": false, "owned_tm_328": [2, 99], "owned_tm_329": [99, 99], "absent_tm_330": [0, 0], "hm_420": [1, 1], "refill_item_quantity": [1, 1], "bag_return": "PASS", "second_use": "PASS"},
+  "normal_restart": {"savestate_input": false, "active_cheats": false, "tm_328": 99, "tm_329": 99, "absent_tm_330": 0, "hm_420": 1, "refill_item_quantity": 1, "battery_sha256": "a9275aba70d062ca5e159d87eb598c21e4d931533f601bd5e97df05f63247860"},
+  "npc": {"map_id": 60, "script_bank": 842, "entry": 15, "message_bank": 542, "message_id": 38, "original_dialogue_preserved": true, "gift_from_absence": "PASS", "repeat_quantity": 1, "active_cheats_during_dialogue": false},
+  "filesystem_diff": {"files": 384, "changed": ["a/0/1/2", "a/0/1/7", "a/0/2/7"], "all_other_rom_files_identical": true},
+  "screenshots_sha256": {
+    "bag_return": "ea938c2f8241d97acf2d33862f1d40bbf9e10fa6bdf09668152cd61c63acb855",
+    "normal_save_finished": "e32f0052d6344c1ead4f208b41ab6aee7935d4340d2105d8bd171505e739735a",
+    "fresh_process": "6f660fd85db943e04670c8a59a7898aef44d204cb8b8c691c0dd24279925682a",
+    "npc_gift": "d372a7c802afd9adf02a8a04de5c358fb5693b84cac1aa086abf2b8601bd182b",
+    "repeat_gift": "c91400204dec8efa7494d6deaa2a3afa7911cc6ca73762fd0a56923af8c2f3bc"
+  },
+  "limitations": ["isolated fixture save and seeded inventory", "normal empty slots protected by ID and quantity guards; zero-quantity fixture is not a normal inventory slot", "unused item icon still uses the question-mark graphic", "full adventure, evolution and PC storage remain pending", "HM field actions without a party move remain unimplemented"],
+  "rejected_candidates": {"d741aa9796983443d7ac6bf388cb7df363a6b0a2f64e763a1eae7dba5d9d14e8": "black screen after use", "37c95993d2cc62a4f3e6c44d90f9faaeda22a0526435e5a8e698710993af762a": "invalid return address caused core crash"}
+}

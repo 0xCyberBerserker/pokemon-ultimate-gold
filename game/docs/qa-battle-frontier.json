@@ -1,0 +1,2276 @@
+{
+  "schema": "ultimate-gold-battle-frontier-qa/v2",
+  "date": "2026-10-22",
+  "status": "FIRST_BATTLE_REACHED",
+  "gameplay_acceptance": "PARTIAL_FIRST_BATTLE_PASS",
+  "target_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+  "upstream": {
+    "repository": "pret/pokeheartgold",
+    "commit": "6988158691eb6178cff697cda0428045ddcba5fb"
+  },
+  "summary": {
+    "en": "Alpha 1's synthetic-entry test reached the native Battle Tower counter, completed the Single registration flow with three selected Pokémon, and observed the first battle in progress. This does not establish normal-story access, the other four facilities, battle completion or rewards, or a cold save reload.",
+    "es": "La prueba de entrada sintética en Alpha 1 llegó al mostrador nativo de Battle Tower (Torre Batalla), completó el registro Individual con tres Pokémon seleccionados y observó el primer combate en curso. No demuestra el acceso por la historia normal, las otras cuatro instalaciones, el final del combate ni sus premios, ni una recarga en frío de la partida."
+  },
+  "archives": {
+    "a/0/1/2": {
+      "members": 965,
+      "sha256": "997d62c5733f671b1dd6d93d6e45a8f7ebbe2d4a90597f193f2d9bc2eb4c70c5"
+    },
+    "a/0/3/2": {
+      "members": 491,
+      "sha256": "4870a40ad2a4237a8e0096d32a8b188a4ff8ab6a56bf72b46e0b4215c7195225"
+    },
+    "a/0/2/7": {
+      "members": 829,
+      "sha256": "b33db4c457d42ede17c8d7227dafe85b7a1e371071403328ec4093cedd633f51"
+    }
+  },
+  "target_entries_sha256": {
+    "scripts": {
+      "69": "cae4f19bc11361a970c683a678e9301642f3154b6d2ab1036c4d5710aa796dc8",
+      "76": "5153d7cfdb5f20f95adda8e866e26a0fb408de7806e4f645da82d8b25984682a",
+      "80": "ea0d2eaf78f4360ab3f7695b18cb742e3d184397cf8ac4fbe2f05a16ef94100b",
+      "81": "bed37d063c760a1e07ac883635764eab04b1b7e603995bb55085a41ca040c8e9",
+      "84": "58b81ec69675b6e94a1611420f2d19d77006f6332de9796cbc9c7afd3a30ed84",
+      "85": "2f5cbcfd5c9fd6d1aad4eb37ca49583afc2bd539ad70de66de2e4bf9cfce6e01",
+      "86": "e84f085533d4716e1a5b5a983e233cd31938e2119d5ccc56e25a0420523a426a",
+      "87": "23ab79ddf984c0388e35db2cb1137b6f2005b4fe12f4931c510848dc7042ea29"
+    },
+    "events": {
+      "91": "262600dcb2afe14b4284b3aea660e95e09c500f93ff807c7fb1d26f97d195fa2",
+      "240": "a7c1017793b273763934350bf515970a9ae3fbc9b647813ab03c95c71428e152",
+      "243": "0f4ee968ed42f2d4d1af31822523bbb691c272c9666fd49ddad2d92c96bceaaf",
+      "323": "55d80db1d8d2628e58746854012931a6ddc8525ef1ea7d84ab4668f11ecb0fe7",
+      "367": "6c4c9f989bc3fbbd3db70696513a29c150c312b09f7ec48d703cec46d97e1e23"
+    },
+    "messages": {
+      "96": "9f7b8a0d6b5944f0cf2700055fb4d149922468ed27a0917977b0564a7d027415",
+      "103": "5e9460288f72776fe6f4f4362f6f5af793076bea2bc0396ee7c89579053da95e",
+      "104": "f66baf0406c7d5eb6dc6ad51c78b8b13c380e418845cc1e32dc1ce4d20838d9e"
+    }
+  },
+  "static_source": {
+    "tower_map": {
+      "id": 265,
+      "header": "D31R0201",
+      "event_entry": 240,
+      "script_entry": 69
+    },
+    "frontier_hub": {
+      "id": 272,
+      "header": "D32",
+      "event_entry": 243,
+      "script_entry": 76
+    },
+    "facility_scripts": {
+      "Battle Factory": 84,
+      "Battle Hall": 85,
+      "Battle Castle": 86,
+      "Battle Arcade": 87
+    },
+    "tower_registration_npc": {
+      "object_id": "obj_D31R0201_bfsm",
+      "sprite": "SPRITE_BFSM",
+      "event_flag": "FLAG_NOTHING",
+      "script": "_EV_scr_seq_D31R0201_000 + 1",
+      "coordinates": [
+        15,
+        5
+      ]
+    },
+    "challenge_source": "scr_seq_0069_D31R0201.s; Single/Double selection invokes ScrCmd_412 validation.",
+    "tower_exit_warps": [
+      [
+        14,
+        19
+      ],
+      [
+        15,
+        19
+      ],
+      [
+        16,
+        19
+      ]
+    ],
+    "hub_tower_entry_warps": [
+      [
+        48,
+        17
+      ],
+      [
+        49,
+        17
+      ]
+    ],
+    "story_access": "NOT_ESTABLISHED"
+  },
+  "fixture": {
+    "classification": "SYNTHETIC_DIRECT_MAP_ENTRY_NOT_STORY_ACCESS_ACCEPTANCE",
+    "source_battery_sha256": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+    "source_hash_basis": "Recorded in fixture metadata; original source bytes were not independently rehashed by this audit.",
+    "synthetic_battery_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+    "writes": [
+      "currentPosition",
+      "active avatar/follower coordinates",
+      "main CRC16"
+    ],
+    "story_access_inferred": false
+  },
+  "runtime": {
+    "runner": "night-sprint/qa/headless_runner.py",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "individual_runner_gameplay_acceptance": "NOT_ASSESSED",
+    "runner_result_is_not_gameplay_acceptance": true,
+    "clean_boot": {
+      "run": "night-sprint/qa/runs/frontier-counter-final-step",
+      "result_json_sha256": "f174d6fed6f74459524017075b1b6372749f865df26c491f3fef1a23741702c3",
+      "input_script": "night-sprint/qa/runs/frontier-counter-final-step/input-script.json",
+      "input_script_sha256": "d5c81157aac5b036f6750417e88debccb0cd4dcc62736d2391fe295cdbc6004e",
+      "frames": 9000,
+      "execution_status": "COMPLETED",
+      "runner_result": "PASS",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+      "state_input": null,
+      "state_input_sha256": null,
+      "state_output_sha256": "34ce41d9606709e0780add7f7d5b7ef14ccd9ad48c2b20aca7ade9f07a6cdf80",
+      "cheat_count": 0,
+      "main_ram_sha256": "ab54698535a43fcd45eb2ab8ef5986dbd103a93bb95c511853f6789087ff47b5",
+      "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-root-profile/tm-refill-npc-candidate.dsv",
+      "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+      "checkpoints": [
+        "counter_position",
+        "hub_loaded",
+        "single_interaction"
+      ]
+    },
+    "state_chained_continuation": [
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-1",
+        "result_json_sha256": "8bd21ae68636000e05f3a758682e1c9ed7ecf0d70093078a16e96bc7407e0282",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-1/input-script.json",
+        "input_script_sha256": "81a34447346d400250b15150b023b773d0f785cf778b1379154f609678217bc1",
+        "frames": 90,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-final-step/navigation.state",
+        "state_input_sha256": "34ce41d9606709e0780add7f7d5b7ef14ccd9ad48c2b20aca7ade9f07a6cdf80",
+        "state_output_sha256": "5bd3821f9b48339330ab5c1b99072e198294fb18360a98e3375705ec3e7504d8",
+        "cheat_count": 0,
+        "main_ram_sha256": "05bbc1bd9521d77b31fa78f5988bf31229a13c7d35d00e763877bb638cdc53b0",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-1/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "dialogue_after_one_advance",
+          "dialogue_before_advance"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-2",
+        "result_json_sha256": "52fb1eaea2a0156f0c30d3691cb0dd9e3d25dc2e97fd0a8d9d03372cba4b5514",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-2/input-script.json",
+        "input_script_sha256": "5be264381c729793de21e589a6c3955b1f4c0e725440fc174043f4cb1ece1df9",
+        "frames": 90,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-1/navigation.state",
+        "state_input_sha256": "5bd3821f9b48339330ab5c1b99072e198294fb18360a98e3375705ec3e7504d8",
+        "state_output_sha256": "7bafd49d5fa7e3fa5827411ff3a259ed47285035c59dbd578598f28dc2a8fd2e",
+        "cheat_count": 0,
+        "main_ram_sha256": "1d8dcd750d11091d74bd7d38e2ab95e73e952b0e589e4f9db223195fa509b34e",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-2/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "challenge_intro_after_one_advance",
+          "challenge_intro_before_advance"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-3",
+        "result_json_sha256": "31f8005f0ad83273bec6476a781a6c181633e82cf55283704c5bf20ffad9f2a8",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-3/input-script.json",
+        "input_script_sha256": "90d20be9dbb1176d5583c563edbdf30113f8b4cf1a029ae2b93aad96b8d99896",
+        "frames": 90,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-2/navigation.state",
+        "state_input_sha256": "7bafd49d5fa7e3fa5827411ff3a259ed47285035c59dbd578598f28dc2a8fd2e",
+        "state_output_sha256": "e9d250604abe74105e2cacffc808f4aa77d865e14e7bfff9101899a3a8e9d5c9",
+        "cheat_count": 0,
+        "main_ram_sha256": "762e7380899d2535832f0332b942e11d365881e7d7e0b5a456c4f18dd9b66568",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-3/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "challenge_choice_after_confirm",
+          "challenge_choice_before_confirm"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-4",
+        "result_json_sha256": "1b7d7e6aa4d172fbb50a3a0ca498ea65e0520d4c9c1576145af45afb9bf6f22b",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-4/input-script.json",
+        "input_script_sha256": "7110aa0f3ae67a467535f3b0d04acc102669495fa8c650797e54b63b19628a15",
+        "frames": 90,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-3/navigation.state",
+        "state_input_sha256": "e9d250604abe74105e2cacffc808f4aa77d865e14e7bfff9101899a3a8e9d5c9",
+        "state_output_sha256": "60f4f4d754700f288f8c23136211f7bd1cb25125f16f759c6d995fa02979974f",
+        "cheat_count": 0,
+        "main_ram_sha256": "bd84ea66067b69f5c67a140a25b2b25a0bef30b8b2e2db7c78d6a2ea74f60650",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-4/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "single_room_after_confirm",
+          "single_room_before_confirm"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-5",
+        "result_json_sha256": "e14724ddbbd315be6bec201bdd6d3d612f6d130f7e6751fcce2b3c992f6d0ece",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-5/input-script.json",
+        "input_script_sha256": "5fda031b445e66b42a674c8b02244c6f4fb8c4308a530838ec341f7aadcc4685",
+        "frames": 90,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-4/navigation.state",
+        "state_input_sha256": "60f4f4d754700f288f8c23136211f7bd1cb25125f16f759c6d995fa02979974f",
+        "state_output_sha256": "424d541a76fba4dd2a30543d9dc8e6e0be9e79d61c855d0e29773281bb302c6b",
+        "cheat_count": 0,
+        "main_ram_sha256": "626eaf4b10cdc73c759b12cd40d47ea3e0276ad4a07ba62eb45929a2c7cb1006",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-5/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "pokemon_party_selector_after_advance",
+          "pokemon_selection_dialog_before_advance"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-6",
+        "result_json_sha256": "dbec39707531601d8e5193de18ee93c81869f7a26b5aacd6804693bba137b9aa",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-6/input-script.json",
+        "input_script_sha256": "b67f2bd9fdd4956bb0cea36f11797e05976d27c91ed412e4869ad596762e222c",
+        "frames": 120,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-5/navigation.state",
+        "state_input_sha256": "424d541a76fba4dd2a30543d9dc8e6e0be9e79d61c855d0e29773281bb302c6b",
+        "state_output_sha256": "d45f630121e629347a9d3ca6d8d11b2e36ccbeff422ebf7bd5f0ae12bf323b4b",
+        "cheat_count": 0,
+        "main_ram_sha256": "ff1e22f8a5a66850878e2bb4248b886f751020d2158e48b1b33e3340cc4d1e0b",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-6/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "party_screen_wait_30",
+          "party_screen_wait_90"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-7",
+        "result_json_sha256": "e2534e2eef56e833d1d8c58efa22ec5364019369f58fd69dd65e20b27bc9c24e",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-7/input-script.json",
+        "input_script_sha256": "86f92aa03bdc11cb179ff1ed85fcd385000497e2c1294b192c670708211400b3",
+        "frames": 90,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-6/navigation.state",
+        "state_input_sha256": "d45f630121e629347a9d3ca6d8d11b2e36ccbeff422ebf7bd5f0ae12bf323b4b",
+        "state_output_sha256": "6187d51d5dd069e93170e7477884ea9b0f3557efdc78e3ef5b92270022d7dcc3",
+        "cheat_count": 0,
+        "main_ram_sha256": "dcd8c47400d6e0de3689b58ce7b116b785db389c481e93a71e4dd651e32c4449",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-7/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "party_after_clefairy",
+          "party_before_clefairy"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-8",
+        "result_json_sha256": "d2b76138f8317634a6cb1b83cda327dabfbf1ca743cf207743400751dcbdc5cd",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-8/input-script.json",
+        "input_script_sha256": "6994c4d2e7008cd1e0e54ee15d27795a94ed50cd462b002f6c85446ccbcaf537",
+        "frames": 90,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-7/navigation.state",
+        "state_input_sha256": "6187d51d5dd069e93170e7477884ea9b0f3557efdc78e3ef5b92270022d7dcc3",
+        "state_output_sha256": "d4e3aebe00698128865ca2f8067130d9e874cc6e4fde13b3b77437aa7b014e95",
+        "cheat_count": 0,
+        "main_ram_sha256": "5ff25300b30c2c6bbb0058bc494b63e59f696cb3904c5ab849343b7ab381f193",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-8/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "clefairy_enter_choice_after_confirm",
+          "clefairy_enter_choice_before_confirm"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-9",
+        "result_json_sha256": "4ea9d758a24e4fe808a125b58715777944320edf6d228932ff3caef11d462104",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-9/input-script.json",
+        "input_script_sha256": "99f608c0a08d6bf8127126dccf570a2c8f4de9a64b75aef3ffba7c2ef23103ec",
+        "frames": 90,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-8/navigation.state",
+        "state_input_sha256": "d4e3aebe00698128865ca2f8067130d9e874cc6e4fde13b3b77437aa7b014e95",
+        "state_output_sha256": "201a18e225163d389e6bf482763078e7667033422d51b06e7e4d94821d6e013c",
+        "cheat_count": 0,
+        "main_ram_sha256": "3d469b4bf7a1fd3ce8c6747cc731c2f5ae0013350f45453bcec6d875d5077231",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-9/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "party_after_species152_focus",
+          "party_before_species152_focus"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-10",
+        "result_json_sha256": "d5ba12ecbd870fada8817011659af397b8af06710107cc31d61b4e43f428aee4",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-10/input-script.json",
+        "input_script_sha256": "aab33c3146f8a59aba2c7fa5159c8dfafa7953625cae10b7b54b72fb196db3e4",
+        "frames": 90,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-9/navigation.state",
+        "state_input_sha256": "201a18e225163d389e6bf482763078e7667033422d51b06e7e4d94821d6e013c",
+        "state_output_sha256": "3c6fe97542ad22f220ef51c0f578b56c96144fc0e3a16e939e5ca6ac67311701",
+        "cheat_count": 0,
+        "main_ram_sha256": "0c8bb80e281e0403236983d7b14e4765059cf33f649c24abcd1f2039a08c9dd5",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-10/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "species152_before_context_menu",
+          "species152_context_menu"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-11",
+        "result_json_sha256": "c811ca302eab39a81fb641eae65e2eb90041eb8484495a9355c9dc382051dfa3",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-11/input-script.json",
+        "input_script_sha256": "4b5e5fc3579f6e54e83e0d6112e08e667a8f8ae7ae999d763f486e8a89db45b7",
+        "frames": 90,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-10/navigation.state",
+        "state_input_sha256": "3c6fe97542ad22f220ef51c0f578b56c96144fc0e3a16e939e5ca6ac67311701",
+        "state_output_sha256": "41b552207f82482314237c6353f7c6649807cc3eee3baec7b18810e94a573c94",
+        "cheat_count": 0,
+        "main_ram_sha256": "46845c79e1d96c8bb4a85e048002076bdffe9b4472d0cdb49a82ac9cccb8ae7d",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-11/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "species152_enter_after_confirm",
+          "species152_enter_before_confirm"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-12",
+        "result_json_sha256": "1f25a2de950b0f1495fe9a69f64baa827f3a07e13612ed159a8307a02247853d",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-12/input-script.json",
+        "input_script_sha256": "14c65ac1ff9ef9ee48ed077c76164b4820d56aa0ee5efe55af599650a7c32568",
+        "frames": 110,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-11/navigation.state",
+        "state_input_sha256": "41b552207f82482314237c6353f7c6649807cc3eee3baec7b18810e94a573c94",
+        "state_output_sha256": "5b1663e43d047d49e650a47db76d0e2c59fe0f31ce07418a57157c1c5409a3c5",
+        "cheat_count": 0,
+        "main_ram_sha256": "58753cd3014e9ec274db47b44261c2978bfa55df13907526304365a80a1602b3",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-12/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "party_species152_second_before_move",
+          "party_species66_focus",
+          "party_species66_third",
+          "species66_enter_menu"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-13",
+        "result_json_sha256": "362ca78591879769cf0578a0d53a385c8a6ce6483501130d0395322b3d0a59c0",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-13/input-script.json",
+        "input_script_sha256": "654db0f5e9e9889142b65ff5c395299de0d71d89f6f70a9da33bc4f2029bba19",
+        "frames": 120,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-12/navigation.state",
+        "state_input_sha256": "5b1663e43d047d49e650a47db76d0e2c59fe0f31ce07418a57157c1c5409a3c5",
+        "state_output_sha256": "eb6dab3901f0dd53a52af8edd216a557d63ca769e10fb16d3464008c33634105",
+        "cheat_count": 0,
+        "main_ram_sha256": "9376a7459b09cbc6d736ad25e97ab281cf6f278261685040deee528da59f8966",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-13/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "party_confirm_after_touch",
+          "party_confirm_before_touch"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-14",
+        "result_json_sha256": "53f5b1b5d9cffff66e8f228905c37f28bc132ef4ead1f5d952a37bcba30ae049",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-14/input-script.json",
+        "input_script_sha256": "b13b9fc32866ef16fc3ae09bd41d5e6c8154c3819f1a4ca12ece59746706fc65",
+        "frames": 120,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-13/navigation.state",
+        "state_input_sha256": "eb6dab3901f0dd53a52af8edd216a557d63ca769e10fb16d3464008c33634105",
+        "state_output_sha256": "2f73b40340487c510bde606a1a7d5640ce5e351d11e7a501e6e75c2a95e0e445",
+        "cheat_count": 0,
+        "main_ram_sha256": "2107dcdb70068dd1192941e3e2fcacc8663d6f2241cb2f6079485c232b8285b5",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-14/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "post_party_confirm_dialog_30",
+          "post_party_confirm_dialog_90"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-15",
+        "result_json_sha256": "498dd6a1736a0966e7d4c55a6b4eda38b0a9059bbb68326c929ab212aeb95bca",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-15/input-script.json",
+        "input_script_sha256": "9780f640f9946d306fc409d508a6fe2f9ec40dcea7a94c4aa7dd860ce1c4c8ea",
+        "frames": 120,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-14/navigation.state",
+        "state_input_sha256": "2f73b40340487c510bde606a1a7d5640ce5e351d11e7a501e6e75c2a95e0e445",
+        "state_output_sha256": "82abdede07fd09497b733bbc4086425ab84790e8148344623285d74a4520db91",
+        "cheat_count": 0,
+        "main_ram_sha256": "334a62281af6e98c6af8655188c31d41933e3c7f855dfef52e8bed24007ffbae",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-15/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+        "checkpoints": [
+          "save_yes_after_confirm",
+          "save_yes_before_confirm"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-16",
+        "result_json_sha256": "2d169b92d46d48b026809dec7257e9eab1fd2091c45a7802caead22ddb8eb422",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-16/input-script.json",
+        "input_script_sha256": "ac83bdb03fc33e30c9d2e621c815cda2726dd32a2d35c9619920c868d3ec5838",
+        "frames": 120,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-15/navigation.state",
+        "state_input_sha256": "82abdede07fd09497b733bbc4086425ab84790e8148344623285d74a4520db91",
+        "state_output_sha256": "04748f5a7b4a3ff6f675e8af66c330ac48df329022e565b8f051a32071eed9de",
+        "cheat_count": 0,
+        "main_ram_sha256": "290efff47c8bf1776184042156a3448225f5bcfd31f9152764574b3a06db7f11",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-16/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "e78a7e9eaa45c8cca5fc2896e4e54d02cd1fa6628ac5ae6c691ecb1cef2f7b75",
+        "checkpoints": [
+          "save_overwrite_yes_after_confirm",
+          "save_overwrite_yes_before_confirm"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-17",
+        "result_json_sha256": "5274c9dbdf148fd0b509274f80c5415a2084f8a61e9ebe4bd94a1bbd9c154c12",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-17/input-script.json",
+        "input_script_sha256": "0842a45a0c0c07a1a1ce289e2542645aaf72d908f4e6e1079b4900310b5fd73e",
+        "frames": 120,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-16/navigation.state",
+        "state_input_sha256": "04748f5a7b4a3ff6f675e8af66c330ac48df329022e565b8f051a32071eed9de",
+        "state_output_sha256": "344dc637b3589eba7ed228f85aebc72cfb3ef49d40a859646ada5b55a9146b2f",
+        "cheat_count": 0,
+        "main_ram_sha256": "e991d3a20e879fe46bc666fc999a6dceebff4004db20dc8ff51a506b5782cede",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-17/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "88c759b845fe5791952cfc103db3d80935090556dc04eb9e86c4a709e9aebb3d",
+        "checkpoints": [
+          "frontier_post_save_wait_30",
+          "frontier_post_save_wait_90"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-18",
+        "result_json_sha256": "8fa61295212691224b022827993c2995011dd600f57b5164459efa3a115a7455",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-18/input-script.json",
+        "input_script_sha256": "3730db56def97e64e63227db8409589cd31d90f27333f162a08e1deac539e026",
+        "frames": 600,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-17/navigation.state",
+        "state_input_sha256": "344dc637b3589eba7ed228f85aebc72cfb3ef49d40a859646ada5b55a9146b2f",
+        "state_output_sha256": "242ab4493af4d67b03df1a6aff86aebba6ed493974383e585a34c270b074298d",
+        "cheat_count": 0,
+        "main_ram_sha256": "f62c4ae87904aaa478da5f102b8d5e793c7620e796b1437a490b18ffd238c951",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-18/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "d17e47a252cd048e58eb48c08d08bb458d39148bebf71e46c5637758a4a03c6b",
+        "checkpoints": [
+          "frontier_save_wait_120",
+          "frontier_save_wait_540"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-19",
+        "result_json_sha256": "f227f44741c849baa418668069abd353e8829716708d0a85d21e412b9b377181",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-19/input-script.json",
+        "input_script_sha256": "89423aaa9630cb8c4a23dc18e4b5e6696f7d8f21df8a42807da3a67d08a6b727",
+        "frames": 120,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-18/navigation.state",
+        "state_input_sha256": "242ab4493af4d67b03df1a6aff86aebba6ed493974383e585a34c270b074298d",
+        "state_output_sha256": "4ea70991cbb17e18353d1a6ecc7a3697dd2b0c4e21f85b35ec3aacc504abaaee",
+        "cheat_count": 0,
+        "main_ram_sha256": "38de2eae4423f7cd330fc3f9490477b8f2400c7c28a954613c5230377d0618e4",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-19/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861",
+        "checkpoints": [
+          "saving_message_after_advance",
+          "saving_message_before_advance"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-20",
+        "result_json_sha256": "2af972f55a504626dc3d183942fa42b2c526da9437e95491589018865343fb27",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-20/input-script.json",
+        "input_script_sha256": "efddf8255108c21a901e368e066379cd51e55eaa7aea047b0be76ad27e2be0bd",
+        "frames": 5000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-19/navigation.state",
+        "state_input_sha256": "4ea70991cbb17e18353d1a6ecc7a3697dd2b0c4e21f85b35ec3aacc504abaaee",
+        "state_output_sha256": "c8264f8d7c0956bb27fd72707f3419c408991a7c381237b53b29db7c3e76b255",
+        "cheat_count": 0,
+        "main_ram_sha256": "028ff714134f7ec4650ea6f6869ec3b3f8a25f26d279675cd826f80eb03bdffb",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-20/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861",
+        "checkpoints": [
+          "frontier_save_wait_1000",
+          "frontier_save_wait_2500",
+          "frontier_save_wait_4500"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-21",
+        "result_json_sha256": "c70bf55a2c479aa86fcf613335e09ca7ad96ab8a27a48ebe2642881f7436876c",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-21/input-script.json",
+        "input_script_sha256": "2a57abeb8d6ce692aacb8988d632b49879715d978c133c187ff40989a6b42118",
+        "frames": 120,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-20/navigation.state",
+        "state_input_sha256": "c8264f8d7c0956bb27fd72707f3419c408991a7c381237b53b29db7c3e76b255",
+        "state_output_sha256": "d21edae6fd55dbc69fa5d448cf86ac94ee82e8f399e347def8ef2ce109f9c2ea",
+        "cheat_count": 0,
+        "main_ram_sha256": "4f5a3aa72693d36a958e474babc8a6745c9f8cef6f4bbcb8f22e59a0f041b1b6",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-21/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861",
+        "checkpoints": [
+          "frontier_room_transition_after_advance",
+          "frontier_room_transition_before_advance"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-22",
+        "result_json_sha256": "5fa46ba8ec9640267cfd9eaca910dd42a4061c0369329e5c63edcaaae1b3b002",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-22/input-script.json",
+        "input_script_sha256": "a76e99f052e3ce0f1916ce6c652bab247cad375946effd7e6766913c972fb7e3",
+        "frames": 180,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-21/navigation.state",
+        "state_input_sha256": "d21edae6fd55dbc69fa5d448cf86ac94ee82e8f399e347def8ef2ce109f9c2ea",
+        "state_output_sha256": "eaa64846815d639660efff80c2c72fd27f2bd04ee2938987df555ac8e2b28982",
+        "cheat_count": 0,
+        "main_ram_sha256": "4967f5ef18da33afa0cd1b92d344226c15b9482bf85a7ba4530d9d3fef23f8b6",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-22/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861",
+        "checkpoints": [
+          "battle_room_transition_wait_150",
+          "battle_room_transition_wait_30"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-23",
+        "result_json_sha256": "0d71302dbe97f7d96f0c2cf00b85a013b9d43808bc35b0a616168665cf460eb5",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-23/input-script.json",
+        "input_script_sha256": "7bed4919c4e30296ecedd92561ba2b7c39d28cdc2ada53eb212505f7879f606d",
+        "frames": 120,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-22/navigation.state",
+        "state_input_sha256": "eaa64846815d639660efff80c2c72fd27f2bd04ee2938987df555ac8e2b28982",
+        "state_output_sha256": "f63e574c500ebe409bc8e26f88b8f7915fdd1f4c4ea79fd8cb292bc53be9e3b4",
+        "cheat_count": 0,
+        "main_ram_sha256": "2d0402edc0ce406e453737a3db49a554d0faea8e57fc02eaeae4343745fb8dd2",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-23/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861",
+        "checkpoints": [
+          "battle_room_npc_after_check",
+          "battle_room_npc_before_check"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-24",
+        "result_json_sha256": "80c500388247ef13cbf07a087618fb09113105c342ba1711d26032a084e9fd3c",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-24/input-script.json",
+        "input_script_sha256": "deff733b2b451262cf225443496dbf4d6bb7739d37cbb8e5b448c265d736d6d8",
+        "frames": 240,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-23/navigation.state",
+        "state_input_sha256": "f63e574c500ebe409bc8e26f88b8f7915fdd1f4c4ea79fd8cb292bc53be9e3b4",
+        "state_output_sha256": "3cd8e56f5a28c3999f3a169f87481db22fc5f633fc11d0406a3897942b28de89",
+        "cheat_count": 0,
+        "main_ram_sha256": "d80c97621a84c0aa0987d573435e0e55f2f0f5421c0a85dcbe6c5f469604e3ee",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-24/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861",
+        "checkpoints": [
+          "battle_transition_wait_210",
+          "battle_transition_wait_60"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-25",
+        "result_json_sha256": "3299edaa623d987b615775e94657768f3c1526b2e7629c691251f09726a8af97",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-25/input-script.json",
+        "input_script_sha256": "8d06a8caaae0451a2164e48f94c83e32a2a063cb187569de3e73a6909d6b2757",
+        "frames": 300,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-24/navigation.state",
+        "state_input_sha256": "3cd8e56f5a28c3999f3a169f87481db22fc5f633fc11d0406a3897942b28de89",
+        "state_output_sha256": "4addf82aa750b934cb8f428a9e0a0f4b79079b754f686f3ef777b53df24d0364",
+        "cheat_count": 0,
+        "main_ram_sha256": "dba8e0171902cc5c7ea155af160ff329ae56b0732d040d7b5c6b3bdee5a050f4",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-25/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861",
+        "checkpoints": [
+          "tower_elevator_wait_270",
+          "tower_elevator_wait_60"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-26",
+        "result_json_sha256": "9526aa7e9d12e6f3065865e8a5ff918df331d1b33f0578083599d8863e633c85",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-26/input-script.json",
+        "input_script_sha256": "23ae262bfe66016b714cd8500df3ffa81cf0edc713b46bedf6870187d95bfc81",
+        "frames": 150,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-25/navigation.state",
+        "state_input_sha256": "4addf82aa750b934cb8f428a9e0a0f4b79079b754f686f3ef777b53df24d0364",
+        "state_output_sha256": "bc874eca4d9d30da268303c1ffe4a9779ace2de77f84ee111065071d67e80f5f",
+        "cheat_count": 0,
+        "main_ram_sha256": "5b1a01d82c2c2a3be13ea4e6581f65313b158f8d7ba483afebb907412455ebcd",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-26/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861",
+        "checkpoints": [
+          "frontier_trainer_quote_after_advance",
+          "frontier_trainer_quote_before_advance"
+        ]
+      },
+      {
+        "run": "night-sprint/qa/runs/frontier-counter-step-27",
+        "result_json_sha256": "abac5ab6bcc30fe0f182321bebfa99dc40c297522b09716bbd14af49bd508279",
+        "input_script": "night-sprint/qa/runs/frontier-counter-step-27/input-script.json",
+        "input_script_sha256": "d822fb5505c408cf3c5e69059bc18c82e7e7bd817fdf6d60f4f05eaebbef2194",
+        "frames": 300,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "rom_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+        "state_input": "night-sprint/qa/runs/frontier-counter-step-26/navigation.state",
+        "state_input_sha256": "bc874eca4d9d30da268303c1ffe4a9779ace2de77f84ee111065071d67e80f5f",
+        "state_output_sha256": "34ee6545cb403a414e17dcf7e4790811e20aa36cf03ab9aeb3d0e8374d86ac9b",
+        "cheat_count": 0,
+        "main_ram_sha256": "5c30613d8ceb878edb12d5fe4ce4ea0f71d2e1d78559d70420a9ef61981effcd",
+        "battery_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/frontier-counter-step-27/saves/tm-refill-npc-candidate.dsv",
+        "battery_output_sha256": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861",
+        "checkpoints": [
+          "frontier_battle_load_wait_270",
+          "frontier_battle_load_wait_60"
+        ]
+      }
+    ],
+    "position_checkpoints": {
+      "counter": {
+        "run": "night-sprint/qa/runs/frontier-counter-final-step",
+        "main_ram_sha256": "ab54698535a43fcd45eb2ab8ef5986dbd103a93bb95c511853f6789087ff47b5",
+        "save_pointer_address": "0x021D2228",
+        "save_pointer_value": "0x0227C290",
+        "location_address": "0x0227D4D4",
+        "source": "SaveData.LocalFieldData.currentPosition (cached saved position)",
+        "current_field_map_verified": false,
+        "tuple": [
+          265,
+          0,
+          15,
+          6,
+          0
+        ],
+        "field_order": [
+          "map",
+          "warp",
+          "x",
+          "z",
+          "direction"
+        ],
+        "direction_name": "north"
+      },
+      "cached_elevator_at_battle_start": {
+        "run": "night-sprint/qa/runs/frontier-counter-step-27",
+        "main_ram_sha256": "5c30613d8ceb878edb12d5fe4ce4ea0f71d2e1d78559d70420a9ef61981effcd",
+        "save_pointer_address": "0x021D2228",
+        "save_pointer_value": "0x0227C290",
+        "location_address": "0x0227D4D4",
+        "source": "SaveData.LocalFieldData.currentPosition (cached saved position)",
+        "current_field_map_verified": false,
+        "tuple": [
+          266,
+          -1,
+          3,
+          6,
+          1
+        ],
+        "field_order": [
+          "map",
+          "warp",
+          "x",
+          "z",
+          "direction"
+        ],
+        "direction_name": "south"
+      }
+    },
+    "screenshots": {
+      "reception_dialogue": {
+        "path": "night-sprint/qa/runs/frontier-counter-final-step/single_interaction.png",
+        "sha256": "0c72571662099a2ff17904ca4fa32f177dd23aca9eff7ffd1646a6d7bc606a71"
+      },
+      "selected_three_party": {
+        "path": "night-sprint/qa/runs/frontier-counter-step-12/party_species66_third.png",
+        "sha256": "f0cf53ec0943ffc9363ab116ed930541445fd9949b9a578d2d29bb917d7ffc7f"
+      },
+      "trainer_challenge_dialogue": {
+        "path": "night-sprint/qa/runs/frontier-counter-step-27/frontier_battle_load_wait_60.png",
+        "sha256": "7d1a02896808333e08b7f8777bf09574789bd79f68896e830029b297d61c06dd"
+      },
+      "active_first_battle": {
+        "path": "night-sprint/qa/runs/frontier-counter-step-27/frontier_battle_load_wait_270.png",
+        "sha256": "ab130e5e9989484ea2f4d809da76bf0659e62ba33058169e756c2454320d6b9b"
+      }
+    },
+    "published_reception_capture": {
+      "path": "web/assets/locations/battle-tower-reception.png",
+      "sha256": "0c72571662099a2ff17904ca4fa32f177dd23aca9eff7ffd1646a6d7bc606a71",
+      "byte_identical_to": "night-sprint/qa/runs/frontier-counter-final-step/single_interaction.png"
+    },
+    "npc_interaction": "PASS_WELCOME_DIALOGUE_OBSERVED",
+    "challenge_registration": "PASS_SINGLE_FLOW_ON_SYNTHETIC_QA_SAVE",
+    "selected_team": [
+      {
+        "species_id": 35,
+        "name": "Clefairy",
+        "slot": 1
+      },
+      {
+        "species_id": 152,
+        "name": "Chikorita",
+        "slot": 2
+      },
+      {
+        "species_id": 66,
+        "name": "Machop",
+        "slot": 3
+      }
+    ],
+    "first_battle": {
+      "status": "PASS_ACTIVE_BATTLE_OBSERVED",
+      "trainer": "Tuber Manford",
+      "opponent_species": "Remoraid",
+      "player_active_species": "Clefairy",
+      "player_hp_at_checkpoint": "22/22",
+      "match_completed": false,
+      "reward_observed": false
+    },
+    "other_facilities": "NOT_TESTED",
+    "cold_battery_reload": "NOT_TESTED",
+    "visual_review_en": {
+      "reception_dialogue": "Welcome to the Battle Tower! is shown at the native receptionist; runtime RAM location is map 265, (15,6), north.",
+      "selected_three_party": "Single party registration marks three distinct selected Pokémon as FIRST, SECOND, and THIRD in the synthetic profile.",
+      "trainer_challenge_dialogue": "You are challenged by Tuber Manford! is visible. The cached saved position is map 266 (Elevator), not proof of the current field map.",
+      "active_first_battle": "Battle UI is active: Remoraid versus Clefairy; Clefairy is at 22/22 HP. The battle outcome is not shown."
+    },
+    "visual_review_es": {
+      "reception_dialogue": "El recepcionista nativo muestra Welcome to the Battle Tower!; la posición leída de RAM es mapa 265, (15,6), norte.",
+      "selected_three_party": "El registro Individual marca tres Pokémon distintos como FIRST, SECOND y THIRD en el perfil sintético.",
+      "trainer_challenge_dialogue": "Se ve You are challenged by Tuber Manford! La posición guardada en caché indica mapa 266 (ascensor), sin demostrar el mapa de campo actual.",
+      "active_first_battle": "El combate está activo: Remoraid contra Clefairy; Clefairy tiene 22/22 PS. No se muestra el resultado."
+    }
+  },
+  "checks": [
+    {
+      "check": "alpha1_rom_identity",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "runner_identity",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "core_identity",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "pinned_upstream",
+      "passed": true,
+      "evidence": "6988158691eb6178cff697cda0428045ddcba5fb"
+    },
+    {
+      "check": "target_archive_fingerprints",
+      "passed": true,
+      "evidence": "a/0/1/2, a/0/3/2, a/0/2/7"
+    },
+    {
+      "check": "upstream_map_npc_warp_and_challenge_links",
+      "passed": true,
+      "evidence": "BFSM at 15,5; native Tower/hub warps"
+    },
+    {
+      "check": "synthetic_fixture_provenance",
+      "passed": true,
+      "evidence": "recorded source=fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384; verified fixture output=5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-final-step_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-final-step_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-final-step_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-final-step_input_script",
+      "passed": true,
+      "evidence": "d5c81157aac5b036f6750417e88debccb0cd4dcc62736d2391fe295cdbc6004e"
+    },
+    {
+      "check": "frontier-counter-final-step_state_input",
+      "passed": true,
+      "evidence": "None"
+    },
+    {
+      "check": "frontier-counter-final-step_state_output",
+      "passed": true,
+      "evidence": "34ce41d9606709e0780add7f7d5b7ef14ccd9ad48c2b20aca7ade9f07a6cdf80"
+    },
+    {
+      "check": "frontier-counter-final-step_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-final-step_main_ram",
+      "passed": true,
+      "evidence": "ab54698535a43fcd45eb2ab8ef5986dbd103a93bb95c511853f6789087ff47b5"
+    },
+    {
+      "check": "frontier-counter-final-step_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-1_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-1_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-1_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-1_input_script",
+      "passed": true,
+      "evidence": "81a34447346d400250b15150b023b773d0f785cf778b1379154f609678217bc1"
+    },
+    {
+      "check": "frontier-counter-step-1_state_input",
+      "passed": true,
+      "evidence": "34ce41d9606709e0780add7f7d5b7ef14ccd9ad48c2b20aca7ade9f07a6cdf80"
+    },
+    {
+      "check": "frontier-counter-step-1_state_output",
+      "passed": true,
+      "evidence": "5bd3821f9b48339330ab5c1b99072e198294fb18360a98e3375705ec3e7504d8"
+    },
+    {
+      "check": "frontier-counter-step-1_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-1_main_ram",
+      "passed": true,
+      "evidence": "05bbc1bd9521d77b31fa78f5988bf31229a13c7d35d00e763877bb638cdc53b0"
+    },
+    {
+      "check": "frontier-counter-step-1_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-2_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-2_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-2_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-2_input_script",
+      "passed": true,
+      "evidence": "5be264381c729793de21e589a6c3955b1f4c0e725440fc174043f4cb1ece1df9"
+    },
+    {
+      "check": "frontier-counter-step-2_state_input",
+      "passed": true,
+      "evidence": "5bd3821f9b48339330ab5c1b99072e198294fb18360a98e3375705ec3e7504d8"
+    },
+    {
+      "check": "frontier-counter-step-2_state_output",
+      "passed": true,
+      "evidence": "7bafd49d5fa7e3fa5827411ff3a259ed47285035c59dbd578598f28dc2a8fd2e"
+    },
+    {
+      "check": "frontier-counter-step-2_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-2_main_ram",
+      "passed": true,
+      "evidence": "1d8dcd750d11091d74bd7d38e2ab95e73e952b0e589e4f9db223195fa509b34e"
+    },
+    {
+      "check": "frontier-counter-step-2_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-3_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-3_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-3_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-3_input_script",
+      "passed": true,
+      "evidence": "90d20be9dbb1176d5583c563edbdf30113f8b4cf1a029ae2b93aad96b8d99896"
+    },
+    {
+      "check": "frontier-counter-step-3_state_input",
+      "passed": true,
+      "evidence": "7bafd49d5fa7e3fa5827411ff3a259ed47285035c59dbd578598f28dc2a8fd2e"
+    },
+    {
+      "check": "frontier-counter-step-3_state_output",
+      "passed": true,
+      "evidence": "e9d250604abe74105e2cacffc808f4aa77d865e14e7bfff9101899a3a8e9d5c9"
+    },
+    {
+      "check": "frontier-counter-step-3_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-3_main_ram",
+      "passed": true,
+      "evidence": "762e7380899d2535832f0332b942e11d365881e7d7e0b5a456c4f18dd9b66568"
+    },
+    {
+      "check": "frontier-counter-step-3_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-4_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-4_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-4_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-4_input_script",
+      "passed": true,
+      "evidence": "7110aa0f3ae67a467535f3b0d04acc102669495fa8c650797e54b63b19628a15"
+    },
+    {
+      "check": "frontier-counter-step-4_state_input",
+      "passed": true,
+      "evidence": "e9d250604abe74105e2cacffc808f4aa77d865e14e7bfff9101899a3a8e9d5c9"
+    },
+    {
+      "check": "frontier-counter-step-4_state_output",
+      "passed": true,
+      "evidence": "60f4f4d754700f288f8c23136211f7bd1cb25125f16f759c6d995fa02979974f"
+    },
+    {
+      "check": "frontier-counter-step-4_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-4_main_ram",
+      "passed": true,
+      "evidence": "bd84ea66067b69f5c67a140a25b2b25a0bef30b8b2e2db7c78d6a2ea74f60650"
+    },
+    {
+      "check": "frontier-counter-step-4_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-5_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-5_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-5_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-5_input_script",
+      "passed": true,
+      "evidence": "5fda031b445e66b42a674c8b02244c6f4fb8c4308a530838ec341f7aadcc4685"
+    },
+    {
+      "check": "frontier-counter-step-5_state_input",
+      "passed": true,
+      "evidence": "60f4f4d754700f288f8c23136211f7bd1cb25125f16f759c6d995fa02979974f"
+    },
+    {
+      "check": "frontier-counter-step-5_state_output",
+      "passed": true,
+      "evidence": "424d541a76fba4dd2a30543d9dc8e6e0be9e79d61c855d0e29773281bb302c6b"
+    },
+    {
+      "check": "frontier-counter-step-5_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-5_main_ram",
+      "passed": true,
+      "evidence": "626eaf4b10cdc73c759b12cd40d47ea3e0276ad4a07ba62eb45929a2c7cb1006"
+    },
+    {
+      "check": "frontier-counter-step-5_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-6_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-6_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-6_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-6_input_script",
+      "passed": true,
+      "evidence": "b67f2bd9fdd4956bb0cea36f11797e05976d27c91ed412e4869ad596762e222c"
+    },
+    {
+      "check": "frontier-counter-step-6_state_input",
+      "passed": true,
+      "evidence": "424d541a76fba4dd2a30543d9dc8e6e0be9e79d61c855d0e29773281bb302c6b"
+    },
+    {
+      "check": "frontier-counter-step-6_state_output",
+      "passed": true,
+      "evidence": "d45f630121e629347a9d3ca6d8d11b2e36ccbeff422ebf7bd5f0ae12bf323b4b"
+    },
+    {
+      "check": "frontier-counter-step-6_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-6_main_ram",
+      "passed": true,
+      "evidence": "ff1e22f8a5a66850878e2bb4248b886f751020d2158e48b1b33e3340cc4d1e0b"
+    },
+    {
+      "check": "frontier-counter-step-6_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-7_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-7_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-7_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-7_input_script",
+      "passed": true,
+      "evidence": "86f92aa03bdc11cb179ff1ed85fcd385000497e2c1294b192c670708211400b3"
+    },
+    {
+      "check": "frontier-counter-step-7_state_input",
+      "passed": true,
+      "evidence": "d45f630121e629347a9d3ca6d8d11b2e36ccbeff422ebf7bd5f0ae12bf323b4b"
+    },
+    {
+      "check": "frontier-counter-step-7_state_output",
+      "passed": true,
+      "evidence": "6187d51d5dd069e93170e7477884ea9b0f3557efdc78e3ef5b92270022d7dcc3"
+    },
+    {
+      "check": "frontier-counter-step-7_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-7_main_ram",
+      "passed": true,
+      "evidence": "dcd8c47400d6e0de3689b58ce7b116b785db389c481e93a71e4dd651e32c4449"
+    },
+    {
+      "check": "frontier-counter-step-7_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-8_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-8_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-8_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-8_input_script",
+      "passed": true,
+      "evidence": "6994c4d2e7008cd1e0e54ee15d27795a94ed50cd462b002f6c85446ccbcaf537"
+    },
+    {
+      "check": "frontier-counter-step-8_state_input",
+      "passed": true,
+      "evidence": "6187d51d5dd069e93170e7477884ea9b0f3557efdc78e3ef5b92270022d7dcc3"
+    },
+    {
+      "check": "frontier-counter-step-8_state_output",
+      "passed": true,
+      "evidence": "d4e3aebe00698128865ca2f8067130d9e874cc6e4fde13b3b77437aa7b014e95"
+    },
+    {
+      "check": "frontier-counter-step-8_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-8_main_ram",
+      "passed": true,
+      "evidence": "5ff25300b30c2c6bbb0058bc494b63e59f696cb3904c5ab849343b7ab381f193"
+    },
+    {
+      "check": "frontier-counter-step-8_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-9_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-9_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-9_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-9_input_script",
+      "passed": true,
+      "evidence": "99f608c0a08d6bf8127126dccf570a2c8f4de9a64b75aef3ffba7c2ef23103ec"
+    },
+    {
+      "check": "frontier-counter-step-9_state_input",
+      "passed": true,
+      "evidence": "d4e3aebe00698128865ca2f8067130d9e874cc6e4fde13b3b77437aa7b014e95"
+    },
+    {
+      "check": "frontier-counter-step-9_state_output",
+      "passed": true,
+      "evidence": "201a18e225163d389e6bf482763078e7667033422d51b06e7e4d94821d6e013c"
+    },
+    {
+      "check": "frontier-counter-step-9_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-9_main_ram",
+      "passed": true,
+      "evidence": "3d469b4bf7a1fd3ce8c6747cc731c2f5ae0013350f45453bcec6d875d5077231"
+    },
+    {
+      "check": "frontier-counter-step-9_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-10_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-10_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-10_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-10_input_script",
+      "passed": true,
+      "evidence": "aab33c3146f8a59aba2c7fa5159c8dfafa7953625cae10b7b54b72fb196db3e4"
+    },
+    {
+      "check": "frontier-counter-step-10_state_input",
+      "passed": true,
+      "evidence": "201a18e225163d389e6bf482763078e7667033422d51b06e7e4d94821d6e013c"
+    },
+    {
+      "check": "frontier-counter-step-10_state_output",
+      "passed": true,
+      "evidence": "3c6fe97542ad22f220ef51c0f578b56c96144fc0e3a16e939e5ca6ac67311701"
+    },
+    {
+      "check": "frontier-counter-step-10_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-10_main_ram",
+      "passed": true,
+      "evidence": "0c8bb80e281e0403236983d7b14e4765059cf33f649c24abcd1f2039a08c9dd5"
+    },
+    {
+      "check": "frontier-counter-step-10_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-11_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-11_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-11_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-11_input_script",
+      "passed": true,
+      "evidence": "4b5e5fc3579f6e54e83e0d6112e08e667a8f8ae7ae999d763f486e8a89db45b7"
+    },
+    {
+      "check": "frontier-counter-step-11_state_input",
+      "passed": true,
+      "evidence": "3c6fe97542ad22f220ef51c0f578b56c96144fc0e3a16e939e5ca6ac67311701"
+    },
+    {
+      "check": "frontier-counter-step-11_state_output",
+      "passed": true,
+      "evidence": "41b552207f82482314237c6353f7c6649807cc3eee3baec7b18810e94a573c94"
+    },
+    {
+      "check": "frontier-counter-step-11_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-11_main_ram",
+      "passed": true,
+      "evidence": "46845c79e1d96c8bb4a85e048002076bdffe9b4472d0cdb49a82ac9cccb8ae7d"
+    },
+    {
+      "check": "frontier-counter-step-11_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-12_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-12_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-12_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-12_input_script",
+      "passed": true,
+      "evidence": "14c65ac1ff9ef9ee48ed077c76164b4820d56aa0ee5efe55af599650a7c32568"
+    },
+    {
+      "check": "frontier-counter-step-12_state_input",
+      "passed": true,
+      "evidence": "41b552207f82482314237c6353f7c6649807cc3eee3baec7b18810e94a573c94"
+    },
+    {
+      "check": "frontier-counter-step-12_state_output",
+      "passed": true,
+      "evidence": "5b1663e43d047d49e650a47db76d0e2c59fe0f31ce07418a57157c1c5409a3c5"
+    },
+    {
+      "check": "frontier-counter-step-12_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-12_main_ram",
+      "passed": true,
+      "evidence": "58753cd3014e9ec274db47b44261c2978bfa55df13907526304365a80a1602b3"
+    },
+    {
+      "check": "frontier-counter-step-12_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-13_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-13_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-13_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-13_input_script",
+      "passed": true,
+      "evidence": "654db0f5e9e9889142b65ff5c395299de0d71d89f6f70a9da33bc4f2029bba19"
+    },
+    {
+      "check": "frontier-counter-step-13_state_input",
+      "passed": true,
+      "evidence": "5b1663e43d047d49e650a47db76d0e2c59fe0f31ce07418a57157c1c5409a3c5"
+    },
+    {
+      "check": "frontier-counter-step-13_state_output",
+      "passed": true,
+      "evidence": "eb6dab3901f0dd53a52af8edd216a557d63ca769e10fb16d3464008c33634105"
+    },
+    {
+      "check": "frontier-counter-step-13_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-13_main_ram",
+      "passed": true,
+      "evidence": "9376a7459b09cbc6d736ad25e97ab281cf6f278261685040deee528da59f8966"
+    },
+    {
+      "check": "frontier-counter-step-13_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-14_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-14_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-14_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-14_input_script",
+      "passed": true,
+      "evidence": "b13b9fc32866ef16fc3ae09bd41d5e6c8154c3819f1a4ca12ece59746706fc65"
+    },
+    {
+      "check": "frontier-counter-step-14_state_input",
+      "passed": true,
+      "evidence": "eb6dab3901f0dd53a52af8edd216a557d63ca769e10fb16d3464008c33634105"
+    },
+    {
+      "check": "frontier-counter-step-14_state_output",
+      "passed": true,
+      "evidence": "2f73b40340487c510bde606a1a7d5640ce5e351d11e7a501e6e75c2a95e0e445"
+    },
+    {
+      "check": "frontier-counter-step-14_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-14_main_ram",
+      "passed": true,
+      "evidence": "2107dcdb70068dd1192941e3e2fcacc8663d6f2241cb2f6079485c232b8285b5"
+    },
+    {
+      "check": "frontier-counter-step-14_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-15_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-15_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-15_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-15_input_script",
+      "passed": true,
+      "evidence": "9780f640f9946d306fc409d508a6fe2f9ec40dcea7a94c4aa7dd860ce1c4c8ea"
+    },
+    {
+      "check": "frontier-counter-step-15_state_input",
+      "passed": true,
+      "evidence": "2f73b40340487c510bde606a1a7d5640ce5e351d11e7a501e6e75c2a95e0e445"
+    },
+    {
+      "check": "frontier-counter-step-15_state_output",
+      "passed": true,
+      "evidence": "82abdede07fd09497b733bbc4086425ab84790e8148344623285d74a4520db91"
+    },
+    {
+      "check": "frontier-counter-step-15_battery_output",
+      "passed": true,
+      "evidence": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234"
+    },
+    {
+      "check": "frontier-counter-step-15_main_ram",
+      "passed": true,
+      "evidence": "334a62281af6e98c6af8655188c31d41933e3c7f855dfef52e8bed24007ffbae"
+    },
+    {
+      "check": "frontier-counter-step-15_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-16_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-16_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-16_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-16_input_script",
+      "passed": true,
+      "evidence": "ac83bdb03fc33e30c9d2e621c815cda2726dd32a2d35c9619920c868d3ec5838"
+    },
+    {
+      "check": "frontier-counter-step-16_state_input",
+      "passed": true,
+      "evidence": "82abdede07fd09497b733bbc4086425ab84790e8148344623285d74a4520db91"
+    },
+    {
+      "check": "frontier-counter-step-16_state_output",
+      "passed": true,
+      "evidence": "04748f5a7b4a3ff6f675e8af66c330ac48df329022e565b8f051a32071eed9de"
+    },
+    {
+      "check": "frontier-counter-step-16_battery_output",
+      "passed": true,
+      "evidence": "e78a7e9eaa45c8cca5fc2896e4e54d02cd1fa6628ac5ae6c691ecb1cef2f7b75"
+    },
+    {
+      "check": "frontier-counter-step-16_main_ram",
+      "passed": true,
+      "evidence": "290efff47c8bf1776184042156a3448225f5bcfd31f9152764574b3a06db7f11"
+    },
+    {
+      "check": "frontier-counter-step-16_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-17_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-17_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-17_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-17_input_script",
+      "passed": true,
+      "evidence": "0842a45a0c0c07a1a1ce289e2542645aaf72d908f4e6e1079b4900310b5fd73e"
+    },
+    {
+      "check": "frontier-counter-step-17_state_input",
+      "passed": true,
+      "evidence": "04748f5a7b4a3ff6f675e8af66c330ac48df329022e565b8f051a32071eed9de"
+    },
+    {
+      "check": "frontier-counter-step-17_state_output",
+      "passed": true,
+      "evidence": "344dc637b3589eba7ed228f85aebc72cfb3ef49d40a859646ada5b55a9146b2f"
+    },
+    {
+      "check": "frontier-counter-step-17_battery_output",
+      "passed": true,
+      "evidence": "88c759b845fe5791952cfc103db3d80935090556dc04eb9e86c4a709e9aebb3d"
+    },
+    {
+      "check": "frontier-counter-step-17_main_ram",
+      "passed": true,
+      "evidence": "e991d3a20e879fe46bc666fc999a6dceebff4004db20dc8ff51a506b5782cede"
+    },
+    {
+      "check": "frontier-counter-step-17_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-18_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-18_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-18_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-18_input_script",
+      "passed": true,
+      "evidence": "3730db56def97e64e63227db8409589cd31d90f27333f162a08e1deac539e026"
+    },
+    {
+      "check": "frontier-counter-step-18_state_input",
+      "passed": true,
+      "evidence": "344dc637b3589eba7ed228f85aebc72cfb3ef49d40a859646ada5b55a9146b2f"
+    },
+    {
+      "check": "frontier-counter-step-18_state_output",
+      "passed": true,
+      "evidence": "242ab4493af4d67b03df1a6aff86aebba6ed493974383e585a34c270b074298d"
+    },
+    {
+      "check": "frontier-counter-step-18_battery_output",
+      "passed": true,
+      "evidence": "d17e47a252cd048e58eb48c08d08bb458d39148bebf71e46c5637758a4a03c6b"
+    },
+    {
+      "check": "frontier-counter-step-18_main_ram",
+      "passed": true,
+      "evidence": "f62c4ae87904aaa478da5f102b8d5e793c7620e796b1437a490b18ffd238c951"
+    },
+    {
+      "check": "frontier-counter-step-18_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-19_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-19_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-19_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-19_input_script",
+      "passed": true,
+      "evidence": "89423aaa9630cb8c4a23dc18e4b5e6696f7d8f21df8a42807da3a67d08a6b727"
+    },
+    {
+      "check": "frontier-counter-step-19_state_input",
+      "passed": true,
+      "evidence": "242ab4493af4d67b03df1a6aff86aebba6ed493974383e585a34c270b074298d"
+    },
+    {
+      "check": "frontier-counter-step-19_state_output",
+      "passed": true,
+      "evidence": "4ea70991cbb17e18353d1a6ecc7a3697dd2b0c4e21f85b35ec3aacc504abaaee"
+    },
+    {
+      "check": "frontier-counter-step-19_battery_output",
+      "passed": true,
+      "evidence": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861"
+    },
+    {
+      "check": "frontier-counter-step-19_main_ram",
+      "passed": true,
+      "evidence": "38de2eae4423f7cd330fc3f9490477b8f2400c7c28a954613c5230377d0618e4"
+    },
+    {
+      "check": "frontier-counter-step-19_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-20_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-20_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-20_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-20_input_script",
+      "passed": true,
+      "evidence": "efddf8255108c21a901e368e066379cd51e55eaa7aea047b0be76ad27e2be0bd"
+    },
+    {
+      "check": "frontier-counter-step-20_state_input",
+      "passed": true,
+      "evidence": "4ea70991cbb17e18353d1a6ecc7a3697dd2b0c4e21f85b35ec3aacc504abaaee"
+    },
+    {
+      "check": "frontier-counter-step-20_state_output",
+      "passed": true,
+      "evidence": "c8264f8d7c0956bb27fd72707f3419c408991a7c381237b53b29db7c3e76b255"
+    },
+    {
+      "check": "frontier-counter-step-20_battery_output",
+      "passed": true,
+      "evidence": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861"
+    },
+    {
+      "check": "frontier-counter-step-20_main_ram",
+      "passed": true,
+      "evidence": "028ff714134f7ec4650ea6f6869ec3b3f8a25f26d279675cd826f80eb03bdffb"
+    },
+    {
+      "check": "frontier-counter-step-20_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-21_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-21_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-21_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-21_input_script",
+      "passed": true,
+      "evidence": "2a57abeb8d6ce692aacb8988d632b49879715d978c133c187ff40989a6b42118"
+    },
+    {
+      "check": "frontier-counter-step-21_state_input",
+      "passed": true,
+      "evidence": "c8264f8d7c0956bb27fd72707f3419c408991a7c381237b53b29db7c3e76b255"
+    },
+    {
+      "check": "frontier-counter-step-21_state_output",
+      "passed": true,
+      "evidence": "d21edae6fd55dbc69fa5d448cf86ac94ee82e8f399e347def8ef2ce109f9c2ea"
+    },
+    {
+      "check": "frontier-counter-step-21_battery_output",
+      "passed": true,
+      "evidence": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861"
+    },
+    {
+      "check": "frontier-counter-step-21_main_ram",
+      "passed": true,
+      "evidence": "4f5a3aa72693d36a958e474babc8a6745c9f8cef6f4bbcb8f22e59a0f041b1b6"
+    },
+    {
+      "check": "frontier-counter-step-21_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-22_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-22_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-22_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-22_input_script",
+      "passed": true,
+      "evidence": "a76e99f052e3ce0f1916ce6c652bab247cad375946effd7e6766913c972fb7e3"
+    },
+    {
+      "check": "frontier-counter-step-22_state_input",
+      "passed": true,
+      "evidence": "d21edae6fd55dbc69fa5d448cf86ac94ee82e8f399e347def8ef2ce109f9c2ea"
+    },
+    {
+      "check": "frontier-counter-step-22_state_output",
+      "passed": true,
+      "evidence": "eaa64846815d639660efff80c2c72fd27f2bd04ee2938987df555ac8e2b28982"
+    },
+    {
+      "check": "frontier-counter-step-22_battery_output",
+      "passed": true,
+      "evidence": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861"
+    },
+    {
+      "check": "frontier-counter-step-22_main_ram",
+      "passed": true,
+      "evidence": "4967f5ef18da33afa0cd1b92d344226c15b9482bf85a7ba4530d9d3fef23f8b6"
+    },
+    {
+      "check": "frontier-counter-step-22_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-23_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-23_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-23_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-23_input_script",
+      "passed": true,
+      "evidence": "7bed4919c4e30296ecedd92561ba2b7c39d28cdc2ada53eb212505f7879f606d"
+    },
+    {
+      "check": "frontier-counter-step-23_state_input",
+      "passed": true,
+      "evidence": "eaa64846815d639660efff80c2c72fd27f2bd04ee2938987df555ac8e2b28982"
+    },
+    {
+      "check": "frontier-counter-step-23_state_output",
+      "passed": true,
+      "evidence": "f63e574c500ebe409bc8e26f88b8f7915fdd1f4c4ea79fd8cb292bc53be9e3b4"
+    },
+    {
+      "check": "frontier-counter-step-23_battery_output",
+      "passed": true,
+      "evidence": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861"
+    },
+    {
+      "check": "frontier-counter-step-23_main_ram",
+      "passed": true,
+      "evidence": "2d0402edc0ce406e453737a3db49a554d0faea8e57fc02eaeae4343745fb8dd2"
+    },
+    {
+      "check": "frontier-counter-step-23_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-24_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-24_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-24_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-24_input_script",
+      "passed": true,
+      "evidence": "deff733b2b451262cf225443496dbf4d6bb7739d37cbb8e5b448c265d736d6d8"
+    },
+    {
+      "check": "frontier-counter-step-24_state_input",
+      "passed": true,
+      "evidence": "f63e574c500ebe409bc8e26f88b8f7915fdd1f4c4ea79fd8cb292bc53be9e3b4"
+    },
+    {
+      "check": "frontier-counter-step-24_state_output",
+      "passed": true,
+      "evidence": "3cd8e56f5a28c3999f3a169f87481db22fc5f633fc11d0406a3897942b28de89"
+    },
+    {
+      "check": "frontier-counter-step-24_battery_output",
+      "passed": true,
+      "evidence": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861"
+    },
+    {
+      "check": "frontier-counter-step-24_main_ram",
+      "passed": true,
+      "evidence": "d80c97621a84c0aa0987d573435e0e55f2f0f5421c0a85dcbe6c5f469604e3ee"
+    },
+    {
+      "check": "frontier-counter-step-24_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-25_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-25_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-25_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-25_input_script",
+      "passed": true,
+      "evidence": "8d06a8caaae0451a2164e48f94c83e32a2a063cb187569de3e73a6909d6b2757"
+    },
+    {
+      "check": "frontier-counter-step-25_state_input",
+      "passed": true,
+      "evidence": "3cd8e56f5a28c3999f3a169f87481db22fc5f633fc11d0406a3897942b28de89"
+    },
+    {
+      "check": "frontier-counter-step-25_state_output",
+      "passed": true,
+      "evidence": "4addf82aa750b934cb8f428a9e0a0f4b79079b754f686f3ef777b53df24d0364"
+    },
+    {
+      "check": "frontier-counter-step-25_battery_output",
+      "passed": true,
+      "evidence": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861"
+    },
+    {
+      "check": "frontier-counter-step-25_main_ram",
+      "passed": true,
+      "evidence": "dba8e0171902cc5c7ea155af160ff329ae56b0732d040d7b5c6b3bdee5a050f4"
+    },
+    {
+      "check": "frontier-counter-step-25_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-26_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-26_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-26_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-26_input_script",
+      "passed": true,
+      "evidence": "23ae262bfe66016b714cd8500df3ffa81cf0edc713b46bedf6870187d95bfc81"
+    },
+    {
+      "check": "frontier-counter-step-26_state_input",
+      "passed": true,
+      "evidence": "4addf82aa750b934cb8f428a9e0a0f4b79079b754f686f3ef777b53df24d0364"
+    },
+    {
+      "check": "frontier-counter-step-26_state_output",
+      "passed": true,
+      "evidence": "bc874eca4d9d30da268303c1ffe4a9779ace2de77f84ee111065071d67e80f5f"
+    },
+    {
+      "check": "frontier-counter-step-26_battery_output",
+      "passed": true,
+      "evidence": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861"
+    },
+    {
+      "check": "frontier-counter-step-26_main_ram",
+      "passed": true,
+      "evidence": "5b1a01d82c2c2a3be13ea4e6581f65313b158f8d7ba483afebb907412455ebcd"
+    },
+    {
+      "check": "frontier-counter-step-26_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "frontier-counter-step-27_rom",
+      "passed": true,
+      "evidence": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    {
+      "check": "frontier-counter-step-27_core",
+      "passed": true,
+      "evidence": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "check": "frontier-counter-step-27_runner",
+      "passed": true,
+      "evidence": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "check": "frontier-counter-step-27_input_script",
+      "passed": true,
+      "evidence": "d822fb5505c408cf3c5e69059bc18c82e7e7bd817fdf6d60f4f05eaebbef2194"
+    },
+    {
+      "check": "frontier-counter-step-27_state_input",
+      "passed": true,
+      "evidence": "bc874eca4d9d30da268303c1ffe4a9779ace2de77f84ee111065071d67e80f5f"
+    },
+    {
+      "check": "frontier-counter-step-27_state_output",
+      "passed": true,
+      "evidence": "34ee6545cb403a414e17dcf7e4790811e20aa36cf03ab9aeb3d0e8374d86ac9b"
+    },
+    {
+      "check": "frontier-counter-step-27_battery_output",
+      "passed": true,
+      "evidence": "d8c1c9d3543cc77ac25461409f07251a736be811a2065b197270f9f2c09df861"
+    },
+    {
+      "check": "frontier-counter-step-27_main_ram",
+      "passed": true,
+      "evidence": "5c30613d8ceb878edb12d5fe4ce4ea0f71d2e1d78559d70420a9ef61981effcd"
+    },
+    {
+      "check": "frontier-counter-step-27_no_cheats",
+      "passed": true,
+      "evidence": "zero cheats"
+    },
+    {
+      "check": "complete_bounded_runtime_chain",
+      "passed": true,
+      "evidence": "1 clean boot plus 27 state-linked runs"
+    },
+    {
+      "check": "tower_counter_position",
+      "passed": true,
+      "evidence": "0x0227D4D4=[265, 0, 15, 6, 0]"
+    },
+    {
+      "check": "cached_elevator_position_at_battle_start",
+      "passed": true,
+      "evidence": "0x0227D4D4=[266, -1, 3, 6, 1]"
+    },
+    {
+      "check": "screenshot_reception_dialogue",
+      "passed": true,
+      "evidence": "0c72571662099a2ff17904ca4fa32f177dd23aca9eff7ffd1646a6d7bc606a71"
+    },
+    {
+      "check": "screenshot_selected_three_party",
+      "passed": true,
+      "evidence": "f0cf53ec0943ffc9363ab116ed930541445fd9949b9a578d2d29bb917d7ffc7f"
+    },
+    {
+      "check": "screenshot_trainer_challenge_dialogue",
+      "passed": true,
+      "evidence": "7d1a02896808333e08b7f8777bf09574789bd79f68896e830029b297d61c06dd"
+    },
+    {
+      "check": "screenshot_active_first_battle",
+      "passed": true,
+      "evidence": "ab130e5e9989484ea2f4d809da76bf0659e62ba33058169e756c2454320d6b9b"
+    },
+    {
+      "check": "published_capture_byte_identity",
+      "passed": true,
+      "evidence": "0c72571662099a2ff17904ca4fa32f177dd23aca9eff7ffd1646a6d7bc606a71"
+    }
+  ],
+  "check_summary": {
+    "passed": 267,
+    "failed": 0
+  },
+  "limitations": {
+    "en": [
+      "Direct synthetic map entry is not acceptance of normal-story access or progression flags.",
+      "Battle Factory, Battle Hall, Battle Castle, and Battle Arcade were not tested.",
+      "Only the first battle start was observed; the match result, continued streak, and rewards remain untested.",
+      "The interaction continued through savestate-linked runs. A fresh-process battery-save reload without savestate was not tested."
+    ],
+    "es": [
+      "La entrada directa sintética no acepta el acceso por historia normal ni sus banderas de progreso.",
+      "No se probaron Battle Factory (Fábrica), Battle Hall (Sala), Battle Castle (Castillo) ni Battle Arcade (Arcade).",
+      "Solo se observó el inicio del primer combate; siguen sin probarse el resultado, la racha ni los premios.",
+      "La interacción continuó mediante ejecuciones enlazadas con estados. No se probó recargar la partida en un proceso nuevo sin estado de emulador."
+    ]
+  }
+}

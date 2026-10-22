@@ -1,0 +1,66 @@
+{
+  "schema": "portable-menu-fadefix-independent-review/v1",
+  "review_mode": "read_only_offline",
+  "verdict": "PASS_WITH_SCOPE_LIMITS",
+  "summary_en": "The frozen evidence supports the stated fade-fix cancel/visible-return smoke. The cold run used no navigation state or cheats; cancel continued from that cold state, and re-entry continued from the cancel state. Re-entry reached only the empty Bag UI; no party slot or editor was reached.",
+  "summary_es": "La evidencia congelada respalda el smoke declarado de cancelación y retorno visible con fade-fix. El arranque frío no usó state de navegación ni cheats; la cancelación continuó desde ese state y la reentrada desde el state de cancelación. La reentrada solo llegó a la Bolsa vacía; no alcanzó ningún Pokémon ni el editor.",
+  "source_report": {
+    "path": "qa/runs/portable-stat-editor-menu-fadefix-smoke-audit/acceptance.json",
+    "sha256": "d08f9460d65ff6332be88ce2bef068196423b1d8682644d02db12495efe0253a"
+  },
+  "runtime_identity": {
+    "candidate_rom_sha256": "2abb1c8cf87540aad70d3c7c13517bee5a159ef3e38af11a1440030b276317ed",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "seed_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "seed_dsv_bytes": 524410
+  },
+  "runs": {
+    "fresh_cold": {
+      "result_sha256": "14d508108d5a63b3169015db1f1ccabc99e3fad31bcb61487778f46acb2a680e",
+      "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_input": null,
+      "state_output_sha256": "6569f1ba29ad542ebc034a30042957fca30aeb85ba6d7a0927843ee476d02661",
+      "system_ram_sha256": "0aac1bbc98d72307e74824cba9159d6bb7a16c53cecd269a9e069b493f03fce0",
+      "cheats": [],
+      "frames": 5500,
+      "battery_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a"
+    },
+    "cancel_flow": {
+      "result_sha256": "b879b738bc9d36df67a5ebc1f547010971e90d1eecdde36e1d6177c14471cc44",
+      "input_script_sha256": "42c70cbfe8eb510924d49204868df4cffb52946a8c53e2361cb1a471379f9d43",
+      "state_input_sha256": "6569f1ba29ad542ebc034a30042957fca30aeb85ba6d7a0927843ee476d02661",
+      "state_output_sha256": "bc5e8858c961cd79bdbc4b4861c8160b169d1fbee36af4fd002c3e9a67a00401",
+      "system_ram_sha256": "0cf568dfad14b6e626638a36cc9eb2f2d6821e17c641543a5cbb8a31de12b021",
+      "cheats": [],
+      "frames": 3000,
+      "battery_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "cancel_message_capture_sha256": "6c56d64b1e9047d74d04044dcc88928ab19b1993e7b6b29bee77e0ebaffdd5e0",
+      "visible_overworld_after_ack_capture_sha256": "64f777f8017f01ccb895d0cebc34bf4f68ebcbd2aa0806ab76d79ee5bc970ebc"
+    },
+    "reentry_navigation": {
+      "result_sha256": "7cf86ecb6d6b3e60077c64b3c67d2d785bfb367b1328df6dc9104dcfbac816ef",
+      "input_script_sha256": "9834735f32e7c66b8e2339712403ff088ed11807a6badb80d25c8db2659a4e25",
+      "state_input_sha256": "bc5e8858c961cd79bdbc4b4861c8160b169d1fbee36af4fd002c3e9a67a00401",
+      "state_output_sha256": "7e5ba6b703f37f64ebd8a7d47b8e45a9e21bc085c8e8989655e59e90a95f497d",
+      "system_ram_sha256": "3d53962195f8c440b82441c99ce72008badce9635eb16737ec5b74c8876a4daa",
+      "cheats": [],
+      "frames": 2000,
+      "battery_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "capture_sha256": "f0db0b3aa0f098c82c0bcc4f86437f157b63e31f8fe97074d233dbee679beaf8",
+      "observed_scope": "empty_bag_ui_only_no_party_slot_no_editor"
+    }
+  },
+  "integrity_and_limits": {
+    "battery_dsv_identical_across_runs": true,
+    "party_semantic_comparison": "NOT_TESTED",
+    "bag_semantic_comparison": "NOT_TESTED",
+    "reserve_comparison": "NOT_TESTED",
+    "setter": "NOT_TESTED",
+    "native_save_persistence": "NOT_TESTED",
+    "post_use_cold_reload": "NOT_TESTED",
+    "gameplay_or_release_acceptance": "NOT_ASSESSED",
+    "notes_en": "Raw RAM dumps are retained, but this review and the source report do not claim strict Party, Bag, or reserve RAM comparisons. The re-entry capture is an empty Bag UI and does not demonstrate that PartySelect or the EV/IV editor opened.",
+    "notes_es": "Se conservan volcados RAM, pero esta revisión y el informe fuente no afirman comparaciones estrictas de RAM del equipo, la Bolsa o la reserva. La captura de reentrada muestra la Bolsa vacía y no demuestra que se abrieran la selección de Pokémon ni el editor EV/IV."
+  }
+}

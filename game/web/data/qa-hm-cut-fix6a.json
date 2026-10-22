@@ -1,0 +1,751 @@
+{
+  "schema": "ultimate-gold-fix6a-cut-native-qa/v1",
+  "status": "NATIVE_ACTION_CONFIRMED",
+  "target_rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+  "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+  "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+  "cheats": [],
+  "source_chain": {
+    "strength_native_dsv_sha256": "38d7a65bfa0bad447d82505e6a224548de33daa99a960395eaeb80f2522ca4cf",
+    "native_entry_fixture_dsv_sha256": "94fa0c784d6ba46998975eb0258720e8c8f23e58abc638a7fccb18b666c91252",
+    "map16_native_saved_dsv_sha256": "b7c7d902fe0ac34d072152e9e23c093074ccd1d51cce7fde54e9826366f21fff",
+    "adjacent_fixture_dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+    "native_map16_save_verified": true,
+    "target_object": {
+      "id": 8,
+      "map_id": 16,
+      "model_id": 86,
+      "event_flag": 16,
+      "script_id": 10000,
+      "xyz": [
+        1375,
+        4,
+        246
+      ]
+    },
+    "adjacent_player": {
+      "location": [
+        16,
+        -1,
+        1374,
+        246,
+        3
+      ],
+      "avatar": {
+        "address": "0x22a2030",
+        "state": 0,
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          1374,
+          4,
+          246
+        ],
+        "facing_codes": [
+          3,
+          3,
+          3
+        ]
+      }
+    },
+    "height_basis": "Player, follower, and native tree saved at Y=4; exact adjacent/tree tiles share matrix cell, model 154, PER bytes 0004, and matrix altitude 0. BDHC parsed geometry not independently interpreted."
+  },
+  "runs": [
+    {
+      "run": "hm-cut-fix6a-corrected-staged1",
+      "result_sha256": "348540d689b92529c94af8e36b43c56f057b6bc0bf4a41b7a67777ea8f26e990",
+      "script": "hm_cut_fix6a_boot_start.json",
+      "script_sha256": "de70d5d84218bac916f0bd30b04fb6c133329dbe259ef06ca65b07ecc5822ccb",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 2000,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": null,
+      "state_out_sha256": "b45636e74925df0f5f43a4ccac470febcb5db63452beea5837660076bd5b1f0e",
+      "system_ram_sha256": "370bb76953bccae0921e2b520805f8a7d044a202a3d4c668119ad96c5d6d76fc",
+      "dsv_sha256": "94fa0c784d6ba46998975eb0258720e8c8f23e58abc638a7fccb18b666c91252",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-corrected-staged1/title_screen_before_continue.png",
+          "sha256": "6b9148ca5ebc84f06e52cc3ecbf79ceacc3929790f9fe057efb7928e816bdfdf"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-corrected-staged2",
+      "result_sha256": "ecc66a778c87a2cdbb9aab7d9e9258d47e51b6e92d890867415ff18caff06df8",
+      "script": "hm_cut_fix6a_boot_a.json",
+      "script_sha256": "47e7d1e0c335d9804012e0d3864ecc6d0f59fc1b173d311ef9bc8e084ae158d4",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "b45636e74925df0f5f43a4ccac470febcb5db63452beea5837660076bd5b1f0e",
+      "state_out_sha256": "51bfef9f814f0519a99ce4070086c8b3fbe7f47ddf49164582f4028aebfeebf1",
+      "system_ram_sha256": "72853110d004ab3d50aa4dcb66e7da7f17dbd9654c1579b1de21a4f555f83b19",
+      "dsv_sha256": "94fa0c784d6ba46998975eb0258720e8c8f23e58abc638a7fccb18b666c91252",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-corrected-staged2/after_single_title_a.png",
+          "sha256": "d8d7c00d0605be0fe982d9a5653f3ba12cb5b0ea575276c7bc187dd940428433"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-corrected-staged2/settled.png",
+          "sha256": "728d1ef8d0969ae7a256fb5f751500e93d26cde841ca6149287fcc34fcabe0a3"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-corrected-staged3",
+      "result_sha256": "ccc9e6945696fb2b0f779576aa430cbfc6f83c3a92409cc989393fff965b6eda",
+      "script": "hm_cut_fix6a_boot_a.json",
+      "script_sha256": "47e7d1e0c335d9804012e0d3864ecc6d0f59fc1b173d311ef9bc8e084ae158d4",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "51bfef9f814f0519a99ce4070086c8b3fbe7f47ddf49164582f4028aebfeebf1",
+      "state_out_sha256": "c6c42e734156eaa129896b4a3acd57a3755fee56095598d0b31bb38b242a3f4f",
+      "system_ram_sha256": "86061e4a3932260ed082d7e9fde3998b96393ebdb333a26f1481eab9eede17a5",
+      "dsv_sha256": "94fa0c784d6ba46998975eb0258720e8c8f23e58abc638a7fccb18b666c91252",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-corrected-staged3/after_single_title_a.png",
+          "sha256": "60cebe104afd7bc667a6b871ec74ef05a49d58966d09bb0ca1b3a398b50b0776"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-corrected-staged3/settled.png",
+          "sha256": "350406d5a54ddf53e25ab87bf15f5d64fb2db3cd0df9dfa38aa2771526c1e43a"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-corrected-staged4",
+      "result_sha256": "d60c80f811ce9723fd4d316755a13c0c7da7b8d100e1eb9ff58f130606befa80",
+      "script": "hm_cut_fix6a_boot_a.json",
+      "script_sha256": "47e7d1e0c335d9804012e0d3864ecc6d0f59fc1b173d311ef9bc8e084ae158d4",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "c6c42e734156eaa129896b4a3acd57a3755fee56095598d0b31bb38b242a3f4f",
+      "state_out_sha256": "520b8ed78112a67f1532dde8ca31f0cc13b55d116f653a76d33e73f4c8450928",
+      "system_ram_sha256": "1d644b8b71b52bcab385ffb082b277dd3d5ae7075464c75c6485bd2ec41aa1fa",
+      "dsv_sha256": "94fa0c784d6ba46998975eb0258720e8c8f23e58abc638a7fccb18b666c91252",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-corrected-staged4/after_single_title_a.png",
+          "sha256": "47f7c1067ff2d4e4e4fdd88f71d84216236b39953690c816851f4cd5801cf9ba"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-corrected-staged4/settled.png",
+          "sha256": "27ec63d5b2426dbf50c4f84da340bd8405e900f298b14feb00a4fc44274e7141"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-corrected-warp",
+      "result_sha256": "d9479b5486203566ac0972c90c3bde8562aae22ad44b6d3e21c647577b88059a",
+      "script": "hm_cut_fix6a_entry_warp_corrected.json",
+      "script_sha256": "65a5f25b3e2b40862ac40a001eeab35fdce2cfaf6d20645c87a679168c79fdd0",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "520b8ed78112a67f1532dde8ca31f0cc13b55d116f653a76d33e73f4c8450928",
+      "state_out_sha256": "65cdaaafe412ba61d836dd50b44ea293984ecc116479905677da478fc95b8396",
+      "system_ram_sha256": "e419ea0ee085eee42f8cb237aa9b784007978f6a4ca25b029907c810b2a4bcb1",
+      "dsv_sha256": "94fa0c784d6ba46998975eb0258720e8c8f23e58abc638a7fccb18b666c91252",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-corrected-warp/native_route8_arrival.png",
+          "sha256": "46d5fd41fdc4766f337cd7d60991210c7e09c0e4becd2f8ef033d7baa00a9833"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-corrected-warp/settled.png",
+          "sha256": "46d5fd41fdc4766f337cd7d60991210c7e09c0e4becd2f8ef033d7baa00a9833"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-native-save",
+      "result_sha256": "622b586f0eb1ddc9212d6ea0db24d6d8352e3413e11fea95245bf9fea4950529",
+      "script": "hm_cut_fix6a_native_save.json",
+      "script_sha256": "2226ed2ceaa55e31d3dd687c4526bfc7fb38e41fce1ecfdd6e2e7b8569a865e0",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 7400,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "65cdaaafe412ba61d836dd50b44ea293984ecc116479905677da478fc95b8396",
+      "state_out_sha256": "c091294c2bf8e408d29801b12cf877307148c6283a586831dc1c50f7c85453cb",
+      "system_ram_sha256": "45f0f3f00b6c539c764e015b92ac09d513478d675bf98e0722b2ba933918dabd",
+      "dsv_sha256": "b7c7d902fe0ac34d072152e9e23c093074ccd1d51cce7fde54e9826366f21fff",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-native-save/overwrite_prompt.png",
+          "sha256": "ccdc8db0132068d20d8123c41b03fc68b134999d59d508231bcef27c12211140"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-native-save/route8_before_native_save.png",
+          "sha256": "46d5fd41fdc4766f337cd7d60991210c7e09c0e4becd2f8ef033d7baa00a9833"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-native-save/save_prompt.png",
+          "sha256": "9eaea3556610d3d38cd79213abd301a2e1153c015d529fae834ce027892a8ab0"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-adjacent-staged1-corrected",
+      "result_sha256": "5cce1d80e0eeea952b2cc511179d09028cae88692f10493d11062454cb40e799",
+      "script": "hm_cut_fix6a_boot_start.json",
+      "script_sha256": "de70d5d84218bac916f0bd30b04fb6c133329dbe259ef06ca65b07ecc5822ccb",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 2000,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": null,
+      "state_out_sha256": "77457cbb31ff59d3f24ca649488d65ae0268a8c60782c3f1eb3dcec8347800f2",
+      "system_ram_sha256": "80ddedefc676d4d127651f23951c39d01bb0385b7a9dd1139fa7abe00e9c797b",
+      "dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-adjacent-staged1-corrected/title_screen_before_continue.png",
+          "sha256": "6b9148ca5ebc84f06e52cc3ecbf79ceacc3929790f9fe057efb7928e816bdfdf"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-adjacent-staged2",
+      "result_sha256": "cfcb70f16a95117f5fb9525f3fc6ea3cf572bfa9ca23463e3cc4abf577728de4",
+      "script": "hm_cut_fix6a_boot_a.json",
+      "script_sha256": "47e7d1e0c335d9804012e0d3864ecc6d0f59fc1b173d311ef9bc8e084ae158d4",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "77457cbb31ff59d3f24ca649488d65ae0268a8c60782c3f1eb3dcec8347800f2",
+      "state_out_sha256": "59deff7e1254ee81d1a521b8ae2714425a0086c7933aaf6aa7df13abf0439817",
+      "system_ram_sha256": "a9a6fd91738ba2e72798209fce53f1084ec7731128c0871b0e51a13d96e9e5d8",
+      "dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-adjacent-staged2/after_single_title_a.png",
+          "sha256": "d8d7c00d0605be0fe982d9a5653f3ba12cb5b0ea575276c7bc187dd940428433"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-adjacent-staged2/settled.png",
+          "sha256": "728d1ef8d0969ae7a256fb5f751500e93d26cde841ca6149287fcc34fcabe0a3"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-adjacent-staged3",
+      "result_sha256": "f42a2472acd71031616bb51cadde26c848172f9f71f55d643cd2137ea9c5a81b",
+      "script": "hm_cut_fix6a_boot_a.json",
+      "script_sha256": "47e7d1e0c335d9804012e0d3864ecc6d0f59fc1b173d311ef9bc8e084ae158d4",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "59deff7e1254ee81d1a521b8ae2714425a0086c7933aaf6aa7df13abf0439817",
+      "state_out_sha256": "2c4be23e4a45b782be74ca3e234dad21b0d82381d850a7f69d224cb2fd041615",
+      "system_ram_sha256": "8823f1d0c942e338088f93f9d6519f9059fec6881ea607a4c770f1502d5d4406",
+      "dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-adjacent-staged3/after_single_title_a.png",
+          "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-adjacent-staged3/settled.png",
+          "sha256": "a5fbc87549ba38d70b0624442aa8272dc187837c6cbf6fe6423ef4adec633ecd"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-adjacent-staged4",
+      "result_sha256": "72b18d1017375249cb68bfe729ba4a205ba6dd51a60b90959a992f4ed494b9da",
+      "script": "hm_cut_fix6a_boot_a.json",
+      "script_sha256": "47e7d1e0c335d9804012e0d3864ecc6d0f59fc1b173d311ef9bc8e084ae158d4",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "2c4be23e4a45b782be74ca3e234dad21b0d82381d850a7f69d224cb2fd041615",
+      "state_out_sha256": "f04268048079ab52c00d2e734a76a931488a3a39f889425e5a20d160c931f3c0",
+      "system_ram_sha256": "878e15ad504853366a85614b0557e081b0e67ff7c2d354a5bde0e96eb93a34c0",
+      "dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-adjacent-staged4/after_single_title_a.png",
+          "sha256": "9e27ba93128c7656c94ca40f169116dad705c722e109e4d6aa00e351010984d8"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-adjacent-staged4/settled.png",
+          "sha256": "e1f90e085f68788a0b964ad774c12286bf78e8cc2efb47ad356b185dd22bc816"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-interact",
+      "result_sha256": "22af8c35c2f7d9a0ba6b844dad11821c76c27eed6f199f416e530899eba4d947",
+      "script": "hm_cut_fix6a_interact.json",
+      "script_sha256": "bb7050f2f4ed21212968646d20292467c9e520de2a97fcfffd5252eb5fe83f5e",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "f04268048079ab52c00d2e734a76a931488a3a39f889425e5a20d160c931f3c0",
+      "state_out_sha256": "6608d6b0d6456c9f7f3bc9254b9c50a7d157858eba2edd9811dc46c3becd885f",
+      "system_ram_sha256": "670397cf9b62e150503220e6687d323d393b3ecd33094bff3e51b340df0e37db",
+      "dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-interact/first_native_tree_response.png",
+          "sha256": "24208a3e3a816afb87b62df9c7fe8f7e503497e4e03a9ec0f18e63560e1de9cf"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-interact/settled.png",
+          "sha256": "a044d927b5f08febbf83005fadbf3df48797014b89c74ac1a03e994bcd90ce99"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-yes",
+      "result_sha256": "655bafa436076be06b81498958116d6c5f64f7cc4a023a9fd41ead5ce076c956",
+      "script": "hm_cut_fix6a_yes.json",
+      "script_sha256": "f0d245723b32e7366355f8804883a54fe959ed37a8fea3877ea83eed0f9db582",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "6608d6b0d6456c9f7f3bc9254b9c50a7d157858eba2edd9811dc46c3becd885f",
+      "state_out_sha256": "61d965d0422e15e7b95b3d7a263c285a6cd9784b14f6e6aba607221c14a485ed",
+      "system_ram_sha256": "dc689778a8269546376c0ffd63b3f3be331813ca5bc585ca29fadab839fc03b2",
+      "dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-yes/native_cut_response.png",
+          "sha256": "b36adab82e503722388885665caa8413d4c0c5b05d6bb7cfb378243afc3a4430"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-yes/settled.png",
+          "sha256": "be24f3ab610fae27d05cb13c5b50f22c38c8876eaa4e6d23e3355bc957f8319d"
+        }
+      ]
+    },
+    {
+      "run": "hm-cut-fix6a-dismiss",
+      "result_sha256": "808e62dd153b71c3fe9e6e6399a15f91a89efe920b3c9e5920fd88b0b909942e",
+      "script": "hm_cut_fix6a_dismiss.json",
+      "script_sha256": "389ce6ab03b4c00de5ec73cfc1141b721de1ca033b536d8d893a6d1dde4c8f1a",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "frames": 600,
+      "cheats": [],
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "state_in_sha256": "61d965d0422e15e7b95b3d7a263c285a6cd9784b14f6e6aba607221c14a485ed",
+      "state_out_sha256": "24ebadb674e0799a74f5bb2bc16bd1620052175ecebeecace620bf9cde26cf50",
+      "system_ram_sha256": "92923b0e6869c482f3df438973582bf0784729a6158e074697cee70841f077a1",
+      "dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+      "screenshot_hashes": [
+        {
+          "path": "qa/runs/hm-cut-fix6a-dismiss/post_cut_dialogue.png",
+          "sha256": "f917f0075d37a58a49b8eb9d5d8fd32d35eefaeb55e247cb981f9d66a4cab644"
+        },
+        {
+          "path": "qa/runs/hm-cut-fix6a-dismiss/settled.png",
+          "sha256": "f917f0075d37a58a49b8eb9d5d8fd32d35eefaeb55e247cb981f9d66a4cab644"
+        }
+      ]
+    }
+  ],
+  "excluded_attempts": [
+    {
+      "run": "hm-cut-fix6a-adjacent-staged1",
+      "classification": "INVALID_SETUP_ONLY",
+      "cause": "The runner used its default saves/ directory; the fixture had been copied into profile/, so the exact ROM-named DSV was not loaded. This was corrected with an explicit --save-dir before the valid cold chain.",
+      "result_sha256": "0045dcb1cdc3d3b47d1b943f40afbec4d83c580f6a82496fed53eb7963638b4f",
+      "reported_save_dir_relative": "qa/runs/hm-cut-fix6a-adjacent-staged1/saves",
+      "runner_output_dsv_sha256": "c758734426bdbb987541d76735ba28a1dcda55680feb5f3fb1af217f096bc64c",
+      "fixture_left_in_profile_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba"
+    },
+    {
+      "run": "hm-cut-fix6a-adjacent-staged3-command",
+      "classification": "NOT_EMULATED",
+      "cause": "The first invocation named the absent staged2/settled.state instead of continue-menu.state and exited before the runner loaded. The corrected invocation used the existing state hash; no extra gameplay input was sent."
+    },
+    {
+      "run": "hm-cut-fix6a-entry-warp",
+      "classification": "INVALID_PREPARATION",
+      "cause": "Earlier position fixture started at (9,7); the engine tests the standing warp tile after checking the facing tile. No Cut action was attempted."
+    }
+  ],
+  "native_action": {
+    "prompt_text": "This tree looks like it can be cut down! Would you like to cut it?",
+    "response_text": "CLEFAIRY used Cut!",
+    "cut_accepted": true,
+    "object_before": {
+      "slot_address": "0x22a2be8",
+      "flags": "0xc061",
+      "object_id": 8,
+      "map_id": 16,
+      "model_id": 86,
+      "event_flag": 16,
+      "script_id": 10000,
+      "xyz": [
+        1375,
+        4,
+        246
+      ],
+      "active": true,
+      "row_sha256": "d8e182380f89db38efd5fe122f36d01bb4dc7dfed6a137041a2ef18ac0a58a65",
+      "row_all_zero": false
+    },
+    "object_after": {
+      "slot_address": "0x22a2be8",
+      "flags": "0x0",
+      "object_id": 0,
+      "map_id": 0,
+      "model_id": 0,
+      "event_flag": 0,
+      "script_id": 0,
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "active": false,
+      "row_sha256": "b5fdab78d8947eacc864bfeecb4d2100780e5afe1cd8efafb124887913ac49fa",
+      "row_all_zero": true
+    },
+    "object_deactivated": true,
+    "event_flag_interpretation": "Object slot zeroed after native Cut dialogue; no claim that event flag 16 was set."
+  },
+  "party": {
+    "reference_dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+    "checks": [
+      {
+        "run": "hm-cut-fix6a-adjacent-staged4",
+        "reference_dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+        "reference_slot_base": 0,
+        "reference_save_counter": 10,
+        "reference_crc16_valid": true,
+        "reference_dsv_party_offset": 144,
+        "dynamic_array_offset": "0xd080",
+        "source_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_party_array_sha256": "8faba7420ab63d29e2776e92c6d41b812fe96b1a7d08f81dcd0bfe87c2900d2a",
+        "normalized_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_saved_record_match": true,
+        "records": [
+          {
+            "slot": 0,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "slot": 1,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "slot": 2,
+            "box": {
+              "plaintext_prefix_bytes": 62
+            },
+            "tail": {
+              "encrypted_prefix_bytes": 0
+            },
+            "record_sha256": "82ceaf65960cd474e5eafbb478309c393b89f0bc5cdcec86b390adc792466be3"
+          }
+        ],
+        "party_count": 3,
+        "species_id": 35,
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves": true
+      },
+      {
+        "run": "hm-cut-fix6a-interact",
+        "reference_dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+        "reference_slot_base": 0,
+        "reference_save_counter": 10,
+        "reference_crc16_valid": true,
+        "reference_dsv_party_offset": 144,
+        "dynamic_array_offset": "0xd080",
+        "source_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "normalized_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_saved_record_match": true,
+        "records": [
+          {
+            "slot": 0,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "slot": 1,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "slot": 2,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        ],
+        "party_count": 3,
+        "species_id": 35,
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves": true
+      },
+      {
+        "run": "hm-cut-fix6a-yes",
+        "reference_dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+        "reference_slot_base": 0,
+        "reference_save_counter": 10,
+        "reference_crc16_valid": true,
+        "reference_dsv_party_offset": 144,
+        "dynamic_array_offset": "0xd080",
+        "source_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "normalized_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_saved_record_match": true,
+        "records": [
+          {
+            "slot": 0,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "slot": 1,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "slot": 2,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+          }
+        ],
+        "party_count": 3,
+        "species_id": 35,
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves": true
+      },
+      {
+        "run": "hm-cut-fix6a-dismiss",
+        "reference_dsv_sha256": "a0a76ca3a429d2ceb056644129a5c247f6296af163383105c3f2716bdd9844ba",
+        "reference_slot_base": 0,
+        "reference_save_counter": 10,
+        "reference_crc16_valid": true,
+        "reference_dsv_party_offset": 144,
+        "dynamic_array_offset": "0xd080",
+        "source_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "observed_party_array_sha256": "b7f1a6644283c172a8e699c78c0f8a291ab1ae6034f85e3e7ee978d30d855ba8",
+        "normalized_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "exact_saved_record_match": true,
+        "records": [
+          {
+            "slot": 0,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+          },
+          {
+            "slot": 1,
+            "box": {
+              "plaintext_prefix_bytes": 0
+            },
+            "tail": {
+              "plaintext_prefix_bytes": 0
+            },
+            "record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+          },
+          {
+            "slot": 2,
+            "box": {
+              "plaintext_prefix_bytes": 64
+            },
+            "tail": {
+              "encrypted_prefix_bytes": 0
+            },
+            "record_sha256": "051cbf5b786ef368446b0d3212448850486d5454a4f185401170ad6229e3d4c5"
+          }
+        ],
+        "party_count": 3,
+        "species_id": 35,
+        "moves_by_party_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "no_hm_moves": true
+      }
+    ],
+    "normalized_party_unchanged": true,
+    "species_slot0": 35,
+    "no_hm_moves": true
+  },
+  "inventory_and_canary": {
+    "bag_sha256_before": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+    "bag_sha256_after": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+    "bag_unchanged": true,
+    "reserve_address": "0x023d7000",
+    "reserve_bytes": 4096,
+    "reserve_sha256_before": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+    "reserve_sha256_after": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+    "reserve_unchanged": true
+  },
+  "screenshots": {
+    "baseline_before_action": {
+      "local_path": "qa/runs/hm-cut-fix6a-adjacent-staged4/settled.png",
+      "sha256": "e1f90e085f68788a0b964ad774c12286bf78e8cc2efb47ad356b185dd22bc816"
+    },
+    "prompt": {
+      "local_path": "qa/runs/hm-cut-fix6a-interact/settled.png",
+      "sha256": "a044d927b5f08febbf83005fadbf3df48797014b89c74ac1a03e994bcd90ce99"
+    },
+    "cut_text": {
+      "local_path": "qa/runs/hm-cut-fix6a-yes/settled.png",
+      "sha256": "be24f3ab610fae27d05cb13c5b50f22c38c8876eaa4e6d23e3355bc957f8319d"
+    },
+    "tree_absent_after_dialogue": {
+      "local_path": "qa/runs/hm-cut-fix6a-dismiss/settled.png",
+      "sha256": "f917f0075d37a58a49b8eb9d5d8fd32d35eefaeb55e247cb981f9d66a4cab644"
+    }
+  },
+  "limitations": {
+    "en": "The exact native Cut prompt, party-member response, and runtime object deactivation are confirmed. Party, Bag, and the 0x023D7000–0x023D7FFF reserve are preserved. The adjacent copy used the native tree height as a local anchor; BDHC geometry was not independently interpreted. No post-action battery save, cold reload, or broader map/story acceptance was performed.",
+    "es": "Se confirman el prompt nativo de Corte, el texto del miembro del equipo y la desactivación runtime del objeto. Se conservan equipo, Bolsa y la reserva 0x023D7000–0x023D7FFF. La copia adyacente usó la altura nativa del árbol como ancla local; no se interpretó BDHC de forma independiente. No se hizo guardado en batería posterior, recarga en frío ni aceptación más amplia del mapa o la historia."
+  },
+  "local_evidence_note": "State files, RAM dumps, DSV copies, screenshots, and QA scripts are local artifacts and are not included in the published documentation."
+}

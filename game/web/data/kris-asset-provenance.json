@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-22",
+  "status": "PARTIAL_SOURCE_ART_VERIFIED_AUTHORED_PATCHES_UNAVAILABLE",
+  "target": {
+    "project": "Ultimate Gold / Sacred Gold Plus",
+    "target_rom_inspected": false,
+    "target_resource_compatibility_verified": false,
+    "note": "No ROM, save, emulator state, or game image was opened for this provenance check."
+  },
+  "candidate_projects": [
+    {
+      "id": "ascension7-hgss-kris-as-female-protagonist",
+      "author": "ascension7",
+      "source_urls": [
+        "https://www.pokecommunity.com/threads/hgss-kris-as-female-protagonist.280931/",
+        "https://www.deviantart.com/kimba616/art/HGSS-Kris-Sprites-141087775"
+      ],
+      "project_scope": "HGSS graphics/text replacement, author says USA HeartGold/SoulSilver, version 2.0, last updated 2012-07-18.",
+      "assets": [
+        {
+          "id": "kimba616-hgss-kris-sprite-sheet",
+          "kind": "original_artist_sprite_sheet",
+          "author": "Kimba616",
+          "artifact_path_from_project_root": "../night-sprint/internal/kris-assets/kimba616-hgss-kris-sprites.png",
+          "sha256": "e335e63d64f266d5d33ace2848627d7078896cfeda9f858336fe9c1e8fa2d8d2",
+          "size_bytes": 39405,
+          "png_dimensions": [474, 491],
+          "source_scope": "2D sprite sheet; not a 3D model, Trainer Card, battle-art, or intro-art pack.",
+          "provenance": "The patch author credits Kimba616 for the Kris sprites. The local PNG was retrieved from the artist's referenced source page and preserved unchanged for private analysis.",
+          "reuse_note": "The artist page's stated request is attribution and no false authorship claim. No formal license file was located; confirm terms before redistribution. This file remains outside the public project assets.",
+          "target_mapping": "No sheet cell, palette, animation, or target NARC member has been mapped. Do not import directly.",
+          "status": "LOCAL_ARTIFACT_HASH_AND_DIMENSIONS_VERIFIED"
+        },
+        {
+          "kind": "author_posted_xdelta_fan_patch",
+          "download_url": "https://www.mediafire.com/?djzrl3l22a5d6kc",
+          "retrieval": "The author-linked download currently returns HTTP 404.",
+          "patch_sha256": null,
+          "preimage_sha256": null,
+          "preimage_verified": false,
+          "status": "BLOCKED_PATCH_FILE_UNAVAILABLE"
+        }
+      ],
+      "status": "SOURCE_ART_AVAILABLE_PATCH_UNAVAILABLE"
+    },
+    {
+      "id": "hirotdk-kris-gold-decapitalization",
+      "author": "Hiro TDK",
+      "source_urls": [
+        "https://www.reddit.com/r/PokemonROMhacks/comments/3wxqp9/krisgold_in_heartgold_soulsilver_decapitalization/",
+        "https://www.pokecommunity.com/threads/kris-gold-in-heartgold-soulsilver-decapitalization-sacredgold-stormsilver-support.359839/"
+      ],
+      "project_scope": "Kris/Gold graphic and text edits plus decapitalization. Author later announced separate experimental SacredGold and StormSilver patches intended to be applied after each base patch; no exact target revision is identified.",
+      "author_direct_download": {
+        "url": "https://www.mediafire.com/download/mzjph7n0f0f723c/Kris-Gold-Decap.zip",
+        "claimed_archive": "Kris-Gold-Decap.zip",
+        "retrieval": "The author-linked download currently returns HTTP 404.",
+        "payload_obtained": false,
+        "sha256": null,
+        "format_verified": false,
+        "preimage_sha256": null,
+        "preimage_verified": false
+      },
+      "author_posted_source_pack": {
+        "claim_url": "https://www.pokecommunity.com/threads/kris-gold-in-heartgold-soulsilver-decapitalization-sacredgold-stormsilver-support.359839/page-2",
+        "claim": "The author said they would upload modified NARCs and text locations; no author attachment or accessible package was found in the thread pages reviewed.",
+        "payload_obtained": false
+      },
+      "excluded_reupload": {
+        "thread_url": "https://www.pokecommunity.com/threads/kris-gold-in-heartgold-soulsilver-decapitalization-sacredgold-stormsilver-support.359839/page-3",
+        "reason": "A later attachment is posted by a different forum user, not Hiro TDK. It was not downloaded or used, per the source restriction."
+      },
+      "reported_compatibility": "Thread users report white-screen failures and version mismatches; these are anecdotal and not a verified preimage diagnosis.",
+      "status": "BLOCKED_AUTHOR_DOWNLOAD_UNAVAILABLE"
+    }
+  ],
+  "pinned_source_map": {
+    "repository": "pret/pokeheartgold",
+    "commit": "6988158691eb6178cff697cda0428045ddcba5fb",
+    "source_files": [
+      "include/constants/sprites.h",
+      "include/constants/mmodel.h",
+      "asm/overlay_01_sprite_data.s"
+    ],
+    "female_field_sprite_ids": {
+      "walk": 97,
+      "bike": 98,
+      "hm_pose": 177,
+      "surf": 179,
+      "water": 181,
+      "fishing": 189,
+      "pokegear": 197,
+      "save": 199,
+      "heal": 201,
+      "ladder": 249,
+      "rocket_disguise": 259,
+      "rocket_save": 298,
+      "pokeathlon": 408,
+      "apricorn_shake": 424
+    },
+    "female_model_narc": "a/0/8/1",
+    "female_model_members": {
+      "heroine": 70,
+      "bike": 72,
+      "swim": 74,
+      "hm": 76,
+      "water": 78,
+      "fishing": 80,
+      "ladder": 82,
+      "pokegear": 86,
+      "save": 88,
+      "heal": 90,
+      "rocket": 96,
+      "rocket_heal": 98,
+      "pokeathlon": 100
+    },
+    "source_pairs_verified": [
+      {"sprite_id": 97, "model_member": 70},
+      {"sprite_id": 239, "model_member": 214}
+    ],
+    "scope_limit": "These are static IDs from the pinned decomp, not a target-ROM member inventory or a mapping from the artist sheet."
+  },
+  "design_and_acceptance_limits": {
+    "player_gender_flag": "Keep female profile semantics; Kris is a cosmetic/story presentation choice, not a new gender value.",
+    "npc_counterpart": "Open design decision. Trace gender-conditional scenes and decide the counterpart presentation explicitly; do not assume Lyra must remain unchanged as an NPC.",
+    "still_unmapped_surfaces": [
+      "Trainer Card",
+      "naming and character-selection screens",
+      "opening movie and intro portrait",
+      "battle trainer front and back art",
+      "map marker",
+      "story text and counterpart scenes"
+    ],
+    "runtime_or_release_acceptance": false
+  }
+}

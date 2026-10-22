@@ -1,0 +1,435 @@
+{
+  "schema": "ultimate-gold-repel-remaining-native-qa/v1",
+  "status": "BOUNDED_NATIVE_QA_PASS",
+  "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+  "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+  "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+  "source_battery_fixture_sha256": "3824e502529e166d394541da586144bcbaa8f3832319076d199041a8059f70b8",
+  "initial_open_bag_state_sha256": "31b648764dfb1bdbae510c9856a34679f3e11c926d826cada924131ab43572f2",
+  "initial_cold_state_sha256": "c34abe0451f3b69f5524614c00ee0dc376c1dee5020347d4e83ed6a99b8bf55a",
+  "acceptance_script_sha256": "8dbe992df2eee06ac84adba22a8da623a3553e2a44b0bf283c91a7a932165ef5",
+  "setup_provenance": {
+    "inventory_seed": "one-frame AR writes Repel76 and Repel79 to canonical and legacy Bag item slots 3 and 4",
+    "inventory_seed_code_sha256": "7914ed159367721b40e467ca297a216200e58041c241a56effc1125290099d33",
+    "expiry_acceleration": "one-frame AR byte write sets SaveArray21 repelSteps from 250 to 1",
+    "expiry_setup_code_sha256": "c6e3add94f4f612d1c23370f9334270de60133cd6e1e740d82c1752ac0c16db1",
+    "save_data_address": "0x0227C1E8",
+    "save_array21_offset": "0x000068A4",
+    "fixture_cold_save_data_address": "0x0227C1E8",
+    "fixture_cold_counter_address": "0x02282B01",
+    "address_scope": "Cold fixture only. SaveData and the derived counter address are read dynamically from every RAM dump; the open-Bag snapshot resolves SaveData and counter +0x4C higher.",
+    "bag_view_refresh": "native close/reopen after the one-frame inventory seed"
+  },
+  "bag_refresh_state_chain": [
+    {
+      "run": "repel-remaining-fixture",
+      "result_path": "night-sprint/qa/runs/repel-remaining-fixture/result.json",
+      "result_sha256": "da5fc2863dd9d422a3ecb332a4031444ad1ce1a6a867ad04f843fb1c5dcd3615",
+      "state_path": "night-sprint/qa/runs/repel-remaining-fixture/prepared.state",
+      "state_sha256": "e70f7dbffabee855b372aa7e96a5f8d9a89f27e7133f04fb68b3bf44dae7ebda",
+      "input_state_sha256": "31b648764dfb1bdbae510c9856a34679f3e11c926d826cada924131ab43572f2",
+      "output_state_sha256": "e70f7dbffabee855b372aa7e96a5f8d9a89f27e7133f04fb68b3bf44dae7ebda"
+    },
+    {
+      "run": "repel-remaining-refresh-corrected",
+      "result_path": "night-sprint/qa/runs/repel-remaining-refresh-corrected/result.json",
+      "result_sha256": "ecf5b5033627f3aee61c5d4ce8c8fe7a0f5656c1e79b6b9a70eb4b4e5e72c827",
+      "state_path": "night-sprint/qa/runs/repel-remaining-refresh-corrected/reopened.state",
+      "state_sha256": "5eaa9086d0ffd899cf2f4d9e17a7dd24ab12f9e53d01be9d711bdf4bfeed582c",
+      "input_state_sha256": "e70f7dbffabee855b372aa7e96a5f8d9a89f27e7133f04fb68b3bf44dae7ebda",
+      "output_state_sha256": "5eaa9086d0ffd899cf2f4d9e17a7dd24ab12f9e53d01be9d711bdf4bfeed582c"
+    },
+    {
+      "run": "repel-remaining-refresh-final",
+      "result_path": "night-sprint/qa/runs/repel-remaining-refresh-final/result.json",
+      "result_sha256": "0e795b60cabc5b6d901d9f133ec829cb5697a5a23631d51b359c7072ca8420ac",
+      "state_path": "night-sprint/qa/runs/repel-remaining-refresh-final/bag.state",
+      "state_sha256": "ffc406528072ab3ea9f422b4e512d852bf47198866d848df5c5b2f595695cb7a",
+      "input_state_sha256": "5eaa9086d0ffd899cf2f4d9e17a7dd24ab12f9e53d01be9d711bdf4bfeed582c",
+      "output_state_sha256": "ffc406528072ab3ea9f422b4e512d852bf47198866d848df5c5b2f595695cb7a"
+    }
+  ],
+  "verified": {
+    "super_repel76_retained_at_200_steps": true,
+    "repel79_retained_at_100_steps": true,
+    "accelerated_one_tile_expiry": true,
+    "max_repel_reuse_after_expiry": true,
+    "native_action_runs_have_no_active_codes": true,
+    "canonical_inventory_preserved_during_use": true,
+    "reserve_4096_bytes_preserved": true
+  },
+  "evidence": {
+    "inventory_setup": {
+      "result_sha256": "da5fc2863dd9d422a3ecb332a4031444ad1ce1a6a867ad04f843fb1c5dcd3615",
+      "run": {
+        "run": "repel-remaining-fixture",
+        "result_sha256": "da5fc2863dd9d422a3ecb332a4031444ad1ce1a6a867ad04f843fb1c5dcd3615",
+        "input_script_sha256": "3feb706c5ff5bec7faaba9932ac1a52d7bc92dec001e1e6d2d263f887d5a8b26",
+        "ram_sha256": "f55a8ffb539705d8c87daefb68d0ebf944093140ca55a42d79e8a8a3a6a4bca5",
+        "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+        "state_input_sha256": "31b648764dfb1bdbae510c9856a34679f3e11c926d826cada924131ab43572f2",
+        "state_output_sha256": "e70f7dbffabee855b372aa7e96a5f8d9a89f27e7133f04fb68b3bf44dae7ebda",
+        "codes": [
+          {
+            "sha256": "7914ed159367721b40e467ca297a216200e58041c241a56effc1125290099d33",
+            "start": 0,
+            "end": 1
+          }
+        ],
+        "save_data_address_dynamic": "0x0227c234",
+        "repel_counter_address_dynamic": "0x02282b4d",
+        "marker118_quantity": 1,
+        "repel_steps": 0,
+        "canonical_bag_sha256": "950cc8b795fa97a664579df9d118af9fb0f48a809e4749665c119d5923640885",
+        "legacy_item_pocket_sha256": "35cd4fe256071b93b9863074ee36ddecb5b0e30b9a97604e7fb6de67e0064292",
+        "reserve_4096_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+        "items": [
+          {
+            "id": 76,
+            "quantity": 1
+          },
+          {
+            "id": 77,
+            "quantity": 1
+          },
+          {
+            "id": 78,
+            "quantity": 1
+          },
+          {
+            "id": 79,
+            "quantity": 1
+          },
+          {
+            "id": 81,
+            "quantity": 2
+          }
+        ],
+        "battery_files": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/repel-remaining-fixture/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+            "bytes": 524410,
+            "sha256": "3824e502529e166d394541da586144bcbaa8f3832319076d199041a8059f70b8"
+          }
+        ],
+        "screenshots": [
+          {
+            "path": "night-sprint/qa/runs/repel-remaining-fixture/prepared_bag_before_refresh.png",
+            "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+          }
+        ],
+        "validation": "EMULATED",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      }
+    },
+    "super_repel76": {
+      "run": "repel-remaining-super",
+      "result_sha256": "62311026d4d98b87614c27cfcf2d36eb9b6836f6b26720b4fdd38adb0414bfe2",
+      "input_script_sha256": "d439d507ec146465eb677d84a1f48c5f2efdb7b72c04f0a80c848ae363455036",
+      "ram_sha256": "7e84b4f700cbd81972e5d3306c8e08fd84ed839fef7a244206cfb58a104e450c",
+      "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+      "state_input_sha256": "ffc406528072ab3ea9f422b4e512d852bf47198866d848df5c5b2f595695cb7a",
+      "state_output_sha256": "2a695c9d2c242f6239a060d63daf2c881c1c5862ef12f726a63e0c09a40ca4b1",
+      "codes": [],
+      "save_data_address_dynamic": "0x0227c234",
+      "repel_counter_address_dynamic": "0x02282b4d",
+      "marker118_quantity": 1,
+      "repel_steps": 200,
+      "canonical_bag_sha256": "950cc8b795fa97a664579df9d118af9fb0f48a809e4749665c119d5923640885",
+      "legacy_item_pocket_sha256": "35cd4fe256071b93b9863074ee36ddecb5b0e30b9a97604e7fb6de67e0064292",
+      "reserve_4096_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+      "items": [
+        {
+          "id": 76,
+          "quantity": 1
+        },
+        {
+          "id": 77,
+          "quantity": 1
+        },
+        {
+          "id": 78,
+          "quantity": 1
+        },
+        {
+          "id": 79,
+          "quantity": 1
+        },
+        {
+          "id": 81,
+          "quantity": 2
+        }
+      ],
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/repel-remaining-super/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "3824e502529e166d394541da586144bcbaa8f3832319076d199041a8059f70b8"
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-super/super_context.png",
+          "sha256": "43f578d49fd00566768b4c7a227951d25da7942cc919d95658332953764fd4df"
+        },
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-super/super_dismissed.png",
+          "sha256": "ccf8a975a4b103a3a4fbf631cdc6d92fea9f77d60f5990101d60dfd28230223c"
+        },
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-super/super_effect.png",
+          "sha256": "a560b88942e115ad220e40690ca5ea2f85dfa2909ec7d42196daced5bc240afa"
+        },
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-super/super_selected.png",
+          "sha256": "bd1fc503d3438b7cfd036f69cc398bcf5df0cf6d32a827b4cc4e825ce5ee7251"
+        }
+      ],
+      "validation": "EMULATED",
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    "repel79": {
+      "run": "repel-remaining-repel",
+      "result_sha256": "4621ebe3251ef3954b8144e6ef9a29c8ca8a101302b143da851f24b9b1bd5be4",
+      "input_script_sha256": "6b640ade3337773602909f0c36ab79fe03429dd0f59091ad56bb4e6b7e3884d9",
+      "ram_sha256": "cbc278bc6dc02b9c6f2b536a28cdc1298e6f6be892f70ae0e54eb53aed125c55",
+      "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+      "state_input_sha256": "ffc406528072ab3ea9f422b4e512d852bf47198866d848df5c5b2f595695cb7a",
+      "state_output_sha256": "1d3f5a53a56689e62a47fc01b46b38d6ac3320df65eb277c698013f60ae91563",
+      "codes": [],
+      "save_data_address_dynamic": "0x0227c234",
+      "repel_counter_address_dynamic": "0x02282b4d",
+      "marker118_quantity": 1,
+      "repel_steps": 100,
+      "canonical_bag_sha256": "950cc8b795fa97a664579df9d118af9fb0f48a809e4749665c119d5923640885",
+      "legacy_item_pocket_sha256": "35cd4fe256071b93b9863074ee36ddecb5b0e30b9a97604e7fb6de67e0064292",
+      "reserve_4096_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+      "items": [
+        {
+          "id": 76,
+          "quantity": 1
+        },
+        {
+          "id": 77,
+          "quantity": 1
+        },
+        {
+          "id": 78,
+          "quantity": 1
+        },
+        {
+          "id": 79,
+          "quantity": 1
+        },
+        {
+          "id": 81,
+          "quantity": 2
+        }
+      ],
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/repel-remaining-repel/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "3824e502529e166d394541da586144bcbaa8f3832319076d199041a8059f70b8"
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-repel/repel_context.png",
+          "sha256": "082db0c07fd039bd3a47453a143dae1d8d91045a0983905fb536561de9d52666"
+        },
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-repel/repel_dismissed.png",
+          "sha256": "cc3cd0cf0906b8c1de43e61e866ad624adc06e25e1b3182af2c415994dc27691"
+        },
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-repel/repel_effect.png",
+          "sha256": "66f4afe8de8903dcdc626efcd95afe2e009fdd6605114818a57b9535ee27f7dd"
+        },
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-repel/repel_selected.png",
+          "sha256": "fec72957c6f3651f5ad92138cea7818a8ab01b6fc8016b08ac4a5fb8fa4501da"
+        }
+      ],
+      "validation": "EMULATED",
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    "expiry_setup": {
+      "result_sha256": "20938568650e6696efac02237387732d25ce8dfdeb33007311af3543b1e47a08",
+      "run": {
+        "run": "repel-remaining-expiry-setup",
+        "result_sha256": "20938568650e6696efac02237387732d25ce8dfdeb33007311af3543b1e47a08",
+        "input_script_sha256": "8a60efbba8418731fb7c9163ce10138ce2a6405c17c8ac220b492f0e945ac33f",
+        "ram_sha256": "40f35d8fb786506760efb9337813dcc8d537511e9a8f9d5de3cd24ff2b0f40b4",
+        "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+        "state_input_sha256": "c34abe0451f3b69f5524614c00ee0dc376c1dee5020347d4e83ed6a99b8bf55a",
+        "state_output_sha256": "cdabec575201e79ed24ff818e1028f69aeb99f89d733b896f127ea76ae918e3b",
+        "codes": [
+          {
+            "sha256": "c6e3add94f4f612d1c23370f9334270de60133cd6e1e740d82c1752ac0c16db1",
+            "start": 0,
+            "end": 1
+          }
+        ],
+        "save_data_address_dynamic": "0x0227c1e8",
+        "repel_counter_address_dynamic": "0x02282b01",
+        "marker118_quantity": 1,
+        "repel_steps": 1,
+        "canonical_bag_sha256": "c8e325404a3265345b2be839aadd0bde2a7aaf2a8d4961034505a75f3f6c80ca",
+        "legacy_item_pocket_sha256": "11b99e4cd497e09cbfa5a3d78a7a932235a0346efda238e151d4cb9997811a41",
+        "reserve_4096_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+        "items": [
+          {
+            "id": 77,
+            "quantity": 1
+          },
+          {
+            "id": 78,
+            "quantity": 1
+          },
+          {
+            "id": 81,
+            "quantity": 2
+          }
+        ],
+        "battery_files": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/repel-remaining-expiry/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+            "bytes": 524410,
+            "sha256": "b0abcdee72b020e3ad11f10978ab64f002a843e518d36a8b0fe33185461c7f47"
+          }
+        ],
+        "screenshots": [
+          {
+            "path": "night-sprint/qa/runs/repel-remaining-expiry-setup/one_step_expiry_fixture.png",
+            "sha256": "ad4eaf7daeab2bd776b262d210666f170bece797ce679663dba184722f116314"
+          }
+        ],
+        "validation": "EMULATED",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      }
+    },
+    "walked_expiry": {
+      "run": "repel-remaining-expiry-walk",
+      "result_sha256": "ff1d76616777de6b672de055e2f4ac909b5cbabfaf6a673f26c418521b7b1ebb",
+      "input_script_sha256": "2aa5e2f70b6a1f1c9d6f0b2a75ba0969dd69e83641d28d02348ab92c3cd7a6ee",
+      "ram_sha256": "5e5fda8fba79334dd6204d5b1cf1a2ba1a44c2e8ca09ecce6c8b30f6431a1133",
+      "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+      "state_input_sha256": "cdabec575201e79ed24ff818e1028f69aeb99f89d733b896f127ea76ae918e3b",
+      "state_output_sha256": "f936da15ebfad36040be78f6145e7fe1123180dd8b356cd13146923abdd8300a",
+      "codes": [],
+      "save_data_address_dynamic": "0x0227c1e8",
+      "repel_counter_address_dynamic": "0x02282b01",
+      "marker118_quantity": 1,
+      "repel_steps": 0,
+      "canonical_bag_sha256": "c8e325404a3265345b2be839aadd0bde2a7aaf2a8d4961034505a75f3f6c80ca",
+      "legacy_item_pocket_sha256": "11b99e4cd497e09cbfa5a3d78a7a932235a0346efda238e151d4cb9997811a41",
+      "reserve_4096_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+      "items": [
+        {
+          "id": 77,
+          "quantity": 1
+        },
+        {
+          "id": 78,
+          "quantity": 1
+        },
+        {
+          "id": 81,
+          "quantity": 2
+        }
+      ],
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/repel-remaining-expiry/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "b0abcdee72b020e3ad11f10978ab64f002a843e518d36a8b0fe33185461c7f47"
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-expiry-walk/expiry_notice_or_field.png",
+          "sha256": "d1c99699dac1287c54b821341869bc1b90d41a03a1e53bb07a218788bb742fc4"
+        },
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-expiry-walk/one_tile_walk_checkpoint.png",
+          "sha256": "a77441e7e9f6b4eaccc2171965e2e48de1490335588c9237fc7e1956064d6f22"
+        }
+      ],
+      "validation": "EMULATED",
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    "max_repel_reuse": {
+      "run": "repel-remaining-expiry-reuse",
+      "result_sha256": "2d0a8c3f9e4b92f2536c86e826fc648bf49d866dfba160316003f8bfbbc0e251",
+      "input_script_sha256": "4d97c905ec44166d0840cbcf1cddcec465d48f3434bdebff29861466d310dded",
+      "ram_sha256": "c969acbd3c107b53d842737913977576db0ff827a4d8d0e4d581769945dceec5",
+      "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+      "state_input_sha256": "f936da15ebfad36040be78f6145e7fe1123180dd8b356cd13146923abdd8300a",
+      "state_output_sha256": "cdc57c70f1f752ad5a68063bf11fef58f823dd5a15c60178cdef13d8abc5d560",
+      "codes": [],
+      "save_data_address_dynamic": "0x0227c1e8",
+      "repel_counter_address_dynamic": "0x02282b01",
+      "marker118_quantity": 1,
+      "repel_steps": 250,
+      "canonical_bag_sha256": "c8e325404a3265345b2be839aadd0bde2a7aaf2a8d4961034505a75f3f6c80ca",
+      "legacy_item_pocket_sha256": "11b99e4cd497e09cbfa5a3d78a7a932235a0346efda238e151d4cb9997811a41",
+      "reserve_4096_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+      "items": [
+        {
+          "id": 77,
+          "quantity": 1
+        },
+        {
+          "id": 78,
+          "quantity": 1
+        },
+        {
+          "id": 81,
+          "quantity": 2
+        }
+      ],
+      "battery_files": [
+        {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/repel-remaining-expiry/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+          "bytes": 524410,
+          "sha256": "b0abcdee72b020e3ad11f10978ab64f002a843e518d36a8b0fe33185461c7f47"
+        }
+      ],
+      "screenshots": [
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-expiry-reuse/bag_reopened_after_expiry.png",
+          "sha256": "6466f63261734425569c7e0f1d097d0db4019d583fc9b2c430eb29339bf100c7"
+        },
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-expiry-reuse/max_after_expiry_dismiss.png",
+          "sha256": "21ecd71d3baba58e4ea820613b5b59bf71d574f6da56895c709ce2ea004a9d0c"
+        },
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-expiry-reuse/max_context_after_expiry.png",
+          "sha256": "a73cf38b69de1fb4cf107c74316cc34e55458745ba1e3f9c9a7c98fe6708abb2"
+        },
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-expiry-reuse/max_reuse_effect.png",
+          "sha256": "8b6d5c79343c4bb55f12f287abbae3583cc7c995f938b8dd88f77062780511d7"
+        },
+        {
+          "path": "night-sprint/qa/runs/repel-remaining-expiry-reuse/max_selected_after_expiry.png",
+          "sha256": "5e65a641c27b71e8480efdd82a788900c15b12c0da9fe024f8261abf435f179c"
+        }
+      ],
+      "validation": "EMULATED",
+      "gameplay_acceptance": "NOT_ASSESSED"
+    }
+  },
+  "limits_en": [
+    "Expiry was accelerated by setting the counter to 1, then walking one land tile; 250 native steps were not walked.",
+    "Runner executions are marked EMULATED and gameplay_acceptance NOT_ASSESSED; screenshots and RAM assertions cover this exact ROM/core only.",
+    "The experiment remains outside the downloadable Alpha 1 patch."
+  ],
+  "limits_es": [
+    "La caducidad se aceleró fijando el contador en 1 y caminando una baldosa terrestre; no se recorrieron 250 pasos nativos.",
+    "Las ejecuciones están marcadas EMULATED y gameplay_acceptance NOT_ASSESSED; las capturas y aserciones de RAM corresponden sólo a esta ROM/core.",
+    "El experimento sigue fuera del parche descargable Alfa 1."
+  ]
+}

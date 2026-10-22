@@ -1,0 +1,386 @@
+{
+  "schema": "ultimate-gold-hm-remaining-native-qa/v1",
+  "status": "PARTIAL",
+  "assessment": "No remaining HM action was natively verified in this lane. Every emulated process completed, but gameplay acceptance was not established.",
+  "build": {
+    "rom_path": "@HOME@/Games/Sacred-Gold/experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix5.nds",
+    "rom_sha256": "2a1b5acac2e98e3bc0d18f600b7d91eb1e8298fdd436d132706e175bebf97c7f",
+    "runner_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_fix5.py",
+    "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+    "core_path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+  },
+  "fixture_provenance": {
+    "prepared_source_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/menu-fix5-profile/qa-kit-shop-owned-hm-paged-fix5.dsv",
+    "prepared_source_dsv_sha256": "e2366b6eb035a67c2d8987d6f7ce9bb73f5e847234789ac1e2055e09c24db0f6",
+    "golden_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/kit-v3-battery-profile/cheat-kit-npc-candidate-healer-guarded2.dsv",
+    "golden_dsv_sha256": "fc9dcfa683e6236272b395b4267e23aad8abd5068d1b4237f0e505463faa9384",
+    "golden_dsv_modified": false,
+    "builder_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/hm_remaining_battery_fixture.py",
+    "builder_sha256": "03a0089192dad2a6866c3d6743377a48ab5e2cdae3987367bacb7c767a83f47b",
+    "changes_allowlisted": [
+      "currentPosition",
+      "active player/follower facing",
+      "active player/follower coordinates",
+      "native main-slot CRC16"
+    ],
+    "source_events": {
+      "decomp_source_kind": "LOCAL_POKEHEARTGOLD_DECOMP_ONLY_NOT_VERIFIED_AGAINST_FIX5_EVENT_NARC",
+      "target_events": {
+        "cut_r29": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/030_R29.json",
+          "sha256": "767eabf0f1b92e10b562b5d1601df0bef69e822173c03c409c2d32ca3a50ec1a",
+          "object_id": "obj_R29_tree",
+          "script_id": "std_field_cut",
+          "map_id": 33,
+          "target_xy": [
+            629,
+            401
+          ],
+          "stand_xy": [
+            628,
+            401
+          ]
+        },
+        "rock_smash_r32": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/033_R32.json",
+          "sha256": "a43b9b78a39658c575c47dc84bb772ad8a0a18ecbbe3a8c3800a1575ea339a77",
+          "object_id": "obj_R32_breakrock",
+          "script_id": "std_field_rock_smash",
+          "map_id": 36,
+          "target_xy": [
+            471,
+            439
+          ],
+          "stand_xy": [
+            470,
+            439
+          ]
+        },
+        "strength_dark_cave": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/169_D42R0102.json",
+          "sha256": "765e74cba4c67d8da4b70497c37276589b427cf1a9c149692be666ff10a71ac4",
+          "object_id": "obj_EVERYWHERE_rock",
+          "script_id": "std_field_strength",
+          "map_id": 176,
+          "target_xy": [
+            28,
+            20
+          ],
+          "stand_xy": [
+            27,
+            20
+          ]
+        }
+      },
+      "entry_events": {
+        "cut_r29": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/130_R29R0101.json",
+          "sha256": "8d2847a681e4dd7bc262a46cde301d3aa09dc00c56d3bb679e433ff9bb2ddf97",
+          "map_id": 134,
+          "warp_xy": [
+            5,
+            12
+          ],
+          "destination_map_id": 33
+        },
+        "rock_smash_r32": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/096_D25R0101.json",
+          "sha256": "573b82899804f6cb455256918df14b465d042f5811c77a27d37b39b253cb681e",
+          "map_id": 99,
+          "warp_xy": [
+            27,
+            43
+          ],
+          "destination_map_id": 36
+        },
+        "strength_dark_cave": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/032_R31.json",
+          "sha256": "9b46c579f460566686765a55e6cb111919439881a8144e1491b32251d4229bc8",
+          "map_id": 35,
+          "warp_xy": [
+            565,
+            269
+          ],
+          "destination_map_id": 176
+        }
+      },
+      "limitation": "These vanilla decomp source files and coordinates do not prove that the FIX5 ROM contains identical event-NARC objects or geometry."
+    },
+    "savestates": "Every state belongs to the exact FIX5 ROM hash above. One same-build FIX5 state was used only for the short Cut follow-up; no state crossed ROM hashes.",
+    "runtime_codes": "No runtime codes were active in any emulated run."
+  },
+  "actions": [
+    {
+      "action": "Cut",
+      "status": "PARTIAL",
+      "finding": "Native gatehouse-to-Route29 warp rendered field actors. Two coordinate-based approaches did not place the player beside a visible Cut object; a parent-directed RIGHT48/UP1/A follow-up showed no displacement from cached (626,402). No Cut prompt or action result was observed.",
+      "hm_failure_attributed": false,
+      "runs": [
+        "hm-remaining-cut-r29-reentry",
+        "hm-remaining-cut-r29-reentry-corrected",
+        "hm-remaining-cut-r29-short-approach"
+      ]
+    },
+    {
+      "action": "Rock Smash",
+      "status": "PARTIAL",
+      "finding": "Native Union Cave-to-Route32 warp completed. The scripted route entered a badge dialogue and then a Starly battle before the breakable rock was reached. No Rock Smash prompt or action result was observed.",
+      "hm_failure_attributed": false,
+      "runs": [
+        "hm-remaining-rock-smash-r32-reentry"
+      ]
+    },
+    {
+      "action": "Strength",
+      "status": "PENDING",
+      "finding": "Source-checked offline fixture only; no native action run.",
+      "hm_failure_attributed": false,
+      "fixture_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-strength-dark-cave-reentry/hm_remaining_fixture.json",
+      "fixture_manifest_sha256": "069d1ee9458ac4e4ee46cf7f989a57b11f4589a8d4acf2af24237d8e66351d45"
+    },
+    {
+      "action": "Whirlpool",
+      "status": "PENDING",
+      "finding": "No source target or native fixture selected in this bounded lane.",
+      "hm_failure_attributed": false
+    },
+    {
+      "action": "Waterfall",
+      "status": "PENDING",
+      "finding": "No source target or native fixture selected in this bounded lane.",
+      "hm_failure_attributed": false
+    },
+    {
+      "action": "Rock Climb",
+      "status": "PENDING",
+      "finding": "No source target or native fixture selected in this bounded lane.",
+      "hm_failure_attributed": false
+    }
+  ],
+  "runs": [
+    {
+      "id": "hm-remaining-cut-r29-reentry",
+      "result_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry/result.json",
+      "result_sha256": "a3e931a7b5b6b69dc9f9527a6a772abc35ed7575f883625cd8d1674f4e9115e5",
+      "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/hm_remaining_cut_r29_reentry.json",
+      "input_script_sha256": "5b36bd6ed3e1454700a13f856ae978eb1b5261595e71db52c35e213a299352eb",
+      "frames": 7500,
+      "rom_sha256": "2a1b5acac2e98e3bc0d18f600b7d91eb1e8298fdd436d132706e175bebf97c7f",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "temporary_setup_codes": [],
+      "state_input_path": null,
+      "state_input_sha256": null,
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry/navigation.state",
+      "state_output_sha256": "121f3b7fe8dee67cf035b7f70c44b96b5f37ace2908433435039f39e85c07e05",
+      "system_ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry/system_ram.bin",
+      "system_ram_sha256": "9feaf1a8309505d147f659cb931fc91833dd0204f22caab3ff56308f1cab4fe3",
+      "cached_current_position": [
+        33,
+        0,
+        630,
+        410,
+        3
+      ],
+      "cached_position_caveat": "LocalFieldData.currentPosition is cached save data, not a live actor-coordinate read.",
+      "battery_dsv_sha256": "49899fbf9e4eea0141fe674230be7a583e379cde7ee9e4b374e24086f3b1d012",
+      "fixture_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry/hm_remaining_fixture.json",
+      "fixture_manifest_sha256": "01b39dc57a01d0a2e706fac8a69976899e011c00674af464ba9f6746c71facea",
+      "screenshots": [
+        {
+          "name": "native_warp_arrival",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry/native_warp_arrival.png",
+          "sha256": "d6bfee1214957aa4db3fc0f33e1aac0d9b38ea48b2407a6d9bbe94b62e92eec5"
+        },
+        {
+          "name": "cut_target_approach",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry/cut_target_approach.png",
+          "sha256": "f6f21e1064273de253e0a2010a909ff0bd32de8ac726db04143965dfd0e832cc"
+        },
+        {
+          "name": "cut_action_result",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry/cut_action_result.png",
+          "sha256": "223dc625fd6c8b5e89c986ef73404a08b27fafae727a8bfe15b15626ed3a6794"
+        }
+      ]
+    },
+    {
+      "id": "hm-remaining-cut-r29-reentry-corrected",
+      "result_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry-corrected/result.json",
+      "result_sha256": "34e5b5c72140dec502c524a959bf5a01c2d428127c65f21bfbc019caf3ac6ad2",
+      "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/hm_remaining_cut_r29_reentry_corrected.json",
+      "input_script_sha256": "0378a6f3a5de2c04587a89c2de9a8c8959cb2d2c59bf070c71361d593178c0c3",
+      "frames": 7500,
+      "rom_sha256": "2a1b5acac2e98e3bc0d18f600b7d91eb1e8298fdd436d132706e175bebf97c7f",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "temporary_setup_codes": [],
+      "state_input_path": null,
+      "state_input_sha256": null,
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry-corrected/navigation.state",
+      "state_output_sha256": "323762cee0aeccf02e64ec583bfeafdd4ba69d07e80cc587be7339b8473f1ea2",
+      "system_ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry-corrected/system_ram.bin",
+      "system_ram_sha256": "5fc5af327211c8244b41c44502f1824cfb15bb501615733362767e9217dbad1e",
+      "cached_current_position": [
+        33,
+        0,
+        626,
+        402,
+        1
+      ],
+      "cached_position_caveat": "LocalFieldData.currentPosition is cached save data, not a live actor-coordinate read.",
+      "battery_dsv_sha256": "49899fbf9e4eea0141fe674230be7a583e379cde7ee9e4b374e24086f3b1d012",
+      "fixture_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry-corrected/hm_remaining_fixture.json",
+      "fixture_manifest_sha256": "29973fcac8302ea5d49606af3f10ed1e0cee2c5bf8e83ecb7bcd5f953d146e57",
+      "screenshots": [
+        {
+          "name": "native_warp_arrival",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry-corrected/native_warp_arrival.png",
+          "sha256": "d6bfee1214957aa4db3fc0f33e1aac0d9b38ea48b2407a6d9bbe94b62e92eec5"
+        },
+        {
+          "name": "cut_target_approach",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry-corrected/cut_target_approach.png",
+          "sha256": "0b4846880f52a43f5dbbb049d7531908a623ff656a9e760e93171339a364286f"
+        },
+        {
+          "name": "cut_action_result",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry-corrected/cut_action_result.png",
+          "sha256": "aacaac06532a685ab49c00f56697da3ce615d1ba8bb91e5406cbc806ec0d385f"
+        }
+      ]
+    },
+    {
+      "id": "hm-remaining-cut-r29-short-approach",
+      "result_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-short-approach/result.json",
+      "result_sha256": "ac102b4e9ce528ac28098fc99be8f061516e24d1cd866b73566f0baf410f122c",
+      "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/hm_remaining_cut_r29_short_approach.json",
+      "input_script_sha256": "3425e8f85e68111b8d055b502fea2410aa6bc759c64fda945f426a50ab0973d2",
+      "frames": 5300,
+      "rom_sha256": "2a1b5acac2e98e3bc0d18f600b7d91eb1e8298fdd436d132706e175bebf97c7f",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "temporary_setup_codes": [],
+      "state_input_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-reentry-corrected/navigation.state",
+      "state_input_sha256": "323762cee0aeccf02e64ec583bfeafdd4ba69d07e80cc587be7339b8473f1ea2",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-short-approach/navigation.state",
+      "state_output_sha256": "c3eef2e898eeae116dc5b21bfdc74f4355494f1f89d9ba434c6326a294c454ec",
+      "system_ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-short-approach/system_ram.bin",
+      "system_ram_sha256": "1664c8bdab4eaa769368909b551ac95effa8cfb07ec78114ff8595ed8fa6fca6",
+      "cached_current_position": [
+        33,
+        0,
+        626,
+        402,
+        1
+      ],
+      "cached_position_caveat": "LocalFieldData.currentPosition is cached save data, not a live actor-coordinate read.",
+      "battery_dsv_sha256": "49899fbf9e4eea0141fe674230be7a583e379cde7ee9e4b374e24086f3b1d012",
+      "fixture_manifest_path": null,
+      "fixture_manifest_sha256": null,
+      "screenshots": [
+        {
+          "name": "cut_target_preaction",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-short-approach/cut_target_preaction.png",
+          "sha256": "d2ac5fd30461bbcdacaf3ae775bc2b3a1ef55dab38cbe5fde87c8f1f2b3f2f5e"
+        },
+        {
+          "name": "cut_first_interaction",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-short-approach/cut_first_interaction.png",
+          "sha256": "c8d95bec3b8da7e0c113bfd7b29e5bd9c505f08a84efe74103535b76b84dd844"
+        },
+        {
+          "name": "cut_prompt_or_party",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-short-approach/cut_prompt_or_party.png",
+          "sha256": "44d108fd9edc031a7aef90e389882d33c5432277e18e39e9b9760bfbe5b8c2ae"
+        },
+        {
+          "name": "cut_action_result",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-cut-r29-short-approach/cut_action_result.png",
+          "sha256": "2d6f89c25ab16674fb792da70c053fb80abe5b0f9894075fd445deb99d41e985"
+        }
+      ]
+    },
+    {
+      "id": "hm-remaining-rock-smash-r32-reentry",
+      "result_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-rock-smash-r32-reentry/result.json",
+      "result_sha256": "a901e50fdd070a32e2049b39fe6076101c532198314d64221c20f3f01953fec5",
+      "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/hm_remaining_rock_smash_r32_reentry.json",
+      "input_script_sha256": "6de479fc9bd4f823c5abf6a3b007196b056b69a6fdd203c4e692be55eac02486",
+      "frames": 7600,
+      "rom_sha256": "2a1b5acac2e98e3bc0d18f600b7d91eb1e8298fdd436d132706e175bebf97c7f",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "execution_status": "COMPLETED",
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "temporary_setup_codes": [],
+      "state_input_path": null,
+      "state_input_sha256": null,
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-rock-smash-r32-reentry/navigation.state",
+      "state_output_sha256": "e76067899e9c2a867264249bb529e2a5fd78ef481918ad7060668f67f59b7916",
+      "system_ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-rock-smash-r32-reentry/system_ram.bin",
+      "system_ram_sha256": "b5a4145f75aafec3862343fda963ffa60836f645584bc40f434e69f67e69e4a3",
+      "cached_current_position": [
+        36,
+        2,
+        462,
+        434,
+        2
+      ],
+      "cached_position_caveat": "LocalFieldData.currentPosition is cached save data, not a live actor-coordinate read.",
+      "battery_dsv_sha256": "c6bf82d1443cbe84325e381e53396bc7d9df0e0ba59a839c857c809673bd94dd",
+      "fixture_manifest_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-rock-smash-r32-reentry/hm_remaining_fixture.json",
+      "fixture_manifest_sha256": "f93c8942d0c70e177db6851aaef677f22cdb34b196e89b327ec201fb9ea2a1b4",
+      "screenshots": [
+        {
+          "name": "native_warp_arrival",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-rock-smash-r32-reentry/native_warp_arrival.png",
+          "sha256": "e03a94272ea376de1518d2cfa1657cab56fa7851c2814cdcddf3c2d21482df82"
+        },
+        {
+          "name": "rock_smash_target_approach",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-rock-smash-r32-reentry/rock_smash_target_approach.png",
+          "sha256": "c3092468901bae964817aa61fbf32b0f4310fe49074299013f8515411ba7dce8"
+        },
+        {
+          "name": "rock_smash_first_interaction",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-rock-smash-r32-reentry/rock_smash_first_interaction.png",
+          "sha256": "0a6000c1c0806d26d25836f13a94ff33d612ddc56ed5992a1bd5153539702189"
+        },
+        {
+          "name": "rock_smash_prompt_or_party",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-rock-smash-r32-reentry/rock_smash_prompt_or_party.png",
+          "sha256": "a38156301a452cf975f1eb3d68e1fbfde5cf51baa04a23d69c1413380f8623b3"
+        },
+        {
+          "name": "rock_smash_action_result",
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/hm-remaining-rock-smash-r32-reentry/rock_smash_action_result.png",
+          "sha256": "4c07244ec8e5c864a2ae978cdeefabbbd16e9c448a13573631d9fe81e4aa263b"
+        }
+      ]
+    }
+  ],
+  "execution_summary": {
+    "completed_processes": 4,
+    "all_runners_reported_completed": true,
+    "all_gameplay_acceptance_not_assessed": true,
+    "all_runtime_codes_disabled": true,
+    "verified_actions": []
+  },
+  "limits": [
+    "The runner PASS means the emulator process completed; it is not native HM acceptance.",
+    "The three event targets and entry warps were validated against local vanilla decomp source files only, not FIX5 ROM EVENT NARC data.",
+    "The cached position field is not a live actor-coordinate read.",
+    "No story or natural-access claim is made.",
+    "Strength, Whirlpool, Waterfall, and Rock Climb remain pending."
+  ],
+  "summary_en": "FIX5 setup and native map re-entry were partially validated for Cut and Rock Smash, but neither HM action reached its exact target. Strength has a generated source-backed fixture only. Whirlpool, Waterfall, and Rock Climb remain pending. No HM failure is attributed.",
+  "summary_es": "La preparación FIX5 y la reentrada nativa al mapa quedaron parcialmente validadas para Corte y Golpe Roca, pero ninguna acción llegó a su objetivo exacto. Fuerza sólo tiene un fixture generado desde la fuente. Torbellino, Cascada y Treparrocas siguen pendientes. No se atribuye ningún fallo a las MO."
+}

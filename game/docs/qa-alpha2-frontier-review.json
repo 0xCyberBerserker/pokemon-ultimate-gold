@@ -1,0 +1,44 @@
+{
+  "schema": "ultimate-gold-alpha2-frontier-review/v1",
+  "date": "2026-10-22",
+  "status": "PASS_BOUNDED_OFFLINE_REVIEW_WITH_HISTORICAL_LIMIT",
+  "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+  "review": {
+    "independent_agent": "qa_independent_review",
+    "emulator_rerun": false,
+    "outcome_report": "docs/qa-alpha2-frontier-outcome.json",
+    "outcome_report_sha256": "d245cf7f1a07deffd16f400c5bed0f772501fbb35154ee032b89194baf4d2c46",
+    "auditor": "night-sprint/qa/alpha2_frontier_outcome_acceptance.py",
+    "auditor_sha256": "59184f89c3f0475fc6c1185e20001767c1a64b55822816380cad1505c0ea6a4a",
+    "run_count": 18,
+    "state_feeder_count": 5,
+    "capture_count": 11,
+    "final_dsv_sha256": "a15f0c19a0ca7fd491b253650c304ff79f54c656b24b094a0374bab1d2c9e3a5",
+    "both_dsv_crc_valid": true,
+    "dsv_counters": [8, 7],
+    "party_and_bag_equal_across_return_saved_dsv_and_cold_ram": true,
+    "cold_contract": "No state path or fingerprint; exactly 5500 frames; physical Continue/checkpoint script pinned by SHA-256.",
+    "cold_contract_tests_passed": 4,
+    "defeat": "Inferred only; no explicit result screen or outcome flag accepted."
+  },
+  "historical_entry_report": {
+    "file": "docs/qa-alpha2-frontier.json",
+    "sha256": "55033dc223efa5ea021624d54cdc63bf5bd3314a3a614bad037241a224ff52ef",
+    "missing_post_registration_dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+    "limitation": "The historical battery snapshot was overwritten. Comparisons requiring its bytes are not reproducible and are excluded; the later outcome has separate frozen final evidence."
+  },
+  "published_images": [
+    {
+      "file": "web/assets/locations/alpha2-battle-tower-entrance.png",
+      "sha256": "c1e313c0ec5c7b96ca228df1a263fa8ca2edac79c0eb658714e853b94e016ab3"
+    },
+    {
+      "file": "web/assets/locations/alpha2-battle-tower-cold-return.png",
+      "sha256": "68706b5b2247c2a9b8b6ad68d841feed3fe7bf2b91887c39197c20c5eefcdee3"
+    }
+  ],
+  "limits": [
+    "No normal-story access, other facility, victory, reward or streak acceptance.",
+    "Local ROM, DSV, state and RAM artifacts remain outside the website repository."
+  ]
+}

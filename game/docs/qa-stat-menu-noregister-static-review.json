@@ -1,0 +1,80 @@
+{
+  "schema": "portable-stat-editor-menu-noregister-static-review/v1",
+  "result": "PASS_STATIC_DIFF_RUNTIME_NOT_TESTED",
+  "scope": "Independent read-only comparison of the noregister candidate to its pinned 998 parent, ARM9 item mapping, NARC members, builder guards, focused tests, and Bag context-menu source. No core or ROM writes.",
+  "artifacts": {
+    "parent_rom_sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a",
+    "candidate_rom": {
+      "path": "experiments/eviv/portable-stat-editor-menu-noregister/portable-stat-editor-menu-noregister-fix6a.nds",
+      "sha256": "03d8711445a32868a64b5c34abbd094c2f4be7a0d40d09fafcc54460a257c620"
+    },
+    "builder": {
+      "path": "qa/portable_stat_editor_menu_noregister_build.py",
+      "sha256": "d6651661c8d82bc87d4050ff7c477f522b9ae7503af0d835cc5eb0f483c9288c"
+    },
+    "build_report": {
+      "path": "experiments/eviv/portable-stat-editor-menu-noregister/build.json",
+      "sha256": "364ab4ae172129f670e5ed350cd5695ac97d2b50d6b46058e2a3a6f581cb5c3d",
+      "status": "STATIC_BUILD_PASS_RUNTIME_NOT_TESTED"
+    },
+    "focused_test": {
+      "path": "qa/test_portable_stat_editor_menu_noregister_build.py",
+      "sha256": "ec328740800de5ba1ed732a23fa62b12a4e56feb2e460549fc97146817ab1419",
+      "result": "5 tests passed"
+    }
+  },
+  "physical_diff": {
+    "ndspy_version": "4.1.0",
+    "candidate_and_parent_rom_size_equal": true,
+    "nds_file_count": 513,
+    "changed_nds_file_ids": [146],
+    "changed_nds_path": "a/0/1/7",
+    "arm9_byte_exact": true,
+    "arm7_byte_exact": true,
+    "arm9_overlay_table_byte_exact": true,
+    "arm7_overlay_table_byte_exact": true,
+    "target_narc_raw_changed_bytes": 1,
+    "target_narc_raw_changed_offset": 22740,
+    "target_narc_member_count": 517,
+    "changed_narc_members": [515],
+    "all_other_nds_files_and_narc_members_byte_exact": true,
+    "scripts_messages_and_other_narcs_byte_exact": true
+  },
+  "item_mapping_and_record": {
+    "mapping_table_address": "0x02100194",
+    "item_rows": {
+      "113": {"row_address": "0x0210051C", "u16": [514, 793, 794, 0]},
+      "114": {"row_address": "0x02100524", "u16": [516, 793, 794, 0]},
+      "118": {"row_address": "0x02100544", "u16": [515, 793, 794, 0]}
+    },
+    "item_narc_member": 515,
+    "record_size": 34,
+    "before_sha256": "00886a28ba8f8b93c086bc3b1502cd025d8eb072c03d9dc939bf6fe35fe954fc",
+    "after_sha256": "cf2166b33de86bae75cf84fca4233e9abaaeaee22b24417f344bbb411eb46d0e",
+    "flags_before_after": ["0x03E0", "0x03A0"],
+    "changed_record_offsets": [8],
+    "changed_byte_xor": "0x40",
+    "field_use_byte_before_after": [5, 5],
+    "item_113_member_514_exact": true,
+    "item_114_member_516_exact": true
+  },
+  "source_semantics": {
+    "bag_context_menu_source": {
+      "path": "engine/upstream/pokeheartgold/src/application/bag/bag_app_main.c",
+      "sha256": "05dbbebce9c69ac5af8d7f827c1420a0ec232f8d71c1a76b7bd7466c3e38dd06",
+      "locations": ["1668", "1691-1697"],
+      "finding": "The Bag adds USE when ITEMATTR_FIELDUSEFUNC is nonzero, while SELECTABLE is checked separately to add REGISTER or DESELECT. The changed bit therefore does not remove the source-defined Bag USE menu eligibility."
+    },
+    "attribute_getter_source": {
+      "path": "engine/upstream/pokeheartgold/src/item.c",
+      "sha256": "09e9377f89adc9003711d3dc16a3912e476043a188e3d5c349369cb37f6fda49",
+      "locations": ["796-812"],
+      "finding": "Field-use and selectable attributes are returned independently."
+    },
+    "runtime_use_callback": "NOT_TESTED; this static source check establishes menu eligibility, not that fieldUseFunc 5 completes the portable editor flow in the candidate."
+  },
+  "limits": [
+    "No emulator or native UI run was performed. Bag visibility, Register removal, and item Use behavior remain for a separate runtime smoke test.",
+    "The result accepts only the exact one-byte metadata delta and source-level separation of Bag USE eligibility from SELECTABLE; it does not claim editor execution or save behavior."
+  ]
+}

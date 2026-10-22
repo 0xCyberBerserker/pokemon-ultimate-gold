@@ -1,0 +1,1016 @@
+{
+  "schema": "ultimate-gold-rock-climb-walk-fix6a-qa/v1",
+  "status": "PASS_NATIVE_ON_FOOT_ACTION_AND_ASCENT_FROM_POSITION_FIXTURE",
+  "summary_en": "Exact FIX6a confirmed the Rock Climb prompt, Yes, move message and on-foot ascent from R47 (89,396) to (89,392). The pre-action avatar was PLAYER_STATE_WALKING 0. The position came from a synthetic fixture derived from a native walking save; normal story access and post-action save/cold persistence remain pending.",
+  "summary_es": "FIX6a exacta confirmó el prompt de Rock Climb, la respuesta Sí, el mensaje de uso y el ascenso a pie de R47 (89,396) a (89,392). Antes de la acción el avatar estaba en PLAYER_STATE_WALKING 0. La posición procede de una fixture sintética derivada de un guardado nativo a pie; el acceso normal por historia y la persistencia tras guardar/recargar en frío siguen pendientes.",
+  "scope": {
+    "verified": [
+      "native on-foot Rock Climb action from a checksum-verified synthetic R47 position copy",
+      "fresh cold core launch to title, touch-to-start, Continue and field before action",
+      "runtime player state 0 before A and after ascent",
+      "runtime coordinates and height fields before/after the ascent",
+      "exact saved-party, full SaveArray3 Bag and 4-KiB reserve integrity across the action"
+    ],
+    "pending": [
+      "normal story reachability to the R47 position",
+      "post-climb save and fresh-process battery reload",
+      "broader map/route acceptance"
+    ],
+    "excluded": [
+      "prior Surf-state Rock Climb attempt"
+    ]
+  },
+  "build": {
+    "rom_path": "experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+    "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "core_path": "tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_path": "night-sprint/qa/headless_runner_fix6a.py",
+    "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+    "cheats": []
+  },
+  "fixture": {
+    "source_dsv": {
+      "path": "night-sprint/qa/runs/hm-remaining-strength-fix6a-native-save/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+      "sha256": "38d7a65bfa0bad447d82505e6a224548de33daa99a960395eaeb80f2522ca4cf",
+      "size": 524410,
+      "selected_save_counter": 9,
+      "selected_slot_base": 262144,
+      "slots": [
+        {
+          "base": 0,
+          "save_counter": 8,
+          "crc16": 46308,
+          "crc_valid": true,
+          "current_position": [
+            123,
+            -1,
+            6,
+            56,
+            1
+          ]
+        },
+        {
+          "base": 262144,
+          "save_counter": 9,
+          "crc16": 35474,
+          "crc_valid": true,
+          "current_position": [
+            176,
+            -1,
+            26,
+            5,
+            1
+          ]
+        }
+      ]
+    },
+    "source_native_capture": {
+      "run_result_sha256": "8e6150ab53b0a80f5ed181c2e40297de58b4186c247b251ae3e4c4956f298768",
+      "dsv_sha256": "38d7a65bfa0bad447d82505e6a224548de33daa99a960395eaeb80f2522ca4cf",
+      "system_ram_sha256": "b35a4af5b204de8517411ab2853e509e3e0dc3f80f96bcd1bf98c4b572b7ba2f",
+      "avatar_state": 0,
+      "state_name": "PLAYER_STATE_WALKING",
+      "field_system_pointer_offset": 2753216,
+      "avatar_address": "0x022a6b58"
+    },
+    "fixture_dsv": {
+      "path": "night-sprint/qa/runs/hm-rock-climb-walk-fix6a-preflight/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+      "sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+      "size": 524410,
+      "selected_save_counter": 9,
+      "selected_slot_base": 262144,
+      "slots": [
+        {
+          "base": 0,
+          "save_counter": 8,
+          "crc16": 46308,
+          "crc_valid": true,
+          "current_position": [
+            123,
+            -1,
+            6,
+            56,
+            1
+          ]
+        },
+        {
+          "base": 262144,
+          "save_counter": 9,
+          "crc16": 56127,
+          "crc_valid": true,
+          "current_position": [
+            151,
+            -1,
+            89,
+            396,
+            0
+          ]
+        }
+      ],
+      "fallback_slot_unchanged": true,
+      "changed_byte_count": 18,
+      "allowed_field_set_verified": true,
+      "manifest_sha256": "2f53b08415472d174df9ca64c4ebe2c607bbeea47f401fc3e1c7566c5941f36d",
+      "fixture_helper_sha256": "2c1d331e7a4624a8bdfaf912e33f8bcbdac59132c8f089f858e5027fe4b38e90"
+    },
+    "source_position": [
+      176,
+      -1,
+      26,
+      5,
+      1
+    ],
+    "fixture_position": [
+      151,
+      -1,
+      89,
+      396,
+      0
+    ],
+    "player_saved_map_object": {
+      "object_id": 255,
+      "map_id": 1,
+      "movement": 1,
+      "xyz": [
+        89,
+        8,
+        396
+      ],
+      "vec_y_fx32": 262144,
+      "facing_codes": [
+        0,
+        0,
+        0
+      ]
+    },
+    "map_environment": {
+      "source_weather": 11,
+      "fixture_weather": 0,
+      "fixture_camera_type": 0,
+      "map_header": {
+        "map_header_sha256": "90cca07dabf659ae35181f1e28cbc47cdaab59d513d4dff6498039ed35bd5d65",
+        "raw_environment_word": "0xf6480200",
+        "weather": 0,
+        "camera_type": 0
+      }
+    },
+    "static_geometry": {
+      "path": "night-sprint/qa/hm_bdhc_height.json",
+      "sha256": "cba6bc900f1cde8fda626332c8c994b7c887c65711e5e05109d6d5e10158431f",
+      "map_id": 151,
+      "approach_xz": [
+        89,
+        396
+      ],
+      "target_xz": [
+        89,
+        395
+      ],
+      "facing": "north",
+      "target_behavior": "0x4B",
+      "approach_currentY": 8,
+      "approach_vecY_fx32": 262144,
+      "target_derived_currentY": 9,
+      "target_derived_vecY_fx32": 294912,
+      "geometry": {
+        "map_id": 151,
+        "map_name": "R47",
+        "target_global_xz": [
+          89,
+          395
+        ],
+        "target_model_id": 79,
+        "target_per_attribute_le": "0x804b",
+        "target_behavior": 75,
+        "target_height_units": 4.5,
+        "target_covering_plate_ids": [
+          3
+        ],
+        "approach_global_xz": [
+          89,
+          396
+        ],
+        "approach_model_id": 79,
+        "approach_per_attribute_le": "0x0000",
+        "approach_behavior": 0,
+        "approach_collision_high_byte": 0,
+        "approach_height_units": 4.0,
+        "approach_covering_plate_ids": [
+          9
+        ],
+        "facing": "north",
+        "map_header_sha256": "90cca07dabf659ae35181f1e28cbc47cdaab59d513d4dff6498039ed35bd5d65",
+        "map_matrix_member_sha256": "a6012ac34ae879b5f85f21642a78afcff617112813c4cf1e6327054735c56d2d",
+        "land_data_narc_sha256": "120594d49680ed216487d40bc68b5af23b11882eac76f5ecafa992c278d4b4ab",
+        "scope": "Only exact map EVENT-independent PER/BDHC data; no runtime or story claim.",
+        "selection_reason": "Unique valid candidate with ordinary TILE_BEHAVIOR_0 approach; all other valid pairs remain alternatives.",
+        "target_point": {
+          "map_id": 151,
+          "map_name": "R47",
+          "map_header_sha256": "90cca07dabf659ae35181f1e28cbc47cdaab59d513d4dff6498039ed35bd5d65",
+          "matrix_member_id": 0,
+          "matrix_member_sha256": "a6012ac34ae879b5f85f21642a78afcff617112813c4cf1e6327054735c56d2d",
+          "coordinate_space": "global_main_matrix",
+          "matrix_cell_xz": [
+            2,
+            12
+          ],
+          "matrix_cell_index_z_then_x": 566,
+          "matrix_cell_altitude": 0,
+          "map_model_id": 79,
+          "global_xz": [
+            89,
+            395
+          ],
+          "model_local_xz": [
+            25,
+            11
+          ],
+          "tile_attribute_le_hex": "4b80",
+          "tile_attribute_u16_le": 32843,
+          "behavior_low_byte": 75,
+          "collision_high_byte": 128,
+          "land_data_member_sha256": "26b262f768c088fe9765f67d2ce7a94fe06658240d84d08493ae15a0c9ab7437",
+          "land_data_member_size": 38866,
+          "land_data_section_lengths": {
+            "per": 2048,
+            "buildings": 0,
+            "model": 36316,
+            "bdhc": 450
+          },
+          "bgs_signature": "0x1234",
+          "bgs_payload_length": 32,
+          "per_offset_in_member": 52,
+          "bdhc": {
+            "offset_in_land_member": 38416,
+            "section_size": 450,
+            "section_sha256": "4a9c91580811029dcc0c6f96b0916cc61405c375cc7c32e79a7c9a68b9d11545",
+            "counts": {
+              "coords": 21,
+              "slopes": 2,
+              "heights": 7,
+              "plates": 11
+            },
+            "trailing_bytes_after_plate_table": 126
+          },
+          "terrain": {
+            "model_local_tile_center_xz": [
+              9.5,
+              -4.5
+            ],
+            "covering_plane_count": 1,
+            "covering_planes": [
+              {
+                "plate_id": 3,
+                "bounds_xz": [
+                  [
+                    9,
+                    -7
+                  ],
+                  [
+                    10,
+                    -4
+                  ]
+                ],
+                "normal_raw_xyz": [
+                  0,
+                  2896,
+                  2896
+                ],
+                "constant_decoded_height_units": 0.0,
+                "height_units": 4.5
+              }
+            ],
+            "height_status": "UNIQUE"
+          },
+          "narc_hashes": {
+            "matrix": "f5cab013a865338d88231ec970784b43618c0863309f0a10178f34cdabdd848a",
+            "land_data": "120594d49680ed216487d40bc68b5af23b11882eac76f5ecafa992c278d4b4ab"
+          },
+          "derived_saved_height_fields": {
+            "bdhc_height_world_units": 4.5,
+            "current_y": 9.0,
+            "vec_y_fx32": 294912,
+            "status": "DERIVED_FROM_NATIVE_ANCHOR_RELATION_NOT_RUNTIME_OBSERVED"
+          }
+        },
+        "approach_point": {
+          "map_id": 151,
+          "map_name": "R47",
+          "map_header_sha256": "90cca07dabf659ae35181f1e28cbc47cdaab59d513d4dff6498039ed35bd5d65",
+          "matrix_member_id": 0,
+          "matrix_member_sha256": "a6012ac34ae879b5f85f21642a78afcff617112813c4cf1e6327054735c56d2d",
+          "coordinate_space": "global_main_matrix",
+          "matrix_cell_xz": [
+            2,
+            12
+          ],
+          "matrix_cell_index_z_then_x": 566,
+          "matrix_cell_altitude": 0,
+          "map_model_id": 79,
+          "global_xz": [
+            89,
+            396
+          ],
+          "model_local_xz": [
+            25,
+            12
+          ],
+          "tile_attribute_le_hex": "0000",
+          "tile_attribute_u16_le": 0,
+          "behavior_low_byte": 0,
+          "collision_high_byte": 0,
+          "land_data_member_sha256": "26b262f768c088fe9765f67d2ce7a94fe06658240d84d08493ae15a0c9ab7437",
+          "land_data_member_size": 38866,
+          "land_data_section_lengths": {
+            "per": 2048,
+            "buildings": 0,
+            "model": 36316,
+            "bdhc": 450
+          },
+          "bgs_signature": "0x1234",
+          "bgs_payload_length": 32,
+          "per_offset_in_member": 52,
+          "bdhc": {
+            "offset_in_land_member": 38416,
+            "section_size": 450,
+            "section_sha256": "4a9c91580811029dcc0c6f96b0916cc61405c375cc7c32e79a7c9a68b9d11545",
+            "counts": {
+              "coords": 21,
+              "slopes": 2,
+              "heights": 7,
+              "plates": 11
+            },
+            "trailing_bytes_after_plate_table": 126
+          },
+          "terrain": {
+            "model_local_tile_center_xz": [
+              9.5,
+              -3.5
+            ],
+            "covering_plane_count": 1,
+            "covering_planes": [
+              {
+                "plate_id": 9,
+                "bounds_xz": [
+                  [
+                    0,
+                    -4
+                  ],
+                  [
+                    12,
+                    -2
+                  ]
+                ],
+                "normal_raw_xyz": [
+                  0,
+                  4096,
+                  0
+                ],
+                "constant_decoded_height_units": 4.0,
+                "height_units": 4.0
+              }
+            ],
+            "height_status": "UNIQUE"
+          },
+          "narc_hashes": {
+            "matrix": "f5cab013a865338d88231ec970784b43618c0863309f0a10178f34cdabdd848a",
+            "land_data": "120594d49680ed216487d40bc68b5af23b11882eac76f5ecafa992c278d4b4ab"
+          },
+          "derived_saved_height_fields": {
+            "bdhc_height_world_units": 4.0,
+            "current_y": 8.0,
+            "vec_y_fx32": 262144,
+            "status": "DERIVED_FROM_NATIVE_ANCHOR_RELATION_NOT_RUNTIME_OBSERVED"
+          }
+        }
+      }
+    }
+  },
+  "navigation_chain": {
+    "starting_run_has_savestate_input": false,
+    "subsequent_states_same_rom_core_runner": true,
+    "every_stage_seeded_with_same_fixture_dsv": true,
+    "runs": [
+      {
+        "run": "hm-rock-climb-walk-fix6a-cold-boot",
+        "result_sha256": "ff3ac70abb4febce425b2ffec2c706892cf00172a9bb498c7acbc94af5aceb59",
+        "script": "qa/hm_rock_climb_walk_fix6a_cold_boot.json",
+        "script_sha256": "4b7b1d6498280c94aa94ec9dbe8cd6097df8b4a349b46841f8cb57d0c9286195",
+        "frames": 5200,
+        "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+        "cheats": [],
+        "seed_fixture_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "battery_output_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "state_in_sha256": null,
+        "state_out_sha256": "a68f4a960f6a95332acf7c0abd9fdae54353d8efed55323f0110395c56da4c39",
+        "system_ram_sha256": "32755aac5ac69e62264b22754130c2dd6ea57a4e84862c5aea866873ba5ec893",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "screenshots": [
+          {
+            "path": "night-sprint/qa/runs/hm-rock-climb-walk-fix6a-cold-boot/title_visible.png",
+            "sha256": "3b2ad7ac9a53160e3f4379b9492b20de605552052046e59f2b576b2b10afd022"
+          },
+          {
+            "path": "night-sprint/qa/runs/hm-rock-climb-walk-fix6a-cold-boot/cold_title.png",
+            "sha256": "11ba7bd9e4ab6b754dd82462f8db8362bb8514d6ebc6edae44d25239c96159ad"
+          }
+        ]
+      },
+      {
+        "run": "hm-rock-climb-walk-fix6a-title-a",
+        "result_sha256": "41f02d6ffb888f128edd957d9a145c9a2443409af875653588911ff3e3c14357",
+        "script": "qa/hm_rock_climb_walk_fix6a_title_a.json",
+        "script_sha256": "f7fa5e75a85f6e8a42aa3a8618c4fbf8effc9317583da82ea410c85bb32afe2a",
+        "frames": 1200,
+        "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+        "cheats": [],
+        "seed_fixture_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "battery_output_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "state_in_sha256": "a68f4a960f6a95332acf7c0abd9fdae54353d8efed55323f0110395c56da4c39",
+        "state_out_sha256": "c02b804bfba36a5cd5edce2555d8f76bb35153188dbdfc626f7d3417ad217adb",
+        "system_ram_sha256": "caa5d33ad43364a42759b5114fd7942f0a7d9c522ef4b4373efc958f2da79653",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "screenshots": [
+          {
+            "path": "night-sprint/qa/runs/hm-rock-climb-walk-fix6a-title-a/touch_to_start.png",
+            "sha256": "b9de1a392425099e89fa4e376b6edbc1005dcc6759aa3434ee6d5797b21059e5"
+          }
+        ]
+      },
+      {
+        "run": "hm-rock-climb-walk-fix6a-touch-continue",
+        "result_sha256": "6fd9acc2fcbd7c71c9a8fb15475fd19f489fa90c7b0d178575f32d80fa841881",
+        "script": "qa/hm_rock_climb_walk_fix6a_touch_continue.json",
+        "script_sha256": "f54fe995f0b0953b0a523b00fc27ea3dfcfacd70c22cb6b3b3be6c2ca62052eb",
+        "frames": 1200,
+        "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+        "cheats": [],
+        "seed_fixture_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "battery_output_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "state_in_sha256": "c02b804bfba36a5cd5edce2555d8f76bb35153188dbdfc626f7d3417ad217adb",
+        "state_out_sha256": "37109875eec9eb71796bd2d8f7827c3ef390a904c88abec4f7c8d3311a08b66c",
+        "system_ram_sha256": "37bada7f09879c019f2d75e3e6448d1bbc7912e622f3322bda20517eb52d0443",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "screenshots": [
+          {
+            "path": "night-sprint/qa/runs/hm-rock-climb-walk-fix6a-touch-continue/title_before_touch.png",
+            "sha256": "b3cceed7c77eb8d221a8dd3ff5217314bd51192db578568504c1bd92d479dce5"
+          },
+          {
+            "path": "night-sprint/qa/runs/hm-rock-climb-walk-fix6a-touch-continue/continue_stable.png",
+            "sha256": "350406d5a54ddf53e25ab87bf15f5d64fb2db3cd0df9dfa38aa2771526c1e43a"
+          }
+        ]
+      },
+      {
+        "run": "hm-rock-climb-walk-fix6a-continue-field",
+        "result_sha256": "5258851002c7c63403a0a32eaa61ce3d74c8959bae31d62d22b908a7abc0906a",
+        "script": "qa/hm_rock_climb_walk_fix6a_continue_field.json",
+        "script_sha256": "19fc0488118da1d48744cdf30fb18a5aead7c51fa646d2415aeb30d91d4ff469",
+        "frames": 6500,
+        "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+        "cheats": [],
+        "seed_fixture_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "battery_output_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "state_in_sha256": "37109875eec9eb71796bd2d8f7827c3ef390a904c88abec4f7c8d3311a08b66c",
+        "state_out_sha256": "0b9a0b661ac27ab5b70ece0a4b706533e04bbfa02c6221cb7e7d9b49b59f1c57",
+        "system_ram_sha256": "5332d93ed1f642c0f2664df093b607161961a2902b1f71dd437ac298c9a6c9bb",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "screenshots": [
+          {
+            "path": "night-sprint/qa/runs/hm-rock-climb-walk-fix6a-continue-field/field_stable_before_action.png",
+            "sha256": "7d76fa67a4503b20795ca892485e7c5053b07c60a677b047ba74cc7626b87978"
+          }
+        ]
+      },
+      {
+        "run": "hm-rock-climb-walk-fix6a-action",
+        "result_sha256": "a2c6750bf6d4a02d9266f35c9bf5fd07f34cbff74995429e6bfebec79cbf3198",
+        "script": "qa/hm_rock_climb_walk_fix6a_action.json",
+        "script_sha256": "02a655133507b07ef994312478942246530e6686830ddedb32a630485b408316",
+        "frames": 5201,
+        "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+        "cheats": [],
+        "seed_fixture_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "battery_output_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "state_in_sha256": "0b9a0b661ac27ab5b70ece0a4b706533e04bbfa02c6221cb7e7d9b49b59f1c57",
+        "state_out_sha256": "ced080ea28e8a6a9cd05b9e720d6ef797af03da9ab3e91b66fd1e64025e3f94f",
+        "system_ram_sha256": "83a4c51409bbfc97feb6ad30da834b685a4e29776d23a07a9d4e6e5ebf2cd718",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "screenshots": [
+          {
+            "path": "night-sprint/qa/runs/hm-rock-climb-walk-fix6a-action/rock_climb_prompt.png",
+            "sha256": "a5ae6f652c123ed6978acbc2675187ac1c65bc6b7a277b8c8b9765fa47600119"
+          }
+        ]
+      },
+      {
+        "run": "hm-rock-climb-walk-fix6a-yes",
+        "result_sha256": "dd294e0f933b49c5fc49e8b36a75ae3aaae0e01e401e3ceef4ecf72b5da9c250",
+        "script": "qa/hm_rock_climb_walk_fix6a_yes.json",
+        "script_sha256": "9872fabb5a9c01e8264e649250f50fa5fee818a09c39f4b7af47336f81dc8888",
+        "frames": 1001,
+        "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+        "cheats": [],
+        "seed_fixture_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "battery_output_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "state_in_sha256": "ced080ea28e8a6a9cd05b9e720d6ef797af03da9ab3e91b66fd1e64025e3f94f",
+        "state_out_sha256": "cdb5ebfb12c7c4692c2a72012214afed4b1217c377f8f7432e3aacb772a0761b",
+        "system_ram_sha256": "c58f8392759c4b9e9074ee625482cd5346488022339d6f7918041de9956b0765",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "screenshots": [
+          {
+            "path": "night-sprint/qa/runs/hm-rock-climb-walk-fix6a-yes/used_message.png",
+            "sha256": "8060ff13d48a85c6a5070b937162c0faaadb6bfe9555398fcd8508b6095e27c7"
+          }
+        ]
+      },
+      {
+        "run": "hm-rock-climb-walk-fix6a-next",
+        "result_sha256": "8a7b8dcba2e68194941a3756edf0c775ac9f827577556e99856a964d1f42f431",
+        "script": "qa/hm_rock_climb_walk_fix6a_next.json",
+        "script_sha256": "6d5596c1ea7d848b014b3f2c030685d8ec46a638345ac27879e62203e8a4f575",
+        "frames": 5201,
+        "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+        "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+        "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+        "cheats": [],
+        "seed_fixture_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "battery_output_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+        "state_in_sha256": "cdb5ebfb12c7c4692c2a72012214afed4b1217c377f8f7432e3aacb772a0761b",
+        "state_out_sha256": "341118080632915292e9ad2a0da2793e49954725345394f0285a929be2d52bf8",
+        "system_ram_sha256": "f46d3b8e1b35cd7273b4888bf0fcef7fc1f44882a8191c0a6c32849b3bf7ef44",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "screenshots": [
+          {
+            "path": "night-sprint/qa/runs/hm-rock-climb-walk-fix6a-next/climb_resolution.png",
+            "sha256": "c48938d2923673a9ade4c78966c4f349383d87e0d85217509340768aecd7f896"
+          }
+        ]
+      }
+    ]
+  },
+  "runtime_before_after": {
+    "snapshots": {
+      "continue-field": {
+        "run": "hm-rock-climb-walk-fix6a-continue-field",
+        "ram_sha256": "5332d93ed1f642c0f2664df093b607161961a2902b1f71dd437ac298c9a6c9bb",
+        "location": [
+          151,
+          -1,
+          89,
+          396,
+          0
+        ],
+        "local_field_weather": 0,
+        "local_field_camera": 0,
+        "player": {
+          "avatar_state": 0,
+          "object_id": 255,
+          "map_id": 1,
+          "current_xyz": [
+            89,
+            8,
+            396
+          ],
+          "vec_y_fx32": 262144,
+          "facing": 0
+        },
+        "save_array3_bag_size": 1952,
+        "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+        "reserve_address": "0x023D7000",
+        "reserve_size": 4096,
+        "reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+        "party": {
+          "reference_dsv_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+          "selected_dsv_counter": 9,
+          "selected_slot_base": 262144,
+          "selected_dsv_party_offset": 262288,
+          "party_array_size": 1460,
+          "ram_dynamic_offset": "0xd080",
+          "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "ram_array_sha256": "ba88ee048f3b89a96f1eddef17a36b0649d8d06a8495fb2beb2dff2bbd3eb47a",
+          "normalized_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "exact_record_match": true,
+          "party_count": 3,
+          "species_ids": [
+            35,
+            152,
+            66
+          ],
+          "moves_by_party_slot": [
+            [
+              27,
+              1,
+              0,
+              0
+            ],
+            [
+              33,
+              45,
+              0,
+              0
+            ],
+            [
+              67,
+              43,
+              0,
+              0
+            ]
+          ],
+          "no_hm_moves_in_source_party": true,
+          "cipher_phase_evidence": [
+            {
+              "party_slot": 0,
+              "box_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+            },
+            {
+              "party_slot": 1,
+              "box_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "ram_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+            },
+            {
+              "party_slot": 2,
+              "box_cipher_phase": {
+                "encrypted_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "encrypted_prefix_bytes": 28
+              },
+              "ram_record_sha256": "778b42a90093527b6013c117be93ead44be0fdfffbb98ade0129df47f11a0b5f"
+            }
+          ]
+        }
+      },
+      "action": {
+        "run": "hm-rock-climb-walk-fix6a-action",
+        "ram_sha256": "83a4c51409bbfc97feb6ad30da834b685a4e29776d23a07a9d4e6e5ebf2cd718",
+        "location": [
+          151,
+          -1,
+          89,
+          396,
+          0
+        ],
+        "local_field_weather": 0,
+        "local_field_camera": 0,
+        "player": {
+          "avatar_state": 0,
+          "object_id": 255,
+          "map_id": 1,
+          "current_xyz": [
+            89,
+            8,
+            396
+          ],
+          "vec_y_fx32": 262144,
+          "facing": 0
+        },
+        "save_array3_bag_size": 1952,
+        "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+        "reserve_address": "0x023D7000",
+        "reserve_size": 4096,
+        "reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+        "party": {
+          "reference_dsv_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+          "selected_dsv_counter": 9,
+          "selected_slot_base": 262144,
+          "selected_dsv_party_offset": 262288,
+          "party_array_size": 1460,
+          "ram_dynamic_offset": "0xd080",
+          "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "ram_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "normalized_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "exact_record_match": true,
+          "party_count": 3,
+          "species_ids": [
+            35,
+            152,
+            66
+          ],
+          "moves_by_party_slot": [
+            [
+              27,
+              1,
+              0,
+              0
+            ],
+            [
+              33,
+              45,
+              0,
+              0
+            ],
+            [
+              67,
+              43,
+              0,
+              0
+            ]
+          ],
+          "no_hm_moves_in_source_party": true,
+          "cipher_phase_evidence": [
+            {
+              "party_slot": 0,
+              "box_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+            },
+            {
+              "party_slot": 1,
+              "box_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "ram_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+            },
+            {
+              "party_slot": 2,
+              "box_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "ram_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+            }
+          ]
+        }
+      },
+      "yes": {
+        "run": "hm-rock-climb-walk-fix6a-yes",
+        "ram_sha256": "c58f8392759c4b9e9074ee625482cd5346488022339d6f7918041de9956b0765",
+        "location": [
+          151,
+          -1,
+          89,
+          396,
+          0
+        ],
+        "local_field_weather": 0,
+        "local_field_camera": 0,
+        "player": {
+          "avatar_state": 0,
+          "object_id": 255,
+          "map_id": 1,
+          "current_xyz": [
+            89,
+            8,
+            396
+          ],
+          "vec_y_fx32": 262144,
+          "facing": 0
+        },
+        "save_array3_bag_size": 1952,
+        "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+        "reserve_address": "0x023D7000",
+        "reserve_size": 4096,
+        "reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+        "party": {
+          "reference_dsv_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+          "selected_dsv_counter": 9,
+          "selected_slot_base": 262144,
+          "selected_dsv_party_offset": 262288,
+          "party_array_size": 1460,
+          "ram_dynamic_offset": "0xd080",
+          "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "ram_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "normalized_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "exact_record_match": true,
+          "party_count": 3,
+          "species_ids": [
+            35,
+            152,
+            66
+          ],
+          "moves_by_party_slot": [
+            [
+              27,
+              1,
+              0,
+              0
+            ],
+            [
+              33,
+              45,
+              0,
+              0
+            ],
+            [
+              67,
+              43,
+              0,
+              0
+            ]
+          ],
+          "no_hm_moves_in_source_party": true,
+          "cipher_phase_evidence": [
+            {
+              "party_slot": 0,
+              "box_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+            },
+            {
+              "party_slot": 1,
+              "box_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "ram_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+            },
+            {
+              "party_slot": 2,
+              "box_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "ram_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+            }
+          ]
+        }
+      },
+      "next": {
+        "run": "hm-rock-climb-walk-fix6a-next",
+        "ram_sha256": "f46d3b8e1b35cd7273b4888bf0fcef7fc1f44882a8191c0a6c32849b3bf7ef44",
+        "location": [
+          151,
+          -1,
+          89,
+          392,
+          0
+        ],
+        "local_field_weather": 0,
+        "local_field_camera": 0,
+        "player": {
+          "avatar_state": 0,
+          "object_id": 255,
+          "map_id": 1,
+          "current_xyz": [
+            89,
+            14,
+            392
+          ],
+          "vec_y_fx32": 458752,
+          "facing": 0
+        },
+        "save_array3_bag_size": 1952,
+        "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+        "reserve_address": "0x023D7000",
+        "reserve_size": 4096,
+        "reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+        "party": {
+          "reference_dsv_sha256": "fbfc6d34c225b2ac98189cb2ef4695a941164d032750a1ab17ca7cb0b0be18a3",
+          "selected_dsv_counter": 9,
+          "selected_slot_base": 262144,
+          "selected_dsv_party_offset": 262288,
+          "party_array_size": 1460,
+          "ram_dynamic_offset": "0xd080",
+          "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "ram_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "normalized_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "exact_record_match": true,
+          "party_count": 3,
+          "species_ids": [
+            35,
+            152,
+            66
+          ],
+          "moves_by_party_slot": [
+            [
+              27,
+              1,
+              0,
+              0
+            ],
+            [
+              33,
+              45,
+              0,
+              0
+            ],
+            [
+              67,
+              43,
+              0,
+              0
+            ]
+          ],
+          "no_hm_moves_in_source_party": true,
+          "cipher_phase_evidence": [
+            {
+              "party_slot": 0,
+              "box_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+            },
+            {
+              "party_slot": 1,
+              "box_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "ram_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+            },
+            {
+              "party_slot": 2,
+              "box_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "party_tail_cipher_phase": {
+                "plaintext_prefix_bytes": 0
+              },
+              "ram_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+            }
+          ]
+        }
+      }
+    },
+    "before_location": [
+      151,
+      -1,
+      89,
+      396,
+      0
+    ],
+    "after_location": [
+      151,
+      -1,
+      89,
+      392,
+      0
+    ],
+    "currentY_before_after": [
+      8,
+      14
+    ],
+    "vecY_fx32_before_after": [
+      262144,
+      458752
+    ],
+    "avatar_state_before_after": [
+      0,
+      0
+    ]
+  },
+  "integrity": {
+    "party_normalized_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+    "party_exact_record_match_each_snapshot": true,
+    "party_has_no_hm_moves": true,
+    "bag_save_array3_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+    "bag_unchanged_across_action": true,
+    "reserved_ram_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+    "reserved_ram_range": "0x023D7000–0x023D7FFF",
+    "reserved_ram_unchanged_across_action": true
+  },
+  "persistence": {
+    "post_action_save": "NOT_TESTED",
+    "post_action_cold_reload": "NOT_TESTED",
+    "battery_save_load_claim": "NOT_TESTED"
+  }
+}

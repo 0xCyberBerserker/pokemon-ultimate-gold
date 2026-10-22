@@ -1,0 +1,439 @@
+{
+  "schema": "rocket-grant-savearray3-dynamic-audit/v1",
+  "status": "VERIFIED_BOUNDED_RUNTIME_BAG_AUDIT",
+  "build": {
+    "rom": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-rocket-grant/portable-stat-editor-rocket-grant-fix6a.nds",
+    "rom_sha256": "08e1d4e51599dc459600f1eff44e7915acbbaa111d74321be22a4800af629fcf",
+    "core": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "cheats": []
+  },
+  "runtime_array_provenance": {
+    "method": "Load the established qa_fixtures.verify_save RAM decoder; read the live SaveData/global pointers, runtime array headers, descriptor id 3 size and offset, then compare the resulting RAM slice to the selected CRC-valid DSV MAIN SaveArray3.",
+    "array3_id": 3,
+    "array3_size": 1952,
+    "dsv_active_main_selection": "Validate both DSV MAIN CRC16 footers; select the greater save counter; MAIN SaveArray3 begins at +0x644.",
+    "field_system_save_data_source": "FieldSystem.saveData is at +0x0C by the first four pointer fields in the pinned struct; Save_Bag_Get delegates to SaveArray_Get(saveData, SAVE_BAG); SAVE_BAG is 3; SaveArray_Get uses dynamic_region plus the runtime arrayHeaders[id].offset.",
+    "source_files": [
+      {
+        "path": "engine/upstream/pokeheartgold/include/field_system.h",
+        "sha256": "e20e1293e8b49f48df7abf606418a86712e10cfa101adeac6da4eed78470ff17",
+        "evidence": "struct FieldSystem at lines 175–179; saveData follows three 32-bit pointers, yielding offset 0x0C"
+      },
+      {
+        "path": "engine/upstream/pokeheartgold/include/constants/save_arrays.h",
+        "sha256": "46e04dc80ec47711a74193141dd0a642069a140ae34f4da580495905f00644a3",
+        "evidence": "SAVE_BAG = 3 at line 9"
+      },
+      {
+        "path": "engine/upstream/pokeheartgold/src/bag.c",
+        "sha256": "0038bc1c9c36ba26e4f10854fb13baff50fb2383f8ccc890a366cf15a0f52ba6",
+        "evidence": "Save_Bag_Get delegates to SaveArray_Get(saveData, SAVE_BAG) at lines 382–383"
+      },
+      {
+        "path": "engine/upstream/pokeheartgold/src/save.c",
+        "sha256": "c3cd84b17b771db6c878289955794c0e55f86fda65b2205a53b2caaae571d2fc",
+        "evidence": "SaveArray_Get returns dynamic_region + arrayHeaders[id].offset at lines 128–131"
+      }
+    ],
+    "runtime_addresses_are_per_snapshot": true,
+    "does_not_use_fixed_legacy_2376_byte_buffer": true
+  },
+  "bag_layout": {
+    "array3_size": 1952,
+    "key_items_offset": 660,
+    "key_items_slots": 50,
+    "slot_bytes": 4,
+    "fields": "u16 item id followed by u16 quantity",
+    "full_array_compared": true,
+    "119_delta_only_in_expected_grant_cases": true
+  },
+  "runs": [
+    {
+      "run": "rocket-grant-old-cold-01",
+      "status": "VERIFIED_ARRAY3_MATCH",
+      "profile": "old-native",
+      "frames": 5500,
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-cold-01/cold.state",
+        "sha256": "b4cfac509724423c7a498a41024c74971b4479da0b9d36945d47fad39d256945"
+      },
+      "ram": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-cold-01/system_ram.bin",
+        "sha256": "328d9e8d67c3138a821baade5214489a61e82126f8067ec12c81c0e4c9cff8d7"
+      },
+      "result": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-cold-01/result.json",
+        "sha256": "ebe015f27ec329d6c8b4541c654a59def21552049c2fe09516a4c3c3e6807a4d"
+      },
+      "input_script": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-cold-01/input-script.json",
+        "sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a"
+      },
+      "battery": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-cold-01/battery-evidence/portable-stat-editor-rocket-grant-fix6a.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410,
+        "sidecar_sha256": "4903546248eb6ac2a7ca96d8b367701fa027ce6e071469ddec2f8b1e5b31355b",
+        "result_sha256": "ebe015f27ec329d6c8b4541c654a59def21552049c2fe09516a4c3c3e6807a4d",
+        "dsv_bytes_match_result_and_sidecar": true
+      },
+      "active_dsv_main": {
+        "base": 0,
+        "counter": 10,
+        "stored_crc16": 17186
+      },
+      "runtime": {
+        "save_data_address": "0x0227c210",
+        "save_array3_address": "0x0227c864",
+        "save_array3_size": 1952,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "exact_dsv_plus_expected_119": true
+      },
+      "key_items": {
+        "count": 5,
+        "item_118_quantity": 1,
+        "item_119_quantity": 0,
+        "grant_slot": null
+      },
+      "visual_capture": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-cold-01/cold_loaded_field.png",
+        "sha256": "36a15df46727db0dec2b7009886a469ae8c9efa5ab0be2c6719a62f7e65b3191"
+      },
+      "runner_cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-grant-old-no-01",
+      "status": "VERIFIED_ARRAY3_MATCH",
+      "profile": "old-native",
+      "frames": 180,
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-no-01/no.state",
+        "sha256": "7f68bea134dd2229d8d98db7d3d80a32feb2e9487a4fa4651badf9383684177d"
+      },
+      "ram": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-no-01/system_ram.bin",
+        "sha256": "f4ddae69c06b82b4e9ad2d8954d47952ac06ddcadcc0099c716c1dccd42d25f5"
+      },
+      "result": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-no-01/result.json",
+        "sha256": "800761b1173ab121e459697b8e4f60ddce3d722d6aeaf63a2a80f9a765c44263"
+      },
+      "input_script": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-no-01/input-script.json",
+        "sha256": "0590e56728396d6a057988e8b79791ea9c32abe94c51829e914507f3c6f7e679"
+      },
+      "battery": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-no-01/battery-evidence/portable-stat-editor-rocket-grant-fix6a.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410,
+        "sidecar_sha256": "022d76926195265a5c566dbf9e4f8f1e79540ba6e7fdcf51336e97a43cc482c8",
+        "result_sha256": "800761b1173ab121e459697b8e4f60ddce3d722d6aeaf63a2a80f9a765c44263",
+        "dsv_bytes_match_result_and_sidecar": true
+      },
+      "active_dsv_main": {
+        "base": 0,
+        "counter": 10,
+        "stored_crc16": 17186
+      },
+      "runtime": {
+        "save_data_address": "0x0227c210",
+        "save_array3_address": "0x0227c864",
+        "save_array3_size": 1952,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "exact_dsv_plus_expected_119": true
+      },
+      "key_items": {
+        "count": 5,
+        "item_118_quantity": 1,
+        "item_119_quantity": 0,
+        "grant_slot": null
+      },
+      "visual_capture": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-no-01/no_final.png",
+        "sha256": "dca2e6dfed9c31880af638648b6e2b03290477b2d4d2d7ee5f6bb8f93267a27c"
+      },
+      "runner_cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-grant-old-yes-01",
+      "status": "VERIFIED_ARRAY3_MATCH",
+      "profile": "old-native",
+      "frames": 180,
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-yes-01/grant.state",
+        "sha256": "cbeede522362c4ed9bfd23781811d2fbe1f9ec9bdab830b9bcfc9e19e2cc6a31"
+      },
+      "ram": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-yes-01/system_ram.bin",
+        "sha256": "9e1b7ca124f36c94341832522e6be425797a34af0a6a25e76ebbbbd1bdd49c91"
+      },
+      "result": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-yes-01/result.json",
+        "sha256": "db6a4f85412119f5517d98ed5fbc28576a48fef5cb5ca00677fa6c70b54c0702"
+      },
+      "input_script": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-yes-01/input-script.json",
+        "sha256": "b71f87515e6bb945abdd9641ea087b97f89d1b6349528d098eb1bebf3de040bf"
+      },
+      "battery": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-yes-01/battery-evidence/portable-stat-editor-rocket-grant-fix6a.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410,
+        "sidecar_sha256": "54026f0f0d53fb171df338d3009956937aab6aa2637d82c57753a51d9cfb8115",
+        "result_sha256": "db6a4f85412119f5517d98ed5fbc28576a48fef5cb5ca00677fa6c70b54c0702",
+        "dsv_bytes_match_result_and_sidecar": true
+      },
+      "active_dsv_main": {
+        "base": 0,
+        "counter": 10,
+        "stored_crc16": 17186
+      },
+      "runtime": {
+        "save_data_address": "0x0227c210",
+        "save_array3_address": "0x0227c864",
+        "save_array3_size": 1952,
+        "save_array3_sha256": "750ac1a7959a17a4bafc802295bff4c5f9097090c147ffa2986e9de3c89f7734",
+        "exact_dsv_plus_expected_119": true
+      },
+      "key_items": {
+        "count": 6,
+        "item_118_quantity": 1,
+        "item_119_quantity": 1,
+        "grant_slot": 5
+      },
+      "visual_capture": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-yes-01/grant_result_stable.png",
+        "sha256": "cddd220f133bb253493c6b758077c50f32010afb8765bddb50f93ef35c6857ff"
+      },
+      "runner_cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-grant-old-recheck-01",
+      "status": "VERIFIED_ARRAY3_MATCH",
+      "profile": "old-native",
+      "frames": 300,
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-recheck-01/recheck.state",
+        "sha256": "dbdd9b583bc29c7159c95e0acd957002af5ea9284ff40de5155d52af16edc64a"
+      },
+      "ram": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-recheck-01/system_ram.bin",
+        "sha256": "6adaedf3a1e53282b6cbbb57ea908a3864c6a71b8c3bb9baafdba23beaa4e98e"
+      },
+      "result": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-recheck-01/result.json",
+        "sha256": "8bfb74fa826017ab56fc1d5e8b2d452f7f72e97f5b37a316a26d3640407d821f"
+      },
+      "input_script": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-recheck-01/input-script.json",
+        "sha256": "ed2fa2aab7b052106d21035266cedd4dcc3e6e977fc50190b6aeef75559bf085"
+      },
+      "battery": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-recheck-01/battery-evidence/portable-stat-editor-rocket-grant-fix6a.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "bytes": 524410,
+        "sidecar_sha256": "9272894b13802a15b0e91ef133127fc9ef1322ab48bb3948be7a61018f0a784d",
+        "result_sha256": "8bfb74fa826017ab56fc1d5e8b2d452f7f72e97f5b37a316a26d3640407d821f",
+        "dsv_bytes_match_result_and_sidecar": true
+      },
+      "active_dsv_main": {
+        "base": 0,
+        "counter": 10,
+        "stored_crc16": 17186
+      },
+      "runtime": {
+        "save_data_address": "0x0227c210",
+        "save_array3_address": "0x0227c864",
+        "save_array3_size": 1952,
+        "save_array3_sha256": "750ac1a7959a17a4bafc802295bff4c5f9097090c147ffa2986e9de3c89f7734",
+        "exact_dsv_plus_expected_119": true
+      },
+      "key_items": {
+        "count": 6,
+        "item_118_quantity": 1,
+        "item_119_quantity": 1,
+        "grant_slot": 5
+      },
+      "visual_capture": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-old-recheck-01/already_owned_message.png",
+        "sha256": "295c0219554eb916ef222397a9a737be39effb202e5e561c73826fb901f551f6"
+      },
+      "runner_cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-grant-pocket49-cold-01",
+      "status": "VERIFIED_ARRAY3_MATCH",
+      "profile": "pocket49",
+      "frames": 5500,
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-cold-01/cold.state",
+        "sha256": "045c1b94d995f752998f25b9dac6e4fa019af609f8fd9f2bb2713ccbe808d36f"
+      },
+      "ram": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-cold-01/system_ram.bin",
+        "sha256": "6c6962784dea6ae0214b591e5013de81232580edb549d401fff9aaa96c474059"
+      },
+      "result": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-cold-01/result.json",
+        "sha256": "562bd700aff38c9a710e6bf7363018ab9cb2b197a4ae1bb1ed1d0a152062b3c9"
+      },
+      "input_script": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-cold-01/input-script.json",
+        "sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a"
+      },
+      "battery": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-cold-01/battery-evidence/portable-stat-editor-rocket-grant-fix6a.dsv",
+        "sha256": "02ad4ffb13c5a93c1d9d4b35ab170f18d855ad0dce4b501a2675732b8a493604",
+        "bytes": 524410,
+        "sidecar_sha256": "673dc646e4a512f5e1404257e9eaadfd15b78f09750e4ccf85276943fd5c2924",
+        "result_sha256": "562bd700aff38c9a710e6bf7363018ab9cb2b197a4ae1bb1ed1d0a152062b3c9",
+        "dsv_bytes_match_result_and_sidecar": true
+      },
+      "active_dsv_main": {
+        "base": 0,
+        "counter": 10,
+        "stored_crc16": 63173
+      },
+      "runtime": {
+        "save_data_address": "0x0227c224",
+        "save_array3_address": "0x0227c878",
+        "save_array3_size": 1952,
+        "save_array3_sha256": "8f126f34e44e95a5774b16a6ebdddda68d7ec26724f6f91a1c58e9bc1d5f5b90",
+        "exact_dsv_plus_expected_119": true
+      },
+      "key_items": {
+        "count": 49,
+        "item_118_quantity": 1,
+        "item_119_quantity": 0,
+        "grant_slot": null
+      },
+      "visual_capture": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-cold-01/cold_loaded_field.png",
+        "sha256": "36a15df46727db0dec2b7009886a469ae8c9efa5ab0be2c6719a62f7e65b3191"
+      },
+      "runner_cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-grant-pocket49-yes-01",
+      "status": "VERIFIED_ARRAY3_MATCH",
+      "profile": "pocket49",
+      "frames": 180,
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-yes-01/grant.state",
+        "sha256": "3f2acfb2ceef26ba478f08725128b8dc059fb8ce62dcd8a2048394c2f593eae7"
+      },
+      "ram": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-yes-01/system_ram.bin",
+        "sha256": "63d328387a249a9c8e5ccd05088fea1c26833fe3fb7507e473eaa96d9f2eaca8"
+      },
+      "result": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-yes-01/result.json",
+        "sha256": "33f3a1ac7189c3a177dac3ac41cea84e20c498a06fb7a9cbbd6881807dbbefbb"
+      },
+      "input_script": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-yes-01/input-script.json",
+        "sha256": "b71f87515e6bb945abdd9641ea087b97f89d1b6349528d098eb1bebf3de040bf"
+      },
+      "battery": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-yes-01/battery-evidence/portable-stat-editor-rocket-grant-fix6a.dsv",
+        "sha256": "02ad4ffb13c5a93c1d9d4b35ab170f18d855ad0dce4b501a2675732b8a493604",
+        "bytes": 524410,
+        "sidecar_sha256": "58b0cd7e8d5ba5376b269b76b4c65033491ccaedd7a651dfffefa1f335290b95",
+        "result_sha256": "33f3a1ac7189c3a177dac3ac41cea84e20c498a06fb7a9cbbd6881807dbbefbb",
+        "dsv_bytes_match_result_and_sidecar": true
+      },
+      "active_dsv_main": {
+        "base": 0,
+        "counter": 10,
+        "stored_crc16": 63173
+      },
+      "runtime": {
+        "save_data_address": "0x0227c224",
+        "save_array3_address": "0x0227c878",
+        "save_array3_size": 1952,
+        "save_array3_sha256": "d3922fd68d14c30192026b574b3eeb67adef0a05563ea7216789afe2ac145ead",
+        "exact_dsv_plus_expected_119": true
+      },
+      "key_items": {
+        "count": 50,
+        "item_118_quantity": 1,
+        "item_119_quantity": 1,
+        "grant_slot": 49
+      },
+      "visual_capture": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket49-yes-01/grant_result_stable.png",
+        "sha256": "cddd220f133bb253493c6b758077c50f32010afb8765bddb50f93ef35c6857ff"
+      },
+      "runner_cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-grant-pocket50-cold-01",
+      "status": "VERIFIED_ARRAY3_MATCH",
+      "profile": "pocket50",
+      "frames": 5500,
+      "state": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket50-cold-01/cold.state",
+        "sha256": "f393a1cac2cfdc09e946b328dcb94898069a56e1f790d3c2636b38d1a4c512ea"
+      },
+      "ram": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket50-cold-01/system_ram.bin",
+        "sha256": "3ca945664600f893cc2e66d76044b7ac7773e7e823ae657993c657e13601ca53"
+      },
+      "result": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket50-cold-01/result.json",
+        "sha256": "b727c8f1820ac8c7c9ade6587c6a3086d5ba1eb67e5ca81af049255a0ba7937c"
+      },
+      "input_script": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket50-cold-01/input-script.json",
+        "sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a"
+      },
+      "battery": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket50-cold-01/battery-evidence/portable-stat-editor-rocket-grant-fix6a.dsv",
+        "sha256": "3ad0dd9f5155962a11819af3ad62d9a410cb9d3e2b7fc343ef2a2898967930d0",
+        "bytes": 524410,
+        "sidecar_sha256": "f9633ec23dab6eaa6308a6738eddebe11db77fe903dd792156a21ffa1f7e8d8e",
+        "result_sha256": "b727c8f1820ac8c7c9ade6587c6a3086d5ba1eb67e5ca81af049255a0ba7937c",
+        "dsv_bytes_match_result_and_sidecar": true
+      },
+      "active_dsv_main": {
+        "base": 0,
+        "counter": 10,
+        "stored_crc16": 20999
+      },
+      "runtime": {
+        "save_data_address": "0x0227c2a8",
+        "save_array3_address": "0x0227c8fc",
+        "save_array3_size": 1952,
+        "save_array3_sha256": "8e483c61595258ebf54ba8ece4164dc2de34bf363d375ecc8d80dd4a9f74a3e8",
+        "exact_dsv_plus_expected_119": true
+      },
+      "key_items": {
+        "count": 50,
+        "item_118_quantity": 1,
+        "item_119_quantity": 0,
+        "grant_slot": null
+      },
+      "visual_capture": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-grant-pocket50-cold-01/cold_loaded_field.png",
+        "sha256": "a07228db5d6f4f5dfb9b17315f6f0663a9bb25c64ba638a7cc6f806900f267cb"
+      },
+      "runner_cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    }
+  ],
+  "limits": [
+    "This audit verifies runtime SaveArray3 bytes against the selected DSV and the exact expected item-119 record; it does not decode or normalize unrelated save subsystems.",
+    "The 49/50 profiles are synthetic disposable Bag fixtures, not native inventory acquisition; the Rocket interaction itself remains a separate bounded test.",
+    "Each runner run reports gameplay_acceptance=NOT_ASSESSED; screenshots corroborate visible text but do not independently prove Bag state.",
+    "No native Save or cold reload was performed in these capacity runs."
+  ]
+}

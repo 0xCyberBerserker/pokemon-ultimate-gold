@@ -1,0 +1,66 @@
+{
+  "schema": "stat-editor-textfix-ev-iv-independent-review/v1",
+  "verdict": "PASS_BOUNDED_NATIVE_CASES",
+  "summary_en": "Independent offline review found no integrity or acceptance-scope blocker in the frozen EV +4 and Set-IV 15→16 reports for this candidate. Both remain bounded native cases, not release or full-game acceptance.",
+  "summary_es": "La revisión offline independiente no encontró bloqueos de integridad ni de alcance en los informes congelados de EV +4 y Set-IV 15→16 para esta candidata. Siguen siendo casos nativos acotados, no aceptación de publicación ni del juego completo.",
+  "candidate": {
+    "path": "experiments/eviv/portable-stat-editor-menu-textfix/portable-stat-editor-menu-textfix-fix6a.nds",
+    "sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a"
+  },
+  "runtime": {
+    "runner_path": "night-sprint/qa/headless_runner_uimode.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "core_path": "tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "cheats": []
+  },
+  "reports": {
+    "ev": {
+      "auditor": "night-sprint/qa/portable_stat_editor_menu_textfix_ev4_acceptance.py",
+      "auditor_sha256": "e5bf1d8380bbd27ebb269c3c33c91961c73af58f46c1ce5de6f37232517b84ff",
+      "json": "night-sprint/qa/runs/portable-stat-editor-menu-textfix-ev4-report/acceptance.json",
+      "json_sha256": "7c0f4cbe1bbd97d48e9b4f01d8b5edd8872bbb4a512240a996a0d2c5278b9597",
+      "markdown": "night-sprint/qa/runs/portable-stat-editor-menu-textfix-ev4-report/acceptance.md",
+      "markdown_sha256": "58df3a40f50b7afbfacef2147d4042a46c5c7e2b2e253a1ff7d9a0fc1b3fffc7"
+    },
+    "iv": {
+      "json": "night-sprint/qa/runs/portable-stat-editor-menu-textfix-native-acceptance/acceptance.json",
+      "json_sha256": "634f9dc595072fa88280fc667bdb143658dee30cf0b6550fc22ea1112dbc6960",
+      "markdown": "night-sprint/qa/runs/portable-stat-editor-menu-textfix-native-acceptance/acceptance.md",
+      "markdown_sha256": "dc94a5a88804a6e3030231e51b31931cef951d71d1222ef86843c4233acc05c8"
+    }
+  },
+  "independent_checks": {
+    "ev": {
+      "stateful_runs": 15,
+      "separate_cold_reload_runs": 1,
+      "party_snapshots_checked": 16,
+      "bag_and_item118_checks": 16,
+      "reserved_4k_regions_checked": 48,
+      "lineage": "All 15 stateful runs bind to the declared parent output by SHA; Yes and No fork from the same preview. The separate 5500-frame cold reload has navigation_state_in=null and uses the frozen saved DSV.",
+      "party": "No/preconfirm RAM matches the CRC-selected seed DSV at exact native box/tail cipher boundaries. Yes/save RAM matches the fully encoded expected record with only Clefairy slot-0 HP EV 0→4; the remaining party records/header/inactive bytes match exactly or at an exact native cipher boundary.",
+      "bag_item_reserves": "SaveArray3 matches its source DSV; Key Item 118 remains quantity 1; ranges 0x023D5000/6000/7000 each match the candidate ROM across all 16 snapshots.",
+      "save": "DSV seed MAIN counter 10 / CRC16 17186; native save MAIN counter 11 / CRC16 18636. Both MAIN CRCs validate. Cold reload Party and Bag match the saved DSV.",
+      "evidence": "Physical result, state, RAM, input-script, battery sidecar/DSV, and listed screenshot hashes validated for the 15 chained runs and cold reload."
+    },
+    "iv": {
+      "runs": 9,
+      "party_phase_checks": 9,
+      "bag_and_item118_checks": 9,
+      "reserved_4k_regions_checked": 27,
+      "lineage": "Cold run and separate cold verification have no imported state; preview forks to No and Yes paths, and each stateful input matches the declared parent output by physical SHA. The cold verification uses the frozen saved DSV.",
+      "party": "CRC-selected DSV comparison confirms Clefairy slot 0 HP IV 15→16 (word 0x055FA86F→0x055FA870); PID/flags, the other five IVs, other decoded blocks/tail, and party slots 1–2 are exact. All nine RAM snapshots match the appropriate seed or saved Party at strict native cipher boundaries.",
+      "bag_item_reserves": "Bag SaveArray3 matches the run’s expected DSV; Key Item 118 remains quantity 1; ranges 0x023D5000/6000/7000 each match the candidate ROM across all nine snapshots.",
+      "save": "DSV seed MAIN counter 10 / CRC16 17186; native save MAIN counter 11 / CRC16 32926. MAIN CRCs validate; the 5500-frame cold run has navigation_state_in=null and its DSV is byte-identical to the saved DSV.",
+      "evidence": "Physical result, state, RAM, input-script, battery sidecar/DSV, and listed screenshot hashes validated for all nine runs."
+    }
+  },
+  "scope_limits": [
+    "EV evidence covers one +4 HP EV operation on slot 0. It does not establish a second increment, other values/Pokémon, visible stat recalculation, or full-game use.",
+    "IV evidence covers one +1 HP IV operation on slot 0. It does not establish resets, caps, repeated use, other stats/Pokémon, nature editing, or full-game use.",
+    "The native-save DSV diffs contain additional changed spans. Only the target Party change, active save counter, and CRC are attributed; remaining payload changes stay uninterpreted.",
+    "Both runner reports retain gameplay_acceptance=NOT_ASSESSED. This review does not promote either probe to release acceptance."
+  ],
+  "reviewer_note_en": "A first read-only checker draft used the seed Party as the expected in-memory reference on the Yes path. The corrected check uses the saved expected Party for post-Yes RAM. This was a review-tool reference correction; no QA source, ROM, or evidence was changed.",
+  "reviewer_note_es": "Un primer borrador del comprobador de solo lectura usó la Party semilla como referencia esperada en RAM tras la rama Sí. La comprobación corregida usa la Party guardada esperada. Fue una corrección de referencia del auditor de revisión; no cambió código QA, ROM ni evidencias."
+}

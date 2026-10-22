@@ -1,0 +1,2061 @@
+{
+  "schema": "ultimate-gold-hm-fly-surf-fix6a/v1",
+  "status": "PASS_NATIVE_FLY_SURF_SAVE_COLD_WALKING_FRIENDSHIP",
+  "acceptance": {
+    "native_fly_prompt_and_arrival": "PASS",
+    "native_surf_prompt_text_and_water_transition": "PASS",
+    "surf_land_return": "PASS",
+    "native_save_and_fresh_cold_reload": "PASS",
+    "bag_badges": "PASS_UNCHANGED",
+    "party": "PASS_STRICT_WITH_CORROBORATED_WALKING_FRIENDSHIP",
+    "reserved_ram": "PASS_IMMUTABLE_ROM_BYTES; declared mutable state changed"
+  },
+  "build": {
+    "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+    "rom_path_local": "@HOME@/Games/Sacred-Gold/experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+    "savestates_cross_rom_imported": false,
+    "cheats_during_native_actions": []
+  },
+  "fixture": {
+    "schema": "ultimate-gold-fly-surf-fix6a-fixture/v1",
+    "status": "STATIC_PREFLIGHT_READY_RUNTIME_PENDING",
+    "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "source_dsv_path": "qa/runs/hm-remaining-strength-fix6a/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+    "source_dsv_sha256": "3824e502529e166d394541da586144bcbaa8f3832319076d199041a8059f70b8",
+    "source_runtime_run": "qa/runs/repel-fix6a-boot-bag",
+    "source_runtime_result_sha256": "a697b06785fb432690db8607cd55b078072fd5154212bdf7fc39a54d87f3d7e5",
+    "source_runtime_ram_sha256": "5bb3c17c048eddfa2d36150f9bb3f0717c74e98559bb892d3e8718f074966247",
+    "output_dsv_path": "qa/runs/hm-fly-surf-fix6a-fixture/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+    "output_dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+    "selected_slot": {
+      "base": 0,
+      "counter": 8,
+      "crc16_after": 938,
+      "both_source_slots_crc_valid": true,
+      "fallback_unchanged": true
+    },
+    "map": {
+      "id": 60,
+      "name": "T20",
+      "header_sha256": "1c3a8a807db73966182c0dd757e446b0440ec0b36d12e9f07df38e87107fd0cd",
+      "current_position": [
+        60,
+        -1,
+        699,
+        399,
+        2
+      ],
+      "weather_source_target": [
+        0,
+        0
+      ],
+      "camera_source_target": [
+        11,
+        0
+      ]
+    },
+    "actor_objects": [
+      {
+        "index": 0,
+        "id": 255,
+        "map_id": 1,
+        "facing": [
+          1,
+          2,
+          2
+        ],
+        "current_xyz": [
+          699,
+          2,
+          399
+        ],
+        "vec_y_fx32": 65536
+      },
+      {
+        "index": 1,
+        "id": 253,
+        "map_id": 1,
+        "facing": [
+          1,
+          1,
+          2
+        ],
+        "current_xyz": [
+          700,
+          2,
+          399
+        ],
+        "vec_y_fx32": 65536
+      }
+    ],
+    "only_changed_fields": [
+      "LocalFieldData.camera",
+      "selected DSV slot CRC16"
+    ],
+    "changed_byte_count": 3,
+    "owned_hm02_item_421": true,
+    "storm_badge_bit4": true,
+    "party_size": 3,
+    "party_contains_no_hm_moves": true,
+    "cross_rom_state_imported": false,
+    "cheats": []
+  },
+  "pre_action_dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+  "post_native_save_and_cold_profile_dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+  "runs": [
+    {
+      "run": "hm-fly-surf-fix6a-cold-start",
+      "result_sha256": "ce4bcb0dafd9acf80bc035e1f0b3f2051fc91a961d816211e4e64da150abca60",
+      "input_sha256": "4eb1eabf48ce83e9f03ba321a009dbff5e435aff696ab0e99d5fb8c07c8c7b23",
+      "state_out_sha256": "323475481bf60eecc6c3098157b14af3d4e93a0869adca28e5cc6808920fe56e",
+      "state_in_sha256": null,
+      "system_ram_sha256": "50320d52726115d410640e7150a0294d3ccc04492574a77a29e15583d7415a8f",
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-title-a",
+      "result_sha256": "d066f39a31836dc6dd27b3c0e4f1febe81d46b9d81c1938876dac2a5feb1a62b",
+      "input_sha256": "9c68d5d693f6ca206081607177ba68067cbcd4aa14635eb7f4f19b73307fd13d",
+      "state_out_sha256": "1fd6f31fc6d647711d7d9cba194a88315c8063bf38df4a675c1b71c60d9600a2",
+      "state_in_sha256": "323475481bf60eecc6c3098157b14af3d4e93a0869adca28e5cc6808920fe56e",
+      "system_ram_sha256": null,
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-menu-a",
+      "result_sha256": "e037489c5f5183a3c2eed4375044d24e37f354050c4842a046f880e8ce26384b",
+      "input_sha256": "8a1f82ef78547fc3519a9c201bcb0199b4518277b6d7f6a49a42424d35d9c8cb",
+      "state_out_sha256": "839aebf83a05a0fca119604492bf85ed291d4242a32d17dc2eb0e118c71ab84a",
+      "state_in_sha256": "1fd6f31fc6d647711d7d9cba194a88315c8063bf38df4a675c1b71c60d9600a2",
+      "system_ram_sha256": null,
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-continue-one",
+      "result_sha256": "b2538e514e315fdd778ccd3c5ced7a75fc58276fefb6ec2562f119d7ac571681",
+      "input_sha256": "4d5ea63bd75c88a837b54ccb6663888b3edd8b218752345dba2c02293fed5648",
+      "state_out_sha256": "fc6622a960846e2e7eda72fa442b4e6764c90805a67ea10919e541255f848887",
+      "state_in_sha256": "839aebf83a05a0fca119604492bf85ed291d4242a32d17dc2eb0e118c71ab84a",
+      "system_ram_sha256": "a88c5b568f2c7a8bd29c8c412c40e6cfa12b50ae5832d3390ac795d1075d51ca",
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-fly-menu",
+      "result_sha256": "aec2f260d38ad0cca41c383bad9bf1b11f77055b07fcc5d37261cc601204c904",
+      "input_sha256": "81c32470954a0854aa8d5e6763abbe3bb025cb08fbc6b82f319ab630e8e4cc41",
+      "state_out_sha256": "24d94440f2ff57b0e96a255ded6aee5d22ca67d4d562a084b62120fb3b1ffdc8",
+      "state_in_sha256": "fc6622a960846e2e7eda72fa442b4e6764c90805a67ea10919e541255f848887",
+      "system_ram_sha256": null,
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-fly-context",
+      "result_sha256": "61cbc291ec9dbeb7d7e846d1967c8089d66958324a7e13ecafe693721997284e",
+      "input_sha256": "d6497a4c676e9399ff4b9a3c954736967030e4f4218909a85cef6e1ef2f6eeea",
+      "state_out_sha256": "bc609a94867214110602b132956f520bdf70b7abb85f72dd64e063726d9a208f",
+      "state_in_sha256": "24d94440f2ff57b0e96a255ded6aee5d22ca67d4d562a084b62120fb3b1ffdc8",
+      "system_ram_sha256": null,
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-fly-choose",
+      "result_sha256": "2b19b5a636005ee3020e65b83d6ba6fc60bac3a69c3fc553202b3371c97764f2",
+      "input_sha256": "3b0e391fbacc8065259db509564eb760a869c3a69286036d802c78ca721a63f1",
+      "state_out_sha256": "dd7b98af7cb19da50f4eccafa89235656c24a5785bcd07c026224edf5b2217df",
+      "state_in_sha256": "bc609a94867214110602b132956f520bdf70b7abb85f72dd64e063726d9a208f",
+      "system_ram_sha256": null,
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-fly-confirm",
+      "result_sha256": "52281829be0890d25372c039ab6b4c12bc75dddc325bb06507edb09788d709ab",
+      "input_sha256": "823782529a01d6f62fa46a18c49bf5dce8d9d5caaca3fb52887f98afa819ecf4",
+      "state_out_sha256": "75f10d646297146148ea59c40ee4accc02f67e57ee8a7cc61eaee0147475af1a",
+      "state_in_sha256": "dd7b98af7cb19da50f4eccafa89235656c24a5785bcd07c026224edf5b2217df",
+      "system_ram_sha256": "a415ee6cb89e8560f300fe1af7ff939194fc44acc0727ffd5efe98152be84bd1",
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-surf-approach",
+      "result_sha256": "1ddc732fb7bec2a4365a3036cba673216554999be5d66a1b0a7bc0ef268a68b2",
+      "input_sha256": "c023d59eb35619e5927affd1db9bf8142f884dc27ae29e26130f55db137d3af5",
+      "state_out_sha256": "1675bb17e9bd16192652422466346e695e9175f098cffd06cc0dc0eec63cd0ac",
+      "state_in_sha256": "75f10d646297146148ea59c40ee4accc02f67e57ee8a7cc61eaee0147475af1a",
+      "system_ram_sha256": "2951c3d8f9c4c6b4089a3483dcdd2737f05e974e505fb08d11c1bf053ed9615a",
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-surf-prompt",
+      "result_sha256": "501368db35d26eb2212f3b10e3981e9680eb4c61c10bdd1d79d81d842aed8350",
+      "input_sha256": "cbebe10e576eeb44a2fbd1cea5f59e35375b5e520010c1ce709b6e07b8eb7aa5",
+      "state_out_sha256": "d0a1131a231299358b5d2fe2915ab52de7d7dae2a3abefb75c0efdcdf4c892fd",
+      "state_in_sha256": "1675bb17e9bd16192652422466346e695e9175f098cffd06cc0dc0eec63cd0ac",
+      "system_ram_sha256": "1f236118e86a6da833702cc0f31be481a167a29dc64d5fb5a948de18fdd145f7",
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-surf-yes",
+      "result_sha256": "a4c8a604d68a9c870326052338809c73bbbcb7be4bfb8a1b3db23193cf8d2b6e",
+      "input_sha256": "bfddc76a13163e7f691f00bcc4284a7687b0e10fd2b8ce128dd955b23a508391",
+      "state_out_sha256": "88b1367b8e58528aff3f0715382dfbcdfabb0b302e2a973fbfe033448f40d7f0",
+      "state_in_sha256": "d0a1131a231299358b5d2fe2915ab52de7d7dae2a3abefb75c0efdcdf4c892fd",
+      "system_ram_sha256": "5bda0113dfaa987e6ce23f34726c11038099be98245ecc90779e04c73a90284e",
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-surf-start",
+      "result_sha256": "18f176857d6eb5053b95573531f037a83d5baaab2b61d10ec28d28bf8f9cdd5c",
+      "input_sha256": "cc154eeb9cb6f26a15382b6a74839af6f9fb711399b518c4cab5e38a6e605174",
+      "state_out_sha256": "655c4c16e775851e1f2abcdebe8847a018bad8e9d36e3faa19a8b67cd9dffbf5",
+      "state_in_sha256": "88b1367b8e58528aff3f0715382dfbcdfabb0b302e2a973fbfe033448f40d7f0",
+      "system_ram_sha256": "ecf36a6e052bcce4fc0101be20d231e1a3fc0ea54862f747173eca0863c59859",
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-surf-land-return",
+      "result_sha256": "0948d723d2ed5532489bc506252054a80f1ecdc33dc0bbde9f7a80e1ebfb3404",
+      "input_sha256": "78e5511136dee688b6ab5850f832144d75845a6bc736fda80ed66aecc4b20e04",
+      "state_out_sha256": "a73a474acd38813a700ca255b08b9055ed84814d343180063d86e7593cec3dee",
+      "state_in_sha256": "655c4c16e775851e1f2abcdebe8847a018bad8e9d36e3faa19a8b67cd9dffbf5",
+      "system_ram_sha256": "1cc23230d3ede4da0ff3b5637deaa2bc69462ebf6b2ad3b8ea3ce9be5e018dcc",
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-save-menu",
+      "result_sha256": "7d937513d6be24889130f0a6b699bf99c191931c7d266f12911232b4577d3c82",
+      "input_sha256": "d22b0e174f391ad61e4bd3e8ffaf0360d0931ea2fe84a491b93708ad86e00379",
+      "state_out_sha256": "ddd4b7d1e89c4bd97390da927df66097b3b6c078898aa66f28b7652ec7d5f4e4",
+      "state_in_sha256": "a73a474acd38813a700ca255b08b9055ed84814d343180063d86e7593cec3dee",
+      "system_ram_sha256": "7d8d52cf57baaa8f775362e0c7af53970a306cba23173c476558b27bed11d8d1",
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-save-yes",
+      "result_sha256": "22a022437e91a04db14c0eeda09c06a2988f93dbe5fbd0cad16d762464b865d1",
+      "input_sha256": "9746d823752d7ce054e740ba569fa1f738ffe78d24fda1e3aec14b5e7f6e14d3",
+      "state_out_sha256": "6b715c784ee8c4023af9d5698d9333c1133c7a87fb45c72577e0f9a233bed67c",
+      "state_in_sha256": "ddd4b7d1e89c4bd97390da927df66097b3b6c078898aa66f28b7652ec7d5f4e4",
+      "system_ram_sha256": "dd5a301aaab324f55920263b3941a02dffa703eeaef56219cdf1799337749357",
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-save-overwrite",
+      "result_sha256": "fd055a575ae4cda5c6aebbe83d004449cb729ba4c7eb09b117e2265c46d4945b",
+      "input_sha256": "d03dde8bc967438013ec690589c11bab1c33fc4d9f83f89b90ad14c5a2f8f9d2",
+      "state_out_sha256": "683eb80feb90e0d7d7b19706bf7af63e3363f7e90632f07f4a998fe36973dd58",
+      "state_in_sha256": "6b715c784ee8c4023af9d5698d9333c1133c7a87fb45c72577e0f9a233bed67c",
+      "system_ram_sha256": "219c4853d035babee5d3d97aea48f2f36d9ad69c341ab2c44afe495c4c6067fa",
+      "dsv_sha256": "49868f8ffc89b192711d21817fb3666bd0ee6dae02374490edc4a78c995eb135",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-save-settled",
+      "result_sha256": "7c6fc37ef9e457c56a6eb91d9bde79add7c437c73317065d2765f61ce0dbb89a",
+      "input_sha256": "02280c8334917c9f9cb19c927b92a25e58de466241327488207a284c49ee134d",
+      "state_out_sha256": "a25323c036027161cc8b51e27ad005e5e58f26ee8095c7a048f963a13fec78b8",
+      "state_in_sha256": "683eb80feb90e0d7d7b19706bf7af63e3363f7e90632f07f4a998fe36973dd58",
+      "system_ram_sha256": "625f69a4260149c5b442559bd5c7a799248f49883118207f325a5f04ee29a67c",
+      "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-cold-reload",
+      "result_sha256": "47556ff81e04e8a058fea5fe51ff463f6ca4e48bbfe3809245bff197b11e17f2",
+      "input_sha256": "4eb1eabf48ce83e9f03ba321a009dbff5e435aff696ab0e99d5fb8c07c8c7b23",
+      "state_out_sha256": "d0ecf44a01d37d08902115de6d6213a0c95f9ab3f0c7d6de38f840ad206deafc",
+      "state_in_sha256": null,
+      "system_ram_sha256": null,
+      "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-cold-reload-title-a",
+      "result_sha256": "5807a9e4c5d5a747edb9b0eb61eb5c77b4ee66b8b511b07f05ba230df12b7b37",
+      "input_sha256": "9c68d5d693f6ca206081607177ba68067cbcd4aa14635eb7f4f19b73307fd13d",
+      "state_out_sha256": "9ecf8dce5da742146b96e20320e89020c02d9e429146644720d32b8792efb2f7",
+      "state_in_sha256": "d0ecf44a01d37d08902115de6d6213a0c95f9ab3f0c7d6de38f840ad206deafc",
+      "system_ram_sha256": null,
+      "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-cold-reload-menu-a",
+      "result_sha256": "cd5467d1a9e16dbd8a8e0847b8377a2a621a1517d7d0186e3de272aeadacd0d3",
+      "input_sha256": "8a1f82ef78547fc3519a9c201bcb0199b4518277b6d7f6a49a42424d35d9c8cb",
+      "state_out_sha256": "fcd3149a8a91f2bdca09edc2e01581e569a8c6d94a07363d3898f5c5ae679266",
+      "state_in_sha256": "9ecf8dce5da742146b96e20320e89020c02d9e429146644720d32b8792efb2f7",
+      "system_ram_sha256": null,
+      "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+      "cheats": []
+    },
+    {
+      "run": "hm-fly-surf-fix6a-cold-reload-continue",
+      "result_sha256": "4684df47fa2543b08fa9220d1c8a71c1c7a85b393c211c12bffea9139b49df95",
+      "input_sha256": "4d5ea63bd75c88a837b54ccb6663888b3edd8b218752345dba2c02293fed5648",
+      "state_out_sha256": "370bef3441d07ae58b344a3edb77ddaab83083745f4f6f6d8105200053deb953",
+      "state_in_sha256": "fcd3149a8a91f2bdca09edc2e01581e569a8c6d94a07363d3898f5c5ae679266",
+      "system_ram_sha256": "da007818d21364c96f6a5807c04a0b1aa4a20edbb0d173a548b69eb12a3b8cb4",
+      "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+      "cheats": []
+    }
+  ],
+  "runtime": {
+    "cold_continue_baseline": {
+      "run": "hm-fly-surf-fix6a-continue-one",
+      "result_sha256": "b2538e514e315fdd778ccd3c5ced7a75fc58276fefb6ec2562f119d7ac571681",
+      "ram_sha256": "a88c5b568f2c7a8bd29c8c412c40e6cfa12b50ae5832d3390ac795d1075d51ca",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "location": [
+        60,
+        -1,
+        699,
+        399,
+        2
+      ],
+      "avatar_state": 0,
+      "actor": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          699,
+          2,
+          399
+        ],
+        "vec_y_fx32": 65536,
+        "facing_codes": [
+          1,
+          2,
+          2
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+      "party": {
+        "run": "hm-fly-surf-fix6a-continue-one",
+        "dsv_references": [
+          {
+            "label": "pre_action",
+            "sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+            "selected_slot": {
+              "active_base": 0,
+              "active_counter": 8,
+              "active_crc16": 938,
+              "both_slots_crc_valid": true,
+              "party_offset": 144
+            }
+          }
+        ],
+        "ram_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "all_records_strictly_match": true,
+        "all_records_checksum_valid": true,
+        "party_count": 3,
+        "moves_by_decodable_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "decodable_slots_have_no_hm_moves": true,
+        "records": [
+          {
+            "slot": 0,
+            "expected_checksum": 19307,
+            "observed_checksum": 19307,
+            "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 35,
+                "expected_checksum": 19307,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "pre_action"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 1,
+            "expected_checksum": 56412,
+            "observed_checksum": 56412,
+            "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 152,
+                "expected_checksum": 56412,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "pre_action"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 2,
+            "expected_checksum": 46459,
+            "observed_checksum": 46459,
+            "observed_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 66,
+                "expected_checksum": 46459,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "pre_action"
+            ],
+            "strict_exact_match": true
+          }
+        ]
+      },
+      "friendship_steps": 122,
+      "badges": [
+        223,
+        128
+      ]
+    },
+    "fly_arrival": {
+      "run": "hm-fly-surf-fix6a-fly-confirm",
+      "result_sha256": "52281829be0890d25372c039ab6b4c12bc75dddc325bb06507edb09788d709ab",
+      "ram_sha256": "a415ee6cb89e8560f300fe1af7ff939194fc44acc0727ffd5efe98152be84bd1",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "location": [
+        60,
+        -1,
+        695,
+        397,
+        1
+      ],
+      "avatar_state": 0,
+      "actor": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          695,
+          2,
+          397
+        ],
+        "vec_y_fx32": 65536,
+        "facing_codes": [
+          1,
+          1,
+          1
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "0cbc834a0eb14771b3c474ab148eea6c73d3a1e5d8e07158fba59f84c59a726a",
+      "party": {
+        "run": "hm-fly-surf-fix6a-fly-confirm",
+        "dsv_references": [
+          {
+            "label": "pre_action",
+            "sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+            "selected_slot": {
+              "active_base": 0,
+              "active_counter": 8,
+              "active_crc16": 938,
+              "both_slots_crc_valid": true,
+              "party_offset": 144
+            }
+          }
+        ],
+        "ram_party_array_sha256": "d986e6d47ace4324826222f3d17468041941cf48e5a324825b271906e5c8dc15",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "all_records_strictly_match": true,
+        "all_records_checksum_valid": false,
+        "party_count": 3,
+        "moves_by_decodable_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ]
+        ],
+        "decodable_slots_have_no_hm_moves": true,
+        "records": [
+          {
+            "slot": 0,
+            "expected_checksum": 19307,
+            "observed_checksum": 19307,
+            "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 35,
+                "expected_checksum": 19307,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "pre_action"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 1,
+            "expected_checksum": 56412,
+            "observed_checksum": 56412,
+            "observed_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 152,
+                "expected_checksum": 56412,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "pre_action"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 2,
+            "expected_checksum": 46459,
+            "observed_checksum": 46459,
+            "observed_record_sha256": "5e457a3c96800b11f18c66ca28c62e1524b2749a93c42e8a7d240b0f2e73bfe6",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 66,
+                "expected_checksum": 46459,
+                "header_matches": true,
+                "record_bytes_equal": false,
+                "box_phase": {
+                  "mode": "plain_suffix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_suffix",
+                  "split": 52
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": false,
+            "decode_error": "party Pokémon checksum failed",
+            "decoded_semantic_match_sources": [],
+            "strict_exact_match": true
+          }
+        ]
+      },
+      "friendship_steps": 122,
+      "badges": [
+        223,
+        128
+      ]
+    },
+    "surf_active": {
+      "run": "hm-fly-surf-fix6a-surf-start",
+      "result_sha256": "18f176857d6eb5053b95573531f037a83d5baaab2b61d10ec28d28bf8f9cdd5c",
+      "ram_sha256": "ecf36a6e052bcce4fc0101be20d231e1a3fc0ea54862f747173eca0863c59859",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "location": [
+        60,
+        -1,
+        701,
+        399,
+        1
+      ],
+      "avatar_state": 2,
+      "actor": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          701,
+          1,
+          399
+        ],
+        "vec_y_fx32": 32768,
+        "facing_codes": [
+          1,
+          3,
+          3
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "0cbc834a0eb14771b3c474ab148eea6c73d3a1e5d8e07158fba59f84c59a726a",
+      "party": {
+        "run": "hm-fly-surf-fix6a-surf-start",
+        "dsv_references": [
+          {
+            "label": "pre_action",
+            "sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+            "selected_slot": {
+              "active_base": 0,
+              "active_counter": 8,
+              "active_crc16": 938,
+              "both_slots_crc_valid": true,
+              "party_offset": 144
+            }
+          },
+          {
+            "label": "post_save",
+            "sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+            "selected_slot": {
+              "active_base": 262144,
+              "active_counter": 9,
+              "active_crc16": 12972,
+              "both_slots_crc_valid": true,
+              "party_offset": 262288
+            }
+          }
+        ],
+        "ram_party_array_sha256": "094a37ae0124eb38e92f082eb666a5b0eb8d645c3dff9a95676512ff696596f1",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "all_records_strictly_match": true,
+        "all_records_checksum_valid": false,
+        "party_count": 3,
+        "moves_by_decodable_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ]
+        ],
+        "decodable_slots_have_no_hm_moves": true,
+        "records": [
+          {
+            "slot": 0,
+            "expected_checksum": 19307,
+            "observed_checksum": 19307,
+            "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 35,
+                "expected_checksum": 19307,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              },
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 35,
+                "expected_checksum": 19307,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "pre_action",
+              "post_save"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 1,
+            "expected_checksum": 56412,
+            "observed_checksum": 56413,
+            "observed_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 152,
+                "expected_checksum": 56412,
+                "header_matches": false,
+                "record_bytes_equal": false,
+                "box_phase": null,
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": false
+              },
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 152,
+                "expected_checksum": 56413,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "post_save"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 2,
+            "expected_checksum": 46459,
+            "observed_checksum": 46460,
+            "observed_record_sha256": "b468bb600aa1b6009b6235246ff2b843c49b32c25f4c75e23c6f35760352eb61",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 66,
+                "expected_checksum": 46459,
+                "header_matches": false,
+                "record_bytes_equal": false,
+                "box_phase": null,
+                "tail_phase": {
+                  "mode": "plain_suffix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": false
+              },
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 66,
+                "expected_checksum": 46460,
+                "header_matches": true,
+                "record_bytes_equal": false,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 14
+                },
+                "tail_phase": {
+                  "mode": "plain_suffix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": false,
+            "decode_error": "party Pokémon checksum failed",
+            "decoded_semantic_match_sources": [],
+            "strict_exact_match": true
+          }
+        ]
+      },
+      "friendship_steps": 1,
+      "badges": [
+        223,
+        128
+      ]
+    },
+    "surf_approach": {
+      "run": "hm-fly-surf-fix6a-surf-approach",
+      "result_sha256": "1ddc732fb7bec2a4365a3036cba673216554999be5d66a1b0a7bc0ef268a68b2",
+      "ram_sha256": "2951c3d8f9c4c6b4089a3483dcdd2737f05e974e505fb08d11c1bf053ed9615a",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "location": [
+        60,
+        -1,
+        700,
+        399,
+        1
+      ],
+      "avatar_state": 0,
+      "actor": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          700,
+          2,
+          399
+        ],
+        "vec_y_fx32": 65536,
+        "facing_codes": [
+          1,
+          3,
+          3
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "0cbc834a0eb14771b3c474ab148eea6c73d3a1e5d8e07158fba59f84c59a726a",
+      "party": {
+        "run": "hm-fly-surf-fix6a-surf-approach",
+        "dsv_references": [
+          {
+            "label": "pre_action",
+            "sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+            "selected_slot": {
+              "active_base": 0,
+              "active_counter": 8,
+              "active_crc16": 938,
+              "both_slots_crc_valid": true,
+              "party_offset": 144
+            }
+          },
+          {
+            "label": "post_save",
+            "sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+            "selected_slot": {
+              "active_base": 262144,
+              "active_counter": 9,
+              "active_crc16": 12972,
+              "both_slots_crc_valid": true,
+              "party_offset": 262288
+            }
+          }
+        ],
+        "ram_party_array_sha256": "3ccbbcff8cb3f34e54094eca1c085fb8610ecf13152772828ceca24be64f700b",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "all_records_strictly_match": true,
+        "all_records_checksum_valid": true,
+        "party_count": 3,
+        "moves_by_decodable_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "decodable_slots_have_no_hm_moves": true,
+        "records": [
+          {
+            "slot": 0,
+            "expected_checksum": 19307,
+            "observed_checksum": 19307,
+            "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 35,
+                "expected_checksum": 19307,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              },
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 35,
+                "expected_checksum": 19307,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "pre_action",
+              "post_save"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 1,
+            "expected_checksum": 56412,
+            "observed_checksum": 56413,
+            "observed_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 152,
+                "expected_checksum": 56412,
+                "header_matches": false,
+                "record_bytes_equal": false,
+                "box_phase": null,
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": false
+              },
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 152,
+                "expected_checksum": 56413,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "post_save"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 2,
+            "expected_checksum": 46459,
+            "observed_checksum": 46460,
+            "observed_record_sha256": "978f1e792a977d7a48fc613faaa02ee55acef8458a2e668aaa3106cd7720d543",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 66,
+                "expected_checksum": 46459,
+                "header_matches": false,
+                "record_bytes_equal": false,
+                "box_phase": null,
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": false
+              },
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 66,
+                "expected_checksum": 46460,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "post_save"
+            ],
+            "strict_exact_match": true
+          }
+        ]
+      },
+      "friendship_steps": 1,
+      "badges": [
+        223,
+        128
+      ]
+    },
+    "surf_land_return": {
+      "run": "hm-fly-surf-fix6a-surf-land-return",
+      "result_sha256": "0948d723d2ed5532489bc506252054a80f1ecdc33dc0bbde9f7a80e1ebfb3404",
+      "ram_sha256": "1cc23230d3ede4da0ff3b5637deaa2bc69462ebf6b2ad3b8ea3ce9be5e018dcc",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+      "location": [
+        60,
+        -1,
+        699,
+        399,
+        1
+      ],
+      "avatar_state": 0,
+      "actor": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          699,
+          2,
+          399
+        ],
+        "vec_y_fx32": 65536,
+        "facing_codes": [
+          1,
+          2,
+          2
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "0cbc834a0eb14771b3c474ab148eea6c73d3a1e5d8e07158fba59f84c59a726a",
+      "party": {
+        "run": "hm-fly-surf-fix6a-surf-land-return",
+        "dsv_references": [
+          {
+            "label": "pre_action",
+            "sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+            "selected_slot": {
+              "active_base": 0,
+              "active_counter": 8,
+              "active_crc16": 938,
+              "both_slots_crc_valid": true,
+              "party_offset": 144
+            }
+          },
+          {
+            "label": "post_save",
+            "sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+            "selected_slot": {
+              "active_base": 262144,
+              "active_counter": 9,
+              "active_crc16": 12972,
+              "both_slots_crc_valid": true,
+              "party_offset": 262288
+            }
+          }
+        ],
+        "ram_party_array_sha256": "3ccbbcff8cb3f34e54094eca1c085fb8610ecf13152772828ceca24be64f700b",
+        "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "all_records_strictly_match": true,
+        "all_records_checksum_valid": true,
+        "party_count": 3,
+        "moves_by_decodable_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "decodable_slots_have_no_hm_moves": true,
+        "records": [
+          {
+            "slot": 0,
+            "expected_checksum": 19307,
+            "observed_checksum": 19307,
+            "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 35,
+                "expected_checksum": 19307,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              },
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 35,
+                "expected_checksum": 19307,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "pre_action",
+              "post_save"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 1,
+            "expected_checksum": 56412,
+            "observed_checksum": 56413,
+            "observed_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 152,
+                "expected_checksum": 56412,
+                "header_matches": false,
+                "record_bytes_equal": false,
+                "box_phase": null,
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": false
+              },
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 152,
+                "expected_checksum": 56413,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "post_save"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 2,
+            "expected_checksum": 46459,
+            "observed_checksum": 46460,
+            "observed_record_sha256": "978f1e792a977d7a48fc613faaa02ee55acef8458a2e668aaa3106cd7720d543",
+            "reference_candidates": [
+              {
+                "label": "pre_action",
+                "dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+                "slot": {
+                  "active_base": 0,
+                  "active_counter": 8,
+                  "active_crc16": 938,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 144
+                },
+                "species_id": 66,
+                "expected_checksum": 46459,
+                "header_matches": false,
+                "record_bytes_equal": false,
+                "box_phase": null,
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": false
+              },
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 66,
+                "expected_checksum": 46460,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "post_save"
+            ],
+            "strict_exact_match": true
+          }
+        ]
+      },
+      "friendship_steps": 2,
+      "badges": [
+        223,
+        128
+      ]
+    },
+    "post_save": {
+      "run": "hm-fly-surf-fix6a-save-settled",
+      "result_sha256": "7c6fc37ef9e457c56a6eb91d9bde79add7c437c73317065d2765f61ce0dbb89a",
+      "ram_sha256": "625f69a4260149c5b442559bd5c7a799248f49883118207f325a5f04ee29a67c",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+      "location": [
+        60,
+        -1,
+        699,
+        399,
+        2
+      ],
+      "avatar_state": 0,
+      "actor": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          699,
+          2,
+          399
+        ],
+        "vec_y_fx32": 65536,
+        "facing_codes": [
+          1,
+          2,
+          2
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "0cbc834a0eb14771b3c474ab148eea6c73d3a1e5d8e07158fba59f84c59a726a",
+      "party": {
+        "run": "hm-fly-surf-fix6a-save-settled",
+        "dsv_references": [
+          {
+            "label": "post_save",
+            "sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+            "selected_slot": {
+              "active_base": 262144,
+              "active_counter": 9,
+              "active_crc16": 12972,
+              "both_slots_crc_valid": true,
+              "party_offset": 262288
+            }
+          }
+        ],
+        "ram_party_array_sha256": "3ccbbcff8cb3f34e54094eca1c085fb8610ecf13152772828ceca24be64f700b",
+        "dsv_party_array_sha256": "3ccbbcff8cb3f34e54094eca1c085fb8610ecf13152772828ceca24be64f700b",
+        "all_records_strictly_match": true,
+        "all_records_checksum_valid": true,
+        "party_count": 3,
+        "moves_by_decodable_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ],
+          [
+            67,
+            43,
+            0,
+            0
+          ]
+        ],
+        "decodable_slots_have_no_hm_moves": true,
+        "records": [
+          {
+            "slot": 0,
+            "expected_checksum": 19307,
+            "observed_checksum": 19307,
+            "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "reference_candidates": [
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 35,
+                "expected_checksum": 19307,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "post_save"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 1,
+            "expected_checksum": 56413,
+            "observed_checksum": 56413,
+            "observed_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075",
+            "reference_candidates": [
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 152,
+                "expected_checksum": 56413,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "post_save"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 2,
+            "expected_checksum": 46460,
+            "observed_checksum": 46460,
+            "observed_record_sha256": "978f1e792a977d7a48fc613faaa02ee55acef8458a2e668aaa3106cd7720d543",
+            "reference_candidates": [
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 66,
+                "expected_checksum": 46460,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "post_save"
+            ],
+            "strict_exact_match": true
+          }
+        ]
+      },
+      "friendship_steps": 2,
+      "badges": [
+        223,
+        128
+      ]
+    },
+    "fresh_cold_reload": {
+      "run": "hm-fly-surf-fix6a-cold-reload-continue",
+      "result_sha256": "4684df47fa2543b08fa9220d1c8a71c1c7a85b393c211c12bffea9139b49df95",
+      "ram_sha256": "da007818d21364c96f6a5807c04a0b1aa4a20edbb0d173a548b69eb12a3b8cb4",
+      "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+      "runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+      "cheats": [],
+      "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+      "location": [
+        60,
+        -1,
+        699,
+        399,
+        2
+      ],
+      "avatar_state": 0,
+      "actor": {
+        "object_id": 255,
+        "map_id": 1,
+        "xyz": [
+          699,
+          2,
+          399
+        ],
+        "vec_y_fx32": 65536,
+        "facing_codes": [
+          1,
+          2,
+          2
+        ]
+      },
+      "bag_sha256": "22038e1466d16e5067cdbf7ef1bfbae0cb9ef3965ede76535c09da2c2dba4f32",
+      "reserve_023d7000_1000_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+      "party": {
+        "run": "hm-fly-surf-fix6a-cold-reload-continue",
+        "dsv_references": [
+          {
+            "label": "post_save",
+            "sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+            "selected_slot": {
+              "active_base": 262144,
+              "active_counter": 9,
+              "active_crc16": 12972,
+              "both_slots_crc_valid": true,
+              "party_offset": 262288
+            }
+          }
+        ],
+        "ram_party_array_sha256": "c8071a049ae3c578b4d51efe7159657e9f3223181eb6dce01eafb81bbb5fd6fb",
+        "dsv_party_array_sha256": "3ccbbcff8cb3f34e54094eca1c085fb8610ecf13152772828ceca24be64f700b",
+        "all_records_strictly_match": true,
+        "all_records_checksum_valid": false,
+        "party_count": 3,
+        "moves_by_decodable_slot": [
+          [
+            27,
+            1,
+            0,
+            0
+          ],
+          [
+            33,
+            45,
+            0,
+            0
+          ]
+        ],
+        "decodable_slots_have_no_hm_moves": true,
+        "records": [
+          {
+            "slot": 0,
+            "expected_checksum": 19307,
+            "observed_checksum": 19307,
+            "observed_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "reference_candidates": [
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 35,
+                "expected_checksum": 19307,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "post_save"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 1,
+            "expected_checksum": 56413,
+            "observed_checksum": 56413,
+            "observed_record_sha256": "3a2a6d4926d1d9fabe94a87926d849215bb4ddac28ab6c9ff4c424fdc92dc075",
+            "reference_candidates": [
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 152,
+                "expected_checksum": 56413,
+                "header_matches": true,
+                "record_bytes_equal": true,
+                "box_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_prefix",
+                  "split": 0
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": true,
+            "decoded_semantic_match_sources": [
+              "post_save"
+            ],
+            "strict_exact_match": true
+          },
+          {
+            "slot": 2,
+            "expected_checksum": 46460,
+            "observed_checksum": 46460,
+            "observed_record_sha256": "f47f1b66e862e684c3c40ee444592d19b17e28c3b64964833bd7d2402109e000",
+            "reference_candidates": [
+              {
+                "label": "post_save",
+                "dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+                "slot": {
+                  "active_base": 262144,
+                  "active_counter": 9,
+                  "active_crc16": 12972,
+                  "both_slots_crc_valid": true,
+                  "party_offset": 262288
+                },
+                "species_id": 66,
+                "expected_checksum": 46460,
+                "header_matches": true,
+                "record_bytes_equal": false,
+                "box_phase": {
+                  "mode": "plain_suffix",
+                  "split": 0
+                },
+                "tail_phase": {
+                  "mode": "plain_suffix",
+                  "split": 38
+                },
+                "record_matches_cipher_boundary": true
+              }
+            ],
+            "observed_checksum_valid": false,
+            "decode_error": "party Pokémon checksum failed",
+            "decoded_semantic_match_sources": [],
+            "strict_exact_match": true
+          }
+        ]
+      },
+      "friendship_steps": 2,
+      "badges": [
+        223,
+        128
+      ]
+    }
+  },
+  "native_save_party_delta": {
+    "source_dsv_sha256": "8019cbac958d0120b5654c2500848d2e32bc3d00e31b1b71b6f735c7bf1f6ede",
+    "post_save_dsv_sha256": "e8226f157c117c5f8a531eebca98cef7fdbe2104afcfcd99018264a8995ef204",
+    "source_selected_slot": {
+      "active_base": 0,
+      "active_counter": 8,
+      "active_crc16": 938,
+      "both_slots_crc_valid": true,
+      "party_offset": 144
+    },
+    "post_save_selected_slot": {
+      "active_base": 262144,
+      "active_counter": 9,
+      "active_crc16": 12972,
+      "both_slots_crc_valid": true,
+      "party_offset": 262288
+    },
+    "party_header_unchanged": true,
+    "inactive_party_bytes_unchanged": true,
+    "records": [
+      {
+        "slot": 0,
+        "source_checksum_valid": true,
+        "post_save_checksum_valid": true,
+        "species_id": 35,
+        "pid_and_flags_unchanged": true,
+        "decoded_fields_changed": [],
+        "party_tail_equal": true
+      },
+      {
+        "slot": 1,
+        "source_checksum_valid": true,
+        "post_save_checksum_valid": true,
+        "species_id": 152,
+        "pid_and_flags_unchanged": true,
+        "decoded_fields_changed": [
+          {
+            "block_index": 0,
+            "byte_offset": 12,
+            "field": "PokemonDataBlockA.friendship",
+            "before": 71,
+            "after": 72
+          }
+        ],
+        "party_tail_equal": true
+      },
+      {
+        "slot": 2,
+        "source_checksum_valid": true,
+        "post_save_checksum_valid": true,
+        "species_id": 66,
+        "pid_and_flags_unchanged": true,
+        "decoded_fields_changed": [
+          {
+            "block_index": 0,
+            "byte_offset": 12,
+            "field": "PokemonDataBlockA.friendship",
+            "before": 70,
+            "after": 71
+          }
+        ],
+        "party_tail_equal": true
+      }
+    ],
+    "decoded_party_equal": false
+  },
+  "friendship_steps_causality": {
+    "variable": "VAR_FRIENDSHIP_STEPS (0x404B)",
+    "source": [
+      "engine/upstream/pokeheartgold/src/field/field_control.c:766-786",
+      "engine/upstream/pokeheartgold/src/pokemon.c:2023-2044",
+      "engine/upstream/pokeheartgold/include/constants/vars.h:90",
+      "engine/upstream/pokeheartgold/include/constants/save_arrays.h:10"
+    ],
+    "ram_counter_by_checkpoint": {
+      "hm-fly-surf-fix6a-continue-one": 122,
+      "hm-fly-surf-fix6a-fly-confirm": 122,
+      "hm-fly-surf-fix6a-surf-approach": 1,
+      "hm-fly-surf-fix6a-surf-start": 1,
+      "hm-fly-surf-fix6a-surf-land-return": 2,
+      "hm-fly-surf-fix6a-save-settled": 2,
+      "hm-fly-surf-fix6a-cold-reload-continue": 2
+    },
+    "movement_after_fly": {
+      "from": [
+        695,
+        397
+      ],
+      "to": [
+        700,
+        399
+      ],
+      "steps_to_water_approach": 7,
+      "counter_before": 122,
+      "counter_at_approach": 1,
+      "wraps_128_once": true
+    },
+    "explanation": "Source increments this native step counter and applies the walking friendship event when it reaches 128; the event has a 50% skip. The seven observed land steps move 122 to 1 across exactly one wrap, and checksum-valid party/DSV deltas are exactly +1 friendship for Chikorita and Machop."
+  },
+  "reserved_ram_findings": {
+    "range": "0x023D7000-0x023D7FFF",
+    "hashes_by_checkpoint": {
+      "hm-fly-surf-fix6a-continue-one": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+      "hm-fly-surf-fix6a-fly-confirm": "0cbc834a0eb14771b3c474ab148eea6c73d3a1e5d8e07158fba59f84c59a726a",
+      "hm-fly-surf-fix6a-surf-approach": "0cbc834a0eb14771b3c474ab148eea6c73d3a1e5d8e07158fba59f84c59a726a",
+      "hm-fly-surf-fix6a-surf-start": "0cbc834a0eb14771b3c474ab148eea6c73d3a1e5d8e07158fba59f84c59a726a",
+      "hm-fly-surf-fix6a-surf-land-return": "0cbc834a0eb14771b3c474ab148eea6c73d3a1e5d8e07158fba59f84c59a726a",
+      "hm-fly-surf-fix6a-save-settled": "0cbc834a0eb14771b3c474ab148eea6c73d3a1e5d8e07158fba59f84c59a726a",
+      "hm-fly-surf-fix6a-cold-reload-continue": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "root_audit_path": "qa/runs/hm-fly-surf-fix6a-reserve-audit.json",
+    "root_audit_sha256": "8c86f43bf1e04e074d12aa67d09c9cd903c1bed109f3b109ce536692599fb976",
+    "diff_from_baseline_bytes": {
+      "hm-fly-surf-fix6a-continue-one": 0,
+      "hm-fly-surf-fix6a-fly-confirm": 370,
+      "hm-fly-surf-fix6a-surf-approach": 370,
+      "hm-fly-surf-fix6a-surf-start": 370,
+      "hm-fly-surf-fix6a-surf-land-return": 370,
+      "hm-fly-surf-fix6a-save-settled": 370,
+      "hm-fly-surf-fix6a-cold-reload-continue": 0
+    },
+    "interpretation": "The pinned ROM contains the exact compiled helper. Root's ROM-bound audit classifies all changed bytes inside 12 named mutable .owned_hm.state symbols; immutable reserve bytes and guards match ROM at all checkpoints."
+  },
+  "captures": [
+    {
+      "path": "qa/runs/hm-fly-surf-fix6a-fly-choose/fly_confirmation.png",
+      "sha256": "74028c4e1c326af72e7c21c0f67b51b770d6bc3522d027bd9c18a7446d42e6ba"
+    },
+    {
+      "path": "qa/runs/hm-fly-surf-fix6a-fly-confirm/fly_selection_transition.png",
+      "sha256": "9d426382e993df4d04e4e6d866fb15e27002dfa456c61a676f62dced9161ab2b"
+    },
+    {
+      "path": "qa/runs/hm-fly-surf-fix6a-fly-confirm/fly_arrival.png",
+      "sha256": "b7c1180dee65b69e9f730adf866b9dfe8ebb7fb3cb2ddfb0b8edb3bea7acae8c"
+    },
+    {
+      "path": "qa/runs/hm-fly-surf-fix6a-surf-prompt/surf_prompt.png",
+      "sha256": "60eb73d69b9ac709d5286e5fa24102b35123c3c48b5e9df66875310433a1429e"
+    },
+    {
+      "path": "qa/runs/hm-fly-surf-fix6a-surf-yes/surf_yes_text.png",
+      "sha256": "d7c0982246b4b3009199f3bb557580db18ae833a63f37688903936916944d661"
+    },
+    {
+      "path": "qa/runs/hm-fly-surf-fix6a-surf-start/surf_started.png",
+      "sha256": "19ca9ab9a0887b10028a6dcd2cca09fe2fc86e8515a94b0d5038013ac6fa248e"
+    },
+    {
+      "path": "qa/runs/hm-fly-surf-fix6a-surf-land-return/surf_land_return.png",
+      "sha256": "fa55f1ac3851f053b2c353ba91804149c2cc1ed4e55e522376a7ae8ab74fa41d"
+    },
+    {
+      "path": "qa/runs/hm-fly-surf-fix6a-save-settled/saved_native_settled.png",
+      "sha256": "d3e4b5e5e6133a785fe212ea2f8b896f7dd5bc47279f1447a2ec1972a6f69271"
+    }
+  ],
+  "scope_limits": [
+    "One exact FIX6a Fly and Surf action sequence only.",
+    "No browser patch or promotion decision.",
+    "Intermediate party records are accepted only when every byte matches a valid pre-save or post-save cipher boundary; decoded friendship changes are limited to the two native +1 walking events."
+  ]
+}

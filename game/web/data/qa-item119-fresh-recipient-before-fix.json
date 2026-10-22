@@ -1,0 +1,896 @@
+{
+  "schema": "rocket-kit-recipient-native-qa/v1",
+  "status": "PARTIAL_FIRST_CONVERSATION_DOES_NOT_OFFER_119",
+  "scope": "Bounded native Rocket interactions on one cold-start profile; no native Save, cold persistence check, item use, or stat mutation.",
+  "artifacts": {
+    "rom": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/stat-editor-nature-integrated-rocket08e/ultimate-gold-stat-editor-nature-integrated.nds",
+      "sha256": "2eaf226677be97b95175035917cb96aa47b761cd993aa5a1bdb0eb2619dbf43f"
+    },
+    "core": {
+      "path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+      "sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    "runner": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+      "sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    "once_wrapper": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_once.py",
+      "sha256": "88d9254e8291486e4c78d2585976497d9ad9a69e224179b411aedbb55c959181"
+    },
+    "source_dsv": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/fresh_rocket_kit_recipient_20261022.dsv",
+      "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "selected_main": {
+        "base": 262144,
+        "save_counter": 9,
+        "crc16": 53760,
+        "crc_valid": true
+      },
+      "both_main_crc_valid": true
+    },
+    "source_manifest": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/inputs/fresh_rocket_kit_recipient_20261022.json",
+      "sha256": "b7eb55ba22a54d0c16c7aca0ae5987c611259f2ecf91a11e5f6a5fe68d6a8c33"
+    },
+    "profile_dsv": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/profiles/rocket-kit-recipient-2eaf-cold-20261022/ultimate-gold-stat-editor-nature-integrated.dsv",
+      "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "byte_identical_to_source": true
+    }
+  },
+  "conversation_findings": {
+    "first_conversation": {
+      "sequence": [
+        "Rocket initial offer",
+        "accept original kit",
+        "marker message acknowledged",
+        "field returned"
+      ],
+      "original_gifts_exactly_once": [
+        {
+          "pocket": "berries",
+          "item_id": 154,
+          "name": "Leppa Berry",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "berries",
+          "item_id": 155,
+          "name": "Oran Berry",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "berries",
+          "item_id": 157,
+          "name": "Lum Berry",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "items",
+          "item_id": 77,
+          "name": "Max Repel",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "items",
+          "item_id": 78,
+          "name": "Escape Rope",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "key",
+          "item_id": 113,
+          "name": "TM Refill",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "key",
+          "item_id": 114,
+          "name": "Party Healer",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "key",
+          "item_id": 118,
+          "name": "Cheat Kit marker",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "medicine",
+          "item_id": 50,
+          "name": "Rare Candy",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "marker_118_quantity": 1,
+      "stat_editor_119_quantity_at_field_return": 0,
+      "stat_editor_offer_in_this_conversation": false,
+      "field_return_evidence": "dialogue-05/after_marker_ack.png"
+    },
+    "second_interaction": {
+      "separate_interaction_after_field_return": true,
+      "visible_offer": "Take the Stat Editor?",
+      "accepted": true,
+      "data_delta_only": [
+        {
+          "pocket": "key",
+          "item_id": 119,
+          "before": 0,
+          "after": 1
+        }
+      ],
+      "item_119": {
+        "quantity": 1,
+        "pocket": "key",
+        "slot": 5,
+        "expanded_bag_index": 539
+      },
+      "reentry_message": "You already have it.",
+      "no_duplicate_gifts_or_119": true,
+      "bag_unchanged_after_reentry": true
+    }
+  },
+  "runtime_data": {
+    "first_bundle_bag_delta": {
+      "before_sha256": "ac4e9719b870df50bdf52bb28e5cd00e46650a485605563cc4f9a6fb17994b51",
+      "after_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "expected_quantity_deltas": [
+        {
+          "pocket": "berries",
+          "item_id": 154,
+          "name": "Leppa Berry",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "berries",
+          "item_id": 155,
+          "name": "Oran Berry",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "berries",
+          "item_id": 157,
+          "name": "Lum Berry",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "items",
+          "item_id": 77,
+          "name": "Max Repel",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "items",
+          "item_id": 78,
+          "name": "Escape Rope",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "key",
+          "item_id": 113,
+          "name": "TM Refill",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "key",
+          "item_id": 114,
+          "name": "Party Healer",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "key",
+          "item_id": 118,
+          "name": "Cheat Kit marker",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        },
+        {
+          "pocket": "medicine",
+          "item_id": 50,
+          "name": "Rare Candy",
+          "before": 0,
+          "after": 1,
+          "delta": 1
+        }
+      ],
+      "changed_slots": [
+        {
+          "pocket": "items",
+          "slot": 1,
+          "item_id": 77,
+          "quantity": 1
+        },
+        {
+          "pocket": "items",
+          "slot": 2,
+          "item_id": 78,
+          "quantity": 1
+        },
+        {
+          "pocket": "medicine",
+          "slot": 0,
+          "item_id": 50,
+          "quantity": 1
+        },
+        {
+          "pocket": "berries",
+          "slot": 0,
+          "item_id": 154,
+          "quantity": 1
+        },
+        {
+          "pocket": "berries",
+          "slot": 1,
+          "item_id": 155,
+          "quantity": 1
+        },
+        {
+          "pocket": "berries",
+          "slot": 2,
+          "item_id": 157,
+          "quantity": 1
+        },
+        {
+          "pocket": "key",
+          "slot": 2,
+          "item_id": 113,
+          "quantity": 1
+        },
+        {
+          "pocket": "key",
+          "slot": 3,
+          "item_id": 114,
+          "quantity": 1
+        },
+        {
+          "pocket": "key",
+          "slot": 4,
+          "item_id": 118,
+          "quantity": 1
+        }
+      ],
+      "key_pocket_gift_order": [
+        {
+          "slot": 2,
+          "item_id": 113
+        },
+        {
+          "slot": 3,
+          "item_id": 114
+        },
+        {
+          "slot": 4,
+          "item_id": 118
+        }
+      ],
+      "marker_118_last_in_key_pocket": true,
+      "all_other_bag_quantities_unchanged": true,
+      "only_previously_empty_slots_used": true
+    },
+    "bags": {
+      "rocket-kit-recipient-2eaf-aa0c-cold-20261022-01": {
+        "save_data": "0x0227C2B8",
+        "save_array3_address": "0x0227C90C",
+        "save_array3_size": 1952,
+        "bpac_state": "0x023DD700",
+        "bpac_magic": "0x43415042",
+        "bpac_cache_save_link": "0x0227C2B8",
+        "bpac_legacy_projection": "0x0227C90C",
+        "bpac_bytes": 2376,
+        "bpac_sha256": "ac4e9719b870df50bdf52bb28e5cd00e46650a485605563cc4f9a6fb17994b51",
+        "key_items": {
+          "450": 1,
+          "502": 1
+        },
+        "occupied_key_item_slots": 2,
+        "gift_items": {
+          "77": 0,
+          "78": 0,
+          "50": 0,
+          "154": 0,
+          "155": 0,
+          "157": 0,
+          "113": 0,
+          "114": 0,
+          "118": 0,
+          "119": 0
+        }
+      },
+      "rocket-kit-recipient-2eaf-aa0c-dialogue-04": {
+        "save_data": "0x0227C2B8",
+        "save_array3_address": "0x0227C90C",
+        "save_array3_size": 1952,
+        "bpac_state": "0x023DD700",
+        "bpac_magic": "0x43415042",
+        "bpac_cache_save_link": "0x0227C2B8",
+        "bpac_legacy_projection": "0x0227C90C",
+        "bpac_bytes": 2376,
+        "bpac_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_items": {
+          "450": 1,
+          "502": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1
+        },
+        "occupied_key_item_slots": 5,
+        "gift_items": {
+          "77": 1,
+          "78": 1,
+          "50": 1,
+          "154": 1,
+          "155": 1,
+          "157": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 0
+        }
+      },
+      "rocket-kit-recipient-2eaf-aa0c-dialogue-05": {
+        "save_data": "0x0227C2B8",
+        "save_array3_address": "0x0227C90C",
+        "save_array3_size": 1952,
+        "bpac_state": "0x023DD700",
+        "bpac_magic": "0x43415042",
+        "bpac_cache_save_link": "0x0227C2B8",
+        "bpac_legacy_projection": "0x0227C90C",
+        "bpac_bytes": 2376,
+        "bpac_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_items": {
+          "450": 1,
+          "502": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1
+        },
+        "occupied_key_item_slots": 5,
+        "gift_items": {
+          "77": 1,
+          "78": 1,
+          "50": 1,
+          "154": 1,
+          "155": 1,
+          "157": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 0
+        }
+      },
+      "rocket-kit-recipient-2eaf-aa0c-editor-offer": {
+        "save_data": "0x0227C2B8",
+        "save_array3_address": "0x0227C90C",
+        "save_array3_size": 1952,
+        "bpac_state": "0x023DD700",
+        "bpac_magic": "0x43415042",
+        "bpac_cache_save_link": "0x0227C2B8",
+        "bpac_legacy_projection": "0x0227C90C",
+        "bpac_bytes": 2376,
+        "bpac_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_items": {
+          "450": 1,
+          "502": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1
+        },
+        "occupied_key_item_slots": 5,
+        "gift_items": {
+          "77": 1,
+          "78": 1,
+          "50": 1,
+          "154": 1,
+          "155": 1,
+          "157": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 0
+        }
+      },
+      "rocket-kit-recipient-2eaf-aa0c-editor-accept": {
+        "save_data": "0x0227C2B8",
+        "save_array3_address": "0x0227C90C",
+        "save_array3_size": 1952,
+        "bpac_state": "0x023DD700",
+        "bpac_magic": "0x43415042",
+        "bpac_cache_save_link": "0x0227C2B8",
+        "bpac_legacy_projection": "0x0227C90C",
+        "bpac_bytes": 2376,
+        "bpac_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "key_items": {
+          "450": 1,
+          "502": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1
+        },
+        "occupied_key_item_slots": 6,
+        "gift_items": {
+          "77": 1,
+          "78": 1,
+          "50": 1,
+          "154": 1,
+          "155": 1,
+          "157": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1
+        }
+      },
+      "rocket-kit-recipient-2eaf-grant-ack-corrected-20261022": {
+        "save_data": "0x0227C2B8",
+        "save_array3_address": "0x0227C90C",
+        "save_array3_size": 1952,
+        "bpac_state": "0x023DD700",
+        "bpac_magic": "0x43415042",
+        "bpac_cache_save_link": "0x0227C2B8",
+        "bpac_legacy_projection": "0x0227C90C",
+        "bpac_bytes": 2376,
+        "bpac_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "key_items": {
+          "450": 1,
+          "502": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1
+        },
+        "occupied_key_item_slots": 6,
+        "gift_items": {
+          "77": 1,
+          "78": 1,
+          "50": 1,
+          "154": 1,
+          "155": 1,
+          "157": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1
+        }
+      },
+      "rocket-kit-recipient-2eaf-reentry-20261022": {
+        "save_data": "0x0227C2B8",
+        "save_array3_address": "0x0227C90C",
+        "save_array3_size": 1952,
+        "bpac_state": "0x023DD700",
+        "bpac_magic": "0x43415042",
+        "bpac_cache_save_link": "0x0227C2B8",
+        "bpac_legacy_projection": "0x0227C90C",
+        "bpac_bytes": 2376,
+        "bpac_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "key_items": {
+          "450": 1,
+          "502": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1
+        },
+        "occupied_key_item_slots": 6,
+        "gift_items": {
+          "77": 1,
+          "78": 1,
+          "50": 1,
+          "154": 1,
+          "155": 1,
+          "157": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1
+        }
+      },
+      "rocket-kit-recipient-2eaf-reentry-ack-20261022": {
+        "save_data": "0x0227C2B8",
+        "save_array3_address": "0x0227C90C",
+        "save_array3_size": 1952,
+        "bpac_state": "0x023DD700",
+        "bpac_magic": "0x43415042",
+        "bpac_cache_save_link": "0x0227C2B8",
+        "bpac_legacy_projection": "0x0227C90C",
+        "bpac_bytes": 2376,
+        "bpac_sha256": "17fd4dffd4e37b9bc96a7bec33bf63257d027f6f569085addc17e400620464a1",
+        "key_items": {
+          "450": 1,
+          "502": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1
+        },
+        "occupied_key_item_slots": 6,
+        "gift_items": {
+          "77": 1,
+          "78": 1,
+          "50": 1,
+          "154": 1,
+          "155": 1,
+          "157": 1,
+          "113": 1,
+          "114": 1,
+          "118": 1,
+          "119": 1
+        }
+      }
+    },
+    "legacy_save_array3": {
+      "runtime_matches_seed_on_cold": true,
+      "item_119_record_offset": "0x2A8",
+      "expected_record_bytes": "77000100",
+      "post_grant_matches_only_119_record_delta": true,
+      "post_grant_sha256": "750ac1a7959a17a4bafc802295bff4c5f9097090c147ffa2986e9de3c89f7734"
+    },
+    "party": {
+      "source_and_post_interaction_records_match_strict_cipher_boundaries": true,
+      "snapshots": [
+        {
+          "run": "rocket-kit-recipient-2eaf-aa0c-cold-20261022-01",
+          "dsv_references": [
+            {
+              "label": "AA0C source",
+              "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "selected_slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              }
+            }
+          ],
+          "ram_party_array_sha256": "f155fa0c2fe9efd118ae3db21083e72d12d89c5c3c4b0de13bb45e492980906a",
+          "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "all_records_strictly_match": true,
+          "all_records_checksum_valid": false,
+          "party_count": 3,
+          "decodable_slots_have_no_hm_moves": true
+        },
+        {
+          "run": "rocket-kit-recipient-2eaf-aa0c-dialogue-04",
+          "dsv_references": [
+            {
+              "label": "AA0C source",
+              "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "selected_slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              }
+            }
+          ],
+          "ram_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "all_records_strictly_match": true,
+          "all_records_checksum_valid": true,
+          "party_count": 3,
+          "decodable_slots_have_no_hm_moves": true
+        },
+        {
+          "run": "rocket-kit-recipient-2eaf-aa0c-editor-accept",
+          "dsv_references": [
+            {
+              "label": "AA0C source",
+              "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "selected_slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              }
+            }
+          ],
+          "ram_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "all_records_strictly_match": true,
+          "all_records_checksum_valid": true,
+          "party_count": 3,
+          "decodable_slots_have_no_hm_moves": true
+        },
+        {
+          "run": "rocket-kit-recipient-2eaf-reentry-ack-20261022",
+          "dsv_references": [
+            {
+              "label": "AA0C source",
+              "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+              "selected_slot": {
+                "active_base": 262144,
+                "active_counter": 9,
+                "active_crc16": 53760,
+                "both_slots_crc_valid": true,
+                "party_offset": 262288
+              }
+            }
+          ],
+          "ram_party_array_sha256": "d79c861192accc046c7c2eed5fcfe8a4d9d7b1c1650eeed6a2138ca356d4fdef",
+          "dsv_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "all_records_strictly_match": true,
+          "all_records_checksum_valid": false,
+          "party_count": 3,
+          "decodable_slots_have_no_hm_moves": true
+        }
+      ]
+    }
+  },
+  "visual_evidence": [
+    {
+      "evidence": "original_bundle_marker_message",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-04/first_gift_message.png",
+      "sha256": "2b6d8e44373ad50657733845140dc45aed9b684156dfa0633783ce3d98bdb29d",
+      "observation": "The screenshot visibly begins: 'The kit is yours. Its marker keeps the li…'."
+    },
+    {
+      "evidence": "original_conversation_returned_to_field",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-05/after_marker_ack.png",
+      "sha256": "cfec5b97c4ec0ef6c9c15df5a19cd02b83a4dd2bfed6583aa3f9b368267b5038",
+      "observation": "The field and Talk prompt are visible before the separate Stat Editor interaction."
+    },
+    {
+      "evidence": "separate_stat_editor_offer",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-editor-offer/editor_offer_or_field.png",
+      "sha256": "84715a6cfa8fd4f1aef0b02fd3cc9f6e73c453957c386399fccc4680a1dddca2",
+      "observation": "The prompt 'Take the Stat Editor?' is visible with Yes/No choices."
+    },
+    {
+      "evidence": "stat_editor_granted",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-editor-accept/editor_grant_result.png",
+      "sha256": "44c13428f35e98adddf8a4ec2bc57231744b48d4fae2b6216239b572a9c7775e",
+      "observation": "The screenshot visibly says 'You got the Stat Editor!'."
+    },
+    {
+      "evidence": "post_grant_reentry_already_owned",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-reentry-20261022/rocket_reentry_first_text.png",
+      "sha256": "e4c9b72e0ecab935a0677b82b520959e111ad0da5fa7662c7914603e50f2c376",
+      "observation": "The screenshot visibly says 'You already have it.'."
+    },
+    {
+      "evidence": "field_after_reentry_ack",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-reentry-ack-20261022/field_after_reentry_ack.png",
+      "sha256": "01960b21521394a7e167d9e68e8365a66ba8ddbb6a6323ca60b9986c82b9e883",
+      "observation": "The field and Talk prompt are visible after acknowledging the already-owned message."
+    }
+  ],
+  "run_chain": [
+    {
+      "run": "rocket-kit-recipient-2eaf-aa0c-cold-20261022-01",
+      "frames": 5500,
+      "result_sha256": "91a35b6ef863daf21aac7925f70bb6b82e53322b7ced958fe41ea2d9647c5abd",
+      "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_input_sha256": null,
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-cold-20261022-01/cold.state",
+      "state_output_sha256": "062cd61374eabbae78ed8420237f2804015bfc15bc672c3271acb8893972788f",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-cold-20261022-01/system_ram.bin",
+      "ram_sha256": "d3eeb04f73397bdba00de9fb3b62d3992e93200fbd736a58f42dab6f3386f780",
+      "battery_sidecar_sha256": "507333c47d17920a74cf48df05b72770898c9de8b1ce818b9af8a82da6225c99",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-kit-recipient-2eaf-aa0c-align-20261022-01",
+      "frames": 40,
+      "result_sha256": "258b22560bc7a4e74554ed68745755df8600eb9add6aff1bef5f3b0b30dcbeec",
+      "input_script_sha256": "da63c2421b287cd54f34585f8526b84f91254b77c53aa983fa8210e1a11fb677",
+      "state_input_sha256": "062cd61374eabbae78ed8420237f2804015bfc15bc672c3271acb8893972788f",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-align-20261022-01/align.state",
+      "state_output_sha256": "7e1cd0b2c441fcb70493905766f5a733d555087ab89fc58d989b326c6ca6d3cb",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-align-20261022-01/system_ram.bin",
+      "ram_sha256": "882614d40aaed889c11856c54bb94cf6680f9254c2a9141333feaec4d18f5574",
+      "battery_sidecar_sha256": "60af82edf99f83e80b3ab87fa223c916fd9ba017c08be015f715d1ccf65c131b",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-kit-recipient-2eaf-aa0c-dialogue-01",
+      "frames": 160,
+      "result_sha256": "92234630af66c1c410bd2d1c8a245074f1eb5862f7867732cb1c3bfa43f84db4",
+      "input_script_sha256": "79b33c1bd44e178e4ba7613cce4f2127cc97cdb6b6931a54514d9974eed5dcd2",
+      "state_input_sha256": "7e1cd0b2c441fcb70493905766f5a733d555087ab89fc58d989b326c6ca6d3cb",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-01/dialogue.state",
+      "state_output_sha256": "9841bf419ce2f955ade4c3598b46d147dd1fd712b7208b6b91c241b3fb808cdb",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-01/system_ram.bin",
+      "ram_sha256": "34daecec86af0b3a317e664b1b8970808b1eabf6bb10df112e79b78c596d734c",
+      "battery_sidecar_sha256": "cd44ca2cc36f1b5e72b8e6f8f9f524bed2e0a377c19c196a04733d999e36974c",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-kit-recipient-2eaf-aa0c-dialogue-02",
+      "frames": 70,
+      "result_sha256": "b71440b15457af7bda9c24361e2f00ed0b174be183aec31b3621d8e620b4e0f9",
+      "input_script_sha256": "a8a5251f57b3f4bbc442e22313fa49c5139addc02fe1698b0c0caed2664cf282",
+      "state_input_sha256": "9841bf419ce2f955ade4c3598b46d147dd1fd712b7208b6b91c241b3fb808cdb",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-02/dialogue.state",
+      "state_output_sha256": "d38721e0c0c62b1d0fb11b39f51e7fda6e49927eccc621afe25b45fbbda8ea60",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-02/system_ram.bin",
+      "ram_sha256": "972f91a13f446e4c412480880d82b00e3662a9d56ff9dcce224fb4fbe671adc2",
+      "battery_sidecar_sha256": "8d84bccc7f80e21233f822897d8f4d3c4322732df641a5cd86e5284fe083f71e",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-kit-recipient-2eaf-aa0c-dialogue-03",
+      "frames": 90,
+      "result_sha256": "47c7ccd14d30c19432310a466d4015012174e32c3bc0a39ef27ee8b8a55e33f3",
+      "input_script_sha256": "a6f4a732cf53decc9a0abd61d5cd088f2037d20fe8041fcc95967326e280863b",
+      "state_input_sha256": "d38721e0c0c62b1d0fb11b39f51e7fda6e49927eccc621afe25b45fbbda8ea60",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-03/dialogue.state",
+      "state_output_sha256": "73bcbe5a338380859c95906779c1b0e7b98b55812d8908b3a56ef1844b44b846",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-03/system_ram.bin",
+      "ram_sha256": "b587662e21df4d474f52578e7046242e3c46d9ca8fc1d88d1c868efa20e01220",
+      "battery_sidecar_sha256": "d715255656882d27c5277baeb29fd12b237062b92c0787d4c39e3997b6a32f5f",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-kit-recipient-2eaf-aa0c-dialogue-04",
+      "frames": 90,
+      "result_sha256": "f0124561f2f3563b1a91366d53f83a330fc16a7d7e2d86fe1d3dc33e386d4139",
+      "input_script_sha256": "ff8cb6845dacfddd20ecdeccb2d7122ad25bd44339262d68114357a22613c943",
+      "state_input_sha256": "73bcbe5a338380859c95906779c1b0e7b98b55812d8908b3a56ef1844b44b846",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-04/dialogue.state",
+      "state_output_sha256": "216cc8d572f6aa46ff7ac105a93a8490406617d0b5d7b77e008e65bf74a660ee",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-04/system_ram.bin",
+      "ram_sha256": "55694565f1a21f70c407e1510bd3a2827f25d199f23e279f69a3f794bd23afd1",
+      "battery_sidecar_sha256": "2af668d11b53c9bdd12db56a30978e5db1db14be3bfb6dbd400af3c7e4247c03",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-kit-recipient-2eaf-aa0c-dialogue-05",
+      "frames": 90,
+      "result_sha256": "60c4549f84d2d5c67e8242baf1d5c04ff848b4911cf7e38fbfebd3b7bcb5378a",
+      "input_script_sha256": "fce5c30768016d859a22a99cc5330c7708827e76a5f9f73360fe9caea448b93b",
+      "state_input_sha256": "216cc8d572f6aa46ff7ac105a93a8490406617d0b5d7b77e008e65bf74a660ee",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-05/dialogue.state",
+      "state_output_sha256": "2f86a1aa25cdd4a82fec9dc6a96e4ee12c7d379e5afd2b2e6c0ee072a7d29174",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-dialogue-05/system_ram.bin",
+      "ram_sha256": "b00b019f54fbd62fe5b4e4b27f83c5b910619090ee007c193a0b12c375ae45b0",
+      "battery_sidecar_sha256": "9f893fd0f9d70900290d95f97911c2a94fbe27957cacd8280938faaa4ed4bb06",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-kit-recipient-2eaf-aa0c-editor-offer",
+      "frames": 110,
+      "result_sha256": "f330c4e72b6c9a55dac3f8be9b5b87e0ef85a2243c62c6636899f03ee815c711",
+      "input_script_sha256": "ce94ee050c98490101d3e4d08e934840254f67304bb845351f1f2111b5334210",
+      "state_input_sha256": "2f86a1aa25cdd4a82fec9dc6a96e4ee12c7d379e5afd2b2e6c0ee072a7d29174",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-editor-offer/editor_offer.state",
+      "state_output_sha256": "ab43d0101681436a7ba6e63b5491175e6a6dfdb2761ae32eeadd0942cae7b69a",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-editor-offer/system_ram.bin",
+      "ram_sha256": "f9770f16c07d91eee647b42d96ef36f3905f733e3b7daf396ecffc4914066a3d",
+      "battery_sidecar_sha256": "25c986255707bb14ddb454d970a758a7972131d41dd0d3ea24c1ec3b1721d9fe",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-kit-recipient-2eaf-aa0c-editor-accept",
+      "frames": 110,
+      "result_sha256": "63502f1a10926880f833e0c2cb6a02e935b93ecd096a46db962a1b017d298e27",
+      "input_script_sha256": "7ff3326a8d10d5b0cba46aa0d396662d50330636dfaaaa7e7d58c03284554c1e",
+      "state_input_sha256": "ab43d0101681436a7ba6e63b5491175e6a6dfdb2761ae32eeadd0942cae7b69a",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-editor-accept/editor_accept.state",
+      "state_output_sha256": "edd5d6c756f70cb4888a6c430c781284a56d15fbdcd47aa99f6d4e96f01dc299",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-aa0c-editor-accept/system_ram.bin",
+      "ram_sha256": "58a05e5bae4f1125fe423be5a47be7ec36fe8f47735e8bb17ab6f284e8d74624",
+      "battery_sidecar_sha256": "f05d2d1edac90131f99788ad26bd7ea7e12e4ac1c1a0dcdf45a8234c83e4be9f",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-kit-recipient-2eaf-grant-ack-corrected-20261022",
+      "frames": 100,
+      "result_sha256": "7792c235c6994bd7601490578b9bdb9465e947ae5dee2c1a7ac4b6baeaee1b2f",
+      "input_script_sha256": "963256d9f698ded3ea4775129510163200d3e1135609c5b4fb991ddaaa6c0bdc",
+      "state_input_sha256": "edd5d6c756f70cb4888a6c430c781284a56d15fbdcd47aa99f6d4e96f01dc299",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-grant-ack-corrected-20261022/grant_ack.state",
+      "state_output_sha256": "1f153b511c926e4ce48ed09ce7e5129d04b2f1fac2585344dceb4fd88d168795",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-grant-ack-corrected-20261022/system_ram.bin",
+      "ram_sha256": "9ace36a29ae47673134abc90e3590320dc0f2f76d6c0b41744c74293ee61bd91",
+      "battery_sidecar_sha256": "f16e7e808a7d3ad5dcdda3e3589ac3d5a99a3681e8c6f35e29448d244804fb04",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-kit-recipient-2eaf-reentry-20261022",
+      "frames": 40,
+      "result_sha256": "791847f6b5b7d28f89a7df279ea9409329d597f803a2b9f6544e72da925cffe4",
+      "input_script_sha256": "2c7ebd95748affa6c11656adcbc5178c2115405d41f585f521fa1dfffc3291a5",
+      "state_input_sha256": "1f153b511c926e4ce48ed09ce7e5129d04b2f1fac2585344dceb4fd88d168795",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-reentry-20261022/reentry.state",
+      "state_output_sha256": "7e8ddf0a11dd643b51dd05e15bb92816cd7ab25ace10af8949ff4750138ccf36",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-reentry-20261022/system_ram.bin",
+      "ram_sha256": "9228c393cde98b7781ddfcb8f4d0a8747ad1841a8d466af2768b6f99d14ab1f5",
+      "battery_sidecar_sha256": "b417e5251da5ef7c33e5adcdd3aa5f3b94f3156b70702cfa8cc5fb50f93071df",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run": "rocket-kit-recipient-2eaf-reentry-ack-20261022",
+      "frames": 60,
+      "result_sha256": "2257b020fcd590528806cd94b80a3c86d69e4b8705622f92630a5fcbb7920aae",
+      "input_script_sha256": "29f6c2f49f5a325395259f785707ed577519fd9baed0ebd0f0ebb56f8cbb4ff8",
+      "state_input_sha256": "7e8ddf0a11dd643b51dd05e15bb92816cd7ab25ace10af8949ff4750138ccf36",
+      "state_output_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-reentry-ack-20261022/reentry_ack.state",
+      "state_output_sha256": "847ee10cf8c54377066db3ac55f60abf5fd5b9155d4e1f5eb531224bd06d42b3",
+      "ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/rocket-kit-recipient-2eaf-reentry-ack-20261022/system_ram.bin",
+      "ram_sha256": "196ae6217fe7a94bf728b0b4f34740d0dd609342465df0e8c8706eab5e19b776",
+      "battery_sidecar_sha256": "c8c1087f8fd8c6a99d8ea09ebcec9ebc9609cc0fa586c4a1cf8fedcc9c100eb9",
+      "battery_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    }
+  ],
+  "excluded_attempts": [
+    {
+      "run_id": "rocket-kit-recipient-2eaf-grant-ack-20261022",
+      "classification": "PRE_RESULT_TOOL_INPUT_ERROR",
+      "reason": "The state-input path omitted the source run's '-aa0c-' path segment; the runner raised FileNotFoundError before producing result.json or state evidence.",
+      "used_for_acceptance": false
+    }
+  ],
+  "limits": [
+    "The candidate does not offer item 119 during the initial nine-gift conversation; that same-conversation criterion remains unmet.",
+    "The 119 grant and already-owned re-entry were observed only in savestate-linked runs after a real cold boot; there was no native Save or post-grant cold reload.",
+    "No item use, EV/IV operation, story-access, general-release, or broad gameplay acceptance is claimed.",
+    "Cold and final re-entry Party snapshots have exact cipher-boundary matches but checksum validation is false at those capture instants; no decoded logical claim is made from them.",
+    "Runner records gameplay_acceptance=NOT_ASSESSED; the bounded UI claims rely on the pinned screenshots plus RAM/Bag checks above."
+  ],
+  "auditor": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/rocket_kit_recipient_2eaf_acceptance.py",
+    "sha256": "1f76851be10c7180a6b9823e8f56e40001ef58070bc8e50bde25c9fff28f24eb"
+  }
+}

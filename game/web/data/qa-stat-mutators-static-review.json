@@ -1,0 +1,37 @@
+{
+  "schema": "ultimate-gold-stat-mutators-static-review/v1",
+  "status": "PASS_STATIC_ONLY_RUNTIME_PENDING",
+  "reviewer": "root-independent-physical-and-disassembly-review",
+  "base_sha256": "f1ab9f71c73903802f4185760d97923db720b2bdf1a92d2904ac21fa510d09d9",
+  "candidate_sha256": "27f3a1f0aa5e2dabc3244af399e2d899e887aa89f8d812c088664d1860781131",
+  "build_report_sha256": "0b795ac67ab7b074666246435aacd6f660f6875d562e9d00008dd9b8708bb679",
+  "builder_sha256": "e3214d41289ba94f213b6efbe44cae0b41c7a71e3717a0578205a0600d3301e4",
+  "handler_binary_sha256": "fc65aa142670d5b9ce0b6fc031e6ac493379545dd80c2d1ccf2acedc178e9f2e",
+  "checks": {
+    "arm7_unchanged": true,
+    "all_513_files_unchanged": true,
+    "both_overlay_tables_unchanged": true,
+    "arm9_section_layout_unchanged": true,
+    "old_854_dispatch_entries_unchanged": true,
+    "dispatch_count_854_to_856": true,
+    "dispatch_append_set_reset_thumb": ["0x023D6541", "0x023D65E1"],
+    "table_only_changes": ["metadata payload length at +0x34", "two appended entries at +0xE58..+0xE60"],
+    "core_only_change": "524-byte binary at +0x540..+0x74C, replacing verified zeros",
+    "helper_preview_hm_guards_unchanged": true,
+    "retail_script_read_calls": 10,
+    "script_read_literal": "0x0203FE2D",
+    "script_read_macro_removed": true,
+    "native_calls_verified": ["0x02040375", "0x02074905", "0x023D63D5", "0x023D63FB"],
+    "set_disassembly_reviewed": "Six ordered reads, FieldSystem +0x80, saveData +0x0C, consent and slot guards, fifth SetValue argument on stack; no inline pointer-read macro"
+  },
+  "rejected_predecessor": {
+    "sha256": "528500c83a6e6594f04e1f09d6a6d07042ff6b9a8a37f850d05cdc0c119748a8",
+    "reason": "The build shim incremented ctx->script_ptr twice in unsequenced operands of bitwise OR; undefined C behavior. Preserved, never executed, not accepted."
+  },
+  "limitations": [
+    "No emulator core was run during this review.",
+    "The inherited preview script does not call the newly registered mutators.",
+    "Confirmation wiring, native setters/resets, encrypted records, readback and save/cold recovery require separate candidate-specific QA.",
+    "This candidate is isolated and does not modify the Alpha 2 download."
+  ]
+}

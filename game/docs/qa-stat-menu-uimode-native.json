@@ -1,0 +1,1023 @@
+{
+  "schema": "portable-stat-editor-menu-uimode-acceptance/v1",
+  "status": "PARTIAL",
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-uimode/portable-stat-editor-menu-uimode-fix6a.nds",
+    "sha256": "5a61083689668f3efcf46c4821b77b336875af5237a36f9985eb4cc159bd7d44"
+  },
+  "runtime": {
+    "runner_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "cheats": []
+  },
+  "seed_dsv": {
+    "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "bytes": 524410,
+    "selected_counter": 10,
+    "selected_crc16": 17186,
+    "unchanged_through_all_runs": true
+  },
+  "scope": {
+    "verified": [
+      "cold boot and candidate-local state chain",
+      "Bag USE of item 118",
+      "party slot 0 to EV/IV family menu",
+      "IV HP +1 preview backend values",
+      "No branch without writes",
+      "Back/Exit to visible field"
+    ],
+    "excluded_navigation": {
+      "run": "portable-stat-editor-menu-uimode-bag-open",
+      "reason": "coordinate opened Pokégear; corrected by observed Bag coordinate"
+    },
+    "not_run": [
+      "Yes/write branch",
+      "save and cold persistence after editor use"
+    ]
+  },
+  "checks": {
+    "all_runs_same_rom_runner_core_no_codes": true,
+    "party_strict_cipher_boundary_vs_seed_dsv": "PASS",
+    "save_array3_bag_exact_vs_seed_dsv": "PASS",
+    "canonical_bag_exact_and_item_118_quantity_1": "PASS",
+    "fixed_reserve_sections_5000_6000_7000_exact_rom": "PASS",
+    "ui_mode_family_and_exit": {
+      "family_menu": {
+        "field_system": "0x022a0284",
+        "task": "0x023bccc8",
+        "task_data": "0x02356c60",
+        "mode": 3,
+        "state": 1,
+        "mode_state_bytes_hex": "0301"
+      },
+      "exit_field": {
+        "field_system": "0x022a0284",
+        "task": "0x023bccc8",
+        "task_data": "0x02356c60",
+        "mode": 0,
+        "state": 1,
+        "mode_state_bytes_hex": "0001"
+      }
+    }
+  },
+  "preview": {
+    "backend_readback": "VERIFIED",
+    "variables": {
+      "0x8004": 0,
+      "0x8005": 16,
+      "0x8006": 65535,
+      "0x8008": 15,
+      "0x8009": 16,
+      "0x800C": 0
+    },
+    "rendered_text": "FAIL",
+    "rendered_text_note": "On-screen Current/Proposed strings render as garbled/question-mark glyphs; do not claim a visible 15-to-16 preview.",
+    "screenshot": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-uimode-iv-plus1-preview/preview_before_no.png",
+      "sha256": "2f0088e23ead7f81a7a9d178b4f24fddc000b4d26701fe94ac480f4a7d466cdf"
+    }
+  },
+  "no_branch": {
+    "selected_no_screenshot": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-uimode-select-no/no_selected.png",
+      "sha256": "0af150e9f3e9151fceb5c119917b809d4d2dc1f8fa1a5bd8a56941a57bf93eb3"
+    },
+    "post_no_runtime_variables": {
+      "0x8004": 0,
+      "0x8005": 16,
+      "0x8006": 1,
+      "0x8008": 15,
+      "0x8009": 16,
+      "0x800C": 61166
+    },
+    "party_bag_reserves_unchanged": true,
+    "field_return_screenshot": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-uimode-exit-field/field_after_exit_stable.png",
+      "sha256": "48a7dc0f808602d10118e3096b505a33d02f081ca22794e176f7d9c2b2d8a68a"
+    },
+    "field_visible": true
+  },
+  "runs": [
+    {
+      "name": "portable-stat-editor-menu-uimode-cold",
+      "frames": 5500,
+      "result_sha256": "deb977bf61c3c34067a036b9eb1caac09a5fa486248bba58945dd08b2b25f047",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-cold/input-script.json",
+        "sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a"
+      },
+      "state_in_sha256": null,
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-cold/cold.state",
+        "sha256": "8f2953752fa647694b2a4f240f269ad94c26a483d5b76c225aee91de777ca87a"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-cold/system_ram.bin",
+        "sha256": "90cd9004ba86b7a90a9140b391ea0baa2bef88307aaea025f2e1f258cec593cb"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-cold/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "e7937b73952b330de49febcc38248835fd793a6446f58c830d6d60940a9d4acf"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-cold/cold_continue_accepted.png",
+          "sha256": "4127e12b313a9fdf7695980ad57bd763b73889701834d8c8ea593669251cdb2f"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-cold/cold_continue_menu.png",
+          "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-cold/cold_final.png",
+          "sha256": "d38f70d13f68dfe0b90b3d6f538cbbe674194c9240b4e86ca9d62c0d8264dc07"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-cold/cold_loaded_field.png",
+          "sha256": "99584106d8431d74ffea0cb467b84ae60c31c05bb9531936466f2efa5bc71e7e"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-cold/cold_loaded_identity.png",
+          "sha256": "b09ef07d9197e0c3bff540aba6cc621fddc30eeed2929cf2083f1a40ebd3ce33"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-cold/cold_pre_title_inputs.png",
+          "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "9a29c62cb35142e32dfa0dfe1fea28d91752fe89a3a896fb58be196091281fc2",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-bag-open",
+      "frames": 500,
+      "result_sha256": "285dc02b7c6b7f747092371192a1eb66bf8cda4147cfde64c43e81ccd9e0b77d",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-bag-open/input-script.json",
+        "sha256": "7d32d8a7b544c5271fc19624a30c8ae356c5359dc35c85855e61127be9db896c"
+      },
+      "state_in_sha256": "8f2953752fa647694b2a4f240f269ad94c26a483d5b76c225aee91de777ca87a",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-bag-open/bag-open.state",
+        "sha256": "9afda73578c15fc64a3cf8344ea68f34c6c7c8523bbe384420cf8ebcd89d2c67"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-bag-open/system_ram.bin",
+        "sha256": "f97ea0a50cbf6fa17c2527750fd8c46e3df6a4aaed3a2c672b2775272fa487b7"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-bag-open/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "c44936673c92abdc437cf97e1c43f4f4a7f0edbc284194f21e526b9bc491b24d"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-bag-open/bag_open.png",
+          "sha256": "d78e887be2d7d74a23bf6e9b653f241f09f88ab121c50eb660cffb341262d28d"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-bag-open/bag_stable.png",
+          "sha256": "d78e887be2d7d74a23bf6e9b653f241f09f88ab121c50eb660cffb341262d28d"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-bag-open/before_bag.png",
+          "sha256": "eef00e8048e5b19d7c919e451b84a3b22a7be16f0a901d5088a537fc27c50a4e"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-bag-correction",
+      "frames": 550,
+      "result_sha256": "88c7f22f022cf032dbcbb12feea2ae22b2eb924924eeccafd54215b1711535f8",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-bag-correction/input-script.json",
+        "sha256": "4a78d2c0613709c8ea6a69e566f4e4b4c1e5693cb1f68f944af0f09d5473793f"
+      },
+      "state_in_sha256": "9afda73578c15fc64a3cf8344ea68f34c6c7c8523bbe384420cf8ebcd89d2c67",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-bag-correction/bag-open.state",
+        "sha256": "5f1f451e78c3a6f80d3142e0fbac5adcd83d5978cdb3e0dc179a3542168b9e90"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-bag-correction/system_ram.bin",
+        "sha256": "f9f925cbc9fc61ac8347b31f4257722ae797ef0c33b3f2aec90ceafc6b22d32f"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-bag-correction/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "033c372c7ce41baf56477726acf9fc456f611d7ac6adb61e10c70d69afd8cfd1"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-bag-correction/bag_open.png",
+          "sha256": "a690bdd5f414c5b64f07a3b031075ada38f65f0709e89b3f5623576bc69b2dcb"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-bag-correction/bag_stable.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-bag-correction/before_bag_touch.png",
+          "sha256": "6c33f5507c2bc0983a2d5681895508f5a744f9ca9d9e8feb29061e3fb016c8f2"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-bag-correction/field_after_close.png",
+          "sha256": "cab60a80f47ccad345f13d38168df64bcd4a6ae862c4f99facbe788ad4f768f1"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-bag-correction/pocket_before_close.png",
+          "sha256": "f239286d22de9b390f3576f611d1bcbfb0999c4c77864f04ce9295834bb3deee"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-key-items",
+      "frames": 300,
+      "result_sha256": "0adf2ddaaef6b44b8418726c50305234079077a30cfe8416a1cfa65c434ab904",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-key-items/input-script.json",
+        "sha256": "50c6574fea053d8160bd8acabd9fc3ee3a610ffb46f1d03f03a97f7f71b967f0"
+      },
+      "state_in_sha256": "5f1f451e78c3a6f80d3142e0fbac5adcd83d5978cdb3e0dc179a3542168b9e90",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-key-items/key-items.state",
+        "sha256": "414b5f52847a1c251bf5cf59b7f098322075bd7672fefe3ff0e8a05bf301134e"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-key-items/system_ram.bin",
+        "sha256": "71173c63a5f6434acd794665017c401cc62cfa61bf0a802c0cac23afd3d20ce3"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-key-items/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "ce9bd8f639f31b975036d15de70efb00bc3bb348631128dc4be5c47b7bc06e87"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-key-items/bag_items_pre_keytab.png",
+          "sha256": "002d2b668bb6bd59300d3723023d75af0119570c6d7c12e49863a6f7678e3bc5"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-key-items/key_items_open.png",
+          "sha256": "97c5b8c0b1174457146d3c8f8c555e230b99e07a5bd3d598dfb96825eddb0e46"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-key-items/key_items_stable.png",
+          "sha256": "912dee0291dcc2ad49b5b760d8b5790010aa9b2fc325860e8383bbfb5b9be7bb"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-kit-select",
+      "frames": 200,
+      "result_sha256": "94eafabb0a1c854c8e9da551a3e04b66bb29893affff6a434b03d2e1959adbe1",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-kit-select/input-script.json",
+        "sha256": "4a1e7f7e1c99185b7ed411756070cd04ceebfb2e5f462ab229c8f54df53afa3f"
+      },
+      "state_in_sha256": "414b5f52847a1c251bf5cf59b7f098322075bd7672fefe3ff0e8a05bf301134e",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-kit-select/kit-popup.state",
+        "sha256": "a6b81133b4042c635ddaeb752d1eb5669ccec1565f1b4e9e038f6e24a5d3d264"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-kit-select/system_ram.bin",
+        "sha256": "d8112424a1d76de328d4556281b5b5eabe47b2fc9932496125a40cae507dfbd2"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-kit-select/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "baebc3fd63d5665147db15ec1004996825b62b3245fa9eb050671784149ffb02"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-kit-select/key_items_before_kit.png",
+          "sha256": "26db0517b13732282a6446579a2122cfe1d603f9598aa8dc80031f0d5133b5cd"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-kit-select/kit_popup.png",
+          "sha256": "3e117272ca325ca1ce6c75aaff64b61640705a889e08ba40d2761b80b982ad5c"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-kit-select/kit_popup_stable.png",
+          "sha256": "3e117272ca325ca1ce6c75aaff64b61640705a889e08ba40d2761b80b982ad5c"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-party-select",
+      "frames": 800,
+      "result_sha256": "8549633468f33863eaa1da9002d7e9b41aa398ce21fb5936ca96158a9fcba844",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-party-select/input-script.json",
+        "sha256": "496b53a35e107f780da6c490d74ea6637a6d2f9cf6b5acc93a9e8c3998b1c260"
+      },
+      "state_in_sha256": "a6b81133b4042c635ddaeb752d1eb5669ccec1565f1b4e9e038f6e24a5d3d264",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-party-select/party-selector.state",
+        "sha256": "e2d7feca1319807fd814d00a8f7971c88c3f7a6a9c4c45d0ed9b612157a02dfe"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-party-select/system_ram.bin",
+        "sha256": "1881bda9e7af91ff24b176e6134b7ae9438f3540a28b49d5aa21cc352cc8eb0c"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-party-select/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "2c879b2f75e57d89bc7d8027bd1855abcfba1716e0393ee1b2790446e7ffb7fe"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-party-select/kit_use_before_a.png",
+          "sha256": "3e117272ca325ca1ce6c75aaff64b61640705a889e08ba40d2761b80b982ad5c"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-party-select/party_selector.png",
+          "sha256": "e00e1c25f41768d5adc2d3559b06ce4da78188057db0a0c264cef56e327b3419"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-party-select/party_selector_stable.png",
+          "sha256": "0a7316c52d09d0e60f3c0a4272e1c7e4a917f16f7f075a6fa40fb4633c842d82"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-party-select/use_transition.png",
+          "sha256": "0a7316c52d09d0e60f3c0a4272e1c7e4a917f16f7f075a6fa40fb4633c842d82"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-family-menu",
+      "frames": 800,
+      "result_sha256": "a86f064c5accb9105e6104ecc0f683f711bfb085318878073f8bf53aad9939ee",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-family-menu/input-script.json",
+        "sha256": "e514adf35ffaa47462980e5da3851394fc1a108cce1784389a11b28c0a2c8496"
+      },
+      "state_in_sha256": "e2d7feca1319807fd814d00a8f7971c88c3f7a6a9c4c45d0ed9b612157a02dfe",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-family-menu/family-menu.state",
+        "sha256": "ce63ebf03baaac1c318867a25c972af21c4920e9cd464bbd8f496f411b94fc10"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-family-menu/system_ram.bin",
+        "sha256": "0c187765c95680cb8731c4af2a5b09fa231c4cf35aadf70b478adccd5b6cbab7"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-family-menu/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "a31c43b5a1f554e776ef8497124a734fb0c4249fd1267f872957d824b78cf3e4"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-family-menu/family_menu_stable.png",
+          "sha256": "baf1a478c485da90f21e891c22d6c456d997f7e80adb06f6eef3e053094f98f4"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-family-menu/family_menu_visible.png",
+          "sha256": "6f9df8f9c28367cfb7c737c723efda2c315cc1fa1928d55e04576c5ee67edae2"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-family-menu/family_transition.png",
+          "sha256": "6f52003addd1514e61075a9c8ca550cc65350aa373d8b783ac652801da7dee86"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-family-menu/slot0_before_a.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-choose-iv",
+      "frames": 120,
+      "result_sha256": "25fa45445bed48a6c47363f8654887498127dc7d3e0d871b59e3bd2c7e522c51",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-choose-iv/input-script.json",
+        "sha256": "e55f896c9e52e1795e65159d4279ca2e83ca402cfb66311cf15bc3bd7bf0c2dc"
+      },
+      "state_in_sha256": "ce63ebf03baaac1c318867a25c972af21c4920e9cd464bbd8f496f411b94fc10",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-choose-iv/choose-iv.state",
+        "sha256": "9a110e81e749e1dcc2d3f468b67942116a5840405a7c05014aaa709c365c5c7b"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-choose-iv/system_ram.bin",
+        "sha256": "766c0941665b7ab783452a6abf960f4083e3389c1d9a31c21ae8e900d470af62"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-choose-iv/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "525428f0c882648d83771428e08ae0bcd14ca84fa9fe810d8336b303dd6ac7ac"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-choose-iv/family_before_down.png",
+          "sha256": "09fbe3a14c4d48230002e8b00d467f00a318a839059916c026e993f538a24944"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-choose-iv/family_iv_highlight.png",
+          "sha256": "6cb6baa2c952b54306b3a8710939daf219439cfd99de99738def19dbfc4b27de"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-iv-actions",
+      "frames": 500,
+      "result_sha256": "519b7eb8dbb4c81c52dd56f49ac2518b8f4a11fda9af57fbdae27a4061b9454a",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-actions/input-script.json",
+        "sha256": "97d0ec93bafa49659bb3aa0294362b9039012aff4a1a33140dc17d29bcf0ba28"
+      },
+      "state_in_sha256": "9a110e81e749e1dcc2d3f468b67942116a5840405a7c05014aaa709c365c5c7b",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-actions/iv-actions.state",
+        "sha256": "275984c3d1d19d400c77f0893a35ab96f99a89096b1556a847fc41ff41e5fa08"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-actions/system_ram.bin",
+        "sha256": "87d20784d80d5b66bb0c66cbfd78d6821b6cfd1b7191b7d7c11c5f5c0d78137a"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-iv-actions/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "972cab30801cb2d5f76941f7ac862bc55797813cba969b48e5d4d3b4b9f8c47e"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-actions/iv_actions_transition.png",
+          "sha256": "e8b12172bdc61fb3e96ac6f428dfbdab3e654899634235ca7fdfa983ff1c2c41"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-actions/iv_actions_visible.png",
+          "sha256": "f5a7dff7fb3b7bb78129d4370d6fa4237f290f6969d850d5ef98f72af6e78bd1"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-actions/iv_highlight_before_a.png",
+          "sha256": "314ee4413ae220bf974ebb2f2ca37236cec6eef4dcfb04371417506245c8fe4f"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-iv-stat",
+      "frames": 500,
+      "result_sha256": "4c5f14c1d7969f370cd8d64b414ebd8ff680204a1068f02431709d9a8d32fcb6",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-stat/input-script.json",
+        "sha256": "f806dfa09899a7d64e40eb968ca0cc1c47a1b4bedd6cfd85f24704c848df3572"
+      },
+      "state_in_sha256": "275984c3d1d19d400c77f0893a35ab96f99a89096b1556a847fc41ff41e5fa08",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-stat/iv-stat.state",
+        "sha256": "d3eb3865ac16b035d58be8ef54b17e2c213cf75ab3d52b5761835deeafdebaff"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-stat/system_ram.bin",
+        "sha256": "4c26d390cf0467046bc82b34d45e6d234113f2d975eed897eb4972285bf31f77"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-iv-stat/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "1d2e32cddd26e91622dd54d3699293810b1b064944a8603985ab814321c40885"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-stat/iv_increase_before_a.png",
+          "sha256": "964a064c5047bf9aeca1de04f23ab38abfdd83891a50c227b31c0d9ca65d1dd2"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-stat/iv_stat_transition.png",
+          "sha256": "70fdd864a464b38ac16e2d7add6ed46e42fa526f3cda2a358ba5e30fc6c6267c"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-stat/iv_stat_visible.png",
+          "sha256": "2a2aa98be5f25ecf23a684b3d3f25f55cb086790bc42b3a448738cb1df385588"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-iv-hp",
+      "frames": 500,
+      "result_sha256": "81df66f803b5a61186bfa198c02ff6f918b6c100f6f542071564e87ffd0e9dbb",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-hp/input-script.json",
+        "sha256": "8c5273f272bdbcc7d4fe87631d644a09886334a6bf87b1b85eaf5687dda0d6d5"
+      },
+      "state_in_sha256": "d3eb3865ac16b035d58be8ef54b17e2c213cf75ab3d52b5761835deeafdebaff",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-hp/iv-hp.state",
+        "sha256": "25b14f66c8acba5d3364bfd49392e9377e03fd2d5168ab30eea54090fdf27a02"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-hp/system_ram.bin",
+        "sha256": "0decb21a724440d97d74d0fc96df137e631097552ab357cee4c386466296da8e"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-iv-hp/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "0d0789522a1c88d2acc268039cd1e8c4901628159693572ab509baf989c4aeba"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-hp/hp_highlight_before_a.png",
+          "sha256": "d635863b306e89ef1ed3851584750aadb577fd730bdc6018843fbcb0312b2624"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-hp/hp_transition.png",
+          "sha256": "6feb82036276c2d12f78965e52bdf2d89db291e1c9a792a7bebba76f94e3f327"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-hp/hp_value_menu.png",
+          "sha256": "bef0df0bb0350a7d343f5c877d0d9251fa80386f0d4ab63f53106f6cda47ace3"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-iv-plus1-preview",
+      "frames": 500,
+      "result_sha256": "3e450a990cc090c5b83193113b7dbe8ce370e87500b35af4c75a1b8ae0efa34f",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-plus1-preview/input-script.json",
+        "sha256": "0479712dc2d6a1995249633255f090ce361562d7e99e8b3bdb62cc29c5825e92"
+      },
+      "state_in_sha256": "25b14f66c8acba5d3364bfd49392e9377e03fd2d5168ab30eea54090fdf27a02",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-plus1-preview/preview.state",
+        "sha256": "d85cef9ed3fbb17cf7a6dfd1c75043c41e70fee0c6f57e2002e9df334673a497"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-plus1-preview/system_ram.bin",
+        "sha256": "bfc4d48b9c8cdfba018347fc1c4eaa79b2cb97c90c9be9bf35169b51c8107e24"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-iv-plus1-preview/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "fb3d55134919382b0a8a78ffc1730db1907c921fd46236bd5f690cfacac1d9d5"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-plus1-preview/plus1_before_a.png",
+          "sha256": "3953c907a56721573d418fae7e160e07f1d2f7e3001b13d05167edf0741dd2f7"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-plus1-preview/preview_before_no.png",
+          "sha256": "2f0088e23ead7f81a7a9d178b4f24fddc000b4d26701fe94ac480f4a7d466cdf"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-plus1-preview/preview_transition.png",
+          "sha256": "5d911a78eea4bc7851a815a8dec1fc5f9d525d044a86aaaba272472c4cc574c7"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-select-no",
+      "frames": 120,
+      "result_sha256": "389e17655f01aa515c51cda5b011a82845d47f2fbe8469736446f7c533075a97",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-select-no/input-script.json",
+        "sha256": "9b5b7fcacfb4158b4b23fd99b8dd0f60aedcb8c23e033366919b769bc2fe8b79"
+      },
+      "state_in_sha256": "d85cef9ed3fbb17cf7a6dfd1c75043c41e70fee0c6f57e2002e9df334673a497",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-select-no/no-selected.state",
+        "sha256": "df3c433084daac4958b07638ef39f432d2c6da4adff0305c2da2e2472df3b4e4"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-select-no/system_ram.bin",
+        "sha256": "72d89611ca570ac7a7750d040f68ef8d155412ddeae69c23aeefcc5570229644"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-select-no/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "7c8d90ee229e6800ddcfb2369545bdf34052f07920f118f34c212f734a2a2960"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-select-no/no_selected.png",
+          "sha256": "0af150e9f3e9151fceb5c119917b809d4d2dc1f8fa1a5bd8a56941a57bf93eb3"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-select-no/yes_default_before_down.png",
+          "sha256": "08aad52796a754108858670532c8df3e387d61f99a9de633a48155f62a3dab25"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-confirm-no",
+      "frames": 500,
+      "result_sha256": "4efa1d8fa1e9d9b90d4337da5ddff422642101136356c18bd05fa66ad458171d",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-confirm-no/input-script.json",
+        "sha256": "fc1a61b0408fa384e9908bd669b5c0045ef341ee5551e08522e5f74f9c4e54b4"
+      },
+      "state_in_sha256": "df3c433084daac4958b07638ef39f432d2c6da4adff0305c2da2e2472df3b4e4",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-confirm-no/no-result.state",
+        "sha256": "7d142cd44f926819b4f9d07c9c217e82a34de7f1435f60b19a3d78bac58c0c3a"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-confirm-no/system_ram.bin",
+        "sha256": "e24d313cb995e9724c4d45b993873c039358e6ca363fd82e4d754b11e7c3462c"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-confirm-no/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "1de634f3f75c2460c51b2d02d9214fc8c264e46997592f13c2a57097da4fcf0d"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-confirm-no/no_result.png",
+          "sha256": "57343c011834ea621be5bf4c9ce5494ee7f3f7c014c3ddebeff445c2c7c730ac"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-confirm-no/no_result_stable.png",
+          "sha256": "ff2733ff5d42a13b0f9cd1cd70c5220d1de8ad3d53310ee57534d55edbeab600"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-confirm-no/no_selected_before_a.png",
+          "sha256": "29f07dd3216dcc3af908ee47793469ce39ac771de09c9fcc3d727c7ba473966e"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-iv-back",
+      "frames": 180,
+      "result_sha256": "88dd0e98a1e9948b14ad60bcbe072e9ef8f9e3609f96449408e4c275f57b49a1",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-back/input-script.json",
+        "sha256": "2768b860cae52d3884bf4bc810d3152d483f72c35280fb13ca5b811e175eee9b"
+      },
+      "state_in_sha256": "7d142cd44f926819b4f9d07c9c217e82a34de7f1435f60b19a3d78bac58c0c3a",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-back/back-highlight.state",
+        "sha256": "10f5638e9c731be69c191ed5af62eeacf3cc83144aecc14d914994390122e0e3"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-back/system_ram.bin",
+        "sha256": "460d3a08ed48ac7be2c02f43438550581c47aec5b4d5a480bdf47a321aa238d1"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-iv-back/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "fbd07cf9a171593acce1dbc00a992fd0cf3d00280dba7b24ac1762fe53fd701d"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-back/back_highlight.png",
+          "sha256": "30e67aefaa8e476be6a8121f4b17a1dfdcd41d972cefbc3a8d1c743eba7f0895"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-back/increase_highlight_before_downs.png",
+          "sha256": "d28342524dd49e27e6f4ecce6bf3ebb9e9672684431440f34edc2d01a0f4488f"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-iv-back-confirm",
+      "frames": 250,
+      "result_sha256": "5a690d132c4d7fda80fd0b71b340b9460370994241af6bd00c609c3d086ad6d8",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-back-confirm/input-script.json",
+        "sha256": "7608e680814c26aa698a1fae8fbe9798c484b18b930e804d7fd059c8af7052ac"
+      },
+      "state_in_sha256": "10f5638e9c731be69c191ed5af62eeacf3cc83144aecc14d914994390122e0e3",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-back-confirm/family-after-back.state",
+        "sha256": "e7305f50918acb56c3336b0644945aa0d572fbc5f6649281b5634367f7aa5b11"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-iv-back-confirm/system_ram.bin",
+        "sha256": "f36bb6e32ed44ca39b0f6fd5a7804eef932ca7bc08e40c96710e22a41a37b978"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-iv-back-confirm/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "7caa97f7db03aa12b393838669b0d18e2b96ea2b864ac3fcf37dfde2aa86bdb4"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-back-confirm/back_highlight_before_a.png",
+          "sha256": "9eca4d0c14bed9f64f0bc1b2f08d48eadef550ebd71715953a3f14b4c2b5eb5f"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-back-confirm/family_after_back.png",
+          "sha256": "78d401679b9f488552b03e8093d461a997928f4a04f065016326356b32f31606"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-iv-back-confirm/family_after_back_stable.png",
+          "sha256": "7bd656552935690bc4ec3851fa7abce5386759f4b229dd9607f636acb60c9311"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-family-exit",
+      "frames": 180,
+      "result_sha256": "62fa6f45ff1c1710afb2d4cea11b7672e36303cf864a5779c2cb2ada38a21c77",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-family-exit/input-script.json",
+        "sha256": "b1f9188ad1898a067de7e00889e02f30b5b370c9e07282873f2b58e91e4a4ff6"
+      },
+      "state_in_sha256": "e7305f50918acb56c3336b0644945aa0d572fbc5f6649281b5634367f7aa5b11",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-family-exit/exit-highlight.state",
+        "sha256": "3ead971bacab9dfceb108571b25cce8d3a69fbdbede20cf6856c15367b1dc3a5"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-family-exit/system_ram.bin",
+        "sha256": "d0c85f5e0fbfcb5203e34777a54a34267d39cb14447b0349e8fe8070b1af8221"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-family-exit/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "d836f409dbfa8341d50873ffdc9cbf4582f598fc5152231107007cd984d4aeac"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-family-exit/exit_highlight.png",
+          "sha256": "952b5cb4d1460f22321775f1369f72dee52fab6f7fe8e0f47d8fcb68ad93ee0d"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-family-exit/family_evs_before_downs.png",
+          "sha256": "cddad68eacefe1e36982e08ea457be2c21d688fc15911304dd36d654869ccba1"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    },
+    {
+      "name": "portable-stat-editor-menu-uimode-exit-field",
+      "frames": 800,
+      "result_sha256": "81fffefa54251f5899b94d30848ab6ed4e3674de9f70008d6fd9e3ec9ae964b4",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-exit-field/input-script.json",
+        "sha256": "f31261b45c48b811558fd31b85c9962594c3493619f239b431704af0bd047bc9"
+      },
+      "state_in_sha256": "3ead971bacab9dfceb108571b25cce8d3a69fbdbede20cf6856c15367b1dc3a5",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-exit-field/field-exit.state",
+        "sha256": "242a32361215ce7a35142f8511d5427af2c932196a0a12396b7c35f1d2a7ae18"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-uimode-exit-field/system_ram.bin",
+        "sha256": "6fbc76a65e0a476823c82e19596fbde6f5d9f4c09f0c44c0d922b1f98feec343"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-uimode-exit-field/battery-evidence/portable-stat-editor-menu-uimode-fix6a.dsv",
+        "sidecar_sha256": "4458a5823ddd035e9fcd68fe1d1ff0492dd9630c4f19ab88414d7757ba1d6579"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-exit-field/exit_highlight_before_a.png",
+          "sha256": "479ad59adc81b542dd14b879e8a154ea636b0c2c1c3be80f9510de4981f34451"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-exit-field/exit_transition.png",
+          "sha256": "f09b22a18ab34e6ac0547a7f8bf2100e3ccb550f663b208bbe62637b3e6a5218"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-exit-field/field_after_exit.png",
+          "sha256": "72ea263ee888c695bc45fa39881cf3cec551f204425bc0d6d5e385f60235f3ea"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-uimode-exit-field/field_after_exit_stable.png",
+          "sha256": "48a7dc0f808602d10118e3096b505a33d02f081ca22794e176f7d9c2b2d8a68a"
+        }
+      ],
+      "checks": {
+        "party_strict_cipher_boundary": true,
+        "party_array_sha256": "f155fa0c2fe9efd118ae3db21083e72d12d89c5c3c4b0de13bb45e492980906a",
+        "bag_save_array3_exact_dsv": true,
+        "save_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+        "key_item_118_quantity": 1,
+        "reserve_sections_exact_rom": {
+          "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      }
+    }
+  ],
+  "interpretation": {
+    "root_diagnosis": "STRVAR consumes arguments; the generator used the wrong macro form. Runtime integer buffers show Current=15 and Proposed=16, while text rendering fails.",
+    "acceptance_limit": "The UI flow and No/Exit path are verified. The visible preview remains failed; no Yes operation was run."
+  }
+}

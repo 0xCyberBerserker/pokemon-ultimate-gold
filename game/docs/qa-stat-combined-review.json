@@ -1,0 +1,24 @@
+{
+  "schema": "ultimate-gold-combined-selector-preview-root-review/v1",
+  "status": "PASS_BOUNDED_NATIVE_PREVIEW_ONLY",
+  "candidate_sha256": "938149619b2620d3b56871ad30f3526dcd3f8c748a726d02a311191f6d5a3634",
+  "audit_sha256": "bc56efb7ab13384a4a5b777972c44b38c89b1bc2139d41d30d2c37fe078b6e7c",
+  "auditor_sha256": "434dc81f6f844c7fd0daf9fd8a48dc548ba5e58918be23aa96597876c1613ef3",
+  "checks": {
+    "audit_reproduced_identically": true,
+    "native_runs": 7,
+    "native_emulation_repeated_by_root": false,
+    "cold_state_injection_rejected": true,
+    "declared_cheat_injection_rejected": true,
+    "cancel_outputs": [1, 65535, 255],
+    "slot0_outputs": [0, 16, 0],
+    "source_slot0_hp_iv": 15,
+    "strict_party_bag_battery_and_reserve_checks_reproduced": true,
+    "slot0_feedback_and_clean_field_captures_visually_reviewed": true
+  },
+  "limitations": [
+    "Only cancel and slot 0 on the exact combined candidate; no other slots.",
+    "Interrupted RAM records are accepted only at strict byte-exact native cipher boundaries, not labelled universally checksum-valid.",
+    "No setter/reset, saved editing, nature, portable tool or Alpha 2 integration was tested."
+  ]
+}

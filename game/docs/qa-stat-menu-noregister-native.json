@@ -1,0 +1,313 @@
+{
+  "schema": "portable-stat-editor-menu-noregister-smoke/v1",
+  "status": "PASS_BOUNDED_NATIVE_NO_WRITE_SMOKE",
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-noregister/portable-stat-editor-menu-noregister-fix6a.nds",
+    "sha256": "03d8711445a32868a64b5c34abbd094c2f4be7a0d40d09fafcc54460a257c620"
+  },
+  "runtime": {
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "cheats": []
+  },
+  "seed_dsv": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-kit-launch-native-alpha2-seeded-cold/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+    "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "counter": 10,
+    "crc16": 17186,
+    "unchanged_through_profile": true
+  },
+  "checks_by_run": {
+    "portable-stat-editor-menu-noregister-smoke-cold-01": {
+      "party_strict_cipher_boundary_match": true,
+      "party_count": 3,
+      "party_array_sha256": "0ba5391ba2f253862ab492750b767a260d6afded1dbdac9e73154a10bf22b15a",
+      "savearray3_matches_seed": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "reserve_sha256": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "portable-stat-editor-menu-noregister-smoke-bag-menu-01": {
+      "party_strict_cipher_boundary_match": true,
+      "party_count": 3,
+      "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "savearray3_matches_seed": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "reserve_sha256": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "portable-stat-editor-menu-noregister-smoke-use-party-family-01": {
+      "party_strict_cipher_boundary_match": true,
+      "party_count": 3,
+      "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "savearray3_matches_seed": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "reserve_sha256": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "portable-stat-editor-menu-noregister-smoke-exit-01": {
+      "party_strict_cipher_boundary_match": true,
+      "party_count": 3,
+      "party_array_sha256": "0f265d80e23efa82b621f1996b708a61d9524e1d7d6c9818212f8485c7df00e8",
+      "savearray3_matches_seed": true,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "key_item_118_quantity": 1,
+      "reserve_sha256": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    }
+  },
+  "ui_mode": {
+    "family_menu": {
+      "field_system": "0x022a0240",
+      "task": "0x023bcbdc",
+      "task_data": "0x02356c20",
+      "mode": 3,
+      "state": 1,
+      "mode_state_bytes_hex": "0301"
+    },
+    "after_exit": {
+      "field_system": "0x022a0240",
+      "task": "0x023bcbdc",
+      "task_data": "0x02356c20",
+      "mode": 0,
+      "state": 1,
+      "mode_state_bytes_hex": "0001"
+    }
+  },
+  "captures": {
+    "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/kit_context_final.png": {
+      "sha256": "1381fb7bda0ea437ffbf3a54255ba6b2c2e9bed8266d9fbcc52813a19d86992c",
+      "observation": "USE visible; REGISTER/DESELECT absent"
+    },
+    "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/key_items_open.png": {
+      "sha256": "912dee0291dcc2ad49b5b760d8b5790010aa9b2fc325860e8383bbfb5b9be7bb",
+      "observation": "Key Items pocket visibly contains Cheat Kit"
+    },
+    "qa/runs/portable-stat-editor-menu-noregister-smoke-use-party-family-01/party_selector_before_slot0.png": {
+      "sha256": "0940a5378dd8bb63eb35bd0eae481594e235ee9f1e603062986b1aab99d914dd",
+      "observation": "Party selector visible; slot 0 Clefairy highlighted"
+    },
+    "qa/runs/portable-stat-editor-menu-noregister-smoke-use-party-family-01/family_menu_final.png": {
+      "sha256": "09061ea1ec04ea674093406f2ecef263d35f67579e4461efc88af0c5182ed3d3",
+      "observation": "EV/IV/Exit family menu visible after selecting slot 0"
+    },
+    "qa/runs/portable-stat-editor-menu-noregister-smoke-exit-01/field_after_exit.png": {
+      "sha256": "b6b4d32fd171b76ab91310a494c900b5f057f20d4c15b03232a13eedc771b667",
+      "observation": "Returned to visible field after selecting Exit"
+    }
+  },
+  "runs": [
+    {
+      "name": "portable-stat-editor-menu-noregister-smoke-cold-01",
+      "frames": 5500,
+      "result_sha256": "9962705b79482a8ec6fd8342609ee79a49d84c0299c6f7a8cbf97b376041824d",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-cold-01/input-script.json",
+        "sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a"
+      },
+      "state_in_sha256": null,
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-cold-01/cold.state",
+        "sha256": "1cb99cf5c9bdea37422284e83ce7b5fe01c122622aa6c306ae7edc246425287b"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-cold-01/system_ram.bin",
+        "sha256": "7dddf0af17140f324417cf188d9e1d9af91d4642d63ad73e025c1c631aa8d49e"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-noregister-smoke-cold-01/battery-evidence/portable-stat-editor-menu-noregister-fix6a.dsv",
+        "sidecar_sha256": "a2b3504bf536152ebd7d32657354a9dd8552715a3650a2f4ffd1b61372bc3189"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-cold-01/cold_continue_accepted.png",
+          "sha256": "cb70e3582ac921da6aef2237cebd3971c538e8499328868e037b77814ff63e7f"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-cold-01/cold_continue_menu.png",
+          "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-cold-01/cold_final.png",
+          "sha256": "e0103c7fddf168139c8b1e3926a84bd536ad542d7afb015e50f74541bbcf5097"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-cold-01/cold_loaded_field.png",
+          "sha256": "bbc72b5a555c79b15533ef60d9ff5ca1de7ac52bc1143b9572bae2f3854f1290"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-cold-01/cold_loaded_identity.png",
+          "sha256": "ba681fd6039d33ae0148bc60e8049f687a67e1c101467d8fbafe87785be6b5a6"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-cold-01/cold_pre_title_inputs.png",
+          "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+        }
+      ]
+    },
+    {
+      "name": "portable-stat-editor-menu-noregister-smoke-bag-menu-01",
+      "frames": 1080,
+      "result_sha256": "035562372d00d5009b4ebc13f09428f9ed059f881d6ca466743de2d8d085879b",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/input-script.json",
+        "sha256": "f48b36fc4e3d0f85a89dabfc49cf0213067e798df57eb48101df0410b57e32e8"
+      },
+      "state_in_sha256": "1cb99cf5c9bdea37422284e83ce7b5fe01c122622aa6c306ae7edc246425287b",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/bag-menu.state",
+        "sha256": "e50156eaf449649c8b2d4f8704dffd7c0833f681a7b1512898bfd2971fa90b6c"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/system_ram.bin",
+        "sha256": "cd402a1fc067b731063268155c914c17515a08ef0e4f0628a6eed8c56a34c118"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/battery-evidence/portable-stat-editor-menu-noregister-fix6a.dsv",
+        "sidecar_sha256": "f58e4dbb15868e9ba23f7d14b29efe035773493b4f32b58da108ec2736b2fdb8"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/bag_open.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/bag_stable.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/field_pre_touch.png",
+          "sha256": "858acdda71932ff4d9daca5baba722cbe876cbd63862e54cef72cfb730f61c90"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/key_items_open.png",
+          "sha256": "912dee0291dcc2ad49b5b760d8b5790010aa9b2fc325860e8383bbfb5b9be7bb"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/kit_context.png",
+          "sha256": "1381fb7bda0ea437ffbf3a54255ba6b2c2e9bed8266d9fbcc52813a19d86992c"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/kit_context_final.png",
+          "sha256": "1381fb7bda0ea437ffbf3a54255ba6b2c2e9bed8266d9fbcc52813a19d86992c"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-bag-menu-01/kit_selected.png",
+          "sha256": "26db0517b13732282a6446579a2122cfe1d603f9598aa8dc80031f0d5133b5cd"
+        }
+      ]
+    },
+    {
+      "name": "portable-stat-editor-menu-noregister-smoke-use-party-family-01",
+      "frames": 1100,
+      "result_sha256": "33666c4eb0742954f45e396b568b55d55c5f6fdaa298a010984153f04699629a",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-use-party-family-01/input-script.json",
+        "sha256": "d86f15750fde48556e2ba5bb5e06fa6ed9bf3447240adf2acd6959df7a55b2f2"
+      },
+      "state_in_sha256": "e50156eaf449649c8b2d4f8704dffd7c0833f681a7b1512898bfd2971fa90b6c",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-use-party-family-01/use-party-family.state",
+        "sha256": "40381b08c6e20f0ac438c420ee88d65a3da246dca8e3d8bcbf9c3bad0a1b9880"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-use-party-family-01/system_ram.bin",
+        "sha256": "d44d38ab5e957d5e03627519e9e97faa7dd2205083f8e5bceaee9c98eb715d11"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-noregister-smoke-use-party-family-01/battery-evidence/portable-stat-editor-menu-noregister-fix6a.dsv",
+        "sidecar_sha256": "e33b4988b427aec11b5c8ab862724322d611b7941059e7f9cd32fc2df7dcee97"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-use-party-family-01/before_use.png",
+          "sha256": "33e7be521ffc8b804e0fd854b8967b3d9da6dcb58b47caec8714d6d55a19c590"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-use-party-family-01/family_menu.png",
+          "sha256": "a2b5672f7304cbd3c91717dbdfbd5ddfa26f2a0c312ca339d171328be26b9e7d"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-use-party-family-01/family_menu_final.png",
+          "sha256": "09061ea1ec04ea674093406f2ecef263d35f67579e4461efc88af0c5182ed3d3"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-use-party-family-01/party_selector_before_slot0.png",
+          "sha256": "0940a5378dd8bb63eb35bd0eae481594e235ee9f1e603062986b1aab99d914dd"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-use-party-family-01/party_slot0_prompt.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        }
+      ]
+    },
+    {
+      "name": "portable-stat-editor-menu-noregister-smoke-exit-01",
+      "frames": 1100,
+      "result_sha256": "7011a965663ba061938c964273789517cf57264bdd28b194292fc70110c36a6b",
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-exit-01/input-script.json",
+        "sha256": "f85c27bc978cb838d27e89e656a0644bba208f65e52cffc4e378e79c8e4eefc6"
+      },
+      "state_in_sha256": "40381b08c6e20f0ac438c420ee88d65a3da246dca8e3d8bcbf9c3bad0a1b9880",
+      "state_out": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-exit-01/exit.state",
+        "sha256": "992ab4c363fbe0a224103a7588fbd94d615f51e1895c5814c4c7628390bc7e49"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-exit-01/system_ram.bin",
+        "sha256": "0c8b68de053b59d9c709b9158355e498be87d26bc9b73e5910c431080ea399f1"
+      },
+      "battery_dsv": {
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "snapshot_path": "qa/runs/portable-stat-editor-menu-noregister-smoke-exit-01/battery-evidence/portable-stat-editor-menu-noregister-fix6a.dsv",
+        "sidecar_sha256": "43568d66a2455d0281a11701708418322926959ab2800d218cc4db256ed6603e"
+      },
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-exit-01/family_ev_highlight_before_exit.png",
+          "sha256": "76c0959a870d863630253265ec0cdd50b864138cbc86373b95df97a1ccb5ec89"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-exit-01/family_exit_highlight.png",
+          "sha256": "fead189e11428060b19fc876547c443f061f38a68b1de80be41b4ecd4568755d"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-exit-01/family_iv_highlight.png",
+          "sha256": "afa0dd13b3d16ccd155bdc7cad53a327d6ea4aabd3d94d7520853fbcbc86f2af"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-exit-01/field_after_exit.png",
+          "sha256": "b6b4d32fd171b76ab91310a494c900b5f057f20d4c15b03232a13eedc771b667"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-noregister-smoke-exit-01/field_final.png",
+          "sha256": "a7635768768d9302a25f5b7cfea26733b389dcc31cc0023cf578513d8de9534b"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "This is a bounded no-write smoke only; EV/IV actions, save/cold persistence, and broader regression were not tested.",
+    "REGISTER/DESELECT absence is manually observed in the captured context-menu image; this report does not automate OCR.",
+    "Runner completion is not whole-game acceptance."
+  ]
+}

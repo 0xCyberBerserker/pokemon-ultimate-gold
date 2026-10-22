@@ -1,0 +1,404 @@
+{
+  "schema": "ultimate-gold-evolution-shop-qa/v1",
+  "status": "PASS_PURCHASE_AND_COLD_RELOAD",
+  "target_sha256": "231a0a2fe3f873d0d369f6adbde6e6f69abe74e6d4bf9642fe1b1df8c8a7e514",
+  "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+  "runner_sha256": "21eb81f4d8fc6c888db31d044e180a99bfc5786ccc2f91f76118af1b45ad3bc8",
+  "assertions": 89,
+  "checks": [
+    {
+      "check": "candidate file hash",
+      "passed": true
+    },
+    {
+      "check": "frozen runner file hash",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: completed",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: exact ROM",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: exact core",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: frozen runner",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: no active fixture codes",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: complete RAM",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: RAM hash",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: canonical Bag initialized",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: relocated stock pointer",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: complete 34-item stock and terminator",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: lower guard",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: upper guard",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: HM canary",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: shop canary",
+      "passed": true
+    },
+    {
+      "check": "shop-evolution-select: free region preserved",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: completed",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: exact ROM",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: exact core",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: frozen runner",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: no active fixture codes",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: complete RAM",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: RAM hash",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: canonical Bag initialized",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: relocated stock pointer",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: complete 34-item stock and terminator",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: lower guard",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: upper guard",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: HM canary",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: shop canary",
+      "passed": true
+    },
+    {
+      "check": "shop-moon-stone-purchase: free region preserved",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: completed",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: exact ROM",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: exact core",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: frozen runner",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: no active fixture codes",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: complete RAM",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: RAM hash",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: canonical Bag initialized",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: relocated stock pointer",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: complete 34-item stock and terminator",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: lower guard",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: upper guard",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: HM canary",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: shop canary",
+      "passed": true
+    },
+    {
+      "check": "shop-last-item-purchase: free region preserved",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: completed",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: exact ROM",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: exact core",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: frozen runner",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: no active fixture codes",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: complete RAM",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: RAM hash",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: canonical Bag initialized",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: relocated stock pointer",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: complete 34-item stock and terminator",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: lower guard",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: upper guard",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: HM canary",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: shop canary",
+      "passed": true
+    },
+    {
+      "check": "shop-native-save-confirmed: free region preserved",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: completed",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: exact ROM",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: exact core",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: frozen runner",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: no active fixture codes",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: complete RAM",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: RAM hash",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: canonical Bag initialized",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: relocated stock pointer",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: complete 34-item stock and terminator",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: lower guard",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: upper guard",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: HM canary",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: shop canary",
+      "passed": true
+    },
+    {
+      "check": "shop-purchase-cold-reload-confirmed: free region preserved",
+      "passed": true
+    },
+    {
+      "check": "Moon Stone: only intended item incremented",
+      "passed": true
+    },
+    {
+      "check": "Moon Stone: exact 2100 payment",
+      "passed": true
+    },
+    {
+      "check": "Covenant Orb: only intended item incremented",
+      "passed": true
+    },
+    {
+      "check": "Covenant Orb: exact 3500 payment",
+      "passed": true
+    },
+    {
+      "check": "all pockets persist through native save and cold restart",
+      "passed": true
+    },
+    {
+      "check": "money persists through cold restart",
+      "passed": true
+    },
+    {
+      "check": "cold restart has no emulator state input",
+      "passed": true
+    },
+    {
+      "check": "native shop map restored",
+      "passed": true
+    },
+    {
+      "check": "cold process retains saved battery hash",
+      "passed": true
+    },
+    {
+      "check": "native save changed synthetic input battery",
+      "passed": true
+    },
+    {
+      "check": "Rocket key items retained",
+      "passed": true
+    },
+    {
+      "check": "source battery unchanged",
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "name": "shop-evolution-select",
+      "result_sha256": "e0163fe0538965fe3edf96abcab45d85f64d996ed40a6023a70d4a6040ebe1ce"
+    },
+    {
+      "name": "shop-moon-stone-purchase",
+      "result_sha256": "09b91850f19553d64585708418f3f5f206cee46c87cdfc32ca262083d944b95e"
+    },
+    {
+      "name": "shop-last-item-purchase",
+      "result_sha256": "29294d47401efe55132de4beb5df3f9f985b7cbb5defeb9d537427a2e4bfc332"
+    },
+    {
+      "name": "shop-native-save-confirmed",
+      "result_sha256": "6d36e06583230633f3638c7f0591369ce7c0128b1a2dbdab83a7aaeb57f49745"
+    },
+    {
+      "name": "shop-purchase-cold-reload-confirmed",
+      "result_sha256": "a86f1d43029c4a024dc728793478067a09209546a8c9a2df403de3b8d68a2bc4"
+    }
+  ],
+  "purchased_items": [
+    {
+      "id": 81,
+      "price": 2100
+    },
+    {
+      "id": 467,
+      "price": 3500
+    }
+  ],
+  "cold_battery_sha256": "11b3a2c3ba27312366bc4788c40dacab5e10980e341b1a41332123a6c617cf8b",
+  "limitations": [
+    "Synthetic location/money fixture; normal story access was not tested.",
+    "Two purchases tested; not every item or evolution.",
+    "Shop/kit candidate only; owned-HM combined candidate is not accepted by this report."
+  ]
+}

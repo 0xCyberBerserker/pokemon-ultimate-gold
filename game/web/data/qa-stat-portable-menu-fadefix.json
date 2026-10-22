@@ -1,0 +1,64 @@
+{
+  "schema": "portable-stat-editor-menu-fadefix-correction/v1",
+  "cause": "The third FadeScreen u16 mode operand was reversed: retail screen_fade.h defines 0 as OUT and 1 as IN.",
+  "red_green": {
+    "red": "Before the generator fix, qa/test_stat_editor_menu_script.py failed at test_static_contract with AssertionError: selector lifecycle must fade OUT before Party and IN after it.",
+    "green": "After changing only the two FadeScreen operands, python qa/test_stat_editor_menu_script.py passed.",
+    "test_sha256": "7898a57a20ed89d809a8ab6360ebab00ae6cad15cdd7da2b0287ffbcefd25311",
+    "generator_sha256": "70043238f80b2fd1e74e5824e4af5cf876cfb439d637a67c05bd52b9eee13226",
+    "generated_script_sha256": "0653b9fd24536f704c9b3665345a43c48085dad1df5ae45442b6e866e9f53207",
+    "generated_script_bytes": 17590,
+    "runtime": "NOT_TESTED"
+  },
+  "builder": {
+    "path": "qa/portable_stat_editor_menu_fadefix_build.py",
+    "sha256": "f973607216fafc8e549904d6c350c45130978078594ea52afb59d981c06a7f00",
+    "status": "STATIC_BUILD_PASS_RUNTIME_NOT_TESTED",
+    "build_json_sha256": "7afc8865496ed8fd24de6a3a994e3577cf54115d14f3f110140bf1ed3a92f5b4"
+  },
+  "preimages_025": {
+    "directory": "experiments/eviv/portable-stat-editor-menu-fadefix-preimages/025",
+    "files": {
+      "stat_editor_menu_script.py": "3b2478709c079806abf18319951adcb4e63164dd66950dbdf03b502f0ded72b3",
+      "test_stat_editor_menu_script.py": "56265dc74c9e7e33ed32f490bd964272ab7a7ff2951fce8c680f9bcb2a5c5477",
+      "portable_stat_editor_menu_build.py": "1da3c72e6a8dc6130edad8d5665246be7351e38a16ee94531b8151c2c292a74c",
+      "build-025.json": "955733fdef6ad07b6331094653e68181aac47c0c916c20f51bb0ba587ae0e3a7",
+      "portable-stat-editor-menu-025.nds": "025429759de1b688b6521839dbf44671e03bf54b9376ba34cb598d8da1265885"
+    }
+  },
+  "candidate": {
+    "path": "experiments/eviv/portable-stat-editor-menu-fadefix/portable-stat-editor-menu-fadefix-fix6a.nds",
+    "sha256": "2abb1c8cf87540aad70d3c7c13517bee5a159ef3e38af11a1440030b276317ed",
+    "bytes": 127073056
+  },
+  "diff_from_025": {
+    "previous_rom_sha256": "025429759de1b688b6521839dbf44671e03bf54b9376ba34cb598d8da1265885",
+    "equal_rom_size": true,
+    "raw_changed_bytes": 2,
+    "raw_offsets_hex": [
+      "0x0108E9A3",
+      "0x0108E9B7"
+    ],
+    "old_and_new_byte_values": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "unpacked_changed_nds_file": "a/0/1/2",
+    "changed_narc_member": 3,
+    "global_script_id": 2072,
+    "script_payload_bytes": 17590,
+    "changed_script_payload_offsets": [
+      8,
+      28
+    ],
+    "only_two_fade_mode_u16_operands_changed": true,
+    "arm9_arm7_text_metadata_and_all_other_narc_members_byte_exact": true
+  },
+  "argot": "Not run: no .argot/scorer-config.json was found in this non-git worktree."
+}

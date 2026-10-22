@@ -1,0 +1,1041 @@
+{
+  "schema": "stat-editor-reset-persistence-acceptance/v1",
+  "status": "PASS_NATIVE_SAVE_AND_FRESH_PROCESS_COLD_RELOAD_BOUNDED; REPEAT_COUNT_NOT_PROVEN",
+  "summary_en": "Native in-game saves persisted the tested ResetEV and ResetIV party results through fresh-process cold starts on each exact candidate. Party records, Bag, DSV CRC/counters, and reserved helper ranges were checked against frozen evidence. A zero result cannot reveal whether an idempotent reset ran more than once.",
+  "summary_es": "Los guardados nativos conservaron los resultados probados de ResetEV y ResetIV tras arranques fríos en procesos nuevos y en sus candidatas exactas. Se contrastaron party, Bolsa, CRC/counters del DSV y rangos reservados con evidencia congelada. Un resultado cero no permite contar cuántas veces se ejecutó una operación idempotente.",
+  "runner": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_fix6a.py",
+    "sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26"
+  },
+  "core": {
+    "path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+  },
+  "operations": [
+    {
+      "operation": "reset-ev",
+      "candidate_rom": {
+        "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/stat-editor-confirm-probes-fix1/reset-ev/reset-ev.nds",
+        "sha256": "5ec30de05b29e817b766d37be4cc7fbe2dded9e555259da7ca74539e4fb33e87"
+      },
+      "source_dsv": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-ev-fixture/reset-ev-fixture.dsv",
+        "sha256": "e4767fc950bd991f1889f118b03e180c4f999d27432b6a632dd5bac7f9690d42",
+        "selected_main": {
+          "base": 262144,
+          "counter": 9,
+          "crc16": 39757
+        }
+      },
+      "parent_yes_ack": {
+        "run": "stat-editor-reset-native-reset-ev-yes-ack-native",
+        "result_sha256": "7ad6c8db384518069e0c232c0177b8f1136538994868c7b9bb9baf4ff6f74693",
+        "runner_pid": 4174050,
+        "state_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-native-reset-ev-yes-ack-native/field.state",
+        "state_sha256": "3692547db3969609f27ddd7eb3106240f866cd3e003fcdf8a2a38b854def21c0",
+        "source_battery_sha256": "e4767fc950bd991f1889f118b03e180c4f999d27432b6a632dd5bac7f9690d42"
+      },
+      "native_save": {
+        "run": "stat-editor-reset-persist-ev-save",
+        "result_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-save/result.json",
+        "result_sha256": "367a973bd7bffff3e123552a55039b81e77d8b3037e77172084e9a0be216bde3",
+        "runner_pid": 97337,
+        "frames": 6800,
+        "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-save/input-script.json",
+        "input_script_sha256": "72c90871ed1864f47dccfcf22d556eb40b608bbbddafe7d5b2369cb9f4edbfb1",
+        "input_events": [
+          {
+            "frame": 60,
+            "touch": [
+              124,
+              270
+            ],
+            "frames": 5
+          },
+          {
+            "frame": 500,
+            "touch": [
+              232,
+              288
+            ],
+            "frames": 5
+          },
+          {
+            "frame": 1000,
+            "touch": [
+              232,
+              288
+            ],
+            "frames": 5
+          }
+        ],
+        "navigation_state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-native-reset-ev-yes-ack-native/field.state",
+        "navigation_state_input_sha256": "3692547db3969609f27ddd7eb3106240f866cd3e003fcdf8a2a38b854def21c0",
+        "navigation_state_output_sha256": "492f3e94723b0039b9e76aa97be5278c2fdda578244db3cb1bdd21a5b7ec33e7",
+        "navigation_state_output_file_used_for_lineage": false,
+        "system_ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-save/system_ram.bin",
+        "system_ram_sha256": "d03a23b38ad1353fe4a5850d2f77bf5f1f1ea8194bd6abeafc16371d2b27acd6",
+        "battery_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-save/saves/reset-ev.dsv",
+        "battery_dsv_sha256": "5af1836e426ab360d7f8c3a350c871994a681ba72fef1c13464cf528bbad2edf",
+        "battery_evidence_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-save/battery-evidence.json",
+        "battery_evidence_sha256": "a1cbfdf0a4bc06ed298bbd99d889a4a697d96560383894704368e776ea14ddb0",
+        "cheats": [],
+        "cold_root_has_no_navigation_state_input": false
+      },
+      "save_frame_bound_note": "post_save_idle was requested at frame 6800, equal to the exclusive run length; that PNG does not exist and is not used. The frame-6500 field return and DSV evidence are used.",
+      "saved_dsv": {
+        "sha256": "5af1836e426ab360d7f8c3a350c871994a681ba72fef1c13464cf528bbad2edf",
+        "selected_main": {
+          "base": 0,
+          "counter": 10,
+          "crc16": 40111
+        },
+        "party_exact_operation_result": true,
+        "operation_result_proof": {
+          "species_id": 35,
+          "pid": "0xe30363e2",
+          "evs_before": [
+            1,
+            2,
+            3,
+            1,
+            2,
+            3
+          ],
+          "evs_after": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "record_exactly_transformed": true,
+          "floor_ev_div_4_before_after": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "derived_party_stats_unchanged_in_fixture": true
+        },
+        "bag_unchanged_from_source": true,
+        "raw_source_to_saved_diff": {
+          "changed_byte_count": 168,
+          "changed_range_count": 25,
+          "changed_ranges_hex_including_both_ends": [
+            [
+              "0x24",
+              "0x24"
+            ],
+            [
+              "0x28",
+              "0x28"
+            ],
+            [
+              "0x2c",
+              "0x2c"
+            ],
+            [
+              "0x88",
+              "0x89"
+            ],
+            [
+              "0x9e",
+              "0x11f"
+            ],
+            [
+              "0x1244",
+              "0x1244"
+            ],
+            [
+              "0x2355",
+              "0x2356"
+            ],
+            [
+              "0x246a",
+              "0x246a"
+            ],
+            [
+              "0x2488",
+              "0x2488"
+            ],
+            [
+              "0x2495",
+              "0x2495"
+            ],
+            [
+              "0x24ba",
+              "0x24ba"
+            ],
+            [
+              "0x6909",
+              "0x690a"
+            ],
+            [
+              "0xf618",
+              "0xf618"
+            ],
+            [
+              "0xf626",
+              "0xf627"
+            ],
+            [
+              "0x21a00",
+              "0x21a00"
+            ],
+            [
+              "0x2f014",
+              "0x2f014"
+            ],
+            [
+              "0x2f01e",
+              "0x2f01f"
+            ],
+            [
+              "0x30008",
+              "0x30008"
+            ],
+            [
+              "0x3000c",
+              "0x3000d"
+            ],
+            [
+              "0x301c0",
+              "0x301c3"
+            ],
+            [
+              "0x30208",
+              "0x30208"
+            ],
+            [
+              "0x3020c",
+              "0x3020d"
+            ],
+            [
+              "0x303c0",
+              "0x303c3"
+            ],
+            [
+              "0x6f014",
+              "0x6f014"
+            ],
+            [
+              "0x6f01e",
+              "0x6f01f"
+            ]
+          ],
+          "non_party_changes_attribution": "UNATTRIBUTED; no field mapping inferred"
+        }
+      },
+      "fresh_process_cold_reload": {
+        "run": "stat-editor-reset-persist-ev-cold-corrected",
+        "result_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold-corrected/result.json",
+        "result_sha256": "5118ec90a01afa80ba34ebbc1f488660491269ee66c63bc24eea867ebaf97207",
+        "runner_pid": 107007,
+        "frames": 5500,
+        "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold-corrected/input-script.json",
+        "input_script_sha256": "f5a8d8113ab01dd22e00bbfc7b78e7be9604804d4f5cd8aad1d7ba1d4bebcda4",
+        "input_events": [
+          {
+            "frame": 180,
+            "button": "START",
+            "frames": 3
+          },
+          {
+            "frame": 3600,
+            "button": "A",
+            "frames": 3
+          },
+          {
+            "frame": 3900,
+            "button": "A",
+            "frames": 3
+          }
+        ],
+        "navigation_state_in": null,
+        "navigation_state_input_sha256": null,
+        "navigation_state_output_sha256": "00254ce9a42fdd883cfe940e1095b4f61ac001898d8b6fff06b2c1915705e84e",
+        "navigation_state_output_file_used_for_lineage": false,
+        "system_ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold-corrected/system_ram.bin",
+        "system_ram_sha256": "f0fb86aebedc415b8f1672e29eea2e3719550eebfc907cd587455bcd3c404cee",
+        "battery_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold-corrected/saves/reset-ev.dsv",
+        "battery_dsv_sha256": "5af1836e426ab360d7f8c3a350c871994a681ba72fef1c13464cf528bbad2edf",
+        "battery_evidence_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold-corrected/battery-evidence.json",
+        "battery_evidence_sha256": "794fd871a67d5595e6a13dbbf53763a4366b71c9ccb33f2a9af509cc01b0f08f",
+        "cheats": [],
+        "cold_root_has_no_navigation_state_input": true,
+        "saved_profile_bytes_unchanged": true,
+        "party_ram_matches_saved_dsv": true,
+        "bag_ram_matches_saved_dsv": true,
+        "script_context_inspection": {
+          "available": false,
+          "reason": "live FieldSystem task manager pointer is outside MainRAM"
+        },
+        "no_reset_prompt_visible_at_field_checkpoints": true,
+        "visual_checkpoint_observations": [
+          {
+            "frame": 3500,
+            "capture": "touch_start",
+            "observation": "TOUCH TO START is visible."
+          },
+          {
+            "frame": 3800,
+            "capture": "continue_menu",
+            "observation": "Continue is selected in the title menu."
+          },
+          {
+            "frame": 4300,
+            "capture": "field_loaded",
+            "observation": "New Bark Town field and field menu are visible."
+          },
+          {
+            "frame": 4900,
+            "capture": "field_stable",
+            "observation": "The same field menu remains visible; no reset prompt is shown."
+          }
+        ],
+        "cold_frame_bound_note": "cold_final was requested at frame 5500, equal to the exclusive run length; no screenshot exists. RAM is captured after the 5500-frame runner loop, and the last in-range field screenshot is frame 4900.",
+        "repeat_operation_count": "NOT_PROVEN_BY_IDEMPOTENT_ZERO_RESULT; no A events occur after frame 3900, and the field is visible at frames 4300 and 4900.",
+        "location_record_observed": [
+          60,
+          -1,
+          684,
+          409,
+          0
+        ]
+      },
+      "ram_verification": {
+        "yes_ack": {
+          "party_array_sha256": "b2c4f079e35aae106519b4c5ec7bf48452c1a685d5d8457fd908545f74a740c9",
+          "expected_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "records_exact_or_verified_native_cipher_boundary": [
+            {
+              "slot": 0,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 1,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 2,
+              "mode": "verified_two_byte_cipher_boundary",
+              "box": {
+                "mode": "plain_suffix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_suffix",
+                "split_bytes": 54
+              },
+              "decoded_checksum_valid": false,
+              "checksum": 46459
+            }
+          ],
+          "bag_array_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_matches_saved_dsv": true,
+          "task_manager": 0,
+          "location_record": [
+            60,
+            -1,
+            684,
+            409,
+            2
+          ]
+        },
+        "native_save": {
+          "party_array_sha256": "b2c4f079e35aae106519b4c5ec7bf48452c1a685d5d8457fd908545f74a740c9",
+          "expected_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "records_exact_or_verified_native_cipher_boundary": [
+            {
+              "slot": 0,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 1,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 2,
+              "mode": "verified_two_byte_cipher_boundary",
+              "box": {
+                "mode": "plain_suffix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_suffix",
+                "split_bytes": 54
+              },
+              "decoded_checksum_valid": false,
+              "checksum": 46459
+            }
+          ],
+          "bag_array_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_matches_saved_dsv": true,
+          "task_manager": 0,
+          "location_record": [
+            60,
+            -1,
+            684,
+            409,
+            0
+          ]
+        },
+        "cold_reload": {
+          "party_array_sha256": "f23beea918e1d524c003b8eb36df65f9be9db1eb39db9b8163988531e8de2692",
+          "expected_party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+          "records_exact_or_verified_native_cipher_boundary": [
+            {
+              "slot": 0,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 1,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 2,
+              "mode": "verified_two_byte_cipher_boundary",
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 118
+              },
+              "party_tail": {
+                "mode": "plain_suffix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": false,
+              "checksum": 46459
+            }
+          ],
+          "bag_array_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_matches_saved_dsv": true,
+          "task_manager": 0,
+          "location_record": [
+            60,
+            -1,
+            684,
+            409,
+            0
+          ]
+        }
+      },
+      "reserve_ranges_sha256": {
+        "yes_ack": {
+          "0x23d5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x23d6000": "dd1864226b12c851477324aedab8cae1b3a6bd493920c7d56987882735169b2c",
+          "0x23d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        },
+        "native_save": {
+          "0x23d5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x23d6000": "dd1864226b12c851477324aedab8cae1b3a6bd493920c7d56987882735169b2c",
+          "0x23d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        },
+        "cold_reload": {
+          "0x23d5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x23d6000": "dd1864226b12c851477324aedab8cae1b3a6bd493920c7d56987882735169b2c",
+          "0x23d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      },
+      "captures": {
+        "save": {
+          "save_prompt": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-save/save_prompt.png",
+            "sha256": "871ca3cbed7049a8e38032a8f3a3b9050d39924396866e8982cd87188ec9078f"
+          },
+          "overwrite_prompt": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-save/overwrite_prompt.png",
+            "sha256": "6f1529d3a09434ae001282e86e796846a33dc84b84206d870b5a80ff3d1a6360"
+          },
+          "save_return": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-save/save_complete.png",
+            "sha256": "810a809900e53f3af74a372875deae1d49cf8d5d16cda18e7457100f4dc75b73"
+          }
+        },
+        "cold": {
+          "touch_start": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold-corrected/touch_start_visible.png",
+            "sha256": "c5c10d9ed347fd04ef35a0b0de3bb8ff781da1e74f49196dba33b596c1eb1b4f"
+          },
+          "continue_menu": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold-corrected/after_title_start.png",
+            "sha256": "a5fbc87549ba38d70b0624442aa8272dc187837c6cbf6fe6423ef4adec633ecd"
+          },
+          "continue_checkpoint": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold-corrected/continue_selection.png",
+            "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+          },
+          "field_loaded": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold-corrected/field_loaded.png",
+            "sha256": "c4df900fdf36ddd7f8789bd7ce4cc4fcce6894ca27f933240c7f06d67f74e70e"
+          },
+          "field_stable": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold-corrected/field_stable.png",
+            "sha256": "ebcaac5383c4fa0d46053b9334ea19361a8dbd8795d29d9b54b706a4c2113d23"
+          }
+        }
+      },
+      "excluded_first_cold_attempt": {
+        "run": "stat-editor-reset-persist-ev-cold",
+        "result_sha256": "3585c1b44e79574f0849d70027b60010bf86c8945f48eba9abf2198904f2fa63",
+        "input_script_sha256": "f635c1ea6eadb9b8428b7f4b1b09483b8e87916564863b29cf68683bcf168ae2",
+        "screenshots": {
+          "splash": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold/cold_checkpoint_2800.png",
+            "sha256": "34cb1d037a79a3e178ed26e82425bff82083d5f7553f12bf1fba32bf3214f2d3"
+          },
+          "touch_start": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold/cold_checkpoint_3500.png",
+            "sha256": "b83897835b6f48b64f98ccdbae19bb914e566a5afc5c42ba09c702e10ce8420a"
+          },
+          "still_touch_start": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-ev-cold/cold_checkpoint_4300.png",
+            "sha256": "cdfb1632c77f82d4bb8958c023c8cfb655f91ac3c1e32773bb9105941edbde8f"
+          }
+        },
+        "excluded_reason": "The only A was sent at frame 2200 before the title prompt; later captures still showed TOUCH TO START. It did not reach Continue or the saved field.",
+        "state_input_was_null": true
+      },
+      "scope": "Native Yes-ACK state -> in-game save -> fresh process using the saved DSV. One tested Clefairy per operation; no broader menu, history, nature, or gameplay acceptance."
+    },
+    {
+      "operation": "reset-iv",
+      "candidate_rom": {
+        "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/stat-editor-confirm-probes-fix1/reset-iv/reset-iv.nds",
+        "sha256": "ecf95cbd0f7d10158c1bfc4d089b4bf7da96b5f315a47d9bcec5791578af0615"
+      },
+      "source_dsv": {
+        "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/dispatch-preview-fixture/dispatch-preview-fix6a.dsv",
+        "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+        "selected_main": {
+          "base": 262144,
+          "counter": 9,
+          "crc16": 53760
+        }
+      },
+      "parent_yes_ack": {
+        "run": "stat-editor-reset-native-reset-iv-yes-ack-v2",
+        "result_sha256": "52dd68bef11edeb1913e8ee05aa7c6d7a2e7804d2aa00390e88168ce457a394b",
+        "runner_pid": 4189931,
+        "state_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-native-reset-iv-yes-ack-v2/field_after_ack.state",
+        "state_sha256": "462b07fd09f69796991977ad8d96ca19e968d873b1c9ff6184e721be40aaca72",
+        "source_battery_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+      },
+      "native_save": {
+        "run": "stat-editor-reset-persist-iv-save",
+        "result_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-save/result.json",
+        "result_sha256": "0bcc1711a639834200784695c4fe97bd5ad86b5b4feca92b008f283aaba2eb05",
+        "runner_pid": 110451,
+        "frames": 6800,
+        "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-save/input-script.json",
+        "input_script_sha256": "60d2a9aed2359e5a36eeb31c797d6220ddf4c7000886a44cabb69e65aac19a59",
+        "input_events": [
+          {
+            "frame": 60,
+            "touch": [
+              124,
+              270
+            ],
+            "frames": 5
+          },
+          {
+            "frame": 500,
+            "touch": [
+              232,
+              288
+            ],
+            "frames": 5
+          },
+          {
+            "frame": 1000,
+            "touch": [
+              232,
+              288
+            ],
+            "frames": 5
+          }
+        ],
+        "navigation_state_in": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-native-reset-iv-yes-ack-v2/field_after_ack.state",
+        "navigation_state_input_sha256": "462b07fd09f69796991977ad8d96ca19e968d873b1c9ff6184e721be40aaca72",
+        "navigation_state_output_sha256": "a6fd3332b001435e31676ca1a3406da83d06b04bedfeecd8e9a053cc6b230eda",
+        "navigation_state_output_file_used_for_lineage": false,
+        "system_ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-save/system_ram.bin",
+        "system_ram_sha256": "de58c2218c9adc8066f9b2573477fe2472168c35590da29c5f7ef11b925643db",
+        "battery_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-save/saves/reset-iv.dsv",
+        "battery_dsv_sha256": "b4cce8f7f61e588c679a88b7fb7bba347a5233f0c7b35bb862dbae77fde1e673",
+        "battery_evidence_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-save/battery-evidence.json",
+        "battery_evidence_sha256": "154ed6eea8ff997b85051676998df0ea94133df3564e1c1ae4faeb89d25a5ad2",
+        "cheats": [],
+        "cold_root_has_no_navigation_state_input": false
+      },
+      "save_frame_bound_note": "post_save_idle was requested at frame 6800, equal to the exclusive run length; that PNG does not exist and is not used. The frame-6500 field return and DSV evidence are used.",
+      "saved_dsv": {
+        "sha256": "b4cce8f7f61e588c679a88b7fb7bba347a5233f0c7b35bb862dbae77fde1e673",
+        "selected_main": {
+          "base": 0,
+          "counter": 10,
+          "crc16": 28697
+        },
+        "party_exact_operation_result": true,
+        "operation_result_proof": {
+          "species_id": 35,
+          "pid": "0xe30363e2",
+          "nature_id": 10,
+          "nature_name": "Timid",
+          "level": 5,
+          "personal_narc_entry_sha256": "26be90f8cc7d05a63c384d94cb1d45f94025fd76831a7109a07136bee79eeefb",
+          "personal_base_stats_hp_atk_def_speed_spatk_spdef": [
+            70,
+            45,
+            48,
+            35,
+            60,
+            65
+          ],
+          "evs_before_after": {
+            "before": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "after": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "ivs_before_after": {
+            "before": [
+              15,
+              3,
+              10,
+              31,
+              21,
+              2
+            ],
+            "after": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "party_stats_before": [
+            22,
+            22,
+            8,
+            10,
+            11,
+            12,
+            11
+          ],
+          "party_stats_after_expected": [
+            22,
+            22,
+            8,
+            9,
+            8,
+            11,
+            11
+          ],
+          "derived_formula": "floor((2*base+IV+floor(EV/4))*level/100); HP adds level+10, other stats add 5; Timid nature applies floor(9/10) Attack and floor(11/10) Speed",
+          "hp_policy_observed": "current HP remained 22; calculated max HP remained 22"
+        },
+        "bag_unchanged_from_source": true,
+        "raw_source_to_saved_diff": {
+          "changed_byte_count": 170,
+          "changed_range_count": 29,
+          "changed_ranges_hex_including_both_ends": [
+            [
+              "0x24",
+              "0x24"
+            ],
+            [
+              "0x28",
+              "0x28"
+            ],
+            [
+              "0x2c",
+              "0x2c"
+            ],
+            [
+              "0x88",
+              "0x89"
+            ],
+            [
+              "0x9e",
+              "0xa3"
+            ],
+            [
+              "0xa5",
+              "0x11f"
+            ],
+            [
+              "0x12c",
+              "0x12c"
+            ],
+            [
+              "0x12e",
+              "0x12e"
+            ],
+            [
+              "0x130",
+              "0x130"
+            ],
+            [
+              "0x1244",
+              "0x1244"
+            ],
+            [
+              "0x2355",
+              "0x2356"
+            ],
+            [
+              "0x246a",
+              "0x246a"
+            ],
+            [
+              "0x2488",
+              "0x2488"
+            ],
+            [
+              "0x2495",
+              "0x2495"
+            ],
+            [
+              "0x24ba",
+              "0x24ba"
+            ],
+            [
+              "0x6909",
+              "0x690a"
+            ],
+            [
+              "0xf618",
+              "0xf618"
+            ],
+            [
+              "0xf626",
+              "0xf627"
+            ],
+            [
+              "0x21a00",
+              "0x21a00"
+            ],
+            [
+              "0x2f014",
+              "0x2f014"
+            ],
+            [
+              "0x2f01e",
+              "0x2f01f"
+            ],
+            [
+              "0x30008",
+              "0x30008"
+            ],
+            [
+              "0x3000c",
+              "0x3000d"
+            ],
+            [
+              "0x301c0",
+              "0x301c3"
+            ],
+            [
+              "0x30208",
+              "0x30208"
+            ],
+            [
+              "0x3020c",
+              "0x3020d"
+            ],
+            [
+              "0x303c0",
+              "0x303c3"
+            ],
+            [
+              "0x6f014",
+              "0x6f014"
+            ],
+            [
+              "0x6f01e",
+              "0x6f01f"
+            ]
+          ],
+          "non_party_changes_attribution": "UNATTRIBUTED; no field mapping inferred"
+        }
+      },
+      "fresh_process_cold_reload": {
+        "run": "stat-editor-reset-persist-iv-cold",
+        "result_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-cold/result.json",
+        "result_sha256": "bab94804df8a4a3a9468adc893ac58b40db1f97bcadc377f6db87c13511214cb",
+        "runner_pid": 113499,
+        "frames": 5500,
+        "input_script_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-cold/input-script.json",
+        "input_script_sha256": "f5a8d8113ab01dd22e00bbfc7b78e7be9604804d4f5cd8aad1d7ba1d4bebcda4",
+        "input_events": [
+          {
+            "frame": 180,
+            "button": "START",
+            "frames": 3
+          },
+          {
+            "frame": 3600,
+            "button": "A",
+            "frames": 3
+          },
+          {
+            "frame": 3900,
+            "button": "A",
+            "frames": 3
+          }
+        ],
+        "navigation_state_in": null,
+        "navigation_state_input_sha256": null,
+        "navigation_state_output_sha256": "b7f5415a744fb0e4348ef9fcd69663c04e4085369af81130724ad1e5ab9223c3",
+        "navigation_state_output_file_used_for_lineage": false,
+        "system_ram_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-cold/system_ram.bin",
+        "system_ram_sha256": "0caaa93826167bbbd8d6366442710f303f4bfe6a3e4461a9506fc029922cf084",
+        "battery_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-cold/saves/reset-iv.dsv",
+        "battery_dsv_sha256": "b4cce8f7f61e588c679a88b7fb7bba347a5233f0c7b35bb862dbae77fde1e673",
+        "battery_evidence_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-cold/battery-evidence.json",
+        "battery_evidence_sha256": "aa1c937f3870c94a664aa5ed376ad8ea144bf60aded1b24e774f5d65c7527b88",
+        "cheats": [],
+        "cold_root_has_no_navigation_state_input": true,
+        "saved_profile_bytes_unchanged": true,
+        "party_ram_matches_saved_dsv": true,
+        "bag_ram_matches_saved_dsv": true,
+        "script_context_inspection": {
+          "available": false,
+          "reason": "live FieldSystem task manager pointer is outside MainRAM"
+        },
+        "no_reset_prompt_visible_at_field_checkpoints": true,
+        "visual_checkpoint_observations": [
+          {
+            "frame": 3500,
+            "capture": "touch_start",
+            "observation": "TOUCH TO START is visible."
+          },
+          {
+            "frame": 3800,
+            "capture": "continue_menu",
+            "observation": "Continue is selected in the title menu."
+          },
+          {
+            "frame": 4300,
+            "capture": "field_loaded",
+            "observation": "New Bark Town field and field menu are visible."
+          },
+          {
+            "frame": 4900,
+            "capture": "field_stable",
+            "observation": "The same field menu remains visible; no reset prompt is shown."
+          }
+        ],
+        "cold_frame_bound_note": "cold_final was requested at frame 5500, equal to the exclusive run length; no screenshot exists. RAM is captured after the 5500-frame runner loop, and the last in-range field screenshot is frame 4900.",
+        "repeat_operation_count": "NOT_PROVEN_BY_IDEMPOTENT_ZERO_RESULT; no A events occur after frame 3900, and the field is visible at frames 4300 and 4900.",
+        "location_record_observed": [
+          60,
+          -1,
+          684,
+          409,
+          0
+        ]
+      },
+      "ram_verification": {
+        "yes_ack": {
+          "party_array_sha256": "d00c1047db22d51ab462449a0f40c72a7839f6117c9d91c70e7ea37d4a5d1f19",
+          "expected_party_array_sha256": "876086d7611b8f08564cfc7c0100060973b5614b732bda2f61ecd01eaa7509c5",
+          "records_exact_or_verified_native_cipher_boundary": [
+            {
+              "slot": 0,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 1,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 2,
+              "mode": "verified_two_byte_cipher_boundary",
+              "box": {
+                "mode": "plain_suffix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_suffix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": false,
+              "checksum": 46459
+            }
+          ],
+          "bag_array_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_matches_saved_dsv": true,
+          "task_manager": 0,
+          "location_record": [
+            60,
+            -1,
+            684,
+            409,
+            2
+          ]
+        },
+        "native_save": {
+          "party_array_sha256": "d00c1047db22d51ab462449a0f40c72a7839f6117c9d91c70e7ea37d4a5d1f19",
+          "expected_party_array_sha256": "876086d7611b8f08564cfc7c0100060973b5614b732bda2f61ecd01eaa7509c5",
+          "records_exact_or_verified_native_cipher_boundary": [
+            {
+              "slot": 0,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 1,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 2,
+              "mode": "verified_two_byte_cipher_boundary",
+              "box": {
+                "mode": "plain_suffix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_suffix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": false,
+              "checksum": 46459
+            }
+          ],
+          "bag_array_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_matches_saved_dsv": true,
+          "task_manager": 0,
+          "location_record": [
+            60,
+            -1,
+            684,
+            409,
+            0
+          ]
+        },
+        "cold_reload": {
+          "party_array_sha256": "9c1da8b7761f39efaf877b618b84ff2bf8f9570c236a716226000ff2e15ef197",
+          "expected_party_array_sha256": "876086d7611b8f08564cfc7c0100060973b5614b732bda2f61ecd01eaa7509c5",
+          "records_exact_or_verified_native_cipher_boundary": [
+            {
+              "slot": 0,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 1,
+              "mode": "byte_exact"
+            },
+            {
+              "slot": 2,
+              "mode": "verified_two_byte_cipher_boundary",
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 92
+              },
+              "party_tail": {
+                "mode": "plain_suffix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": false,
+              "checksum": 46459
+            }
+          ],
+          "bag_array_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_matches_saved_dsv": true,
+          "task_manager": 0,
+          "location_record": [
+            60,
+            -1,
+            684,
+            409,
+            0
+          ]
+        }
+      },
+      "reserve_ranges_sha256": {
+        "yes_ack": {
+          "0x23d5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x23d6000": "dd1864226b12c851477324aedab8cae1b3a6bd493920c7d56987882735169b2c",
+          "0x23d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        },
+        "native_save": {
+          "0x23d5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x23d6000": "dd1864226b12c851477324aedab8cae1b3a6bd493920c7d56987882735169b2c",
+          "0x23d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        },
+        "cold_reload": {
+          "0x23d5000": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+          "0x23d6000": "dd1864226b12c851477324aedab8cae1b3a6bd493920c7d56987882735169b2c",
+          "0x23d7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        }
+      },
+      "captures": {
+        "save": {
+          "save_prompt": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-save/save_prompt.png",
+            "sha256": "871ca3cbed7049a8e38032a8f3a3b9050d39924396866e8982cd87188ec9078f"
+          },
+          "overwrite_prompt": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-save/overwrite_prompt.png",
+            "sha256": "6f1529d3a09434ae001282e86e796846a33dc84b84206d870b5a80ff3d1a6360"
+          },
+          "save_return": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-save/save_complete.png",
+            "sha256": "072d410a9f395c62c5a0e567cf44b1283941675dcfdad316f6377cfb2cabbead"
+          }
+        },
+        "cold": {
+          "touch_start": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-cold/touch_start_visible.png",
+            "sha256": "c5c10d9ed347fd04ef35a0b0de3bb8ff781da1e74f49196dba33b596c1eb1b4f"
+          },
+          "continue_menu": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-cold/after_title_start.png",
+            "sha256": "a5fbc87549ba38d70b0624442aa8272dc187837c6cbf6fe6423ef4adec633ecd"
+          },
+          "continue_checkpoint": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-cold/continue_selection.png",
+            "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+          },
+          "field_loaded": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-cold/field_loaded.png",
+            "sha256": "c4df900fdf36ddd7f8789bd7ce4cc4fcce6894ca27f933240c7f06d67f74e70e"
+          },
+          "field_stable": {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-reset-persist-iv-cold/field_stable.png",
+            "sha256": "ebcaac5383c4fa0d46053b9334ea19361a8dbd8795d29d9b54b706a4c2113d23"
+          }
+        }
+      },
+      "excluded_first_cold_attempt": null,
+      "scope": "Native Yes-ACK state -> in-game save -> fresh process using the saved DSV. One tested Clefairy per operation; no broader menu, history, nature, or gameplay acceptance."
+    }
+  ],
+  "limits": [
+    "The runner's generic battery_save_load field remains NOT_TESTED; this audit separately validates the frozen DSV, fresh process with navigation_state_in=null, saved identity screens, and exact RAM/DSV records.",
+    "The new save/cold runner results contain serialized state hashes, but their relative --state-out files were not retained inside the run folders and are not used as lineage evidence; the cold chain is DSV-only.",
+    "No second reset is inferred from already-zero EV/IV values. Cold scripts send no A input after frame 3900; the field is visible at frames 4300 and 4900, and final TaskManager is zero. The idempotent operation count remains unknown.",
+    "At the final clean field checkpoint, no live ScriptContext was available because TaskManager was zero; confirm/callback/PC values are therefore not reported.",
+    "Named save frame 6800 and cold frame 5500 screenshots were requested exactly at each run's exclusive frame bound and were not rendered; they are not used for visual claims.",
+    "Raw DSV changes outside the exact party and Bag checks are listed as unattributed. No field-level cause is inferred from changed offsets.",
+    "The accepted scope covers one Clefairy at the recorded level/PID and the tested ResetEV/ResetIV branches; it does not establish full-game, history, nature, or general save compatibility."
+  ]
+}

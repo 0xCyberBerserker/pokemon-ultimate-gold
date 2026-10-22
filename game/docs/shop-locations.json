@@ -1,0 +1,2409 @@
+{
+  "schema": "ultimate-gold-fixed-shops/v1",
+  "target_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+  "shops": [
+    {
+      "id": 0,
+      "inventory_pointer": "0x020FBA54",
+      "items": [
+        {
+          "id": 146,
+          "name": {
+            "en": "Air Mail",
+            "es": "Carta Aérea"
+          },
+          "price": 50,
+          "item_data_member": 124
+        },
+        {
+          "id": 14,
+          "name": {
+            "en": "Heal Ball",
+            "es": "Sana Ball"
+          },
+          "price": 300,
+          "item_data_member": 14
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 851,
+          "script_offset": 66,
+          "maps": [
+            {
+              "id": 68,
+              "constant": "MAP_CHERRYGROVE_POKEMART",
+              "name": {
+                "en": "Cherrygrove Pokemart",
+                "es": "Ciudad Cerezo Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 1,
+      "inventory_pointer": "0x020FBA78",
+      "items": [
+        {
+          "id": 13,
+          "name": {
+            "en": "Dusk Ball",
+            "es": "Ocaso Ball"
+          },
+          "price": 1000,
+          "item_data_member": 13
+        },
+        {
+          "id": 14,
+          "name": {
+            "en": "Heal Ball",
+            "es": "Sana Ball"
+          },
+          "price": 300,
+          "item_data_member": 14
+        },
+        {
+          "id": 6,
+          "name": {
+            "en": "Net Ball",
+            "es": "Malla Ball"
+          },
+          "price": 1000,
+          "item_data_member": 6
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 116,
+          "script_offset": 294,
+          "maps": [
+            {
+              "id": 174,
+              "constant": "MAP_SAFARI_ZONE_GATE",
+              "name": {
+                "en": "Safari Zone Gate",
+                "es": "Safari Zone Gate"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 2,
+      "inventory_pointer": "0x020FBAB0",
+      "items": [
+        {
+          "id": 140,
+          "name": {
+            "en": "Bloom Mail",
+            "es": "Carta Flores"
+          },
+          "price": 50,
+          "item_data_member": 118
+        },
+        {
+          "id": 14,
+          "name": {
+            "en": "Heal Ball",
+            "es": "Sana Ball"
+          },
+          "price": 300,
+          "item_data_member": 14
+        },
+        {
+          "id": 6,
+          "name": {
+            "en": "Net Ball",
+            "es": "Malla Ball"
+          },
+          "price": 1000,
+          "item_data_member": 6
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 867,
+          "script_offset": 66,
+          "maps": [
+            {
+              "id": 165,
+              "constant": "MAP_AZALEA_POKEMART",
+              "name": {
+                "en": "Azalea Pokemart",
+                "es": "Pueblo Azalea Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 3,
+      "inventory_pointer": "0x020FBBEA",
+      "items": [
+        {
+          "id": 17,
+          "name": {
+            "en": "Potion",
+            "es": "Poción"
+          },
+          "price": 300,
+          "item_data_member": 17
+        },
+        {
+          "id": 26,
+          "name": {
+            "en": "Super Potion",
+            "es": "Superpoción"
+          },
+          "price": 700,
+          "item_data_member": 26
+        },
+        {
+          "id": 25,
+          "name": {
+            "en": "Hyper Potion",
+            "es": "Hiperpoción"
+          },
+          "price": 1200,
+          "item_data_member": 25
+        },
+        {
+          "id": 24,
+          "name": {
+            "en": "Max Potion",
+            "es": "Poción Máxima"
+          },
+          "price": 2500,
+          "item_data_member": 24
+        },
+        {
+          "id": 28,
+          "name": {
+            "en": "Revive",
+            "es": "Revivir"
+          },
+          "price": 1500,
+          "item_data_member": 28
+        },
+        {
+          "id": 18,
+          "name": {
+            "en": "Antidote",
+            "es": "Antídoto"
+          },
+          "price": 100,
+          "item_data_member": 18
+        },
+        {
+          "id": 22,
+          "name": {
+            "en": "Parlyz Heal",
+            "es": "Parlyz Heal"
+          },
+          "price": 200,
+          "item_data_member": 22
+        },
+        {
+          "id": 19,
+          "name": {
+            "en": "Burn Heal",
+            "es": "Antiquemar"
+          },
+          "price": 250,
+          "item_data_member": 19
+        },
+        {
+          "id": 20,
+          "name": {
+            "en": "Ice Heal",
+            "es": "Antihielo"
+          },
+          "price": 250,
+          "item_data_member": 20
+        },
+        {
+          "id": 21,
+          "name": {
+            "en": "Awakening",
+            "es": "Despertar"
+          },
+          "price": 250,
+          "item_data_member": 21
+        },
+        {
+          "id": 27,
+          "name": {
+            "en": "Full Heal",
+            "es": "Cura Total"
+          },
+          "price": 600,
+          "item_data_member": 27
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 900,
+          "script_offset": 54,
+          "maps": [
+            {
+              "id": 192,
+              "constant": "MAP_GOLDENROD_DEPARTMENT_STORE_2F",
+              "name": {
+                "en": "Goldenrod Department Store 2F",
+                "es": "Centro Comercial de Ciudad Trigal 2F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 4,
+      "inventory_pointer": "0x020FBC1A",
+      "items": [
+        {
+          "id": 4,
+          "name": {
+            "en": "Poké Ball",
+            "es": "Poké Ball"
+          },
+          "price": 200,
+          "item_data_member": 4
+        },
+        {
+          "id": 3,
+          "name": {
+            "en": "Great Ball",
+            "es": "Super Ball"
+          },
+          "price": 600,
+          "item_data_member": 3
+        },
+        {
+          "id": 2,
+          "name": {
+            "en": "Ultra Ball",
+            "es": "Ultra Ball"
+          },
+          "price": 1200,
+          "item_data_member": 2
+        },
+        {
+          "id": 78,
+          "name": {
+            "en": "Escape Rope",
+            "es": "Cuerda Huida"
+          },
+          "price": 550,
+          "item_data_member": 78
+        },
+        {
+          "id": 63,
+          "name": {
+            "en": "Poké Doll",
+            "es": "Poké Muñeco"
+          },
+          "price": 1000,
+          "item_data_member": 63
+        },
+        {
+          "id": 79,
+          "name": {
+            "en": "Repel",
+            "es": "Repelente"
+          },
+          "price": 350,
+          "item_data_member": 79
+        },
+        {
+          "id": 76,
+          "name": {
+            "en": "Super Repel",
+            "es": "Superrepelente"
+          },
+          "price": 500,
+          "item_data_member": 76
+        },
+        {
+          "id": 77,
+          "name": {
+            "en": "Max Repel",
+            "es": "Repelente Máximo"
+          },
+          "price": 700,
+          "item_data_member": 77
+        },
+        {
+          "id": 82,
+          "name": {
+            "en": "Fire Stone",
+            "es": "Piedra Fuego"
+          },
+          "price": 2100,
+          "item_data_member": 82
+        },
+        {
+          "id": 83,
+          "name": {
+            "en": "Thunderstone",
+            "es": "Piedra Trueno"
+          },
+          "price": 2100,
+          "item_data_member": 83
+        },
+        {
+          "id": 84,
+          "name": {
+            "en": "Water Stone",
+            "es": "Piedra Agua"
+          },
+          "price": 2100,
+          "item_data_member": 84
+        },
+        {
+          "id": 85,
+          "name": {
+            "en": "Leaf Stone",
+            "es": "Piedra Hoja"
+          },
+          "price": 2100,
+          "item_data_member": 85
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 900,
+          "script_offset": 82,
+          "maps": [
+            {
+              "id": 192,
+              "constant": "MAP_GOLDENROD_DEPARTMENT_STORE_2F",
+              "name": {
+                "en": "Goldenrod Department Store 2F",
+                "es": "Centro Comercial de Ciudad Trigal 2F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 5,
+      "inventory_pointer": "0x020FBBB4",
+      "items": [
+        {
+          "id": 59,
+          "name": {
+            "en": "X Speed",
+            "es": "Velocidad X"
+          },
+          "price": 350,
+          "item_data_member": 59
+        },
+        {
+          "id": 57,
+          "name": {
+            "en": "X Attack",
+            "es": "Ataque X"
+          },
+          "price": 500,
+          "item_data_member": 57
+        },
+        {
+          "id": 58,
+          "name": {
+            "en": "X Defend",
+            "es": "X Defend"
+          },
+          "price": 550,
+          "item_data_member": 58
+        },
+        {
+          "id": 55,
+          "name": {
+            "en": "Guard Spec.",
+            "es": "Protección X"
+          },
+          "price": 700,
+          "item_data_member": 55
+        },
+        {
+          "id": 56,
+          "name": {
+            "en": "Dire Hit",
+            "es": "Crítico X"
+          },
+          "price": 650,
+          "item_data_member": 56
+        },
+        {
+          "id": 60,
+          "name": {
+            "en": "X Accuracy",
+            "es": "Precisión X"
+          },
+          "price": 950,
+          "item_data_member": 60
+        },
+        {
+          "id": 61,
+          "name": {
+            "en": "X Special",
+            "es": "X Special"
+          },
+          "price": 350,
+          "item_data_member": 61
+        },
+        {
+          "id": 62,
+          "name": {
+            "en": "X Sp. Def",
+            "es": "Def. Especial X"
+          },
+          "price": 350,
+          "item_data_member": 62
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 901,
+          "script_offset": 38,
+          "maps": [
+            {
+              "id": 193,
+              "constant": "MAP_GOLDENROD_DEPARTMENT_STORE_3F",
+              "name": {
+                "en": "Goldenrod Department Store 3F",
+                "es": "Centro Comercial de Ciudad Trigal 3F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 6,
+      "inventory_pointer": "0x020FBAFA",
+      "items": [
+        {
+          "id": 46,
+          "name": {
+            "en": "Protein",
+            "es": "Proteína"
+          },
+          "price": 9800,
+          "item_data_member": 46
+        },
+        {
+          "id": 47,
+          "name": {
+            "en": "Iron",
+            "es": "Hierro"
+          },
+          "price": 9800,
+          "item_data_member": 47
+        },
+        {
+          "id": 49,
+          "name": {
+            "en": "Calcium",
+            "es": "Calcio"
+          },
+          "price": 9800,
+          "item_data_member": 49
+        },
+        {
+          "id": 52,
+          "name": {
+            "en": "Zinc",
+            "es": "Zinc"
+          },
+          "price": 9800,
+          "item_data_member": 52
+        },
+        {
+          "id": 48,
+          "name": {
+            "en": "Carbos",
+            "es": "Carburante"
+          },
+          "price": 9800,
+          "item_data_member": 48
+        },
+        {
+          "id": 45,
+          "name": {
+            "en": "HP Up",
+            "es": "Más PS"
+          },
+          "price": 9800,
+          "item_data_member": 45
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 116,
+          "script_offset": 263,
+          "maps": [
+            {
+              "id": 174,
+              "constant": "MAP_SAFARI_ZONE_GATE",
+              "name": {
+                "en": "Safari Zone Gate",
+                "es": "Safari Zone Gate"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        },
+        {
+          "script_member": 902,
+          "script_offset": 42,
+          "maps": [
+            {
+              "id": 194,
+              "constant": "MAP_GOLDENROD_DEPARTMENT_STORE_4F",
+              "name": {
+                "en": "Goldenrod Department Store 4F",
+                "es": "Centro Comercial de Ciudad Trigal 4F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 7,
+      "inventory_pointer": "0x020FBC34",
+      "items": [
+        {
+          "id": 344,
+          "name": {
+            "en": "TM17",
+            "es": "MT17"
+          },
+          "price": 2000,
+          "item_data_member": 322
+        },
+        {
+          "id": 347,
+          "name": {
+            "en": "TM20",
+            "es": "MT20"
+          },
+          "price": 2000,
+          "item_data_member": 325
+        },
+        {
+          "id": 381,
+          "name": {
+            "en": "TM54",
+            "es": "MT54"
+          },
+          "price": 2000,
+          "item_data_member": 359
+        },
+        {
+          "id": 382,
+          "name": {
+            "en": "TM55",
+            "es": "MT55"
+          },
+          "price": 3000,
+          "item_data_member": 360
+        },
+        {
+          "id": 343,
+          "name": {
+            "en": "TM16",
+            "es": "MT16"
+          },
+          "price": 2000,
+          "item_data_member": 321
+        },
+        {
+          "id": 360,
+          "name": {
+            "en": "TM33",
+            "es": "MT33"
+          },
+          "price": 2000,
+          "item_data_member": 338
+        },
+        {
+          "id": 349,
+          "name": {
+            "en": "TM22",
+            "es": "MT22"
+          },
+          "price": 3000,
+          "item_data_member": 327
+        },
+        {
+          "id": 379,
+          "name": {
+            "en": "TM52",
+            "es": "MT52"
+          },
+          "price": 5500,
+          "item_data_member": 357
+        },
+        {
+          "id": 365,
+          "name": {
+            "en": "TM38",
+            "es": "MT38"
+          },
+          "price": 5500,
+          "item_data_member": 343
+        },
+        {
+          "id": 352,
+          "name": {
+            "en": "TM25",
+            "es": "MT25"
+          },
+          "price": 5500,
+          "item_data_member": 330
+        },
+        {
+          "id": 341,
+          "name": {
+            "en": "TM14",
+            "es": "MT14"
+          },
+          "price": 5500,
+          "item_data_member": 319
+        },
+        {
+          "id": 342,
+          "name": {
+            "en": "TM15",
+            "es": "MT15"
+          },
+          "price": 7500,
+          "item_data_member": 320
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 903,
+          "script_offset": 98,
+          "maps": [
+            {
+              "id": 195,
+              "constant": "MAP_GOLDENROD_DEPARTMENT_STORE_5F",
+              "name": {
+                "en": "Goldenrod Department Store 5F",
+                "es": "Centro Comercial de Ciudad Trigal 5F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 8,
+      "inventory_pointer": "0x020FBACA",
+      "items": [
+        {
+          "id": 36,
+          "name": {
+            "en": "Heal Powder",
+            "es": "Polvo Curación"
+          },
+          "price": 450,
+          "item_data_member": 36
+        },
+        {
+          "id": 34,
+          "name": {
+            "en": "EnergyPowder",
+            "es": "Polvo Energía"
+          },
+          "price": 500,
+          "item_data_member": 34
+        },
+        {
+          "id": 35,
+          "name": {
+            "en": "Energy Root",
+            "es": "Raíz Energía"
+          },
+          "price": 800,
+          "item_data_member": 35
+        },
+        {
+          "id": 37,
+          "name": {
+            "en": "Revival Herb",
+            "es": "Hierba Revivir"
+          },
+          "price": 2800,
+          "item_data_member": 37
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 94,
+          "script_offset": 432,
+          "maps": [
+            {
+              "id": 199,
+              "constant": "MAP_GOLDENROD_TUNNEL_B1F",
+              "name": {
+                "en": "Goldenrod Tunnel B1F",
+                "es": "Ciudad Trigal Tunnel B1F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 9,
+      "inventory_pointer": "0x020FBA60",
+      "items": [
+        {
+          "id": 146,
+          "name": {
+            "en": "Air Mail",
+            "es": "Carta Aérea"
+          },
+          "price": 50,
+          "item_data_member": 124
+        },
+        {
+          "id": 14,
+          "name": {
+            "en": "Heal Ball",
+            "es": "Sana Ball"
+          },
+          "price": 300,
+          "item_data_member": 14
+        },
+        {
+          "id": 6,
+          "name": {
+            "en": "Net Ball",
+            "es": "Malla Ball"
+          },
+          "price": 1000,
+          "item_data_member": 6
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 921,
+          "script_offset": 70,
+          "maps": [
+            {
+              "id": 79,
+              "constant": "MAP_ECRUTEAK_POKEMART",
+              "name": {
+                "en": "Ecruteak Pokemart",
+                "es": "Ciudad Iris Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 10,
+      "inventory_pointer": "0x020FBA88",
+      "items": [
+        {
+          "id": 328,
+          "name": {
+            "en": "TM01",
+            "es": "MT01"
+          },
+          "price": 3000,
+          "item_data_member": 306
+        },
+        {
+          "id": 14,
+          "name": {
+            "en": "Heal Ball",
+            "es": "Sana Ball"
+          },
+          "price": 300,
+          "item_data_member": 14
+        },
+        {
+          "id": 6,
+          "name": {
+            "en": "Net Ball",
+            "es": "Malla Ball"
+          },
+          "price": 1000,
+          "item_data_member": 6
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 828,
+          "script_offset": 66,
+          "maps": [
+            {
+              "id": 409,
+              "constant": "MAP_SAFFRON_POKEMART",
+              "name": {
+                "en": "Saffron Pokemart",
+                "es": "Saffron Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 11,
+      "inventory_pointer": "0x020FBAD4",
+      "items": [
+        {
+          "id": 17,
+          "name": {
+            "en": "Potion",
+            "es": "Poción"
+          },
+          "price": 300,
+          "item_data_member": 17
+        },
+        {
+          "id": 26,
+          "name": {
+            "en": "Super Potion",
+            "es": "Superpoción"
+          },
+          "price": 700,
+          "item_data_member": 26
+        },
+        {
+          "id": 25,
+          "name": {
+            "en": "Hyper Potion",
+            "es": "Hiperpoción"
+          },
+          "price": 1200,
+          "item_data_member": 25
+        },
+        {
+          "id": 27,
+          "name": {
+            "en": "Full Heal",
+            "es": "Cura Total"
+          },
+          "price": 600,
+          "item_data_member": 27
+        },
+        {
+          "id": 28,
+          "name": {
+            "en": "Revive",
+            "es": "Revivir"
+          },
+          "price": 1500,
+          "item_data_member": 28
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 881,
+          "script_offset": 70,
+          "maps": [
+            {
+              "id": 233,
+              "constant": "MAP_CIANWOOD_PHARMACY",
+              "name": {
+                "en": "Cianwood Pharmacy",
+                "es": "Ciudad Orquídea Pharmacy"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 12,
+      "inventory_pointer": "0x020FBA80",
+      "items": [
+        {
+          "id": 107,
+          "name": {
+            "en": "Shiny Stone",
+            "es": "Piedra Día"
+          },
+          "price": 2100,
+          "item_data_member": 107
+        },
+        {
+          "id": 108,
+          "name": {
+            "en": "Dusk Stone",
+            "es": "Piedra Noche"
+          },
+          "price": 2100,
+          "item_data_member": 108
+        },
+        {
+          "id": 109,
+          "name": {
+            "en": "Dawn Stone",
+            "es": "Piedra Alba"
+          },
+          "price": 2100,
+          "item_data_member": 109
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 77,
+          "script_offset": 66,
+          "maps": [
+            {
+              "id": 530,
+              "constant": "MAP_FRONTIER_ACCESS_POKEMART",
+              "name": {
+                "en": "Frontier Access Pokemart",
+                "es": "Tienda de la entrada del Frente Batalla"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        },
+        {
+          "script_member": 942,
+          "script_offset": 66,
+          "maps": [
+            {
+              "id": 292,
+              "constant": "MAP_BLACKTHORN_POKEMART",
+              "name": {
+                "en": "Blackthorn Pokemart",
+                "es": "Tienda de Ciudad Endrino"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 13,
+      "inventory_pointer": "0x020FBB84",
+      "items": [
+        {
+          "id": 2,
+          "name": {
+            "en": "Ultra Ball",
+            "es": "Ultra Ball"
+          },
+          "price": 1200,
+          "item_data_member": 2
+        },
+        {
+          "id": 77,
+          "name": {
+            "en": "Max Repel",
+            "es": "Repelente Máximo"
+          },
+          "price": 700,
+          "item_data_member": 77
+        },
+        {
+          "id": 25,
+          "name": {
+            "en": "Hyper Potion",
+            "es": "Hiperpoción"
+          },
+          "price": 1200,
+          "item_data_member": 25
+        },
+        {
+          "id": 24,
+          "name": {
+            "en": "Max Potion",
+            "es": "Poción Máxima"
+          },
+          "price": 2500,
+          "item_data_member": 24
+        },
+        {
+          "id": 23,
+          "name": {
+            "en": "Full Restore",
+            "es": "Restaurar Todo"
+          },
+          "price": 3000,
+          "item_data_member": 23
+        },
+        {
+          "id": 28,
+          "name": {
+            "en": "Revive",
+            "es": "Revivir"
+          },
+          "price": 1500,
+          "item_data_member": 28
+        },
+        {
+          "id": 27,
+          "name": {
+            "en": "Full Heal",
+            "es": "Cura Total"
+          },
+          "price": 600,
+          "item_data_member": 27
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 819,
+          "script_offset": 375,
+          "maps": [
+            {
+              "id": 300,
+              "constant": "MAP_POKEMON_LEAGUE_ENTRANCE",
+              "name": {
+                "en": "Pokemon League Entrance",
+                "es": "Pokemon League Entrance"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 14,
+      "inventory_pointer": "0x020FBAC0",
+      "items": [
+        {
+          "id": 357,
+          "name": {
+            "en": "TM30",
+            "es": "MT30"
+          },
+          "price": 3000,
+          "item_data_member": 335
+        },
+        {
+          "id": 8,
+          "name": {
+            "en": "Nest Ball",
+            "es": "Nido Ball"
+          },
+          "price": 1000,
+          "item_data_member": 8
+        },
+        {
+          "id": 13,
+          "name": {
+            "en": "Dusk Ball",
+            "es": "Ocaso Ball"
+          },
+          "price": 1000,
+          "item_data_member": 13
+        },
+        {
+          "id": 15,
+          "name": {
+            "en": "Quick Ball",
+            "es": "Veloz Ball"
+          },
+          "price": 1000,
+          "item_data_member": 15
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 768,
+          "script_offset": 66,
+          "maps": [
+            {
+              "id": 433,
+              "constant": "MAP_LAVENDER_POKEMART",
+              "name": {
+                "en": "Lavender Pokemart",
+                "es": "Pueblo Lavanda Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 15,
+      "inventory_pointer": "0x020FBA70",
+      "items": [
+        {
+          "id": 386,
+          "name": {
+            "en": "TM59",
+            "es": "MT59"
+          },
+          "price": 3000,
+          "item_data_member": 364
+        },
+        {
+          "id": 13,
+          "name": {
+            "en": "Dusk Ball",
+            "es": "Ocaso Ball"
+          },
+          "price": 1000,
+          "item_data_member": 13
+        },
+        {
+          "id": 15,
+          "name": {
+            "en": "Quick Ball",
+            "es": "Veloz Ball"
+          },
+          "price": 1000,
+          "item_data_member": 15
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 759,
+          "script_offset": 66,
+          "maps": [
+            {
+              "id": 426,
+              "constant": "MAP_CERULEAN_POKEMART",
+              "name": {
+                "en": "Cerulean Pokemart",
+                "es": "Ciudad Celeste Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 16,
+      "inventory_pointer": "0x020FBA98",
+      "items": [
+        {
+          "id": 416,
+          "name": {
+            "en": "TM89",
+            "es": "MT89"
+          },
+          "price": 3000,
+          "item_data_member": 394
+        },
+        {
+          "id": 13,
+          "name": {
+            "en": "Dusk Ball",
+            "es": "Ocaso Ball"
+          },
+          "price": 1000,
+          "item_data_member": 13
+        },
+        {
+          "id": 15,
+          "name": {
+            "en": "Quick Ball",
+            "es": "Veloz Ball"
+          },
+          "price": 1000,
+          "item_data_member": 15
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 742,
+          "script_offset": 66,
+          "maps": [
+            {
+              "id": 500,
+              "constant": "MAP_VIRIDIAN_POKEMART",
+              "name": {
+                "en": "Viridian Pokemart",
+                "es": "Ciudad Verde Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 17,
+      "inventory_pointer": "0x020FBA5A",
+      "items": [
+        {
+          "id": 146,
+          "name": {
+            "en": "Air Mail",
+            "es": "Carta Aérea"
+          },
+          "price": 50,
+          "item_data_member": 124
+        },
+        {
+          "id": 15,
+          "name": {
+            "en": "Quick Ball",
+            "es": "Veloz Ball"
+          },
+          "price": 1000,
+          "item_data_member": 15
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 858,
+          "script_offset": 70,
+          "maps": [
+            {
+              "id": 157,
+              "constant": "MAP_VIOLET_POKEMART",
+              "name": {
+                "en": "Violet Pokemart",
+                "es": "Ciudad Malva Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        },
+        {
+          "script_member": 912,
+          "script_offset": 66,
+          "maps": [
+            {
+              "id": 227,
+              "constant": "MAP_OLIVINE_POKEMART",
+              "name": {
+                "en": "Olivine Pokemart",
+                "es": "Ciudad Olivo Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 18,
+      "inventory_pointer": "0x020FBC02",
+      "items": [
+        {
+          "id": 17,
+          "name": {
+            "en": "Potion",
+            "es": "Poción"
+          },
+          "price": 300,
+          "item_data_member": 17
+        },
+        {
+          "id": 26,
+          "name": {
+            "en": "Super Potion",
+            "es": "Superpoción"
+          },
+          "price": 700,
+          "item_data_member": 26
+        },
+        {
+          "id": 25,
+          "name": {
+            "en": "Hyper Potion",
+            "es": "Hiperpoción"
+          },
+          "price": 1200,
+          "item_data_member": 25
+        },
+        {
+          "id": 24,
+          "name": {
+            "en": "Max Potion",
+            "es": "Poción Máxima"
+          },
+          "price": 2500,
+          "item_data_member": 24
+        },
+        {
+          "id": 28,
+          "name": {
+            "en": "Revive",
+            "es": "Revivir"
+          },
+          "price": 1500,
+          "item_data_member": 28
+        },
+        {
+          "id": 18,
+          "name": {
+            "en": "Antidote",
+            "es": "Antídoto"
+          },
+          "price": 100,
+          "item_data_member": 18
+        },
+        {
+          "id": 22,
+          "name": {
+            "en": "Parlyz Heal",
+            "es": "Parlyz Heal"
+          },
+          "price": 200,
+          "item_data_member": 22
+        },
+        {
+          "id": 19,
+          "name": {
+            "en": "Burn Heal",
+            "es": "Antiquemar"
+          },
+          "price": 250,
+          "item_data_member": 19
+        },
+        {
+          "id": 20,
+          "name": {
+            "en": "Ice Heal",
+            "es": "Antihielo"
+          },
+          "price": 250,
+          "item_data_member": 20
+        },
+        {
+          "id": 21,
+          "name": {
+            "en": "Awakening",
+            "es": "Despertar"
+          },
+          "price": 250,
+          "item_data_member": 21
+        },
+        {
+          "id": 27,
+          "name": {
+            "en": "Full Heal",
+            "es": "Cura Total"
+          },
+          "price": 600,
+          "item_data_member": 27
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 790,
+          "script_offset": 104,
+          "maps": [
+            {
+              "id": 371,
+              "constant": "MAP_CELADON_DEPARTMENT_STORE_2F",
+              "name": {
+                "en": "Celadon Department Store 2F",
+                "es": "Ciudad Azulona Department Store 2F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 19,
+      "inventory_pointer": "0x020FBC4E",
+      "items": [
+        {
+          "id": 4,
+          "name": {
+            "en": "Poké Ball",
+            "es": "Poké Ball"
+          },
+          "price": 200,
+          "item_data_member": 4
+        },
+        {
+          "id": 3,
+          "name": {
+            "en": "Great Ball",
+            "es": "Super Ball"
+          },
+          "price": 600,
+          "item_data_member": 3
+        },
+        {
+          "id": 2,
+          "name": {
+            "en": "Ultra Ball",
+            "es": "Ultra Ball"
+          },
+          "price": 1200,
+          "item_data_member": 2
+        },
+        {
+          "id": 78,
+          "name": {
+            "en": "Escape Rope",
+            "es": "Cuerda Huida"
+          },
+          "price": 550,
+          "item_data_member": 78
+        },
+        {
+          "id": 63,
+          "name": {
+            "en": "Poké Doll",
+            "es": "Poké Muñeco"
+          },
+          "price": 1000,
+          "item_data_member": 63
+        },
+        {
+          "id": 79,
+          "name": {
+            "en": "Repel",
+            "es": "Repelente"
+          },
+          "price": 350,
+          "item_data_member": 79
+        },
+        {
+          "id": 76,
+          "name": {
+            "en": "Super Repel",
+            "es": "Superrepelente"
+          },
+          "price": 500,
+          "item_data_member": 76
+        },
+        {
+          "id": 77,
+          "name": {
+            "en": "Max Repel",
+            "es": "Repelente Máximo"
+          },
+          "price": 700,
+          "item_data_member": 77
+        },
+        {
+          "id": 137,
+          "name": {
+            "en": "Grass Mail",
+            "es": "Carta Hierba"
+          },
+          "price": 50,
+          "item_data_member": 115
+        },
+        {
+          "id": 138,
+          "name": {
+            "en": "Flame Mail",
+            "es": "Carta Fuego"
+          },
+          "price": 50,
+          "item_data_member": 116
+        },
+        {
+          "id": 139,
+          "name": {
+            "en": "Bubble Mail",
+            "es": "Carta Pompas"
+          },
+          "price": 50,
+          "item_data_member": 117
+        },
+        {
+          "id": 145,
+          "name": {
+            "en": "Space Mail",
+            "es": "Car. Sideral"
+          },
+          "price": 50,
+          "item_data_member": 123
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 790,
+          "script_offset": 132,
+          "maps": [
+            {
+              "id": 371,
+              "constant": "MAP_CELADON_DEPARTMENT_STORE_2F",
+              "name": {
+                "en": "Celadon Department Store 2F",
+                "es": "Ciudad Azulona Department Store 2F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 20,
+      "inventory_pointer": "0x020FBC68",
+      "items": [
+        {
+          "id": 408,
+          "name": {
+            "en": "TM81",
+            "es": "MT81"
+          },
+          "price": 3000,
+          "item_data_member": 386
+        },
+        {
+          "id": 380,
+          "name": {
+            "en": "TM53",
+            "es": "MT53"
+          },
+          "price": 3000,
+          "item_data_member": 358
+        },
+        {
+          "id": 353,
+          "name": {
+            "en": "TM26",
+            "es": "MT26"
+          },
+          "price": 3000,
+          "item_data_member": 331
+        },
+        {
+          "id": 398,
+          "name": {
+            "en": "TM71",
+            "es": "MT71"
+          },
+          "price": 3000,
+          "item_data_member": 376
+        },
+        {
+          "id": 399,
+          "name": {
+            "en": "TM72",
+            "es": "MT72"
+          },
+          "price": 3000,
+          "item_data_member": 377
+        },
+        {
+          "id": 406,
+          "name": {
+            "en": "TM79",
+            "es": "MT79"
+          },
+          "price": 3000,
+          "item_data_member": 384
+        },
+        {
+          "id": 348,
+          "name": {
+            "en": "TM21",
+            "es": "MT21"
+          },
+          "price": 1000,
+          "item_data_member": 326
+        },
+        {
+          "id": 354,
+          "name": {
+            "en": "TM27",
+            "es": "MT27"
+          },
+          "price": 1000,
+          "item_data_member": 332
+        },
+        {
+          "id": 414,
+          "name": {
+            "en": "TM87",
+            "es": "MT87"
+          },
+          "price": 1500,
+          "item_data_member": 392
+        },
+        {
+          "id": 405,
+          "name": {
+            "en": "TM78",
+            "es": "MT78"
+          },
+          "price": 1500,
+          "item_data_member": 383
+        },
+        {
+          "id": 339,
+          "name": {
+            "en": "TM12",
+            "es": "MT12"
+          },
+          "price": 1500,
+          "item_data_member": 317
+        },
+        {
+          "id": 368,
+          "name": {
+            "en": "TM41",
+            "es": "MT41"
+          },
+          "price": 1500,
+          "item_data_member": 346
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 791,
+          "script_offset": 46,
+          "maps": [
+            {
+              "id": 372,
+              "constant": "MAP_CELADON_DEPARTMENT_STORE_3F",
+              "name": {
+                "en": "Celadon Department Store 3F",
+                "es": "Ciudad Azulona Department Store 3F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 21,
+      "inventory_pointer": "0x020FBA68",
+      "items": [
+        {
+          "id": 355,
+          "name": {
+            "en": "TM28",
+            "es": "MT28"
+          },
+          "price": 2000,
+          "item_data_member": 333
+        },
+        {
+          "id": 413,
+          "name": {
+            "en": "TM86",
+            "es": "MT86"
+          },
+          "price": 3000,
+          "item_data_member": 391
+        },
+        {
+          "id": 378,
+          "name": {
+            "en": "TM51",
+            "es": "MT51"
+          },
+          "price": 2000,
+          "item_data_member": 356
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 792,
+          "script_offset": 148,
+          "maps": [
+            {
+              "id": 373,
+              "constant": "MAP_CELADON_DEPARTMENT_STORE_4F",
+              "name": {
+                "en": "Celadon Department Store 4F",
+                "es": "Ciudad Azulona Department Store 4F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        },
+        {
+          "script_member": 903,
+          "script_offset": 337,
+          "maps": [
+            {
+              "id": 195,
+              "constant": "MAP_GOLDENROD_DEPARTMENT_STORE_5F",
+              "name": {
+                "en": "Goldenrod Department Store 5F",
+                "es": "Centro Comercial de Ciudad Trigal 5F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 22,
+      "inventory_pointer": "0x020FBBC6",
+      "items": [
+        {
+          "id": 59,
+          "name": {
+            "en": "X Speed",
+            "es": "Velocidad X"
+          },
+          "price": 350,
+          "item_data_member": 59
+        },
+        {
+          "id": 57,
+          "name": {
+            "en": "X Attack",
+            "es": "Ataque X"
+          },
+          "price": 500,
+          "item_data_member": 57
+        },
+        {
+          "id": 58,
+          "name": {
+            "en": "X Defend",
+            "es": "X Defend"
+          },
+          "price": 550,
+          "item_data_member": 58
+        },
+        {
+          "id": 55,
+          "name": {
+            "en": "Guard Spec.",
+            "es": "Protección X"
+          },
+          "price": 700,
+          "item_data_member": 55
+        },
+        {
+          "id": 56,
+          "name": {
+            "en": "Dire Hit",
+            "es": "Crítico X"
+          },
+          "price": 650,
+          "item_data_member": 56
+        },
+        {
+          "id": 60,
+          "name": {
+            "en": "X Accuracy",
+            "es": "Precisión X"
+          },
+          "price": 950,
+          "item_data_member": 60
+        },
+        {
+          "id": 61,
+          "name": {
+            "en": "X Special",
+            "es": "X Special"
+          },
+          "price": 350,
+          "item_data_member": 61
+        },
+        {
+          "id": 62,
+          "name": {
+            "en": "X Sp. Def",
+            "es": "Def. Especial X"
+          },
+          "price": 350,
+          "item_data_member": 62
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 793,
+          "script_offset": 46,
+          "maps": [
+            {
+              "id": 374,
+              "constant": "MAP_CELADON_DEPARTMENT_STORE_5F",
+              "name": {
+                "en": "Celadon Department Store 5F",
+                "es": "Ciudad Azulona Department Store 5F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 23,
+      "inventory_pointer": "0x020FBB08",
+      "items": [
+        {
+          "id": 46,
+          "name": {
+            "en": "Protein",
+            "es": "Proteína"
+          },
+          "price": 9800,
+          "item_data_member": 46
+        },
+        {
+          "id": 47,
+          "name": {
+            "en": "Iron",
+            "es": "Hierro"
+          },
+          "price": 9800,
+          "item_data_member": 47
+        },
+        {
+          "id": 49,
+          "name": {
+            "en": "Calcium",
+            "es": "Calcio"
+          },
+          "price": 9800,
+          "item_data_member": 49
+        },
+        {
+          "id": 52,
+          "name": {
+            "en": "Zinc",
+            "es": "Zinc"
+          },
+          "price": 9800,
+          "item_data_member": 52
+        },
+        {
+          "id": 48,
+          "name": {
+            "en": "Carbos",
+            "es": "Carburante"
+          },
+          "price": 9800,
+          "item_data_member": 48
+        },
+        {
+          "id": 45,
+          "name": {
+            "en": "HP Up",
+            "es": "Más PS"
+          },
+          "price": 9800,
+          "item_data_member": 45
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 793,
+          "script_offset": 74,
+          "maps": [
+            {
+              "id": 374,
+              "constant": "MAP_CELADON_DEPARTMENT_STORE_5F",
+              "name": {
+                "en": "Celadon Department Store 5F",
+                "es": "Ciudad Azulona Department Store 5F"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 24,
+      "inventory_pointer": "0x020FBA90",
+      "items": [
+        {
+          "id": 372,
+          "name": {
+            "en": "TM45",
+            "es": "MT45"
+          },
+          "price": 3000,
+          "item_data_member": 350
+        },
+        {
+          "id": 13,
+          "name": {
+            "en": "Dusk Ball",
+            "es": "Ocaso Ball"
+          },
+          "price": 1000,
+          "item_data_member": 13
+        },
+        {
+          "id": 15,
+          "name": {
+            "en": "Quick Ball",
+            "es": "Veloz Ball"
+          },
+          "price": 1000,
+          "item_data_member": 15
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 777,
+          "script_offset": 66,
+          "maps": [
+            {
+              "id": 360,
+              "constant": "MAP_VERMILION_POKEMART",
+              "name": {
+                "en": "Vermilion Pokemart",
+                "es": "Ciudad Carmín Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 25,
+      "inventory_pointer": "0x020FBAA0",
+      "items": [
+        {
+          "id": 350,
+          "name": {
+            "en": "TM23",
+            "es": "MT23"
+          },
+          "price": 3000,
+          "item_data_member": 328
+        },
+        {
+          "id": 8,
+          "name": {
+            "en": "Nest Ball",
+            "es": "Nido Ball"
+          },
+          "price": 1000,
+          "item_data_member": 8
+        },
+        {
+          "id": 15,
+          "name": {
+            "en": "Quick Ball",
+            "es": "Veloz Ball"
+          },
+          "price": 1000,
+          "item_data_member": 15
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 751,
+          "script_offset": 38,
+          "maps": [
+            {
+              "id": 474,
+              "constant": "MAP_PEWTER_POKEMART",
+              "name": {
+                "en": "Pewter Pokemart",
+                "es": "Ciudad Plateada Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 26,
+      "inventory_pointer": "0x020FBAA8",
+      "items": [
+        {
+          "id": 142,
+          "name": {
+            "en": "Steel Mail",
+            "es": "Carta Acero"
+          },
+          "price": 50,
+          "item_data_member": 120
+        },
+        {
+          "id": 6,
+          "name": {
+            "en": "Net Ball",
+            "es": "Malla Ball"
+          },
+          "price": 1000,
+          "item_data_member": 6
+        },
+        {
+          "id": 14,
+          "name": {
+            "en": "Heal Ball",
+            "es": "Sana Ball"
+          },
+          "price": 300,
+          "item_data_member": 14
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 808,
+          "script_offset": 38,
+          "maps": [
+            {
+              "id": 478,
+              "constant": "MAP_FUCHSIA_POKEMART",
+              "name": {
+                "en": "Fuchsia Pokemart",
+                "es": "Fuchsia Tienda"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 27,
+      "inventory_pointer": "0x020FBB16",
+      "items": [
+        {
+          "id": 63,
+          "name": {
+            "en": "Poké Doll",
+            "es": "Poké Muñeco"
+          },
+          "price": 1000,
+          "item_data_member": 63
+        },
+        {
+          "id": 30,
+          "name": {
+            "en": "Fresh Water",
+            "es": "Agua Fresca"
+          },
+          "price": 200,
+          "item_data_member": 30
+        },
+        {
+          "id": 31,
+          "name": {
+            "en": "Soda Pop",
+            "es": "Refresco"
+          },
+          "price": 300,
+          "item_data_member": 31
+        },
+        {
+          "id": 32,
+          "name": {
+            "en": "Lemonade",
+            "es": "Limonada"
+          },
+          "price": 350,
+          "item_data_member": 32
+        },
+        {
+          "id": 79,
+          "name": {
+            "en": "Repel",
+            "es": "Repelente"
+          },
+          "price": 350,
+          "item_data_member": 79
+        },
+        {
+          "id": 143,
+          "name": {
+            "en": "Heart Mail",
+            "es": "Car. Corazón"
+          },
+          "price": 50,
+          "item_data_member": 121
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 6,
+          "script_offset": 33,
+          "maps": [
+            {
+              "id": 518,
+              "constant": "MAP_MOUNT_MOON_SQUARE_SHOP",
+              "name": {
+                "en": "Mount Moon Square Shop",
+                "es": "Mount Moon Square Shop"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 28,
+      "inventory_pointer": "0x020FBAB8",
+      "items": [
+        {
+          "id": 86,
+          "name": {
+            "en": "TinyMushroom",
+            "es": "Miniseta"
+          },
+          "price": 500,
+          "item_data_member": 86
+        },
+        {
+          "id": 4,
+          "name": {
+            "en": "Poké Ball",
+            "es": "Poké Ball"
+          },
+          "price": 200,
+          "item_data_member": 4
+        },
+        {
+          "id": 17,
+          "name": {
+            "en": "Potion",
+            "es": "Poción"
+          },
+          "price": 300,
+          "item_data_member": 17
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 88,
+          "script_offset": 788,
+          "maps": [
+            {
+              "id": 116,
+              "constant": "MAP_MAHOGANY_SOUVENIR_SHOP",
+              "name": {
+                "en": "Mahogany Souvenir Shop",
+                "es": "Pueblo Caoba Souvenir Shop"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    },
+    {
+      "id": 29,
+      "inventory_pointer": "0x020FBBD8",
+      "items": [
+        {
+          "id": 2,
+          "name": {
+            "en": "Ultra Ball",
+            "es": "Ultra Ball"
+          },
+          "price": 1200,
+          "item_data_member": 2
+        },
+        {
+          "id": 25,
+          "name": {
+            "en": "Hyper Potion",
+            "es": "Hiperpoción"
+          },
+          "price": 1200,
+          "item_data_member": 25
+        },
+        {
+          "id": 338,
+          "name": {
+            "en": "TM11",
+            "es": "MT11"
+          },
+          "price": 2000,
+          "item_data_member": 316
+        },
+        {
+          "id": 345,
+          "name": {
+            "en": "TM18",
+            "es": "MT18"
+          },
+          "price": 2000,
+          "item_data_member": 323
+        },
+        {
+          "id": 364,
+          "name": {
+            "en": "TM37",
+            "es": "MT37"
+          },
+          "price": 2000,
+          "item_data_member": 342
+        },
+        {
+          "id": 334,
+          "name": {
+            "en": "TM07",
+            "es": "MT07"
+          },
+          "price": 2000,
+          "item_data_member": 312
+        },
+        {
+          "id": 375,
+          "name": {
+            "en": "TM48",
+            "es": "MT48"
+          },
+          "price": 3000,
+          "item_data_member": 353
+        },
+        {
+          "id": 419,
+          "name": {
+            "en": "TM92",
+            "es": "MT92"
+          },
+          "price": 5500,
+          "item_data_member": 397
+        }
+      ],
+      "locations": [
+        {
+          "script_member": 88,
+          "script_offset": 883,
+          "maps": [
+            {
+              "id": 116,
+              "constant": "MAP_MAHOGANY_SOUVENIR_SHOP",
+              "name": {
+                "en": "Mahogany Souvenir Shop",
+                "es": "Pueblo Caoba Souvenir Shop"
+              }
+            }
+          ],
+          "status": "verified_target_script"
+        }
+      ],
+      "runtime_purchase": "NOT_TESTED"
+    }
+  ],
+  "evolution_item_ids": [
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    107,
+    108,
+    109,
+    110,
+    221,
+    226,
+    227,
+    233,
+    235,
+    252,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    433,
+    436,
+    438,
+    439,
+    454,
+    467
+  ],
+  "evolution_items_in_fixed_money_shops": [
+    82,
+    83,
+    84,
+    85,
+    107,
+    108,
+    109
+  ],
+  "evolution_items_not_in_fixed_money_shops": [
+    80,
+    81,
+    110,
+    221,
+    226,
+    227,
+    233,
+    235,
+    252,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    433,
+    436,
+    438,
+    439,
+    454,
+    467
+  ],
+  "unresolved_special_mart_calls": [],
+  "sources": {
+    "pointer_table": "ARM9 + 0x10FA3C, 30 entries",
+    "stock": "Terminated target ARM9 lists",
+    "prices": "Target item map and a/0/1/7 records",
+    "maps": "Target map headers +0xF6BE0, 24-byte records; source constants for display names",
+    "script": "Contiguous literal SetVar 0x8004 then CallStd 2052; dynamic paths excluded",
+    "decoder_sha256": "f5b1ba507a3bf21a0a3e5780ed81c38c9f7d79469f020fa9b600a6ea6214317b",
+    "commands_sha256": "1248d46548280a8f3c9c2d220788a915c03b4dc1951b4f7bb1c6317d07f45061",
+    "scope": "Fixed money shops only; badge-tier stock, point exchanges and runtime reachability are separate."
+  }
+}

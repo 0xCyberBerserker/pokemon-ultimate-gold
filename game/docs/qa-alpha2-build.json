@@ -1,0 +1,333 @@
+{
+  "schema": "ultimate-gold-alpha2-build-audit/v1",
+  "status": "PASS_DELTA_BUILD_AND_EXACT_TARGET_ROUNDTRIP",
+  "build": {
+    "source": {
+      "filename": "HeartGold-USA.nds",
+      "kind": "clean external HG-USA",
+      "size": 134217728,
+      "sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+      "same_input_as_alpha1": true
+    },
+    "alpha1_reference": {
+      "delta": "patches/ultimate-gold-alpha1.xdelta",
+      "delta_sha256": "d4a6287d39b436f3b730ed33d26bac478b919764fe9319cf013fb7e1c3ec6e1f",
+      "decoded_filename": "Ultimate-Gold-alpha1.nds",
+      "decoded_size": 127040288,
+      "decoded_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132"
+    },
+    "target": {
+      "local_input": "../experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+      "filename": "Ultimate-Gold-alpha2.nds",
+      "size": 127045920,
+      "sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "stat_editor_included": false,
+      "eviv_included": false,
+      "kris_editor_included": false
+    },
+    "delta": {
+      "file": "patches/ultimate-gold-alpha2.xdelta",
+      "size": 5015258,
+      "sha256": "1c7ba7258893cbcdb54748b28038c240b509e5e613a7b61a0be462eae3c9f045",
+      "encoded_then_decoded": true,
+      "decoded_size": 127045920,
+      "decoded_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "decoded_matches_target_byte_for_byte": true
+    },
+    "tool": {
+      "version": "xdelta3 3.2.2",
+      "binary_sha256": "29dde0234684827b2d8713aa3c32eacea4a6ed6db4ce6f6858548ffd71eb34b2",
+      "library": "libxdelta3.so.3.2.2",
+      "library_sha256": "29773e8e1aa3a1e0b9e63166df884fa3220a3bc3d5785735e2bbb0fe20f27270",
+      "recipe": "xdelta3 -e -s HeartGold-USA.nds qa-kit-shop-owned-hm-paged-fix6a.nds ultimate-gold-alpha2.xdelta"
+    },
+    "rom_files_in_repository": false,
+    "sav_files_in_repository": false
+  },
+  "alpha1_vs_fix6a_fnt_audit": {
+    "alpha1_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+    "fix6a_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "path_count_alpha1": 384,
+    "path_count_fix6a": 384,
+    "shared_paths": 384,
+    "added_paths": [],
+    "removed_paths": [],
+    "changed_path_count": 4,
+    "changed_paths": [
+      {
+        "path": "a/0/1/2",
+        "alpha1_size": 442588,
+        "fix6a_size": 443124,
+        "alpha1_sha256": "997d62c5733f671b1dd6d93d6e45a8f7ebbe2d4a90597f193f2d9bc2eb4c70c5",
+        "fix6a_sha256": "82a67c757f710a13a3a4fc554c2c517301c7313f9efe9ec674c1be273f129f78",
+        "format": "NARC",
+        "member_count": 965,
+        "changed_member_indices": [
+          842
+        ],
+        "changed_members": [
+          {
+            "index": 842,
+            "alpha1_size": 8084,
+            "fix6a_size": 8617,
+            "alpha1_sha256": "bb02caf2e4a4d73e74d5854361fef58638664c91cfb91468e8f1fd0212e5c208",
+            "fix6a_sha256": "fee04072a93fed6a957b75007ddf5fa6995b3019bfb2ed596d3077056ee50d57"
+          }
+        ],
+        "container_only_diff": false
+      },
+      {
+        "path": "a/0/1/7",
+        "alpha1_size": 22716,
+        "fix6a_size": 22804,
+        "alpha1_sha256": "c59594450bac39052a6fa61782c381e481d1745b150897e82eba17e1e0487270",
+        "fix6a_sha256": "9d2362c23c37c53e34ab36c99ab56c32f0c49449abd94de41250b1837cf55652",
+        "format": "NARC",
+        "member_count_changed": {
+          "alpha1": 515,
+          "fix6a": 517
+        },
+        "common_member_count": 515,
+        "common_members_byte_identical": true,
+        "new_member_indices": [
+          515,
+          516
+        ],
+        "new_members": [
+          {
+            "index": 515,
+            "fix6a_size": 34,
+            "fix6a_sha256": "1cf8eee2ecda52c9c1497b829af7c1d03eb226eb6c795534c1ca53830e7fd303"
+          },
+          {
+            "index": 516,
+            "fix6a_size": 34,
+            "fix6a_sha256": "00886a28ba8f8b93c086bc3b1502cd025d8eb072c03d9dc939bf6fe35fe954fc"
+          }
+        ]
+      },
+      {
+        "path": "a/0/2/7",
+        "alpha1_size": 4421376,
+        "fix6a_size": 4422356,
+        "alpha1_sha256": "b33db4c457d42ede17c8d7227dafe85b7a1e371071403328ec4093cedd633f51",
+        "fix6a_sha256": "fd4c579761610c6877211853b26127bf810ecae257fd04fdbb046d82ddcd00d3",
+        "format": "NARC",
+        "member_count": 829,
+        "changed_member_indices": [
+          222,
+          223,
+          224,
+          542
+        ],
+        "changed_members": [
+          {
+            "index": 222,
+            "alpha1_size": 14906,
+            "fix6a_size": 14936,
+            "alpha1_sha256": "d507c2044558feaa3d27e6befb9b7747947ecfe1054cb738acf63efca8a52c15",
+            "fix6a_sha256": "dac3c4bcc9076f38fa18000417c9e66ff93f3081d6f7889a5a7f426fc2660b50"
+          },
+          {
+            "index": 223,
+            "alpha1_size": 25324,
+            "fix6a_size": 25522,
+            "alpha1_sha256": "b5cca61c345ef6ce83b70b8d86844afccc35bfe03db7b7db51754fdb0888dfb0",
+            "fix6a_sha256": "5f1ecb6e52a130e22d27802ec0f2a7c37faf32e883c31b4e67f6927c3e4212fa"
+          },
+          {
+            "index": 224,
+            "alpha1_size": 16022,
+            "fix6a_size": 16056,
+            "alpha1_sha256": "0b54204e7ecedc8e9e384da07502b7c39086e696dc99ea7d2bb64e19d0bcf7ee",
+            "fix6a_sha256": "7fab28816011756e3bb7ea791e2076068a3b1063763dd852ce9800fc8a93c3d4"
+          },
+          {
+            "index": 542,
+            "alpha1_size": 4586,
+            "fix6a_size": 5306,
+            "alpha1_sha256": "b7992fca403da623857621542cc4e5088262163aae4c24028d2b055b95e438fe",
+            "fix6a_sha256": "b9a7bc65e2880428f6984b50b38ed0f0b861b7df855e73902d3307e8126a8394"
+          }
+        ],
+        "container_only_diff": false
+      },
+      {
+        "path": "a/0/3/2",
+        "alpha1_size": 143708,
+        "fix6a_size": 143712,
+        "alpha1_sha256": "4870a40ad2a4237a8e0096d32a8b188a4ff8ab6a56bf72b46e0b4215c7195225",
+        "fix6a_sha256": "a72688a68f2683bba77e6ba1582247c5d3a8ef4c958c817d919601824c639606",
+        "format": "NARC",
+        "member_count": 491,
+        "changed_member_indices": [
+          57
+        ],
+        "changed_members": [
+          {
+            "index": 57,
+            "alpha1_size": 560,
+            "fix6a_size": 560,
+            "alpha1_sha256": "d9cfae626f1ba02ceb37a5350bdd637a89f69f7b7e8797458e720a850be47e7b",
+            "fix6a_sha256": "1944cfb192a69cce00b7bbfa2af3b32509542abc22f4e1e05cf92d79d2ed6725"
+          }
+        ],
+        "container_only_diff": false
+      }
+    ],
+    "byte_identical_metadata_narcs": {
+      "personal_species": {
+        "path": "a/0/0/2",
+        "byte_identical": true,
+        "size": 26468,
+        "sha256": "5f193d2eacddf0ffef9daf7acebd35dcdb21c30f59ab497759c3b7cc335f2d40"
+      },
+      "moves": {
+        "path": "a/0/1/1",
+        "byte_identical": true,
+        "size": 11356,
+        "sha256": "744e04cad9270122e7961042a5e554461fc56169bd928940878fa465b8d810e4"
+      },
+      "learnsets": {
+        "path": "a/0/3/3",
+        "byte_identical": true,
+        "size": 21338,
+        "sha256": "d22293308e9c4c92241a1576a0e83fd8850cc4e9d49effec3d059190a1b8e98b"
+      },
+      "evolutions": {
+        "path": "a/0/3/4",
+        "byte_identical": true,
+        "size": 26468,
+        "sha256": "fad0200a3e7e56c0bf3a4ce4487937de16598cc4ba71b3741d8741bc3b890322"
+      },
+      "trainer_headers": {
+        "path": "a/0/5/5",
+        "byte_identical": true,
+        "size": 20716,
+        "sha256": "ecbaf5a3ca95867c4479f0b5571546ab3edf4a0f3d0d01355579f466cf2a3142"
+      },
+      "trainer_parties": {
+        "path": "a/0/5/6",
+        "byte_identical": true,
+        "size": 29456,
+        "sha256": "114fb7172c4fb11c707e26c4179fbe394265f3ea9bfbce5b8ee12a1ead3375dc"
+      },
+      "pokemon_icons": {
+        "path": "pbr/poke_icon.narc",
+        "byte_identical": true,
+        "size": 577776,
+        "sha256": "3463c546c112f928f2f8e82ee1638b9739d52dea1d72779704ad3cc36cfb6c1b"
+      }
+    },
+    "interpretation": {
+      "inherit_exact_bytes_for": [
+        "a/0/0/2",
+        "a/0/1/1",
+        "a/0/3/3",
+        "a/0/3/4",
+        "a/0/5/5",
+        "a/0/5/6",
+        "pbr/poke_icon.narc"
+      ],
+      "reextract_for_exact_target": [
+        "scripts/NPC/shop routes: a/0/1/2 member 842",
+        "messages/text: a/0/2/7 members 222,223,224,542",
+        "event/object data: a/0/3/2 member 57",
+        "additional archive payloads with semantics unmapped: a/0/1/7 members 515 and 516"
+      ],
+      "a_0_1_7": "The archive has 517 members in FIX6a versus 515 in Alpha1. All 515 common members are byte-identical; target adds members 515 and 516. Their semantic mapping is unverified and any metadata depending on them must not be inherited.",
+      "semantic_mapping_limit": "Archive/member byte changes are proven; mapping each changed member to every wiki-facing NPC/item/shop claim requires exact target script/event/message decoding."
+    }
+  },
+  "exact_fix6a_native_evidence": [
+    {
+      "report": "docs/qa-kit-regression-fix6a.json",
+      "sha256": "dc269504b11e12fd398226a4d84d461dd0b943d1e59f60c4799481f65e8a09a4",
+      "status": "NATIVE_EMULATED_REGRESSION_PASS",
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    {
+      "report": "docs/qa-repel-reuse.json",
+      "sha256": "6f319a481dfbf96104bb92d9aa0057f4731c31291346fa083cbb90a877028c48",
+      "status": "PARTIAL_NATIVE_RETENTION_PASS",
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    {
+      "report": "docs/qa-repel-remaining.json",
+      "sha256": "3e486cc04263796113036049d7305b99e71cd924f25c466e9458385be7e92de4",
+      "status": "BOUNDED_NATIVE_QA_PASS",
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    {
+      "report": "docs/qa-hm-cut-fix6a.json",
+      "sha256": "d010d5cc66415f3e0290a0f467aefbed277590524aa86dfc53379016d6f138e7",
+      "status": "NATIVE_ACTION_CONFIRMED",
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    {
+      "report": "docs/qa-hm-fly-surf-fix6a.json",
+      "sha256": "dc884b07a3b6c22072205e04489d265c39fd91f685e7ec7dfa48a09678d32945",
+      "status": "PASS_NATIVE_FLY_SURF_SAVE_COLD_WALKING_FRIENDSHIP",
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    {
+      "report": "docs/qa-rock-smash-fix6a.json",
+      "sha256": "ccc1054df9696e936911b1e92c8e83e12c46dec8e7fe2e947896281588d4d076",
+      "status": "NATIVE_ACTION_CONFIRMED",
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    {
+      "report": "docs/qa-hm-strength-fix6a.json",
+      "sha256": "009fdc9ab59caeacb70fcaa92217f89f2971e58b73f73b49cb72e5129e44a0d3",
+      "status": "VERIFIED_NATIVE_STRENGTH_AND_BOULDER_PUSH",
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    {
+      "report": "docs/qa-hm-waterfall-fix6a.json",
+      "sha256": "ef6933e83cbc0b44ba8633d73c1219157b30d983efe67769344e5a07471fc75e",
+      "status": "PASS_NATIVE_PROMPT_AND_ASCENT",
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    {
+      "report": "docs/qa-hm-whirlpool-fix6a.json",
+      "sha256": "8426e8afeceb028cfdf5096b36dd3b7e552b3846e49d5e5fffd2173368eea57b",
+      "status": "PASS_NATIVE_PROMPT_AND_CROSSING",
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    {
+      "report": "docs/qa-hm-rock-climb-fix6a.json",
+      "sha256": "cbbe91fe2a024e81ce1976269c187eec0536cc1917d43a6595c5a4b1eee75cb2",
+      "status": {
+        "native_prompt": "VERIFIED",
+        "native_move_message": "VERIFIED",
+        "native_climb_position_change": "VERIFIED",
+        "normal_on_foot_approach": "NOT_TESTED_SURFING_FIXTURE",
+        "save_and_cold_persistence": "NOT_TESTED",
+        "story_access": "NOT_TESTED"
+      },
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    {
+      "report": "docs/qa-hm-rock-climb-walk-fix6a.json",
+      "sha256": "5947f186b7503c4150195579e22c6332f803dd779ffeba08db6296dd94aca733",
+      "status": "PASS_NATIVE_ON_FOOT_ACTION_AND_ASCENT_FROM_POSITION_FIXTURE",
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    }
+  ],
+  "excluded_nonmatching_evidence": [
+    {
+      "report": "docs/qa-evolution-shop.json",
+      "sha256": "a776d68a97a71fd9900330b620a5739faa895dba1941f8b9bb7bc02bdc060e7b",
+      "target_sha256": "231a0a2fe3f873d0d369f6adbde6e6f69abe74e6d4bf9642fe1b1df8c8a7e514",
+      "alpha2_inheritable": false,
+      "reason": "different ROM hash; evolution-shop purchase results are not evidence for FIX6a"
+    }
+  ],
+  "coverage_limits": [
+    "TESTED_PARTIAL only; no complete story or full adventure claim.",
+    "Eight owned-HM action cases have individual exact-target reports; do not infer normal story access or save persistence where those reports mark it pending/not assessed.",
+    "Repel expiry in the remaining-Repels report was accelerated with a one-frame fixture; 250 native walking steps were not performed.",
+    "The exact-target kit regression covers one Rare Candy and one Oran Berry use, not all kit contents or full evolutionary shop transactions.",
+    "No stat-editor, EVIV, or Kris editor inclusion is claimed."
+  ]
+}

@@ -1,0 +1,1714 @@
+{
+  "schema": "portable-stat-editor-menu-textfix-ev4-acceptance/v1",
+  "status": "PASS_BOUNDED_NATIVE_EV4_SAVE_COLD; NO_BRANCH_NO_WRITE; NO_REPEAT_TEST",
+  "summary_en": "On the exact textfixed FIX6a candidate, the native Bag flow reached Clefairy slot 0 and a readable HP EV preview from 0 to 4. The No branch returned through Exit without Party/Bag/reserve changes. One Yes operation set only HP EV to 4, native Save advanced the active MAIN counter 10→11, and a fresh no-state run reloaded EV=4 with valid CRC. This is a bounded case only; no repeat-operation claim is made.",
+  "summary_es": "En la candidata FIX6a exacta con el texto corregido, el flujo nativo de Bolsa llegó a Clefairy, espacio 0, y mostró de forma legible la vista previa de EV de PS de 0 a 4. La rama No volvió con Salir sin cambios en equipo, Bolsa ni reservas. Una operación Sí fijó únicamente EV de PS en 4; Guardar nativo avanzó el contador MAIN activo de 10 a 11 y una ejecución nueva sin state volvió a cargar EV=4 con CRC válido. El alcance es este caso; no se afirma repetición.",
+  "provenance": {
+    "rom_path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-textfix/portable-stat-editor-menu-textfix-fix6a.nds",
+    "rom_sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a",
+    "runner_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_uimode.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "core_path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "cheats": [],
+    "seed_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-kit-launch-native-alpha2-seeded-cold/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+    "seed_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "saved_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+    "saved_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c"
+  },
+  "preview": {
+    "screenshot_paths": {
+      "step_menu": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-ev4-preview/ev4_selected.png",
+      "confirm": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-ev4-preview/preview_before_choice.png"
+    },
+    "script_environment": {
+      "field_system": "0x022a020c",
+      "task_manager": "0x022c0140",
+      "script_environment": "0x022a6b6c",
+      "environment_magic": 222271,
+      "environment_state": 1,
+      "script_context": "0x022a6c6c",
+      "script_context_mode": 2,
+      "native_wait_callback": "0x020416e5",
+      "script_pc": "0x022a89b5",
+      "script_pc_opcode_u16": 17,
+      "special_vars_8004_8005_800c": [
+        0,
+        4,
+        0
+      ]
+    },
+    "special_vars_8000_through_800d": [
+      0,
+      0,
+      0,
+      4,
+      0,
+      4,
+      65535,
+      0,
+      0,
+      4,
+      0,
+      0,
+      0,
+      0
+    ],
+    "kind_ev": 0,
+    "stat_hp": 0,
+    "step": 4,
+    "status": 0,
+    "current": 0,
+    "proposed": 4,
+    "confirm_unset": 65535,
+    "slot_zero_species_id": 35,
+    "slot_zero_evs_before": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "no_branch": {
+    "special_vars_8000_through_800d": [
+      0,
+      0,
+      0,
+      4,
+      0,
+      4,
+      1,
+      0,
+      0,
+      4,
+      0,
+      0,
+      61166,
+      0
+    ],
+    "confirm_no": 1,
+    "menu_result_sentinel": 61166,
+    "party_strict_seed_match": true,
+    "returned_to_visible_field": true,
+    "field_ui_mode": {
+      "field_system": "0x022a020c",
+      "task": "0x023bcba8",
+      "task_data": "0x02356c00",
+      "mode": 0,
+      "state": 1,
+      "mode_state_bytes_hex": "0001"
+    }
+  },
+  "yes_branch": {
+    "special_vars_8000_through_800d": [
+      0,
+      0,
+      0,
+      4,
+      0,
+      4,
+      0,
+      0,
+      4,
+      4,
+      0,
+      0,
+      0,
+      0
+    ],
+    "success_message": "The value was updated.",
+    "party_expected_transform": "Only Clefairy slot-0 HP EV 0→4; all active records match the encoded expected record or a verified exact two-byte cipher boundary; other five slot-0 EVs remain 0.",
+    "party_records": [
+      {
+        "slot": 0,
+        "record_equal": true,
+        "exact_cipher_boundary": {
+          "box": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_checksum_valid": true,
+          "checksum": 19311
+        }
+      },
+      {
+        "slot": 1,
+        "record_equal": true,
+        "exact_cipher_boundary": {
+          "box": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_checksum_valid": true,
+          "checksum": 56412
+        }
+      },
+      {
+        "slot": 2,
+        "record_equal": true,
+        "exact_cipher_boundary": {
+          "box": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "party_tail": {
+            "mode": "plain_prefix",
+            "split_bytes": 0
+          },
+          "decoded_checksum_valid": true,
+          "checksum": 46459
+        }
+      }
+    ],
+    "bag_exact_seed": true,
+    "key_item_118_quantity": 1,
+    "reserve_sections_exact_rom": {
+      "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+      "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+      "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    },
+    "field_return_ui_mode": {
+      "field_system": "0x022a020c",
+      "task": "0x023bcba8",
+      "task_data": "0x02356c00",
+      "mode": 0,
+      "state": 1,
+      "mode_state_bytes_hex": "0001"
+    }
+  },
+  "persistence": {
+    "native_save_prompts": [
+      "Would you like to save the game?",
+      "There is already a saved file. Is it OK to overwrite it?"
+    ],
+    "native_save_completed_screenshot": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/save_complete.png",
+    "seed_active_counter": 10,
+    "saved_active_counter": 11,
+    "saved_active_crc16": 18636,
+    "both_saved_main_crc_valid": true,
+    "saved_slot_zero_evs": [
+      4,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "seed_vs_saved_changed_byte_count": 195,
+    "changed_ranges_half_open_without_semantic_labels": [
+      [
+        192532,
+        192533
+      ],
+      [
+        192542,
+        192544
+      ],
+      [
+        262180,
+        262181
+      ],
+      [
+        262184,
+        262185
+      ],
+      [
+        262188,
+        262189
+      ],
+      [
+        262280,
+        262282
+      ],
+      [
+        262302,
+        262303
+      ],
+      [
+        262304,
+        262432
+      ],
+      [
+        263752,
+        263753
+      ],
+      [
+        263754,
+        263755
+      ],
+      [
+        263756,
+        263757
+      ],
+      [
+        263758,
+        263759
+      ],
+      [
+        264416,
+        264417
+      ],
+      [
+        264418,
+        264419
+      ],
+      [
+        264420,
+        264421
+      ],
+      [
+        264422,
+        264423
+      ],
+      [
+        264424,
+        264425
+      ],
+      [
+        264426,
+        264427
+      ],
+      [
+        265060,
+        265061
+      ],
+      [
+        265062,
+        265063
+      ],
+      [
+        265220,
+        265221
+      ],
+      [
+        265222,
+        265223
+      ],
+      [
+        265224,
+        265225
+      ],
+      [
+        265226,
+        265227
+      ],
+      [
+        265228,
+        265229
+      ],
+      [
+        265230,
+        265231
+      ],
+      [
+        265850,
+        265851
+      ],
+      [
+        266812,
+        266813
+      ],
+      [
+        266816,
+        266817
+      ],
+      [
+        268248,
+        268249
+      ],
+      [
+        271189,
+        271191
+      ],
+      [
+        271214,
+        271215
+      ],
+      [
+        271218,
+        271219
+      ],
+      [
+        271269,
+        271271
+      ],
+      [
+        271294,
+        271295
+      ],
+      [
+        271298,
+        271299
+      ],
+      [
+        271308,
+        271309
+      ],
+      [
+        271310,
+        271311
+      ],
+      [
+        271429,
+        271430
+      ],
+      [
+        271466,
+        271467
+      ],
+      [
+        271496,
+        271497
+      ],
+      [
+        271509,
+        271510
+      ],
+      [
+        281404,
+        281406
+      ],
+      [
+        289033,
+        289034
+      ],
+      [
+        325144,
+        325145
+      ],
+      [
+        325158,
+        325160
+      ],
+      [
+        399872,
+        399873
+      ],
+      [
+        454676,
+        454677
+      ],
+      [
+        454686,
+        454688
+      ],
+      [
+        458760,
+        458761
+      ],
+      [
+        458764,
+        458766
+      ],
+      [
+        459201,
+        459204
+      ],
+      [
+        459272,
+        459273
+      ],
+      [
+        459276,
+        459278
+      ],
+      [
+        459713,
+        459716
+      ]
+    ],
+    "cold_reload_run": "portable-stat-editor-menu-textfix-ev4-cold-reload",
+    "cold_reload_state_input": null,
+    "cold_reload_party_strict_saved_dsv_match": true,
+    "cold_reload_party": {
+      "strict_against_saved_dsv": true,
+      "party_array_sha256": "5ce519991e8ba88900151781e95571cf310a93dfa8cc52645c5d95845167dc17"
+    },
+    "cold_reload_bag_exact_saved_dsv": true,
+    "cold_reload_item_118_quantity": 1,
+    "cold_reload_reserves_exact_rom": {
+      "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+      "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+      "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+    }
+  },
+  "checks": {
+    "runs": [
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-cold",
+        "frames": 5500,
+        "result_sha256": "930dae0e6d80b9a4e474481996b5f0e46c52dbf3a7fb4bec04d8e2f10b3d0178",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-cold/input-script.json",
+          "sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a"
+        },
+        "state_in_sha256": null,
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-cold/cold.state",
+          "sha256": "ee75ad95454de71abde9e9a7462d99cf5374a0e22a536aa44eb495e64756a99c"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-cold/system_ram.bin",
+          "sha256": "e1ab6c7e1826c06ea1dd7924a0050cc7a7ab6c3f99aca5a003d9fb6d64a901ca"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-cold/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "c3989473b6af49473d157c75a49e790c145bdced1af1ae057a08c8803a1c761d"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-cold/cold_continue_accepted.png",
+            "sha256": "83b54e691758731e65ff4c245fc972b3056cdcf805a62a0e86949c4a3e0a1803"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-cold/cold_continue_menu.png",
+            "sha256": "356b4abdc484125eee4d72a224b1b77b7ebcbffe32c6c44fab0928783c3aff2e"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-cold/cold_final.png",
+            "sha256": "6896a9a401fd4401ab05d8a3dea1f0be8f56b364f06dc6f27308556291080bf7"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-cold/cold_loaded_field.png",
+            "sha256": "a3dce8960aaf17e1bb7b1b0915d617e62d76ddaf890f6dad79dfecec2f21b786"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-cold/cold_loaded_identity.png",
+            "sha256": "137b6737324b59333dc0406622f8dd662ed33850a988555ad4b546fc27bbbdda"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-cold/cold_pre_title_inputs.png",
+            "sha256": "30357143badc6ad72fb3e91f7966804c6836c174409e2814aebcce0511776632"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-cold/cold.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-step-select",
+        "frames": 3800,
+        "result_sha256": "86fa0ea085e6278fa54ff060b0d30b07f68277845b3ae9833275fa296d32bb61",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/input-script.json",
+          "sha256": "b18b8394bb46cbba6701e2d25d09a2843a1235550f164e1fa01836fd30208463"
+        },
+        "state_in_sha256": "ee75ad95454de71abde9e9a7462d99cf5374a0e22a536aa44eb495e64756a99c",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/stage.state",
+          "sha256": "6f3c9a952a601bd22e329f27a7d3e95845d73e3ebf26192c1280e26acc039340"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/system_ram.bin",
+          "sha256": "c9751e1078155faa47d3808da8b86d10352a9f82afc7fe6062b42869114cad67"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "18a782f9c8d1470b9327b26c6e6d2c2bc2d40739e651d3bee2623239b6940ec7"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/bag_open.png",
+            "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/bag_stable.png",
+            "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/cheat_kit_popup.png",
+            "sha256": "3e117272ca325ca1ce6c75aaff64b61640705a889e08ba40d2761b80b982ad5c"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/cheat_kit_popup_stable.png",
+            "sha256": "3e117272ca325ca1ce6c75aaff64b61640705a889e08ba40d2761b80b982ad5c"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/ev_actions.png",
+            "sha256": "237c2d292532a20290d6203fd67a35f1502747657c54df7f18c866e072674a26"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/ev_family_highlight.png",
+            "sha256": "9ba5707c7945c9bb57b67c4c22b402674b74237cb04ac3220aeb2f35ba6f1220"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/ev_family_menu.png",
+            "sha256": "3215afbe56aaddd2a0bee01f4222d67969c3b59fc1f356bf0ca4ab59250b18f6"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/ev_hp_step_menu.png",
+            "sha256": "ca7293a1626105c7ea4aab2cc779775d5dd93868a956987e278d4c0f976a8fbb"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/ev_stats.png",
+            "sha256": "63d6191e011cb721facdba7a261c629880a6307c4784024c2181ede17bdf0f14"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/field_before_bag_touch.png",
+            "sha256": "dd3f06371ef529c614be9087c8948e5c17abdf0e4cdb871c8bb71064942bd9e8"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/key_items_open.png",
+            "sha256": "912dee0291dcc2ad49b5b760d8b5790010aa9b2fc325860e8383bbfb5b9be7bb"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/key_items_stable.png",
+            "sha256": "26db0517b13732282a6446579a2122cfe1d603f9598aa8dc80031f0d5133b5cd"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/party_slot0_visible.png",
+            "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/party_transition.png",
+            "sha256": "0a7316c52d09d0e60f3c0a4272e1c7e4a917f16f7f075a6fa40fb4633c842d82"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-step-select/stage.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-preview",
+        "frames": 650,
+        "result_sha256": "5a183100d4855308f32d82ce0aafaab21a44767a072f4420ce754af4294887f6",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-preview/input-script.json",
+          "sha256": "93c0a9f4307d91d35dcda9d8e0b3db844880a352f93fa5f47b9c3f8bbe348c7e"
+        },
+        "state_in_sha256": "6f3c9a952a601bd22e329f27a7d3e95845d73e3ebf26192c1280e26acc039340",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-preview/preconfirm.state",
+          "sha256": "9d066664e913073a3bc59261c0100df72d4f4865d47398954cba1cc97dff4213"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-preview/system_ram.bin",
+          "sha256": "31a1be2a5c586115af604208113c64f043206c37a01a7d7a8120377d3c028681"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-preview/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "739ff1bc79a93cfc1838408978d81940d97eb477b6bb96c928e79ff060eaecdd"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-preview/ev4_selected.png",
+            "sha256": "1a6df711d5a6e2a47e3647c7d71498b31ce6025301885b5b59bc815a4e2eb0be"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-preview/preview_before_choice.png",
+            "sha256": "bdc35992c9213d2ff6fc2fba5b12b8681cb1257a1c3a9218cadb0d480f8f5d28"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-preview/preview_stable.png",
+            "sha256": "8c5291d2ea978032949ff467bd873cdd2027c8fbd658fed4f542b15acf9f9e89"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-preview/selected_before_confirm.png",
+            "sha256": "2d1f9f164a212d505908446cdaf74ed71486f23fcf8a129692fcfde233f35211"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-preview/step_menu_before_input.png",
+            "sha256": "1989b47f00e203113e2b65ed0b8cb7df74b14093e1978c9c7fbf8ab3c071e961"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-preview/preconfirm.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-no",
+        "frames": 800,
+        "result_sha256": "c7525540724b5ab55922d4b120c807b3e1b6c8a83de779f442383bee02172753",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no/input-script.json",
+          "sha256": "7a8298b5b87fc7b655a9f4cd6ecfd8b8eae3f0c967b937ffd4b1c16c6851f065"
+        },
+        "state_in_sha256": "9d066664e913073a3bc59261c0100df72d4f4865d47398954cba1cc97dff4213",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no/no-wait.state",
+          "sha256": "de8b94940099991360bbdadfa4db76f16eb28c7490b32e58e71f4848b5734f86"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no/system_ram.bin",
+          "sha256": "02d2b6067c91c8768a7964a0598ef6be797c2d9da5c8e8f0df6ee1fc3403bbf0"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "85ea6e1acf4e33444df924c4305d1b8d7efb1ce63790d7d91fbd239e49e7bd71"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no/no_result.png",
+            "sha256": "dfc70c96b49ab4eb6dc839d5fb4a59585aca2b3a72b5b9bb6dee5ff487abe3b3"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no/no_result_stable.png",
+            "sha256": "59ee5503921b4ea7eb9e4f967b9a00b1babac9e825540d5ae64995141c38cb29"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no/no_selected.png",
+            "sha256": "544076594d5020fbca0b78afddd9d2c30d8e1aa3f0b1170c11f4b2acae9545e7"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no/no_selected_before_a.png",
+            "sha256": "97f9256ab1734d4746198d0d519f9eee06851dd0ed8988125bee698349a78477"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no/yes_default.png",
+            "sha256": "ec51484d8e961e545e93001bfd9ddf71bd799e97842ff5839483d3c5005aa1fd"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no/no-wait.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-no-back-select",
+        "frames": 180,
+        "result_sha256": "9475a8759d89cc5dd32cb06fcee505611a1461047290c0e0c53b2f269317a6b3",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back-select/input-script.json",
+          "sha256": "e274cd61ce4e6ea1bed139bece398203b35dfdac9928fda7a04b99c21c3bb775"
+        },
+        "state_in_sha256": "de8b94940099991360bbdadfa4db76f16eb28c7490b32e58e71f4848b5734f86",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back-select/back.state",
+          "sha256": "a216775dd3192a74effb04263a64c7c5b4fa69f0bd7515bc5ccf5e1df6a0b36b"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back-select/system_ram.bin",
+          "sha256": "7feac68e64c86803c5e3e6d72c7a0cd17abf34af8e42f9c41185f7a37d70d8d8"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back-select/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "fce391861856ca06a09b4d96b4d56757d173ab13dcfb247b668c8e32b623ed9e"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back-select/back_selected.png",
+            "sha256": "7177ec7500440cdffcabaacebfb6b5085becf7f5428fa9aac4edde5af6ef4866"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back-select/increase_selected.png",
+            "sha256": "afc9350ed1341e2e1eff7694afa8a231837e371d34bb950f35bf310e4037cb61"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back-select/back.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-no-back",
+        "frames": 300,
+        "result_sha256": "752e3fe6f006386e6175f119cb78a644545396dd431c935431faac8ee8d569a7",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back/input-script.json",
+          "sha256": "89df8fa26fd6a5260514a69530149066248ea347137e992d6d906d076fff8bb8"
+        },
+        "state_in_sha256": "a216775dd3192a74effb04263a64c7c5b4fa69f0bd7515bc5ccf5e1df6a0b36b",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back/family.state",
+          "sha256": "ad11369cc0f2fc5f8d4d154881e8dac3bfe384ebc193310959ee8dc24a635aa5"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back/system_ram.bin",
+          "sha256": "a040052eaea5835ef52796bc8fd7d08c67ce0e509bdd882f414111543f6a6fbb"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "3beed0c4ac454f8903f0c76e0b0ca77ba7a73003177a548f182a755ed9bdd053"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back/back_selected.png",
+            "sha256": "e828c3c1b57ef2da8ed60b9163b2f62f3803bbd7dbba79b610493eff91914f2a"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back/family_menu.png",
+            "sha256": "746862819187094f8855d630af06ec8c5c6017b460f4cec368be424dca4b8254"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back/family_menu_stable.png",
+            "sha256": "c89ee0b77e3ab02ac441799b86942be6ba67b524a757ad92b10bf3df0d224d00"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-back/family.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-no-exit-select",
+        "frames": 180,
+        "result_sha256": "a155e6f161d692f2cf972a1131ee29bead79d284021fc5b62a926557cadd53e5",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit-select/input-script.json",
+          "sha256": "d27bcdd633cadbe211338736292db6569e656de60b1ac79c4e1f4a6a068a04eb"
+        },
+        "state_in_sha256": "ad11369cc0f2fc5f8d4d154881e8dac3bfe384ebc193310959ee8dc24a635aa5",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit-select/exit-selected.state",
+          "sha256": "5c349ee633a1a4c74fcf3b84d8850f248f8438d1a9edea95ec0444586afc3aea"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit-select/system_ram.bin",
+          "sha256": "4ae7014e35358e071045cba2ec948d0c576d98e4d58c035b3326e1ea9ba3aada"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit-select/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "b23f31a562daf77216e5dd78ee4b95ce4765766a83ee45c535b335eb384fd0d1"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit-select/ev_family_selected.png",
+            "sha256": "8e0b02cd3d9af762d3dae5c7c339d943bed80c0e9ead4ea497fa72217fc3b3a6"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit-select/exit_selected.png",
+            "sha256": "f07fa356ccb359a131ff087914838be9b28e19a7c049fe137f547b960d7703ba"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit-select/exit-selected.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-no-exit",
+        "frames": 650,
+        "result_sha256": "4c282ea892e1971e2ae286a012c417c44f2494a2524a41882aabeb485fe7c60d",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit/input-script.json",
+          "sha256": "c1ab2d77877b262a52b3063e7c963711cb6b9a6316a46266467c058d2818aa4a"
+        },
+        "state_in_sha256": "5c349ee633a1a4c74fcf3b84d8850f248f8438d1a9edea95ec0444586afc3aea",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit/field.state",
+          "sha256": "6dcad1e6a037eb0b981d0108cf3c4dce5a203f97d294bf7d6ec5fea1b448d278"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit/system_ram.bin",
+          "sha256": "e872a700ca2553fc557042c33ab7c8fc914635be20a75aee1d04cdcc3e18f0e5"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "659dc4e5d59c2394f1ccbab949bb98b6108da8ea982206697cc46b63f1d6c893"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit/exit_selected.png",
+            "sha256": "a2ac6474bff363f91b8d3ce0b85b3e84a9e5313ff8f0120bc6d0463f821d9d3d"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit/field_return.png",
+            "sha256": "5d3fe4a3d994b97c9381ed1b54dcf20a84adb98fcb9b1d032031e96b1d50c825"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit/field_stable.png",
+            "sha256": "62b5f8fd01576e9a831fe5c52a609885a10d5f3689a42b49e82bb6cd7c478c87"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-no-exit/field.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-yes",
+        "frames": 700,
+        "result_sha256": "1c2c86da09eab4beb6114a63be427bcdec4fc459ea37abdf67f359ec90f11af1",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes/input-script.json",
+          "sha256": "872f500c955b7ac0716a57ad452bd4ce23a068492723e6d8a76426248df151b5"
+        },
+        "state_in_sha256": "9d066664e913073a3bc59261c0100df72d4f4865d47398954cba1cc97dff4213",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes/yes-result.state",
+          "sha256": "8a581a8fc4d1cf2bd66d0ecb852d524357c933a4baa676e22079405735db6145"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes/system_ram.bin",
+          "sha256": "e55858f923026ca5ca91c3825d1cd91002a85ab62168e78591e2a4c8bead75a8"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "1eeed22081e0a072edaa6e41b61a5c71dbf894359d047034b765f56f6a52d2d5"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes/yes_default_before_confirm.png",
+            "sha256": "ec51484d8e961e545e93001bfd9ddf71bd799e97842ff5839483d3c5005aa1fd"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes/yes_result.png",
+            "sha256": "8eda2ab4fc5c0eb71a3f119d108242cf3f9d175192af27b84df9d082ee6518dc"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes/yes_result_stable.png",
+            "sha256": "2d5c645c4dfbf57be2790109d80d04131f9c3354ec38d642769f7b648c50bce6"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes/yes-result.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-yes-ack",
+        "frames": 600,
+        "result_sha256": "2ecd67a7e9a3f2b1e33b144a42d4282732de97c7f24c3af34442512077bb1641",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-ack/input-script.json",
+          "sha256": "a4ea318cb74de727ac88808423b804385900c796a5e74d401cf3020ae7ad485d"
+        },
+        "state_in_sha256": "8a581a8fc4d1cf2bd66d0ecb852d524357c933a4baa676e22079405735db6145",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-ack/ack.state",
+          "sha256": "171a7df1a750da98b30fca9b0e7bd19c77d6d3f5f945602f52fd926162d48a3f"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-ack/system_ram.bin",
+          "sha256": "0a430d9dd40370ad8c2974807185fdbb41bbb7f49b749f0e23fd56cdbad4ce3c"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-ack/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "badb63a276ad062fdfed24e8382bacc2070b18973588f3414bf183f026ca3156"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-ack/after_ack_stable.png",
+            "sha256": "7436634f3851299224ce3659f1247e1a06a2a986a26137557bb662eb0472c01f"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-ack/after_success_ack.png",
+            "sha256": "c1bf38148aecbd5a0ca207d824f622e49275330668f7ff56622f9713784bfc30"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-ack/success_message.png",
+            "sha256": "15e93ce5da3b190d93b3c705d0c0291c5f6dfae063ae1016e2214f2ff6f6c3a5"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-ack/ack.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-yes-repeat-menu",
+        "frames": 500,
+        "result_sha256": "9a9353922fb6ba8a88dac481adc78cb9c448a8a17fbc8cb1c897f3f138935d96",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-repeat-menu/input-script.json",
+          "sha256": "0f64a9c9d3b598d0ecb9ec0e834712139d4fa28080c67a0c8f014d531637cec7"
+        },
+        "state_in_sha256": "171a7df1a750da98b30fca9b0e7bd19c77d6d3f5f945602f52fd926162d48a3f",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-repeat-menu/repeat-menu.state",
+          "sha256": "4e5b79bf335d787b27e084244d2a3150fe3c11b9831a62a39e9a688b29a7634e"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-repeat-menu/system_ram.bin",
+          "sha256": "f2df8aab89d685f1200da4c7263b2512fcea010deadd07cc1da69d300aeae0c1"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-repeat-menu/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "02cb0ab4122811f5b5c361b71142a82497ae0196de9d21230d1b1b393f4dd506"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-repeat-menu/change_complete.png",
+            "sha256": "ddb6ba91fecc05d5359966827cfe3e90f9ca14c6cebdfa47522bdc268af59b2d"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-repeat-menu/repeat_or_exit.png",
+            "sha256": "49ee73b428c2e6ffb97b97f34f597d8e0d71f436974ba67bfb3f77394250ea74"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-repeat-menu/repeat_or_exit_stable.png",
+            "sha256": "30241dbf9e9cdfb3dc9e71a5ff1688c6443b9f8f2f6311a3490fbd45afe53256"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-repeat-menu/repeat-menu.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-yes-exit",
+        "frames": 500,
+        "result_sha256": "5cfd8044c432db89c3c5a3d3c4cff01b9269631741d6dbc4bdf37929eea7b4cc",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-exit/input-script.json",
+          "sha256": "b5f962e00f4f41763a870c8fb62994b01d9e8c51b70df7646bf10602ed63439b"
+        },
+        "state_in_sha256": "4e5b79bf335d787b27e084244d2a3150fe3c11b9831a62a39e9a688b29a7634e",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-exit/exit.state",
+          "sha256": "9a7f44208179eb2246956e622a26b0188730e870f5a8791f66abf5c293ae253a"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-exit/system_ram.bin",
+          "sha256": "d94d5a0f5593e74a64b48f9b213c458525b3913795ac5fcfff23eb4dc91f3fdb"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-exit/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "a15a41e185d1d0f1bff8d5909684e47a049d391924d53e726cc3909f663661c9"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-exit/exit_result.png",
+            "sha256": "f90d4cf4a0ae23dd4ad53a890848a37f68eae3de0b3efc83bea04ffab1e577b5"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-exit/exit_selected.png",
+            "sha256": "d4762fd4500a38a2d1326fd91cc3c6d74bbf6172924e6297aa11cde05d8f8efe"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-exit/exit_selected_before_a.png",
+            "sha256": "2858e66e3de82657635be15a41f40b658561ac0068a274487f2dd3e5a1d50525"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-exit/repeat_selected.png",
+            "sha256": "0b00785e4fcbd4eb22c4b1fe0640c580411d0b44df32d3ecb9b12be6d67a1458"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-yes-exit/exit.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-save-open",
+        "frames": 650,
+        "result_sha256": "509f6e098df679f45a6200e547b581a947de8be6654e79da8c15d01a2a9ca8e2",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-open/input-script.json",
+          "sha256": "9eda1746ccb538f849aa0e4dc1a871d87ced0724fbc6cbd0b9091222a510be8f"
+        },
+        "state_in_sha256": "9a7f44208179eb2246956e622a26b0188730e870f5a8791f66abf5c293ae253a",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-open/save-prompt.state",
+          "sha256": "b33bc5d5534eb7d6c98161478f60e8aaa6c4e5962d1974dacd0ff15fbfe5a511"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-open/system_ram.bin",
+          "sha256": "c9ada961037eecc971d5dd1d8a5a01cbc5a26ad12c8113c8051aeea155835e35"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-open/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "1d0c3b2251d7e1b1e3e567fabac7115dafa2324982496ec8dacb4153c01a0bbc"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-open/field_menu.png",
+            "sha256": "07827937dd916411925feb681010222b423e7e8ca91b241fc3ed0c6fe8453e46"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-open/save_prompt.png",
+            "sha256": "b5ede0a1b50478d6f6293e61146dbce2a9f0d6847f4d0bd063f5c38eeb8eb41d"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-open/save_prompt_stable.png",
+            "sha256": "7d370dc0f76dd83312d2c14f60ac353ebb41e94a3958efa51aea67a77e3fbce1"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-open/save-prompt.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-save-yes",
+        "frames": 800,
+        "result_sha256": "72084d0a764773f7cfb8f453946c182a5b7fd000c81203634ee8076a07874e76",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-yes/input-script.json",
+          "sha256": "9a38fa61f637007aacab9e08513fcb9b911d71825d3eb9c03f28c6e8fa41c471"
+        },
+        "state_in_sha256": "b33bc5d5534eb7d6c98161478f60e8aaa6c4e5962d1974dacd0ff15fbfe5a511",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-yes/save-result.state",
+          "sha256": "d3caf41cc74ad8448ac51bfaed8bd20f3411e006587ba1154d0531acc0834342"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-yes/system_ram.bin",
+          "sha256": "06adfaf2c0b76aa2ef66becf5eb1d5cf3cc0fcaa295d56ee21979f8eb55d4cbd"
+        },
+        "battery_dsv": {
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-yes/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "afe204a7790ddc2d4959227c57e9acfd89c13ce155777886c4d9c92b9d5b559a"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-yes/save_progress.png",
+            "sha256": "18c9c1caf53d4150ec5fa697362ba5d0218ab53870bcc57b6d27f355acd3c6cb"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-yes/save_result.png",
+            "sha256": "037590e23be0f89087554bafd47fae9fd46c92bd1b6f051a885b79b13f71efbc"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-yes/save_yes_prompt.png",
+            "sha256": "7b2f4c51f3ed522a29b726ed3432d4373696c1880379cbccfa4a6622b1eee0d7"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-yes/save-result.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      },
+      {
+        "name": "portable-stat-editor-menu-textfix-ev4-save-overwrite-yes",
+        "frames": 800,
+        "result_sha256": "4c96620a80b09b23821ad4f9cff85c9e206b96c0b6c4dd23b64abd87dfd770a6",
+        "input_script": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/input-script.json",
+          "sha256": "f52a11a99a38936d7525c64d8114fdb888f092359c1f7404bbc34a6f4b497b0d"
+        },
+        "state_in_sha256": "d3caf41cc74ad8448ac51bfaed8bd20f3411e006587ba1154d0531acc0834342",
+        "state_out": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/save-complete.state",
+          "sha256": "30a0dc550ef7110cb45f5dd2eee1a0dbf829b6e4a97066424e87bfa07beb83ab"
+        },
+        "system_ram": {
+          "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/system_ram.bin",
+          "sha256": "3c9ddcccce3d82086227f2b935b04afe711307f57ea88f51c7bedba2e555e917"
+        },
+        "battery_dsv": {
+          "sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+          "snapshot_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/battery-evidence/portable-stat-editor-menu-textfix-fix6a.dsv",
+          "sidecar_sha256": "f79f6f2d168532077ea9f19f871344381858bfb8e1993fe1855678c13ec2d29d"
+        },
+        "screenshots": [
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/overwrite_prompt.png",
+            "sha256": "75a32aace760db3af24ef12b6b25a757ffcfd63a74b778822571ed1e544cd728"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/save_complete.png",
+            "sha256": "6bf118d4c5d94e90727091d372a0d376215770a932c0892cf6e928ee1e8cd80f"
+          },
+          {
+            "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/save_in_progress.png",
+            "sha256": "1b958d264032fd6da051a14aca64021c5f8b1ad24eb2a20217840887513ecd6a"
+          }
+        ],
+        "state_output_path": "qa/runs/portable-stat-editor-menu-textfix-ev4-save-overwrite-yes/save-complete.state",
+        "gameplay_acceptance": "NOT_ASSESSED"
+      }
+    ],
+    "party_by_run": {
+      "portable-stat-editor-menu-textfix-ev4-cold": {
+        "strict_against_saved_dsv": true,
+        "party_array_sha256": "2610bae1f548f2ddf0642234988422b4637e0d5bd98ac5dba174dda80292104e"
+      },
+      "portable-stat-editor-menu-textfix-ev4-step-select": {
+        "strict_against_saved_dsv": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "portable-stat-editor-menu-textfix-ev4-preview": {
+        "strict_against_seed_dsv": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no": {
+        "strict_against_seed_dsv": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-back-select": {
+        "strict_against_seed_dsv": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-back": {
+        "strict_against_seed_dsv": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-exit-select": {
+        "strict_against_seed_dsv": true,
+        "party_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-exit": {
+        "strict_against_seed_dsv": true,
+        "party_array_sha256": "8d3cf045ac473f9e6411c3a484e4ee4d42eedf53ea42c66a807d95053ffd02bd"
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes": {
+        "expected_single_hp_ev_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 19311
+            }
+          },
+          {
+            "slot": 1,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 56412
+            }
+          },
+          {
+            "slot": 2,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 46459
+            }
+          }
+        ]
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes-ack": {
+        "expected_single_hp_ev_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 19311
+            }
+          },
+          {
+            "slot": 1,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 56412
+            }
+          },
+          {
+            "slot": 2,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 46459
+            }
+          }
+        ]
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes-repeat-menu": {
+        "expected_single_hp_ev_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 19311
+            }
+          },
+          {
+            "slot": 1,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 56412
+            }
+          },
+          {
+            "slot": 2,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 46459
+            }
+          }
+        ]
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes-exit": {
+        "expected_single_hp_ev_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 19311
+            }
+          },
+          {
+            "slot": 1,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 56412
+            }
+          },
+          {
+            "slot": 2,
+            "record_equal": false,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_suffix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_suffix",
+                "split_bytes": 60
+              },
+              "decoded_checksum_valid": false,
+              "checksum": 46459
+            }
+          }
+        ]
+      },
+      "portable-stat-editor-menu-textfix-ev4-save-open": {
+        "expected_single_hp_ev_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 19311
+            }
+          },
+          {
+            "slot": 1,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 56412
+            }
+          },
+          {
+            "slot": 2,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 46459
+            }
+          }
+        ]
+      },
+      "portable-stat-editor-menu-textfix-ev4-save-yes": {
+        "expected_single_hp_ev_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 19311
+            }
+          },
+          {
+            "slot": 1,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 56412
+            }
+          },
+          {
+            "slot": 2,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 46459
+            }
+          }
+        ]
+      },
+      "portable-stat-editor-menu-textfix-ev4-save-overwrite-yes": {
+        "expected_single_hp_ev_transform_or_cipher_boundary": true,
+        "records": [
+          {
+            "slot": 0,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 19311
+            }
+          },
+          {
+            "slot": 1,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 56412
+            }
+          },
+          {
+            "slot": 2,
+            "record_equal": true,
+            "exact_cipher_boundary": {
+              "box": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "party_tail": {
+                "mode": "plain_prefix",
+                "split_bytes": 0
+              },
+              "decoded_checksum_valid": true,
+              "checksum": 46459
+            }
+          }
+        ]
+      },
+      "portable-stat-editor-menu-textfix-ev4-cold-reload": {
+        "strict_against_saved_dsv": true,
+        "party_array_sha256": "5ce519991e8ba88900151781e95571cf310a93dfa8cc52645c5d95845167dc17"
+      }
+    },
+    "bag_savearray3_by_run": {
+      "portable-stat-editor-menu-textfix-ev4-cold": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-step-select": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-preview": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-back-select": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-back": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-exit-select": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-exit": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes-ack": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes-repeat-menu": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes-exit": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-save-open": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-save-yes": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-save-overwrite-yes": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-cold-reload": {
+        "exact_source_array": true,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+      }
+    },
+    "item_118_by_run": {
+      "portable-stat-editor-menu-textfix-ev4-cold": 1,
+      "portable-stat-editor-menu-textfix-ev4-step-select": 1,
+      "portable-stat-editor-menu-textfix-ev4-preview": 1,
+      "portable-stat-editor-menu-textfix-ev4-no": 1,
+      "portable-stat-editor-menu-textfix-ev4-no-back-select": 1,
+      "portable-stat-editor-menu-textfix-ev4-no-back": 1,
+      "portable-stat-editor-menu-textfix-ev4-no-exit-select": 1,
+      "portable-stat-editor-menu-textfix-ev4-no-exit": 1,
+      "portable-stat-editor-menu-textfix-ev4-yes": 1,
+      "portable-stat-editor-menu-textfix-ev4-yes-ack": 1,
+      "portable-stat-editor-menu-textfix-ev4-yes-repeat-menu": 1,
+      "portable-stat-editor-menu-textfix-ev4-yes-exit": 1,
+      "portable-stat-editor-menu-textfix-ev4-save-open": 1,
+      "portable-stat-editor-menu-textfix-ev4-save-yes": 1,
+      "portable-stat-editor-menu-textfix-ev4-save-overwrite-yes": 1,
+      "portable-stat-editor-menu-textfix-ev4-cold-reload": 1
+    },
+    "reserve_hashes_by_run": {
+      "portable-stat-editor-menu-textfix-ev4-cold": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-step-select": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-preview": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-back-select": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-back": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-exit-select": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no-exit": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes-ack": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes-repeat-menu": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes-exit": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-save-open": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-save-yes": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-save-overwrite-yes": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      },
+      "portable-stat-editor-menu-textfix-ev4-cold-reload": {
+        "0x023D5000": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+        "0x023D6000": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+        "0x023D7000": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "screenshots_sha256": {
+      "portable-stat-editor-menu-textfix-ev4-preview": {
+        "ev4_selected.png": "1a6df711d5a6e2a47e3647c7d71498b31ce6025301885b5b59bc815a4e2eb0be",
+        "preview_before_choice.png": "bdc35992c9213d2ff6fc2fba5b12b8681cb1257a1c3a9218cadb0d480f8f5d28"
+      },
+      "portable-stat-editor-menu-textfix-ev4-no": {
+        "no_selected.png": "544076594d5020fbca0b78afddd9d2c30d8e1aa3f0b1170c11f4b2acae9545e7",
+        "no_result_stable.png": "59ee5503921b4ea7eb9e4f967b9a00b1babac9e825540d5ae64995141c38cb29"
+      },
+      "portable-stat-editor-menu-textfix-ev4-yes": {
+        "yes_result_stable.png": "2d5c645c4dfbf57be2790109d80d04131f9c3354ec38d642769f7b648c50bce6"
+      },
+      "portable-stat-editor-menu-textfix-ev4-save-open": {
+        "save_prompt_stable.png": "7d370dc0f76dd83312d2c14f60ac353ebb41e94a3958efa51aea67a77e3fbce1"
+      },
+      "portable-stat-editor-menu-textfix-ev4-save-overwrite-yes": {
+        "save_complete.png": "6bf118d4c5d94e90727091d372a0d376215770a932c0892cf6e928ee1e8cd80f"
+      },
+      "portable-stat-editor-menu-textfix-ev4-cold-reload": {
+        "cold_loaded_field.png": "a3dce8960aaf17e1bb7b1b0915d617e62d76ddaf890f6dad79dfecec2f21b786",
+        "cold_loaded_identity.png": "137b6737324b59333dc0406622f8dd662ed33850a988555ad4b546fc27bbbdda",
+        "cold_final.png": "6896a9a401fd4401ab05d8a3dea1f0be8f56b364f06dc6f27308556291080bf7"
+      }
+    },
+    "family_menu_ui_mode": {
+      "field_system": "0x022a020c",
+      "task": "0x023bcba8",
+      "task_data": "0x02356c00",
+      "mode": 3,
+      "state": 1,
+      "mode_state_bytes_hex": "0301"
+    }
+  },
+  "limits": [
+    "No repeat operation or second EV increment was run.",
+    "No claim is made about broad UI flows, other Pokémon, stats visibly recalculated, or other values.",
+    "Runner gameplay_acceptance remains NOT_ASSESSED; this report covers only the listed native actions and cold DSV reload."
+  ]
+}

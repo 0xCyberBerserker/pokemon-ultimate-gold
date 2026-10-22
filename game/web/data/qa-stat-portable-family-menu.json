@@ -1,0 +1,362 @@
+{
+  "schema": "portable-stat-editor-family-menu-wait/v1",
+  "scope": "Same-hash continuation after the approved fadefix cancel smoke. No setter, save, cold reload, or further input was used after the family menu checkpoint.",
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-fadefix/portable-stat-editor-menu-fadefix-fix6a.nds",
+    "sha256": "2abb1c8cf87540aad70d3c7c13517bee5a159ef3e38af11a1440030b276317ed",
+    "build_report_path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-fadefix/build.json",
+    "build_report_sha256": "7afc8865496ed8fd24de6a3a994e3577cf54115d14f3f110140bf1ed3a92f5b4"
+  },
+  "emulator": {
+    "runner_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "core_path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+  },
+  "seed_dsv": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-kit-launch-native-alpha2-seeded-cold/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+    "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "bytes": 524410,
+    "active_slot_base": "0x0",
+    "bag_array3_sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f"
+  },
+  "runs": [
+    {
+      "run": "portable-stat-editor-menu-fadefix-use-correction",
+      "frames": 700,
+      "execution_status": "COMPLETED",
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "result": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/result.json",
+        "sha256": "59e4cfd6ae3753076b6161da5f6ca05c32dc9efc0258aaa5328461cf1b2b2739"
+      },
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/input-script.json",
+        "sha256": "ec6db26cefde31113dceca37e3a2587d965483560134dcbd79a8898d974d4d8a",
+        "events": [
+          {
+            "frame": 20,
+            "touch": [
+              43,
+              312
+            ],
+            "frames": 3
+          },
+          {
+            "frame": 320,
+            "touch": [
+              52,
+              326
+            ],
+            "frames": 3
+          }
+        ]
+      },
+      "state_input": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-cancel-smoke/cancel-smoke.state",
+        "sha256": "bc5e8858c961cd79bdbc4b4861c8160b169d1fbee36af4fd002c3e9a67a00401"
+      },
+      "state_output": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/selected.state",
+        "sha256": "ef002aa677ca9feca7ac9f745f49e7362e0aeed91915f69cc8c08f204fca256b"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/system_ram.bin",
+        "sha256": "641619104167adcf2e3842f66b9dcc441f845cf95412a1568ecd7612e6ab0900"
+      },
+      "battery": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/profile/portable-stat-editor-menu-fadefix-fix6a.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "matches_e625_seed": true,
+        "frozen_sidecar": {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/battery-evidence.json",
+          "sha256": "490864e0fa67cdb072418fd8e2999e0a5d5a78eb2f76ffe147e689096ca67ac6"
+        },
+        "frozen_snapshot": {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/battery-evidence/portable-stat-editor-menu-fadefix-fix6a.dsv",
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a"
+        }
+      },
+      "party": {
+        "strict_two_byte_cipher_boundary_match": true,
+        "all_decoded_checksums_valid": true,
+        "party_count": 3
+      },
+      "bag_array3": {
+        "size": 1952,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "byte_identical_to_seed_dsv": true
+      },
+      "rom_sections": {
+        "0x023D5000": {
+          "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "matches_exact_candidate_arm9_section": true
+        },
+        "0x023D6000": {
+          "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "matches_exact_candidate_arm9_section": true
+        },
+        "0x023D7000": {
+          "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "matches_exact_candidate_arm9_section": true
+        }
+      },
+      "captures": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/before_bag.png",
+          "sha256": "404de93f12f4dc2abd42c5e8ae105af065451379124e8fe441c4c5d3efd74f14"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/before_cheat_kit.png",
+          "sha256": "97dc38951d4918f585721c82840537d61e57d1a2ebdb2bce0ae06c1e422d8d18"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/cheat_kit_selected.png",
+          "sha256": "091d69e62916fd1353fab8b278515305486d0c7ae06d8f9d9e490935022cc5c0"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/key_items_visible.png",
+          "sha256": "4ebc5dd673eb6ffdabed2dd133c813ddf6c99f939cda1ee8bcf1bcd50b0ef346"
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-menu-fadefix-use118",
+      "frames": 500,
+      "execution_status": "COMPLETED",
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "result": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use118/result.json",
+        "sha256": "d870e39f024818a02823046e9aa32d5449d0440c520bc2c341a0de6654d67695"
+      },
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use118/input-script.json",
+        "sha256": "b221f2deeb79ad00fb9fa8ab2fc70a9470b0977f275dc1dda5e2459238e18d49",
+        "events": [
+          {
+            "frame": 20,
+            "touch": [
+              48,
+              337
+            ],
+            "frames": 3
+          }
+        ]
+      },
+      "state_input": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use-correction/selected.state",
+        "sha256": "ef002aa677ca9feca7ac9f745f49e7362e0aeed91915f69cc8c08f204fca256b"
+      },
+      "state_output": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use118/party.state",
+        "sha256": "804588f49c095bb73387cc1859010ded1eb0dcd74fae856e7e16cf1479fcf2d7"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use118/system_ram.bin",
+        "sha256": "8d22c3883675be2a26fd989b03329325869748cbf4716117e57cd5b1d054b10b"
+      },
+      "battery": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use118/profile/portable-stat-editor-menu-fadefix-fix6a.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "matches_e625_seed": true,
+        "frozen_sidecar": {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-use118/battery-evidence.json",
+          "sha256": "8500650610f850e606b967b77758504499deb58d3a34df47146ac7475344aa5b"
+        },
+        "frozen_snapshot": {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-use118/battery-evidence/portable-stat-editor-menu-fadefix-fix6a.dsv",
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a"
+        }
+      },
+      "party": {
+        "strict_two_byte_cipher_boundary_match": true,
+        "all_decoded_checksums_valid": true,
+        "party_count": 3
+      },
+      "bag_array3": {
+        "size": 1952,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "byte_identical_to_seed_dsv": true
+      },
+      "rom_sections": {
+        "0x023D5000": {
+          "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "matches_exact_candidate_arm9_section": true
+        },
+        "0x023D6000": {
+          "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "matches_exact_candidate_arm9_section": true
+        },
+        "0x023D7000": {
+          "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "matches_exact_candidate_arm9_section": true
+        }
+      },
+      "captures": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-use118/before_use118.png",
+          "sha256": "091d69e62916fd1353fab8b278515305486d0c7ae06d8f9d9e490935022cc5c0"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-use118/party_selector.png",
+          "sha256": "e00e1c25f41768d5adc2d3559b06ce4da78188057db0a0c264cef56e327b3419"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-use118/use_transition.png",
+          "sha256": "64229d330526030daa00be2857c7d410a0cf53234d71c0617dc8a0ec7db6962e"
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-menu-fadefix-slot0",
+      "frames": 500,
+      "execution_status": "COMPLETED",
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "result": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/result.json",
+        "sha256": "5c3853e059bfd583bcfd1dd0eca075a24b0b9821e980bffb62ddbb20a52b2fc5"
+      },
+      "input_script": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/input-script.json",
+        "sha256": "229b2347f6993bf946119a01c29618029acebe78089320cbd838f7d31e04d0ba",
+        "events": [
+          {
+            "frame": 20,
+            "button": "A",
+            "frames": 3
+          }
+        ]
+      },
+      "state_input": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-use118/party.state",
+        "sha256": "804588f49c095bb73387cc1859010ded1eb0dcd74fae856e7e16cf1479fcf2d7"
+      },
+      "state_output": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/slot0.state",
+        "sha256": "1cc3d9a20a5462779336d97667ad2ee4fcb23e37220c83c30500f42dfb25b770"
+      },
+      "system_ram": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/system_ram.bin",
+        "sha256": "362b121e01873f674786bd8b37f1a53c4495abc25e8be7421e30512550dde7f8"
+      },
+      "battery": {
+        "path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/profile/portable-stat-editor-menu-fadefix-fix6a.dsv",
+        "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+        "matches_e625_seed": true,
+        "frozen_sidecar": {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/battery-evidence.json",
+          "sha256": "5a20347ad93c99d89db54ce20e573cf917ace6dd44143d75897c0728700be8c4"
+        },
+        "frozen_snapshot": {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/battery-evidence/portable-stat-editor-menu-fadefix-fix6a.dsv",
+          "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a"
+        }
+      },
+      "party": {
+        "strict_two_byte_cipher_boundary_match": true,
+        "all_decoded_checksums_valid": true,
+        "party_count": 3
+      },
+      "bag_array3": {
+        "size": 1952,
+        "sha256": "f7a18f10c17a1d6d23e3e4c5affc10f1baaf30c46b0c7b152eac0c47619e022f",
+        "byte_identical_to_seed_dsv": true
+      },
+      "rom_sections": {
+        "0x023D5000": {
+          "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399",
+          "matches_exact_candidate_arm9_section": true
+        },
+        "0x023D6000": {
+          "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e",
+          "matches_exact_candidate_arm9_section": true
+        },
+        "0x023D7000": {
+          "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "matches_exact_candidate_arm9_section": true
+        }
+      },
+      "captures": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/before_slot0.png",
+          "sha256": "0940a5378dd8bb63eb35bd0eae481594e235ee9f1e603062986b1aab99d914dd"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/family_menu.png",
+          "sha256": "a60bfe3bf4d383252eb9b397811f7b720072dc2d7a64dc8f6ac50f960b7f094f"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/slot0_transition.png",
+          "sha256": "09291ade6d4f83c9628343a27450832091f6ee942e75e65b4fdf92bdadf04768"
+        }
+      ]
+    }
+  ],
+  "final_live_menu_state": {
+    "status": "MENU_EXEC_WAITING_RESULT_NOT_RENDERED",
+    "context": {
+      "field_system": "0x022A0258",
+      "task_manager": "0x022C018C",
+      "task_function": "0x0203FF45",
+      "task_state": 0,
+      "script_environment": "0x022A6BB8",
+      "environment_magic": 222271,
+      "active_context_count": 1,
+      "active_script_id": 2072,
+      "script_context": "0x022A6CB8",
+      "mode": 2,
+      "mode_label": "NATIVE",
+      "native_callback": "0x020478D1",
+      "script_pc": "0x022A85DD",
+      "command_table": "0x023D5100",
+      "command_count": 857,
+      "data0": "0x0000800C",
+      "special_var_8000_slot_scratch": 0,
+      "special_var_800C_menu_result": "0xEEEE",
+      "textbox_open": false
+    },
+    "source_contract": {
+      "menu_execute_symbol": "ScrCmd_MenuExec",
+      "native_wait_symbol": "sub_020478D0",
+      "source_path": "engine/upstream/pokeheartgold/src/scrcmd_c.c",
+      "menu_exec_lines": "5030-5037",
+      "wait_callback_lines": "5040-5048",
+      "script_context_layout": "engine/upstream/pokeheartgold/include/script.h:164-179"
+    },
+    "interpretation": "The valid slot-0 value remains in 0x8000. Script 2072 has entered the family-menu MenuExec path, passed 0x800C to native callback sub_020478D0, and waits because 0x800C is still 0xEEEE. The captured bottom screen shows the normal field menu; no EV/IV family choices are visible."
+  },
+  "static_sections": {
+    "method": "ndspy 4.1.0 MainCodeFile exact RAM-addressed section extraction from candidate ROM; compared full 4096-byte runtime ranges for each of the three runs.",
+    "sections": {
+      "0x023D5000": {
+        "size": 4096,
+        "sha256": "bdd7e3ee8893de230432941839144d9844396e46c5192b0df34b31e53b89c399"
+      },
+      "0x023D6000": {
+        "size": 4096,
+        "sha256": "aa8a44f477865a33443a672ede55b8dde68a32f5a758cd12e3eed3495e3ba95e"
+      },
+      "0x023D7000": {
+        "size": 4096,
+        "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+      }
+    },
+    "all_three_runs_match": true,
+    "arena_high_runtime": "0x023D5000",
+    "legacy_helper_only_padding_check": "NOT_APPLICABLE: this candidate’s 0x023D6000 section contains helper, preview, mutators, launcher, and reader; its 0x023D5000 arena/table layout differs from the older helper-only assumption."
+  },
+  "assessment": {
+    "bag_use_to_party_selector": "PASS",
+    "party_slot_0_selected": "PASS",
+    "family_menu_render": "PARTIAL_NOT_VISIBLE_MENU_WAIT_CONFIRMED",
+    "party_bag_and_candidate_reserve_sections_unchanged": "PASS",
+    "setter_or_mutator_invoked": "NO",
+    "save_or_cold_persistence": "NOT_TESTED",
+    "runner_gameplay_acceptance": "NOT_ASSESSED"
+  },
+  "limits": [
+    "The screenshot and RAM prove MenuExec is waiting for a choice, but do not establish why the family menu is not drawn.",
+    "No setter, confirmation, save, or post-save cold reload was attempted.",
+    "The saved `slot0.state` is retained for a future same-ROM correction; no state crossed ROM hashes."
+  ]
+}

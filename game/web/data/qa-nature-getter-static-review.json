@@ -1,0 +1,18 @@
+{
+  "schema": "ultimate-gold-nature-getter-root-static-review/v1",
+  "status": "PASS_ROOT_STATIC_WHITELIST_RUNTIME_PENDING",
+  "base_sha256": "c8851a108d17222015fd34b078b6539a09a7948a4d4fd62e778406ce4b65357f",
+  "candidate_sha256": "ea9486f9465a4e20546a44729589b2ef822c9ce245eb5ee16ae756883c5b3209",
+  "method": "Independent ndspy extraction and byte comparison of all ARM9 sections, ARM7, overlay tables, filesystem bodies and FNT; source and compiled Thumb disassembly inspected.",
+  "arm9_changed_bytes": 62,
+  "allowed_ranges_exclusive": [["0x0206FE04", "0x0206FE0C"], ["0x023D6C00", "0x023D6C44"]],
+  "trampoline_bytes": "004b1847016c3d02",
+  "payload_preimage_zero": true,
+  "payload_matches_compiled_binary": true,
+  "arm9_section_count": 7,
+  "filesystem_body_count": 513,
+  "arm9_overlay_count": 129,
+  "unchanged": ["ARM9 section addresses/sizes/BSS", "ARM9 entrypoint", "ARM7", "ARM9/ARM7 overlay tables", "all filesystem bodies", "FNT"],
+  "source_contract": "Native fast-mode state is restored before return; encoded values 1..25 select nature index0..24; zero/26..31 fall back to PID. No PID mutation.",
+  "limits": ["No runtime acceptance in this report", "Host-test and static autoload-order evidence are recorded in the separate build report", "No stat recalculation, save persistence, PC round trip or PID-direct consumer acceptance", "No integration into downloads or item119"]
+}

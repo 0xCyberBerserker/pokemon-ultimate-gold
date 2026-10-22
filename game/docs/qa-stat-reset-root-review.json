@@ -1,0 +1,26 @@
+{
+  "schema": "ultimate-gold-reset-native-root-review/v1",
+  "status": "PASS_BOUNDED_NATIVE_RESETS_PERSISTENCE_PENDING",
+  "auditor_sha256": "5019a545882bf5089a7159e244fe5896ca204ebbe25640caa9292dc14f1fc4df",
+  "report_sha256": "7eaef9c8fe10c103704963d78345832959be47b63da2248dc2916c800d90f80c",
+  "independent_review_sha256": "c72cfae6328fc37037a0071c5d5c8ad6915558fdab81d34bb9c314ecef97a044",
+  "checks": {
+    "four_lineage_contract_tests_pass": true,
+    "official_ndspy_used": true,
+    "manual_parser_fallback_absent": true,
+    "serialized_replay_matches_frozen_report_byte_exact": true,
+    "same_rom_core_runner_dsv_parent_output_lineage_guarded": true,
+    "ev_reset_yes_six_nonzero_fixture_values_to_zero": true,
+    "iv_reset_yes_six_values_to_zero_and_exact_stat_formula": true,
+    "no_branches_preserve_source_party": true,
+    "party_bag_code_guards_and_field_return_verified": true,
+    "native_emulation_repeated_by_root": false
+  },
+  "limits": [
+    "Each operation is an isolated candidate and fixed slot 0, not a combined portable tool.",
+    "No post-reset save/cold recovery is covered by these reports.",
+    "The EV seed uses explicit synthetic values 1,2,3,1,2,3; the source player save is untouched.",
+    "The incomplete excluded attempt retains only preflight evidence; its cause is not verifiable.",
+    "Source DSV Pokemon checksums are valid; interrupted RAM is accepted only by strict byte-exact native cipher boundaries."
+  ]
+}

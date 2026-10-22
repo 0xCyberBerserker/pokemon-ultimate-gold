@@ -1,0 +1,3653 @@
+{
+  "source": "https://github.com/PokeAPI/sprites/tree/97a7832d307311c0e1c6ea9035308bf80cc94f81/sprites/items",
+  "sprites_commit": "97a7832d307311c0e1c6ea9035308bf80cc94f81",
+  "generation_id": 4,
+  "version_group_id": 10,
+  "sprites": [
+    {
+      "nds_id": 1,
+      "pokeapi_item_id": 1,
+      "identifier": "master-ball",
+      "path": "web/sprites/items/1.png",
+      "bytes": 298,
+      "sha256": "a702e5700d83d28cfbdefeb4cdb70e7ec82a4903133355b87fbac5cae4c98c9e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 2,
+      "pokeapi_item_id": 2,
+      "identifier": "ultra-ball",
+      "path": "web/sprites/items/2.png",
+      "bytes": 287,
+      "sha256": "4dbf6751968bd3b96d3036da1a55e5a764c792e780a5fa5cd2391bc155224a10",
+      "status": "ok"
+    },
+    {
+      "nds_id": 3,
+      "pokeapi_item_id": 3,
+      "identifier": "great-ball",
+      "path": "web/sprites/items/3.png",
+      "bytes": 301,
+      "sha256": "4d0a614eebb4aef6b02a3620e4262f471b620cc8bc81cfeebeb3cbb995727ac6",
+      "status": "ok"
+    },
+    {
+      "nds_id": 4,
+      "pokeapi_item_id": 4,
+      "identifier": "poke-ball",
+      "path": "web/sprites/items/4.png",
+      "bytes": 256,
+      "sha256": "a4c7b9e8ff5727d10e6f679bcf16a963a95b2a36480d3bd9156d9808bdf54dff",
+      "status": "ok"
+    },
+    {
+      "nds_id": 5,
+      "pokeapi_item_id": 5,
+      "identifier": "safari-ball",
+      "path": "web/sprites/items/5.png",
+      "bytes": 305,
+      "sha256": "8abfba292d69c952da4ce9a9d5a0bfa6d7e075a01e8ea137b6e36b7168772fc9",
+      "status": "ok"
+    },
+    {
+      "nds_id": 6,
+      "pokeapi_item_id": 6,
+      "identifier": "net-ball",
+      "path": "web/sprites/items/6.png",
+      "bytes": 301,
+      "sha256": "d18b14b1b9a7b6744396f61f0d817c8ae14f250dd8c74b222624bf4ab08aab97",
+      "status": "ok"
+    },
+    {
+      "nds_id": 7,
+      "pokeapi_item_id": 7,
+      "identifier": "dive-ball",
+      "path": "web/sprites/items/7.png",
+      "bytes": 289,
+      "sha256": "69a891bf39e631f29a9ffa96bfe280694d2a891bed3208e1c8f3776591001bc5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 8,
+      "pokeapi_item_id": 8,
+      "identifier": "nest-ball",
+      "path": "web/sprites/items/8.png",
+      "bytes": 290,
+      "sha256": "28f5947a50b4e93c1fb1df9f320f43c7a950fd125735f6eea083d95b9f0eee75",
+      "status": "ok"
+    },
+    {
+      "nds_id": 9,
+      "pokeapi_item_id": 9,
+      "identifier": "repeat-ball",
+      "path": "web/sprites/items/9.png",
+      "bytes": 294,
+      "sha256": "fca530eeb2036754cc2487cd0737e32be57a2ca951b267637beb87de35a4d904",
+      "status": "ok"
+    },
+    {
+      "nds_id": 10,
+      "pokeapi_item_id": 10,
+      "identifier": "timer-ball",
+      "path": "web/sprites/items/10.png",
+      "bytes": 290,
+      "sha256": "7b2281202147c17e6c89b7a33256b4686fa7e3e0f06002a657a1e535d45a22fa",
+      "status": "ok"
+    },
+    {
+      "nds_id": 11,
+      "pokeapi_item_id": 11,
+      "identifier": "luxury-ball",
+      "path": "web/sprites/items/11.png",
+      "bytes": 293,
+      "sha256": "305f15d1387fac249ba17d938dc731958ad38d932bb5ba8be1273842ade26a79",
+      "status": "ok"
+    },
+    {
+      "nds_id": 12,
+      "pokeapi_item_id": 12,
+      "identifier": "premier-ball",
+      "path": "web/sprites/items/12.png",
+      "bytes": 239,
+      "sha256": "fcb9788efab4dba53d507a0e44f75adbbca69adb5ae2ce4222abfb2277168085",
+      "status": "ok"
+    },
+    {
+      "nds_id": 13,
+      "pokeapi_item_id": 13,
+      "identifier": "dusk-ball",
+      "path": "web/sprites/items/13.png",
+      "bytes": 302,
+      "sha256": "5ae06ec973f78e003f323992e5f72e1686efed12abe1b936a29a46edec62a367",
+      "status": "ok"
+    },
+    {
+      "nds_id": 14,
+      "pokeapi_item_id": 14,
+      "identifier": "heal-ball",
+      "path": "web/sprites/items/14.png",
+      "bytes": 303,
+      "sha256": "01d97180475c7cb8a83b0f31f8a3facbbc89a924082beaac534bb8264d8875c4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 15,
+      "pokeapi_item_id": 15,
+      "identifier": "quick-ball",
+      "path": "web/sprites/items/15.png",
+      "bytes": 296,
+      "sha256": "566d280cd7702ae84189e63a4d85ba7307c17cd0d75f61de5d4b90d799f5f4bc",
+      "status": "ok"
+    },
+    {
+      "nds_id": 16,
+      "pokeapi_item_id": 16,
+      "identifier": "cherish-ball",
+      "path": "web/sprites/items/16.png",
+      "bytes": 263,
+      "sha256": "f39eaef1ba65ae6256a42b9b00d68d2e773341cb62c9bc4d886ad1ffd068a9f2",
+      "status": "ok"
+    },
+    {
+      "nds_id": 17,
+      "pokeapi_item_id": 17,
+      "identifier": "potion",
+      "path": "web/sprites/items/17.png",
+      "bytes": 300,
+      "sha256": "db5a0fa2343c5761599d9efd4514a30125164ced094b55f760a763ed0c9c64d5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 18,
+      "pokeapi_item_id": 18,
+      "identifier": "antidote",
+      "path": "web/sprites/items/18.png",
+      "bytes": 261,
+      "sha256": "efb20083fb01637ef6a1cb40f915f2b077a5f275ada59348f4cb81c56afc1581",
+      "status": "ok"
+    },
+    {
+      "nds_id": 19,
+      "pokeapi_item_id": 19,
+      "identifier": "burn-heal",
+      "path": "web/sprites/items/19.png",
+      "bytes": 261,
+      "sha256": "b9ceaa0f24332b138de4ccf9b632e7f70c12bbb2e7327f8e6b1da3dfef3fd2d2",
+      "status": "ok"
+    },
+    {
+      "nds_id": 20,
+      "pokeapi_item_id": 20,
+      "identifier": "ice-heal",
+      "path": "web/sprites/items/20.png",
+      "bytes": 261,
+      "sha256": "215aab7f1f823e079e9e4a4f7870fe513a99caa82475d3b4724ce598ac8968df",
+      "status": "ok"
+    },
+    {
+      "nds_id": 21,
+      "pokeapi_item_id": 21,
+      "identifier": "awakening",
+      "path": "web/sprites/items/21.png",
+      "bytes": 261,
+      "sha256": "2d45dbca4dbfb4e54177eaeeb5d43a455dcae92b9f3aa4de03c8a698f2163f0b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 22,
+      "pokeapi_item_id": 22,
+      "identifier": "paralyze-heal",
+      "path": "web/sprites/items/22.png",
+      "bytes": 261,
+      "sha256": "fe3c35089c2be77bb364c9de2bdbdc8fa89d19a1ba2b3457186ea72c9fbc2c58",
+      "status": "ok"
+    },
+    {
+      "nds_id": 23,
+      "pokeapi_item_id": 23,
+      "identifier": "full-restore",
+      "path": "web/sprites/items/23.png",
+      "bytes": 299,
+      "sha256": "a6928656a61f57a3619efe7dee701e6b37cbb6472ea234c0d82035e8620ca7b0",
+      "status": "ok"
+    },
+    {
+      "nds_id": 24,
+      "pokeapi_item_id": 24,
+      "identifier": "max-potion",
+      "path": "web/sprites/items/24.png",
+      "bytes": 299,
+      "sha256": "61f408dac10579ed9c02e5d353757d37ca029cb170a66247187ae8b7b7e522bb",
+      "status": "ok"
+    },
+    {
+      "nds_id": 25,
+      "pokeapi_item_id": 25,
+      "identifier": "hyper-potion",
+      "path": "web/sprites/items/25.png",
+      "bytes": 300,
+      "sha256": "0aa7cad60ab3be1181b4a7dcb1b3718542676d281423370c557e78c4d88fe6b0",
+      "status": "ok"
+    },
+    {
+      "nds_id": 26,
+      "pokeapi_item_id": 26,
+      "identifier": "super-potion",
+      "path": "web/sprites/items/26.png",
+      "bytes": 300,
+      "sha256": "81280672b68b5f8c0e4bf7b7d39567ce170d840296f7812935f740203da66fd5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 27,
+      "pokeapi_item_id": 27,
+      "identifier": "full-heal",
+      "path": "web/sprites/items/27.png",
+      "bytes": 271,
+      "sha256": "fc471f27e944e7ce3dc5894981c09faccf9371940e6c2f1355a62a72b9a88466",
+      "status": "ok"
+    },
+    {
+      "nds_id": 28,
+      "pokeapi_item_id": 28,
+      "identifier": "revive",
+      "path": "web/sprites/items/28.png",
+      "bytes": 177,
+      "sha256": "8ed02f56fcd0a8d2525811fbc33d82aebbe7af902ec6752b4857de821505a224",
+      "status": "ok"
+    },
+    {
+      "nds_id": 29,
+      "pokeapi_item_id": 29,
+      "identifier": "max-revive",
+      "path": "web/sprites/items/29.png",
+      "bytes": 254,
+      "sha256": "a3e20e4d60a33084cfe80a6cdef7742630cc14b082ce46bce10cb52ec0ef0911",
+      "status": "ok"
+    },
+    {
+      "nds_id": 30,
+      "pokeapi_item_id": 30,
+      "identifier": "fresh-water",
+      "path": "web/sprites/items/30.png",
+      "bytes": 281,
+      "sha256": "c95c39c406b990dae7010bcdf193a91c88a60cff6e6f9e4060ebdcaed2e79e8c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 31,
+      "pokeapi_item_id": 31,
+      "identifier": "soda-pop",
+      "path": "web/sprites/items/31.png",
+      "bytes": 280,
+      "sha256": "674ba8c9308c9646d518011c98ed445b98ef1ba40d5bcd2873a555e30f24dfec",
+      "status": "ok"
+    },
+    {
+      "nds_id": 32,
+      "pokeapi_item_id": 32,
+      "identifier": "lemonade",
+      "path": "web/sprites/items/32.png",
+      "bytes": 285,
+      "sha256": "382b8da2d28e387f356a3301d9148c40a1295e12a11db92a5b8375069fd198db",
+      "status": "ok"
+    },
+    {
+      "nds_id": 33,
+      "pokeapi_item_id": 33,
+      "identifier": "moomoo-milk",
+      "path": "web/sprites/items/33.png",
+      "bytes": 296,
+      "sha256": "4b5708299b748045d30feafdbecda063eb62dd248a43ad89ee249c8ca77948d4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 34,
+      "pokeapi_item_id": 34,
+      "identifier": "energy-powder",
+      "path": "web/sprites/items/34.png",
+      "bytes": 231,
+      "sha256": "54dce35ee3b31f17bf0d8fcaa267c047d9c680fc51398b6ff246f926b599cba8",
+      "status": "ok"
+    },
+    {
+      "nds_id": 35,
+      "pokeapi_item_id": 35,
+      "identifier": "energy-root",
+      "path": "web/sprites/items/35.png",
+      "bytes": 268,
+      "sha256": "3cc82275a7e04e9dbad534b85d4d745c0d8763b0f0001b838f035d9c8874d0b4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 36,
+      "pokeapi_item_id": 36,
+      "identifier": "heal-powder",
+      "path": "web/sprites/items/36.png",
+      "bytes": 231,
+      "sha256": "f08f33e121eb5110cad369537815975ca868200281f0c0f9fb842d20504c91f4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 37,
+      "pokeapi_item_id": 37,
+      "identifier": "revival-herb",
+      "path": "web/sprites/items/37.png",
+      "bytes": 277,
+      "sha256": "b66c5eaae21a479e4dbb8c53314118750ab976d7eed6202017c0259f84878d1d",
+      "status": "ok"
+    },
+    {
+      "nds_id": 38,
+      "pokeapi_item_id": 38,
+      "identifier": "ether",
+      "path": "web/sprites/items/38.png",
+      "bytes": 294,
+      "sha256": "43bce9d5150562a80bd5cbddb1e11135d70c1338f964f1cf5abef78a038e86de",
+      "status": "ok"
+    },
+    {
+      "nds_id": 39,
+      "pokeapi_item_id": 39,
+      "identifier": "max-ether",
+      "path": "web/sprites/items/39.png",
+      "bytes": 294,
+      "sha256": "b2b2f86e00b5e7b080e44305b9faf6ce9be242662046e689f128c2f0cec9e960",
+      "status": "ok"
+    },
+    {
+      "nds_id": 40,
+      "pokeapi_item_id": 40,
+      "identifier": "elixir",
+      "path": "web/sprites/items/40.png",
+      "bytes": 294,
+      "sha256": "4724fa3a2fadaad57dafd4c466a576e359141f75b0242b61944c6e2369d8988e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 41,
+      "pokeapi_item_id": 41,
+      "identifier": "max-elixir",
+      "path": "web/sprites/items/41.png",
+      "bytes": 294,
+      "sha256": "20edb1619c42fccd2882d67e7c192f45c9186daf72282c254a2bb1c2e4f5a190",
+      "status": "ok"
+    },
+    {
+      "nds_id": 42,
+      "pokeapi_item_id": 42,
+      "identifier": "lava-cookie",
+      "path": "web/sprites/items/42.png",
+      "bytes": 278,
+      "sha256": "456a3944aa6aaee8fd6a48339da7e06524f9037038982abd6eaf0ad65fd90ba2",
+      "status": "ok"
+    },
+    {
+      "nds_id": 43,
+      "pokeapi_item_id": 43,
+      "identifier": "berry-juice",
+      "path": "web/sprites/items/43.png",
+      "bytes": 323,
+      "sha256": "c941d971cc6db6d44029e9ef268aef0e4361140b8209a8fc7c62b39bc9125312",
+      "status": "ok"
+    },
+    {
+      "nds_id": 44,
+      "pokeapi_item_id": 44,
+      "identifier": "sacred-ash",
+      "path": "web/sprites/items/44.png",
+      "bytes": 294,
+      "sha256": "c79533695f4708508e466d04366d76375495e397e562e01d59302276c1072fa1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 45,
+      "pokeapi_item_id": 45,
+      "identifier": "hp-up",
+      "path": "web/sprites/items/45.png",
+      "bytes": 286,
+      "sha256": "9c0f6f1784ad96778e231c0d4c82dd9afbe664701e98a8e56ee59b3c897100da",
+      "status": "ok"
+    },
+    {
+      "nds_id": 46,
+      "pokeapi_item_id": 46,
+      "identifier": "protein",
+      "path": "web/sprites/items/46.png",
+      "bytes": 288,
+      "sha256": "8b5244e3cf15bf3add34428c664032fa64e76b6dd8dcbe069f4672d10095854f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 47,
+      "pokeapi_item_id": 47,
+      "identifier": "iron",
+      "path": "web/sprites/items/47.png",
+      "bytes": 288,
+      "sha256": "35f21f00412458ec449390e02afee7d57d793d861d971fda398e625f0dadf0ab",
+      "status": "ok"
+    },
+    {
+      "nds_id": 48,
+      "pokeapi_item_id": 48,
+      "identifier": "carbos",
+      "path": "web/sprites/items/48.png",
+      "bytes": 288,
+      "sha256": "6edb4ddeb884e50126dcc1147163cfa05c4091bed3d711c8ce70fd827ab87ac7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 49,
+      "pokeapi_item_id": 49,
+      "identifier": "calcium",
+      "path": "web/sprites/items/49.png",
+      "bytes": 288,
+      "sha256": "88db349a1101fcf9668827dfda16d43eaad04bf14bdafb8d8e3b11c211da9838",
+      "status": "ok"
+    },
+    {
+      "nds_id": 50,
+      "pokeapi_item_id": 50,
+      "identifier": "rare-candy",
+      "path": "web/sprites/items/50.png",
+      "bytes": 272,
+      "sha256": "e68ad7f41cbd5e0e1ce20fb5be5068e2d976b1370f06b2cef1c5c614a19e79ab",
+      "status": "ok"
+    },
+    {
+      "nds_id": 51,
+      "pokeapi_item_id": 51,
+      "identifier": "pp-up",
+      "path": "web/sprites/items/51.png",
+      "bytes": 293,
+      "sha256": "f2366259358d8caa575df973668cc3daf7e49c47ba687d26129b0c547a7c2b33",
+      "status": "ok"
+    },
+    {
+      "nds_id": 52,
+      "pokeapi_item_id": 52,
+      "identifier": "zinc",
+      "path": "web/sprites/items/52.png",
+      "bytes": 288,
+      "sha256": "e4fb055053a9e95782271676b98feb549d6d697562f5d3285eabfc740ad9bc0a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 53,
+      "pokeapi_item_id": 53,
+      "identifier": "pp-max",
+      "path": "web/sprites/items/53.png",
+      "bytes": 287,
+      "sha256": "7797c708bc905cbe756f8c61e50e84fc953b6a4691ecb8b50796a4450dbf08d0",
+      "status": "ok"
+    },
+    {
+      "nds_id": 54,
+      "pokeapi_item_id": 54,
+      "identifier": "old-gateau",
+      "path": "web/sprites/items/54.png",
+      "bytes": 210,
+      "sha256": "b54561e3c7d6dde062a939ee481869e4977a1d23a9d3b91fdde0c944c427af63",
+      "status": "ok"
+    },
+    {
+      "nds_id": 55,
+      "pokeapi_item_id": 55,
+      "identifier": "guard-spec",
+      "path": "web/sprites/items/55.png",
+      "bytes": 305,
+      "sha256": "cc4ff1c5c8d7ba3af46892085f8ce4e8aa152fa0cbadd4e17b2e32793f124dd8",
+      "status": "ok"
+    },
+    {
+      "nds_id": 56,
+      "pokeapi_item_id": 56,
+      "identifier": "dire-hit",
+      "path": "web/sprites/items/56.png",
+      "bytes": 305,
+      "sha256": "0c560de0bd62696ccbeb50860b4e42fe15b862ef4efffe0df695c9099fa0f363",
+      "status": "ok"
+    },
+    {
+      "nds_id": 57,
+      "pokeapi_item_id": 57,
+      "identifier": "x-attack",
+      "path": "web/sprites/items/57.png",
+      "bytes": 305,
+      "sha256": "0f65730b204214479be053c1525bd85b89499c0679ccd49730199af7e09d0b5a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 58,
+      "pokeapi_item_id": 58,
+      "identifier": "x-defense",
+      "path": "web/sprites/items/58.png",
+      "bytes": 305,
+      "sha256": "10808ab27a4878fdbc70627fa0637417987f4fe4578d9b38064e19f67fa5b191",
+      "status": "ok"
+    },
+    {
+      "nds_id": 59,
+      "pokeapi_item_id": 59,
+      "identifier": "x-speed",
+      "path": "web/sprites/items/59.png",
+      "bytes": 305,
+      "sha256": "cd46a41f1476507c73398bcd2c239aae7b95e46079ce006d7906ded65ebd5914",
+      "status": "ok"
+    },
+    {
+      "nds_id": 60,
+      "pokeapi_item_id": 60,
+      "identifier": "x-accuracy",
+      "path": "web/sprites/items/60.png",
+      "bytes": 305,
+      "sha256": "b0b514736fdc7eec42d067fb92b9f5206f537af35db60bbe20d1538a42d5f26f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 61,
+      "pokeapi_item_id": 61,
+      "identifier": "x-sp-atk",
+      "path": "web/sprites/items/61.png",
+      "bytes": 305,
+      "sha256": "a1410b2fbc618ccb1a457cc20f5fc134f6b627b3bddc22d7cec49e64cadc23b5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 62,
+      "pokeapi_item_id": 62,
+      "identifier": "x-sp-def",
+      "path": "web/sprites/items/62.png",
+      "bytes": 305,
+      "sha256": "b72f4625a333b84a72cec801ae4e19fe43f23f696f59c3635b240ae9a83a116f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 63,
+      "pokeapi_item_id": 63,
+      "identifier": "poke-doll",
+      "path": "web/sprites/items/63.png",
+      "bytes": 288,
+      "sha256": "ad62bb9c9886809ac507ba139c2cb13cf28d06bbb0d8f81d5bb498be13e8a91f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 64,
+      "pokeapi_item_id": 64,
+      "identifier": "fluffy-tail",
+      "path": "web/sprites/items/64.png",
+      "bytes": 322,
+      "sha256": "608b13b12787a372312bf3d2baaf3047f324fb03d3627926e5f5a08c76346e66",
+      "status": "ok"
+    },
+    {
+      "nds_id": 65,
+      "pokeapi_item_id": 65,
+      "identifier": "blue-flute",
+      "path": "web/sprites/items/65.png",
+      "bytes": 271,
+      "sha256": "d079bc75a63f11a6094ca858e60fca4c2ac3a7e72e949d2f4469c92331464707",
+      "status": "ok"
+    },
+    {
+      "nds_id": 66,
+      "pokeapi_item_id": 66,
+      "identifier": "yellow-flute",
+      "path": "web/sprites/items/66.png",
+      "bytes": 271,
+      "sha256": "13f8482d356b4a9e0a8fcc40f2c109a5deb8b2d7bf3101df7da9cc7fccbd87f4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 67,
+      "pokeapi_item_id": 67,
+      "identifier": "red-flute",
+      "path": "web/sprites/items/67.png",
+      "bytes": 271,
+      "sha256": "4f051d9af9ac661837c3714f79a370a35085265af648f4600f2f6e2a3279d198",
+      "status": "ok"
+    },
+    {
+      "nds_id": 68,
+      "pokeapi_item_id": 68,
+      "identifier": "black-flute",
+      "path": "web/sprites/items/68.png",
+      "bytes": 264,
+      "sha256": "68f34bdb0873b78cf67d45a0395b51c9403982cdb4ed5a4e5da477acd5f9e409",
+      "status": "ok"
+    },
+    {
+      "nds_id": 69,
+      "pokeapi_item_id": 69,
+      "identifier": "white-flute",
+      "path": "web/sprites/items/69.png",
+      "bytes": 262,
+      "sha256": "b2deca28176ef63657b378bc97eabb0b241fa2b021bf0185d8a709002e6984f2",
+      "status": "ok"
+    },
+    {
+      "nds_id": 70,
+      "pokeapi_item_id": 70,
+      "identifier": "shoal-salt",
+      "path": "web/sprites/items/70.png",
+      "bytes": 231,
+      "sha256": "03357642ceeee79755cc2e675a44edbfd3516061515c8a1896b43414990e83f5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 71,
+      "pokeapi_item_id": 71,
+      "identifier": "shoal-shell",
+      "path": "web/sprites/items/71.png",
+      "bytes": 334,
+      "sha256": "78ee4cddaec0aeec96fed6c46fd16658978ff59c6212150470170836ab8f2ed4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 72,
+      "pokeapi_item_id": 72,
+      "identifier": "red-shard",
+      "path": "web/sprites/items/72.png",
+      "bytes": 173,
+      "sha256": "ad7b304fdc9d475cacba82547a4e39872fe1ed8824653e3425c53bc8f278a742",
+      "status": "ok"
+    },
+    {
+      "nds_id": 73,
+      "pokeapi_item_id": 73,
+      "identifier": "blue-shard",
+      "path": "web/sprites/items/73.png",
+      "bytes": 173,
+      "sha256": "4b7b9d1815d69d3fdddf9050c6af0e7690f63af39cdf7afb68cb588419cff7c0",
+      "status": "ok"
+    },
+    {
+      "nds_id": 74,
+      "pokeapi_item_id": 74,
+      "identifier": "yellow-shard",
+      "path": "web/sprites/items/74.png",
+      "bytes": 173,
+      "sha256": "ff453b77166e47f5bbe5bbad56869b39d0dc9a82d167aaf2ba30c5bbc738b9b3",
+      "status": "ok"
+    },
+    {
+      "nds_id": 75,
+      "pokeapi_item_id": 75,
+      "identifier": "green-shard",
+      "path": "web/sprites/items/75.png",
+      "bytes": 173,
+      "sha256": "fd75e9af49d4ccb2267a5f6ea3d3774ef73e224ab6c0434a3a7fe0df1a5b70c6",
+      "status": "ok"
+    },
+    {
+      "nds_id": 76,
+      "pokeapi_item_id": 76,
+      "identifier": "super-repel",
+      "path": "web/sprites/items/76.png",
+      "bytes": 264,
+      "sha256": "fe2a4353bd8f41cd41ea0d1843a15569b2d5eaa60406dafb66cb06cc00353c69",
+      "status": "ok"
+    },
+    {
+      "nds_id": 77,
+      "pokeapi_item_id": 77,
+      "identifier": "max-repel",
+      "path": "web/sprites/items/77.png",
+      "bytes": 264,
+      "sha256": "5b49f2a07fe6c1c22a17a81ea0173d8b0e07380cd1bef9aea79b5910301d0103",
+      "status": "ok"
+    },
+    {
+      "nds_id": 78,
+      "pokeapi_item_id": 78,
+      "identifier": "escape-rope",
+      "path": "web/sprites/items/78.png",
+      "bytes": 246,
+      "sha256": "8bdbdda963626bd2b4458d38b4ea425ae272685f7084144fd6be02cd296e909f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 79,
+      "pokeapi_item_id": 79,
+      "identifier": "repel",
+      "path": "web/sprites/items/79.png",
+      "bytes": 264,
+      "sha256": "a4dde3e9590e1dd5881ff62f82e8d9ea649e0dfcb25b71ce2452b9e5634fca57",
+      "status": "ok"
+    },
+    {
+      "nds_id": 80,
+      "pokeapi_item_id": 80,
+      "identifier": "sun-stone",
+      "path": "web/sprites/items/80.png",
+      "bytes": 304,
+      "sha256": "3542840d250e42276ad079d6cf7a3950d5db7b67bb45df1a5182f6a28ff2fab4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 81,
+      "pokeapi_item_id": 81,
+      "identifier": "moon-stone",
+      "path": "web/sprites/items/81.png",
+      "bytes": 281,
+      "sha256": "44757f9cc107f23cc6775c93edc5b0eea429f2e08c5e547ee325c699d77c2742",
+      "status": "ok"
+    },
+    {
+      "nds_id": 82,
+      "pokeapi_item_id": 82,
+      "identifier": "fire-stone",
+      "path": "web/sprites/items/82.png",
+      "bytes": 330,
+      "sha256": "79b9f7aa7adf5f43465545cfb7b510789c90215b27680d91acaa0690c57f2507",
+      "status": "ok"
+    },
+    {
+      "nds_id": 83,
+      "pokeapi_item_id": 83,
+      "identifier": "thunder-stone",
+      "path": "web/sprites/items/83.png",
+      "bytes": 298,
+      "sha256": "74fa4c73cad9285a250f8f7e8e434409b3e89670adc6f30b419b709fce1bad10",
+      "status": "ok"
+    },
+    {
+      "nds_id": 84,
+      "pokeapi_item_id": 84,
+      "identifier": "water-stone",
+      "path": "web/sprites/items/84.png",
+      "bytes": 309,
+      "sha256": "a213ec2d62b816073a9a78bf659b436de8e196df3b14437b3d768f466b3e9616",
+      "status": "ok"
+    },
+    {
+      "nds_id": 85,
+      "pokeapi_item_id": 85,
+      "identifier": "leaf-stone",
+      "path": "web/sprites/items/85.png",
+      "bytes": 332,
+      "sha256": "f7987d279723736d568ada3cece6936d441c61f3ccec401a7e236020bacd7f5e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 86,
+      "pokeapi_item_id": 86,
+      "identifier": "tiny-mushroom",
+      "path": "web/sprites/items/86.png",
+      "bytes": 222,
+      "sha256": "f854dd7c3eb7bdac139f708ac4a8347f8d733e8f5a97e42c11f952c821818c08",
+      "status": "ok"
+    },
+    {
+      "nds_id": 87,
+      "pokeapi_item_id": 87,
+      "identifier": "big-mushroom",
+      "path": "web/sprites/items/87.png",
+      "bytes": 262,
+      "sha256": "ead2be680ca76512a83c432153bebc62f51e9d406aeb1a7caea0a29c3e7f0f1b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 88,
+      "pokeapi_item_id": 88,
+      "identifier": "pearl",
+      "path": "web/sprites/items/88.png",
+      "bytes": 225,
+      "sha256": "3d1edd31a9ea7caa00f4be9c225be60225bbb517123d229011b95dfa3b7d3584",
+      "status": "ok"
+    },
+    {
+      "nds_id": 89,
+      "pokeapi_item_id": 89,
+      "identifier": "big-pearl",
+      "path": "web/sprites/items/89.png",
+      "bytes": 284,
+      "sha256": "55127e482888f2de3de46782b8096fe2aaa73a2878099f0fc7a051d7a93633b4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 90,
+      "pokeapi_item_id": 90,
+      "identifier": "stardust",
+      "path": "web/sprites/items/90.png",
+      "bytes": 282,
+      "sha256": "d34d3e6eb8739af2f321d5806d49ed2522bb3bf405a48f529182c5b606d292ff",
+      "status": "ok"
+    },
+    {
+      "nds_id": 91,
+      "pokeapi_item_id": 91,
+      "identifier": "star-piece",
+      "path": "web/sprites/items/91.png",
+      "bytes": 226,
+      "sha256": "8cfad719f903e5497158b6b5cccb0006a90d53e833d4016223de87ce2532ee2b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 92,
+      "pokeapi_item_id": 92,
+      "identifier": "nugget",
+      "path": "web/sprites/items/92.png",
+      "bytes": 229,
+      "sha256": "6a1bfd5da5c95284196724458bbdf2febe5597fe5635bbda8d7e9649080d07f1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 93,
+      "pokeapi_item_id": 93,
+      "identifier": "heart-scale",
+      "path": "web/sprites/items/93.png",
+      "bytes": 227,
+      "sha256": "a99328173bb80722f913772e1775b2b7f9c8f7d15a4000636b89d33d8da2765d",
+      "status": "ok"
+    },
+    {
+      "nds_id": 94,
+      "pokeapi_item_id": 94,
+      "identifier": "honey",
+      "path": "web/sprites/items/94.png",
+      "bytes": 276,
+      "sha256": "5800efc432a17218f56b5d865c4587b36c4cab623241e636d80ac0e17a0a74c1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 95,
+      "pokeapi_item_id": 95,
+      "identifier": "growth-mulch",
+      "path": "web/sprites/items/95.png",
+      "bytes": 266,
+      "sha256": "29e690e355a21909a5b6b5fb472e550684f14797807b70e9a316f96e1c11e00f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 96,
+      "pokeapi_item_id": 96,
+      "identifier": "damp-mulch",
+      "path": "web/sprites/items/96.png",
+      "bytes": 269,
+      "sha256": "4865571c3fc26806eca4fadc5f2e6ae3c1f3ab7598f2717b414b95b62fecea31",
+      "status": "ok"
+    },
+    {
+      "nds_id": 97,
+      "pokeapi_item_id": 97,
+      "identifier": "stable-mulch",
+      "path": "web/sprites/items/97.png",
+      "bytes": 270,
+      "sha256": "4799ae1f4bc38ddcccf54677db2bff37ec6c0cf7cddf892d5703c991024a617b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 98,
+      "pokeapi_item_id": 98,
+      "identifier": "gooey-mulch",
+      "path": "web/sprites/items/98.png",
+      "bytes": 269,
+      "sha256": "cc0e0c77aed8f37dad535c0004ba0ce0e4c9e2e974877478e2c715453c438a6e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 99,
+      "pokeapi_item_id": 99,
+      "identifier": "root-fossil",
+      "path": "web/sprites/items/99.png",
+      "bytes": 360,
+      "sha256": "e9087083eb79a832727026f3d42dd32bb0cc3fb15b9ba572a0c1c707d06f87f6",
+      "status": "ok"
+    },
+    {
+      "nds_id": 100,
+      "pokeapi_item_id": 100,
+      "identifier": "claw-fossil",
+      "path": "web/sprites/items/100.png",
+      "bytes": 338,
+      "sha256": "958ee36d7c3835d67d0146219d8939f802c0ee1f00a5e26c1c78478043d0c4a7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 101,
+      "pokeapi_item_id": 101,
+      "identifier": "helix-fossil",
+      "path": "web/sprites/items/101.png",
+      "bytes": 319,
+      "sha256": "767985225c29056024506d43ae367adb37438241714159a337a1c08a0dfbe8e7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 102,
+      "pokeapi_item_id": 102,
+      "identifier": "dome-fossil",
+      "path": "web/sprites/items/102.png",
+      "bytes": 317,
+      "sha256": "2a8242c5b3d4f599a04863f0ceb0b469b3e2fa14442d0dd215420e334c61bb11",
+      "status": "ok"
+    },
+    {
+      "nds_id": 103,
+      "pokeapi_item_id": 103,
+      "identifier": "old-amber",
+      "path": "web/sprites/items/103.png",
+      "bytes": 299,
+      "sha256": "f91136c27e7c920574157a3e66c0b21b0707cc581207fc5904ed855e23002acc",
+      "status": "ok"
+    },
+    {
+      "nds_id": 104,
+      "pokeapi_item_id": 104,
+      "identifier": "armor-fossil",
+      "path": "web/sprites/items/104.png",
+      "bytes": 363,
+      "sha256": "1c045becd68976f25cd34d9d0ca7e59788e600d438bf90c8ba84a900c144a566",
+      "status": "ok"
+    },
+    {
+      "nds_id": 105,
+      "pokeapi_item_id": 105,
+      "identifier": "skull-fossil",
+      "path": "web/sprites/items/105.png",
+      "bytes": 351,
+      "sha256": "2fcbe185e662c781526f7ece0329c2df6c0ce5e98f047c6bfeb770986d0b4777",
+      "status": "ok"
+    },
+    {
+      "nds_id": 106,
+      "pokeapi_item_id": 106,
+      "identifier": "rare-bone",
+      "path": "web/sprites/items/106.png",
+      "bytes": 218,
+      "sha256": "3dd383bb7f5cef4ba687415ebca0f649d9e05d09c898e31deb2cafce8c2b9139",
+      "status": "ok"
+    },
+    {
+      "nds_id": 107,
+      "pokeapi_item_id": 107,
+      "identifier": "shiny-stone",
+      "path": "web/sprites/items/107.png",
+      "bytes": 290,
+      "sha256": "5013cd61e7f9eb724b45fd3e4eb6bc28fd180a56a2f462eaecfb20da94cd9876",
+      "status": "ok"
+    },
+    {
+      "nds_id": 108,
+      "pokeapi_item_id": 108,
+      "identifier": "dusk-stone",
+      "path": "web/sprites/items/108.png",
+      "bytes": 271,
+      "sha256": "a61afc1d5fcf1bc25f70a3b496ce2efdc37ee77fc386d2cf14c7442763693637",
+      "status": "ok"
+    },
+    {
+      "nds_id": 109,
+      "pokeapi_item_id": 109,
+      "identifier": "dawn-stone",
+      "path": "web/sprites/items/109.png",
+      "bytes": 263,
+      "sha256": "7d234d687853296a6a4a185a9c27cc637d9da917c70df02770c815f455e6f211",
+      "status": "ok"
+    },
+    {
+      "nds_id": 110,
+      "pokeapi_item_id": 110,
+      "identifier": "oval-stone",
+      "path": "web/sprites/items/110.png",
+      "bytes": 254,
+      "sha256": "8be8d081352b631a53f08f8b15990e1d585959586038d6993bd30129662e9d67",
+      "status": "ok"
+    },
+    {
+      "nds_id": 111,
+      "pokeapi_item_id": 111,
+      "identifier": "odd-keystone",
+      "path": "web/sprites/items/111.png",
+      "bytes": 285,
+      "sha256": "a0a7de807e19dc7f020ac67756a629fb33f19f13caae72f2173c2e01b4b2360a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 135,
+      "pokeapi_item_id": 112,
+      "identifier": "adamant-orb",
+      "path": "web/sprites/items/135.png",
+      "bytes": 323,
+      "sha256": "a6c69daccb247a33425876ab630389038153868c27c9126fea2dc89601ed044a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 136,
+      "pokeapi_item_id": 113,
+      "identifier": "lustrous-orb",
+      "path": "web/sprites/items/136.png",
+      "bytes": 359,
+      "sha256": "3b92c4872f6a8aecef516bbee460847018629474ae217b1005eb300891e45c9e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 137,
+      "pokeapi_item_id": 114,
+      "identifier": "grass-mail",
+      "path": "web/sprites/items/137.png",
+      "bytes": 249,
+      "sha256": "aff2f5b6771d3d719dbed4ffdd3b1fb668b085c13a3c5ec372f27e9083d95284",
+      "status": "ok"
+    },
+    {
+      "nds_id": 138,
+      "pokeapi_item_id": 115,
+      "identifier": "flame-mail",
+      "path": "web/sprites/items/138.png",
+      "bytes": 248,
+      "sha256": "739b76444eecc725ac5b59388dffbfe135c050ecf89cffe9f99852325cd72374",
+      "status": "ok"
+    },
+    {
+      "nds_id": 139,
+      "pokeapi_item_id": 116,
+      "identifier": "bubble-mail",
+      "path": "web/sprites/items/139.png",
+      "bytes": 249,
+      "sha256": "9784f4f93d1d0e7de146cfd1ab965b49cbe26d3d2ffb878e836679663fe71848",
+      "status": "ok"
+    },
+    {
+      "nds_id": 140,
+      "pokeapi_item_id": 117,
+      "identifier": "bloom-mail",
+      "path": "web/sprites/items/140.png",
+      "bytes": 275,
+      "sha256": "bf636007873b40699520493bc7d641ea9c33b01a578276635b5593190c54a34b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 141,
+      "pokeapi_item_id": 118,
+      "identifier": "tunnel-mail",
+      "path": "web/sprites/items/141.png",
+      "bytes": 269,
+      "sha256": "b9fae0cebfad9105f919f95d5039a7ca332d814c454be1d0e1372cdc57e600fe",
+      "status": "ok"
+    },
+    {
+      "nds_id": 142,
+      "pokeapi_item_id": 119,
+      "identifier": "steel-mail",
+      "path": "web/sprites/items/142.png",
+      "bytes": 269,
+      "sha256": "8fb327ca1abf0f65b98a490a6d52f714c3bf93f18d23c41b2a347efd35cb0d95",
+      "status": "ok"
+    },
+    {
+      "nds_id": 143,
+      "pokeapi_item_id": 120,
+      "identifier": "heart-mail",
+      "path": "web/sprites/items/143.png",
+      "bytes": 256,
+      "sha256": "8ab4ee0f0e33b0e1626d2b8a62fd4e9c467ca9dc2bf9d32202d7866ed8f91a06",
+      "status": "ok"
+    },
+    {
+      "nds_id": 144,
+      "pokeapi_item_id": 121,
+      "identifier": "snow-mail",
+      "path": "web/sprites/items/144.png",
+      "bytes": 268,
+      "sha256": "3eb5901c3f863c8c865c419dfaa468540510ea379557c4011fc157469c242e8c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 145,
+      "pokeapi_item_id": 122,
+      "identifier": "space-mail",
+      "path": "web/sprites/items/145.png",
+      "bytes": 285,
+      "sha256": "8c03bb1c39ecb5558a3316bade1d28cb22cd7f11694d9fc877c68dacdeb2bbd2",
+      "status": "ok"
+    },
+    {
+      "nds_id": 146,
+      "pokeapi_item_id": 123,
+      "identifier": "air-mail",
+      "path": "web/sprites/items/146.png",
+      "bytes": 231,
+      "sha256": "07fc4de118fc04eb6dd5b746140ec917285e95f9e3e3ab1150205cd3d31b0f30",
+      "status": "ok"
+    },
+    {
+      "nds_id": 147,
+      "pokeapi_item_id": 124,
+      "identifier": "mosaic-mail",
+      "path": "web/sprites/items/147.png",
+      "bytes": 287,
+      "sha256": "0cd54c0e7a5293152086e441ef6a9cf496beb051badc1dc50668fe873b8cafaf",
+      "status": "ok"
+    },
+    {
+      "nds_id": 148,
+      "pokeapi_item_id": 125,
+      "identifier": "brick-mail",
+      "path": "web/sprites/items/148.png",
+      "bytes": 243,
+      "sha256": "9b849ae921140c698e151554de4d4196e9d1f19e0eeeaa9b4b31d68ea5fcfb1c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 149,
+      "pokeapi_item_id": 126,
+      "identifier": "cheri-berry",
+      "path": "web/sprites/items/149.png",
+      "bytes": 325,
+      "sha256": "949f8cb36532f09ff97ca41f97db3104abc16c209496181fea38839d79c5ce00",
+      "status": "ok"
+    },
+    {
+      "nds_id": 150,
+      "pokeapi_item_id": 127,
+      "identifier": "chesto-berry",
+      "path": "web/sprites/items/150.png",
+      "bytes": 282,
+      "sha256": "6620e6507a3bc28c08f5f264e5b461cad0db9dce647d3cab0a4f5421e36abafd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 151,
+      "pokeapi_item_id": 128,
+      "identifier": "pecha-berry",
+      "path": "web/sprites/items/151.png",
+      "bytes": 265,
+      "sha256": "9efb16dc703ef654ce0532329613d51150dcc3c9a77f0101f33d54b15a00028a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 152,
+      "pokeapi_item_id": 129,
+      "identifier": "rawst-berry",
+      "path": "web/sprites/items/152.png",
+      "bytes": 293,
+      "sha256": "3c3976d2121647f4c1b19673de8424baa80f59f5d4ea91e447c14fef5da64066",
+      "status": "ok"
+    },
+    {
+      "nds_id": 153,
+      "pokeapi_item_id": 130,
+      "identifier": "aspear-berry",
+      "path": "web/sprites/items/153.png",
+      "bytes": 294,
+      "sha256": "162489a00a8cac2545b74fad77dc79632198d3e09e153e688130b4238a563ae7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 154,
+      "pokeapi_item_id": 131,
+      "identifier": "leppa-berry",
+      "path": "web/sprites/items/154.png",
+      "bytes": 274,
+      "sha256": "69db79560fd815477f5a6901ee08c4ebaed368bb420e07547dfea0a79b5bd2f4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 155,
+      "pokeapi_item_id": 132,
+      "identifier": "oran-berry",
+      "path": "web/sprites/items/155.png",
+      "bytes": 275,
+      "sha256": "4d4d31e7c29a4540d5f438b87bb1762bf3cd7b0920e523fc9020f6c0bace1c1a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 156,
+      "pokeapi_item_id": 133,
+      "identifier": "persim-berry",
+      "path": "web/sprites/items/156.png",
+      "bytes": 289,
+      "sha256": "e09597ca2770a12a55683e4e631361093491883a111363641a9b46f4b8929b2d",
+      "status": "ok"
+    },
+    {
+      "nds_id": 157,
+      "pokeapi_item_id": 134,
+      "identifier": "lum-berry",
+      "path": "web/sprites/items/157.png",
+      "bytes": 243,
+      "sha256": "eab0124365d18b7439b553edd5cf02e17297b72495a79e37114ee5398d0e3996",
+      "status": "ok"
+    },
+    {
+      "nds_id": 158,
+      "pokeapi_item_id": 135,
+      "identifier": "sitrus-berry",
+      "path": "web/sprites/items/158.png",
+      "bytes": 274,
+      "sha256": "934d9dcfdc189fd01987f1e0356e079cf32d4d3aafac89ca3e77158c8f44c10e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 159,
+      "pokeapi_item_id": 136,
+      "identifier": "figy-berry",
+      "path": "web/sprites/items/159.png",
+      "bytes": 288,
+      "sha256": "c2c4ba18f7dba66744bcf4503ca9cb96b9c6809257e86f6065db61d07a9fd507",
+      "status": "ok"
+    },
+    {
+      "nds_id": 160,
+      "pokeapi_item_id": 137,
+      "identifier": "wiki-berry",
+      "path": "web/sprites/items/160.png",
+      "bytes": 298,
+      "sha256": "2fc598515ff3d211c382516a071f27c951068ed552b37af0d3f3ec1f76efe3a3",
+      "status": "ok"
+    },
+    {
+      "nds_id": 161,
+      "pokeapi_item_id": 138,
+      "identifier": "mago-berry",
+      "path": "web/sprites/items/161.png",
+      "bytes": 269,
+      "sha256": "6f15fb1070773c2394bd99bd7586414290664dfe188be2f4d5eb8194533d0cb0",
+      "status": "ok"
+    },
+    {
+      "nds_id": 162,
+      "pokeapi_item_id": 139,
+      "identifier": "aguav-berry",
+      "path": "web/sprites/items/162.png",
+      "bytes": 296,
+      "sha256": "f4ec2260d295ee8f23fa3dc34bd5b0d1ad677248ddceae705727b9ba14f06d5a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 163,
+      "pokeapi_item_id": 140,
+      "identifier": "iapapa-berry",
+      "path": "web/sprites/items/163.png",
+      "bytes": 298,
+      "sha256": "70a34724b4a89c642ff69675cef87b8dd3a43cd834f06a24b81f1ca1a7383e8b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 164,
+      "pokeapi_item_id": 141,
+      "identifier": "razz-berry",
+      "path": "web/sprites/items/164.png",
+      "bytes": 300,
+      "sha256": "2da517c16be96fdc23fc2c3ba17f1e7afe256a016c6c7cc2360191c9e21ee6d6",
+      "status": "ok"
+    },
+    {
+      "nds_id": 165,
+      "pokeapi_item_id": 142,
+      "identifier": "bluk-berry",
+      "path": "web/sprites/items/165.png",
+      "bytes": 309,
+      "sha256": "86894e711637392862e7b6587b9bed9d56b6b17534df2fa4dc01b011bf1a31dc",
+      "status": "ok"
+    },
+    {
+      "nds_id": 166,
+      "pokeapi_item_id": 143,
+      "identifier": "nanab-berry",
+      "path": "web/sprites/items/166.png",
+      "bytes": 292,
+      "sha256": "3e5e3ad1ceefedd300d88bd9d718a9354c3afc60c5b995f674b98db7d848479e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 167,
+      "pokeapi_item_id": 144,
+      "identifier": "wepear-berry",
+      "path": "web/sprites/items/167.png",
+      "bytes": 254,
+      "sha256": "556fc964b90850c9f34c0c7174e285dcc174a73adcd58f0da2822c69668e911a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 168,
+      "pokeapi_item_id": 145,
+      "identifier": "pinap-berry",
+      "path": "web/sprites/items/168.png",
+      "bytes": 327,
+      "sha256": "39b6cf4f1d4632d0e3b65eabe653b43c9ebb741f5aaa14b3b2be75fbff051ca7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 169,
+      "pokeapi_item_id": 146,
+      "identifier": "pomeg-berry",
+      "path": "web/sprites/items/169.png",
+      "bytes": 257,
+      "sha256": "e2dc10911c7e3b498ca26abad6dc8cf8bbd667e41813bd81b72bc24b6824696b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 170,
+      "pokeapi_item_id": 147,
+      "identifier": "kelpsy-berry",
+      "path": "web/sprites/items/170.png",
+      "bytes": 269,
+      "sha256": "268be43d67d885c936380b7ec286348cf8abd499e4981668eff0ad8fb4501c6f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 171,
+      "pokeapi_item_id": 148,
+      "identifier": "qualot-berry",
+      "path": "web/sprites/items/171.png",
+      "bytes": 280,
+      "sha256": "114deb9da05466efd480c2f6f2779b140148c0845de51abe1a92ab83dc593922",
+      "status": "ok"
+    },
+    {
+      "nds_id": 172,
+      "pokeapi_item_id": 149,
+      "identifier": "hondew-berry",
+      "path": "web/sprites/items/172.png",
+      "bytes": 287,
+      "sha256": "6386b16db2945bed60da6ed8477e6fd8d56aa39b17370f1dc2d27f2265c25b4c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 173,
+      "pokeapi_item_id": 150,
+      "identifier": "grepa-berry",
+      "path": "web/sprites/items/173.png",
+      "bytes": 264,
+      "sha256": "672f53f1c7c375f0c3a6931cd75cbf6eecab1ccc63ac432fd218dc5a0cb288e7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 174,
+      "pokeapi_item_id": 151,
+      "identifier": "tamato-berry",
+      "path": "web/sprites/items/174.png",
+      "bytes": 298,
+      "sha256": "c4be796fd85d0a125793b6da625d410eaff37f4e43ee643ec0c4d7916f2d3298",
+      "status": "ok"
+    },
+    {
+      "nds_id": 175,
+      "pokeapi_item_id": 152,
+      "identifier": "cornn-berry",
+      "path": "web/sprites/items/175.png",
+      "bytes": 331,
+      "sha256": "8a6fea864bc0e8cf7cc29bed3f65a912e9ba9b4c984d936867dfbd0d79da3bef",
+      "status": "ok"
+    },
+    {
+      "nds_id": 176,
+      "pokeapi_item_id": 153,
+      "identifier": "magost-berry",
+      "path": "web/sprites/items/176.png",
+      "bytes": 257,
+      "sha256": "3b48d648c3c33c10f4636105049b87bf31dad5271b22566d4ac128ab1bea2f67",
+      "status": "ok"
+    },
+    {
+      "nds_id": 177,
+      "pokeapi_item_id": 154,
+      "identifier": "rabuta-berry",
+      "path": "web/sprites/items/177.png",
+      "bytes": 324,
+      "sha256": "85fa5041a4ff1cae3b15d3b32eab52d945edef76f3fe8b6fd7a089ea8e483f9e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 178,
+      "pokeapi_item_id": 155,
+      "identifier": "nomel-berry",
+      "path": "web/sprites/items/178.png",
+      "bytes": 245,
+      "sha256": "bba99f716b4385d00a5a282ed4611be1e03e37557470bdaf3debee00b8afef55",
+      "status": "ok"
+    },
+    {
+      "nds_id": 179,
+      "pokeapi_item_id": 156,
+      "identifier": "spelon-berry",
+      "path": "web/sprites/items/179.png",
+      "bytes": 285,
+      "sha256": "d41757ef23a07fd0b1228650c13f62d559fb4640f51cb927ef1d631b9cc02300",
+      "status": "ok"
+    },
+    {
+      "nds_id": 180,
+      "pokeapi_item_id": 157,
+      "identifier": "pamtre-berry",
+      "path": "web/sprites/items/180.png",
+      "bytes": 326,
+      "sha256": "8b76a56b700d6e55a45fc0a06dc1cafe9718dcad8672cdfab18733c7dea346c1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 181,
+      "pokeapi_item_id": 158,
+      "identifier": "watmel-berry",
+      "path": "web/sprites/items/181.png",
+      "bytes": 337,
+      "sha256": "c58ed42fc7513d1e84d63f171a59422b53ba53984ddb4b2a2bcfb75b43f3a764",
+      "status": "ok"
+    },
+    {
+      "nds_id": 182,
+      "pokeapi_item_id": 159,
+      "identifier": "durin-berry",
+      "path": "web/sprites/items/182.png",
+      "bytes": 334,
+      "sha256": "2531c38a2da664c9116796c54c75743275958a36e75d94ae0be37cd4197d4d97",
+      "status": "ok"
+    },
+    {
+      "nds_id": 183,
+      "pokeapi_item_id": 160,
+      "identifier": "belue-berry",
+      "path": "web/sprites/items/183.png",
+      "bytes": 318,
+      "sha256": "07b4459387e85732183e306fbb823e6f0110c64c38888d8a686d525986c64134",
+      "status": "ok"
+    },
+    {
+      "nds_id": 184,
+      "pokeapi_item_id": 161,
+      "identifier": "occa-berry",
+      "path": "web/sprites/items/184.png",
+      "bytes": 252,
+      "sha256": "b4c94b94159227fed46ccad3c063f3a9b418f7ef9eab635ccd17197c1ca814fb",
+      "status": "ok"
+    },
+    {
+      "nds_id": 185,
+      "pokeapi_item_id": 162,
+      "identifier": "passho-berry",
+      "path": "web/sprites/items/185.png",
+      "bytes": 272,
+      "sha256": "48786c103dcde11eee3b938c360259c687ab44b0d4ea3aae6fcc8099f1b05671",
+      "status": "ok"
+    },
+    {
+      "nds_id": 186,
+      "pokeapi_item_id": 163,
+      "identifier": "wacan-berry",
+      "path": "web/sprites/items/186.png",
+      "bytes": 267,
+      "sha256": "f31ca263b9ccc47d2a743878fc271fadedf36925b7e6bd26d54c29f42f821b19",
+      "status": "ok"
+    },
+    {
+      "nds_id": 187,
+      "pokeapi_item_id": 164,
+      "identifier": "rindo-berry",
+      "path": "web/sprites/items/187.png",
+      "bytes": 244,
+      "sha256": "5b00f01a17471cc2f3587b476c9f76900d8049cf2542bcc9efb46431d6255d03",
+      "status": "ok"
+    },
+    {
+      "nds_id": 188,
+      "pokeapi_item_id": 165,
+      "identifier": "yache-berry",
+      "path": "web/sprites/items/188.png",
+      "bytes": 283,
+      "sha256": "77e7e38bddcd0ad8368da55b9fc8ee40b3949e7ab53130cbd4b455ba5a272d62",
+      "status": "ok"
+    },
+    {
+      "nds_id": 189,
+      "pokeapi_item_id": 166,
+      "identifier": "chople-berry",
+      "path": "web/sprites/items/189.png",
+      "bytes": 277,
+      "sha256": "03e499f067f5679b0cec8eb015b90bfa7ae26e0507d1815fdedf48e41190a56e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 190,
+      "pokeapi_item_id": 167,
+      "identifier": "kebia-berry",
+      "path": "web/sprites/items/190.png",
+      "bytes": 294,
+      "sha256": "bca389c73eaa1475e9d3733b409e960763f56963e1c066b5498ab32e15c83243",
+      "status": "ok"
+    },
+    {
+      "nds_id": 191,
+      "pokeapi_item_id": 168,
+      "identifier": "shuca-berry",
+      "path": "web/sprites/items/191.png",
+      "bytes": 271,
+      "sha256": "6932f15326f90ea473005d18a7c13b4d50be5247455cf4daecdb7399c00499b8",
+      "status": "ok"
+    },
+    {
+      "nds_id": 192,
+      "pokeapi_item_id": 169,
+      "identifier": "coba-berry",
+      "path": "web/sprites/items/192.png",
+      "bytes": 254,
+      "sha256": "db26fb90b9b56dfa8f74f09571f0b591ba55954494de6aba6543afbe79983b08",
+      "status": "ok"
+    },
+    {
+      "nds_id": 193,
+      "pokeapi_item_id": 170,
+      "identifier": "payapa-berry",
+      "path": "web/sprites/items/193.png",
+      "bytes": 288,
+      "sha256": "95bced7a647a219b7e6ba313a6fb83b0d911dd6428beca1b4f6403d3a3e7457b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 194,
+      "pokeapi_item_id": 171,
+      "identifier": "tanga-berry",
+      "path": "web/sprites/items/194.png",
+      "bytes": 307,
+      "sha256": "b3791845d1536fdf02926b447727cfbedadeca89dbcee05af794c1774a801601",
+      "status": "ok"
+    },
+    {
+      "nds_id": 195,
+      "pokeapi_item_id": 172,
+      "identifier": "charti-berry",
+      "path": "web/sprites/items/195.png",
+      "bytes": 240,
+      "sha256": "8675038a42a47bd002532214af1fa94ead6573476fef7eab5ef0c65502d0e16f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 196,
+      "pokeapi_item_id": 173,
+      "identifier": "kasib-berry",
+      "path": "web/sprites/items/196.png",
+      "bytes": 295,
+      "sha256": "8ebdffc2650b06e7a70a066051d04621e23a3ba1f0026219b3ce6bc67e5ae61c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 197,
+      "pokeapi_item_id": 174,
+      "identifier": "haban-berry",
+      "path": "web/sprites/items/197.png",
+      "bytes": 291,
+      "sha256": "06e19bce4e09c45c180538eb85ea1ce9fb05df2d510f2a79c6cf1c3c35d48759",
+      "status": "ok"
+    },
+    {
+      "nds_id": 198,
+      "pokeapi_item_id": 175,
+      "identifier": "colbur-berry",
+      "path": "web/sprites/items/198.png",
+      "bytes": 254,
+      "sha256": "98a92b28058e3059dd139a4a5652bc496c0ad2778ad6a3c5f72491a69a0503e0",
+      "status": "ok"
+    },
+    {
+      "nds_id": 199,
+      "pokeapi_item_id": 176,
+      "identifier": "babiri-berry",
+      "path": "web/sprites/items/199.png",
+      "bytes": 284,
+      "sha256": "4ccd5cc64b20575bafe64ef861725b964b4f621c038169df30b3cac211b37bd5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 200,
+      "pokeapi_item_id": 177,
+      "identifier": "chilan-berry",
+      "path": "web/sprites/items/200.png",
+      "bytes": 263,
+      "sha256": "f84548b41899db4755f6c07259d9d0750452e8879d9f574101197e1aea3667df",
+      "status": "ok"
+    },
+    {
+      "nds_id": 201,
+      "pokeapi_item_id": 178,
+      "identifier": "liechi-berry",
+      "path": "web/sprites/items/201.png",
+      "bytes": 302,
+      "sha256": "e6278b9b9db67497cf5833c964b960453cb81a34b914b8ad27cf545fec550fd1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 202,
+      "pokeapi_item_id": 179,
+      "identifier": "ganlon-berry",
+      "path": "web/sprites/items/202.png",
+      "bytes": 294,
+      "sha256": "4f51fee468b67db200a44a3920b27cd2c9215a5fd7507f6ff1f0f7652822ad54",
+      "status": "ok"
+    },
+    {
+      "nds_id": 203,
+      "pokeapi_item_id": 180,
+      "identifier": "salac-berry",
+      "path": "web/sprites/items/203.png",
+      "bytes": 297,
+      "sha256": "822648e085456e3df9de8d342bb6969790ee7981492c4ffd0cbf68100f483a01",
+      "status": "ok"
+    },
+    {
+      "nds_id": 204,
+      "pokeapi_item_id": 181,
+      "identifier": "petaya-berry",
+      "path": "web/sprites/items/204.png",
+      "bytes": 329,
+      "sha256": "f955acdb9b3bdc652400d17d469c9e7fa5a766eabf8b680daef2e6b751e439e8",
+      "status": "ok"
+    },
+    {
+      "nds_id": 205,
+      "pokeapi_item_id": 182,
+      "identifier": "apicot-berry",
+      "path": "web/sprites/items/205.png",
+      "bytes": 280,
+      "sha256": "e76593848f83824a10e36efb40899d3b38f2c44a3e4db0ed1ca54a4edc09170a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 206,
+      "pokeapi_item_id": 183,
+      "identifier": "lansat-berry",
+      "path": "web/sprites/items/206.png",
+      "bytes": 304,
+      "sha256": "382346bb47b87d83a6152c55356b188eee8bfa47b96f0b63dce9c847dd01dc9b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 207,
+      "pokeapi_item_id": 184,
+      "identifier": "starf-berry",
+      "path": "web/sprites/items/207.png",
+      "bytes": 292,
+      "sha256": "90af19d08bbedb5583b53976e5d2e1125d3dc3edc01a67e8963374c1e9add0a3",
+      "status": "ok"
+    },
+    {
+      "nds_id": 208,
+      "pokeapi_item_id": 185,
+      "identifier": "enigma-berry",
+      "path": "web/sprites/items/208.png",
+      "bytes": 285,
+      "sha256": "82def9b910844c2349f35dc83aca7eedcbf933d86263ada0f2bbd16acb8a8afe",
+      "status": "ok"
+    },
+    {
+      "nds_id": 209,
+      "pokeapi_item_id": 186,
+      "identifier": "micle-berry",
+      "path": "web/sprites/items/209.png",
+      "bytes": 218,
+      "sha256": "90f5b8c127ea65d9e6cb0243f82b465c2b2f446fcd508ac991ada5aa37cc6b6e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 210,
+      "pokeapi_item_id": 187,
+      "identifier": "custap-berry",
+      "path": "web/sprites/items/210.png",
+      "bytes": 295,
+      "sha256": "fe06847e6e3f5919c749809b1c4b5e0283721dc6b2b16e851679f8ef63f72f58",
+      "status": "ok"
+    },
+    {
+      "nds_id": 211,
+      "pokeapi_item_id": 188,
+      "identifier": "jaboca-berry",
+      "path": "web/sprites/items/211.png",
+      "bytes": 283,
+      "sha256": "b480db964048bff1689e7003d612202899ce86af176aa349d4b6c85529fce37e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 212,
+      "pokeapi_item_id": 189,
+      "identifier": "rowap-berry",
+      "path": "web/sprites/items/212.png",
+      "bytes": 333,
+      "sha256": "d83aad9faba4bda0606ad905f2e8c8e353b10ed0b54d536dc21b61901dadacd3",
+      "status": "ok"
+    },
+    {
+      "nds_id": 213,
+      "pokeapi_item_id": 190,
+      "identifier": "bright-powder",
+      "path": "web/sprites/items/213.png",
+      "bytes": 275,
+      "sha256": "7b8fe42c9d3d4253b14be2200e0fcbc23f102c9dd7465133123c646b431f694a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 214,
+      "pokeapi_item_id": 191,
+      "identifier": "white-herb",
+      "path": "web/sprites/items/214.png",
+      "bytes": 247,
+      "sha256": "0c7b2787c9badff20c5daeaa5c17e26af1a15017b3cc8fcfc53a3879bf671d38",
+      "status": "ok"
+    },
+    {
+      "nds_id": 215,
+      "pokeapi_item_id": 192,
+      "identifier": "macho-brace",
+      "path": "web/sprites/items/215.png",
+      "bytes": 334,
+      "sha256": "c4b1f55753093504933dcb5a8d3fbc6fb31c78923fad4976bedb6b29e475e123",
+      "status": "ok"
+    },
+    {
+      "nds_id": 216,
+      "pokeapi_item_id": 193,
+      "identifier": "exp-share",
+      "path": "web/sprites/items/216.png",
+      "bytes": 339,
+      "sha256": "ac97eb2671b39bc40ff305d647a9711dbd7ded69d0f951bf1396e8fe1a438d6d",
+      "status": "ok"
+    },
+    {
+      "nds_id": 217,
+      "pokeapi_item_id": 194,
+      "identifier": "quick-claw",
+      "path": "web/sprites/items/217.png",
+      "bytes": 227,
+      "sha256": "7495a24979a42b3995d079b4e4931580000df56c9105a8380ca2b068b9d5192f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 218,
+      "pokeapi_item_id": 195,
+      "identifier": "soothe-bell",
+      "path": "web/sprites/items/218.png",
+      "bytes": 286,
+      "sha256": "70eaf430f757325b4906f82d46d9baa25e34e3bc84a28cf00ab609a3bef9ad5b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 219,
+      "pokeapi_item_id": 196,
+      "identifier": "mental-herb",
+      "path": "web/sprites/items/219.png",
+      "bytes": 247,
+      "sha256": "7b6aca24bfc6537348931accf7eb06d9e45a836a93758eeade5e8faf76573c06",
+      "status": "ok"
+    },
+    {
+      "nds_id": 220,
+      "pokeapi_item_id": 197,
+      "identifier": "choice-band",
+      "path": "web/sprites/items/220.png",
+      "bytes": 347,
+      "sha256": "17840fdb9791faebc8254396b3b440fc81ca6398f9375701fea526685397d97d",
+      "status": "ok"
+    },
+    {
+      "nds_id": 221,
+      "pokeapi_item_id": 198,
+      "identifier": "kings-rock",
+      "path": "web/sprites/items/221.png",
+      "bytes": 306,
+      "sha256": "b29da56002e1d397688ef36f0f3efcc290a6a852cf0ab10bbddfa8155f935bdf",
+      "status": "ok"
+    },
+    {
+      "nds_id": 222,
+      "pokeapi_item_id": 199,
+      "identifier": "silver-powder",
+      "path": "web/sprites/items/222.png",
+      "bytes": 243,
+      "sha256": "045bbc3e3c2b60cca3ba9e24d7dc43b5c7d72ac17e2b9765b87e5dc8fcbbd115",
+      "status": "ok"
+    },
+    {
+      "nds_id": 223,
+      "pokeapi_item_id": 200,
+      "identifier": "amulet-coin",
+      "path": "web/sprites/items/223.png",
+      "bytes": 271,
+      "sha256": "e66bea3df8b63dd9e0e6cb860c138f7a038afeb6b51ee99b6846e964db5c1a5d",
+      "status": "ok"
+    },
+    {
+      "nds_id": 224,
+      "pokeapi_item_id": 201,
+      "identifier": "cleanse-tag",
+      "path": "web/sprites/items/224.png",
+      "bytes": 258,
+      "sha256": "bf146e37590b791e2feea55cf84e9a9bf570108870b5de74b067ec8c861feefe",
+      "status": "ok"
+    },
+    {
+      "nds_id": 225,
+      "pokeapi_item_id": 202,
+      "identifier": "soul-dew",
+      "path": "web/sprites/items/225.png",
+      "bytes": 238,
+      "sha256": "417cb68e3d96ec52e6742cb63a8dedf808454016dcc9e7c7648630deffabf0b8",
+      "status": "ok"
+    },
+    {
+      "nds_id": 226,
+      "pokeapi_item_id": 203,
+      "identifier": "deep-sea-tooth",
+      "path": "web/sprites/items/226.png",
+      "bytes": 281,
+      "sha256": "2e3de67d55b774ce8302280deb8a19b44715806806dd290363b55b56d4213374",
+      "status": "ok"
+    },
+    {
+      "nds_id": 227,
+      "pokeapi_item_id": 204,
+      "identifier": "deep-sea-scale",
+      "path": "web/sprites/items/227.png",
+      "bytes": 240,
+      "sha256": "45548b19e82837db6bb3ee7290eb3e4709ce46d14adda31e1cb4ec4448c6dc8d",
+      "status": "ok"
+    },
+    {
+      "nds_id": 228,
+      "pokeapi_item_id": 205,
+      "identifier": "smoke-ball",
+      "path": "web/sprites/items/228.png",
+      "bytes": 269,
+      "sha256": "a8559ec6f8b13c3f4914914379e1ac0303622e7f7f49b42ad519ec6023b358e2",
+      "status": "ok"
+    },
+    {
+      "nds_id": 229,
+      "pokeapi_item_id": 206,
+      "identifier": "everstone",
+      "path": "web/sprites/items/229.png",
+      "bytes": 250,
+      "sha256": "a5e65c949695ddddff3e3c687f6a5f29078f410893270185e25414fcc8aff0e0",
+      "status": "ok"
+    },
+    {
+      "nds_id": 230,
+      "pokeapi_item_id": 207,
+      "identifier": "focus-band",
+      "path": "web/sprites/items/230.png",
+      "bytes": 333,
+      "sha256": "af85df578cb1632c657b08e2ac89d087d0844d1f068847fd116130d76db75b68",
+      "status": "ok"
+    },
+    {
+      "nds_id": 231,
+      "pokeapi_item_id": 208,
+      "identifier": "lucky-egg",
+      "path": "web/sprites/items/231.png",
+      "bytes": 213,
+      "sha256": "be843ff952bdb84df930fe22e8100d3f064a48ad3a1f69c599c553e323f40539",
+      "status": "ok"
+    },
+    {
+      "nds_id": 232,
+      "pokeapi_item_id": 209,
+      "identifier": "scope-lens",
+      "path": "web/sprites/items/232.png",
+      "bytes": 361,
+      "sha256": "3fe0e87fbb7f1ee70578e7159dbc9fc62d7b7d364f764a20d99a17c1c6746d61",
+      "status": "ok"
+    },
+    {
+      "nds_id": 233,
+      "pokeapi_item_id": 210,
+      "identifier": "metal-coat",
+      "path": "web/sprites/items/233.png",
+      "bytes": 233,
+      "sha256": "1330f67b135121a15e27e17d3da64ae9065dfbda5ea85f4ad7bc5285c6aaa92c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 234,
+      "pokeapi_item_id": 211,
+      "identifier": "leftovers",
+      "path": "web/sprites/items/234.png",
+      "bytes": 264,
+      "sha256": "3ea874aaa17bbcb682131876763ca2f9a896644f7a2b5d9c51ea234f7aace558",
+      "status": "ok"
+    },
+    {
+      "nds_id": 235,
+      "pokeapi_item_id": 212,
+      "identifier": "dragon-scale",
+      "path": "web/sprites/items/235.png",
+      "bytes": 246,
+      "sha256": "c799da7310254aea308a043252e0f008e9369062d49de4a5ace30f79e868c5e5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 236,
+      "pokeapi_item_id": 213,
+      "identifier": "light-ball",
+      "path": "web/sprites/items/236.png",
+      "bytes": 232,
+      "sha256": "244a301fdd43aac1a7ae6ff163491de8cb04e5e79684d3a7bf5fb45f2f76b3b9",
+      "status": "ok"
+    },
+    {
+      "nds_id": 237,
+      "pokeapi_item_id": 214,
+      "identifier": "soft-sand",
+      "path": "web/sprites/items/237.png",
+      "bytes": 278,
+      "sha256": "add60c77b9475e06647c443a323c0260a8da406c1de46d01b92be6d70cd25508",
+      "status": "ok"
+    },
+    {
+      "nds_id": 238,
+      "pokeapi_item_id": 215,
+      "identifier": "hard-stone",
+      "path": "web/sprites/items/238.png",
+      "bytes": 256,
+      "sha256": "e76b5895ec2976cd5abae3e216b8c8eacf68ebd040d5fb697b42f37af3cb70d4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 239,
+      "pokeapi_item_id": 216,
+      "identifier": "miracle-seed",
+      "path": "web/sprites/items/239.png",
+      "bytes": 234,
+      "sha256": "2fa7c32270c089d858976f0f262b436d1feca44d6469dabdb4c8250444163cf1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 240,
+      "pokeapi_item_id": 217,
+      "identifier": "black-glasses",
+      "path": "web/sprites/items/240.png",
+      "bytes": 202,
+      "sha256": "da56b1cd8e4056396116d85d23adcbd1eee331be13207ae28e705c0bea77e62d",
+      "status": "ok"
+    },
+    {
+      "nds_id": 241,
+      "pokeapi_item_id": 218,
+      "identifier": "black-belt",
+      "path": "web/sprites/items/241.png",
+      "bytes": 246,
+      "sha256": "b59e45d1720bcabc91dd4bc5ecc7ef9401d5e130fc8dcb8e911fa897c8a3ac9b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 242,
+      "pokeapi_item_id": 219,
+      "identifier": "magnet",
+      "path": "web/sprites/items/242.png",
+      "bytes": 278,
+      "sha256": "6f05827802c3947cbc5a51204a7499537dfe91f69d231b95cafd807e38e29b9b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 243,
+      "pokeapi_item_id": 220,
+      "identifier": "mystic-water",
+      "path": "web/sprites/items/243.png",
+      "bytes": 235,
+      "sha256": "50db9161bf64687ab5998060c3b08f36300d1eef059e50b11cd36c4c3a58b789",
+      "status": "ok"
+    },
+    {
+      "nds_id": 244,
+      "pokeapi_item_id": 221,
+      "identifier": "sharp-beak",
+      "path": "web/sprites/items/244.png",
+      "bytes": 269,
+      "sha256": "92d7e794946fb27d1161a4a4c1aaa39fdacc2c45c6339007c197ead96d8b5806",
+      "status": "ok"
+    },
+    {
+      "nds_id": 245,
+      "pokeapi_item_id": 222,
+      "identifier": "poison-barb",
+      "path": "web/sprites/items/245.png",
+      "bytes": 213,
+      "sha256": "01abc73e0c0d9016339cddcdf780969339734a51508003f4c659c5a4e3b7fd46",
+      "status": "ok"
+    },
+    {
+      "nds_id": 246,
+      "pokeapi_item_id": 223,
+      "identifier": "never-melt-ice",
+      "path": "web/sprites/items/246.png",
+      "bytes": 262,
+      "sha256": "abf2fe57c80d03a417e42eb0bccd35cf5c34ae3246f84116873220150a4ec123",
+      "status": "ok"
+    },
+    {
+      "nds_id": 247,
+      "pokeapi_item_id": 224,
+      "identifier": "spell-tag",
+      "path": "web/sprites/items/247.png",
+      "bytes": 250,
+      "sha256": "00febed5a51cffe753a83bb25d03a39585bc06a439ec0d9affcd14186bd33c78",
+      "status": "ok"
+    },
+    {
+      "nds_id": 248,
+      "pokeapi_item_id": 225,
+      "identifier": "twisted-spoon",
+      "path": "web/sprites/items/248.png",
+      "bytes": 223,
+      "sha256": "39c2ef9e5b055f44a43cd8fbbc4fe86658c65477c2c9b323f471b59def1930ea",
+      "status": "ok"
+    },
+    {
+      "nds_id": 249,
+      "pokeapi_item_id": 226,
+      "identifier": "charcoal",
+      "path": "web/sprites/items/249.png",
+      "bytes": 250,
+      "sha256": "c5182215d365c29a3d604c69ec3e2dd269f5a4b9d50a85d820c9c0dc70011c6e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 250,
+      "pokeapi_item_id": 227,
+      "identifier": "dragon-fang",
+      "path": "web/sprites/items/250.png",
+      "bytes": 271,
+      "sha256": "9bcca1e7a0c2710e49cfc1f6f305716c38a2f2bf7a003a59668bb593424c03e6",
+      "status": "ok"
+    },
+    {
+      "nds_id": 251,
+      "pokeapi_item_id": 228,
+      "identifier": "silk-scarf",
+      "path": "web/sprites/items/251.png",
+      "bytes": 316,
+      "sha256": "54a6a86917ff7a5b7b309b47ffcd3355e8494404cd6a7ec30a1119c62c320000",
+      "status": "ok"
+    },
+    {
+      "nds_id": 252,
+      "pokeapi_item_id": 229,
+      "identifier": "up-grade",
+      "path": "web/sprites/items/252.png",
+      "bytes": 280,
+      "sha256": "03bf246e7880dcc155b0f2fb1d896810537078a1589dee871dafb2962a21ec08",
+      "status": "ok"
+    },
+    {
+      "nds_id": 253,
+      "pokeapi_item_id": 230,
+      "identifier": "shell-bell",
+      "path": "web/sprites/items/253.png",
+      "bytes": 318,
+      "sha256": "82a838e863d883178d77fec09fa6825d4e4cf7144a40d931afb360e71bf76238",
+      "status": "ok"
+    },
+    {
+      "nds_id": 254,
+      "pokeapi_item_id": 231,
+      "identifier": "sea-incense",
+      "path": "web/sprites/items/254.png",
+      "bytes": 293,
+      "sha256": "e3efded2fe503ed5d5fe2e3f67bae23adf25952204f759ffedf2d13a9c6085d3",
+      "status": "ok"
+    },
+    {
+      "nds_id": 255,
+      "pokeapi_item_id": 232,
+      "identifier": "lax-incense",
+      "path": "web/sprites/items/255.png",
+      "bytes": 305,
+      "sha256": "23d0b3545a95d32ed65163955d8a5a4f236e5212210845268055471489bc4871",
+      "status": "ok"
+    },
+    {
+      "nds_id": 256,
+      "pokeapi_item_id": 233,
+      "identifier": "lucky-punch",
+      "path": "web/sprites/items/256.png",
+      "bytes": 271,
+      "sha256": "a4fdc1f1156b42ce0e719f3001f78f8622d3482fb027637a58f856f4d0c0060e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 257,
+      "pokeapi_item_id": 234,
+      "identifier": "metal-powder",
+      "path": "web/sprites/items/257.png",
+      "bytes": 290,
+      "sha256": "d36393d00a49eba971cf6b7ae102acbaa26c8eec63b882ced5ef8820303ab841",
+      "status": "ok"
+    },
+    {
+      "nds_id": 258,
+      "pokeapi_item_id": 235,
+      "identifier": "thick-club",
+      "path": "web/sprites/items/258.png",
+      "bytes": 218,
+      "sha256": "3dd383bb7f5cef4ba687415ebca0f649d9e05d09c898e31deb2cafce8c2b9139",
+      "status": "ok"
+    },
+    {
+      "nds_id": 259,
+      "pokeapi_item_id": 236,
+      "identifier": "stick",
+      "path": "web/sprites/items/259.png",
+      "bytes": 238,
+      "sha256": "1c5b3e7eef62668309f66807a124900b49549f81049f30e23a47e771790789c1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 260,
+      "pokeapi_item_id": 237,
+      "identifier": "red-scarf",
+      "path": "web/sprites/items/260.png",
+      "bytes": 282,
+      "sha256": "ba6bf5e53457fd562580946ed48a4abb257f980b07e61314b351ff8456beceb8",
+      "status": "ok"
+    },
+    {
+      "nds_id": 261,
+      "pokeapi_item_id": 238,
+      "identifier": "blue-scarf",
+      "path": "web/sprites/items/261.png",
+      "bytes": 282,
+      "sha256": "8e87588b4bffc404938f3a1155014c62f98d58b35d3ab4ba5c2883b1b413e310",
+      "status": "ok"
+    },
+    {
+      "nds_id": 262,
+      "pokeapi_item_id": 239,
+      "identifier": "pink-scarf",
+      "path": "web/sprites/items/262.png",
+      "bytes": 282,
+      "sha256": "cbcba582bffa726341b23c72fafdf660bde8625e6798baaf9f649e6fedcd50a9",
+      "status": "ok"
+    },
+    {
+      "nds_id": 263,
+      "pokeapi_item_id": 240,
+      "identifier": "green-scarf",
+      "path": "web/sprites/items/263.png",
+      "bytes": 282,
+      "sha256": "bc5e3c4b314f75234b04c826e4f32fb516e302dea5d516b2b278295a014822b9",
+      "status": "ok"
+    },
+    {
+      "nds_id": 264,
+      "pokeapi_item_id": 241,
+      "identifier": "yellow-scarf",
+      "path": "web/sprites/items/264.png",
+      "bytes": 282,
+      "sha256": "88b0a71b3547dc8cad99287838282a18bfce24783e824c7d9b0bfe5275640ef0",
+      "status": "ok"
+    },
+    {
+      "nds_id": 265,
+      "pokeapi_item_id": 242,
+      "identifier": "wide-lens",
+      "path": "web/sprites/items/265.png",
+      "bytes": 268,
+      "sha256": "9e6c6a270b00666a4a5d954d0e751d51eae9bb3da250bf277b071407217e71d4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 266,
+      "pokeapi_item_id": 243,
+      "identifier": "muscle-band",
+      "path": "web/sprites/items/266.png",
+      "bytes": 315,
+      "sha256": "5dd40cc2c6129b84b7a882e1adff80b6cfea5f204e537dd4466baca9403683a3",
+      "status": "ok"
+    },
+    {
+      "nds_id": 267,
+      "pokeapi_item_id": 244,
+      "identifier": "wise-glasses",
+      "path": "web/sprites/items/267.png",
+      "bytes": 223,
+      "sha256": "dffccb7b6634ee002b20aecb441e3746160ea767adcce6caace565b68be1e211",
+      "status": "ok"
+    },
+    {
+      "nds_id": 268,
+      "pokeapi_item_id": 245,
+      "identifier": "expert-belt",
+      "path": "web/sprites/items/268.png",
+      "bytes": 262,
+      "sha256": "3811a302b525bce42baed337b6288a7c9687b0741d7ee1a543187c6d11bfcba1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 269,
+      "pokeapi_item_id": 246,
+      "identifier": "light-clay",
+      "path": "web/sprites/items/269.png",
+      "bytes": 245,
+      "sha256": "54f33c82aa8f6a0f0f323929230ca9663a477092745b5e9e0c1ff1c8bbb247ec",
+      "status": "ok"
+    },
+    {
+      "nds_id": 270,
+      "pokeapi_item_id": 247,
+      "identifier": "life-orb",
+      "path": "web/sprites/items/270.png",
+      "bytes": 218,
+      "sha256": "6a9aed6825c88c6ecce1f96c7584c32dc82f18873e6550303d1ae620982c38ef",
+      "status": "ok"
+    },
+    {
+      "nds_id": 271,
+      "pokeapi_item_id": 248,
+      "identifier": "power-herb",
+      "path": "web/sprites/items/271.png",
+      "bytes": 247,
+      "sha256": "d5c44416ca08878d87c4da5f8781ad7b4e96ffeb577712da65ad3ba0e146db2c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 272,
+      "pokeapi_item_id": 249,
+      "identifier": "toxic-orb",
+      "path": "web/sprites/items/272.png",
+      "bytes": 249,
+      "sha256": "a5f28fd5d39b328696648bab2f3d1c7d60bf219c985627cb81e8ac8b04963ebb",
+      "status": "ok"
+    },
+    {
+      "nds_id": 273,
+      "pokeapi_item_id": 250,
+      "identifier": "flame-orb",
+      "path": "web/sprites/items/273.png",
+      "bytes": 235,
+      "sha256": "cba2a8def19286e2bb91969f41672c33ea92c07035567997c01d38889764b62f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 274,
+      "pokeapi_item_id": 251,
+      "identifier": "quick-powder",
+      "path": "web/sprites/items/274.png",
+      "bytes": 290,
+      "sha256": "41e1dcf2ee9044823054b4dc5bb3f75142fa988be974ec9e939667eb11a765e2",
+      "status": "ok"
+    },
+    {
+      "nds_id": 275,
+      "pokeapi_item_id": 252,
+      "identifier": "focus-sash",
+      "path": "web/sprites/items/275.png",
+      "bytes": 278,
+      "sha256": "8a8ab615483640419ca3ddf42c88944cb93b3d5d8286f07717dfbf4f1b562727",
+      "status": "ok"
+    },
+    {
+      "nds_id": 276,
+      "pokeapi_item_id": 253,
+      "identifier": "zoom-lens",
+      "path": "web/sprites/items/276.png",
+      "bytes": 282,
+      "sha256": "2009a2d4bf752a16595a010a6c8a5ac82933f936ec3c76e19236f1699e058da4",
+      "status": "ok"
+    },
+    {
+      "nds_id": 277,
+      "pokeapi_item_id": 254,
+      "identifier": "metronome",
+      "path": "web/sprites/items/277.png",
+      "bytes": 255,
+      "sha256": "69583284cdf3ff26669276e69c12672b0522f7662893ad1ddc5afaa849cccc40",
+      "status": "ok"
+    },
+    {
+      "nds_id": 278,
+      "pokeapi_item_id": 255,
+      "identifier": "iron-ball",
+      "path": "web/sprites/items/278.png",
+      "bytes": 242,
+      "sha256": "e28e8a1ec070769432eaa935db109515845d7e81f6f8805a40c77261af8f35d8",
+      "status": "ok"
+    },
+    {
+      "nds_id": 279,
+      "pokeapi_item_id": 256,
+      "identifier": "lagging-tail",
+      "path": "web/sprites/items/279.png",
+      "bytes": 279,
+      "sha256": "7f72342aeaee268dfe4b069909b451ee0e9f398115646b764808be542eae78c7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 280,
+      "pokeapi_item_id": 257,
+      "identifier": "destiny-knot",
+      "path": "web/sprites/items/280.png",
+      "bytes": 285,
+      "sha256": "7d489d8a93ce716fa34d7cc157d179aee56d06d2580cc201618e6f74336d0de3",
+      "status": "ok"
+    },
+    {
+      "nds_id": 281,
+      "pokeapi_item_id": 258,
+      "identifier": "black-sludge",
+      "path": "web/sprites/items/281.png",
+      "bytes": 246,
+      "sha256": "abdceb134cb9cbde477175bbd4f78c44b315a6ff7f3395ebc90757908eccdf4f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 282,
+      "pokeapi_item_id": 259,
+      "identifier": "icy-rock",
+      "path": "web/sprites/items/282.png",
+      "bytes": 319,
+      "sha256": "5e744772e4a3fdea97bb47f7a484aae958c7caf901b0cdf5cb67cbe8107652d5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 283,
+      "pokeapi_item_id": 260,
+      "identifier": "smooth-rock",
+      "path": "web/sprites/items/283.png",
+      "bytes": 335,
+      "sha256": "e529af092b7f2b6eb86f61eeee6bc5a37e790b69910940ef52eef3191a8115d1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 284,
+      "pokeapi_item_id": 261,
+      "identifier": "heat-rock",
+      "path": "web/sprites/items/284.png",
+      "bytes": 335,
+      "sha256": "7e0b5c54641c31a4ed6285b0220f29ddeb5031a6d124b6aaa49ff16f7ce1afea",
+      "status": "ok"
+    },
+    {
+      "nds_id": 285,
+      "pokeapi_item_id": 262,
+      "identifier": "damp-rock",
+      "path": "web/sprites/items/285.png",
+      "bytes": 326,
+      "sha256": "0a59a4ab1f2b68e769e226b8a259218b26cd2d608282b7bb81c6c359b99e05c3",
+      "status": "ok"
+    },
+    {
+      "nds_id": 286,
+      "pokeapi_item_id": 263,
+      "identifier": "grip-claw",
+      "path": "web/sprites/items/286.png",
+      "bytes": 308,
+      "sha256": "35741ec56d5cd20b18a526aa6351a4b92aac9a5dca98ae7be6d48616441002ce",
+      "status": "ok"
+    },
+    {
+      "nds_id": 287,
+      "pokeapi_item_id": 264,
+      "identifier": "choice-scarf",
+      "path": "web/sprites/items/287.png",
+      "bytes": 346,
+      "sha256": "b9e564e71ff8369fca2764f243168655a89ea82444ae1ec367da13405b0d11c7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 288,
+      "pokeapi_item_id": 265,
+      "identifier": "sticky-barb",
+      "path": "web/sprites/items/288.png",
+      "bytes": 218,
+      "sha256": "8746e725f9731b5d8f06acb35eb589ca834c7d0dc216c66430b6011ed22527ae",
+      "status": "ok"
+    },
+    {
+      "nds_id": 289,
+      "pokeapi_item_id": 266,
+      "identifier": "power-bracer",
+      "path": "web/sprites/items/289.png",
+      "bytes": 296,
+      "sha256": "a672ddf38ea6919f7b62dbb2b96b25237b483f8d323ad37619f090d56961d464",
+      "status": "ok"
+    },
+    {
+      "nds_id": 290,
+      "pokeapi_item_id": 267,
+      "identifier": "power-belt",
+      "path": "web/sprites/items/290.png",
+      "bytes": 311,
+      "sha256": "1c3dec1eca838f65e6b4261f736f1e8c7a1662e09bbc64457b9550b5fb3625eb",
+      "status": "ok"
+    },
+    {
+      "nds_id": 291,
+      "pokeapi_item_id": 268,
+      "identifier": "power-lens",
+      "path": "web/sprites/items/291.png",
+      "bytes": 333,
+      "sha256": "f9357a3d02ffb923729ffc0fd386cd49468981881083dbb65fc3f2a8e2ccacbd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 292,
+      "pokeapi_item_id": 269,
+      "identifier": "power-band",
+      "path": "web/sprites/items/292.png",
+      "bytes": 311,
+      "sha256": "a5f57ef7466130fdbd124d5f4bcf702c903a015687eaf59eac3ae71d0bbf9c59",
+      "status": "ok"
+    },
+    {
+      "nds_id": 293,
+      "pokeapi_item_id": 270,
+      "identifier": "power-anklet",
+      "path": "web/sprites/items/293.png",
+      "bytes": 311,
+      "sha256": "872418b1ac10e0e582e6e9e968da6a0fd7fde4dd8d77680dd083864ad0944d11",
+      "status": "ok"
+    },
+    {
+      "nds_id": 294,
+      "pokeapi_item_id": 271,
+      "identifier": "power-weight",
+      "path": "web/sprites/items/294.png",
+      "bytes": 298,
+      "sha256": "15c78a902a45031cbbf0130854048c1d4d590ba53be9930b0a346777c831d5ea",
+      "status": "ok"
+    },
+    {
+      "nds_id": 295,
+      "pokeapi_item_id": 272,
+      "identifier": "shed-shell",
+      "path": "web/sprites/items/295.png",
+      "bytes": 274,
+      "sha256": "90368eeb8173b9c062fbb8c7b4384d7e7d2281696ee8097f3aa2db52b7c00cde",
+      "status": "ok"
+    },
+    {
+      "nds_id": 296,
+      "pokeapi_item_id": 273,
+      "identifier": "big-root",
+      "path": "web/sprites/items/296.png",
+      "bytes": 300,
+      "sha256": "02e7ab37d3b9f168ded6159f1b9f1d9ada1b79b48b2019b0aff560bc27208502",
+      "status": "ok"
+    },
+    {
+      "nds_id": 297,
+      "pokeapi_item_id": 274,
+      "identifier": "choice-specs",
+      "path": "web/sprites/items/297.png",
+      "bytes": 264,
+      "sha256": "296e7f9beb6fca1e6f3f300fc595d855371da2afdda7b8aef4261d98986e9469",
+      "status": "ok"
+    },
+    {
+      "nds_id": 298,
+      "pokeapi_item_id": 275,
+      "identifier": "flame-plate",
+      "path": "web/sprites/items/298.png",
+      "bytes": 241,
+      "sha256": "7919e275fcc5b80807587b300837b0dd704f82cf7c30dac39137ff371d0e16aa",
+      "status": "ok"
+    },
+    {
+      "nds_id": 299,
+      "pokeapi_item_id": 276,
+      "identifier": "splash-plate",
+      "path": "web/sprites/items/299.png",
+      "bytes": 241,
+      "sha256": "ad1599af4f245d8d10e9146919b3f9db6565f7c7b93ef9a940905d015b386cb1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 300,
+      "pokeapi_item_id": 277,
+      "identifier": "zap-plate",
+      "path": "web/sprites/items/300.png",
+      "bytes": 241,
+      "sha256": "bccba97e45978335d14a67b8e58419df63581ddba77a58dd81ba6ce99cdf17ce",
+      "status": "ok"
+    },
+    {
+      "nds_id": 301,
+      "pokeapi_item_id": 278,
+      "identifier": "meadow-plate",
+      "path": "web/sprites/items/301.png",
+      "bytes": 241,
+      "sha256": "6be2fe1bbb8e6893cf6ab9bc7237143e3181cfda7443449346ed1dfcf98d1b48",
+      "status": "ok"
+    },
+    {
+      "nds_id": 302,
+      "pokeapi_item_id": 279,
+      "identifier": "icicle-plate",
+      "path": "web/sprites/items/302.png",
+      "bytes": 241,
+      "sha256": "fbc2f53fcbea43a2a1efd26faab6d92cdb0901fd6fe5bec8a94a7b9646217298",
+      "status": "ok"
+    },
+    {
+      "nds_id": 303,
+      "pokeapi_item_id": 280,
+      "identifier": "fist-plate",
+      "path": "web/sprites/items/303.png",
+      "bytes": 241,
+      "sha256": "9cb2a927412eac7c366db83d351a070840210777fcc793cfa2c531200e50d48e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 304,
+      "pokeapi_item_id": 281,
+      "identifier": "toxic-plate",
+      "path": "web/sprites/items/304.png",
+      "bytes": 241,
+      "sha256": "dc050b4180424047df0d11edaa58417d54a2b9475c754a8c935c192665d0a73e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 305,
+      "pokeapi_item_id": 282,
+      "identifier": "earth-plate",
+      "path": "web/sprites/items/305.png",
+      "bytes": 241,
+      "sha256": "fc82c71a700eec95ec6d1197ba985abb1c59076a3b04c03eccb717668806c508",
+      "status": "ok"
+    },
+    {
+      "nds_id": 306,
+      "pokeapi_item_id": 283,
+      "identifier": "sky-plate",
+      "path": "web/sprites/items/306.png",
+      "bytes": 241,
+      "sha256": "328d47f7152dcbf7d67af248a15262162cec7b72f3ad9eb29aabe15b35390ea1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 307,
+      "pokeapi_item_id": 284,
+      "identifier": "mind-plate",
+      "path": "web/sprites/items/307.png",
+      "bytes": 241,
+      "sha256": "218aa776f911a00b8cbec6d140ccc46a55689f34c333a13511ef2c6626adb171",
+      "status": "ok"
+    },
+    {
+      "nds_id": 308,
+      "pokeapi_item_id": 285,
+      "identifier": "insect-plate",
+      "path": "web/sprites/items/308.png",
+      "bytes": 241,
+      "sha256": "51b836ea1d5a284c663b116c51a5d5a5afce96d5a3d6863bff500b0b7a2b3ca6",
+      "status": "ok"
+    },
+    {
+      "nds_id": 309,
+      "pokeapi_item_id": 286,
+      "identifier": "stone-plate",
+      "path": "web/sprites/items/309.png",
+      "bytes": 241,
+      "sha256": "65cf9d01c4b23bce4b4f6c61fe2d54c05b95a6766850616b59548cc045b83c1b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 310,
+      "pokeapi_item_id": 287,
+      "identifier": "spooky-plate",
+      "path": "web/sprites/items/310.png",
+      "bytes": 241,
+      "sha256": "12ad5b66b8943d359bda401f8cb04e65cbcaca6b9e1f7073810869e61b5230e3",
+      "status": "ok"
+    },
+    {
+      "nds_id": 311,
+      "pokeapi_item_id": 288,
+      "identifier": "draco-plate",
+      "path": "web/sprites/items/311.png",
+      "bytes": 241,
+      "sha256": "52e4665f0350eac7ac7c8dcb24dcd8ef1ed9f0d8ce9d288a8e00c1add7795d85",
+      "status": "ok"
+    },
+    {
+      "nds_id": 312,
+      "pokeapi_item_id": 289,
+      "identifier": "dread-plate",
+      "path": "web/sprites/items/312.png",
+      "bytes": 241,
+      "sha256": "42141aed10b8d4fe0e63d0a13e3a9555b6fa2527c6f8af43ff122ed4b439ed36",
+      "status": "ok"
+    },
+    {
+      "nds_id": 313,
+      "pokeapi_item_id": 290,
+      "identifier": "iron-plate",
+      "path": "web/sprites/items/313.png",
+      "bytes": 241,
+      "sha256": "0bec83ad23dee09d79ab53d4783e88d58540c5fe4bdefca78ba2673c4fe9517e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 314,
+      "pokeapi_item_id": 291,
+      "identifier": "odd-incense",
+      "path": "web/sprites/items/314.png",
+      "bytes": 295,
+      "sha256": "89bcfc72f7261442f8b21f738b350e6a7679e517334120ae827688781047bbf3",
+      "status": "ok"
+    },
+    {
+      "nds_id": 315,
+      "pokeapi_item_id": 292,
+      "identifier": "rock-incense",
+      "path": "web/sprites/items/315.png",
+      "bytes": 292,
+      "sha256": "4cd47d7d33bf19ff64df750864982d7aaeeee494030a3e8628402476155d4098",
+      "status": "ok"
+    },
+    {
+      "nds_id": 316,
+      "pokeapi_item_id": 293,
+      "identifier": "full-incense",
+      "path": "web/sprites/items/316.png",
+      "bytes": 313,
+      "sha256": "245c2050a240532bbd2682b5a8864e6f85f71ab03d4ecdf858d50ce5926a574b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 317,
+      "pokeapi_item_id": 294,
+      "identifier": "wave-incense",
+      "path": "web/sprites/items/317.png",
+      "bytes": 287,
+      "sha256": "e5b82d35d57219568ab4c15347fdd98a4a99076085c9b87ba488a5d7d7c017af",
+      "status": "ok"
+    },
+    {
+      "nds_id": 318,
+      "pokeapi_item_id": 295,
+      "identifier": "rose-incense",
+      "path": "web/sprites/items/318.png",
+      "bytes": 315,
+      "sha256": "7fd2045471768aa9a2c19eca48447a6dcedd6cf7c8866d2e588a980c838bc681",
+      "status": "ok"
+    },
+    {
+      "nds_id": 319,
+      "pokeapi_item_id": 296,
+      "identifier": "luck-incense",
+      "path": "web/sprites/items/319.png",
+      "bytes": 305,
+      "sha256": "5d5de11a484081b5785df46dc861734d3b17ddcac3c1e9935fd9d03fb2b625a2",
+      "status": "ok"
+    },
+    {
+      "nds_id": 320,
+      "pokeapi_item_id": 297,
+      "identifier": "pure-incense",
+      "path": "web/sprites/items/320.png",
+      "bytes": 304,
+      "sha256": "47f067085507f1d7181e16382766a922a33c527fd99d3d5f1b67215e4681d5f6",
+      "status": "ok"
+    },
+    {
+      "nds_id": 321,
+      "pokeapi_item_id": 298,
+      "identifier": "protector",
+      "path": "web/sprites/items/321.png",
+      "bytes": 267,
+      "sha256": "5064bd927ff40b27454bee9b6827d4918e005ba80f0c58a39a2c4624154b0f83",
+      "status": "ok"
+    },
+    {
+      "nds_id": 322,
+      "pokeapi_item_id": 299,
+      "identifier": "electirizer",
+      "path": "web/sprites/items/322.png",
+      "bytes": 250,
+      "sha256": "6844f22b246baf79f76c43add7a0c340aa93f4842b5ec01b9c86dfb949a77d2b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 323,
+      "pokeapi_item_id": 300,
+      "identifier": "magmarizer",
+      "path": "web/sprites/items/323.png",
+      "bytes": 258,
+      "sha256": "d676893cc4b679e5dd83b6ad5071030cf80323df7db3042c12d52a0984d02f41",
+      "status": "ok"
+    },
+    {
+      "nds_id": 324,
+      "pokeapi_item_id": 301,
+      "identifier": "dubious-disc",
+      "path": "web/sprites/items/324.png",
+      "bytes": 273,
+      "sha256": "ebec32bdd0e33c68ee67659021c17ca191a485638df0cdcf942eb1de02c508e9",
+      "status": "ok"
+    },
+    {
+      "nds_id": 325,
+      "pokeapi_item_id": 302,
+      "identifier": "reaper-cloth",
+      "path": "web/sprites/items/325.png",
+      "bytes": 282,
+      "sha256": "04a58d75cd1ff0f0f4565fb5dd0b84a688882d59c3ab7a15a3612f7c06300763",
+      "status": "ok"
+    },
+    {
+      "nds_id": 326,
+      "pokeapi_item_id": 303,
+      "identifier": "razor-claw",
+      "path": "web/sprites/items/326.png",
+      "bytes": 253,
+      "sha256": "1f3cbde2d227a8d5afec45ec629352072f9c4938174b99a24dd01277ab582d7e",
+      "status": "ok"
+    },
+    {
+      "nds_id": 327,
+      "pokeapi_item_id": 304,
+      "identifier": "razor-fang",
+      "path": "web/sprites/items/327.png",
+      "bytes": 236,
+      "sha256": "a0bf2707c33ed5e936dabe1fad83fb9c08758de0e5f1385c65c0c005af7e5b14",
+      "status": "ok"
+    },
+    {
+      "nds_id": 328,
+      "pokeapi_item_id": 305,
+      "identifier": "tm01",
+      "path": "web/sprites/items/328.png",
+      "bytes": 15208,
+      "sha256": "8b698bb199d4ab73859c8539a574965673652a34b5b67a36c16659aad8e9a50f",
+      "status": "ok"
+    },
+    {
+      "nds_id": 329,
+      "pokeapi_item_id": 306,
+      "identifier": "tm02",
+      "path": "web/sprites/items/329.png",
+      "bytes": 15484,
+      "sha256": "a7aedb743c8adf665fa64c793b22c19d8fcd1c3ae8ceeddfd538764ddb5d9ecb",
+      "status": "ok"
+    },
+    {
+      "nds_id": 330,
+      "pokeapi_item_id": 307,
+      "identifier": "tm03",
+      "path": "web/sprites/items/330.png",
+      "bytes": 13708,
+      "sha256": "7a25381e789fa16651f4f77661b19f93eafa2701aa979c567d3b7d3c5ea54594",
+      "status": "ok"
+    },
+    {
+      "nds_id": 331,
+      "pokeapi_item_id": 308,
+      "identifier": "tm04",
+      "path": "web/sprites/items/331.png",
+      "bytes": 16469,
+      "sha256": "02f83294e37a0b7ef4a1b23ee4c904a58ce923fd3a4b428c1c6fb04393a90afd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 332,
+      "pokeapi_item_id": 309,
+      "identifier": "tm05",
+      "path": "web/sprites/items/332.png",
+      "bytes": 13695,
+      "sha256": "ade75251c881af0b36a9fe8e088db95ae8c0d1ed5e3f06d9c2338f9d8d71879a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 333,
+      "pokeapi_item_id": 310,
+      "identifier": "tm06",
+      "path": "web/sprites/items/333.png",
+      "bytes": 15395,
+      "sha256": "55492d806a79a1e677cc23a01b5ec1c8493597440dfced00822156163d3987bb",
+      "status": "ok"
+    },
+    {
+      "nds_id": 334,
+      "pokeapi_item_id": 311,
+      "identifier": "tm07",
+      "path": "web/sprites/items/334.png",
+      "bytes": 12983,
+      "sha256": "f3ee8479a3c1bcd16e13856e5f6db4f46d3008ed420a4689cc9d35655132f298",
+      "status": "ok"
+    },
+    {
+      "nds_id": 335,
+      "pokeapi_item_id": 312,
+      "identifier": "tm08",
+      "path": "web/sprites/items/335.png",
+      "bytes": 15697,
+      "sha256": "28c8fce897f4f3b2c1d46babb88dfea7f016799f6156a21ea19c0efbe93e6bb7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 336,
+      "pokeapi_item_id": 313,
+      "identifier": "tm09",
+      "path": "web/sprites/items/336.png",
+      "bytes": 16563,
+      "sha256": "2cb0f33c4750b7f1ac68c5c4db9c6423e87483e6685e18faec5875b4c345d7d5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 337,
+      "pokeapi_item_id": 314,
+      "identifier": "tm10",
+      "path": "web/sprites/items/337.png",
+      "bytes": 16369,
+      "sha256": "4f748bc09a7b89e66d108c71b5cf4a46e9bc78831a2ac4ca1bae5812aec39f1c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 338,
+      "pokeapi_item_id": 315,
+      "identifier": "tm11",
+      "path": "web/sprites/items/338.png",
+      "bytes": 14373,
+      "sha256": "251984b075519ceb5549ad56b9d40334f5b9cfcfde9ebb64fd223796e2a28a07",
+      "status": "ok"
+    },
+    {
+      "nds_id": 339,
+      "pokeapi_item_id": 316,
+      "identifier": "tm12",
+      "path": "web/sprites/items/339.png",
+      "bytes": 17473,
+      "sha256": "da6073fa87916fa0a2fac990bdde68dc65c1546b4db1ecf73aa98b6e6c4499f7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 340,
+      "pokeapi_item_id": 317,
+      "identifier": "tm13",
+      "path": "web/sprites/items/340.png",
+      "bytes": 17354,
+      "sha256": "92c5997ff82c66b513f4cd7272ff7acd795338d2036bc57446826ff255f5c6e1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 341,
+      "pokeapi_item_id": 318,
+      "identifier": "tm14",
+      "path": "web/sprites/items/341.png",
+      "bytes": 16761,
+      "sha256": "33f20b45aec2abe3ab253f34d0f2da22c5fd10fc2bd031bc34e6d836b4bb8513",
+      "status": "ok"
+    },
+    {
+      "nds_id": 342,
+      "pokeapi_item_id": 319,
+      "identifier": "tm15",
+      "path": "web/sprites/items/342.png",
+      "bytes": 16900,
+      "sha256": "b0d742cac30d05e292732fcd5a14145f02b82a48a728bdd8f9c274f1259af0a7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 343,
+      "pokeapi_item_id": 320,
+      "identifier": "tm16",
+      "path": "web/sprites/items/343.png",
+      "bytes": 16469,
+      "sha256": "02f83294e37a0b7ef4a1b23ee4c904a58ce923fd3a4b428c1c6fb04393a90afd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 344,
+      "pokeapi_item_id": 321,
+      "identifier": "tm17",
+      "path": "web/sprites/items/344.png",
+      "bytes": 17340,
+      "sha256": "dbdffb92234e73edc96830410bf3cd4aadf5558f5216011e1ced0c5ffeee8a5a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 345,
+      "pokeapi_item_id": 322,
+      "identifier": "tm18",
+      "path": "web/sprites/items/345.png",
+      "bytes": 14574,
+      "sha256": "f37d730226ad300552e0a1f1a2464ce7b1cc08f5205e2ab6f1d1c4cc92d04ef6",
+      "status": "ok"
+    },
+    {
+      "nds_id": 346,
+      "pokeapi_item_id": 323,
+      "identifier": "tm19",
+      "path": "web/sprites/items/346.png",
+      "bytes": 16671,
+      "sha256": "a993e37f7adaf6a3f11692f3d28ae37ea7ae33e0970b514dea8d2c57fee55025",
+      "status": "ok"
+    },
+    {
+      "nds_id": 347,
+      "pokeapi_item_id": 324,
+      "identifier": "tm20",
+      "path": "web/sprites/items/347.png",
+      "bytes": 17335,
+      "sha256": "4ef17a8f3dcfe7eedac9b0c026a3baf89576b59c5287601ef3b7be0615e1d9bf",
+      "status": "ok"
+    },
+    {
+      "nds_id": 348,
+      "pokeapi_item_id": 325,
+      "identifier": "tm21",
+      "path": "web/sprites/items/348.png",
+      "bytes": 16900,
+      "sha256": "b0d742cac30d05e292732fcd5a14145f02b82a48a728bdd8f9c274f1259af0a7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 349,
+      "pokeapi_item_id": 326,
+      "identifier": "tm22",
+      "path": "web/sprites/items/349.png",
+      "bytes": 14839,
+      "sha256": "c0ef7c6b199c14ca4defafdfc2a9809ba9c28cc34d9b2c8251be814937b6d5d6",
+      "status": "ok"
+    },
+    {
+      "nds_id": 350,
+      "pokeapi_item_id": 327,
+      "identifier": "tm23",
+      "path": "web/sprites/items/350.png",
+      "bytes": 15270,
+      "sha256": "bfe7756f0b0a4644ce2d14106ded789b596f8f5d01bf41732fe755054739299c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 351,
+      "pokeapi_item_id": 328,
+      "identifier": "tm24",
+      "path": "web/sprites/items/351.png",
+      "bytes": 14018,
+      "sha256": "85e3b5ab9d6799c69e83e307fe5fecaf42469c668ba7cbdb88db310cd1261d08",
+      "status": "ok"
+    },
+    {
+      "nds_id": 352,
+      "pokeapi_item_id": 329,
+      "identifier": "tm25",
+      "path": "web/sprites/items/352.png",
+      "bytes": 15124,
+      "sha256": "893c2b61cb5dd650d0e975ec9a9214b7a7ac64636b134d2469621f55cc2c7434",
+      "status": "ok"
+    },
+    {
+      "nds_id": 353,
+      "pokeapi_item_id": 330,
+      "identifier": "tm26",
+      "path": "web/sprites/items/353.png",
+      "bytes": 13663,
+      "sha256": "49535ef3b0bd504b230292ea9d390a0bfa99262f42cbfac916e21935236e3a69",
+      "status": "ok"
+    },
+    {
+      "nds_id": 354,
+      "pokeapi_item_id": 331,
+      "identifier": "tm27",
+      "path": "web/sprites/items/354.png",
+      "bytes": 16761,
+      "sha256": "33f20b45aec2abe3ab253f34d0f2da22c5fd10fc2bd031bc34e6d836b4bb8513",
+      "status": "ok"
+    },
+    {
+      "nds_id": 355,
+      "pokeapi_item_id": 332,
+      "identifier": "tm28",
+      "path": "web/sprites/items/355.png",
+      "bytes": 16468,
+      "sha256": "e439a6edef6788c7923fbadaf7a0cc48c4a22613b08ebff54803e41f871f59e1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 356,
+      "pokeapi_item_id": 333,
+      "identifier": "tm29",
+      "path": "web/sprites/items/356.png",
+      "bytes": 17340,
+      "sha256": "dbdffb92234e73edc96830410bf3cd4aadf5558f5216011e1ced0c5ffeee8a5a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 357,
+      "pokeapi_item_id": 334,
+      "identifier": "tm30",
+      "path": "web/sprites/items/357.png",
+      "bytes": 14620,
+      "sha256": "7176f9dc9fc72d619194f639b1567b3541ea991e4f3a6a85ac462351a1ec1040",
+      "status": "ok"
+    },
+    {
+      "nds_id": 358,
+      "pokeapi_item_id": 335,
+      "identifier": "tm31",
+      "path": "web/sprites/items/358.png",
+      "bytes": 16610,
+      "sha256": "257f7bcbf183825bebcac90104ffc036d15b04363bf3a939783046b12348ad61",
+      "status": "ok"
+    },
+    {
+      "nds_id": 359,
+      "pokeapi_item_id": 336,
+      "identifier": "tm32",
+      "path": "web/sprites/items/359.png",
+      "bytes": 15124,
+      "sha256": "893c2b61cb5dd650d0e975ec9a9214b7a7ac64636b134d2469621f55cc2c7434",
+      "status": "ok"
+    },
+    {
+      "nds_id": 360,
+      "pokeapi_item_id": 337,
+      "identifier": "tm33",
+      "path": "web/sprites/items/360.png",
+      "bytes": 17335,
+      "sha256": "4ef17a8f3dcfe7eedac9b0c026a3baf89576b59c5287601ef3b7be0615e1d9bf",
+      "status": "ok"
+    },
+    {
+      "nds_id": 361,
+      "pokeapi_item_id": 338,
+      "identifier": "tm34",
+      "path": "web/sprites/items/361.png",
+      "bytes": 16369,
+      "sha256": "4f748bc09a7b89e66d108c71b5cf4a46e9bc78831a2ac4ca1bae5812aec39f1c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 362,
+      "pokeapi_item_id": 339,
+      "identifier": "tm35",
+      "path": "web/sprites/items/362.png",
+      "bytes": 16468,
+      "sha256": "e439a6edef6788c7923fbadaf7a0cc48c4a22613b08ebff54803e41f871f59e1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 363,
+      "pokeapi_item_id": 340,
+      "identifier": "tm36",
+      "path": "web/sprites/items/363.png",
+      "bytes": 16743,
+      "sha256": "084ee1c26b1645e0f231aad3d200abd2654fcbcd23569820620fc1f5166d585b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 364,
+      "pokeapi_item_id": 341,
+      "identifier": "tm37",
+      "path": "web/sprites/items/364.png",
+      "bytes": 16671,
+      "sha256": "a993e37f7adaf6a3f11692f3d28ae37ea7ae33e0970b514dea8d2c57fee55025",
+      "status": "ok"
+    },
+    {
+      "nds_id": 365,
+      "pokeapi_item_id": 342,
+      "identifier": "tm38",
+      "path": "web/sprites/items/365.png",
+      "bytes": 16214,
+      "sha256": "3f759bf6a5b15cca3ecf4d085cf0d199472eec1b5679ba6ea39b849a13e37d42",
+      "status": "ok"
+    },
+    {
+      "nds_id": 366,
+      "pokeapi_item_id": 343,
+      "identifier": "tm39",
+      "path": "web/sprites/items/366.png",
+      "bytes": 17473,
+      "sha256": "da6073fa87916fa0a2fac990bdde68dc65c1546b4db1ecf73aa98b6e6c4499f7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 367,
+      "pokeapi_item_id": 344,
+      "identifier": "tm40",
+      "path": "web/sprites/items/367.png",
+      "bytes": 2827,
+      "sha256": "e5d6cd45504a5ebfb41c6acec4abcacdac184ea0f6223030288fd676cb9a7ba6",
+      "status": "ok"
+    },
+    {
+      "nds_id": 368,
+      "pokeapi_item_id": 345,
+      "identifier": "tm41",
+      "path": "web/sprites/items/368.png",
+      "bytes": 16469,
+      "sha256": "02f83294e37a0b7ef4a1b23ee4c904a58ce923fd3a4b428c1c6fb04393a90afd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 369,
+      "pokeapi_item_id": 346,
+      "identifier": "tm42",
+      "path": "web/sprites/items/369.png",
+      "bytes": 17340,
+      "sha256": "dbdffb92234e73edc96830410bf3cd4aadf5558f5216011e1ced0c5ffeee8a5a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 370,
+      "pokeapi_item_id": 347,
+      "identifier": "tm43",
+      "path": "web/sprites/items/370.png",
+      "bytes": 16902,
+      "sha256": "b632c9898ed7d1554c17f38c82bc0e9f6848ef55f4a30a5d5e6a631547a5ef20",
+      "status": "ok"
+    },
+    {
+      "nds_id": 371,
+      "pokeapi_item_id": 348,
+      "identifier": "tm44",
+      "path": "web/sprites/items/371.png",
+      "bytes": 17444,
+      "sha256": "df2e434dd9158f5c5e31a547e7511531eb4f6ae4e311a6efa438a504c7d6a6e0",
+      "status": "ok"
+    },
+    {
+      "nds_id": 372,
+      "pokeapi_item_id": 349,
+      "identifier": "tm45",
+      "path": "web/sprites/items/372.png",
+      "bytes": 17354,
+      "sha256": "92c5997ff82c66b513f4cd7272ff7acd795338d2036bc57446826ff255f5c6e1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 373,
+      "pokeapi_item_id": 350,
+      "identifier": "tm46",
+      "path": "web/sprites/items/373.png",
+      "bytes": 16369,
+      "sha256": "4f748bc09a7b89e66d108c71b5cf4a46e9bc78831a2ac4ca1bae5812aec39f1c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 374,
+      "pokeapi_item_id": 351,
+      "identifier": "tm47",
+      "path": "web/sprites/items/374.png",
+      "bytes": 15124,
+      "sha256": "893c2b61cb5dd650d0e975ec9a9214b7a7ac64636b134d2469621f55cc2c7434",
+      "status": "ok"
+    },
+    {
+      "nds_id": 375,
+      "pokeapi_item_id": 352,
+      "identifier": "tm48",
+      "path": "web/sprites/items/375.png",
+      "bytes": 16563,
+      "sha256": "2cb0f33c4750b7f1ac68c5c4db9c6423e87483e6685e18faec5875b4c345d7d5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 376,
+      "pokeapi_item_id": 353,
+      "identifier": "tm49",
+      "path": "web/sprites/items/376.png",
+      "bytes": 16214,
+      "sha256": "3f759bf6a5b15cca3ecf4d085cf0d199472eec1b5679ba6ea39b849a13e37d42",
+      "status": "ok"
+    },
+    {
+      "nds_id": 377,
+      "pokeapi_item_id": 354,
+      "identifier": "tm50",
+      "path": "web/sprites/items/377.png",
+      "bytes": 17281,
+      "sha256": "a227fec1c93b0433958fbb9df8e9d397136a242e986a42013a0cab87da1778ba",
+      "status": "ok"
+    },
+    {
+      "nds_id": 378,
+      "pokeapi_item_id": 355,
+      "identifier": "tm51",
+      "path": "web/sprites/items/378.png",
+      "bytes": 16743,
+      "sha256": "084ee1c26b1645e0f231aad3d200abd2654fcbcd23569820620fc1f5166d585b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 379,
+      "pokeapi_item_id": 356,
+      "identifier": "tm52",
+      "path": "web/sprites/items/379.png",
+      "bytes": 16369,
+      "sha256": "4f748bc09a7b89e66d108c71b5cf4a46e9bc78831a2ac4ca1bae5812aec39f1c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 380,
+      "pokeapi_item_id": 357,
+      "identifier": "tm53",
+      "path": "web/sprites/items/380.png",
+      "bytes": 16610,
+      "sha256": "257f7bcbf183825bebcac90104ffc036d15b04363bf3a939783046b12348ad61",
+      "status": "ok"
+    },
+    {
+      "nds_id": 381,
+      "pokeapi_item_id": 358,
+      "identifier": "tm54",
+      "path": "web/sprites/items/381.png",
+      "bytes": 16469,
+      "sha256": "02f83294e37a0b7ef4a1b23ee4c904a58ce923fd3a4b428c1c6fb04393a90afd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 382,
+      "pokeapi_item_id": 359,
+      "identifier": "tm55",
+      "path": "web/sprites/items/382.png",
+      "bytes": 16468,
+      "sha256": "e439a6edef6788c7923fbadaf7a0cc48c4a22613b08ebff54803e41f871f59e1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 383,
+      "pokeapi_item_id": 360,
+      "identifier": "tm56",
+      "path": "web/sprites/items/383.png",
+      "bytes": 17335,
+      "sha256": "4ef17a8f3dcfe7eedac9b0c026a3baf89576b59c5287601ef3b7be0615e1d9bf",
+      "status": "ok"
+    },
+    {
+      "nds_id": 384,
+      "pokeapi_item_id": 361,
+      "identifier": "tm57",
+      "path": "web/sprites/items/384.png",
+      "bytes": 15124,
+      "sha256": "893c2b61cb5dd650d0e975ec9a9214b7a7ac64636b134d2469621f55cc2c7434",
+      "status": "ok"
+    },
+    {
+      "nds_id": 385,
+      "pokeapi_item_id": 362,
+      "identifier": "tm58",
+      "path": "web/sprites/items/385.png",
+      "bytes": 17473,
+      "sha256": "da6073fa87916fa0a2fac990bdde68dc65c1546b4db1ecf73aa98b6e6c4499f7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 386,
+      "pokeapi_item_id": 363,
+      "identifier": "tm59",
+      "path": "web/sprites/items/386.png",
+      "bytes": 16469,
+      "sha256": "02f83294e37a0b7ef4a1b23ee4c904a58ce923fd3a4b428c1c6fb04393a90afd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 387,
+      "pokeapi_item_id": 364,
+      "identifier": "tm60",
+      "path": "web/sprites/items/387.png",
+      "bytes": 16900,
+      "sha256": "b0d742cac30d05e292732fcd5a14145f02b82a48a728bdd8f9c274f1259af0a7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 388,
+      "pokeapi_item_id": 365,
+      "identifier": "tm61",
+      "path": "web/sprites/items/388.png",
+      "bytes": 17340,
+      "sha256": "dbdffb92234e73edc96830410bf3cd4aadf5558f5216011e1ced0c5ffeee8a5a",
+      "status": "ok"
+    },
+    {
+      "nds_id": 389,
+      "pokeapi_item_id": 366,
+      "identifier": "tm62",
+      "path": "web/sprites/items/389.png",
+      "bytes": 16902,
+      "sha256": "b632c9898ed7d1554c17f38c82bc0e9f6848ef55f4a30a5d5e6a631547a5ef20",
+      "status": "ok"
+    },
+    {
+      "nds_id": 390,
+      "pokeapi_item_id": 367,
+      "identifier": "tm63",
+      "path": "web/sprites/items/390.png",
+      "bytes": 16469,
+      "sha256": "02f83294e37a0b7ef4a1b23ee4c904a58ce923fd3a4b428c1c6fb04393a90afd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 391,
+      "pokeapi_item_id": 368,
+      "identifier": "tm64",
+      "path": "web/sprites/items/391.png",
+      "bytes": 17473,
+      "sha256": "da6073fa87916fa0a2fac990bdde68dc65c1546b4db1ecf73aa98b6e6c4499f7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 392,
+      "pokeapi_item_id": 369,
+      "identifier": "tm65",
+      "path": "web/sprites/items/392.png",
+      "bytes": 16761,
+      "sha256": "33f20b45aec2abe3ab253f34d0f2da22c5fd10fc2bd031bc34e6d836b4bb8513",
+      "status": "ok"
+    },
+    {
+      "nds_id": 393,
+      "pokeapi_item_id": 370,
+      "identifier": "tm66",
+      "path": "web/sprites/items/393.png",
+      "bytes": 15124,
+      "sha256": "893c2b61cb5dd650d0e975ec9a9214b7a7ac64636b134d2469621f55cc2c7434",
+      "status": "ok"
+    },
+    {
+      "nds_id": 394,
+      "pokeapi_item_id": 371,
+      "identifier": "tm67",
+      "path": "web/sprites/items/394.png",
+      "bytes": 16214,
+      "sha256": "3f759bf6a5b15cca3ecf4d085cf0d199472eec1b5679ba6ea39b849a13e37d42",
+      "status": "ok"
+    },
+    {
+      "nds_id": 395,
+      "pokeapi_item_id": 372,
+      "identifier": "tm68",
+      "path": "web/sprites/items/395.png",
+      "bytes": 16563,
+      "sha256": "2cb0f33c4750b7f1ac68c5c4db9c6423e87483e6685e18faec5875b4c345d7d5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 396,
+      "pokeapi_item_id": 373,
+      "identifier": "tm69",
+      "path": "web/sprites/items/396.png",
+      "bytes": 16369,
+      "sha256": "4f748bc09a7b89e66d108c71b5cf4a46e9bc78831a2ac4ca1bae5812aec39f1c",
+      "status": "ok"
+    },
+    {
+      "nds_id": 397,
+      "pokeapi_item_id": 374,
+      "identifier": "tm70",
+      "path": "web/sprites/items/397.png",
+      "bytes": 15124,
+      "sha256": "893c2b61cb5dd650d0e975ec9a9214b7a7ac64636b134d2469621f55cc2c7434",
+      "status": "ok"
+    },
+    {
+      "nds_id": 398,
+      "pokeapi_item_id": 375,
+      "identifier": "tm71",
+      "path": "web/sprites/items/398.png",
+      "bytes": 17335,
+      "sha256": "4ef17a8f3dcfe7eedac9b0c026a3baf89576b59c5287601ef3b7be0615e1d9bf",
+      "status": "ok"
+    },
+    {
+      "nds_id": 399,
+      "pokeapi_item_id": 376,
+      "identifier": "tm72",
+      "path": "web/sprites/items/399.png",
+      "bytes": 16563,
+      "sha256": "2cb0f33c4750b7f1ac68c5c4db9c6423e87483e6685e18faec5875b4c345d7d5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 400,
+      "pokeapi_item_id": 377,
+      "identifier": "tm73",
+      "path": "web/sprites/items/400.png",
+      "bytes": 17473,
+      "sha256": "da6073fa87916fa0a2fac990bdde68dc65c1546b4db1ecf73aa98b6e6c4499f7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 401,
+      "pokeapi_item_id": 378,
+      "identifier": "tm74",
+      "path": "web/sprites/items/401.png",
+      "bytes": 14874,
+      "sha256": "461a97b6b6b275678b96f159416735203f03d3a50d4f7f917b14adde578224ce",
+      "status": "ok"
+    },
+    {
+      "nds_id": 402,
+      "pokeapi_item_id": 379,
+      "identifier": "tm75",
+      "path": "web/sprites/items/402.png",
+      "bytes": 16469,
+      "sha256": "02f83294e37a0b7ef4a1b23ee4c904a58ce923fd3a4b428c1c6fb04393a90afd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 403,
+      "pokeapi_item_id": 380,
+      "identifier": "tm76",
+      "path": "web/sprites/items/403.png",
+      "bytes": 14510,
+      "sha256": "e648e29df6ffb9b024b25d6eb2bbb2c594ff914a324204485a9e386044428887",
+      "status": "ok"
+    },
+    {
+      "nds_id": 404,
+      "pokeapi_item_id": 381,
+      "identifier": "tm77",
+      "path": "web/sprites/items/404.png",
+      "bytes": 17281,
+      "sha256": "a227fec1c93b0433958fbb9df8e9d397136a242e986a42013a0cab87da1778ba",
+      "status": "ok"
+    },
+    {
+      "nds_id": 405,
+      "pokeapi_item_id": 382,
+      "identifier": "tm78",
+      "path": "web/sprites/items/405.png",
+      "bytes": 17444,
+      "sha256": "df2e434dd9158f5c5e31a547e7511531eb4f6ae4e311a6efa438a504c7d6a6e0",
+      "status": "ok"
+    },
+    {
+      "nds_id": 406,
+      "pokeapi_item_id": 383,
+      "identifier": "tm79",
+      "path": "web/sprites/items/406.png",
+      "bytes": 16671,
+      "sha256": "a993e37f7adaf6a3f11692f3d28ae37ea7ae33e0970b514dea8d2c57fee55025",
+      "status": "ok"
+    },
+    {
+      "nds_id": 407,
+      "pokeapi_item_id": 384,
+      "identifier": "tm80",
+      "path": "web/sprites/items/407.png",
+      "bytes": 15124,
+      "sha256": "893c2b61cb5dd650d0e975ec9a9214b7a7ac64636b134d2469621f55cc2c7434",
+      "status": "ok"
+    },
+    {
+      "nds_id": 408,
+      "pokeapi_item_id": 385,
+      "identifier": "tm81",
+      "path": "web/sprites/items/408.png",
+      "bytes": 17335,
+      "sha256": "4ef17a8f3dcfe7eedac9b0c026a3baf89576b59c5287601ef3b7be0615e1d9bf",
+      "status": "ok"
+    },
+    {
+      "nds_id": 409,
+      "pokeapi_item_id": 386,
+      "identifier": "tm82",
+      "path": "web/sprites/items/409.png",
+      "bytes": 16563,
+      "sha256": "2cb0f33c4750b7f1ac68c5c4db9c6423e87483e6685e18faec5875b4c345d7d5",
+      "status": "ok"
+    },
+    {
+      "nds_id": 410,
+      "pokeapi_item_id": 387,
+      "identifier": "tm83",
+      "path": "web/sprites/items/410.png",
+      "bytes": 17354,
+      "sha256": "92c5997ff82c66b513f4cd7272ff7acd795338d2036bc57446826ff255f5c6e1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 411,
+      "pokeapi_item_id": 388,
+      "identifier": "tm84",
+      "path": "web/sprites/items/411.png",
+      "bytes": 16468,
+      "sha256": "e439a6edef6788c7923fbadaf7a0cc48c4a22613b08ebff54803e41f871f59e1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 412,
+      "pokeapi_item_id": 389,
+      "identifier": "tm85",
+      "path": "web/sprites/items/412.png",
+      "bytes": 16469,
+      "sha256": "02f83294e37a0b7ef4a1b23ee4c904a58ce923fd3a4b428c1c6fb04393a90afd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 413,
+      "pokeapi_item_id": 390,
+      "identifier": "tm86",
+      "path": "web/sprites/items/413.png",
+      "bytes": 16743,
+      "sha256": "084ee1c26b1645e0f231aad3d200abd2654fcbcd23569820620fc1f5166d585b",
+      "status": "ok"
+    },
+    {
+      "nds_id": 414,
+      "pokeapi_item_id": 391,
+      "identifier": "tm87",
+      "path": "web/sprites/items/414.png",
+      "bytes": 16902,
+      "sha256": "b632c9898ed7d1554c17f38c82bc0e9f6848ef55f4a30a5d5e6a631547a5ef20",
+      "status": "ok"
+    },
+    {
+      "nds_id": 415,
+      "pokeapi_item_id": 392,
+      "identifier": "tm88",
+      "path": "web/sprites/items/415.png",
+      "bytes": 15124,
+      "sha256": "893c2b61cb5dd650d0e975ec9a9214b7a7ac64636b134d2469621f55cc2c7434",
+      "status": "ok"
+    },
+    {
+      "nds_id": 416,
+      "pokeapi_item_id": 393,
+      "identifier": "tm89",
+      "path": "web/sprites/items/416.png",
+      "bytes": 17473,
+      "sha256": "da6073fa87916fa0a2fac990bdde68dc65c1546b4db1ecf73aa98b6e6c4499f7",
+      "status": "ok"
+    },
+    {
+      "nds_id": 417,
+      "pokeapi_item_id": 394,
+      "identifier": "tm90",
+      "path": "web/sprites/items/417.png",
+      "bytes": 16468,
+      "sha256": "e439a6edef6788c7923fbadaf7a0cc48c4a22613b08ebff54803e41f871f59e1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 418,
+      "pokeapi_item_id": 395,
+      "identifier": "tm91",
+      "path": "web/sprites/items/418.png",
+      "bytes": 17354,
+      "sha256": "92c5997ff82c66b513f4cd7272ff7acd795338d2036bc57446826ff255f5c6e1",
+      "status": "ok"
+    },
+    {
+      "nds_id": 419,
+      "pokeapi_item_id": 396,
+      "identifier": "tm92",
+      "path": "web/sprites/items/419.png",
+      "bytes": 16469,
+      "sha256": "02f83294e37a0b7ef4a1b23ee4c904a58ce923fd3a4b428c1c6fb04393a90afd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 420,
+      "pokeapi_item_id": 397,
+      "identifier": "hm01",
+      "path": "web/sprites/items/420.png",
+      "bytes": 310,
+      "sha256": "a2eb7c1bdff6e66a7b4bb3de46015ae220111d3375ce2c178f1617e2970fe7fd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 421,
+      "pokeapi_item_id": 398,
+      "identifier": "hm02",
+      "path": "web/sprites/items/421.png",
+      "bytes": 315,
+      "sha256": "634ec9108499bcc0be9ba2567c061afb06db1479e2652e1f5205f9717a774639",
+      "status": "ok"
+    },
+    {
+      "nds_id": 422,
+      "pokeapi_item_id": 399,
+      "identifier": "hm03",
+      "path": "web/sprites/items/422.png",
+      "bytes": 315,
+      "sha256": "8e6e4f03053e47e0876f7375e6fc2082903260d8e57764ae6783abc053b35853",
+      "status": "ok"
+    },
+    {
+      "nds_id": 423,
+      "pokeapi_item_id": 400,
+      "identifier": "hm04",
+      "path": "web/sprites/items/423.png",
+      "bytes": 310,
+      "sha256": "a2eb7c1bdff6e66a7b4bb3de46015ae220111d3375ce2c178f1617e2970fe7fd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 424,
+      "pokeapi_item_id": 401,
+      "identifier": "hm05",
+      "path": "web/sprites/items/424.png",
+      "bytes": 315,
+      "sha256": "8e6e4f03053e47e0876f7375e6fc2082903260d8e57764ae6783abc053b35853",
+      "status": "ok"
+    },
+    {
+      "nds_id": 425,
+      "pokeapi_item_id": 402,
+      "identifier": "hm06",
+      "path": "web/sprites/items/425.png",
+      "bytes": 314,
+      "sha256": "a1fc4eba8ffbf15c38069b0b28c90a78c83013c6bc8787889407af6df9286dd9",
+      "status": "ok"
+    },
+    {
+      "nds_id": 426,
+      "pokeapi_item_id": 403,
+      "identifier": "hm07",
+      "path": "web/sprites/items/426.png",
+      "bytes": 315,
+      "sha256": "8e6e4f03053e47e0876f7375e6fc2082903260d8e57764ae6783abc053b35853",
+      "status": "ok"
+    },
+    {
+      "nds_id": 427,
+      "pokeapi_item_id": 404,
+      "identifier": "hm08",
+      "path": "web/sprites/items/427.png",
+      "bytes": 310,
+      "sha256": "a2eb7c1bdff6e66a7b4bb3de46015ae220111d3375ce2c178f1617e2970fe7fd",
+      "status": "ok"
+    },
+    {
+      "nds_id": 112,
+      "pokeapi_item_id": 442,
+      "identifier": "griseous-orb",
+      "path": "web/sprites/items/112.png",
+      "bytes": 330,
+      "sha256": "fb533699af9461e110b28c6805a50dcf98f52cfbf33c070e6b28188b332fa344",
+      "status": "ok"
+    }
+  ]
+}

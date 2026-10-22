@@ -1,0 +1,288 @@
+{
+  "schema": "sacred-gold-derived-trainer-references/v1",
+  "target_sha256": "fdb2fcabc4b51c4b98b0e4fcaf02740c81f32ede54c5a5bc0004d58c3133357e",
+  "drayano_sha256": "49f29848878406990ea288f26872d4355c92c4a2677f56973750bbf2566c13c1",
+  "records": [
+    {
+      "trainer_id": 11,
+      "slot": 2,
+      "data_kind": 3,
+      "species_id": 315,
+      "species_name": "Roselia",
+      "form": 0,
+      "level": 21,
+      "item_id": 0,
+      "move_ids": [
+        345,
+        73,
+        447,
+        78
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        345
+      ]
+    },
+    {
+      "trainer_id": 30,
+      "slot": 1,
+      "data_kind": 3,
+      "species_id": 428,
+      "species_name": "Lopunny",
+      "form": 0,
+      "level": 21,
+      "item_id": 0,
+      "move_ids": [
+        213,
+        26,
+        97,
+        146
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        146
+      ]
+    },
+    {
+      "trainer_id": 40,
+      "slot": 0,
+      "data_kind": 1,
+      "species_id": 233,
+      "species_name": "Porygon2",
+      "form": 0,
+      "level": 35,
+      "item_id": 0,
+      "move_ids": [
+        60,
+        161,
+        160,
+        176
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        160,
+        176
+      ]
+    },
+    {
+      "trainer_id": 257,
+      "slot": 0,
+      "data_kind": 3,
+      "species_id": 168,
+      "species_name": "Ariados",
+      "form": 0,
+      "level": 58,
+      "item_id": 0,
+      "move_ids": [
+        450,
+        97,
+        169,
+        226
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        169
+      ]
+    },
+    {
+      "trainer_id": 290,
+      "slot": 2,
+      "data_kind": 1,
+      "species_id": 420,
+      "species_name": "Cherubi",
+      "form": 0,
+      "level": 12,
+      "item_id": 0,
+      "move_ids": [
+        234,
+        148,
+        345,
+        73
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        345
+      ]
+    },
+    {
+      "trainer_id": 316,
+      "slot": 0,
+      "data_kind": 1,
+      "species_id": 102,
+      "species_name": "Exeggcute",
+      "form": 0,
+      "level": 58,
+      "item_id": 0,
+      "move_ids": [
+        94,
+        95,
+        140,
+        138
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        140
+      ]
+    },
+    {
+      "trainer_id": 504,
+      "slot": 2,
+      "data_kind": 1,
+      "species_id": 45,
+      "species_name": "Vileplume",
+      "form": 0,
+      "level": 37,
+      "item_id": 0,
+      "move_ids": [
+        76,
+        79,
+        51,
+        236
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        236
+      ]
+    },
+    {
+      "trainer_id": 539,
+      "slot": 0,
+      "data_kind": 1,
+      "species_id": 80,
+      "species_name": "Slowbro",
+      "form": 0,
+      "level": 39,
+      "item_id": 0,
+      "move_ids": [
+        174,
+        57,
+        45,
+        70
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        174
+      ]
+    },
+    {
+      "trainer_id": 697,
+      "slot": 4,
+      "data_kind": 3,
+      "species_id": 282,
+      "species_name": "Gardevoir",
+      "form": 0,
+      "level": 75,
+      "item_id": 0,
+      "move_ids": [
+        94,
+        85,
+        345,
+        411
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        345
+      ]
+    },
+    {
+      "trainer_id": 705,
+      "slot": 3,
+      "data_kind": 3,
+      "species_id": 197,
+      "species_name": "Umbreon",
+      "form": 0,
+      "level": 80,
+      "item_id": 158,
+      "move_ids": [
+        371,
+        281,
+        174,
+        273
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        174
+      ]
+    },
+    {
+      "trainer_id": 716,
+      "slot": 3,
+      "data_kind": 3,
+      "species_id": 365,
+      "species_name": "Walrein",
+      "form": 0,
+      "level": 70,
+      "item_id": 0,
+      "move_ids": [
+        157,
+        89,
+        174,
+        420
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        174
+      ]
+    },
+    {
+      "trainer_id": 721,
+      "slot": 4,
+      "data_kind": 3,
+      "species_id": 195,
+      "species_name": "Quagsire",
+      "form": 0,
+      "level": 68,
+      "item_id": 187,
+      "move_ids": [
+        174,
+        89,
+        127,
+        105
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        174
+      ]
+    },
+    {
+      "trainer_id": 724,
+      "slot": 2,
+      "data_kind": 3,
+      "species_id": 168,
+      "species_name": "Ariados",
+      "form": 0,
+      "level": 70,
+      "item_id": 0,
+      "move_ids": [
+        450,
+        97,
+        169,
+        226
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        169
+      ]
+    },
+    {
+      "trainer_id": 726,
+      "slot": 2,
+      "data_kind": 3,
+      "species_id": 324,
+      "species_name": "Torkoal",
+      "form": 0,
+      "level": 72,
+      "item_id": 214,
+      "move_ids": [
+        89,
+        315,
+        34,
+        174
+      ],
+      "move_source": "explicit_trainer_record",
+      "changed_move_ids": [
+        174
+      ]
+    }
+  ]
+}

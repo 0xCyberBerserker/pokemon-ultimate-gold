@@ -1,0 +1,310 @@
+{
+  "schema": "ultimate-gold-fix6a-kit-regression/v1",
+  "status": "NATIVE_EMULATED_REGRESSION_PASS",
+  "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+  "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+  "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+  "baseline_runner_sha256": "2de6eec7f25dd846dfbaaf5922b1f78df25643c52d6fbe881ed6002a1b5169d8",
+  "source_dsv_sha256": "b0abcdee72b020e3ad11f10978ab64f002a843e518d36a8b0fe33185461c7f47",
+  "source_dsv_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/repel-fix6a-profile/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+  "acceptance_script_sha256": "adb0bc957ec9b6916449937d46017bb64541428ceb9953925e66f81022dde1ac",
+  "baseline": {
+    "run": "repel-fix6a-boot-bag",
+    "state_sha256": "31b648764dfb1bdbae510c9856a34679f3e11c926d826cada924131ab43572f2",
+    "ram_sha256": "5bb3c17c048eddfa2d36150f9bb3f0717c74e98559bb892d3e8718f074966247",
+    "bag_sha256": "c8e325404a3265345b2be839aadd0bde2a7aaf2a8d4961034505a75f3f6c80ca",
+    "reserve_4096_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+    "medicine_pocket": {
+      "50": 20,
+      "17": 5
+    },
+    "berry_pocket": {
+      "154": 1,
+      "155": 1,
+      "157": 1
+    },
+    "markers_113_114_118": {
+      "113": 1,
+      "114": 1,
+      "118": 1
+    },
+    "party": [
+      {
+        "raw_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+        "species": 35,
+        "level": 5,
+        "status": 0,
+        "hp": 22,
+        "max_hp": 22
+      },
+      {
+        "raw_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+        "species": 152,
+        "level": 5,
+        "status": 0,
+        "hp": 20,
+        "max_hp": 20
+      },
+      {
+        "raw_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+        "species": 66,
+        "level": 5,
+        "status": 0,
+        "hp": 8,
+        "max_hp": 22
+      }
+    ]
+  },
+  "prior_expectation_reference": {
+    "report": "docs/qa-combined-kit-shop.json",
+    "cases": [
+      "fix5.kit.rare_candy.effect-and-preservation",
+      "oran_berry.native-heal"
+    ],
+    "scope": "Expected effect and reuse contract only; all new evidence in this report is from FIX6a."
+  },
+  "cases": {
+    "rare_candy": {
+      "passed": true,
+      "expected": {
+        "clefairy_level": "5→6",
+        "rare_candy_50": 20,
+        "all_594_bag_slots_unchanged": true,
+        "other_party_records_unchanged": true,
+        "reserve_4096_unchanged": true
+      },
+      "observed": {
+        "target_before": {
+          "raw_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+          "species": 35,
+          "level": 5,
+          "status": 0,
+          "hp": 22,
+          "max_hp": 22
+        },
+        "target_after": {
+          "raw_sha256": "c576373e73d757e5906837887f40cee80a9e4c57ea25a14108b79c327bc41f68",
+          "species": 35,
+          "level": 6,
+          "status": 0,
+          "hp": 25,
+          "max_hp": 25
+        },
+        "rare_candy_before_after": [
+          20,
+          20
+        ],
+        "bag_sha256_before_after": [
+          "c8e325404a3265345b2be839aadd0bde2a7aaf2a8d4961034505a75f3f6c80ca",
+          "c8e325404a3265345b2be839aadd0bde2a7aaf2a8d4961034505a75f3f6c80ca"
+        ],
+        "non_target_party_records_unchanged": true,
+        "reserve_sha256_before_after": [
+          "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        ]
+      },
+      "evidence": {
+        "run": "fix6a-kit-regression-candy",
+        "result_sha256": "225572b59ced67ccd80c8a37a7d26fa7796523746e3b417782e8c3b91e84342a",
+        "input_script_sha256": "e78f01748468d482e592e8a9d7d786d5968c2c17dfb76dcf43bce81aa6396f0b",
+        "input_state_sha256": "31b648764dfb1bdbae510c9856a34679f3e11c926d826cada924131ab43572f2",
+        "output_state_sha256": "4b21a1d88fd9ee65d1133a46f0263f61630abf6228ab2707c8a614be26318547",
+        "ram_sha256": "12bf1a183c3516ee177858bc7f6b726b00c2f3bcba339f1d098139635bfe0f2d",
+        "codes_during_action": [],
+        "battery_files_at_run": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/fix6a-kit-regression-candy/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+            "bytes": 524410,
+            "sha256": "3824e502529e166d394541da586144bcbaa8f3832319076d199041a8059f70b8"
+          }
+        ],
+        "bag_sha256": "c8e325404a3265345b2be839aadd0bde2a7aaf2a8d4961034505a75f3f6c80ca",
+        "reserve_4096_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+        "markers_113_114_118": {
+          "113": 1,
+          "114": 1,
+          "118": 1
+        },
+        "medicine_pocket": {
+          "50": 20,
+          "17": 5
+        },
+        "berry_pocket": {
+          "154": 1,
+          "155": 1,
+          "157": 1
+        },
+        "party": [
+          {
+            "raw_sha256": "c576373e73d757e5906837887f40cee80a9e4c57ea25a14108b79c327bc41f68",
+            "species": 35,
+            "level": 6,
+            "status": 0,
+            "hp": 25,
+            "max_hp": 25
+          },
+          {
+            "raw_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+            "species": 152,
+            "level": 5,
+            "status": 0,
+            "hp": 20,
+            "max_hp": 20
+          },
+          {
+            "raw_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+            "species": 66,
+            "level": 5,
+            "status": 0,
+            "hp": 8,
+            "max_hp": 22
+          }
+        ],
+        "screenshots": [
+          {
+            "path": "night-sprint/qa/runs/fix6a-kit-regression-candy/medicine_pocket.png",
+            "sha256": "70ea64584909d43c56572fb47f973bcfa1c6901a66e20a2491ca752eb30ed810"
+          },
+          {
+            "path": "night-sprint/qa/runs/fix6a-kit-regression-candy/candy_context.png",
+            "sha256": "855e3bc9a84a2ad5265cf9f627b59f6a55ce8aa3772a3a24155e324842a87312"
+          },
+          {
+            "path": "night-sprint/qa/runs/fix6a-kit-regression-candy/party_selection.png",
+            "sha256": "d0044d22f3e20537d5ed656091d90d6fa12eb2bf0b82e16da0df7bf3230679cd"
+          },
+          {
+            "path": "night-sprint/qa/runs/fix6a-kit-regression-candy/candy_used.png",
+            "sha256": "6890e9967c28d5d6eb5c07a711035fa79f171019a35938f04765f724bf5ce008"
+          }
+        ]
+      }
+    },
+    "oran_berry": {
+      "passed": true,
+      "expected": {
+        "machop_hp": "8→18/22",
+        "oran_berry_155": 1,
+        "all_594_bag_slots_unchanged": true,
+        "other_party_records_unchanged": true,
+        "reserve_4096_unchanged": true
+      },
+      "observed": {
+        "target_before": {
+          "raw_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929",
+          "species": 66,
+          "level": 5,
+          "status": 0,
+          "hp": 8,
+          "max_hp": 22
+        },
+        "target_after": {
+          "raw_sha256": "8b376ee83dff521c9981168a3bced1ca0554bae261d09b473a4c4efdee62d83f",
+          "species": 66,
+          "level": 5,
+          "status": 0,
+          "hp": 18,
+          "max_hp": 22
+        },
+        "oran_berry_before_after": [
+          1,
+          1
+        ],
+        "bag_sha256_before_after": [
+          "c8e325404a3265345b2be839aadd0bde2a7aaf2a8d4961034505a75f3f6c80ca",
+          "c8e325404a3265345b2be839aadd0bde2a7aaf2a8d4961034505a75f3f6c80ca"
+        ],
+        "non_target_party_records_unchanged": true,
+        "reserve_sha256_before_after": [
+          "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960"
+        ]
+      },
+      "evidence": {
+        "run": "fix6a-kit-regression-berry",
+        "result_sha256": "be656805692d461ad6b0436ce9de515aa279be8bbacfa8ae750b6992b19ea91e",
+        "input_script_sha256": "8a968825c9d4443ca03c072b2ced06ff977cf7fb0890e7e46c9abc80960120b9",
+        "input_state_sha256": "31b648764dfb1bdbae510c9856a34679f3e11c926d826cada924131ab43572f2",
+        "output_state_sha256": "f5d5cb4053dc6ea35645bd5470ad707b882706fa94a4a74c0e044c63b275f8dd",
+        "ram_sha256": "9b22e72e5a4c1a94bd62db6d570c366ea932de092b9235edf0a3785f0483301a",
+        "codes_during_action": [],
+        "battery_files_at_run": [
+          {
+            "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/fix6a-kit-regression-berry/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+            "bytes": 524410,
+            "sha256": "3824e502529e166d394541da586144bcbaa8f3832319076d199041a8059f70b8"
+          }
+        ],
+        "bag_sha256": "c8e325404a3265345b2be839aadd0bde2a7aaf2a8d4961034505a75f3f6c80ca",
+        "reserve_4096_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+        "markers_113_114_118": {
+          "113": 1,
+          "114": 1,
+          "118": 1
+        },
+        "medicine_pocket": {
+          "50": 20,
+          "17": 5
+        },
+        "berry_pocket": {
+          "154": 1,
+          "155": 1,
+          "157": 1
+        },
+        "party": [
+          {
+            "raw_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+            "species": 35,
+            "level": 5,
+            "status": 0,
+            "hp": 22,
+            "max_hp": 22
+          },
+          {
+            "raw_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+            "species": 152,
+            "level": 5,
+            "status": 0,
+            "hp": 20,
+            "max_hp": 20
+          },
+          {
+            "raw_sha256": "8b376ee83dff521c9981168a3bced1ca0554bae261d09b473a4c4efdee62d83f",
+            "species": 66,
+            "level": 5,
+            "status": 0,
+            "hp": 18,
+            "max_hp": 22
+          }
+        ],
+        "screenshots": [
+          {
+            "path": "night-sprint/qa/runs/fix6a-kit-regression-berry/berry_pocket.png",
+            "sha256": "5e1010d0e2499fd7490881d8396bde7e7204c848e02d775d33046dc86a48ec0a"
+          },
+          {
+            "path": "night-sprint/qa/runs/fix6a-kit-regression-berry/berry_context.png",
+            "sha256": "360c83467448b7dbc881ec3cc7f66afedba9436f29830a68ac73d19a3444d195"
+          },
+          {
+            "path": "night-sprint/qa/runs/fix6a-kit-regression-berry/party_selection.png",
+            "sha256": "d0044d22f3e20537d5ed656091d90d6fa12eb2bf0b82e16da0df7bf3230679cd"
+          },
+          {
+            "path": "night-sprint/qa/runs/fix6a-kit-regression-berry/berry_used.png",
+            "sha256": "923fe5e21a8df90ef44348002bc81f95bf605289cc6260218adcf4e3cb88c7da"
+          }
+        ]
+      }
+    }
+  },
+  "limits_en": [
+    "This is bounded emulated native-use evidence for the exact FIX6a ROM/core/runner; gameplay_acceptance remains NOT_ASSESSED.",
+    "Only one Rare Candy use and one Oran Berry use were checked. Save/cold and Repel cases were not repeated."
+  ],
+  "limits_es": [
+    "Es evidencia acotada de uso nativo emulado para la ROM/core/runner FIX6a exacta; gameplay_acceptance sigue en NOT_ASSESSED.",
+    "Se comprobaron un uso de Rare Candy y uno de Oran Berry. No se repitieron guardado/frío ni repelentes."
+  ]
+}

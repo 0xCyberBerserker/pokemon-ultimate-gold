@@ -1,0 +1,1134 @@
+{
+  "schema": "ultimate-gold-stat-editor-selector-runtime-independent-review/v1",
+  "status": "PASS_SELECTOR_LIFECYCLE_ONLY",
+  "review_mode": "read_only_physical_hash_and_RAM_recheck_no_emulator",
+  "candidate": {
+    "path": "experiments/eviv/stat-editor-selector-lifecycle-minimal-retail-fix6a.nds",
+    "sha256": "b987fec615e44e01d1505297599a31f1a584c6bf8029e677cb49ba507bbffb5b",
+    "parent_path": "experiments/eviv/stat-editor-arm-probe-fix6a.nds",
+    "parent_sha256": "dec58721ea4ad1d34fd5d195c0618529bf21b14e0e8bdc017bf98af8dad8911c"
+  },
+  "artifacts_verified": [
+    {
+      "name": "candidate_rom",
+      "path": "experiments/eviv/stat-editor-selector-lifecycle-minimal-retail-fix6a.nds",
+      "sha256": "b987fec615e44e01d1505297599a31f1a584c6bf8029e677cb49ba507bbffb5b"
+    },
+    {
+      "name": "parent_rom",
+      "path": "experiments/eviv/stat-editor-arm-probe-fix6a.nds",
+      "sha256": "dec58721ea4ad1d34fd5d195c0618529bf21b14e0e8bdc017bf98af8dad8911c"
+    },
+    {
+      "name": "core",
+      "path": "tools/usr/lib/libretro/desmume_libretro.so",
+      "sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    {
+      "name": "runner",
+      "path": "night-sprint/qa/headless_runner.py",
+      "sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+    },
+    {
+      "name": "helper",
+      "path": "night-sprint/qa/runs/stat-editor-arm-fix6a/stat_editor.bin",
+      "sha256": "990b3a16b67cac7218458a438b1d2169544b22642b0e946217cc51b43a3b8d92"
+    },
+    {
+      "name": "reference_dsv",
+      "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/saves/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+      "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+    },
+    {
+      "name": "build_report",
+      "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-fix6a/build.json",
+      "sha256": "70312cc8f9effe40fcd178161c093bea37680631d3fb58ba0658ac1cbcb2b5cb"
+    },
+    {
+      "name": "audit_script",
+      "path": "night-sprint/qa/stat_editor_selector_lifecycle_minimal_retail_fix6a_audit.py",
+      "sha256": "088a001025fc81354d5348ccc4aff5c0bd1675f7b8a7c53dad6199de9250a267"
+    },
+    {
+      "name": "source_acceptance_json",
+      "path": "night-sprint/qa/stat_editor_selector_lifecycle_minimal_retail_fix6a.json",
+      "sha256": "1bffa844797e704b2a48c2f37072e2c295d4861c09a97099e967fdcddc043323"
+    },
+    {
+      "name": "source_acceptance_md",
+      "path": "night-sprint/qa/stat_editor_selector_lifecycle_minimal_retail_fix6a.md",
+      "sha256": "e51941f81fad27e6c83b290068cf750dc540c249b074b65ba4c8d4397241e375"
+    },
+    {
+      "name": "guard_test",
+      "path": "night-sprint/qa/hm_fly_surf_fix6a_guard_test.py",
+      "sha256": "0f61f253e867aaa223201e668074526de236863cc3b2bf2ad49d1b4438a77b7f"
+    }
+  ],
+  "physical_evidence": {
+    "run_count": 7,
+    "capture_count": 20,
+    "hash_mismatches": 0,
+    "runs": [
+      {
+        "name": "stat-editor-selector-lifecycle-minimal-retail-cold-fix6a",
+        "role": "cold_field",
+        "frames": 5500,
+        "artifact_hashes": [
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/result.json",
+            "sha256": "efb5c58bcd78c9f1a8314f8797c888ef0bae66b210064523ca85393f52b3bede"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/input-script.json",
+            "sha256": "8585149159c5372f3c4216b751ad664a10544426e37b889670685c83e1467097"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/system_ram.bin",
+            "sha256": "c30822d7315219cd6958d3941694a4ef84bc93ac67a897e32505d47a08425399"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/battery-evidence.json",
+            "sha256": "5a89b6a7df0828d941001162ff4446f1b8a2a05a55dc2c130b19a2c33c55d353"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/battery-evidence/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/cold.state",
+            "sha256": "776bf74c2dc338e5b7b63f7c52d2d9cafdb9cb5b4202216a07da97a9367997da"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/saves/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/continue_or_load.png",
+            "sha256": "fb0d0628ea715f95703c9daef907b96cb1ce6a5a53841320b1bc4d8005cd9532"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/loaded_identity.png",
+            "sha256": "1b3e28978139106ec4d1d0e1956950a3d570545d890515e6cd848d9d6afd2db9"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/loaded_location.png",
+            "sha256": "4e225503105df04c8d11e5c265fbc138d4c05f3c2516b743bc117f8e7b12b101"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/title_or_menu.png",
+            "sha256": "60cebe104afd7bc667a6b871ec74ef05a49d58966d09bb0ca1b3a398b50b0776"
+          }
+        ],
+        "state_in": {
+          "path": null,
+          "sha256": null
+        },
+        "state_out": {
+          "path": "qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/cold.state",
+          "sha256": "776bf74c2dc338e5b7b63f7c52d2d9cafdb9cb5b4202216a07da97a9367997da"
+        },
+        "field": {
+          "field_location": [
+            60,
+            -1,
+            684,
+            409,
+            2
+          ],
+          "textbox_open": false,
+          "script_environments": []
+        },
+        "party_records": [
+          {
+            "slot": 0,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 1,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 2,
+            "checksum_valid": false,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_suffix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_suffix",
+              "split": 30
+            }
+          }
+        ],
+        "party_strict_match": true,
+        "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+        "reserve_and_helper_checks": {
+          "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_size": 1952,
+          "new_reserve_sha256": "d4629e0fc684d7ec6d13e44566f02e988c9a87f45d6c6cbfae5bc2f803cb784e",
+          "new_reserve_checks": {
+            "low_guard": true,
+            "metadata": true,
+            "helper_exact": true,
+            "unused_padding_zero": true,
+            "high_guard": true,
+            "tail_zero": true
+          },
+          "old_hm_shop_repel_reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "old_reserve_checks": {
+            "sha256_matches_parent": true,
+            "lower_guard": true,
+            "metadata": true,
+            "hm_canary": true,
+            "shop_canary": true,
+            "upper_guard": true
+          },
+          "arena_high_value": "0x023D6000",
+          "arena_high_ok": true
+        }
+      },
+      {
+        "name": "stat-editor-selector-lifecycle-minimal-retail-open-fix6a",
+        "role": "selector_open",
+        "frames": 700,
+        "artifact_hashes": [
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/result.json",
+            "sha256": "2bc31939be38554e616162e647b4d550ad09ac3c9cc067af201a47a5d6c3212d"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/input-script.json",
+            "sha256": "6f4d5c71f849dffc8ca62ebb852a7c7133d5efcaccc34e4e7766d1c23c0cc689"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/system_ram.bin",
+            "sha256": "a8604d1bbdfb6a0bda1a31116122a824f645e7f7c7181c77de2455daf4dbd34b"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/battery-evidence.json",
+            "sha256": "db63759d86c89e85341ca3b896a13dd9da80a662c1486cdb387b8909d6001648"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/battery-evidence/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/cold.state",
+            "sha256": "776bf74c2dc338e5b7b63f7c52d2d9cafdb9cb5b4202216a07da97a9367997da"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/selector.state",
+            "sha256": "891f015279ead00505cd09ee8b02afa19a744021a5004cb60841496f4f7b086a"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/saves/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/field_before_facing.png",
+            "sha256": "a1ff372fb92d61241440bb9b42cd457773a9c76e04d1eb3b846c1847abd8ad58"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/selector_stable.png",
+            "sha256": "dc3680e94f4c4e17d959ca5dc5217ee5879be0c4d4126160da0ed204d1f0fe10"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/selector_visible.png",
+            "sha256": "ca3eb8cd2dfcabc05c36079c546250d31f6c60ff24e14a83f7a9d591aad345c3"
+          }
+        ],
+        "state_in": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cold-fix6a/cold.state",
+          "sha256": "776bf74c2dc338e5b7b63f7c52d2d9cafdb9cb5b4202216a07da97a9367997da"
+        },
+        "state_out": {
+          "path": "qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/selector.state",
+          "sha256": "891f015279ead00505cd09ee8b02afa19a744021a5004cb60841496f4f7b086a"
+        },
+        "field": {
+          "field_location": [
+            60,
+            -1,
+            684,
+            409,
+            2
+          ],
+          "textbox_open": true,
+          "script_environments": [
+            {
+              "task": "0x022C0178",
+              "function": "0x0203FF45",
+              "state": 0,
+              "environment": "0x022A6B40",
+              "active_script_context_count": 1,
+              "active_script_number": 16,
+              "special_result_800C": 0
+            }
+          ]
+        },
+        "party_records": [
+          {
+            "slot": 0,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 1,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 2,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          }
+        ],
+        "party_strict_match": true,
+        "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+        "reserve_and_helper_checks": {
+          "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_size": 1952,
+          "new_reserve_sha256": "d4629e0fc684d7ec6d13e44566f02e988c9a87f45d6c6cbfae5bc2f803cb784e",
+          "new_reserve_checks": {
+            "low_guard": true,
+            "metadata": true,
+            "helper_exact": true,
+            "unused_padding_zero": true,
+            "high_guard": true,
+            "tail_zero": true
+          },
+          "old_hm_shop_repel_reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "old_reserve_checks": {
+            "sha256_matches_parent": true,
+            "lower_guard": true,
+            "metadata": true,
+            "hm_canary": true,
+            "shop_canary": true,
+            "upper_guard": true
+          },
+          "arena_high_value": "0x023D6000",
+          "arena_high_ok": true
+        }
+      },
+      {
+        "name": "stat-editor-selector-lifecycle-minimal-retail-advance-fix6a",
+        "role": "selector_visible",
+        "frames": 250,
+        "artifact_hashes": [
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/result.json",
+            "sha256": "ae436e58b5252a950bc63a6f36bc1e070b5adb07d0e3d45bf7f854c13c2d792a"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/input-script.json",
+            "sha256": "020037a806b0a1aaf508ba80ae55b71e731f74e281cc4d70c388c10182b9903f"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/system_ram.bin",
+            "sha256": "90d15bcb7d1bf4a4f432cac76c5cc2f2b38932c8b243cee8150ac4c656f4b991"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/battery-evidence.json",
+            "sha256": "d4ea9a60d29fdcadc509d906a71cb3f9591dd40faf85e03a62e0e133a185cd04"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/battery-evidence/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/selector.state",
+            "sha256": "891f015279ead00505cd09ee8b02afa19a744021a5004cb60841496f4f7b086a"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/advanced.state",
+            "sha256": "03a259f60703a8b41250bf2091031d4d168079fc56d43f6e3dbc0f6a42c1700b"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/saves/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/advance_stable.png",
+            "sha256": "e00e1c25f41768d5adc2d3559b06ce4da78188057db0a0c264cef56e327b3419"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/after_visible_next.png",
+            "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/visible_next_before_advance.png",
+            "sha256": "e606f35366c685340f8e4d0ab13fd4c5a3822c8eaaab26a81b9b19cc800befc4"
+          }
+        ],
+        "state_in": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-open-fix6a/selector.state",
+          "sha256": "891f015279ead00505cd09ee8b02afa19a744021a5004cb60841496f4f7b086a"
+        },
+        "state_out": {
+          "path": "qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/advanced.state",
+          "sha256": "03a259f60703a8b41250bf2091031d4d168079fc56d43f6e3dbc0f6a42c1700b"
+        },
+        "field": {
+          "field_location": [
+            60,
+            -1,
+            684,
+            409,
+            0
+          ],
+          "textbox_open": false,
+          "script_environments": [
+            {
+              "task": "0x022C0178",
+              "function": "0x0203FF45",
+              "state": 0,
+              "environment": "0x022A6B40",
+              "active_script_context_count": 1,
+              "active_script_number": 16,
+              "special_result_800C": 0
+            }
+          ]
+        },
+        "party_records": [
+          {
+            "slot": 0,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 1,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 2,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          }
+        ],
+        "party_strict_match": true,
+        "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+        "reserve_and_helper_checks": {
+          "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_size": 1952,
+          "new_reserve_sha256": "d4629e0fc684d7ec6d13e44566f02e988c9a87f45d6c6cbfae5bc2f803cb784e",
+          "new_reserve_checks": {
+            "low_guard": true,
+            "metadata": true,
+            "helper_exact": true,
+            "unused_padding_zero": true,
+            "high_guard": true,
+            "tail_zero": true
+          },
+          "old_hm_shop_repel_reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "old_reserve_checks": {
+            "sha256_matches_parent": true,
+            "lower_guard": true,
+            "metadata": true,
+            "hm_canary": true,
+            "shop_canary": true,
+            "upper_guard": true
+          },
+          "arena_high_value": "0x023D6000",
+          "arena_high_ok": true
+        }
+      },
+      {
+        "name": "stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a",
+        "role": "cancel_result_before_ack",
+        "frames": 400,
+        "artifact_hashes": [
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/result.json",
+            "sha256": "0d0ec26d47bb9ca1488262b287b777e71d5e4a649318c210746d478ba5f81b39"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/input-script.json",
+            "sha256": "14edfbfa11f5fb5a34dc07b273547bde50f4188372d656665386bca0150eb3dd"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/system_ram.bin",
+            "sha256": "4787aca29d2c6d84e454775582bf50b112c2fab1e6e344360d5399708c27f2d4"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/battery-evidence.json",
+            "sha256": "2c0771a906ca665a9c5cc137bfeccc975095163e5c737fe7017f076ccca67ed9"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/battery-evidence/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/advanced.state",
+            "sha256": "03a259f60703a8b41250bf2091031d4d168079fc56d43f6e3dbc0f6a42c1700b"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/cancel-feedback.state",
+            "sha256": "2adeafce977b4f1a44263d3b8799fbb8da9b2b15976938f9dc29388fc19ed615"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/saves/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/cancel_feedback.png",
+            "sha256": "2b85c7f00dd4e13595fa090622bc4941349d9d81cbac1721537fa194b7560451"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/cancel_feedback_stable.png",
+            "sha256": "31bd2c14b52be76f1f11e3855b42dd405b2fb7602f663fb309f07fe6349fca6d"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/selector_before_cancel.png",
+            "sha256": "0940a5378dd8bb63eb35bd0eae481594e235ee9f1e603062986b1aab99d914dd"
+          }
+        ],
+        "state_in": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/advanced.state",
+          "sha256": "03a259f60703a8b41250bf2091031d4d168079fc56d43f6e3dbc0f6a42c1700b"
+        },
+        "state_out": {
+          "path": "qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/cancel-feedback.state",
+          "sha256": "2adeafce977b4f1a44263d3b8799fbb8da9b2b15976938f9dc29388fc19ed615"
+        },
+        "field": {
+          "field_location": [
+            60,
+            -1,
+            684,
+            409,
+            0
+          ],
+          "textbox_open": true,
+          "script_environments": [
+            {
+              "task": "0x022C0178",
+              "function": "0x0203FF45",
+              "state": 0,
+              "environment": "0x022A6B40",
+              "active_script_context_count": 1,
+              "active_script_number": 16,
+              "special_result_800C": 255
+            }
+          ]
+        },
+        "party_records": [
+          {
+            "slot": 0,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 1,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 2,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          }
+        ],
+        "party_strict_match": true,
+        "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+        "reserve_and_helper_checks": {
+          "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_size": 1952,
+          "new_reserve_sha256": "d4629e0fc684d7ec6d13e44566f02e988c9a87f45d6c6cbfae5bc2f803cb784e",
+          "new_reserve_checks": {
+            "low_guard": true,
+            "metadata": true,
+            "helper_exact": true,
+            "unused_padding_zero": true,
+            "high_guard": true,
+            "tail_zero": true
+          },
+          "old_hm_shop_repel_reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "old_reserve_checks": {
+            "sha256_matches_parent": true,
+            "lower_guard": true,
+            "metadata": true,
+            "hm_canary": true,
+            "shop_canary": true,
+            "upper_guard": true
+          },
+          "arena_high_value": "0x023D6000",
+          "arena_high_ok": true
+        }
+      },
+      {
+        "name": "stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a",
+        "role": "field_after_cancel_ack",
+        "frames": 200,
+        "artifact_hashes": [
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a/result.json",
+            "sha256": "93e75a1c99b9efed27812da2a78e0ec69a2cf504d388d2fa724b96980838fb71"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a/input-script.json",
+            "sha256": "e94b179b847b161c8590f4222c6a3e4069a3949c33a643afc304bcfb4f54488d"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a/system_ram.bin",
+            "sha256": "f056b16c788562dc60272443474fb972717720fe03406c5308071677fc5ee848"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a/battery-evidence.json",
+            "sha256": "45752b9033577df9b151706e8124ef198fd012572c29d86beb8e7d62cd129f28"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a/battery-evidence/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/cancel-feedback.state",
+            "sha256": "2adeafce977b4f1a44263d3b8799fbb8da9b2b15976938f9dc29388fc19ed615"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a/cancel-complete.state",
+            "sha256": "53684a47455d4cec8217b70934a5dac07982f75009c9423e2e0e9d743a3316e8"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a/saves/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a/cancel_message_before_ack.png",
+            "sha256": "6fc57a805f94b0bc621cf8c7b7d033c305ad43b291c62a5719d30347ebf4a31e"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a/field_after_cancel_ack.png",
+            "sha256": "afb480b2256c0135ec61057316a2a74590be65d624bb5000d3cf4a861130497a"
+          }
+        ],
+        "state_in": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a/cancel-feedback.state",
+          "sha256": "2adeafce977b4f1a44263d3b8799fbb8da9b2b15976938f9dc29388fc19ed615"
+        },
+        "state_out": {
+          "path": "qa/runs/stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a/cancel-complete.state",
+          "sha256": "53684a47455d4cec8217b70934a5dac07982f75009c9423e2e0e9d743a3316e8"
+        },
+        "field": {
+          "field_location": [
+            60,
+            -1,
+            684,
+            409,
+            0
+          ],
+          "textbox_open": false,
+          "script_environments": []
+        },
+        "party_records": [
+          {
+            "slot": 0,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 1,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 2,
+            "checksum_valid": false,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_suffix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_suffix",
+              "split": 28
+            }
+          }
+        ],
+        "party_strict_match": true,
+        "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+        "reserve_and_helper_checks": {
+          "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_size": 1952,
+          "new_reserve_sha256": "d4629e0fc684d7ec6d13e44566f02e988c9a87f45d6c6cbfae5bc2f803cb784e",
+          "new_reserve_checks": {
+            "low_guard": true,
+            "metadata": true,
+            "helper_exact": true,
+            "unused_padding_zero": true,
+            "high_guard": true,
+            "tail_zero": true
+          },
+          "old_hm_shop_repel_reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "old_reserve_checks": {
+            "sha256_matches_parent": true,
+            "lower_guard": true,
+            "metadata": true,
+            "hm_canary": true,
+            "shop_canary": true,
+            "upper_guard": true
+          },
+          "arena_high_value": "0x023D6000",
+          "arena_high_ok": true
+        }
+      },
+      {
+        "name": "stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a",
+        "role": "slot0_result_before_ack",
+        "frames": 400,
+        "artifact_hashes": [
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/result.json",
+            "sha256": "4726344e921c47b3e817b5c2a452ae472303c4e981d663cf4789aecbd92ea3bb"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/input-script.json",
+            "sha256": "bb211cf28000f3fbc15ab4e0612889137dc24c9ce5d6491d4d5dd2b6e64e14bc"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/system_ram.bin",
+            "sha256": "eaf39c0e4ecc789ebdbefb9b64fee7dbd4e34aa96917e54ce0ee26ed3df01a9b"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/battery-evidence.json",
+            "sha256": "5b3ed67bf9aceb885339c0d772c079ea0f10c438b820b53e37614d59a7ab4dd9"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/battery-evidence/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/advanced.state",
+            "sha256": "03a259f60703a8b41250bf2091031d4d168079fc56d43f6e3dbc0f6a42c1700b"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/slot0-feedback.state",
+            "sha256": "9fe488e5313a117eb7a00396a45cf292647fed741f41b9d087cacea5f4ae6fdd"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/saves/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/selector_before_slot0.png",
+            "sha256": "0940a5378dd8bb63eb35bd0eae481594e235ee9f1e603062986b1aab99d914dd"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/slot0_feedback.png",
+            "sha256": "433cadf9fc1bd99ec07632d83512dc75e3219afed10549aa579de696abd20b8e"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/slot0_feedback_stable.png",
+            "sha256": "1d4097104ea1e17efb0bc5fee3875180720794114fc56a599afbfb871f7a03d7"
+          }
+        ],
+        "state_in": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-advance-fix6a/advanced.state",
+          "sha256": "03a259f60703a8b41250bf2091031d4d168079fc56d43f6e3dbc0f6a42c1700b"
+        },
+        "state_out": {
+          "path": "qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/slot0-feedback.state",
+          "sha256": "9fe488e5313a117eb7a00396a45cf292647fed741f41b9d087cacea5f4ae6fdd"
+        },
+        "field": {
+          "field_location": [
+            60,
+            -1,
+            684,
+            409,
+            0
+          ],
+          "textbox_open": true,
+          "script_environments": [
+            {
+              "task": "0x022C0178",
+              "function": "0x0203FF45",
+              "state": 0,
+              "environment": "0x022A6B40",
+              "active_script_context_count": 1,
+              "active_script_number": 16,
+              "special_result_800C": 0
+            }
+          ]
+        },
+        "party_records": [
+          {
+            "slot": 0,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 1,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 2,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          }
+        ],
+        "party_strict_match": true,
+        "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+        "reserve_and_helper_checks": {
+          "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_size": 1952,
+          "new_reserve_sha256": "d4629e0fc684d7ec6d13e44566f02e988c9a87f45d6c6cbfae5bc2f803cb784e",
+          "new_reserve_checks": {
+            "low_guard": true,
+            "metadata": true,
+            "helper_exact": true,
+            "unused_padding_zero": true,
+            "high_guard": true,
+            "tail_zero": true
+          },
+          "old_hm_shop_repel_reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "old_reserve_checks": {
+            "sha256_matches_parent": true,
+            "lower_guard": true,
+            "metadata": true,
+            "hm_canary": true,
+            "shop_canary": true,
+            "upper_guard": true
+          },
+          "arena_high_value": "0x023D6000",
+          "arena_high_ok": true
+        }
+      },
+      {
+        "name": "stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a",
+        "role": "field_after_slot0_ack",
+        "frames": 200,
+        "artifact_hashes": [
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a/result.json",
+            "sha256": "071b3e092c970d81594a17d68dae379a7f324751b74dfe32f7df3d5c5f08777e"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a/input-script.json",
+            "sha256": "2ed9c7d768ecc6a4f67c2df2419eee897b8b9fe7d3d31cbc4f54c9af0e93eb64"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a/system_ram.bin",
+            "sha256": "161d1d475e5f1346ef276f4e6e8fb9718148df5f1c2af9aed864a81e4ac96379"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a/battery-evidence.json",
+            "sha256": "0d2c045411bd65e34cb19d5922e49039ded9459648d0da268fdf339b109c2862"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a/battery-evidence/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/slot0-feedback.state",
+            "sha256": "9fe488e5313a117eb7a00396a45cf292647fed741f41b9d087cacea5f4ae6fdd"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a/slot0-complete.state",
+            "sha256": "b79b961daf9b46f5d34ddd9259dee339a1c8a5f90434ec1bec39c05f6fe9497e"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a/saves/stat-editor-selector-lifecycle-minimal-retail-fix6a.dsv",
+            "sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a/field_after_slot0_ack.png",
+            "sha256": "4faa9c0574b8e30efbf6c900f1384468ecb016213cbf8ee9e0b243744b14d60a"
+          },
+          {
+            "path": "night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a/slot0_message_before_ack.png",
+            "sha256": "e52c2ffdd993624a353bb4248f0f12fea76f68b64b7592fcff90279b9edb808f"
+          }
+        ],
+        "state_in": {
+          "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a/slot0-feedback.state",
+          "sha256": "9fe488e5313a117eb7a00396a45cf292647fed741f41b9d087cacea5f4ae6fdd"
+        },
+        "state_out": {
+          "path": "qa/runs/stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a/slot0-complete.state",
+          "sha256": "b79b961daf9b46f5d34ddd9259dee339a1c8a5f90434ec1bec39c05f6fe9497e"
+        },
+        "field": {
+          "field_location": [
+            60,
+            -1,
+            684,
+            409,
+            0
+          ],
+          "textbox_open": false,
+          "script_environments": []
+        },
+        "party_records": [
+          {
+            "slot": 0,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 1,
+            "checksum_valid": true,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_prefix",
+              "split": 0
+            }
+          },
+          {
+            "slot": 2,
+            "checksum_valid": false,
+            "strict_match": true,
+            "box_phase": {
+              "mode": "plain_suffix",
+              "split": 0
+            },
+            "tail_phase": {
+              "mode": "plain_suffix",
+              "split": 30
+            }
+          }
+        ],
+        "party_strict_match": true,
+        "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+        "reserve_and_helper_checks": {
+          "bag_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+          "bag_size": 1952,
+          "new_reserve_sha256": "d4629e0fc684d7ec6d13e44566f02e988c9a87f45d6c6cbfae5bc2f803cb784e",
+          "new_reserve_checks": {
+            "low_guard": true,
+            "metadata": true,
+            "helper_exact": true,
+            "unused_padding_zero": true,
+            "high_guard": true,
+            "tail_zero": true
+          },
+          "old_hm_shop_repel_reserve_sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+          "old_reserve_checks": {
+            "sha256_matches_parent": true,
+            "lower_guard": true,
+            "metadata": true,
+            "hm_canary": true,
+            "shop_canary": true,
+            "upper_guard": true
+          },
+          "arena_high_value": "0x023D6000",
+          "arena_high_ok": true
+        }
+      }
+    ]
+  },
+  "lineage": {
+    "cold_input_state": null,
+    "cancel_and_slot0_share_advanced_state": true,
+    "acknowledgement_branches_follow_their_result_runs": true,
+    "graph": [
+      {
+        "child": "stat-editor-selector-lifecycle-minimal-retail-open-fix6a",
+        "parent": "stat-editor-selector-lifecycle-minimal-retail-cold-fix6a"
+      },
+      {
+        "child": "stat-editor-selector-lifecycle-minimal-retail-advance-fix6a",
+        "parent": "stat-editor-selector-lifecycle-minimal-retail-open-fix6a"
+      },
+      {
+        "child": "stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a",
+        "parent": "stat-editor-selector-lifecycle-minimal-retail-advance-fix6a"
+      },
+      {
+        "child": "stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a",
+        "parent": "stat-editor-selector-lifecycle-minimal-retail-advance-fix6a"
+      },
+      {
+        "child": "stat-editor-selector-lifecycle-minimal-retail-cancel-ack-fix6a",
+        "parent": "stat-editor-selector-lifecycle-minimal-retail-cancel-fix6a"
+      },
+      {
+        "child": "stat-editor-selector-lifecycle-minimal-retail-slot0-ack-fix6a",
+        "parent": "stat-editor-selector-lifecycle-minimal-retail-slot0-fix6a"
+      }
+    ]
+  },
+  "runtime_observations": {
+    "special_result_variable": "VAR_SPECIAL_RESULT (0x800C)",
+    "cancel_before_ack": 255,
+    "slot0_before_ack": 0,
+    "after_ack_textbox_open": false,
+    "after_ack_script_environments": 0,
+    "bag_full_save_array_sha256": "a0ce7f5c51aeb369b344ad515fec932c5538d4513f3f6d0c543a4d79cfe5edc4",
+    "dsv_both_slots_crc_valid": true,
+    "dsv_active_slot": {
+      "active_base": 262144,
+      "active_counter": 9,
+      "active_crc16": 53760,
+      "both_slots_crc_valid": true,
+      "party_offset": 262288
+    },
+    "party_all_records_exact_at_two_byte_cipher_boundaries": true,
+    "checksum_invalid_transition_records": [
+      "cold slot 2",
+      "cancel-ack slot 2",
+      "slot0-ack slot 2"
+    ],
+    "party_match_method": "Exact header/inactive bytes; each active record matched every byte to the saved reference with only 2-byte-aligned plain/encrypted transitions within box and tail segments; no semantic normalization or field exclusion.",
+    "helper_reserve_guards_pass_all_runs": true,
+    "arena_high": "0x023D6000"
+  },
+  "guard_regression": {
+    "path": "night-sprint/qa/hm_fly_surf_fix6a_guard_test.py",
+    "sha256": "0f61f253e867aaa223201e668074526de236863cc3b2bf2ad49d1b4438a77b7f",
+    "tests": 2,
+    "result": "PASS",
+    "executed_by_reviewer": true
+  },
+  "limits": [
+    "Selector cancellation and slot-0 selection only.",
+    "No EV/IV mutation, production UI, or selector save/cold-recovery acceptance.",
+    "Checksum-invalid RAM snapshots are accepted only because every record byte matches the exact saved record at an allowed native segment boundary."
+  ]
+}

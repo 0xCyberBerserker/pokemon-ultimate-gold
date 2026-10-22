@@ -1,0 +1,245 @@
+{
+  "schema": "sacred-gold-item-basegame-static-compare/v1",
+  "status": "STATIC_COMPARE_COMPLETE_NO_GAMEPLAY",
+  "summary_en": "The retail HeartGold ROM and exact Alpha2 FIX6a contain byte-identical event records for the Viridian TM85 gift, Olivine Lighthouse TM87 item ball, and Route 40 TM88 item ball. Their relevant compiled script entries also match. Alpha2 Celadon Department Store stock confirms TM87 for 1500 only in the target data. The listed wild held-item slots match between retail and Alpha2; this does not establish overworld pickup locations.",
+  "summary_es": "La ROM comercial de HeartGold y Alpha2 FIX6a contienen registros de evento idénticos para el regalo de MT85 en Ciudad Verde y las Poké Balls de MT87 en el Faro de Ciudad Olivo y MT88 en la Ruta 40. También coinciden las entradas compiladas de los scripts pertinentes. El inventario de Alpha2 confirma MT87 por 1500 solo en los datos del objetivo. Los espacios de objetos equipados de las especies listadas coinciden entre ambas ROM; esto no acredita ubicaciones de objetos en el mapa.",
+  "inputs": {
+    "retail_rom": {
+      "path": "@HOME@/Games/Sacred-Gold/tools/HeartGold-USA.nds",
+      "sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+      "size_bytes": 134217728
+    },
+    "alpha2_rom": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+      "sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "size_bytes": 127045920
+    },
+    "other_builds_excluded": [
+      "EV/IV editor ROM 99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a was not used as Alpha2 evidence."
+    ]
+  },
+  "method": {
+    "scope": "Read-only comparison of exact retail and Alpha2 ROM data plus local decomp source. No emulator, save, or modified ROM was used.",
+    "event_data": "Reused the existing exact-ROM HM event extractor and its NDS/BLZ/NARC reader. Resolved map tokens from each ROM's mapname.bin, read MapHeader scriptsBank/eventsBank fields, then compared selected raw ObjectEvent records.",
+    "script_data": "Used the existing ndspy-backed HGSS script disassembler and pinned scrcmd.json to decode the relevant bytecode. Selected raw code ranges were compared between ROMs.",
+    "personal_data": "Used ndspy.rom and ndspy.narc through the retail helper's named FNT path a/0/0/2 (file ID 131 in both ROMs). Read item1/item2 as little-endian u16 at offsets 0x0C/0x0E, matching the local retail BASE_STATS structure.",
+    "runtime_tested": false
+  },
+  "rom_tables": {
+    "map_names_path_in_rom": "fielddata/maptable/mapname.bin",
+    "map_names_sha256_both_roms": "553944fa1a316e32dc1f559141d7d3bf630c382a70a6098e0cdf1d1236c7c285",
+    "event_narc_path_in_rom": "a/0/3/2",
+    "retail_event_narc_sha256": "70815852d040ed7831830fbec2f9e9282371ff6cf544260b900b9dcd6049c020",
+    "retail_event_narc_length_bytes": 136784,
+    "alpha2_event_narc_sha256": "a72688a68f2683bba77e6ba1582247c5d3a8ef4c958c817d919601824c639606",
+    "alpha2_event_narc_length_bytes": 143712
+  },
+  "tm_event_comparison": [
+    {
+      "item": { "id": 412, "name_en": "TM85", "name_es": "MT85" },
+      "map": {
+        "token": "T02",
+        "decomp_constant": "MAP_VIRIDIAN",
+        "map_id": 50,
+        "scripts_bank": 741,
+        "script_header_bank": 514,
+        "event_bank": 47,
+        "map_header_sha256_both_roms": "a20e15450c3592c64d32d7a4217cb0b6d34d680a0d4f631008d03b0bb6e7e181",
+        "map_header_raw_hex": "600a0f000000e5020202c401150415042f008bc1010128f6",
+        "event_bank_sha256_both_roms": "8ce2cc71a7c6b38e781f3412e61045ccdc4064db13b8cce2da0fb2fe8f67bc5f"
+      },
+      "event_object": {
+        "decomp_label": "obj_T02_gsbigman",
+        "record_index": 2,
+        "object_id": 2,
+        "model_id": 332,
+        "movement": 2,
+        "event_flag": 0,
+        "script_id": 3,
+        "raw_coordinates_xyz": [1008, 264, 0],
+        "raw_record_sha256_both_roms": "c4c202da7ada57161ad0a08d77601f1fe1f4058b9cd1e885cde93e4a3f4d6cee",
+        "raw_record_hex_both_roms": "02004c010200000000000300010000000000000000000000f003080100000000"
+      },
+      "script": {
+        "member": 741,
+        "decomp_label": "scr_seq_T02_002",
+        "source_object_script_expression": "_EV_scr_seq_T02_002 + 1",
+        "compiled_entry_offset": 264,
+        "compiled_entry_length_bytes": 84,
+        "compiled_entry_sha256_both_roms": "295149d08fd4320affc12358d00d0dc427287a0e99285ce29798f55083f3643c",
+        "whole_member_sha256_both_roms": "c6338cb914c82288a1baf8a51ebcb1c6ec03a67564d7dc8f21b486bd866a79cc",
+        "decoded_effect": "Checks flag 0x12E; if unset, checks space for item 412 x1, calls std_give_item_verbose (2033), then sets flag 0x12E."
+      },
+      "comparison": "The selected event bank, raw event row, map header, and compiled entry match byte-for-byte between retail and Alpha2. The local decomp labels the NPC as Viridian's large man; no Surf/Cut access prerequisite is established by this evidence."
+    },
+    {
+      "item": { "id": 414, "name_en": "TM87", "name_es": "MT87" },
+      "map": {
+        "token": "D27R0105",
+        "decomp_constant": "MAP_OLIVINE_LIGHTHOUSE_4F",
+        "map_id": 223,
+        "scripts_bank": 64,
+        "script_header_bank": 325,
+        "event_bank": 209,
+        "map_header_sha256_both_roms": "8e27499e81aae2475cd401799f97bda57be54e2562fd4724d8408e40b01bef0e",
+        "map_header_raw_hex": "ff2f9f20330040004501030036043604d100d499000384e4",
+        "event_bank_sha256_both_roms": "961f079a47b91800a19e6df97c0b5847a693e5f03e2bfbd03736b1873d49ac6e"
+      },
+      "event_object": {
+        "decomp_label": "obj_D27R0105_monstarball",
+        "record_index": 2,
+        "object_id": 2,
+        "model_id": 87,
+        "event_flag": 1099,
+        "event_flag_hex": "0x44B",
+        "script_id": 7088,
+        "raw_coordinates_xyz": [2, 13, 0],
+        "raw_record_sha256_both_roms": "53d975685f89068cc45c3746cbac94afccee66df92f145699acdee4138fbff21",
+        "raw_record_hex_both_roms": "02005700000000004b04b01b00000000000000000000000002000d0000000000"
+      },
+      "script": {
+        "standard_script_id": 7088,
+        "base_script_id": 7000,
+        "standard_script_bank": 141,
+        "entry_index": 88,
+        "entry_offset": 2786,
+        "entry_length_bytes": 20,
+        "entry_sha256_both_roms": "cfbb3351e40feefedbd3fa1d4c72d716100068daa802bc3164e932cf6a90c8de",
+        "entry_raw_hex_both_roms": "290008809e012900098001001600fa0c00000200",
+        "decoded_effect": "Sets selected item var 0x8008 to 414, quantity var 0x8009 to 1, then jumps to shared item-ball handler entry 255."
+      },
+      "comparison": "The selected map row and item-ball script entry match byte-for-byte. The whole event bank is also identical. Celadon Department Store stock is verified separately for Alpha2 only; retail shop stock was not compared in this batch."
+    },
+    {
+      "item": { "id": 415, "name_en": "TM88", "name_es": "MT88" },
+      "map": {
+        "token": "W40",
+        "decomp_constant": "MAP_ROUTE_40",
+        "map_id": 94,
+        "scripts_bank": 962,
+        "script_header_bank": 731,
+        "event_bank": 91,
+        "map_header_sha256_both_roms": "818eb1dba4d702a5b00e2b2084eb663cdab32d13d58c0525b1dd9d6b17da736c",
+        "map_header_raw_hex": "29070f000000c203db02e8020a040a045b00bcb6000218f6",
+        "event_bank_sha256_retail": "0eef2dea6584f3cedc4e010059e79892f2336eca15b2e239f8ab41c40fd3aec0",
+        "event_bank_length_retail": 340,
+        "event_bank_sha256_alpha2": "262600dcb2afe14b4284b3aea660e95e09c500f93ff807c7fb1d26f97d195fa2",
+        "event_bank_length_alpha2": 436
+      },
+      "event_object": {
+        "decomp_label": "obj_W40_monstarball",
+        "record_index": 6,
+        "object_id": 6,
+        "model_id": 87,
+        "event_flag": 1266,
+        "event_flag_hex": "0x4F2",
+        "script_id": 7091,
+        "raw_coordinates_xyz": [252, 300, 0],
+        "raw_record_sha256_both_roms": "3b3c022f1fcb1f425577bb38050f3c1bd577a8697bd0f7dc4eef877ac65672dd",
+        "raw_record_hex_both_roms": "0600570000000000f204b31b000000000000000000000000fc002c0100000000"
+      },
+      "script": {
+        "standard_script_id": 7091,
+        "base_script_id": 7000,
+        "standard_script_bank": 141,
+        "entry_index": 91,
+        "entry_offset": 2846,
+        "entry_length_bytes": 20,
+        "entry_sha256_both_roms": "6b862ec9ae2fc3f1e268a414989c622cb11e0ef342b9ba421cc0e4fc38ce3f5f",
+        "entry_raw_hex_both_roms": "290008809f012900098001001600be0c00000200",
+        "decoded_effect": "Sets selected item var 0x8008 to 415, quantity var 0x8009 to 1, then jumps to shared item-ball handler entry 255."
+      },
+      "comparison": "The selected object row and item-ball script entry match byte-for-byte. Alpha2 adds other records to event bank 91, so the whole bank is not byte-identical; no change to this TM88 row was observed."
+    }
+  ],
+  "alpha2_tm87_shop_only": {
+    "target_rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "source_json_path": "@HOME@/Games/Sacred-Gold/project/docs/shop-locations-alpha2.json",
+    "source_json_sha256": "f2dfd66a494c262d80af5b2781439b2f7df093dfe4cccdec36573ecca433225d",
+    "shop_id": 20,
+    "inventory_pointer": "0x020FBC68",
+    "item_id": 414,
+    "price": 1500,
+    "item_data_member": 392,
+    "script_member": 791,
+    "script_offset": 46,
+    "map_id": 372,
+    "map_constant": "MAP_CELADON_DEPARTMENT_STORE_3F",
+    "source_status": "verified_target_script",
+    "runtime_purchase": "NOT_TESTED",
+    "retail_shop_stock_compared": false
+  },
+  "wild_held_item_comparison": {
+    "narc_path": "a/0/0/2",
+    "narc_file_id_in_both_roms": 131,
+    "narc_entry_count": 508,
+    "narc_length_bytes": 26468,
+    "retail_narc_sha256": "6e533889d97eee45db41affe61ceec2e05d7e8dac54126adefbb65eb1f664197",
+    "alpha2_narc_sha256": "5f193d2eacddf0ffef9daf7acebd35dcdb21c30f59ab497759c3b7cc335f2d40",
+    "record_layout": {
+      "record_length_bytes": 44,
+      "item1_offset": "0x0C",
+      "item2_offset": "0x0E",
+      "field_type": "little-endian u16",
+      "layout_source": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/struct_defs/personal_narc_structs.h",
+      "retail_reader_source": "@HOME@/Games/Sacred-Gold/night-sprint/engine/verify_drayano_personal.py"
+    },
+    "item_slot_chance_reference": {
+      "source": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/src/pokemon.c",
+      "function": "WildMonSetRandomHeldItem",
+      "conditions": "Wild encounter outside trainer/frontier battles; rates are source-derived, not runtime-tested in this batch.",
+      "normal_encounter_item1_percent": 50,
+      "normal_encounter_item2_percent": 5,
+      "normal_encounter_no_item_percent": 45,
+      "compound_eyes_item1_percent": 60,
+      "compound_eyes_item2_percent": 20,
+      "compound_eyes_no_item_percent": 20
+    },
+    "items": [
+      { "item_id": 87, "item_name": "ITEM_BIG_MUSHROOM", "species_ids": [46, 47], "species_names": ["Paras", "Parasect"], "slot": "item2" },
+      { "item_id": 88, "item_name": "ITEM_PEARL", "species_ids": [90], "species_names": ["Shellder"], "slot": "item1" },
+      { "item_id": 89, "item_name": "ITEM_BIG_PEARL", "species_ids": [90, 316, 366], "species_names": ["Shellder", "Gulpin", "Clamperl"], "slot": "item2" },
+      { "item_id": 90, "item_name": "ITEM_STARDUST", "species_ids": [120], "species_names": ["Staryu"], "slot": "item1" }
+    ],
+    "species_records": [
+      { "species_id": 46, "species_name": "Paras", "retail_entry_sha256": "283070b736f7112529ead3a5de4eaf11134ef2f9f111ab1039a77a9a5f8baaff", "alpha2_entry_sha256": "283070b736f7112529ead3a5de4eaf11134ef2f9f111ab1039a77a9a5f8baaff", "entry_length_bytes": 44, "retail_item1": 86, "retail_item2": 87, "alpha2_item1": 86, "alpha2_item2": 87, "raw_item_bytes_both_roms": "56005700", "full_record_identical": true },
+      { "species_id": 47, "species_name": "Parasect", "retail_entry_sha256": "93f070e6b0c85e6ac76daa4d09868c93c40005e51a654a960b85d5e1ee3ae550", "alpha2_entry_sha256": "414d41c26cace33402852a72d187746891f7c3040b4a175dec06d404f40165bb", "entry_length_bytes": 44, "retail_item1": 86, "retail_item2": 87, "alpha2_item1": 86, "alpha2_item2": 87, "raw_item_bytes_both_roms": "56005700", "full_record_identical": false },
+      { "species_id": 90, "species_name": "Shellder", "retail_entry_sha256": "c3e56e44060294f5ed107b141a89b8dcbddf77175ddfd9e795c409bb158834c0", "alpha2_entry_sha256": "c3e56e44060294f5ed107b141a89b8dcbddf77175ddfd9e795c409bb158834c0", "entry_length_bytes": 44, "retail_item1": 88, "retail_item2": 89, "alpha2_item1": 88, "alpha2_item2": 89, "raw_item_bytes_both_roms": "58005900", "full_record_identical": true },
+      { "species_id": 316, "species_name": "Gulpin", "retail_entry_sha256": "9490647d4e93175ac56e1cb8817d151470956e795f17ad1b95bb4e502ea0d054", "alpha2_entry_sha256": "9490647d4e93175ac56e1cb8817d151470956e795f17ad1b95bb4e502ea0d054", "entry_length_bytes": 44, "retail_item1": 0, "retail_item2": 89, "alpha2_item1": 0, "alpha2_item2": 89, "raw_item_bytes_both_roms": "00005900", "full_record_identical": true },
+      { "species_id": 366, "species_name": "Clamperl", "retail_entry_sha256": "0eac6ead88a66a4ad9cd479553ce49e50c332dc87bf3e69020181f1fa2cfdaa9", "alpha2_entry_sha256": "0eac6ead88a66a4ad9cd479553ce49e50c332dc87bf3e69020181f1fa2cfdaa9", "entry_length_bytes": 44, "retail_item1": 0, "retail_item2": 89, "alpha2_item1": 0, "alpha2_item2": 89, "raw_item_bytes_both_roms": "00005900", "full_record_identical": true },
+      { "species_id": 120, "species_name": "Staryu", "retail_entry_sha256": "6f54e00c95a6049a729acbdafe88bf5b30e546b1a7903e890f2b61be1459b98b", "alpha2_entry_sha256": "6f54e00c95a6049a729acbdafe88bf5b30e546b1a7903e890f2b61be1459b98b", "entry_length_bytes": 44, "retail_item1": 90, "retail_item2": 91, "alpha2_item1": 90, "alpha2_item2": 91, "raw_item_bytes_both_roms": "5a005b00", "full_record_identical": true }
+    ],
+    "interpretation_limit": "These records validate item1/item2 species data and the local decomp's chance table only. They do not identify the maps or encounter tables where the species can be found."
+  },
+  "source_files": [
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/hm_exact_events.py", "sha256": "17ea794f860bf7d9e9f511d4022dbfda8688e1e2720d54ee60e5f72c7fdf6dba" },
+    { "path": "@HOME@/Games/Sacred-Gold/experiments/fairy-speedup/analyze.py", "sha256": "dda02b05f32482881e86cf75d4cd6661d3eae14b098a192eb8aae9811e484245" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/sources/sacred-gold-plus/source/features/borsa/tools/scr_disasm.py", "sha256": "f5b1ba507a3bf21a0a3e5780ed81c38c9f7d79469f020fa9b600a6ea6214317b" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/tools/py_scripts/scrcmd.json", "sha256": "1248d46548280a8f3c9c2d220788a915c03b4dc1951b4f7bb1c6317d07f45061" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/map_header.h", "sha256": "326f080515450519b49bf2b62b3cfba86490a63b305d712cba3d3a4b36ac1074" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/constants/maps.h", "sha256": "9ebf1f2f6110af509b830cc33f271d4b5d257f309212345a6bb4557321634adb" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/constants/items.h", "sha256": "20576a5dc04bd40cb1d212f1dad2de8e0083cf966e9535e3c10baac36cbd7193" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/constants/species.h", "sha256": "a72ce01027d83aabd9ff61dc8f3afbbf43eee30b25c39b6e23ed42c5ac587732" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/constants/flags.h", "sha256": "d92cc7b603b6c539689d5b68e7806363187e16d173ee0d60914db795832f443a" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/constants/std_script.h", "sha256": "e64378af66fa6e2a20d7f326d9a1837459cbc3d5c5c36346c89f870635aa3efb" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/src/script_manager.c", "sha256": "1c4e3149d742076b6bb0da9675bb53541e5f591090d515ac0fc6c0c646a3b6aa" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/047_T02.json", "sha256": "fdf2d6e64bc7f77395a421318f8e0cc14ee2e6f7e49fb2849aea2e9ecdc44847" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/209_D27R0105.json", "sha256": "aa7e0b8f8b51bcd5aab1a4037adf3fa2778aea50c44e16bb50352dda9c654a78" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/091_W40.json", "sha256": "9ac698ef8ef59c1b9e181f7b6fd4f9874b4b63306ffc264ecb66cce43bff2b34" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/script/scr_seq/scr_seq_0741_T02.s", "sha256": "900c65df01f7ec087f63dc05c1a2a3a271ec818f88e513a6fdbe0c752c37aecb" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/script/scr_seq/scr_seq_0141.s", "sha256": "31c2b7ff0d062b748db3b30bbdb85b09b94ddae453a9e4e09cdbc141e7c3d173" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/struct_defs/personal_narc_structs.h", "sha256": "520368854d02e4ca8726c38077f71b6fc7700a5b6437891c279cfd55afe7521c" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/filesystem_files_def.h", "sha256": "f2506f75fd52a8e40209cec4ca07d291cee18cb9036169a05db62aaa3a9df9cd" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/verify_drayano_personal.py", "sha256": "25e615c41eab04b752fdda3992d117fa96877c2d8698b0faf5fdf490103d34a9" },
+    { "path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/src/pokemon.c", "sha256": "d485ada6131981327c19c651fac9734d685a582f273bc990657901614f3e39e5" },
+    { "path": "@HOME@/Games/Sacred-Gold/project/docs/shop-locations-alpha2.json", "sha256": "f2dfd66a494c262d80af5b2781439b2f7df093dfe4cccdec36573ecca433225d" },
+    { "path": "@HOME@/Games/Sacred-Gold/project/tools/build_shop_locations.py", "sha256": "06eeddb634f1456ac8cf77ab5ed6daca39b3ce7d01aac9bbb10f0e6e642354a5" }
+  ],
+  "limitations": [
+    "No gameplay or runtime acquisition was tested.",
+    "TM85's Surf/Cut access requirement is not inferred from the object/script bytes.",
+    "TM87's Celadon stock is target-only evidence; no retail inventory assertion is made.",
+    "Held-item records do not prove a species' encounter maps or exact item-location routes.",
+    "The Alpha2 Parasect full personal record differs from retail, while the compared item1/item2 bytes are identical."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "ultimate-gold-stat-read-source-review/v1",
+  "status": "PASS_HOST_AND_SOURCE_ONLY_DISPATCH_AND_RUNTIME_PENDING",
+  "source_sha256": "3459a1dd273c811a81d3a1584d4b0f86e36e09cd41ec559408622b62f184fe0a",
+  "header_sha256": "b936cea5fb5fd4af40a9a04e87610df290b73d83de06a76372fa1557f335ec0c",
+  "arm_object_sha256": "f288f1834f9944ca1af4a93f12401a44984d0ca8144015e8a881588753b0ac45",
+  "checks": {
+    "host_suite_rerun": "PASS",
+    "explicit_native_header_dependency_added": true,
+    "fixed_variable_ids": ["0x800C", "0x8004", "0x8008"],
+    "invalid_ids_null_alias_rejected_before_party_lookup": true,
+    "cancel_255_skips_party": true,
+    "existing_preview_step1_used_for_target_and_data_validation": true,
+    "at_limit_preview_out_equals_current_verified_in_core_source": true,
+    "read_status_0_and_12_both_have_valid_current_output": true,
+    "other_status_keeps_current_output_65535": true,
+    "no_setter_reset_recalc_or_pid_mutation": true
+  },
+  "limits": [
+    "Proposed opcode 856 is not registered in a ROM.",
+    "The host test uses API stubs and does not establish native encryption, runtime transport or product UI.",
+    "Failed native checksum is rejected through the engine's Egg reporting; no separate checksum result is invented.",
+    "AT_LIMIT is a successful current-value read with a limit diagnostic; consumers must not treat it as empty or cancelled."
+  ]
+}

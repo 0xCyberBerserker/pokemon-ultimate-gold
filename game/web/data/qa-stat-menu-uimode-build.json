@@ -1,0 +1,427 @@
+{
+  "schema": "portable-stat-editor-menu-static-build/v1",
+  "status": "STATIC_BUILD_PASS_RUNTIME_NOT_TESTED",
+  "inputs": {
+    "previous_fadefix_candidate": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-fadefix/portable-stat-editor-menu-fadefix-fix6a.nds",
+      "sha256": "2abb1c8cf87540aad70d3c7c13517bee5a159ef3e38af11a1440030b276317ed"
+    },
+    "previous_fadefix_build": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-fadefix/build.json",
+      "sha256": "7afc8865496ed8fd24de6a3a994e3577cf54115d14f3f110140bf1ed3a92f5b4"
+    },
+    "preserved_025_preimages": {
+      "stat_editor_menu_script.py": "70043238f80b2fd1e74e5824e4af5cf876cfb439d637a67c05bd52b9eee13226",
+      "test_stat_editor_menu_script.py": "7898a57a20ed89d809a8ab6360ebab00ae6cad15cdd7da2b0287ffbcefd25311",
+      "portable_stat_editor_menu_fadefix_build.py": "f973607216fafc8e549904d6c350c45130978078594ea52afb59d981c06a7f00",
+      "build.json": "7afc8865496ed8fd24de6a3a994e3577cf54115d14f3f110140bf1ed3a92f5b4",
+      "portable-stat-editor-menu-fadefix-fix6a.nds": "2abb1c8cf87540aad70d3c7c13517bee5a159ef3e38af11a1440030b276317ed"
+    },
+    "portable_parent": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-kit-launch-probe/portable-kit-launch-probe-fix2.nds",
+      "sha256": "604101b971d182902928b73f3b9717ff26751aed1bc5a933e65b40f85425a79f"
+    },
+    "source_fix6a": {
+      "path": "@HOME@/Games/Sacred-Gold/experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+      "sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+    },
+    "read_source_sha256": "3459a1dd273c811a81d3a1584d4b0f86e36e09cd41ec559408622b62f184fe0a",
+    "read_header_sha256": "b936cea5fb5fd4af40a9a04e87610df290b73d83de06a76372fa1557f335ec0c",
+    "read_review_sha256": "9965626260d4cc7431a5ccce58d55bf5f7e4086e9036bcdf1358e1e53490a0db",
+    "read_object_sha256": "f288f1834f9944ca1af4a93f12401a44984d0ca8144015e8a881588753b0ac45",
+    "menu_generator_sha256": "3b27a630851a72d1e19231aea6d4ffe28be240e92161d96f60218d9e3cc41457",
+    "menu_test_sha256": "ae33b8b080ae41927600caf9ae0c25066b4628fb922914f544d588be16383b3d",
+    "menu_script_sha256": "de457ad35f9ea352091db4de66992fb348e599cd1071f2fd724130180b8e3d94"
+  },
+  "candidate": {
+    "file": "portable-stat-editor-menu-uimode-fix6a.nds",
+    "sha256": "5a61083689668f3efcf46c4821b77b336875af5237a36f9985eb4cc159bd7d44",
+    "size": 127073056
+  },
+  "runtime": "NOT_TESTED",
+  "acceptance": "STATIC_ONLY_NOT_NATIVE_GAMEPLAY_ACCEPTANCE",
+  "arm9": {
+    "count_address": "0x020FAC90",
+    "count_before": 856,
+    "count_after": 857,
+    "table_address": "0x023D5100",
+    "old_entries": 856,
+    "old_entries_byte_exact": true,
+    "new_entry_opcode": 856,
+    "new_entry_thumb_pointer": "0x023D6901",
+    "table_payload_bytes": 3428,
+    "table_high_guard_address": "0x023D5F00",
+    "arena_high_before_after": [
+      "0x023D5000",
+      "0x023D5000"
+    ],
+    "read_handler": {
+      "address": "0x023D6900",
+      "bytes": 416,
+      "sha256": "9297ca29cd0933268d3ed88a7591cc1070fb2e3d00ca7fa00e91d7d30e500e7d",
+      "assigned_end_exclusive": "0x023D6F00",
+      "object_sha256": "f288f1834f9944ca1af4a93f12401a44984d0ca8144015e8a881588753b0ac45",
+      "native_call_addresses": {
+        "GetVarPointer": "0x02040375",
+        "ScriptReadHalfword": "0x0203FE2D",
+        "SaveArray_Party_Get": "0x02074905",
+        "Party_GetMonByIndex": "0x02074645",
+        "GetMonData": "0x0206E541",
+        "StatEditorNative_PreviewIncrement": "0x023D6361"
+      },
+      "undefined_symbols": [
+        "GetMonData",
+        "GetVarPointer",
+        "Party_GetMonByIndex",
+        "SaveArray_Party_Get",
+        "ScriptReadHalfword",
+        "StatEditorNative_PreviewIncrement"
+      ],
+      "no_setter_or_recalc_calls": true
+    },
+    "existing_reserves_preserved": {
+      "helper": "990b3a16b67cac7218458a438b1d2169544b22642b0e946217cc51b43a3b8d92",
+      "preview": "6f3e68671fe0b77025952d3f5d1e9f48359dd831d96b5a2bbf26ca9c4ad9157b",
+      "mutators": "fc65aa142670d5b9ce0b6fc031e6ac493379545dd80c2d1ccf2acedc178e9f2e",
+      "launcher_range": [
+        "0x023D6800",
+        "0x023D68D0"
+      ]
+    },
+    "guards_preserved": true,
+    "changed_arm9_ranges_relative_to_parent": [
+      [
+        1027216,
+        1027216
+      ],
+      [
+        1167808,
+        1167812
+      ],
+      [
+        1167815,
+        1167819
+      ],
+      [
+        1167821,
+        1167827
+      ],
+      [
+        1167829,
+        1167834
+      ],
+      [
+        1167836,
+        1167838
+      ],
+      [
+        1167840,
+        1167840
+      ],
+      [
+        1167842,
+        1167844
+      ],
+      [
+        1167846,
+        1167846
+      ],
+      [
+        1167848,
+        1167852
+      ],
+      [
+        1167854,
+        1167858
+      ],
+      [
+        1167860,
+        1167862
+      ],
+      [
+        1167864,
+        1167877
+      ],
+      [
+        1167879,
+        1167892
+      ],
+      [
+        1167894,
+        1167908
+      ],
+      [
+        1167910,
+        1167912
+      ],
+      [
+        1167914,
+        1167918
+      ],
+      [
+        1167920,
+        1167929
+      ],
+      [
+        1167931,
+        1167933
+      ],
+      [
+        1167935,
+        1167938
+      ],
+      [
+        1167941,
+        1167979
+      ],
+      [
+        1167981,
+        1168007
+      ],
+      [
+        1168009,
+        1168016
+      ],
+      [
+        1168018,
+        1168022
+      ],
+      [
+        1168024,
+        1168027
+      ],
+      [
+        1168029,
+        1168032
+      ],
+      [
+        1168034,
+        1168036
+      ],
+      [
+        1168038,
+        1168040
+      ],
+      [
+        1168042,
+        1168046
+      ],
+      [
+        1168049,
+        1168056
+      ],
+      [
+        1168058,
+        1168063
+      ],
+      [
+        1168065,
+        1168073
+      ],
+      [
+        1168075,
+        1168082
+      ],
+      [
+        1168084,
+        1168088
+      ],
+      [
+        1168090,
+        1168091
+      ],
+      [
+        1168093,
+        1168097
+      ],
+      [
+        1168099,
+        1168103
+      ],
+      [
+        1168105,
+        1168109
+      ],
+      [
+        1168111,
+        1168138
+      ],
+      [
+        1168140,
+        1168153
+      ],
+      [
+        1168156,
+        1168157
+      ],
+      [
+        1168160,
+        1168161
+      ],
+      [
+        1168164,
+        1168176
+      ],
+      [
+        1168180,
+        1168180
+      ],
+      [
+        1168184,
+        1168184
+      ],
+      [
+        1168188,
+        1168188
+      ],
+      [
+        1168192,
+        1168192
+      ],
+      [
+        1168196,
+        1168196
+      ],
+      [
+        1168200,
+        1168200
+      ],
+      [
+        1168204,
+        1168204
+      ],
+      [
+        1168208,
+        1168208
+      ],
+      [
+        1168212,
+        1168212
+      ],
+      [
+        1168216,
+        1168216
+      ],
+      [
+        1168220,
+        1168220
+      ],
+      [
+        1169652,
+        1169652
+      ],
+      [
+        1173280,
+        1173283
+      ]
+    ]
+  },
+  "scripts": {
+    "global_script_id": 2072,
+    "table_entries_before_after": [
+      72,
+      73
+    ],
+    "old_72_destinations_shifted_uniformly_plus4": true,
+    "new_script_bytes": 17594,
+    "new_script_sha256": "de457ad35f9ea352091db4de66992fb348e599cd1071f2fd724130180b8e3d94",
+    "decoded_from_byte_zero": true,
+    "entry_prefix_bytes": 0,
+    "command_count": 2910,
+    "branch_count": 1098,
+    "branches_target_command_boundaries": true,
+    "old_script_body_bytes_exact_after_append": 5873,
+    "forbidden_npc_opcodes": [
+      45,
+      47,
+      104
+    ],
+    "old_npc_member_842_restored_from_source_fix6a": true,
+    "changed_script_narc_members": [
+      3,
+      842
+    ]
+  },
+  "messages": {
+    "global_bank": 40,
+    "old_entry_count": 117,
+    "appended_ids": [
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146
+    ],
+    "old_word_vectors_byte_semantics_preserved": true,
+    "append_only_protocol": "retained all 117 decoded old word vectors; appended 30 encoded catalog vectors; bank encoder may relocate encrypted word payload offsets",
+    "npc_bank_542_restored_from_source_fix6a": true,
+    "changed_text_narc_members": [
+      40,
+      542
+    ]
+  },
+  "item": {
+    "member_515_sha256": "00886a28ba8f8b93c086bc3b1502cd025d8eb072c03d9dc939bf6fe35fe954fc",
+    "item_narc_unchanged_from_reviewed_parent": true
+  },
+  "changed_nds_files": [
+    "a/0/1/2",
+    "a/0/2/7"
+  ],
+  "diff_from_fadefix": {
+    "changed_files": [
+      "a/0/1/2"
+    ],
+    "changed_script_member": 3,
+    "script_global_id": 2072,
+    "script_payload_size_before_after": [
+      17590,
+      17594
+    ],
+    "inserted_opcodes": [
+      {
+        "opcode": 746,
+        "offset": 53
+      },
+      {
+        "opcode": 747,
+        "offset": 17588
+      }
+    ],
+    "all_preexisting_commands_and_control_flow_semantically_exact": true,
+    "branch_offsets_recomputed_for_insertions": true,
+    "selector_cancel_bypasses_uimode_transition": true,
+    "only_changed_script_member": 3,
+    "arm9_and_arm7_byte_exact": true
+  },
+  "limits": [
+    "No ROM/core execution was performed.",
+    "No save or gameplay acceptance is claimed.",
+    "Global text bank append preserves existing decoded message word vectors; physical encrypted payload offsets are reserialized by the local codec."
+  ]
+}

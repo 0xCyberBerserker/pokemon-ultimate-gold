@@ -1,0 +1,100 @@
+{
+  "schema": "stat-editor-reset-persistence-independent-review/v1",
+  "verdict": "PASS_BOUNDED_SAVE_AND_FRESH_PROCESS_COLD_RELOAD",
+  "auditor": {
+    "path": "qa/stat_editor_reset_persistence_acceptance.py",
+    "sha256": "e60b5ebe1f2e475c0583ada9617c519541298f56a41afcb8d2d1c17d73ac7e84",
+    "py_compile": "PASS",
+    "rerun_output_sha256": "29ca758dddbd34fce660dd880f07badff2220b508dd5b2c4ccd4d52b01a12a7e",
+    "rerun_matches_frozen_acceptance_byte_exact": true
+  },
+  "acceptance": {
+    "path": "qa/runs/stat-editor-reset-persist-audit/acceptance.json",
+    "sha256": "29ca758dddbd34fce660dd880f07badff2220b508dd5b2c4ccd4d52b01a12a7e"
+  },
+  "independent_checks": {
+    "pinned_rom_core_runner_and_input_hashes": "PASS",
+    "native_save_and_cold_runs_use_distinct_processes": "PASS",
+    "cold_run_has_no_navigation_state_input": "PASS",
+    "cold_battery_is_byte_exact_saved_battery": "PASS",
+    "saved_main_crc_and_counter_advance_once": "PASS",
+    "party_matches_exact_operation_transform": "PASS",
+    "bag_save_array_and_runtime_bytes_preserved": "PASS",
+    "reserved_ranges_match_candidate_arm9_and_all_ram_phases": "PASS",
+    "negative_failure_guards_are_explicit": "PASS_STATIC_REVIEW"
+  },
+  "reserve_ranges": [
+    {
+      "address": "0x023D5000",
+      "length": 4096,
+      "sha256": "831f8564d0a9f928de0c8fdf3ec6b561d76c3e32690f854a95012035d1da918c",
+      "candidate_arm9_and_parent_save_cold_ram_match": true
+    },
+    {
+      "address": "0x023D6000",
+      "length": 4096,
+      "sha256": "dd1864226b12c851477324aedab8cae1b3a6bd493920c7d56987882735169b2c",
+      "candidate_arm9_and_parent_save_cold_ram_match": true
+    },
+    {
+      "address": "0x023D7000",
+      "length": 4096,
+      "sha256": "e7a0ead44df4b1d48081d1208adba7ed267b86f172a39b1674e96ef71f732960",
+      "candidate_arm9_and_parent_save_cold_ram_match": true
+    }
+  ],
+  "bounded_operation_results": [
+    {
+      "operation": "ResetEV",
+      "candidate_rom_sha256": "5ec30de05b29e817b766d37be4cc7fbe2dded9e555259da7ca74539e4fb33e87",
+      "source_dsv_sha256": "e4767fc950bd991f1889f118b03e180c4f999d27432b6a632dd5bac7f9690d42",
+      "saved_and_cold_dsv_sha256": "5af1836e426ab360d7f8c3a350c871994a681ba72fef1c13464cf528bbad2edf",
+      "main_counter": "9_to_10",
+      "party_result": "Clefairy EV [1,2,3,1,2,3] to [0,0,0,0,0,0]; exact expected transformed party"
+    },
+    {
+      "operation": "ResetIV",
+      "candidate_rom_sha256": "ecf95cbd0f7d10158c1bfc4d089b4bf7da96b5f315a47d9bcec5791578af0615",
+      "source_dsv_sha256": "aa0c3b947fe1a679da6d17c5be42863a905ba89f793425714ba7be90df4a6087",
+      "saved_and_cold_dsv_sha256": "b4cce8f7f61e588c679a88b7fb7bba347a5233f0c7b35bb862dbae77fde1e673",
+      "main_counter": "9_to_10",
+      "party_result": "Clefairy IV [15,3,10,31,21,2] to zero; record recalculated from exact candidate personal data and PID"
+    }
+  ],
+  "negative_guards": [
+    "Pinned ROM, runner, core, source DSV, input script, RAM, output profile, and freeze-sidecar hash mismatches raise before acceptance.",
+    "A cold run with a navigation-state input, repeated input schedule, unexpected event sequence, or unexpected frame count is rejected.",
+    "A DSV size/MAIN CRC/layout mismatch, non-advancing save counter, mismatching saved/cold MAIN, party transform mismatch, Bag mutation, or reserve-byte change is rejected.",
+    "Negative checks used temporary copies or in-memory mutations; frozen evidence was not modified."
+  ],
+  "negative_tests_executed": [
+    {
+      "case": "cold run supplied a navigation state",
+      "method": "Temporary copied cold-run folder; result.json was modified and its copied sidecar result hash updated so validation reached the cold-state guard.",
+      "result": "REJECTED",
+      "error": "cold process unexpectedly used a navigation state",
+      "original_evidence_modified": false
+    },
+    {
+      "case": "active Party byte changed outside accepted cipher boundary",
+      "method": "Passed a temporary in-memory Party array with one changed byte to the exact-boundary comparator.",
+      "result": "REJECTED",
+      "error": "party slot 0 differs beyond exact native cipher boundary",
+      "original_evidence_modified": false
+    },
+    {
+      "case": "cold DSV differs from native-save DSV",
+      "method": "Flipped one byte in a temporary in-memory cold DSV and exercised the auditor saved/cold SHA equality guard.",
+      "result": "REJECTED",
+      "error": "ResetEV cold DSV differs from saved DSV",
+      "original_evidence_modified": false
+    }
+  ],
+  "limits": [
+    "The reset count is not proven because zeroed values are idempotent.",
+    "This does not test generic runner battery_save_load support; it verifies the frozen DSV and a fresh process with navigation_state_in null.",
+    "Some runtime party snapshots include a checksum-invalid in-progress cipher boundary; the auditor accepts only exact native two-byte boundary forms. Saved DSV party records are checksummed and exactly match the deterministic expected transformation.",
+    "Final screenshots at exclusive frame bounds do not exist; no claims use them. ScriptContext is unavailable at the clean field checkpoint because TaskManager is zero.",
+    "Unmapped DSV changes outside the exact party and Bag checks remain unattributed. Scope is one tested Clefairy per operation."
+  ]
+}

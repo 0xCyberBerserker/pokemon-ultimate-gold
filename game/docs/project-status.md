@@ -1,0 +1,115 @@
+# Project status / Estado del proyecto
+
+## English
+
+This page separates the downloadable build from isolated prototypes. Updated on 22 October 2026. A feature appearing in the wiki does not mean that it is already included in the patch download.
+
+The [local Alpha 2 activation record](qa-alpha2-activation.json) records 44 passing automated tests and four browser QA flows, with the retained data counts and build-specific limits. Nothing has been published to GitHub Pages.
+
+### Verified and available
+
+- **Alpha 1:** native TM Refill and the existing Sacred Gold Plus base. The patch manifest identifies the exact input and output hashes.
+- **Alpha 2 — experimental, default:** exact fix6a combined build with Rocket kit, evolution-shop stock and owned-HM actions. All eight HM actions have representative native evidence below. Both downloads passed browser SHA-256 verification, including Alpha 2 through the integrated wiki page; this does not certify full gameplay. Wiki and cheat-catalog target hashes match Alpha 2. The wiki preserves 90 journey stages, 639 ordered trainers and 150 historical acquisition notes, plus 208 exact stock/location rows. Alpha 1 remains selectable. See [browser QA](qa-alpha2-browser.json).
+- **Integrated patcher:** open the Patcher section from the site menu. Patching stays in your browser. A real download from the integrated page matches the manifest; the older standalone link still works.
+- **Wiki:** trainer portraits and recommended journey groups, expandable team panels, IV/EV bars, Normal/Plus selection, standard ability slots, type badges, and the searchable cheat catalogue. Unconfirmed trainer order and untested codes remain labeled.
+- **Battle Tower:** Alpha 2 reached the native entrance, Single registration and first active battle on a disposable hub-entry profile. The earlier post-registration battery snapshot was overwritten; comparisons requiring it are explicitly excluded. A separate continuation documents the lobby return and save/cold-reload checks. Normal story access, other facilities, wins and rewards remain unaccepted. See [Battle Frontier evidence](battle-frontier.md).
+
+### Tested separately, awaiting integration
+
+The Rocket convenience kit passed 288 assertions in its isolated candidate. Its report retains the limitations of older test records. It is not included in the Alpha 1 download yet. See [the Rocket kit](cheat-kit.md).
+
+Fix5 now has native evidence for Party Healer, reusable Rare Candy and Oran Berry, plus Moon Stone and Covenant Orb purchases with native save/cold recovery. The Orb purchase changed quantity 1→2 and deducted 3,500 while preserving other inventory and party data. The [combined QA report](combined-kit-shop-qa.md) contains **197 passing assertions**, including historical evidence from earlier builds; each run retains its own ROM hash and scope.
+
+### In testing
+
+**Alpha 2 Rocket gift:** exact-target native acceptance and independent review confirm nine intended gifts, with the marker last and no unrelated Bag changes. A walking friendship increment is explicitly accounted for. Later independently reviewed evidence adds native Save and fresh-process recovery of the kit. Decline and full-bag behavior remain unaccepted. See [gift QA and location capture](qa-alpha2-gift.md).
+
+**Alpha 2 evolution shop:** the exact fix6a target passed one native Moon Stone and one Covenant Orb purchase, exact prices, inventory/party/guard preservation, native saving and state-free cold reload. Root regenerated the audit from all 22 runs and reviewed purchase screenshots. The wiki includes the Goldenrod Department Store 2F location image. See [current shop QA](alpha2-shop-qa.md); other purchases and normal story access remain untested.
+
+**Reusable Repels:** experimental fix6a passed all three Repels with native durations, Max Repel consumption without the kit marker, native save/cold recovery and reuse after accelerated expiry. These bounded tests do not certify full gameplay or change the Alpha 1 download. See [Repel evidence and limits](repel-reuse.md).
+
+The same fix6a passed separate [Candy and Berry regression checks](kit-regression-fix6a.md): Clefairy gained one level while Rare Candy stayed at 20; Oran Berry restored 10 HP while staying at 1. Other Pokémon, the full canonical Bag and the feature reserve stayed unchanged. Independent review confirmed the evidence; these two item-use checks do not add a save/cold claim.
+
+**Strength:** fix6a activated the native action with no HM known and moved a real boulder one tile. Independent review confirmed the exact build, preserved native object, unchanged inventory and reserve. Positioning was synthetic; post-push save/cold persistence and normal story access remain untested. See [Strength QA and capture](hm-strength-fix6a.md).
+
+**Cut:** fix6a removed a real Route 8 tree through the native prompt without learned HMs. Independent review confirmed party, Bag and reserve preservation. Adjacent positioning used a copied native save; post-action save/cold persistence remains untested. See [Cut QA and capture](hm-cut-fix6a.md).
+
+**Whirlpool:** fix6a crossed a real Route 41 whirlpool through the native prompt, without learned HMs or directional inputs. Independent review confirmed the full crossing and unchanged party, Bag and reserve. Post-action save/cold persistence remains untested. See [Whirlpool QA and captures](hm-whirlpool-fix6a.md).
+
+**Waterfall:** fix6a completed a native Tohjo Falls ascent without learned HMs or directional inputs. Independent review confirmed the position/height transition and preserved party, Bag and reserve. Post-action save/cold persistence remains untested. See [Waterfall QA and captures](hm-waterfall-fix6a.md).
+
+**Rock Climb:** a separate fix6a walking-state run passed native activation and ascent. Independent review confirmed state 0 throughout, the height/position transition and preserved party, Bag and reserve; the prior Surf-state fixture is excluded. Post-climb save/cold persistence remains untested. See [on-foot Rock Climb QA](hm-rock-climb-walk-fix6a.md).
+
+**Combined fix6a:** Fly/Surf, shore return and native save/fresh-process reload now passed on the same hash as the other six HM cases. The two walking-friendship increments were checked against the native step counter; all other party data, Bag, badges and immutable reserve bytes were preserved. See [combined Fly/Surf evidence](hm-fly-surf-fix6a.md). Full story and alternate HM sites remain outside this acceptance.
+
+**Rock Smash:** fix6a displayed the native prompt and move-use message, then removed the real rock. Independent review confirmed that the team knew no HMs and matched the actual saved records, including a snapshot interrupted during native decryption. Bag and reserve stayed unchanged. See [Rock Smash QA and capture](rock-smash-fix6a.md). The [per-HM table](hm-field-qol.md) lists current coverage and pending actions.
+
+The fix5 layout revision passed independent ROM read-back and cold-start menu navigation: Strength and Cancel are no longer clipped. Separate [native-action checks](qa-owned-hm-actions-fix5.json) passed Fly, Surf, shore return and native saving with two fresh-process reloads. That report certifies only the tested actions; full gameplay acceptance is still pending. See [fix5 menu QA](qa-menu-fix5.json).
+
+The earlier fix4 owned-HM prototype passed eight independent menu fixtures, including an Egg-only party. Native Fly and Surf were exercised with Clefairy knowing neither move; Surf entered water, returned to shore and triggered a normal wild encounter on a separate route. Native saving/cold recovery preserved inventory, party, badges and location with no active codes or emulator-state input. See [the historical native-action report](qa-owned-hm-actions.json) and [the menu matrix](qa-owned-hm-matrix-fix4.json). Later evidence is listed above; complete combined-build acceptance remains pending. These tests do not upgrade the Alpha 1 download.
+
+The combined prototype includes the Rocket kit, additional evolution-item shop stock, and owned-HM actions. The shop/kit candidate passed **89 purchase and cold-reload checks**: Moon Stone and Covenant Orb purchases increased only the intended quantities, deducted 2,100 and 3,500 respectively, and survived native saving and a fresh process without emulator-state input. No codes were active during purchase, saving or recovery. See [the shop QA report](qa-evolution-shop.json). The combined HM build remains in testing. Synthetic positioning does not prove normal story access or every evolution.
+
+### Researched, not implemented
+
+**Native editor QA:** portable candidate `99810da…0684a` passes independently reviewed HP IV +1, HP EV +4 and separate EV/IV zero resets, including No/Yes, field return, exact data preservation and native Save/fresh cold persistence. IV +5/Repeat and a separate REGISTER-menu correction are in progress. Other statistics/steps, limits, party↔PC, nature control and release integration remain pending. See [exact candidates, evidence and limits](stat-editor-qa.md).
+
+**Selector integration:** an isolated candidate now passes cancel/slot-0 selection and visible field return, with independent review of seven runs, twenty captures and strict party/Bag/save integrity. The [native editor QA guide](stat-editor-qa.md) shows both-screen menu captures and the field return. This is not the final portable editor or an Alpha 2 feature.
+
+The [EV/IV editor core](ev-iv-kit-feasibility.md) has host-tested C code for staged previews, bounds and zero resets. A separate QA-only native probe changed Clefairy's HP IV from 15 to 31, recalculated HP from 22 to 23, and retained the result after native save and fresh-process reload. PID and the other party slots were preserved. This proves one native edit, not the production menu, resets, every stat or PC editing. Nature overrides remain a study. The [Kris study](kris-feasibility.md) identifies required assets and compatibility gaps. The [future PWT study](world-tournament-feasibility.md) evaluates an HGSS-native tournament and reuse conditions; no licensed drop-in module was found in the bounded review. None of these features has been added to the downloadable ROM.
+
+## Español
+
+Esta página distingue la versión descargable de los prototipos aislados. Actualizada el 22 de octubre de 2026. Que una función aparezca en la wiki no significa que ya esté incluida en el parche descargable.
+
+El [registro de activación local de alfa 2](qa-alpha2-activation.json) recoge 44 pruebas automáticas superadas y cuatro flujos QA de navegador, con los datos conservados y los límites de cada versión. No se ha publicado nada en GitHub Pages.
+
+### Verificado y disponible
+
+- **Alfa 1:** recarga nativa de MT y la base existente de Sacred Gold Plus. El manifiesto identifica los hashes exactos de entrada y salida.
+- **Alfa 2 — experimental, predeterminada:** combinado fix6a exacto con kit Rocket, inventario evolutivo y acciones de MO. Las ocho MO tienen evidencia nativa representativa más abajo. Ambas descargas pasaron la verificación SHA-256 del navegador, incluida alfa 2 desde la wiki integrada; esto no certifica el juego completo. Wiki y catálogo de trucos apuntan al hash de alfa 2. Se conservan 90 etapas, 639 entrenadores ordenados y 150 notas históricas de adquisición, además de 208 filas exactas de stock/localización. Alfa 1 sigue seleccionable. Consulta [QA del navegador](qa-alpha2-browser.json).
+- **Parcheador integrado:** abre Parcheador desde el menú de la web. El parcheo se ejecuta en tu navegador. Una descarga real desde la página integrada coincide con el manifiesto; el enlace independiente anterior también funciona.
+- **Wiki:** retratos y recorrido recomendado de entrenadores, equipos desplegables, barras de IV/EV, selector Normal/Plus, huecos de habilidades estándar, chapas de tipos y catálogo de trucos con buscador. El orden pendiente y los códigos sin probar conservan sus etiquetas.
+- **Battle Tower (Torre Batalla):** Alpha 2 alcanzó la entrada nativa, el registro Single y el primer combate en una copia desechable situada en el vestíbulo. La partida histórica posterior al registro se sobrescribió; quedan excluidas las comparaciones que la necesitan. Una continuación independiente documenta la vuelta al vestíbulo y las comprobaciones de guardado/recarga en frío. Siguen sin aceptarse el acceso por historia normal, otras instalaciones, victorias y premios. Consulta [la evidencia de Battle Frontier](battle-frontier.md).
+
+### Probado por separado, pendiente de integrar
+
+El kit Rocket de conveniencia superó 288 aserciones en su candidato aislado. El informe conserva las limitaciones de los registros antiguos. Todavía no forma parte de la descarga alfa 1. Consulta [el kit Rocket](cheat-kit.md).
+
+Fix5 ya tiene evidencias nativas de Party Healer (curador del equipo), Rare Candy (Caramelo Raro) reutilizable y Oran Berry (Baya Aranja), además de compras de Moon Stone (Piedra Lunar) y Covenant Orb (Orbe Pacto) con guardado/recarga nativa. La compra del Orbe aumentó su cantidad de 1 a 2 y descontó 3.500, conservando el resto del inventario y el equipo. El [informe combinado](combined-kit-shop-qa.md) reúne **197 aserciones superadas**, incluidas evidencias históricas de builds anteriores; cada ejecución conserva su hash de ROM y alcance.
+
+### En pruebas
+
+**Regalo Rocket de alfa 2:** la aceptación nativa del hash exacto y la revisión independiente confirman los nueve regalos previstos, el marcador al final y ningún cambio de Bolsa ajeno a ellos. Se registra expresamente un incremento de amistad al caminar. Otra evidencia posterior, revisada independientemente, añade guardado nativo y recuperación del kit en un proceso nuevo. Faltan aceptación del rechazo y bolsa llena. Consulta [QA y captura de localización](qa-alpha2-gift.md).
+
+**Tienda evolutiva de alfa 2:** el hash fix6a exacto superó una compra nativa de Moon Stone (Piedra Lunar) y otra de Covenant Orb (Orbe Pacto), precios exactos, conservación de inventario/equipo/guardas, guardado y recarga en frío sin estado del emulador. Root regeneró la auditoría desde las 22 ejecuciones y revisó las capturas de compra. La wiki incluye la localización de Goldenrod Department Store (Centro Comercial de Ciudad Trigal), 2F. Consulta [QA actual](alpha2-shop-qa.md); faltan otras compras y el acceso normal por historia.
+
+**Repelentes reutilizables:** la fix6a experimental superó los tres repelentes con sus duraciones nativas, el consumo de Max Repel sin marcador del kit, guardado/recarga en frío y reutilización tras una caducidad acelerada. Estas pruebas acotadas no certifican el juego completo ni cambian la descarga Alfa 1. Consulta [evidencia y límites](repel-reuse.md).
+
+La misma fix6a superó [regresiones separadas de caramelos y bayas](kit-regression-fix6a.md): Clefairy ganó un nivel y Rare Candy conservó cantidad 20; Oran Berry recuperó 10 PS y conservó cantidad 1. El resto del equipo, la Bolsa canónica completa y la reserva de funciones quedaron intactos. La revisión independiente confirmó la evidencia; estos dos usos no añaden una prueba de guardado/recarga.
+
+**Strength (Fuerza):** fix6a activó la acción nativa sin ninguna MO conocida y desplazó una roca real una casilla. La revisión independiente confirmó el build exacto, el objeto nativo conservado y el inventario/reserva intactos. La posición era sintética; faltan la persistencia del empuje tras guardar/recargar y el acceso normal por historia. Consulta [QA y captura de Fuerza](hm-strength-fix6a.md).
+
+**Cut (Corte):** fix6a eliminó un árbol real de Route 8 (Ruta 8) con el diálogo nativo y sin MO aprendidas. La revisión independiente confirmó equipo, Bolsa y reserva intactos. La posición adyacente usó una copia del guardado nativo; falta guardar/recargar después de la acción. Consulta [QA y captura de Corte](hm-cut-fix6a.md).
+
+**Whirlpool (Torbellino):** fix6a cruzó un remolino real de Route 41 (Ruta 41) con el diálogo nativo, sin MO aprendidas ni entradas direccionales. La revisión independiente confirmó el cruce completo y equipo, Bolsa y reserva intactos. Falta guardar/recargar después de la acción. Consulta [QA y capturas de Torbellino](hm-whirlpool-fix6a.md).
+
+**Waterfall (Cascada):** fix6a completó el ascenso nativo en Tohjo Falls (Cataratas Tohjo) sin MO aprendidas ni entradas direccionales. La revisión independiente confirmó el cambio de posición/altura y equipo, Bolsa y reserva intactos. Falta guardar/recargar después. Consulta [QA y capturas de Cascada](hm-waterfall-fix6a.md).
+
+**Rock Climb (Treparrocas):** una prueba separada de fix6a a pie superó activación y ascenso nativos. La revisión independiente confirmó estado 0 durante toda la acción, cambio de altura/posición y equipo, Bolsa y reserva intactos; se excluye el intento anterior con estado Surf. Falta guardar/recargar después. Consulta [QA de Treparrocas a pie](hm-rock-climb-walk-fix6a.md).
+
+**Combinado fix6a:** Vuelo/Surf, vuelta a tierra y guardado/recarga en un proceso nuevo ya pasan en el mismo hash que los otros seis casos de MO. Se contrastaron dos incrementos de amistad por caminar con el contador nativo; se conservaron el resto de datos del equipo, Bolsa, medallas y bytes inmutables de la reserva. Consulta [evidencia de Vuelo/Surf del combinado](hm-fly-surf-fix6a.md). No se acepta con ello la historia completa ni otras ubicaciones de MO.
+
+**Rock Smash (Golpe Roca):** fix6a mostró el diálogo nativo y el mensaje de uso, y eliminó la roca real. La revisión independiente confirmó que el equipo no conocía MO y coincidía con los registros guardados, incluida una muestra interrumpida durante el descifrado nativo. Bolsa y reserva quedaron intactas. Consulta [QA y captura de Golpe Roca](rock-smash-fix6a.md). La [tabla por MO](hm-field-qol.md) recoge la cobertura actual y las acciones pendientes.
+
+La revisión de maquetación fix5 superó la lectura independiente de ROM y la navegación del menú desde un arranque en frío: Strength y Cancel ya no aparecen recortados. Las [pruebas nativas separadas](qa-owned-hm-actions-fix5.json) superaron Fly (Vuelo), Surf, regreso a tierra y guardado nativo con dos recargas en procesos nuevos. Ese informe solo certifica las acciones probadas; falta la aceptación del juego completo. Consulta [el QA del menú fix5](qa-menu-fix5.json).
+
+El prototipo anterior de MO, fix4, superó ocho casos independientes de menú, incluido un equipo formado solo por un huevo. Se probaron Fly (Vuelo) y Surf nativos con Clefairy sin conocer ninguno de ellos; Surf entró en el agua, volvió a tierra y activó un encuentro salvaje normal en otro recorrido. El guardado/recuperación en frío conservó inventario, equipo, medallas y ubicación sin códigos activos ni estado del emulador de entrada. Consulta [el informe histórico de acciones nativas](qa-owned-hm-actions.json) y [la matriz de menús](qa-owned-hm-matrix-fix4.json). Las evidencias posteriores aparecen arriba; falta la aceptación completa del combinado. Estas pruebas no actualizan la descarga Alfa 1.
+
+El prototipo combinado incluye el kit Rocket, más objetos evolutivos en tiendas y acciones de MO sin enseñar movimientos. El candidato de tiendas y kit superó **89 comprobaciones de compra y recarga desde batería**: las compras de Moon Stone (Piedra Lunar) y Covenant Orb (Orbe Pacto) aumentaron solo las cantidades previstas, descontaron 2.100 y 3.500 respectivamente y sobrevivieron al guardado nativo y a un proceso nuevo sin cargar un estado del emulador. No había códigos activos durante la compra, el guardado ni la recuperación. Consulta [el informe de tiendas](qa-evolution-shop.json). El build combinado con MO sigue en pruebas. El posicionamiento sintético no demuestra el acceso normal por historia ni todas las evoluciones.
+
+### Investigado, sin implementar
+
+**QA nativa del editor:** la candidata portátil `99810da…0684a` supera revisión independiente de IV de PS +1, EV de PS +4 y reinicios EV/IV a cero separados, incluidos No/Sí, vuelta al campo, conservación exacta de datos y persistencia tras guardado nativo/arranque en frío. IV +5/Repeat y una corrección separada del menú REGISTER están en curso. Faltan otras estadísticas/pasos, límites, equipo↔PC, naturalezas e integración en la descarga. Consulta las [candidatas exactas, evidencias y límites](stat-editor-qa.md).
+
+El [núcleo del editor EV/IV](ev-iv-kit-feasibility.md) tiene pruebas host de previsualización por etapas, límites y reinicios a cero. Un prototipo nativo separado, exclusivo de QA, cambió el IV de PS de Clefairy de 15 a 31, recalculó sus PS de 22 a 23 y conservó el resultado tras guardar y recargar en un proceso nuevo. Se conservaron PID y los demás Pokémon del equipo. Esto demuestra una edición nativa, no el menú final, reinicios, todas las estadísticas ni edición del PC. El cambio de naturaleza sigue en estudio. El [estudio de Kris](kris-feasibility.md) identifica los recursos necesarios y las incompatibilidades pendientes. El [estudio del futuro PWT](world-tournament-feasibility.md) evalúa un torneo nativo de HGSS y las condiciones de reutilización; no se encontró un módulo instalable con licencia verificada en la revisión acotada. Ninguna de estas funciones se ha añadido a la ROM descargable.

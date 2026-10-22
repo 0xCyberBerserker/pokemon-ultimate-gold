@@ -1,0 +1,80 @@
+{
+  "schema": "portable-stat-editor-family-menu-prerequisite-diagnosis/v1",
+  "scope": "Offline read-only inspection of the already captured slot0 state; no emulator, ROM, or RAM writes.",
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu-fadefix/portable-stat-editor-menu-fadefix-fix6a.nds",
+    "sha256": "2abb1c8cf87540aad70d3c7c13517bee5a159ef3e38af11a1440030b276317ed",
+    "expected_sha256": "2abb1c8cf87540aad70d3c7c13517bee5a159ef3e38af11a1440030b276317ed"
+  },
+  "capture": {
+    "ram_path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/system_ram.bin",
+    "ram_sha256": "362b121e01873f674786bd8b37f1a53c4495abc25e8be7421e30512550dde7f8",
+    "state_path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/slot0.state",
+    "state_sha256": "1cc3d9a20a5462779336d97667ad2ee4fcb23e37220c83c30500f42dfb25b770",
+    "screenshot_path": "qa/runs/portable-stat-editor-menu-fadefix-slot0/family_menu.png",
+    "screenshot_sha256": "a60bfe3bf4d383252eb9b397811f7b720072dc2d7a64dc8f6ac50f960b7f094f"
+  },
+  "runtime_object": {
+    "field_system": "0x022A0258",
+    "field_system_plus_0xD8": "0x022A0330",
+    "sys_task_pointer": "0x023BCBD8",
+    "sys_task_data_field_address": "0x023BCBE8",
+    "sys_task_data_pointer": "0x02356C40",
+    "first_two_data_bytes": "00 01",
+    "mode_address": "0x02356C40",
+    "mode_byte": 0,
+    "state_address": "0x02356C41",
+    "state_byte": 1,
+    "expected_mode": 3,
+    "expected_state": 1,
+    "mode_matches_prerequisite": false,
+    "state_matches_prerequisite": true
+  },
+  "source_contract": {
+    "sys_task_layout": {
+      "path": "engine/upstream/pokeheartgold/include/sys_task.h",
+      "lines": "10-18",
+      "data_field_offset": "0x10"
+    },
+    "sys_task_get_data": {
+      "path": "engine/upstream/pokeheartgold/src/sys_task.c",
+      "lines": "160-162",
+      "returns": "task->data"
+    },
+    "mode_state_getters": {
+      "path": "engine/upstream/pokeheartgold/asm/overlay_01_021F6830.s",
+      "lines": "419-437",
+      "ov01_021F6B00": "ldrb from data+0",
+      "ov01_021F6B10": "ldrb from data+1"
+    },
+    "touchscreen_hide_lifecycle": {
+      "path": "engine/upstream/pokeheartgold/src/scrcmd_c.c",
+      "lines": "4932-4952",
+      "sets_mode": 3,
+      "waits_for_state": 1
+    },
+    "menu_generator": {
+      "path": "qa/stat_editor_menu_script.py",
+      "sha256": "70043238f80b2fd1e74e5824e4af5cf876cfb439d637a67c05bd52b9eee13226",
+      "lines": "276-297",
+      "global_script_id": 2072,
+      "script_sha256": "0653b9fd24536f704c9b3665345a43c48085dad1df5ae45442b6e866e9f53207",
+      "emits_touchscreen_menu_hide_opcode_746_before_menu_init": false
+    }
+  },
+  "diagnosis": {
+    "status": "PREREQUISITE_MISMATCH_CONFIRMED",
+    "observation": "The slot0 chain reached MenuExec and is waiting on 0x800C=0xEEEE, but the retail touchscreen-menu mode getter returns 0 rather than the required 3; state getter returns required 1.",
+    "cause_supported_by_evidence": "The generated family-menu path omits TouchscreenMenuHide (opcode 746), whose retail lifecycle sets mode 3 and waits until state 1 before further touchscreen menus.",
+    "limitation": "This identifies a concrete missing prerequisite consistent with the invisible family menu; it does not prove that adding opcode 746 alone completes rendering."
+  },
+  "prior_menu_wait": {
+    "script_id": 2072,
+    "script_context_mode": 2,
+    "native_callback": "0x020478D1",
+    "data0": "0x0000800C",
+    "slot_scratch_8000": 0,
+    "menu_result_800C": "0xEEEE"
+  },
+  "writes_or_emulation": false
+}

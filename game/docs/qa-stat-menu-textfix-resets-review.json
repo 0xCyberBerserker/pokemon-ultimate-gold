@@ -1,0 +1,116 @@
+{
+  "schema": "portable-stat-editor-reset-ev-iv-independent-review/v1",
+  "result": "PASS_BOUNDED_RESET_EV_IV_SAVE_COLD",
+  "scope": "Independent offline review of the frozen Reset EV and Reset IV native reports and their referenced run evidence. No core session, ROM edit, or new emulator run was used.",
+  "artifacts": {
+    "candidate": {
+      "rom_sha256": "99810da8497d6f0ac4ac65693c276f11b232f795d1e18d82f7d607ae32c0684a",
+      "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+      "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+    },
+    "reset_ev": {
+      "auditor": {
+        "path": "qa/portable_stat_editor_menu_textfix_reset_ev_acceptance.py",
+        "sha256": "d0bfcee95d2e4906707c7af597b51a165593f2639466b4715bd04a7b362f5a7f"
+      },
+      "report": {
+        "path": "qa/runs/portable-stat-editor-menu-textfix-ev4-reset-report/acceptance.json",
+        "sha256": "67fb29eb16d6331aecd8383d47a5931cf66e680ffcc5b6c1a03db787e5070fc4",
+        "status": "PASS_BOUNDED_RESET_EV_NO_YES_SAVE_COLD"
+      },
+      "report_md_sha256": "3c08f71311301f9f0d240441fdbfcd9d897195476dc93d368a9bfdf9d6bb6d79",
+      "source_dsv_sha256": "7fb650a18263ed325d7984f1f984a567999d258ab812ac0c4909923a96b4164c",
+      "saved_and_cold_dsv_sha256": "56fdabaf3bd29ed31811d1040ce4364cff9aecb8df32855cebc16499736dcaf9"
+    },
+    "reset_iv": {
+      "auditor": {
+        "path": "qa/stat_editor_reset_iv_textfix_native_acceptance.py",
+        "sha256": "6400d0b0ff8be78b0c1be3c9b086845bcf08c50eae4c689d53350a4f24a68201"
+      },
+      "report": {
+        "path": "qa/runs/portable-stat-editor-reset-iv-textfix-native-acceptance/acceptance.json",
+        "sha256": "cf3a2791ad48a8e43cb1e4db0fbee219c1b0599288bc68793617b821eb89bd34",
+        "status": "VERIFIED_BOUNDED"
+      },
+      "report_md": {
+        "path": "qa/runs/portable-stat-editor-reset-iv-textfix-native-acceptance/report.md",
+        "sha256": "784b94d36a5164113843d188d1b63044cf47941fa747ea35121adb4da29c6b68"
+      },
+      "source_dsv_sha256": "610e0cd5af9357e0898955a6d5eb2c6b87bfcbc3d5a2bd79671593d5b6e14cbf",
+      "saved_and_cold_dsv_sha256": "b18f20da55081574e11c69bf7d74d2ac96c65911e66aecd02bf83dd1038974db",
+      "personal_narc_sha256": "9bc883e846af6cc0810251c8ce05663ceadacac0f47dd83a24a93fa0cea75392",
+      "clefairy_entry_sha256": "26be90f8cc7d05a63c384d94cb1d45f94025fd76831a7109a07136bee79eeefb"
+    }
+  },
+  "independent_checks": {
+    "reset_ev": {
+      "checkpoint_count": 13,
+      "branch_no_and_exit_party_unchanged": true,
+      "yes_exactly_six_evs_zero": true,
+      "ivs_pid_other_party_and_inactive_bytes_preserved": true,
+      "bag_and_key_item_118_preserved": true,
+      "three_reserve_regions_equal_candidate_rom": true,
+      "native_save_counter_crc": {
+        "source": [11, 18636],
+        "saved": [12, 29288]
+      },
+      "cold_reload": {
+        "frames": 5500,
+        "navigation_state_in": null,
+        "cheats": [],
+        "same_saved_dsv_and_zero_evs": true
+      },
+      "dsv_changed_bytes_and_spans": [31, 19]
+    },
+    "reset_iv": {
+      "checkpoint_count": 9,
+      "linked_parent_state_edges": 8,
+      "same_rom_runner_core_and_no_cheats": true,
+      "branch_no_and_exit_party_unchanged": true,
+      "yes_exact_six_ivs_zero": true,
+      "exact_record_recomputed_and_matched_saved_dsv": true,
+      "other_party_slots_and_evs_preserved": true,
+      "bag_and_key_item_118_preserved": true,
+      "three_reserve_regions_equal_candidate_rom": true,
+      "party_records_checked": 9,
+      "bag_arrays_checked": 9,
+      "key_item_118_checked": 9,
+      "reserve_region_comparisons": 27,
+      "source_main_counter_crc": [11, 32926],
+      "saved_main_counter_crc": [12, 63143],
+      "identity": {
+        "species_id": 35,
+        "pid": "0xe30363e2",
+        "nature_id": 10,
+        "level": 5,
+        "ivs_before": [16, 3, 10, 31, 21, 2],
+        "ivs_after": [0, 0, 0, 0, 0, 0],
+        "evs_before_after": [0, 0, 0, 0, 0, 0]
+      },
+      "personal_base_stats_hp_atk_def_speed_spatk_spdef": [70, 45, 48, 35, 60, 65],
+      "party_stats_before_currenthp_maxhp_atk_def_speed_spatk_spdef": [22, 22, 8, 10, 11, 12, 11],
+      "party_stats_after_currenthp_maxhp_atk_def_speed_spatk_spdef": [22, 22, 8, 9, 8, 11, 11],
+      "cold_reload": {
+        "frames": 5500,
+        "navigation_state_in": null,
+        "cheats": [],
+        "same_saved_dsv_and_zero_ivs": true
+      },
+      "dsv_changed_bytes_and_spans": [164, 25],
+      "unclassified_dsv_bytes_attributed": false,
+      "interaction_cold_root": {
+        "result_path": "qa/runs/qa/runs/portable-stat-editor-reset-iv-textfix-cold/result.json",
+        "navigation_state_in": null,
+        "rom_runner_core_source_dsv_and_cheats_match": true,
+        "navigation_state_output_sha256_matches_preconfirm_input": true
+      },
+      "transient_party_phase": "At Yes-exit, slot 2 is accepted only as an exact even-byte native plaintext/ciphertext segment boundary; its transient decoded checksum is invalid. Other active slots match byte-exactly."
+    }
+  },
+  "limits": [
+    "Both checks cover one level-5 Clefairy in slot 0 on this probe ROM; they do not establish repeated-operation, other-species, all-value, normal-story, or production acceptance.",
+    "The Reset IV personal-data formula is verified for the pinned Clefairy entry and this PID/nature/level only.",
+    "The emulator labels gameplay acceptance NOT_ASSESSED. Native save and fresh-process cold reload are verified for these exact DSVs, but unrelated changed DSV spans remain unclassified.",
+    "No nature, item, other Pokémon, or full-game behavior is claimed."
+  ]
+}

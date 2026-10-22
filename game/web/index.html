@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Ultimate Gold · Local Patcher</title><link rel="icon" href="data:,"><link rel="stylesheet" href="./style.css?v=20261022">
+</head>
+<body>
+  <main class="patcher-root">
+    <header class="patcher-header"><p id="eyebrow" class="eyebrow"></p><h1 id="title"></h1><p id="description"></p><p class="micro" id="disclaimer"></p><select id="language" aria-label="Language"><option value="en">English</option><option value="es">Español</option></select></header>
+    <ol class="steps" id="steps" aria-label="Patch steps"><li><b>01</b><span id="step1">Choose clean ROM</span></li><li><b>02</b><span id="step2">Verify and patch locally</span></li><li><b>03</b><span id="step3">Download output</span></li></ol>
+    <section class="workspace" aria-labelledby="source-label">
+      <div class="version-selector"><label id="version-label" for="version"></label><select id="version" aria-label="Version"></select><p class="micro" id="version-note" role="note"></p></div>
+      <label id="source-label" for="rom"></label><input id="rom" type="file" accept=".nds,application/octet-stream">
+      <p class="micro" id="source-note"></p><p id="size-note" class="micro"></p><p class="micro"><span id="hash-label"></span>: <code id="source-hash">—</code></p>
+      <button id="apply" type="button"></button><p id="status" role="status" aria-live="polite" aria-atomic="true"></p><a id="download" hidden></a>
+    </section>
+    <nav><a id="wiki-link" href="./wiki/"></a><a id="license-link" href="./LICENSES.html"></a><a id="cheat-link" download href="./assets/Sacred-Gold-Plus-Drayano-QoL-fix1.cht"></a></nav>
+    <p class="micro" id="privacy"></p><p class="micro" id="tmNote"></p><p class="micro" id="buildNote"></p>
+    <footer id="footer">Made with 🖤 in Barcelona City 🇪🇸</footer>
+  </main>
+  <script src="./vendor/rompatcher/HashCalculator.js"></script><script src="./vendor/rompatcher/BinFile.js"></script><script src="./vendor/rompatcher/vcdiff.js"></script><script src="./app.js?v=20261022"></script>
+</body></html>

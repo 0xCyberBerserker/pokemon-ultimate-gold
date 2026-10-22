@@ -1,0 +1,19 @@
+{
+  "schema": "headless-general-no-cheat-runner-review/v1",
+  "verdict": "PASS_FOR_DECLARED_EMPTY_CHEAT_BRANCH_ONLY",
+  "reviewed_runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+  "frozen_reference_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+  "checks": {
+    "physical_source_diff": "Exactly two ROM-hash literals differ, both inside the cheats allowlist.",
+    "source_reconstruction": "Removing those two literal lines from the frozen reference reproduces the reviewed runner byte for byte.",
+    "enclosing_ast_branch": "if cheats, frozen reference lines 87 through 115",
+    "actual_run": "qa/runs/portable-stat-editor-menu-uimode-cold/result.json",
+    "actual_run_cheats": []
+  },
+  "summary_en": "The changed allowlist is inactive in the retained cold run because cheats is empty. Controller, frame loop, input, state, memory and result code are otherwise byte-identical. This review permits retaining that run and continuing with the same runner hash only on the no-cheat path.",
+  "summary_es": "La lista modificada no se ejecuta en el arranque frío conservado porque cheats está vacío. El código del controlador, frames, entradas, estados, memoria y resultados es idéntico. Se permite conservar esa ejecución y continuar con el mismo hash de runner únicamente sin cheats.",
+  "limits": [
+    "No acceptance of the differing cheat allowlists or code effects.",
+    "No gameplay or editor acceptance follows from runner equivalence alone."
+  ]
+}

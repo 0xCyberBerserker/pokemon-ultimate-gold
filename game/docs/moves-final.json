@@ -1,0 +1,157 @@
+{
+  "schema": "sacred-gold-derived-moves/v1",
+  "target_sha256": "fdb2fcabc4b51c4b98b0e4fcaf02740c81f32ede54c5a5bc0004d58c3133357e",
+  "drayano_sha256": "49f29848878406990ea288f26872d4355c92c4a2677f56973750bbf2566c13c1",
+  "records": [
+    {
+      "move_id": 4,
+      "baseline_name": "COMET_PUNCH",
+      "target_name": "UNRESOLVED_FROM_TARGET_TEXT",
+      "baseline_raw_hex": "1d00001200550f000000007307040000",
+      "target_raw_hex": "1d00001209550f000000007307040000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "baseline-only"
+    },
+    {
+      "move_id": 6,
+      "baseline_name": "PAY_DAY",
+      "target_name": "BABY_DOLL_EYES",
+      "baseline_raw_hex": "22000028006414000000003217030000",
+      "target_raw_hex": "1200020009641e640000061617030000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "manual-replacement"
+    },
+    {
+      "move_id": 27,
+      "baseline_name": "ROLLING_KICK",
+      "target_name": "DISARMING_VOICE",
+      "baseline_raw_hex": "1f00003c01550f1e0000003305000000",
+      "target_raw_hex": "1100012809640f000000001205000000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "manual-replacement"
+    },
+    {
+      "move_id": 134,
+      "baseline_name": "KINESIS",
+      "target_name": "DRAINING_KISS",
+      "baseline_raw_hex": "170002000e500f00000000560b030000",
+      "target_raw_hex": "0300013209640f00000000120b030000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "manual-replacement"
+    },
+    {
+      "move_id": 140,
+      "baseline_name": "BARRAGE",
+      "target_name": "DAZZLING_GLEAM",
+      "baseline_raw_hex": "1d00000f005514000000007207040000",
+      "target_raw_hex": "0000015009640a000000001207040000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "manual-replacement"
+    },
+    {
+      "move_id": 146,
+      "baseline_name": "DIZZY_PUNCH",
+      "target_name": "UNRESOLVED_FROM_TARGET_TEXT",
+      "baseline_raw_hex": "4c00004600640a140000001310000000",
+      "target_raw_hex": "4c00004609640f140000001310000000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "baseline-only"
+    },
+    {
+      "move_id": 160,
+      "baseline_name": "CONVERSION",
+      "target_name": "MOONBLAST",
+      "baseline_raw_hex": "1e00020000001e001000004017010000",
+      "target_raw_hex": "4700015f09640a0a0000001217010000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "manual-replacement"
+    },
+    {
+      "move_id": 169,
+      "baseline_name": "SPIDER_WEB",
+      "target_name": "FAIRY_WIND",
+      "baseline_raw_hex": "6a00020006000a00000000160d030000",
+      "target_raw_hex": "0000012809001e00000000120d030000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "manual-replacement"
+    },
+    {
+      "move_id": 174,
+      "baseline_name": "CURSE",
+      "target_name": "UNRESOLVED_FROM_TARGET_TEXT",
+      "baseline_raw_hex": "6d00020009000a000000004015040000",
+      "target_raw_hex": "6d00020007000a000000004015040000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "baseline-only"
+    },
+    {
+      "move_id": 176,
+      "baseline_name": "CONVERSION_2",
+      "target_name": "PLAY_ROUGH",
+      "baseline_raw_hex": "5d00020000001e001000000017010000",
+      "target_raw_hex": "4400005a095a0a0a0000003317010000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "manual-replacement"
+    },
+    {
+      "move_id": 186,
+      "baseline_name": "SWEET_KISS",
+      "target_name": "UNRESOLVED_FROM_TARGET_TEXT",
+      "baseline_raw_hex": "31000200004b0a000000001613020000",
+      "target_raw_hex": "31000200094b0a000000001613020000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "baseline-only"
+    },
+    {
+      "move_id": 204,
+      "baseline_name": "CHARM",
+      "target_name": "UNRESOLVED_FROM_TARGET_TEXT",
+      "baseline_raw_hex": "3a000200006414000000005613020000",
+      "target_raw_hex": "3a000200096414000000005613020000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "baseline-only"
+    },
+    {
+      "move_id": 236,
+      "baseline_name": "MOONLIGHT",
+      "target_name": "UNRESOLVED_FROM_TARGET_TEXT",
+      "baseline_raw_hex": "84000200000005001000008808010000",
+      "target_raw_hex": "84000200090005001000008808010000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "baseline-only"
+    },
+    {
+      "move_id": 343,
+      "baseline_name": "COVET",
+      "target_name": "UNRESOLVED_FROM_TARGET_TEXT",
+      "baseline_raw_hex": "6900003c00642800000000130c020000",
+      "target_raw_hex": "6900002809642800000000130c020000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "baseline-only"
+    },
+    {
+      "move_id": 345,
+      "baseline_name": "MAGICAL_LEAF",
+      "target_name": "UNRESOLVED_FROM_TARGET_TEXT",
+      "baseline_raw_hex": "1100013c0c0014000000003211010000",
+      "target_raw_hex": "1100013c0f0014000000003211010000",
+      "record_size_baseline": 16,
+      "record_size_target": 16,
+      "name_confidence": "baseline-only"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "portable-stat-editor-noregister-limits-independent-review/v1",
+  "verdict": "PASS_DATA_BOUNDED_FLAG_VISUAL_LIMIT_MESSAGE_CLIPPED",
+  "source_report": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/internal/stat-editor-research/portable-stat-editor-noregister-limits.json",
+    "sha256": "ecff7f512de88d79a86a6a0f67c0277f549f1250c5ce53beb876bd8280df3d71"
+  },
+  "audited_inputs": [
+    {
+      "artifact": "frozen report",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/internal/stat-editor-research/portable-stat-editor-noregister-limits.json",
+      "sha256": "ecff7f512de88d79a86a6a0f67c0277f549f1250c5ce53beb876bd8280df3d71",
+      "expected": "ecff7f512de88d79a86a6a0f67c0277f549f1250c5ce53beb876bd8280df3d71",
+      "match": true
+    },
+    {
+      "artifact": "auditor",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/stat_editor_noregister_limits_acceptance.py",
+      "sha256": "4d98ce0cdd3493e4d704e3b3f4582876f8825b14c2027fb1db12820625923e8e",
+      "expected": "4d98ce0cdd3493e4d704e3b3f4582876f8825b14c2027fb1db12820625923e8e",
+      "match": true
+    },
+    {
+      "artifact": "fixture manifest",
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/internal/stat-editor-research/portable-stat-editor-noregister-limits-fixtures.json",
+      "sha256": "30005607136f1474e49fd6e6560ef2aa9973b587cc9e0ede5a999a3d061b166a",
+      "expected": "30005607136f1474e49fd6e6560ef2aa9973b587cc9e0ede5a999a3d061b166a",
+      "match": true
+    }
+  ],
+  "coverage": {
+    "cases": [
+      "A_per_stat_ev255",
+      "B_total_ev510",
+      "C_hp_iv31_plus1",
+      "C_hp_iv31_plus5"
+    ],
+    "unique_run_artifacts": 11,
+    "run_chain_entries": 12,
+    "parent_links_checked": 8,
+    "rejection_statuses_checked": 4,
+    "checkpoint_rows": 12,
+    "party_strict_cipher_boundary": true,
+    "bag_and_reserves_exact_claims_present": true,
+    "native_save_performed_claim": false,
+    "fixture_manifest_constraints": {
+      "both_main_copies_updated": true,
+      "save_counters_preserved": [
+        10,
+        9
+      ],
+      "pokemon_pid_flags_and_party_tail_preserved": true,
+      "party_headers_other_records_and_bag_byte_exact": true,
+      "both_main_crcs_recomputed_and_valid": true,
+      "changed_ranges": "slot-0 encrypted record and corresponding MAIN CRC16 only",
+      "all_three_fixture_cases_have_two_main_records": true
+    },
+    "visual_limit_message": {
+      "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-stat-editor-noregister-limits-A-ev255-select/limit_message_stable.png",
+      "sha256": "8fec28a3b6515936d4a750d009226cea3f16796c1e951140cf9dca591e163b00",
+      "observed": "clipped after \"No change was m\"",
+      "claim": "visual evidence flagged; recorded status 12 remains accepted"
+    }
+  },
+  "findings": [
+    "The real A-ev255 select screenshot limit_message_stable.png visibly clips the native message at \"No change was m\"; the report accepts status/PC/provenance and no mutation, but does not accept a complete readable UI message."
+  ],
+  "limits": [
+    "Offline artifact/hash review only; no core, emulator or emulation replay executed.",
+    "PASS validates recorded outputs and provenance links, not gameplay acceptance or save persistence.",
+    "Party review accepts the existing strict cipher-boundary result; it does not decode new gameplay."
+  ]
+}

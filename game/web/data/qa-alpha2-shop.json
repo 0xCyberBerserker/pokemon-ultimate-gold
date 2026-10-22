@@ -1,0 +1,639 @@
+{
+  "schema": "ultimate-gold-alpha2-shop-qa/v1",
+  "status": "PASS_BOUNDED_NATIVE_PURCHASE_SAVE_COLD",
+  "target": {
+    "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+  },
+  "execution_note": "Each runner result is EMULATED with gameplay_acceptance NOT_ASSESSED. This report independently asserts the bounded native UI action, RAM effects, save, and cold reload; it does not claim general story progression.",
+  "provenance": {
+    "source_rom_fixture": "FIX5 compatible native DSV only; prior FIX5 gameplay acceptance is not inherited.",
+    "source_dsv": {
+      "path": "qa/runs/combined-kit-shop-fix5-shop-boot/saves/qa-kit-shop-owned-hm-paged-fix5.dsv",
+      "sha256": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd"
+    },
+    "initial_copy_preflight_sha256": "1511f4674155d2446c3f2a2b5cc351ec383c4191977dc3ff94f651d79afb9791",
+    "native_saved_dsv": {
+      "path": "qa/runs/alpha2-shop-continue/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+      "sha256": "c6dbd968d6f97cfa4f2bd6f5d3f55b7bf48b81dbc877f4fd4bed0d18a566c725",
+      "bytes": 524410
+    },
+    "cold_copy_preflight_sha256": "d0db2abf097b529fdfb9ad5c4502c6710675de4eef1efcb8757525947016118a",
+    "initial_copy_slots": [
+      {
+        "base": 0,
+        "save_count": 8,
+        "crc16": 1774,
+        "crc_valid": true,
+        "location": [
+          192,
+          -1,
+          21,
+          5,
+          3
+        ]
+      },
+      {
+        "base": 262144,
+        "save_count": 7,
+        "crc16": 61050,
+        "crc_valid": true,
+        "location": [
+          192,
+          -1,
+          21,
+          5,
+          3
+        ]
+      }
+    ],
+    "saved_copy_slots": [
+      {
+        "base": 0,
+        "save_count": 8,
+        "crc16": 1774,
+        "crc_valid": true,
+        "location": [
+          192,
+          -1,
+          21,
+          5,
+          3
+        ]
+      },
+      {
+        "base": 262144,
+        "save_count": 9,
+        "crc16": 50723,
+        "crc_valid": true,
+        "location": [
+          192,
+          -1,
+          21,
+          5,
+          3
+        ]
+      }
+    ],
+    "no_cross_rom_state": true
+  },
+  "purchase_baseline": {
+    "map_id": 192,
+    "location": [
+      192,
+      -1,
+      21,
+      5,
+      3
+    ],
+    "money": 992299,
+    "items_pocket": {
+      "81": 4,
+      "77": 1,
+      "78": 1,
+      "467": 1
+    },
+    "stock_count": 34,
+    "stock_ids": [
+      4,
+      3,
+      2,
+      78,
+      63,
+      79,
+      76,
+      77,
+      82,
+      83,
+      84,
+      85,
+      80,
+      81,
+      110,
+      221,
+      226,
+      227,
+      233,
+      235,
+      252,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      433,
+      436,
+      438,
+      439,
+      454,
+      467
+    ]
+  },
+  "purchases": [
+    {
+      "item": "Moon Stone",
+      "item_id": 81,
+      "unit_price": 2100,
+      "quantity": [
+        4,
+        5
+      ],
+      "money": [
+        992299,
+        990199
+      ],
+      "inventory_deltas": [
+        {
+          "pocket": 0,
+          "item_id": 81,
+          "before": 4,
+          "after": 5
+        }
+      ],
+      "screenshots": [
+        "alpha2-shop-page3/moonstone_stock_page.png",
+        "alpha2-shop-select-moonstone/moonstone_quantity_prompt.png",
+        "alpha2-shop-moonstone-confirm/moonstone_buy_confirmation.png",
+        "alpha2-shop-moonstone-dismiss/moonstone_after_receipt.png"
+      ]
+    },
+    {
+      "item": "Covenant Orb",
+      "item_id": 467,
+      "unit_price": 3500,
+      "quantity": [
+        1,
+        2
+      ],
+      "money": [
+        990199,
+        986699
+      ],
+      "inventory_deltas": [
+        {
+          "pocket": 0,
+          "item_id": 467,
+          "before": 1,
+          "after": 2
+        }
+      ],
+      "screenshots": [
+        "alpha2-shop-page6-last/covenant_orb_stock_page.png",
+        "alpha2-shop-select-orb/orb_quantity_prompt.png",
+        "alpha2-shop-orb-confirm/orb_buy_confirmation.png",
+        "alpha2-shop-orb-dismiss/orb_after_receipt.png"
+      ]
+    }
+  ],
+  "integrity": {
+    "other_pockets_unchanged": true,
+    "bag_after_save_equals_pre_save": true,
+    "bag_after_cold_equals_pre_save": true,
+    "party_raw_sha256_by_slot": [
+      "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5",
+      "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53",
+      "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+    ],
+    "party_unchanged_across_actions_save_cold": true,
+    "party_dsv_cold_compare": {
+      "reference_dsv_sha256": "c6dbd968d6f97cfa4f2bd6f5d3f55b7bf48b81dbc877f4fd4bed0d18a566c725",
+      "selected_dsv_counter": 9,
+      "selected_slot_base": 262144,
+      "selected_dsv_party_offset": 262288,
+      "party_array_size": 1460,
+      "ram_dynamic_offset": "0xd080",
+      "source_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "ram_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "normalized_array_sha256": "7afb542090a571ab3d35faf7423d6931f52228e166b1ffb2e31ceef5b5726f70",
+      "exact_record_match": true,
+      "party_count": 3,
+      "species_ids": [
+        35,
+        152,
+        66
+      ],
+      "moves_by_party_slot": [
+        [
+          27,
+          1,
+          0,
+          0
+        ],
+        [
+          33,
+          45,
+          0,
+          0
+        ],
+        [
+          67,
+          43,
+          0,
+          0
+        ]
+      ],
+      "no_hm_moves_in_source_party": true,
+      "cipher_phase_evidence": [
+        {
+          "party_slot": 0,
+          "box_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "party_tail_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "ram_record_sha256": "cd1f67b306885cec1ebfb361c8493331a3cab57108a40514a4e91b2d0c0cd0f5"
+        },
+        {
+          "party_slot": 1,
+          "box_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "party_tail_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "ram_record_sha256": "5825856703578d9dab0dfd5073e3c130da020fbc4896c430fe4c6a335fbfae53"
+        },
+        {
+          "party_slot": 2,
+          "box_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "party_tail_cipher_phase": {
+            "plaintext_prefix_bytes": 0
+          },
+          "ram_record_sha256": "d240e3618a1f6e48c56fa061297cabd7489b75dc16c0d182a81bb7c226d76929"
+        }
+      ]
+    },
+    "reserved_canaries_unchanged": {
+      "0x023d7000+32": "ab98d8273b5f16c123540670c9328d0160295f1c61042cde172465bc5dc6885a",
+      "0x023d7f00+32": "63705dbba7710fe1d0fd6ff579d2b87be4f6107f4a48b94f4e2393c7c38635b0",
+      "0x023d7bf0+16": "373028443cdf569aa2a2068600ebc87e623187220450e7cd1ca0ecb2ac510204",
+      "0x023d7cf0+16": "dab226999e7947468f1f3075d99a28cd94c004a1dd3e71aa45b96f55c3441a6a",
+      "0x023d7d00+512": "593a124925b242ce99e34a5431d35a4e10ede8b26ebe74d0684dd1321894a9e3"
+    },
+    "shop_stock_unchanged": {
+      "count": 34,
+      "ids": [
+        4,
+        3,
+        2,
+        78,
+        63,
+        79,
+        76,
+        77,
+        82,
+        83,
+        84,
+        85,
+        80,
+        81,
+        110,
+        221,
+        226,
+        227,
+        233,
+        235,
+        252,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        433,
+        436,
+        438,
+        439,
+        454,
+        467
+      ]
+    },
+    "money_after_native_save_and_cold": [
+      986699,
+      986699
+    ]
+  },
+  "save_cold": {
+    "native_save_screenshot": "alpha2-shop-save-commit/native_save_complete.png",
+    "dsv_sha256_after_save_and_cold": "c6dbd968d6f97cfa4f2bd6f5d3f55b7bf48b81dbc877f4fd4bed0d18a566c725",
+    "selected_save_count": 9,
+    "current_position": [
+      192,
+      -1,
+      21,
+      5,
+      3
+    ],
+    "both_slot_crcs_valid": true,
+    "cold_boot_state_in": null,
+    "cold_loaded_bag_items": {
+      "81": 5,
+      "77": 1,
+      "78": 1,
+      "467": 2
+    },
+    "cold_loaded_money": 986699,
+    "cold_runtime_note": "The known title-to-Continue A sequence reaches an unconfirmed Great Ball shop prompt; it was left unaccepted, and the saved purchase totals loaded intact."
+  },
+  "boot_input_note": "The first boot sequence likewise reached an unconfirmed Great Ball prompt. It was canceled with B before the purchase baseline; no Great Ball or currency delta occurred.",
+  "runs": [
+    {
+      "run_id": "alpha2-shop-continue",
+      "result_sha256": "8c1d49159c97fcb173f9304373e3bb939080075cd250cd29aa427e8dab18f122",
+      "input_script_sha256": "f176cafb006e123bceec7d96951016b87a60d846551f27fdcf0f7382a95bd6ed",
+      "state_in_sha256": null,
+      "state_out_sha256": "3a94b3c036b20d298c259914d8efd7ea7cd52de47612e96058a2d7724baa343f",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-cancel-boot-dialog",
+      "result_sha256": "8952a9baad63e077e70b28eb310a23ae3eb37e381f5e607417993fdbbe8f141a",
+      "input_script_sha256": "109d0fdcf9163da5e7df80aa7c53ce0d1f15422d3e9b092b9cd7d96edb0f5e77",
+      "state_in_sha256": "3a94b3c036b20d298c259914d8efd7ea7cd52de47612e96058a2d7724baa343f",
+      "state_out_sha256": "f61e882fbc7dc067c70ccecff4b8e97a87219391fa3e032f5646c786e928b0f9",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-page3",
+      "result_sha256": "bc87dc8d9d4d692813c79639024eb7a2e2529ed49b059a507888ec589c4333e3",
+      "input_script_sha256": "fc41bbd92fd6d191103b8f06b86a62074aac8a85c1a6d099549134f4eaea7887",
+      "state_in_sha256": "f61e882fbc7dc067c70ccecff4b8e97a87219391fa3e032f5646c786e928b0f9",
+      "state_out_sha256": "57a156eb0968e65547533ad5c0542be4c06b3fee54ea181c09beea0a90d6136b",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-select-moonstone",
+      "result_sha256": "e9a281b51efa99857cad48782b4b2e4430cd85ae8311f7a9d37974e38a867128",
+      "input_script_sha256": "43c09f6c1e4d62689dd8db8ae20bd0cd74f9c9cefeddeccda3a753efd66f25f1",
+      "state_in_sha256": "57a156eb0968e65547533ad5c0542be4c06b3fee54ea181c09beea0a90d6136b",
+      "state_out_sha256": "457ccfc6395ad27b66351288a31f593716ec04ffac5ebc13623cfd7c5fb7edd7",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-moonstone-confirm",
+      "result_sha256": "f5568d19280fb8dd992a1b528ee3ce63e595dd235989013da31a761630eb2afc",
+      "input_script_sha256": "6484d8dd7901948819cffbc341fdee19d45fed04ba8d00d96e9fb4fbd230ae99",
+      "state_in_sha256": "457ccfc6395ad27b66351288a31f593716ec04ffac5ebc13623cfd7c5fb7edd7",
+      "state_out_sha256": "c234184d3c1eed38d317e43f327f4c57ce691af8431de9226eacdf55d37ff058",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-moonstone-purchase",
+      "result_sha256": "5defe81835f9b490184eb75fb081b114548e1d26c615141f57568cf273e2981f",
+      "input_script_sha256": "40989224bedc4c309908f3828d72aa9db4bc4147584b94b16c4b3f1e5dae7212",
+      "state_in_sha256": "c234184d3c1eed38d317e43f327f4c57ce691af8431de9226eacdf55d37ff058",
+      "state_out_sha256": "636b1f855517b880e637feca0bc8a75aabe29f93cc7db74c2f1a832b4bed6894",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-moonstone-dismiss",
+      "result_sha256": "573c8413e21e8f8712bee0aa54b2bdf962a5657b939132914fa0ba294cf248b9",
+      "input_script_sha256": "b71b18bb5167a905088d46451020377d63bfc5b98f71fd1d9f638aa6796e15f6",
+      "state_in_sha256": "636b1f855517b880e637feca0bc8a75aabe29f93cc7db74c2f1a832b4bed6894",
+      "state_out_sha256": "f377e28dea996178d2c7204389d27f8c9584af9abcea37505e9c2c62cf123e51",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-page6",
+      "result_sha256": "5fc69c6f3edba885f08883166af258b1c40262f9bdef7d22e33a0740cbe51631",
+      "input_script_sha256": "5fb905d549eb070cdc69ea3eb3c7045c200509125e3d375e3f895f939381af35",
+      "state_in_sha256": "f377e28dea996178d2c7204389d27f8c9584af9abcea37505e9c2c62cf123e51",
+      "state_out_sha256": "5b69f2091f552e2b93088343d6fa01ab97a03dfca2dc1796f30d67b21991d57e",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-page6-last",
+      "result_sha256": "0253d11069c2cd15ed0776e852ca26152939b760d04ac1a5a455d8cafd4487a1",
+      "input_script_sha256": "99f2d48a0bd8b86289c37088c13ae8e25718797e7545d055e7fdbbcfe35ef527",
+      "state_in_sha256": "5b69f2091f552e2b93088343d6fa01ab97a03dfca2dc1796f30d67b21991d57e",
+      "state_out_sha256": "c3b79b406013d73f1e9c64e9b0df2b0420945bb4f96e5f066306144c30a557d5",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-select-orb",
+      "result_sha256": "6df5a8e61470872153ecd61af23e3af2a18db1c37e2e3e145eb810741df2edb5",
+      "input_script_sha256": "4e9fbcfb0127cf16084e69fa05f783fb6cc9bbc13f47dd1d6c966d7bc7238ecf",
+      "state_in_sha256": "c3b79b406013d73f1e9c64e9b0df2b0420945bb4f96e5f066306144c30a557d5",
+      "state_out_sha256": "ec9ba58333d627e77fcf9ce6a6df2eecc5e7ae69258edd0c557279ae80c1a571",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-orb-confirm",
+      "result_sha256": "7752a08727f8f106e781cd0ab858f51e8b04e4391a4af4fe384d159841277c0a",
+      "input_script_sha256": "d823b60dfa3335144270badc283056f5cdb0a8c7014a36b8c4601acbcc35655d",
+      "state_in_sha256": "ec9ba58333d627e77fcf9ce6a6df2eecc5e7ae69258edd0c557279ae80c1a571",
+      "state_out_sha256": "70a0f6b8f509473341fda41866915363e25d0427014ca44c3bbbc2b818eb9e38",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-orb-purchase",
+      "result_sha256": "043ea7beed6fa98a6d34fc7be36e95e4e4e745b21b955878a29ed4f9270ac3c4",
+      "input_script_sha256": "abc125329bdedefef7373852d45d720a9aba9db1fc4b3841be4177cf1fdf5b16",
+      "state_in_sha256": "70a0f6b8f509473341fda41866915363e25d0427014ca44c3bbbc2b818eb9e38",
+      "state_out_sha256": "e89a35956ca0f6bc11d101d8d299624ee15c870066f91cfc1f795580975f780f",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-orb-dismiss",
+      "result_sha256": "f13b2cbb4e308260e8eef4fa11b726d7bb8aa21173fcd1b9413bc654037a8acf",
+      "input_script_sha256": "8bf69e47e3067cb5bff7925db6743ad1e3182e0f6d8d10a6b18fc732dbf3c85c",
+      "state_in_sha256": "e89a35956ca0f6bc11d101d8d299624ee15c870066f91cfc1f795580975f780f",
+      "state_out_sha256": "e3c6f347559ac100f5c8444cee36a56d5572781e51e5f769871ff9d8d50f5862",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-close-receipt",
+      "result_sha256": "dcc882b4371c15cce089d17553bc936ace0165a4e6a86b9557803fa7f4b5c98d",
+      "input_script_sha256": "e4e2f0d6b4122a74f798abec2b8e58a19f5c194b6149938bc84cf554160354e5",
+      "state_in_sha256": "e3c6f347559ac100f5c8444cee36a56d5572781e51e5f769871ff9d8d50f5862",
+      "state_out_sha256": "5384682316ec7fd1a885dbfaff1d399ec3b65c06d8badf289dab33bf9d7183dd",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-leave-page",
+      "result_sha256": "c261f00990568543be17f2ea3b9f9fe0d208f98b0a082ad9f8dc2817eeebbfa1",
+      "input_script_sha256": "d591c3325adcda3b7471842c21346c3283d67ae20202f9dbcef3ecd7b62142f6",
+      "state_in_sha256": "5384682316ec7fd1a885dbfaff1d399ec3b65c06d8badf289dab33bf9d7183dd",
+      "state_out_sha256": "317dd1986d071b35e7e733ec72ab883e71d40b835da11fae9fbd3d9401225ece",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-exit-vendor",
+      "result_sha256": "43735be63d41d22135402c41aad9d16d919471cf90fc8df66f0c5e2de1751b6d",
+      "input_script_sha256": "545814e9d79cb067eae8952f3a724dc43f91d8e645dd75ad1e514827c8bc3a46",
+      "state_in_sha256": "317dd1986d071b35e7e733ec72ab883e71d40b835da11fae9fbd3d9401225ece",
+      "state_out_sha256": "fa85f87f5cf8bf0881da46e004eb2223b095a0a4c21ae30e507e83b227dc5a5c",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-save-prompt",
+      "result_sha256": "9724d4bcdea5f5a96a2fc52c5240e4ea5b848cd1eef363b6f8d8ee60654409dd",
+      "input_script_sha256": "141244fa58d73987be22739518d2e3ba1f6d56b455bcbe18eb1247052beb3da2",
+      "state_in_sha256": "fa85f87f5cf8bf0881da46e004eb2223b095a0a4c21ae30e507e83b227dc5a5c",
+      "state_out_sha256": "5e8ae43ccd7a852169f21952f5f7a5b8bcce3e246fd7f65a3955c86c80e93e0b",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-dismiss-departure",
+      "result_sha256": "0be6a2149b4f1bf576c00b44350f99a66b26fae6a4c3079fdc7d71436ed99883",
+      "input_script_sha256": "18450ac6ce36d567968ba9fda77217a02cfa21c270b08d08279910a089c90c0f",
+      "state_in_sha256": "5e8ae43ccd7a852169f21952f5f7a5b8bcce3e246fd7f65a3955c86c80e93e0b",
+      "state_out_sha256": "e7e6de54e173ba61d740be1cd1c89553e1400f92b087c70d3a46cc0a1f584d24",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-save-menu",
+      "result_sha256": "a610b872774848ea4e474c2aed75fd76fd456b26be55b64ce36d2af2fc33dbaf",
+      "input_script_sha256": "141244fa58d73987be22739518d2e3ba1f6d56b455bcbe18eb1247052beb3da2",
+      "state_in_sha256": "e7e6de54e173ba61d740be1cd1c89553e1400f92b087c70d3a46cc0a1f584d24",
+      "state_out_sha256": "53463b34db4a182c9dfb9b87c60eaada63037a05fdcfd3248f820d8f29967d89",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-save-overwrite",
+      "result_sha256": "c16c18876ea6b60d5ca4b3a69768cf1eac5c83a31656d7a945534e975fd6c225",
+      "input_script_sha256": "2a4604b627871b72f0beaee7e68f5155ebe412547990196b0b96be9de2ddcc51",
+      "state_in_sha256": "53463b34db4a182c9dfb9b87c60eaada63037a05fdcfd3248f820d8f29967d89",
+      "state_out_sha256": "3898b62eaebb29a9f730a6822e97284e856358a1fae78712fec6341568c38024",
+      "dsv_sha256_at_run": "2ec5c4368ea0cd18125f0af3af682dc879d514670893d84ae60bb4433746aabd",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-save-commit",
+      "result_sha256": "85386641c5df86b50f3db7960c55cf7015a29c2cafc975cb0d6e83e816b51af3",
+      "input_script_sha256": "62cab79999e8f05d522cbe0a55e7eed5b5da568d12a800f24adcd875134ea172",
+      "state_in_sha256": "3898b62eaebb29a9f730a6822e97284e856358a1fae78712fec6341568c38024",
+      "state_out_sha256": "2f91618a0d026c38c9a8b299735b2eeaefb55d63434dc7f6323a7d3fb89a1aba",
+      "dsv_sha256_at_run": "c6dbd968d6f97cfa4f2bd6f5d3f55b7bf48b81dbc877f4fd4bed0d18a566c725",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    {
+      "run_id": "alpha2-shop-cold-reload",
+      "result_sha256": "862046406805c5898a3ad582d4a2cb2f361b639194631be807732085a43c4c4c",
+      "input_script_sha256": "a1086efeca2e67bd89dd79879588375564269dc3d3ba30be6a9dadbe4ac0965a",
+      "state_in_sha256": null,
+      "state_out_sha256": "9e16a90da4c2c637cf4343245aaa72f0b0b4a87ddaec4b9609107dbb17bfd330",
+      "dsv_sha256_at_run": "c6dbd968d6f97cfa4f2bd6f5d3f55b7bf48b81dbc877f4fd4bed0d18a566c725",
+      "cheats": [],
+      "gameplay_acceptance": "NOT_ASSESSED"
+    }
+  ],
+  "screenshots_local_only": [
+    {
+      "path": "qa/runs/alpha2-shop-continue/continued_shop_before_action.png",
+      "sha256": "67dcd292ad3ca8cc17137f20a70cd31acbc2fef907e9e599f9ffc23450374dc4"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-cancel-boot-dialog/shop_after_cancel.png",
+      "sha256": "5298460370e21fbe2defe631ca2e1577d5b02f0751b4d5db7c16b77cc3b458f2"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-page3/moonstone_stock_page.png",
+      "sha256": "a7eba6cdef73581d51772fc75ee2f871b9ec287e7bd73c42b40128254386b741"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-select-moonstone/moonstone_quantity_prompt.png",
+      "sha256": "64a6250c3eabec824bfc7c130b97bd39882a651c6e53327e6fe4bdaf7cbf4d56"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-moonstone-confirm/moonstone_buy_confirmation.png",
+      "sha256": "12ecfe01f1cf1fa368aa7475aebfecd12cd47906492f719b2e7f3aa2d897dbe0"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-moonstone-purchase/moonstone_purchase_result.png",
+      "sha256": "2b91afcc7a9a2b1802a5b19a91f6776d9b8d1ec18cde03f6f06d78ddd669f9ba"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-moonstone-dismiss/moonstone_after_receipt.png",
+      "sha256": "cd1172c5420247ca6c6e5b9dcfcc715e44bbfbc5cea20e12cd8c460c0c544caa"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-page6-last/covenant_orb_stock_page.png",
+      "sha256": "0509dea7a0a9e7db9f0d1d37b88913474219bcdcd6ff97b49181f02dff5ae262"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-select-orb/orb_quantity_prompt.png",
+      "sha256": "cce7eaefee253585b150db92949af8bc01c85838806ff68c2b16c95f256e6fa2"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-orb-confirm/orb_buy_confirmation.png",
+      "sha256": "d2edd7652d19867ad46b02ed2eae5920c15108ac286f4161a13b8439eab5de49"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-orb-purchase/orb_purchase_result.png",
+      "sha256": "197b4e34e98b45dc34c8fa824bfc16dbd7995887fa717f51c213de596b675de6"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-orb-dismiss/orb_after_receipt.png",
+      "sha256": "50635ea35dcab0a01722b0a05bfe93a4a07891830d30aaff46b5d2ed0f28532e"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-exit-vendor/shop_exit_confirmed.png",
+      "sha256": "1e68d018ac66824a62836f6b3e8bb53d6d6529f3b13f67d4be294d5f0b29c41d"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-save-menu/native_save_prompt.png",
+      "sha256": "f64329512bdc5c5a446df46be756a03f9ebf23f0188114558498629ebfee5b7c"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-save-overwrite/native_save_overwrite_prompt.png",
+      "sha256": "d17e7d5ee88fc053b806a83105a01854ae7fb83f2160544869c5a2a16d605499"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-save-commit/native_save_complete.png",
+      "sha256": "9517a058f65c6a2a3348df3fedf82b8af47185a8202c1156b3170258e15c76f7"
+    },
+    {
+      "path": "qa/runs/alpha2-shop-cold-reload/cold_loaded_saved_shop_before_extra_input.png",
+      "sha256": "f7c7c47a3d5241d0eea87ba814cbb5fe6fed2234f7eb999313a525ce3a72747e"
+    }
+  ],
+  "evidence_limit": "One native unit purchase each for two listed items, one native save, and one state-free cold load. DSV compatibility is demonstrated only for this exact fixture and target; no full shop taxonomy or story progression claim."
+}

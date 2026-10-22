@@ -1,0 +1,342 @@
+{
+  "schema": "ultimate-gold-kris-target-resource-inventory/v1",
+  "status": "PASS_STATIC_RESOURCE_MAP",
+  "archive": "a/0/8/1",
+  "target": {
+    "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "archive_file_id": 210,
+    "archive_size": 4637368,
+    "archive_sha256": "77db7598d62b7ecc28e92cb78c2bd9562aca2c496b083eb8e19cd6f653de5ac9",
+    "member_count": 863,
+    "members": {
+      "heroine": {
+        "member": 70,
+        "size": 13352,
+        "sha256": "0f90d4e1fa774774138df3bbebe2be535839f8f212a29985fd735501bf6e9894",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "cycle": {
+        "member": 72,
+        "size": 11080,
+        "sha256": "0fb8bc43993ee6f1e07fdbba2245a2fdd8f9a7d7fe1c9f4bb50d0c3bdb281318",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "swim": {
+        "member": 74,
+        "size": 2328,
+        "sha256": "111b23f02a362ad21efe383adf5dce098a9a451a92d9880b4fb62f4cd0f45c46",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "hm": {
+        "member": 76,
+        "size": 2328,
+        "sha256": "d7c61df1864cb558754b625c723cf83ba8a879c6ac8f4150e11feb9ac5c73907",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "water": {
+        "member": 78,
+        "size": 2924,
+        "sha256": "44b6dafc408e948df9f9de2011e91e45786bd2254cac0386e4de6b6912c4de99",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "fishing": {
+        "member": 80,
+        "size": 8808,
+        "sha256": "0cb44181b2216b9996256da07f1c8c24664d179fd1fd607a3c2273f74d9b7d4f",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "ladder": {
+        "member": 82,
+        "size": 3408,
+        "sha256": "908f7e59f75fb9eec0d08d2bc5342d1909cc237ad24317a8e03b40d0cc7b6182",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "pokégear": {
+        "member": 86,
+        "size": 6648,
+        "sha256": "0efa4366c5e769eddef59a6c3a478b2a55d413484dc93d786902687f6691ec6f",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "save": {
+        "member": 88,
+        "size": 1248,
+        "sha256": "40a702b5f19afca501bceb2a9d906b1ce3132925ec31bc4ad479bf190a1b6555",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "heal": {
+        "member": 90,
+        "size": 3576,
+        "sha256": "d44dc2136f1530f8f2b46cd27259de6a936ccff6490f892cdd7101f8e8f97b5e",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "rocket": {
+        "member": 96,
+        "size": 13864,
+        "sha256": "a68b7fd93b96b43643feef216c9b429e762b9d3ea5ce7472e01617c23c1e17df",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "rocket_heal": {
+        "member": 98,
+        "size": 3576,
+        "sha256": "78b75321143abede539b2370793a8616db22e425be50b3015801d141911931b2",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "pokéathlon": {
+        "member": 100,
+        "size": 8232,
+        "sha256": "78677615afdd7b6fabff6a49c43597564502e1fecbf837c700036f197a5c262f",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "apricorn": {
+        "member": 208,
+        "size": 4488,
+        "sha256": "8b1805279c0aaeab46f7bf2a82e295b621b69164964a82bac1a97ebe99e53a52",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "rocket_save": {
+        "member": 249,
+        "size": 1248,
+        "sha256": "754ff66570b7a8e955df4c912c2e6c69292de155795cb48831ddcee3c5be0a21",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      }
+    }
+  },
+  "retail_control": {
+    "rom_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+    "archive_file_id": 210,
+    "archive_size": 4637368,
+    "archive_sha256": "77db7598d62b7ecc28e92cb78c2bd9562aca2c496b083eb8e19cd6f653de5ac9",
+    "member_count": 863,
+    "members": {
+      "heroine": {
+        "member": 70,
+        "size": 13352,
+        "sha256": "0f90d4e1fa774774138df3bbebe2be535839f8f212a29985fd735501bf6e9894",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "cycle": {
+        "member": 72,
+        "size": 11080,
+        "sha256": "0fb8bc43993ee6f1e07fdbba2245a2fdd8f9a7d7fe1c9f4bb50d0c3bdb281318",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "swim": {
+        "member": 74,
+        "size": 2328,
+        "sha256": "111b23f02a362ad21efe383adf5dce098a9a451a92d9880b4fb62f4cd0f45c46",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "hm": {
+        "member": 76,
+        "size": 2328,
+        "sha256": "d7c61df1864cb558754b625c723cf83ba8a879c6ac8f4150e11feb9ac5c73907",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "water": {
+        "member": 78,
+        "size": 2924,
+        "sha256": "44b6dafc408e948df9f9de2011e91e45786bd2254cac0386e4de6b6912c4de99",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "fishing": {
+        "member": 80,
+        "size": 8808,
+        "sha256": "0cb44181b2216b9996256da07f1c8c24664d179fd1fd607a3c2273f74d9b7d4f",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "ladder": {
+        "member": 82,
+        "size": 3408,
+        "sha256": "908f7e59f75fb9eec0d08d2bc5342d1909cc237ad24317a8e03b40d0cc7b6182",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "pokégear": {
+        "member": 86,
+        "size": 6648,
+        "sha256": "0efa4366c5e769eddef59a6c3a478b2a55d413484dc93d786902687f6691ec6f",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "save": {
+        "member": 88,
+        "size": 1248,
+        "sha256": "40a702b5f19afca501bceb2a9d906b1ce3132925ec31bc4ad479bf190a1b6555",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "heal": {
+        "member": 90,
+        "size": 3576,
+        "sha256": "d44dc2136f1530f8f2b46cd27259de6a936ccff6490f892cdd7101f8e8f97b5e",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "rocket": {
+        "member": 96,
+        "size": 13864,
+        "sha256": "a68b7fd93b96b43643feef216c9b429e762b9d3ea5ce7472e01617c23c1e17df",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "rocket_heal": {
+        "member": 98,
+        "size": 3576,
+        "sha256": "78b75321143abede539b2370793a8616db22e425be50b3015801d141911931b2",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "pokéathlon": {
+        "member": 100,
+        "size": 8232,
+        "sha256": "78677615afdd7b6fabff6a49c43597564502e1fecbf837c700036f197a5c262f",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "apricorn": {
+        "member": 208,
+        "size": 4488,
+        "sha256": "8b1805279c0aaeab46f7bf2a82e295b621b69164964a82bac1a97ebe99e53a52",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      },
+      "rocket_save": {
+        "member": 249,
+        "size": 1248,
+        "sha256": "754ff66570b7a8e955df4c912c2e6c69292de155795cb48831ddcee3c5be0a21",
+        "magic": "BTX0",
+        "format": "BTX0 binary member; source labels the mapped resource mmodel/NSBMD",
+        "compression": "none at NARC member level"
+      }
+    }
+  },
+  "source_files": {
+    "src/player_avatar.c": "94e6380f7a8b2f7b8b184e2a97cac8f470c11c87a72486610ff2311473ac54a2",
+    "include/constants/sprites.h": "f794bad6114be6671f03fc3a80ba9d743e8b7106e1f2678c4f7f3514d75b10ed",
+    "include/constants/mmodel.h": "a4a623a5b248fdd1fdd713785a6b1e8658d99614b506fdb3fda143f422eb8cba",
+    "asm/overlay_01_sprite_data.s": "525b664b0ff7330ac74cf032c718be1d7185c69c60917c4653effcebb186b92b"
+  },
+  "source_relation": "player_avatar.c selects female sprite constants; overlay_01_sprite_data.s pairs each with an MMODEL constant, and mmodel.h resolves the exact member. Binary confirms those members and exact retail/Alpha2 equality, but does not prove runtime selection.",
+  "states": [
+    {
+      "state": "walk",
+      "source_sprite_id": 97,
+      "model_member": 70
+    },
+    {
+      "state": "cycle",
+      "source_sprite_id": 98,
+      "model_member": 72
+    },
+    {
+      "state": "surf",
+      "source_sprite_id": 179,
+      "model_member": 74
+    },
+    {
+      "state": "hm",
+      "source_sprite_id": 177,
+      "model_member": 76
+    },
+    {
+      "state": "water",
+      "source_sprite_id": 181,
+      "model_member": 78
+    },
+    {
+      "state": "fishing",
+      "source_sprite_id": 189,
+      "model_member": 80
+    },
+    {
+      "state": "pokégear",
+      "source_sprite_id": 197,
+      "model_member": 86
+    },
+    {
+      "state": "save",
+      "source_sprite_id": 199,
+      "model_member": 88
+    },
+    {
+      "state": "heal",
+      "source_sprite_id": 201,
+      "model_member": 90
+    },
+    {
+      "state": "ladder",
+      "source_sprite_id": 249,
+      "model_member": 82
+    },
+    {
+      "state": "rocket",
+      "source_sprite_id": 259,
+      "model_member": 96
+    },
+    {
+      "state": "rocket_save",
+      "source_sprite_id": 298,
+      "model_member": 249
+    },
+    {
+      "state": "pokéathlon",
+      "source_sprite_id": 408,
+      "model_member": 100
+    },
+    {
+      "state": "apricorn",
+      "source_sprite_id": 424,
+      "model_member": 208
+    }
+  ]
+}

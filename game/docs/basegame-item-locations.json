@@ -1,0 +1,797 @@
+{
+  "schema": "ultimate-gold-basegame-locations/v1",
+  "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+  "base_rom_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+  "checked_on": "2026-10-22",
+  "scope": "HGSS references plus report-pinned event/script and held-item comparisons. No gameplay or native acquisition was tested.",
+  "items": {
+    "412": {
+      "replace_unchanged_placeholder": true,
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-viridian-tm85",
+            "name": {
+              "en": "Viridian City, southwest",
+              "es": "Ciudad Verde, suroeste"
+            }
+          },
+          "method": {
+            "en": "The Alpha2 FIX6a Viridian event record and compiled item-gift script match retail. Native interaction and pickup were not tested.",
+            "es": "El registro de evento de Ciudad Verde y el script compilado que entrega el objeto coinciden entre Alpha2 FIX6a y la ROM comercial. No se probó la interacción ni la obtención en juego."
+          },
+          "status": "verified_event_script_static_no_gameplay",
+          "source": {
+            "title": "WikiDex: MT085, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/MT085",
+            "claim": "WikiDex gives the HGSS location; the pinned exact-ROM event/script comparison is static only and does not establish native collection."
+          },
+          "evidence": {
+            "scope": "verified_event_script_static_no_gameplay",
+            "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+            "base_rom_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+            "report": {
+              "path": "../data/qa-item-basegame-compare-batch1.json",
+              "sha256": "2bcfe0a5a73905a572530441b750d49305cd90054f8766549c10fbc22a9eecff"
+            },
+            "proof": {
+              "kind": "tm_event_comparison",
+              "item_id": 412
+            }
+          }
+        }
+      ]
+    },
+    "414": {
+      "replace_unchanged_placeholder": true,
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-olivine-lighthouse-tm87",
+            "name": {
+              "en": "Olivine Lighthouse, interior floor P3",
+              "es": "Faro de Olivo, planta interior P3"
+            }
+          },
+          "method": {
+            "en": "The Alpha2 FIX6a Olivine Lighthouse event record and compiled item-ball script match retail. Native pickup was not tested.",
+            "es": "El registro de evento del Faro de Olivo y el script compilado de la Poké Ball coinciden entre Alpha2 FIX6a y la ROM comercial. No se probó la recogida en juego."
+          },
+          "status": "verified_event_script_static_no_gameplay",
+          "source": {
+            "title": "WikiDex: Olivine Lighthouse, Generation IV items",
+            "author_reference": "https://www.wikidex.net/wiki/Faro_de_Olivo",
+            "claim": "WikiDex gives the HGSS location; the pinned exact-ROM event/script comparison is static only and does not establish native collection."
+          },
+          "evidence": {
+            "scope": "verified_event_script_static_no_gameplay",
+            "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+            "base_rom_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+            "report": {
+              "path": "../data/qa-item-basegame-compare-batch1.json",
+              "sha256": "2bcfe0a5a73905a572530441b750d49305cd90054f8766549c10fbc22a9eecff"
+            },
+            "proof": {
+              "kind": "tm_event_comparison",
+              "item_id": 414
+            }
+          }
+        }
+      ]
+    },
+    "415": {
+      "replace_unchanged_placeholder": true,
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-route40-tm88",
+            "name": {
+              "en": "Route 40, shore near Route 41",
+              "es": "Ruta 40, orilla próxima a la Ruta 41"
+            }
+          },
+          "method": {
+            "en": "The Alpha2 FIX6a Route 40 event record and compiled item-ball script match retail. Native pickup was not tested.",
+            "es": "El registro de evento de la Ruta 40 y el script compilado de la Poké Ball coinciden entre Alpha2 FIX6a y la ROM comercial. No se probó la recogida en juego."
+          },
+          "status": "verified_event_script_static_no_gameplay",
+          "source": {
+            "title": "WikiDex: Route 40, Generation IV items",
+            "author_reference": "https://www.wikidex.net/wiki/Ruta_40",
+            "claim": "WikiDex gives the HGSS location; the pinned exact-ROM event/script comparison is static only and does not establish native collection."
+          },
+          "evidence": {
+            "scope": "verified_event_script_static_no_gameplay",
+            "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+            "base_rom_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+            "report": {
+              "path": "../data/qa-item-basegame-compare-batch1.json",
+              "sha256": "2bcfe0a5a73905a572530441b750d49305cd90054f8766549c10fbc22a9eecff"
+            },
+            "proof": {
+              "kind": "tm_event_comparison",
+              "item_id": 415
+            }
+          }
+        }
+      ]
+    },
+    "87": {
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-paras-held-big-mushroom",
+            "name": {
+              "en": "Wild Paras / Parasect",
+              "es": "Paras / Parasect salvajes"
+            }
+          },
+          "method": {
+            "en": "HGSS references give wild Paras and Parasect a 5% base chance to carry Big Mushroom. Alpha2 FIX6a item2 data matches retail; the target chance, encounters, and native capture were not tested.",
+            "es": "Las referencias de HGSS asignan a Paras y Parasect salvajes una probabilidad base del 5 % de llevar Seta Grande. El espacio item2 de Alpha2 FIX6a coincide con la ROM comercial; no se probaron en el objetivo la probabilidad, los encuentros ni la captura nativa."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Big Mushroom, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Seta_Grande",
+            "claim": "Base-game renewable method, not a verified pickup or wild encounter in Ultimate Gold."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-held-big-mushroom-static",
+            "name": {
+              "en": "Wild Paras / Parasect (held-item data)",
+              "es": "Paras / Parasect salvajes (objeto equipado)"
+            }
+          },
+          "method": {
+            "en": "Alpha2 FIX6a personal data assigns Big Mushroom to item2 for Paras and Parasect, matching retail. Encounter availability, locations, and native capture were not tested.",
+            "es": "Los datos personales de Alpha2 FIX6a asignan Seta Grande al espacio item2 de Paras y Parasect, igual que la ROM comercial. No se comprobaron encuentros, ubicaciones ni capturas en juego."
+          },
+          "status": "verified_held_item_data_static",
+          "source": {
+            "title": "Alpha2 FIX6a personal-data comparison",
+            "claim": "Static item-slot comparison only; does not establish encounter tables, location, or native capture."
+          },
+          "evidence": {
+            "scope": "verified_held_item_data_static",
+            "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+            "base_rom_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+            "report": {
+              "path": "../data/qa-item-basegame-compare-batch1.json",
+              "sha256": "2bcfe0a5a73905a572530441b750d49305cd90054f8766549c10fbc22a9eecff"
+            },
+            "proof": {
+              "kind": "held_item_data",
+              "item_id": 87,
+              "species_ids": [
+                46,
+                47
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "88": {
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-cliff-cave-pearl",
+            "name": {
+              "en": "Cliff Cave",
+              "es": "Cueva Acantilado"
+            }
+          },
+          "method": {
+            "en": "HGSS references Pearl from Rock Smash here. The target rock-item table and native acquisition remain unverified.",
+            "es": "Las referencias de HGSS sitúan Perla aquí mediante Golpe Roca. La tabla de objetos de rocas y la obtención nativa en esta ROM siguen sin verificarse."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Pearl, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Perla_(objeto)",
+            "claim": "HGSS rock-smash reference only. Does not establish unchanged target loot tables."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-shellder-held-pearl-static",
+            "name": {
+              "en": "Wild Shellder (held-item data)",
+              "es": "Shellder salvaje (objeto equipado)"
+            }
+          },
+          "method": {
+            "en": "Alpha2 FIX6a personal data assigns Pearl to Shellder item1, matching retail. Encounter availability, locations, and native capture were not tested.",
+            "es": "Los datos personales de Alpha2 FIX6a asignan Perla al espacio item1 de Shellder, igual que la ROM comercial. No se comprobaron encuentros, ubicaciones ni capturas en juego."
+          },
+          "status": "verified_held_item_data_static",
+          "source": {
+            "title": "Alpha2 FIX6a personal-data comparison",
+            "claim": "Static item-slot comparison only; does not establish encounter tables, location, or native capture."
+          },
+          "evidence": {
+            "scope": "verified_held_item_data_static",
+            "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+            "base_rom_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+            "report": {
+              "path": "../data/qa-item-basegame-compare-batch1.json",
+              "sha256": "2bcfe0a5a73905a572530441b750d49305cd90054f8766549c10fbc22a9eecff"
+            },
+            "proof": {
+              "kind": "held_item_data",
+              "item_id": 88,
+              "species_ids": [
+                90
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "89": {
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-held-big-pearl",
+            "name": {
+              "en": "Wild Shellder / Gulpin / Clamperl",
+              "es": "Shellder / Gulpin / Clamperl salvajes"
+            }
+          },
+          "method": {
+            "en": "HGSS references give wild Shellder, Gulpin, and Clamperl a 5% base chance to carry Big Pearl. Alpha2 FIX6a item2 data matches retail; the target chance, encounters, and native capture were not tested.",
+            "es": "Las referencias de HGSS asignan a Shellder, Gulpin y Clamperl salvajes una probabilidad base del 5 % de llevar Perla Grande. El espacio item2 de Alpha2 FIX6a coincide con la ROM comercial; no se probaron en el objetivo la probabilidad, los encuentros ni la captura nativa."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Big Pearl, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Perla_grande",
+            "claim": "HGSS renewable method only; no target-ROM or native-capture claim."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-held-big-pearl-static",
+            "name": {
+              "en": "Wild Shellder / Gulpin / Clamperl (held-item data)",
+              "es": "Shellder / Gulpin / Clamperl salvajes (objeto equipado)"
+            }
+          },
+          "method": {
+            "en": "Alpha2 FIX6a personal data assigns Big Pearl to item2 for Shellder, Gulpin, and Clamperl, matching retail. Encounter availability, locations, and native capture were not tested.",
+            "es": "Los datos personales de Alpha2 FIX6a asignan Perla Grande al espacio item2 de Shellder, Gulpin y Clamperl, igual que la ROM comercial. No se comprobaron encuentros, ubicaciones ni capturas en juego."
+          },
+          "status": "verified_held_item_data_static",
+          "source": {
+            "title": "Alpha2 FIX6a personal-data comparison",
+            "claim": "Static item-slot comparison only; does not establish encounter tables, location, or native capture."
+          },
+          "evidence": {
+            "scope": "verified_held_item_data_static",
+            "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+            "base_rom_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+            "report": {
+              "path": "../data/qa-item-basegame-compare-batch1.json",
+              "sha256": "2bcfe0a5a73905a572530441b750d49305cd90054f8766549c10fbc22a9eecff"
+            },
+            "proof": {
+              "kind": "held_item_data",
+              "item_id": 89,
+              "species_ids": [
+                90,
+                316,
+                366
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "90": {
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-staryu-held-stardust",
+            "name": {
+              "en": "Wild Staryu",
+              "es": "Staryu salvajes"
+            }
+          },
+          "method": {
+            "en": "HGSS references give wild Staryu a 50% base chance to carry Stardust. Alpha2 FIX6a item1 data matches retail; the target chance, encounters, and native capture were not tested.",
+            "es": "Las referencias de HGSS asignan a Staryu salvaje una probabilidad base del 50 % de llevar Polvo Estelar. El espacio item1 de Alpha2 FIX6a coincide con la ROM comercial; no se probaron en el objetivo la probabilidad, los encuentros ni la captura nativa."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Stardust, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Polvo_estrella",
+            "claim": "HGSS renewable method only. No target encounter or acquisition was tested."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-staryu-held-stardust-static",
+            "name": {
+              "en": "Wild Staryu (held-item data)",
+              "es": "Staryu salvaje (objeto equipado)"
+            }
+          },
+          "method": {
+            "en": "Alpha2 FIX6a personal data assigns Stardust to Staryu item1, matching retail. Encounter availability, locations, and native capture were not tested.",
+            "es": "Los datos personales de Alpha2 FIX6a asignan Polvo Estelar al espacio item1 de Staryu, igual que la ROM comercial. No se comprobaron encuentros, ubicaciones ni capturas en juego."
+          },
+          "status": "verified_held_item_data_static",
+          "source": {
+            "title": "Alpha2 FIX6a personal-data comparison",
+            "claim": "Static item-slot comparison only; does not establish encounter tables, location, or native capture."
+          },
+          "evidence": {
+            "scope": "verified_held_item_data_static",
+            "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+            "base_rom_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+            "report": {
+              "path": "../data/qa-item-basegame-compare-batch1.json",
+              "sha256": "2bcfe0a5a73905a572530441b750d49305cd90054f8766549c10fbc22a9eecff"
+            },
+            "proof": {
+              "kind": "held_item_data",
+              "item_id": 90,
+              "species_ids": [
+                120
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "91": {
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-goldenrod-tunnel-bargain-shop",
+            "name": {
+              "en": "Goldenrod Tunnel bargain shop",
+              "es": "Tienda de gangas del Túnel Trigal"
+            }
+          },
+          "method": {
+            "en": "Monday morning; P¥4,600.",
+            "es": "Lunes por la mañana; P¥4.600."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Fragmento Estrella/Trozo de Estrella, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Trozo_estrella",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-rock-smash",
+            "name": {
+              "en": "Rock Smash (most locations)",
+              "es": "Golpe Roca (la mayoría de las zonas)"
+            }
+          },
+          "method": {
+            "en": "Rock Smash; excludes Ruins of Alph and Cliff Cave.",
+            "es": "Golpe Roca; excepto Ruinas Alfa y Cueva Acantilado."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Fragmento Estrella/Trozo de Estrella, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Trozo_estrella",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-ruins-of-alph-omanyte-room",
+            "name": {
+              "en": "Ruins of Alph, secret Omanyte room",
+              "es": "Ruinas Alfa, sala secreta del panel de Omanyte"
+            }
+          },
+          "method": {
+            "en": "Secret room; Water Stone via Union Cave.",
+            "es": "Sala secreta; Piedra Agua por Cueva Unión."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Fragmento Estrella/Trozo de Estrella, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Trozo_estrella",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-route-27-jose-phone-gift",
+            "name": {
+              "en": "Route 27, Bird Keeper José phone gift",
+              "es": "Ruta 27, llamada-regalo del Ornitólogo José"
+            }
+          },
+          "method": {
+            "en": "Pokégear call gift.",
+            "es": "Regalo por llamada del Pokégear."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Fragmento Estrella/Trozo de Estrella, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Trozo_estrella",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-staryu-held",
+            "name": {
+              "en": "Wild Staryu (held item)",
+              "es": "Staryu salvajes (objeto equipado)"
+            }
+          },
+          "method": {
+            "en": "Held item; HGSS 5% reference.",
+            "es": "Objeto equipado; referencia HGSS del 5%."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Fragmento Estrella/Trozo de Estrella, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Trozo_estrella",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-pokewalker-courses",
+            "name": {
+              "en": "Pokéwalker courses",
+              "es": "Rutas del Pokéwalker"
+            }
+          },
+          "method": {
+            "en": "Rocky Road, Blue Sea, Night Sky’s Edge, Amity Meadow.",
+            "es": "Rocky Road, Blue Sea, Night Sky’s Edge, Amity Meadow."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Fragmento Estrella/Trozo de Estrella, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Trozo_estrella",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        }
+      ]
+    },
+    "92": {
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-goldenrod-tunnel-bargain-shop",
+            "name": {
+              "en": "Goldenrod Tunnel bargain shop",
+              "es": "Tienda de gangas del Túnel Trigal"
+            }
+          },
+          "method": {
+            "en": "Monday morning; P¥4,500.",
+            "es": "Lunes por la mañana; P¥4.500."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Pepita de oro, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Pepita",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-goldenrod-radio-tower-blue-card",
+            "name": {
+              "en": "Goldenrod Radio Tower, Blue Card exchange",
+              "es": "Torre Radio de Ciudad Trigal, canje de Tarjeta Azul"
+            }
+          },
+          "method": {
+            "en": "20 Blue Card points.",
+            "es": "20 puntos de la Tarjeta Azul."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Pepita de oro, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Pepita",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-battle-frontier-scratch-off",
+            "name": {
+              "en": "Battle Frontier Scratch-Off stand",
+              "es": "Puesto del Rasca y Gana del Frente Batalla"
+            }
+          },
+          "method": {
+            "en": "Possible prize.",
+            "es": "Premio posible."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Pepita de oro, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Pepita",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-route-25-cooltrainer",
+            "name": {
+              "en": "Route 25 tree maze",
+              "es": "Laberinto arbolado de la Ruta 25"
+            }
+          },
+          "method": {
+            "en": "Gift after defeating six trainers.",
+            "es": "Regalo tras vencer a seis entrenadores."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Pepita de oro, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Pepita",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-cerulean-cave",
+            "name": {
+              "en": "Cerulean Cave",
+              "es": "Cueva Celeste"
+            }
+          },
+          "method": {
+            "en": "Two listed.",
+            "es": "Dos unidades indicadas."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Pepita de oro, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Pepita",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-route-48",
+            "name": {
+              "en": "Route 48",
+              "es": "Ruta 48"
+            }
+          },
+          "method": {
+            "en": "One listed.",
+            "es": "Una unidad indicada."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Pepita de oro, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Pepita",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-grimer-muk-held",
+            "name": {
+              "en": "Wild Grimer / Muk (held item)",
+              "es": "Grimer / Muk salvajes (objeto equipado)"
+            }
+          },
+          "method": {
+            "en": "Held item; HGSS 5% reference.",
+            "es": "Objeto equipado; referencia HGSS del 5%."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Pepita de oro, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Pepita",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-pickup-level-1-20",
+            "name": {
+              "en": "Pickup ability, levels 1–20",
+              "es": "Habilidad Recogida, niveles 1–20"
+            }
+          },
+          "method": {
+            "en": "Pickup, levels 1–20; HGSS 1% reference.",
+            "es": "Recogida, niveles 1–20; referencia HGSS del 1%."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Pepita de oro, HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Pepita",
+            "claim": "HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM."
+          }
+        }
+      ]
+    },
+    "93": {
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-wild-luvdisc-heart-scale",
+            "name": {
+              "en": "Wild Luvdisc (held item)",
+              "es": "Luvdisc salvaje (objeto equipado)"
+            }
+          },
+          "method": {
+          "en": "HGSS reference: 50%. Target personal data lists Heart Scale in both held-item slots; encounter and runtime probability remain untested.",
+          "es": "Referencia HGSS: 50 %. Los datos del objetivo indican Escama Corazón en ambos campos de objeto equipado; faltan comprobar encuentro y probabilidad en juego."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Escama Corazón (Heart Scale), HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Escama_Coraz%C3%B3n",
+            "claim": "HGSS reference only; the Luvdisc rate is not asserted for the target ROM, and no encounter or native acquisition is verified."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-pokeathlon-heart-scale",
+            "name": {
+              "en": "Pokéathlon Dome Athlete Shop",
+              "es": "Tienda de Atletas del Pokéathlon"
+            }
+          },
+          "method": {
+            "en": "1,000 points on Wednesday or Sunday.",
+            "es": "1.000 puntos los miércoles o domingos."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Escama Corazón (Heart Scale), HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Escama_Coraz%C3%B3n",
+            "claim": "HGSS reference only; no native target shop stock or acquisition is verified."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-route-32-heart-scale-rock",
+            "name": {
+              "en": "Route 32, rock near the bridge",
+              "es": "Ruta 32, roca junto al puente"
+            }
+          },
+          "method": {
+            "en": "Hidden item; requires Surf.",
+            "es": "Objeto oculto; requiere Surf."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Escama Corazón (Heart Scale), HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Escama_Coraz%C3%B3n",
+            "claim": "HGSS reference only; no native target event or pickup is verified."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-vermilion-ship-heart-scale",
+            "name": {
+              "en": "Ship at Vermilion City",
+              "es": "Barco de Ciudad Carmín"
+            }
+          },
+          "method": {
+            "en": "Hidden item aboard the ship.",
+            "es": "Objeto oculto a bordo del barco."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Escama Corazón (Heart Scale), HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Escama_Coraz%C3%B3n",
+            "claim": "HGSS reference only; no native target event or pickup is verified."
+          }
+        }
+      ]
+    },
+    "229": {
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-wild-geodude-graveler-everstone",
+            "name": {
+              "en": "Wild Geodude / Graveler (held item)",
+              "es": "Geodude / Graveler salvajes (objeto equipado)"
+            }
+          },
+          "method": {
+            "en": "Held item; 5% HGSS reference.",
+            "es": "Objeto equipado; referencia HGSS del 5 %."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Piedra Eterna (Everstone), HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Piedra_eterna",
+            "claim": "HGSS reference only; the listed rate is not asserted for the target ROM, and no encounter or native acquisition is verified."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-new-bark-elm-togepi-everstone",
+            "name": {
+              "en": "Professor Elm, New Bark Town",
+              "es": "Profesor Elm, Pueblo Primavera"
+            }
+          },
+          "method": {
+            "en": "Gift after showing him the hatched Togepi.",
+            "es": "Regalo al mostrarle el Togepi recién nacido."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Piedra Eterna (Everstone), HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Piedra_eterna",
+            "claim": "HGSS reference only; no native target event or gift is verified."
+          }
+        },
+        {
+          "location": {
+            "id": "hgss-route-25-bill-grandfather-everstone",
+            "name": {
+              "en": "Bill's grandfather, Route 25 (HeartGold)",
+              "es": "Abuelo de Bill, Ruta 25 (HeartGold)"
+            }
+          },
+          "method": {
+            "en": "Gift for showing Jigglypuff; HeartGold only.",
+            "es": "Regalo por mostrarle un Jigglypuff; solo HeartGold."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Piedra Eterna (Everstone), HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Piedra_eterna",
+            "claim": "HeartGold reference only; no native target event or gift is verified."
+          }
+        }
+      ]
+    },
+    "234": {
+      "acquisition": [
+        {
+          "location": {
+            "id": "hgss-wild-snorlax-leftovers",
+            "name": {
+              "en": "Wild Snorlax (held item)",
+              "es": "Snorlax salvaje (objeto equipado)"
+            }
+          },
+          "method": {
+            "en": "Held item; 100% HGSS reference.",
+            "es": "Objeto equipado; referencia HGSS del 100 %."
+          },
+          "status": "documented_base_game",
+          "source": {
+            "title": "WikiDex: Restos (Leftovers), HGSS",
+            "author_reference": "https://www.wikidex.net/wiki/Restos",
+            "claim": "HGSS reference only; the listed rate is not asserted for the target ROM, and no encounter or native acquisition is verified."
+          }
+        }
+      ]
+    }
+  },
+  "comparison_evidence": {
+    "report_file": "qa-item-basegame-compare-batch1.json",
+    "report_sha256": "2bcfe0a5a73905a572530441b750d49305cd90054f8766549c10fbc22a9eecff",
+    "schema": "sacred-gold-item-basegame-static-compare/v1",
+    "status": "STATIC_COMPARE_COMPLETE_NO_GAMEPLAY",
+    "base_rom_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+    "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+  }
+}

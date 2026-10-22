@@ -1,0 +1,203 @@
+{
+  "schema": "ultimate-gold-item-icon-evidence/v1",
+  "target_sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+  "archive": {
+    "path": "a/0/1/8",
+    "sha256": "ecd4094ed4b324fbbdb83278ed65e6b41dbd0061e64c0078f7872be9654c43ec",
+    "members": 797
+  },
+  "cell": {
+    "member": 1,
+    "sha256": "dc7e275467c4ae23635cde791bbf1268d8e7f10613324f118388d4694b83c3f8"
+  },
+  "mapping_source": "night-sprint/engine/upstream/pokeheartgold/src/item.c",
+  "converter": "upstream pokeheartgold/tools/nitrogfx: NCGR + NCLR + shared NCER cell, 4bpp object transparency",
+  "items": {
+    "113": {
+      "name": {
+        "en": "TM Refill",
+        "es": "Recarga MT"
+      },
+      "mapping": "ITEM_UNUSED_113",
+      "ncgr": 793,
+      "nclr": 794,
+      "asset_status": "rom_placeholder",
+      "ncgr_sha256": "289c5ebfda10d7cae05ed8ccc8cfc0d1a92f8d41caff9f639e55511ca0155dd4",
+      "nclr_sha256": "bb0f4449f193fbf3967b6da3f2a1876ae79821d8a07ca3e9fa005b42c73de0c0",
+      "asset": "web/sprites/items/113.png",
+      "sprite": "../sprites/items/113.png",
+      "png_sha256": "70c3c76a768aafca864e1594e7ea02ccb77e1cd81979cf23b4ce86da2098b538",
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    "433": {
+      "name": {
+        "en": "Woodland Ore",
+        "es": "Mineral Bosque"
+      },
+      "mapping": "ITEM_JOURNAL",
+      "ncgr": 606,
+      "nclr": 607,
+      "asset_status": "rom_extracted",
+      "ncgr_sha256": "1be703b310b579e60b44968e1955cc6d3dbf7d72d211bf377dc05e5305dc58cc",
+      "nclr_sha256": "57bfb24afec2a5aeb2d0b318590e2bc18b20a8c682144398c66b89ae2d73cca4",
+      "asset": "web/sprites/items/433.png",
+      "sprite": "../sprites/items/433.png",
+      "png_sha256": "9d935a456e3ed8346c71b353f17101d82db72034022e1d8a7ff39a8ba4a37bd3",
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    "436": {
+      "name": {
+        "en": "Serenade Orb",
+        "es": "Orbe Serenata"
+      },
+      "mapping": "ITEM_SEAL_BAG",
+      "ncgr": 673,
+      "nclr": 674,
+      "asset_status": "rom_extracted",
+      "ncgr_sha256": "8ddff7fa1d413054fdfb2e54d69a0941c4d84895e5fe68b0b4989c7155311056",
+      "nclr_sha256": "d2a591a2bac5f16c4c87880abee45dd3c36247e6c83919ee75db9345db641f1d",
+      "asset": "web/sprites/items/436.png",
+      "sprite": "../sprites/items/436.png",
+      "png_sha256": "66f03c6fa3b6a95b17dd43248f2c9b6821688cc1595f873d2ff8941040e15061",
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    "438": {
+      "name": {
+        "en": "Aubade Orb",
+        "es": "Orbe Alba"
+      },
+      "mapping": "ITEM_WORKS_KEY",
+      "ncgr": 644,
+      "nclr": 645,
+      "asset_status": "rom_extracted",
+      "ncgr_sha256": "8ddff7fa1d413054fdfb2e54d69a0941c4d84895e5fe68b0b4989c7155311056",
+      "nclr_sha256": "d084d63322ee37f1b0d36afa97a27bb4624c8f1ae15127d328d9cabe64653c40",
+      "asset": "web/sprites/items/438.png",
+      "sprite": "../sprites/items/438.png",
+      "png_sha256": "72c69b20ba1787d059d2b7168d47b4b218369f19e94675eb9a3ae64940149595",
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    "439": {
+      "name": {
+        "en": "Chilled Ore",
+        "es": "Mineral Gélido"
+      },
+      "mapping": "ITEM_OLD_CHARM",
+      "ncgr": 604,
+      "nclr": 605,
+      "asset_status": "rom_extracted",
+      "ncgr_sha256": "1be703b310b579e60b44968e1955cc6d3dbf7d72d211bf377dc05e5305dc58cc",
+      "nclr_sha256": "e01f1297064310b177f0dd11421f7d1bf323504a8a145f2521f4ac640dc87df7",
+      "asset": "web/sprites/items/439.png",
+      "sprite": "../sprites/items/439.png",
+      "png_sha256": "0f27afbb507474b996a7e2acf6ddac52ce71967b93bb0ca9d8b733b0748e85fb",
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    "454": {
+      "name": {
+        "en": "Voltaic Ore",
+        "es": "Mineral Voltaico"
+      },
+      "mapping": "ITEM_MEMBER_CARD",
+      "ncgr": 608,
+      "nclr": 609,
+      "asset_status": "rom_extracted",
+      "ncgr_sha256": "1be703b310b579e60b44968e1955cc6d3dbf7d72d211bf377dc05e5305dc58cc",
+      "nclr_sha256": "590977588c15bf7deb404114bd5824f9ab21afa63b24869dbcd204bd8ae3ed4f",
+      "asset": "web/sprites/items/454.png",
+      "sprite": "../sprites/items/454.png",
+      "png_sha256": "856094cbe660b709d4085e869d44f51fbe5f5e079b845083fdf01189803987f1",
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    "467": {
+      "name": {
+        "en": "Covenant Orb",
+        "es": "Orbe Pacto"
+      },
+      "mapping": "ITEM_SECRET_KEY",
+      "ncgr": 705,
+      "nclr": 706,
+      "asset_status": "rom_extracted",
+      "ncgr_sha256": "8ddff7fa1d413054fdfb2e54d69a0941c4d84895e5fe68b0b4989c7155311056",
+      "nclr_sha256": "42e2bb5742539521ee012ce64c283fc51e7ee123e689273478eb29e083a35163",
+      "asset": "web/sprites/items/467.png",
+      "sprite": "../sprites/items/467.png",
+      "png_sha256": "0f35f9cd34ea4446008da79079b600df9426eafc2d4a8034b633ba90ff5de856",
+      "dimensions": [
+        32,
+        32
+      ]
+    }
+  },
+  "additional_targets": {
+    "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6": {
+      "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+      "source_report": {
+        "path": "docs/qa-alpha2-build.json",
+        "sha256": "12f76a7c3afff0942ea7bc920fda4c0c45341c162d80f60627b8bba5787301a3"
+      },
+      "items": {
+        "114": {
+          "name": {
+            "en": "Party Healer",
+            "es": "Curador del equipo"
+          },
+          "mapping": "ITEM_UNUSED_114",
+          "data_member": 516,
+          "ncgr": 793,
+          "nclr": 794,
+          "asset_status": "rom_placeholder",
+          "ncgr_sha256": "289c5ebfda10d7cae05ed8ccc8cfc0d1a92f8d41caff9f639e55511ca0155dd4",
+          "nclr_sha256": "bb0f4449f193fbf3967b6da3f2a1876ae79821d8a07ca3e9fa005b42c73de0c0",
+          "asset": "web/sprites/items/113.png",
+          "sprite": "../sprites/items/113.png",
+          "png_sha256": "70c3c76a768aafca864e1594e7ea02ccb77e1cd81979cf23b4ce86da2098b538",
+          "dimensions": [
+            32,
+            32
+          ],
+          "alias_item_id": 113
+        },
+        "118": {
+          "name": {
+            "en": "Cheat Kit",
+            "es": "Kit de trucos"
+          },
+          "mapping": "ITEM_UNUSED_118",
+          "data_member": 515,
+          "ncgr": 793,
+          "nclr": 794,
+          "asset_status": "rom_placeholder",
+          "ncgr_sha256": "289c5ebfda10d7cae05ed8ccc8cfc0d1a92f8d41caff9f639e55511ca0155dd4",
+          "nclr_sha256": "bb0f4449f193fbf3967b6da3f2a1876ae79821d8a07ca3e9fa005b42c73de0c0",
+          "asset": "web/sprites/items/113.png",
+          "sprite": "../sprites/items/113.png",
+          "png_sha256": "70c3c76a768aafca864e1594e7ea02ccb77e1cd81979cf23b4ce86da2098b538",
+          "dimensions": [
+            32,
+            32
+          ],
+          "alias_item_id": 113
+        }
+      }
+    }
+  }
+}

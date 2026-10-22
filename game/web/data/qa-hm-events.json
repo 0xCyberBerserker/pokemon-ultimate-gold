@@ -1,0 +1,3935 @@
+{
+  "schema": "ultimate-gold-hm-event-narc-audit/v1",
+  "audit_script": {
+    "path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/hm_exact_events.py",
+    "sha256": "17ea794f860bf7d9e9f511d4022dbfda8688e1e2720d54ee60e5f72c7fdf6dba"
+  },
+  "scope": "Static exact-ROM extraction only; no emulator, runner, or save was used.",
+  "rom": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix5.nds",
+    "sha256": "2a1b5acac2e98e3bc0d18f600b7d91eb1e8298fdd436d132706e175bebf97c7f"
+  },
+  "parser": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/fairy-speedup/analyze.py",
+    "sha256": "dda02b05f32482881e86cf75d4cd6661d3eae14b098a192eb8aae9811e484245",
+    "kind": "existing local NDS/BLZ/NARC reader"
+  },
+  "event_narc": {
+    "path_in_rom": "a/0/3/2",
+    "sha256": "a72688a68f2683bba77e6ba1582247c5d3a8ef4c958c817d919601824c639606",
+    "bank_count": 491
+  },
+  "map_names": {
+    "path_in_rom": "fielddata/maptable/mapname.bin",
+    "sha256": "553944fa1a316e32dc1f559141d7d3bf630c382a70a6098e0cdf1d1236c7c285",
+    "record_size": 16
+  },
+  "map_header_pin": {
+    "arm9_decompressed_offset": 1010656,
+    "entry_size": 24,
+    "events_bank_offset": 16,
+    "source": "existing local map-header table pin; map IDs resolved from exact FIX5 mapname.bin",
+    "pin_source_path": "@HOME@/Games/Sacred-Gold/project/tools/build_trainer_locations.py",
+    "pin_source_sha256": "42542bc46e2f1a895acb19c16b505f60a63835776bdc0db7d07e8b66bf364b5c",
+    "structure_source_path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/map_header.h",
+    "structure_source_sha256": "326f080515450519b49bf2b62b3cfba86490a63b305d712cba3d3a4b36ac1074"
+  },
+  "event_record_layout": {
+    "background_count_offset": 0,
+    "background_record_size": 20,
+    "object_record_size": 32,
+    "object_record_format": "<6Hh3H2h2Hi",
+    "fields": [
+      "object_id",
+      "model_id",
+      "movement",
+      "type",
+      "event_flag",
+      "script_id",
+      "facing",
+      "param0",
+      "param1",
+      "param2",
+      "x_range",
+      "y_range",
+      "x",
+      "z",
+      "y"
+    ]
+  },
+  "coordinate_semantics": {
+    "event_local_to_runtime_map_tile": "identity: Event ObjectEvent.x/z are read from the ROM record and used to initialize runtime object x/z without a map-origin translation",
+    "runtime_tile_center_units": "(16*x+8, 16*z+8), before fixed-point conversion",
+    "cross_map_world_origin": "not inferred; these are per-map field coordinates",
+    "source_paths": [
+      "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/map_events_internal.h",
+      "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/src/map_events.c",
+      "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/src/map_object.c"
+    ],
+    "source_sha256": {
+      "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/include/map_events_internal.h": "470228f46460147534f0604a45a86047c30510d8d95f92bd5f649a842f1c94c4",
+      "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/src/map_events.c": "ca7ae292989ee6ee51888b56acc73848a3842c83a86ac9da02e18c08a609fa3b",
+      "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/src/map_object.c": "acc2d341c88a4a0f78f852e61fc8ec6c61b15cadee57b128528e6a166e4d15f2"
+    }
+  },
+  "decomp_reference": {
+    "kind": "local vanilla decomp labels and expected coordinates only; not treated as FIX5 ROM data"
+  },
+  "maps": [
+    {
+      "map_name_token": "R29",
+      "map_title": "Route 29",
+      "map_id": 33,
+      "map_header_offset": 1011448,
+      "map_header_bytes_hex": "01020f000000e100d6017501040404041e00b1b3000208f6",
+      "map_header_sha256": "5ccfc163fb6932e7b64a6afb14b109336a89928bdbca8f1f26cef2ee904c3f2f",
+      "matrix_id": 0,
+      "event_bank": 30,
+      "event_bank_sha256": "853cef019ebd4091b669970c90f0e73147e8e3d2207f5597bb8b011630205e39",
+      "event_bank_size": 468,
+      "bg_event_count": 3,
+      "object_event_count": 11,
+      "decomp_event_source_path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/030_R29.json",
+      "decomp_event_source_sha256": "767eabf0f1b92e10b562b5d1601df0bef69e822173c03c409c2d32ca3a50ec1a",
+      "targets": [
+        {
+          "expected_decomp_reference": {
+            "id": "obj_R29_tree",
+            "sprite": "SPRITE_TREE",
+            "script": "std_field_cut",
+            "source_xy": [
+              629,
+              401
+            ]
+          },
+          "exact_rom_record": {
+            "record_index": 4,
+            "object_id": 4,
+            "model_id": 86,
+            "event_flag": 16,
+            "script_id": 10000,
+            "event_local_tile_xz": [
+              6666,
+              6666
+            ],
+            "runtime_map_tile_xz": [
+              6666,
+              6666
+            ],
+            "runtime_tile_center_units": [
+              106664,
+              106664
+            ],
+            "vanilla_decomp_reference_only": {
+              "object_label": "obj_R29_tree",
+              "model_label": "SPRITE_TREE",
+              "script_label": "std_field_cut",
+              "coords_xz": [
+                629,
+                401
+              ]
+            }
+          },
+          "position_matches_reference": false,
+          "coordinate_delta_from_decomp": [
+            6037,
+            6265
+          ],
+          "static_status": "ROW_PRESENT_COORDINATES_DIFFER"
+        },
+        {
+          "expected_decomp_reference": {
+            "id": "obj_R29_tree_2",
+            "sprite": "SPRITE_TREE",
+            "script": "std_field_cut",
+            "source_xy": [
+              619,
+              405
+            ]
+          },
+          "exact_rom_record": {
+            "record_index": 5,
+            "object_id": 5,
+            "model_id": 86,
+            "event_flag": 17,
+            "script_id": 10000,
+            "event_local_tile_xz": [
+              6666,
+              6666
+            ],
+            "runtime_map_tile_xz": [
+              6666,
+              6666
+            ],
+            "runtime_tile_center_units": [
+              106664,
+              106664
+            ],
+            "vanilla_decomp_reference_only": {
+              "object_label": "obj_R29_tree_2",
+              "model_label": "SPRITE_TREE",
+              "script_label": "std_field_cut",
+              "coords_xz": [
+                619,
+                405
+              ]
+            }
+          },
+          "position_matches_reference": false,
+          "coordinate_delta_from_decomp": [
+            6047,
+            6261
+          ],
+          "static_status": "ROW_PRESENT_COORDINATES_DIFFER"
+        }
+      ],
+      "same_map_anchors": [
+        {
+          "purpose": "actual positioned event object in the same map",
+          "exact_rom_record": {
+            "record_index": 10,
+            "object_id": 10,
+            "model_id": 326,
+            "event_flag": 519,
+            "script_id": 4,
+            "event_local_tile_xz": [
+              629,
+              405
+            ],
+            "runtime_map_tile_xz": [
+              629,
+              405
+            ],
+            "runtime_tile_center_units": [
+              10072,
+              6488
+            ],
+            "vanilla_decomp_reference_only": {
+              "object_label": "obj_R29_gswoman2_2",
+              "model_label": "SPRITE_GSWOMAN2",
+              "script_label": "_EV_scr_seq_R29_003 + 1",
+              "coords_xz": [
+                629,
+                405
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "map_name_token": "R32",
+      "map_title": "Route 32",
+      "map_id": 36,
+      "map_header_offset": 1011520,
+      "map_header_bytes_hex": "08030f000000e800dd017c01060406042100b4b3000208f6",
+      "map_header_sha256": "4ec0e8138070ca43e0e17a9244dcb1210a202ffdb05061cc39fee521fe6d49c6",
+      "matrix_id": 0,
+      "event_bank": 33,
+      "event_bank_sha256": "f5470083ce539268214e32f89cbeb8de6ea049ab2c52e8a9a9b249cc394c9e53",
+      "event_bank_size": 808,
+      "bg_event_count": 6,
+      "object_event_count": 19,
+      "decomp_event_source_path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/033_R32.json",
+      "decomp_event_source_sha256": "a43b9b78a39658c575c47dc84bb772ad8a0a18ecbbe3a8c3800a1575ea339a77",
+      "targets": [
+        {
+          "expected_decomp_reference": {
+            "id": "obj_R32_tree",
+            "sprite": "SPRITE_TREE",
+            "script": "std_field_cut",
+            "source_xy": [
+              462,
+              320
+            ]
+          },
+          "exact_rom_record": {
+            "record_index": 2,
+            "object_id": 2,
+            "model_id": 86,
+            "event_flag": 16,
+            "script_id": 10000,
+            "event_local_tile_xz": [
+              0,
+              0
+            ],
+            "runtime_map_tile_xz": [
+              0,
+              0
+            ],
+            "runtime_tile_center_units": [
+              8,
+              8
+            ],
+            "vanilla_decomp_reference_only": {
+              "object_label": "obj_R32_tree",
+              "model_label": "SPRITE_TREE",
+              "script_label": "std_field_cut",
+              "coords_xz": [
+                462,
+                320
+              ]
+            }
+          },
+          "position_matches_reference": false,
+          "coordinate_delta_from_decomp": [
+            -462,
+            -320
+          ],
+          "static_status": "ROW_PRESENT_COORDINATES_DIFFER"
+        },
+        {
+          "expected_decomp_reference": {
+            "id": "obj_R32_breakrock",
+            "sprite": "SPRITE_BREAKROCK",
+            "script": "std_field_rock_smash",
+            "source_xy": [
+              471,
+              439
+            ]
+          },
+          "exact_rom_record": {
+            "record_index": 15,
+            "object_id": 15,
+            "model_id": 85,
+            "event_flag": 16,
+            "script_id": 10001,
+            "event_local_tile_xz": [
+              0,
+              0
+            ],
+            "runtime_map_tile_xz": [
+              0,
+              0
+            ],
+            "runtime_tile_center_units": [
+              8,
+              8
+            ],
+            "vanilla_decomp_reference_only": {
+              "object_label": "obj_R32_breakrock",
+              "model_label": "SPRITE_BREAKROCK",
+              "script_label": "std_field_rock_smash",
+              "coords_xz": [
+                471,
+                439
+              ]
+            }
+          },
+          "position_matches_reference": false,
+          "coordinate_delta_from_decomp": [
+            -471,
+            -439
+          ],
+          "static_status": "ROW_PRESENT_COORDINATES_DIFFER"
+        }
+      ],
+      "same_map_anchors": [
+        {
+          "purpose": "actual positioned event object near the source rock coordinate",
+          "exact_rom_record": {
+            "record_index": 17,
+            "object_id": 17,
+            "model_id": 87,
+            "event_flag": 1239,
+            "script_id": 7063,
+            "event_local_tile_xz": [
+              475,
+              439
+            ],
+            "runtime_map_tile_xz": [
+              475,
+              439
+            ],
+            "runtime_tile_center_units": [
+              7608,
+              7032
+            ],
+            "vanilla_decomp_reference_only": {
+              "object_label": "obj_R32_monstarball_4",
+              "model_label": "SPRITE_MONSTARBALL",
+              "script_label": "std_itemball_r32_shell_bell",
+              "coords_xz": [
+                475,
+                439
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "map_name_token": "D42R0102",
+      "map_title": "Dark Cave Route 31 side",
+      "map_id": 176,
+      "map_header_offset": 1014880,
+      "map_header_bytes_hex": "45571f2163008b008f01030038043804a900dc84160398ee",
+      "map_header_sha256": "30afacc46c0411eeeb9c482ad41cee081202b96cd56d0ba91daf18049c732290",
+      "matrix_id": 99,
+      "event_bank": 169,
+      "event_bank_sha256": "e00b8cfdb86545ec44eb19cc81f2c504aaf6299c94aed1e6e383d6030e66a901",
+      "event_bank_size": 412,
+      "bg_event_count": 2,
+      "object_event_count": 10,
+      "decomp_event_source_path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/files/fielddata/eventdata/zone_event/169_D42R0102.json",
+      "decomp_event_source_sha256": "765e74cba4c67d8da4b70497c37276589b427cf1a9c149692be666ff10a71ac4",
+      "targets": [
+        {
+          "expected_decomp_reference": {
+            "id": "obj_EVERYWHERE_rock",
+            "sprite": "SPRITE_ROCK",
+            "script": "std_field_strength",
+            "source_xy": [
+              28,
+              20
+            ]
+          },
+          "exact_rom_record": {
+            "record_index": 0,
+            "object_id": 0,
+            "model_id": 84,
+            "event_flag": 0,
+            "script_id": 10002,
+            "event_local_tile_xz": [
+              28,
+              20
+            ],
+            "runtime_map_tile_xz": [
+              28,
+              20
+            ],
+            "runtime_tile_center_units": [
+              456,
+              328
+            ],
+            "vanilla_decomp_reference_only": {
+              "object_label": "obj_EVERYWHERE_rock",
+              "model_label": "SPRITE_ROCK",
+              "script_label": "std_field_strength",
+              "coords_xz": [
+                28,
+                20
+              ]
+            }
+          },
+          "position_matches_reference": true,
+          "coordinate_delta_from_decomp": [
+            0,
+            0
+          ],
+          "static_status": "ROW_PRESENT_COORDINATES_MATCH"
+        }
+      ],
+      "same_map_anchors": [
+        {
+          "purpose": "another actual field-HM event in the same map",
+          "exact_rom_record": {
+            "record_index": 1,
+            "object_id": 1,
+            "model_id": 85,
+            "event_flag": 17,
+            "script_id": 10001,
+            "event_local_tile_xz": [
+              17,
+              17
+            ],
+            "runtime_map_tile_xz": [
+              17,
+              17
+            ],
+            "runtime_tile_center_units": [
+              280,
+              280
+            ],
+            "vanilla_decomp_reference_only": {
+              "object_label": "obj_EVERYWHERE_breakrock",
+              "model_label": "SPRITE_BREAKROCK",
+              "script_label": "std_field_rock_smash",
+              "coords_xz": [
+                17,
+                17
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "rom_wide_model_scan": {
+    "method": "MapHeaders and EVENT NARC members read from this exact ROM; each referenced eventBank parsed once; map references come from MapHeader.eventsBank at +0x10",
+    "map_header_count": 540,
+    "unique_referenced_event_bank_count": 491,
+    "unreferenced_event_bank_count": 0,
+    "map_header_mappings": [
+      {
+        "map_id": 0,
+        "map_name_token": "EVERYWHERE",
+        "event_bank": 0,
+        "map_header_sha256": "2ad3a7448d2b3f9a14e81602c6014d485d7e7b840fc4981021f218cfa3bd53c5"
+      },
+      {
+        "map_id": 1,
+        "map_name_token": "NOTHING",
+        "event_bank": 0,
+        "map_header_sha256": "856194a2dcdef0f224307c3d54db61474c6b356ee4c52e5384649a869df5ab69"
+      },
+      {
+        "map_id": 2,
+        "map_name_token": "UNION",
+        "event_bank": 1,
+        "map_header_sha256": "020796413f58c679f40d8c914e02066897726979ca499cafd0437f1020fd0bcb"
+      },
+      {
+        "map_id": 3,
+        "map_name_token": "UG",
+        "event_bank": 0,
+        "map_header_sha256": "368b7107399c141cd347fa3005280bca873a5999868d7c96e634d66735c1917c"
+      },
+      {
+        "map_id": 4,
+        "map_name_token": "DIRECT2",
+        "event_bank": 2,
+        "map_header_sha256": "eff7f7392bdbd6e023f903790b77b389fb46e6cad5529a4c865b6b780c614b86"
+      },
+      {
+        "map_id": 5,
+        "map_name_token": "DIRECT4",
+        "event_bank": 3,
+        "map_header_sha256": "c1231a8922a50dc009cfa376702acd6be604b6051661f138f1376acee6182b59"
+      },
+      {
+        "map_id": 6,
+        "map_name_token": "D17R1101",
+        "event_bank": 4,
+        "map_header_sha256": "899af9efb18d205c442788535e02a14f3bced04f7aea9605ac65db4538998b1d"
+      },
+      {
+        "map_id": 7,
+        "map_name_token": "D18R0101",
+        "event_bank": 5,
+        "map_header_sha256": "4c3de4da933be6283ae0cefed8081513b8859516f8d1066dfa39887d04088790"
+      },
+      {
+        "map_id": 8,
+        "map_name_token": "D24",
+        "event_bank": 0,
+        "map_header_sha256": "e5e787637f69acb198f15dd34f5b3aa29bc2ba61b3cedb8505648483792e0774"
+      },
+      {
+        "map_id": 9,
+        "map_name_token": "R01",
+        "event_bank": 6,
+        "map_header_sha256": "3b4753e1d55ccbf81c277bee50bc9a1a580046da150bb5e7cf617dda7b5568c5"
+      },
+      {
+        "map_id": 10,
+        "map_name_token": "R02",
+        "event_bank": 7,
+        "map_header_sha256": "7072b505771080377ca5cbad1523edc7922698af41648e79fd2f4ae372517661"
+      },
+      {
+        "map_id": 11,
+        "map_name_token": "R03",
+        "event_bank": 8,
+        "map_header_sha256": "e1ce85fd005d1fc4d233f34e115e709747f4f43239b2ff80b086b13bb370727d"
+      },
+      {
+        "map_id": 12,
+        "map_name_token": "R04",
+        "event_bank": 9,
+        "map_header_sha256": "704ec441d44b2d835fa2829928fa283161eb668c9080926c9b880c10d9067149"
+      },
+      {
+        "map_id": 13,
+        "map_name_token": "R05",
+        "event_bank": 10,
+        "map_header_sha256": "556d3f89bf94365ef65022927c2ef9915e285f2ed1b250175add2f1abc26766a"
+      },
+      {
+        "map_id": 14,
+        "map_name_token": "R06",
+        "event_bank": 11,
+        "map_header_sha256": "55609eb842ec2d719b3dfb239182f2b1d831f3890adf629367c3216d162f0353"
+      },
+      {
+        "map_id": 15,
+        "map_name_token": "R07",
+        "event_bank": 12,
+        "map_header_sha256": "a791e5377c30f684af04dfc7245313bfe6c298a49f2a9aa6f602817a71c6fb99"
+      },
+      {
+        "map_id": 16,
+        "map_name_token": "R08",
+        "event_bank": 13,
+        "map_header_sha256": "9f949080b0eaf5dd51d35041c4a7586690b30e214f0a71aa3913df284e56a522"
+      },
+      {
+        "map_id": 17,
+        "map_name_token": "R09",
+        "event_bank": 14,
+        "map_header_sha256": "0d62a838e023d28c1b85220574cbb57679b9dd5b957675a01f9fb6a7269a0dda"
+      },
+      {
+        "map_id": 18,
+        "map_name_token": "R10",
+        "event_bank": 15,
+        "map_header_sha256": "e4e8fd357c9d3221149cbc548846c8883be19cd14333677a8009d969aed0da0f"
+      },
+      {
+        "map_id": 19,
+        "map_name_token": "R11",
+        "event_bank": 16,
+        "map_header_sha256": "4b9778cf61ee25fc892794668240fa09dfd58c070712c134ef39a204e37ec56e"
+      },
+      {
+        "map_id": 20,
+        "map_name_token": "R12",
+        "event_bank": 17,
+        "map_header_sha256": "259b4f4b8d762dd51e162f4d8e27c5f7997cb73a89865b1286de6133fdbe370a"
+      },
+      {
+        "map_id": 21,
+        "map_name_token": "R13",
+        "event_bank": 18,
+        "map_header_sha256": "0a2c70505312ea5ccf36ffd97be0140c41bb238b2dc8bae0afa27a96be911a85"
+      },
+      {
+        "map_id": 22,
+        "map_name_token": "R14",
+        "event_bank": 19,
+        "map_header_sha256": "ac73a1ecbf610ec624c9f6c7970402dc35a06f2af953f7059b303d1830334cbe"
+      },
+      {
+        "map_id": 23,
+        "map_name_token": "R15",
+        "event_bank": 20,
+        "map_header_sha256": "fd3315b4e7b1a829548294ac3d5a9838544b187e43f1ace562eec8e123ab18bf"
+      },
+      {
+        "map_id": 24,
+        "map_name_token": "R16",
+        "event_bank": 21,
+        "map_header_sha256": "2ba7271f6740e087ca706be41abb4b42c2c849c678c3b0e6baf0567d44ae141a"
+      },
+      {
+        "map_id": 25,
+        "map_name_token": "R17",
+        "event_bank": 22,
+        "map_header_sha256": "426aa280f2d34876162aa97de95c5b53bce99096553d5df895dd1e09810eb4c6"
+      },
+      {
+        "map_id": 26,
+        "map_name_token": "R18",
+        "event_bank": 23,
+        "map_header_sha256": "3ceb154bdd7be115f01a606344f2d2abf88db49393e31f7115ce02978e32f884"
+      },
+      {
+        "map_id": 27,
+        "map_name_token": "R22",
+        "event_bank": 24,
+        "map_header_sha256": "c1cef865cb8a6b27f82ccf6b7e274e559fd1d6a02cf46dbf1f7305aa5a86a11c"
+      },
+      {
+        "map_id": 28,
+        "map_name_token": "R24",
+        "event_bank": 25,
+        "map_header_sha256": "316bc4f7dc002f7eacbf3856d00216deee2b619f44059a2f49abceb9e1a0863e"
+      },
+      {
+        "map_id": 29,
+        "map_name_token": "R25",
+        "event_bank": 26,
+        "map_header_sha256": "54fa6f56ae91def8ec3e956422c4371e2959b4a572a157dab12aae197586ca81"
+      },
+      {
+        "map_id": 30,
+        "map_name_token": "R26",
+        "event_bank": 27,
+        "map_header_sha256": "9fdb649a8cff9d7d3c0a55ebf19fe842f47f32eabcfdd09e8e1eade6f7ab04fd"
+      },
+      {
+        "map_id": 31,
+        "map_name_token": "R27",
+        "event_bank": 28,
+        "map_header_sha256": "e2477bc764f3c1abb711965cb78bbbb03d3fd46a953c8c6b1c44c0dd7a41f7b3"
+      },
+      {
+        "map_id": 32,
+        "map_name_token": "R28",
+        "event_bank": 29,
+        "map_header_sha256": "f669bcc847a8dcb635405cc17bef97b328556e890908c004d880591d94656eb7"
+      },
+      {
+        "map_id": 33,
+        "map_name_token": "R29",
+        "event_bank": 30,
+        "map_header_sha256": "5ccfc163fb6932e7b64a6afb14b109336a89928bdbca8f1f26cef2ee904c3f2f"
+      },
+      {
+        "map_id": 34,
+        "map_name_token": "R30",
+        "event_bank": 31,
+        "map_header_sha256": "d67d2528e20df63eb364a365103c66e5e590e51a92aa2b6eabbeaa0e8636416d"
+      },
+      {
+        "map_id": 35,
+        "map_name_token": "R31",
+        "event_bank": 32,
+        "map_header_sha256": "2362ce53cd891343012f69822bd0c0c948befdf968524a28e8abbb8f7783324d"
+      },
+      {
+        "map_id": 36,
+        "map_name_token": "R32",
+        "event_bank": 33,
+        "map_header_sha256": "4ec0e8138070ca43e0e17a9244dcb1210a202ffdb05061cc39fee521fe6d49c6"
+      },
+      {
+        "map_id": 37,
+        "map_name_token": "R33",
+        "event_bank": 34,
+        "map_header_sha256": "d06d432a446d49c995770c074d8f57451097f2538624baf4019ac6e4f89752c7"
+      },
+      {
+        "map_id": 38,
+        "map_name_token": "R34",
+        "event_bank": 35,
+        "map_header_sha256": "e1a63e237b99493911ef46e9ebcec1bce95e00dd174c6988ac8799c3f1acb5a0"
+      },
+      {
+        "map_id": 39,
+        "map_name_token": "R35",
+        "event_bank": 36,
+        "map_header_sha256": "902d9be194c6d314cf469e18a79cd46f4cf1189a92b8dd9fae8ed4e015675c21"
+      },
+      {
+        "map_id": 40,
+        "map_name_token": "R36",
+        "event_bank": 37,
+        "map_header_sha256": "e1a45846038325a39c4e75e01113ebac40ff4a4ebe3f38f4625662bc2e5dc9eb"
+      },
+      {
+        "map_id": 41,
+        "map_name_token": "R37",
+        "event_bank": 38,
+        "map_header_sha256": "38500a69a2c4d8e62b1b539dcec1de7b2990d215f90e6cf7207a86c7290f58b1"
+      },
+      {
+        "map_id": 42,
+        "map_name_token": "R38",
+        "event_bank": 39,
+        "map_header_sha256": "352d3c543c27db831fb440fd73c629a46a4cb8e50140177128486175215113c7"
+      },
+      {
+        "map_id": 43,
+        "map_name_token": "R39",
+        "event_bank": 40,
+        "map_header_sha256": "3a435533db86f039f69c8c57b3ce6db91d71d649bb1ef24e55a6c0f96913ab2f"
+      },
+      {
+        "map_id": 44,
+        "map_name_token": "R42",
+        "event_bank": 41,
+        "map_header_sha256": "e15137be5f332331855b4bca2bbd472a91ff1bca0fb0c24b01babf82c09fbbe0"
+      },
+      {
+        "map_id": 45,
+        "map_name_token": "R43",
+        "event_bank": 42,
+        "map_header_sha256": "fad5e4bb87f22a06070f827a43560f425e28a36b4e3e9d8d2506be06603edb12"
+      },
+      {
+        "map_id": 46,
+        "map_name_token": "R44",
+        "event_bank": 43,
+        "map_header_sha256": "51a4bd073e87fc6ca2274c068856fa6dfdeb0e005fd4255832f667a19ca93a2d"
+      },
+      {
+        "map_id": 47,
+        "map_name_token": "R45",
+        "event_bank": 44,
+        "map_header_sha256": "595e613e5911fde7231ed3c277d7189f46012332241f1e388443f37ef230cdb6"
+      },
+      {
+        "map_id": 48,
+        "map_name_token": "R46",
+        "event_bank": 45,
+        "map_header_sha256": "0456a7c776cc8c8eb82c73a2f291d2ac754981535f5c35946572372812fb094d"
+      },
+      {
+        "map_id": 49,
+        "map_name_token": "T01",
+        "event_bank": 46,
+        "map_header_sha256": "44b5906b6af7e5f5990c8070f22390f67fac3b5ec4b121a1a79c8773a938b3b3"
+      },
+      {
+        "map_id": 50,
+        "map_name_token": "T02",
+        "event_bank": 47,
+        "map_header_sha256": "a20e15450c3592c64d32d7a4217cb0b6d34d680a0d4f631008d03b0bb6e7e181"
+      },
+      {
+        "map_id": 51,
+        "map_name_token": "T03",
+        "event_bank": 48,
+        "map_header_sha256": "a42365f12522c56328d66da3c1b4db0499b7fc786b17e5bdcfe5e61bf9cf011e"
+      },
+      {
+        "map_id": 52,
+        "map_name_token": "T04",
+        "event_bank": 49,
+        "map_header_sha256": "3b0fd84cbd053dbcea0bca0bd240d442b68583545f3e00838f991b3398af5f9d"
+      },
+      {
+        "map_id": 53,
+        "map_name_token": "T05",
+        "event_bank": 50,
+        "map_header_sha256": "04f9fed25e48808f103adbb0236ad7ca9e26e8742969033e09cc7525140812d2"
+      },
+      {
+        "map_id": 54,
+        "map_name_token": "T06",
+        "event_bank": 51,
+        "map_header_sha256": "6d1d68ab23e1b7d8a2a5c2e778a083bc96f8a8d19fa49b307d486cb07d680bb5"
+      },
+      {
+        "map_id": 55,
+        "map_name_token": "T07",
+        "event_bank": 52,
+        "map_header_sha256": "33801bd0b4b1eb352ec8edb1f2bcbbc08637182a31314d64c63b9a92bbf75f6f"
+      },
+      {
+        "map_id": 56,
+        "map_name_token": "T08",
+        "event_bank": 53,
+        "map_header_sha256": "9f791b7cb64d62399d4ac8a590ac5c8da301c4398e799ae608a6df7293a43385"
+      },
+      {
+        "map_id": 57,
+        "map_name_token": "T09",
+        "event_bank": 54,
+        "map_header_sha256": "3fd129fb06c0c385c4658456ac7e03d34fd3a4cf814474df594f6ade52b36513"
+      },
+      {
+        "map_id": 58,
+        "map_name_token": "T10",
+        "event_bank": 55,
+        "map_header_sha256": "f48159d58a92f52da123543307913a2f57b15283bec98c09ac7a3d83ba6b4ddd"
+      },
+      {
+        "map_id": 59,
+        "map_name_token": "T11",
+        "event_bank": 56,
+        "map_header_sha256": "91cd21803a7fa6c9482363a90e5822ef4e766ba712f1b2b71f1293acf2b5f09c"
+      },
+      {
+        "map_id": 60,
+        "map_name_token": "T20",
+        "event_bank": 57,
+        "map_header_sha256": "1c3a8a807db73966182c0dd757e446b0440ec0b36d12e9f07df38e87107fd0cd"
+      },
+      {
+        "map_id": 61,
+        "map_name_token": "T20R0101",
+        "event_bank": 58,
+        "map_header_sha256": "3146af665a3b710cf006ad6d43ab47d2d72b3b7c4f152a05296908b97293c075"
+      },
+      {
+        "map_id": 62,
+        "map_name_token": "T20R0102",
+        "event_bank": 59,
+        "map_header_sha256": "0b718fe008de7bae7c21dd8ff06694caedb174e7936d6d0c163e6accfc73ec7a"
+      },
+      {
+        "map_id": 63,
+        "map_name_token": "T20R0201",
+        "event_bank": 60,
+        "map_header_sha256": "75883ddbe2f15da0d40538d0202bd1d406081c7c61f7c6d865f5033caec97403"
+      },
+      {
+        "map_id": 64,
+        "map_name_token": "T20R0202",
+        "event_bank": 61,
+        "map_header_sha256": "00418a17720b409c390ae8abf2735532fc57bdc01a876b0ce56b51cfd1f2295f"
+      },
+      {
+        "map_id": 65,
+        "map_name_token": "T20R0301",
+        "event_bank": 62,
+        "map_header_sha256": "6c69c226a5d459143c18d916696323d149709d441554bd58d7326e857523c004"
+      },
+      {
+        "map_id": 66,
+        "map_name_token": "T20R0401",
+        "event_bank": 63,
+        "map_header_sha256": "b4ac00dad96e8b85f04e54f4d5775cb4781daa2484db37659a609db1a04dce53"
+      },
+      {
+        "map_id": 67,
+        "map_name_token": "T21",
+        "event_bank": 64,
+        "map_header_sha256": "0618e5f9cd428eb8df0f5c90e6614e94918227954a6394463c44eb191f9b902f"
+      },
+      {
+        "map_id": 68,
+        "map_name_token": "T21FS0101",
+        "event_bank": 65,
+        "map_header_sha256": "563d9b5931f181de575c89e61f03fa973e33d2a1e24b34521deea7a474b9bf58"
+      },
+      {
+        "map_id": 69,
+        "map_name_token": "T21PC0101",
+        "event_bank": 66,
+        "map_header_sha256": "3cc1381795884ecd19ca7052eec4f065998f06979b7a17f4337f0afb37292516"
+      },
+      {
+        "map_id": 70,
+        "map_name_token": "T21R0301",
+        "event_bank": 67,
+        "map_header_sha256": "cd59481e2ae5b11d9ccf365ce5c10a03eeb775cdfd18d937c561c5d0c498f3d6"
+      },
+      {
+        "map_id": 71,
+        "map_name_token": "T21R0401",
+        "event_bank": 68,
+        "map_header_sha256": "ac9e04effd6bd947d11d09bd589555489ef6bf0a11094748a8a8f410a48b789f"
+      },
+      {
+        "map_id": 72,
+        "map_name_token": "T21R0501",
+        "event_bank": 69,
+        "map_header_sha256": "5f2509cf41b2ec6307524027302e1e6c88a3651dfd0e5974cb8cdb63ec2ff563"
+      },
+      {
+        "map_id": 73,
+        "map_name_token": "T22",
+        "event_bank": 70,
+        "map_header_sha256": "6074d9c0f930e20e42e02723101874f33f473da68cb95096caba1b35db42f448"
+      },
+      {
+        "map_id": 74,
+        "map_name_token": "T23",
+        "event_bank": 71,
+        "map_header_sha256": "3f47198df72d767c27bb2de9ee0726d4a2952cca7df9fc35cdfeaad365f2c158"
+      },
+      {
+        "map_id": 75,
+        "map_name_token": "T24",
+        "event_bank": 72,
+        "map_header_sha256": "8c21f19b99e15cba758578c40521b1f0812b8f8a55cdc5227bf637d6c314936e"
+      },
+      {
+        "map_id": 76,
+        "map_name_token": "T25",
+        "event_bank": 73,
+        "map_header_sha256": "f0649a0c59ea467fe1c6c6f142fde984af1d6fcacad378fc73d42f2da36e7f32"
+      },
+      {
+        "map_id": 77,
+        "map_name_token": "T26",
+        "event_bank": 74,
+        "map_header_sha256": "9fd2b7443009233bfc588a65cacec6276042ce18785be26763d6079467ab255a"
+      },
+      {
+        "map_id": 78,
+        "map_name_token": "T27",
+        "event_bank": 75,
+        "map_header_sha256": "773ecbfd187c341bcbd4883ff6fd1a2bd8724d7b022a989d1af61ae0c050321b"
+      },
+      {
+        "map_id": 79,
+        "map_name_token": "T27FS0101",
+        "event_bank": 76,
+        "map_header_sha256": "a7df4fe318e11c12084b91032e9c3a9b83be4811dddbcdd0c887d8c477a38b9b"
+      },
+      {
+        "map_id": 80,
+        "map_name_token": "T27GYM0101",
+        "event_bank": 77,
+        "map_header_sha256": "cb45ac97442c953b3a74d1bbeea8275b2f4171e5c5e194c797aa84ee2fb6cf4d"
+      },
+      {
+        "map_id": 81,
+        "map_name_token": "T27PC0101",
+        "event_bank": 78,
+        "map_header_sha256": "5b03148793a363d2ba71c96a6ec13b1471989cb4806bc0eb7c5d42f6fda12b18"
+      },
+      {
+        "map_id": 82,
+        "map_name_token": "T27R0101",
+        "event_bank": 79,
+        "map_header_sha256": "5939344a0b14ad0d524619e54d66c136a8309a268aca3e5baaab1a2ccfb5270d"
+      },
+      {
+        "map_id": 83,
+        "map_name_token": "T27R0201",
+        "event_bank": 80,
+        "map_header_sha256": "7272b6fd8a602d9c5290f791a92c28c67954f1cebbfae6edcd1de68771cf2f9a"
+      },
+      {
+        "map_id": 84,
+        "map_name_token": "T27R0801",
+        "event_bank": 81,
+        "map_header_sha256": "5a512bd784e78f87afa051c7bf6ab1d4c6aca5c10c87960900c8b6f0517f805b"
+      },
+      {
+        "map_id": 85,
+        "map_name_token": "T27R0401",
+        "event_bank": 82,
+        "map_header_sha256": "f528d019269a624acd7fe46ca963215df92c7642e90176206cb561e4f9670558"
+      },
+      {
+        "map_id": 86,
+        "map_name_token": "T27R0501",
+        "event_bank": 83,
+        "map_header_sha256": "be207865b599e0c3f0146788571a9a8cdae3f788c6f050e4a21f6d956e189529"
+      },
+      {
+        "map_id": 87,
+        "map_name_token": "T28",
+        "event_bank": 84,
+        "map_header_sha256": "7807a7b97d37d3aab6b2f4b12a2985a8f9ab9727de861e82ee5ec08dc1ca527c"
+      },
+      {
+        "map_id": 88,
+        "map_name_token": "T29",
+        "event_bank": 85,
+        "map_header_sha256": "72f1af2523280d16fdcb802f96056c5b66c25b83246d116afbcdd76bb4aa3b09"
+      },
+      {
+        "map_id": 89,
+        "map_name_token": "T30",
+        "event_bank": 86,
+        "map_header_sha256": "864b314d8009116924cb4a35becf5f4fc8754247aac827fe329f97e37ea549dc"
+      },
+      {
+        "map_id": 90,
+        "map_name_token": "T31",
+        "event_bank": 87,
+        "map_header_sha256": "2ff8491420071966f1e64011f153d1fbb528efc5a9d933d178e703336861a8a2"
+      },
+      {
+        "map_id": 91,
+        "map_name_token": "W19",
+        "event_bank": 88,
+        "map_header_sha256": "b2b83948dd214db83cba3b0e2b6ec6bf6d9eb2d54daa667cee7c2c68a4fbe3a7"
+      },
+      {
+        "map_id": 92,
+        "map_name_token": "W20",
+        "event_bank": 89,
+        "map_header_sha256": "f02751d4836acf6d7b6bcf5f740cd3025a8e81d94e976cca58b7009a43e73c3c"
+      },
+      {
+        "map_id": 93,
+        "map_name_token": "W21",
+        "event_bank": 90,
+        "map_header_sha256": "7bcfeed442c101cf3f7ece19d0d2956b2434712897eb10cd84cdae94d7abee67"
+      },
+      {
+        "map_id": 94,
+        "map_name_token": "W40",
+        "event_bank": 91,
+        "map_header_sha256": "818eb1dba4d702a5b00e2b2084eb663cdab32d13d58c0525b1dd9d6b17da736c"
+      },
+      {
+        "map_id": 95,
+        "map_name_token": "W41",
+        "event_bank": 92,
+        "map_header_sha256": "dee927df8ce0244538d60e525244a24a76270b96eb1c8764eb9355ec49918376"
+      },
+      {
+        "map_id": 96,
+        "map_name_token": "D22R0101",
+        "event_bank": 93,
+        "map_header_sha256": "c1df2c5d1d93adfa58f2356e16c74d94a5e4b663c91484eb242339a855675cf8"
+      },
+      {
+        "map_id": 97,
+        "map_name_token": "R31R0101",
+        "event_bank": 94,
+        "map_header_sha256": "6368682747f94a2cdcf1cafe613f78fd9258df92cf42d6fc890fe4ccf159d95c"
+      },
+      {
+        "map_id": 98,
+        "map_name_token": "R32R0101",
+        "event_bank": 95,
+        "map_header_sha256": "1044b0ebdde41608cf3bedee804d016364de85eb96f7ce59171fdfcd0e3271d7"
+      },
+      {
+        "map_id": 99,
+        "map_name_token": "D25R0101",
+        "event_bank": 96,
+        "map_header_sha256": "dd34f47987f0f4d953626bce4ec0a6563cd132010497b283e37359cf59c03680"
+      },
+      {
+        "map_id": 100,
+        "map_name_token": "T23R0101",
+        "event_bank": 97,
+        "map_header_sha256": "11d47787d30911cc8a46fecdcbb40bd5742ac9fe0907eea7b36bb585fb0d7e76"
+      },
+      {
+        "map_id": 101,
+        "map_name_token": "R35R0101",
+        "event_bank": 98,
+        "map_header_sha256": "be1bc36b580529f37b2326fb9e4df750f4a9f130b904566db4d024a90863c622"
+      },
+      {
+        "map_id": 102,
+        "map_name_token": "R35R0201",
+        "event_bank": 99,
+        "map_header_sha256": "702a26a37dad5f809d9b833ab27272161c3f19a98a1c076a11e2dc7f832611f2"
+      },
+      {
+        "map_id": 103,
+        "map_name_token": "R36R0101",
+        "event_bank": 100,
+        "map_header_sha256": "49a46288a0d0abaef8cfe3bdd34767f1f93f74ffe8e21a505397f94d88a9e513"
+      },
+      {
+        "map_id": 104,
+        "map_name_token": "R36R0201",
+        "event_bank": 101,
+        "map_header_sha256": "178264e6d778a2e57254d932d314e8ca73b326036328194bdb8b0ba8187ef8bd"
+      },
+      {
+        "map_id": 105,
+        "map_name_token": "T27R0601",
+        "event_bank": 102,
+        "map_header_sha256": "73ea2f373d8f43c45dff28f2f0d58bff82ad78c4e7f970f150930fe66b52b0fc"
+      },
+      {
+        "map_id": 106,
+        "map_name_token": "D01R0101",
+        "event_bank": 103,
+        "map_header_sha256": "6253094640424d38bd694a48d9a9d198b2a0f2776e0a96f66f338bc149b74600"
+      },
+      {
+        "map_id": 107,
+        "map_name_token": "D02R0101",
+        "event_bank": 104,
+        "map_header_sha256": "65917067f1c8b63ed59e0ee0b0bf2ef37575a7816b990e13c40d30f9d947c5e6"
+      },
+      {
+        "map_id": 108,
+        "map_name_token": "D05R0101",
+        "event_bank": 105,
+        "map_header_sha256": "4a8facbabb3fbed427b2517578869e7b74389f1d6719380aaaafc4a7a729401d"
+      },
+      {
+        "map_id": 109,
+        "map_name_token": "D10R0101",
+        "event_bank": 106,
+        "map_header_sha256": "f18f01c087e9dd22ed47e4bdd6705701ee43f78878dfb0c020ca6f21b0f656d2"
+      },
+      {
+        "map_id": 110,
+        "map_name_token": "D15R0101",
+        "event_bank": 107,
+        "map_header_sha256": "ab1b2a421806aeb7efb325ec7501a72cdeb51a30f1ba70e9b7f4676c5edd3b11"
+      },
+      {
+        "map_id": 111,
+        "map_name_token": "D17R0101",
+        "event_bank": 108,
+        "map_header_sha256": "b2cda276485b89d6f700be64bda1d601db9da95b086e1fb512546c864f7a58bb"
+      },
+      {
+        "map_id": 112,
+        "map_name_token": "D23R0101",
+        "event_bank": 109,
+        "map_header_sha256": "5d4bfd3ef37d6abb4cfd6114f2df63847f0f3c3f788e589ac8d60a8d6527a0c8"
+      },
+      {
+        "map_id": 113,
+        "map_name_token": "D24R0101",
+        "event_bank": 110,
+        "map_header_sha256": "5703d1d49ceea27957a40f53a630f40c4c92897521ba7bfa1d964e584941b5c0"
+      },
+      {
+        "map_id": 114,
+        "map_name_token": "D26R0101",
+        "event_bank": 111,
+        "map_header_sha256": "c44936e66bf1caf5ebddfe864fb252598b7ffa7e853de219e436473a71d5ab1e"
+      },
+      {
+        "map_id": 115,
+        "map_name_token": "D27R0101",
+        "event_bank": 112,
+        "map_header_sha256": "93d3e264d944cee10d8efbd329e631b10f72641b291e78ec7b0ac1567d34cb09"
+      },
+      {
+        "map_id": 116,
+        "map_name_token": "D35R0101",
+        "event_bank": 113,
+        "map_header_sha256": "0ebe32018148d83f2a6fc025ae50276986698668ca427d1158aae12fb4750d5c"
+      },
+      {
+        "map_id": 117,
+        "map_name_token": "D36R0101",
+        "event_bank": 114,
+        "map_header_sha256": "146ddd76e84c0be3e2078e6871aff6cb21e85ea3af292d834391ee6489a492d2"
+      },
+      {
+        "map_id": 118,
+        "map_name_token": "D37R0101",
+        "event_bank": 115,
+        "map_header_sha256": "fe18576c1c55996e2e103390f0c578ece621d24e12e1be8b68ad75d6edc45098"
+      },
+      {
+        "map_id": 119,
+        "map_name_token": "D38R0101",
+        "event_bank": 116,
+        "map_header_sha256": "7bb3d8b70a340978341943d34c18e55efd00df445a600ed130303133076a14e0"
+      },
+      {
+        "map_id": 120,
+        "map_name_token": "D39R0101",
+        "event_bank": 117,
+        "map_header_sha256": "bd127f6c0859f95dee139dd0317d7ef26ac98a94a1e63c797439118be5a550f3"
+      },
+      {
+        "map_id": 121,
+        "map_name_token": "D40R0101",
+        "event_bank": 118,
+        "map_header_sha256": "65db711f8c1a43762931add6e48ee55ef22a9bc6b87c738645acaad6ab98e99b"
+      },
+      {
+        "map_id": 122,
+        "map_name_token": "D41R0101",
+        "event_bank": 119,
+        "map_header_sha256": "d754f198e47df58887f5d1cb7d50bc4a907417dafd14018c2a038de24dbbf4be"
+      },
+      {
+        "map_id": 123,
+        "map_name_token": "D42R0101",
+        "event_bank": 120,
+        "map_header_sha256": "3bba79494aec717c21548fb27d49b70c1c2639834c262f9a327fdfdd0ecdc709"
+      },
+      {
+        "map_id": 124,
+        "map_name_token": "D43R0101",
+        "event_bank": 121,
+        "map_header_sha256": "875b422f17c32f619a80630602781fc8ec7069471e0ad37e2ed6e73149fac6a5"
+      },
+      {
+        "map_id": 125,
+        "map_name_token": "D44R0101",
+        "event_bank": 122,
+        "map_header_sha256": "652a6e5408e4f7369198fdd34491bef4411d19240566992a23373272bc5701b0"
+      },
+      {
+        "map_id": 126,
+        "map_name_token": "D45R0101",
+        "event_bank": 123,
+        "map_header_sha256": "98ce7b813f22c26285bf3ef6b7459b4e61e2ebad603572aefb4ea472c2756339"
+      },
+      {
+        "map_id": 127,
+        "map_name_token": "R30R0101",
+        "event_bank": 124,
+        "map_header_sha256": "12c904dd75efd01972a9174c5f3812f1d68bba96d2edee8e3316b8e8c1c70d4b"
+      },
+      {
+        "map_id": 128,
+        "map_name_token": "T27PC0102",
+        "event_bank": 125,
+        "map_header_sha256": "33983507414dd1e75c5e662889c0e120ef920270ec5f645ceae200462e738bef"
+      },
+      {
+        "map_id": 129,
+        "map_name_token": "T27PC0103",
+        "event_bank": 126,
+        "map_header_sha256": "b4e9c253de240836c45915ddde3a5c00d82f1687189334fd36b3a021487a8079"
+      },
+      {
+        "map_id": 130,
+        "map_name_token": "T27PC0104",
+        "event_bank": 0,
+        "map_header_sha256": "ba0456de24f04197f864e234b489553b115ed556bc4d50e9b9a6643b8012a25d"
+      },
+      {
+        "map_id": 131,
+        "map_name_token": "T27PC0105",
+        "event_bank": 127,
+        "map_header_sha256": "fbd88775330c5c490975c060b6e6b21f1b3ba617c0ecc2549caf33a5611dd52b"
+      },
+      {
+        "map_id": 132,
+        "map_name_token": "R42R0101",
+        "event_bank": 128,
+        "map_header_sha256": "585ccc638317487b768e65c8b2e17502ff15279cd017beac196595bb190cae41"
+      },
+      {
+        "map_id": 133,
+        "map_name_token": "T28R0201",
+        "event_bank": 129,
+        "map_header_sha256": "8f22010622bbac5d018ffc6d555e0ad3ee2bc1abb968e22a53b021f66595914b"
+      },
+      {
+        "map_id": 134,
+        "map_name_token": "R29R0101",
+        "event_bank": 130,
+        "map_header_sha256": "bca318c49074786b0e4e74925bd165f3a45ebe61994301636ae28b66ca1a0c3c"
+      },
+      {
+        "map_id": 135,
+        "map_name_token": "T22GYM0101",
+        "event_bank": 131,
+        "map_header_sha256": "6a60d77e71445140272155549984ebaa09a2a506ff8ffb17aefca8646693fa7d"
+      },
+      {
+        "map_id": 136,
+        "map_name_token": "T23GYM0101",
+        "event_bank": 132,
+        "map_header_sha256": "41c3bb0f33cf55ecf329af74bb22f86cd09993ffce3026a89a8722b0c161975a"
+      },
+      {
+        "map_id": 137,
+        "map_name_token": "T25GYM0101",
+        "event_bank": 133,
+        "map_header_sha256": "ec3a2ebaef7db57e4502d7567ccad8e5deb072516e04ca60b9f629922e9212aa"
+      },
+      {
+        "map_id": 138,
+        "map_name_token": "T26GYM0101",
+        "event_bank": 134,
+        "map_header_sha256": "80924e5f17818cf3ad1bf6e262f47a252e862397b228cec8024594e8863c34c4"
+      },
+      {
+        "map_id": 139,
+        "map_name_token": "T24GYM0101",
+        "event_bank": 135,
+        "map_header_sha256": "dcaef9be776cb4685a6b67ffdfe5534a13eb2f95915ada402fb7b055e695e222"
+      },
+      {
+        "map_id": 140,
+        "map_name_token": "T28GYM0101",
+        "event_bank": 136,
+        "map_header_sha256": "42f5fc8dfcd22e81c829f8d4421e1ab29786147e557c64c2a51a2c4f3c6eb23a"
+      },
+      {
+        "map_id": 141,
+        "map_name_token": "T30GYM0101",
+        "event_bank": 137,
+        "map_header_sha256": "d19ba2b3f3f81de12b5c941ca59706c070572a8e9a867f104a6dcbd7de218860"
+      },
+      {
+        "map_id": 142,
+        "map_name_token": "R43R0101",
+        "event_bank": 138,
+        "map_header_sha256": "add7fdc957b10d1f75923b3c3eca11c0574642008e3db9bac4f0fffb845424ea"
+      },
+      {
+        "map_id": 143,
+        "map_name_token": "R30R0201",
+        "event_bank": 139,
+        "map_header_sha256": "ba139229b2929dd99bd171111452bcfbeff86e8d3d4eff88576d2ba12cea5049"
+      },
+      {
+        "map_id": 144,
+        "map_name_token": "T21PC0102",
+        "event_bank": 140,
+        "map_header_sha256": "e398fa60f3dac5ce08ce00d45facb2de23db7adac900c272fb22ba10989a3b0f"
+      },
+      {
+        "map_id": 145,
+        "map_name_token": "D03R0101",
+        "event_bank": 141,
+        "map_header_sha256": "29b8f3657dd6eea229b9844f6a4068a0bce050bbcacdc3bdf3302d675278fbc0"
+      },
+      {
+        "map_id": 146,
+        "map_name_token": "D11R0101",
+        "event_bank": 142,
+        "map_header_sha256": "4edf92a783fab63e21c802c062c9a346a7cbddc3cae4629f4a824e0520a8a286"
+      },
+      {
+        "map_id": 147,
+        "map_name_token": "D46R0101",
+        "event_bank": 143,
+        "map_header_sha256": "befe8b90d0175ff7e0cff19dbfc200a7df9e38562024b54510a6370f67d90fff"
+      },
+      {
+        "map_id": 148,
+        "map_name_token": "R09R0101",
+        "event_bank": 0,
+        "map_header_sha256": "81ad596c64762b4ca4e334535bf9f6fffd04d7a0b8a80dc626bf75322bccdca3"
+      },
+      {
+        "map_id": 149,
+        "map_name_token": "T22R0701",
+        "event_bank": 144,
+        "map_header_sha256": "a3e990f03faaee0af0f82e16af48d2fbd434ef6995c29fe2f1b9b580b00498e4"
+      },
+      {
+        "map_id": 150,
+        "map_name_token": "D22R0201",
+        "event_bank": 145,
+        "map_header_sha256": "6f1147432b36fb478d28f32d205db0eedab16df33619ee3bb8cd689afe29fccb"
+      },
+      {
+        "map_id": 151,
+        "map_name_token": "R47",
+        "event_bank": 146,
+        "map_header_sha256": "90cca07dabf659ae35181f1e28cbc47cdaab59d513d4dff6498039ed35bd5d65"
+      },
+      {
+        "map_id": 152,
+        "map_name_token": "R48",
+        "event_bank": 147,
+        "map_header_sha256": "a6e338f11e573fcc5894610697c8f97444916a9af39d1dd81512a7e745c9c6ab"
+      },
+      {
+        "map_id": 153,
+        "map_name_token": "D25R0102",
+        "event_bank": 148,
+        "map_header_sha256": "347e28d0634aa170e5b01c372009ce84c91f07e57d55972ef589df15aa4ff479"
+      },
+      {
+        "map_id": 154,
+        "map_name_token": "D25R0103",
+        "event_bank": 149,
+        "map_header_sha256": "ad7452e267f86118a4fb59d028cfdffa829c8230678b9fa6582a56821bea968f"
+      },
+      {
+        "map_id": 155,
+        "map_name_token": "D15R0102",
+        "event_bank": 150,
+        "map_header_sha256": "6a5e84a2fdcc1a89013983714a8caa40129051178ef765737b40babd02df4478"
+      },
+      {
+        "map_id": 156,
+        "map_name_token": "D15R0103",
+        "event_bank": 151,
+        "map_header_sha256": "3371ec06535c73fd76d70eb10a557fefa417b285ef0683b0bce98b1d83efaae8"
+      },
+      {
+        "map_id": 157,
+        "map_name_token": "T22FS0101",
+        "event_bank": 152,
+        "map_header_sha256": "20dbf9804eaa361c7ac0a85dc4737673855d5f056dfaa6166b679a02d844e5cf"
+      },
+      {
+        "map_id": 158,
+        "map_name_token": "T22PC0101",
+        "event_bank": 153,
+        "map_header_sha256": "d19f65d138a1f4b8d70f1edbb8fc2e3c4026bf2c9d34ce7fb7290e43a7627781"
+      },
+      {
+        "map_id": 159,
+        "map_name_token": "T22R0301",
+        "event_bank": 154,
+        "map_header_sha256": "02a833e59435e55961ea80e6d839373faa2882d44509409f661934a634dc17a8"
+      },
+      {
+        "map_id": 160,
+        "map_name_token": "T22R0401",
+        "event_bank": 155,
+        "map_header_sha256": "6867f9612c63eb5f051ea1466705cda78887e7785fc821a8acce64a9f5905df4"
+      },
+      {
+        "map_id": 161,
+        "map_name_token": "T22R0501",
+        "event_bank": 0,
+        "map_header_sha256": "5622cc6bca75fe3e3931d67178b3451dddbeaab031c340dceb75354ef874b37e"
+      },
+      {
+        "map_id": 162,
+        "map_name_token": "T22R0601",
+        "event_bank": 156,
+        "map_header_sha256": "3a387df2f1fffa88845831e0574de2b62262c86bac52a8138d71c799ee2bf2dd"
+      },
+      {
+        "map_id": 163,
+        "map_name_token": "T23R0201",
+        "event_bank": 157,
+        "map_header_sha256": "cd1664ee76d74a10577a8c5128f6c97e775159fac7eaea43a97ba78df5fa3f9c"
+      },
+      {
+        "map_id": 164,
+        "map_name_token": "T23R0501",
+        "event_bank": 158,
+        "map_header_sha256": "8bad120833612a246c9e502676047df0019f68dc3a54964fd74e751a351b9c91"
+      },
+      {
+        "map_id": 165,
+        "map_name_token": "T23FS0101",
+        "event_bank": 159,
+        "map_header_sha256": "54c03fd585795a707b773738ce903d26ae3913f3fb880b3f4ae194f36bc21ffb"
+      },
+      {
+        "map_id": 166,
+        "map_name_token": "T23PC0101",
+        "event_bank": 160,
+        "map_header_sha256": "a6f128f46aeb7b5b92238cce2b3ffcd870822e7894f044fe45387d73d41ed1a7"
+      },
+      {
+        "map_id": 167,
+        "map_name_token": "T22PC0102",
+        "event_bank": 161,
+        "map_header_sha256": "b15cdc5badae30bc7961ef1d71505a167925182ea83c615a28902ae4f9cfd39d"
+      },
+      {
+        "map_id": 168,
+        "map_name_token": "T23PC0102",
+        "event_bank": 162,
+        "map_header_sha256": "0376bbf0a4e767ec95bbfdbc40b98e5935110ff072d9de7a5e5fa0180ff2a8f5"
+      },
+      {
+        "map_id": 169,
+        "map_name_token": "R32PC0101",
+        "event_bank": 163,
+        "map_header_sha256": "13d5c1b982b3c6a180a10143345694301ae2dcef776d05f7f12453e0564e94c4"
+      },
+      {
+        "map_id": 170,
+        "map_name_token": "R32PC0102",
+        "event_bank": 164,
+        "map_header_sha256": "d1e214cf10314f542ac05172e6e5479d7a1bde53bf9e464d938acc59c2eb2c3c"
+      },
+      {
+        "map_id": 171,
+        "map_name_token": "R34R0201",
+        "event_bank": 165,
+        "map_header_sha256": "2d7d2bbba312aa12a3a4f18d5d52b541f82a30434a9b1e5996ff331744584c3d"
+      },
+      {
+        "map_id": 172,
+        "map_name_token": "R38R0101",
+        "event_bank": 166,
+        "map_header_sha256": "606ea3fe47b49e2d452919539e844e5ed8e0c76aa84ab915b8013a57b35082f3"
+      },
+      {
+        "map_id": 173,
+        "map_name_token": "D47R0101",
+        "event_bank": 167,
+        "map_header_sha256": "9cc4dfc69d8b0a2fdeeecf0de23e916fc1a61a1d073260551e314461402474ad"
+      },
+      {
+        "map_id": 174,
+        "map_name_token": "D47",
+        "event_bank": 168,
+        "map_header_sha256": "3956337b6d5e3fd86ada3aeaff29fe37b143ed8215c8e233e07572f72bdb9f63"
+      },
+      {
+        "map_id": 175,
+        "map_name_token": "T27R0301",
+        "event_bank": 0,
+        "map_header_sha256": "78352e577fe01ebf5745290be7195a2190e510e40487f384e1576b57b6e71fca"
+      },
+      {
+        "map_id": 176,
+        "map_name_token": "D42R0102",
+        "event_bank": 169,
+        "map_header_sha256": "30afacc46c0411eeeb9c482ad41cee081202b96cd56d0ba91daf18049c732290"
+      },
+      {
+        "map_id": 177,
+        "map_name_token": "D26R0102",
+        "event_bank": 170,
+        "map_header_sha256": "87a97ea27c0234e14077f489122121bdab49191aa617299ce8cd5f7ed002e394"
+      },
+      {
+        "map_id": 178,
+        "map_name_token": "D43R0102",
+        "event_bank": 171,
+        "map_header_sha256": "c3c4836dff2d427bed6ee8d06965a7f45396f527a2e6961f17db177962770eef"
+      },
+      {
+        "map_id": 179,
+        "map_name_token": "D43R0103",
+        "event_bank": 172,
+        "map_header_sha256": "92f5c3ef4a442d973fe7c5a40dca92e8817cd24ddcdb0d8ec359dd63a57a8b46"
+      },
+      {
+        "map_id": 180,
+        "map_name_token": "T23GYM0102",
+        "event_bank": 173,
+        "map_header_sha256": "1704fb817668de9f65f10a9215489e08ee43c8415271a9f879fa6a171b2b792d"
+      },
+      {
+        "map_id": 181,
+        "map_name_token": "D26R0103",
+        "event_bank": 174,
+        "map_header_sha256": "8427fe4a516c908f2e5e828ca4734851148abe9fbec559b305ecb261c5fac474"
+      },
+      {
+        "map_id": 182,
+        "map_name_token": "T25R0201",
+        "event_bank": 175,
+        "map_header_sha256": "f5745eb118ea71ea9d7ae662348f4d168cb1cca341ec6f2e7ad570b322b0c9c6"
+      },
+      {
+        "map_id": 183,
+        "map_name_token": "T25R1101",
+        "event_bank": 176,
+        "map_header_sha256": "fd2e5ff73b1ab9d0967a431c8f69652f7772044ac13a54979a45ff2dd2a42f42"
+      },
+      {
+        "map_id": 184,
+        "map_name_token": "T25R0601",
+        "event_bank": 177,
+        "map_header_sha256": "ff31147733ee0dce9e098c89c2eb614ff2957c5fb6c0675c106b2e81770e5ffd"
+      },
+      {
+        "map_id": 185,
+        "map_name_token": "T25PC0101",
+        "event_bank": 178,
+        "map_header_sha256": "e4a19f67f1fbca4944e10222e7b880bdfe1ebe699a7f69f80e6349a10f393433"
+      },
+      {
+        "map_id": 186,
+        "map_name_token": "D23R0102",
+        "event_bank": 179,
+        "map_header_sha256": "a4436374b62df6edd96a9ab9f86db41f3d789082fd154187de4e70e6b35e5452"
+      },
+      {
+        "map_id": 187,
+        "map_name_token": "D23R0103",
+        "event_bank": 180,
+        "map_header_sha256": "99d3af6d03a961a177f9fd3383dd68f228bc36e005f3ce0f9da4e277a1c2658d"
+      },
+      {
+        "map_id": 188,
+        "map_name_token": "D23R0104",
+        "event_bank": 181,
+        "map_header_sha256": "e274c3f19a5364889b70aded7613eb7df1e1520fa251dbf8ff78e52ff2f6531d"
+      },
+      {
+        "map_id": 189,
+        "map_name_token": "D23R0105",
+        "event_bank": 182,
+        "map_header_sha256": "f54394a8abc49375c917b59cafcbecf380368d86224eadd9768d4f45dc79ae91"
+      },
+      {
+        "map_id": 190,
+        "map_name_token": "D23R0106",
+        "event_bank": 183,
+        "map_header_sha256": "ae6f056b38afa238e3e1e547119fae780002053ad3f5a4136444277a54bfa711"
+      },
+      {
+        "map_id": 191,
+        "map_name_token": "T25R1001",
+        "event_bank": 184,
+        "map_header_sha256": "fee21e812a05a88b9aff573fbc22ef67629367a2f64864ecfa322fc272bee0dc"
+      },
+      {
+        "map_id": 192,
+        "map_name_token": "T25R1002",
+        "event_bank": 185,
+        "map_header_sha256": "fcec77906a3a970373ee6c72aabc5f81b225ac6acb30618937cb19d304595d0f"
+      },
+      {
+        "map_id": 193,
+        "map_name_token": "T25R1003",
+        "event_bank": 186,
+        "map_header_sha256": "ea05a6fc3efa90174eb5faf654436873885a894a58c41c5c25b0f0158033b975"
+      },
+      {
+        "map_id": 194,
+        "map_name_token": "T25R1004",
+        "event_bank": 187,
+        "map_header_sha256": "65132cd3591c09444ef4108c9c9415eea09f0942f48779228ca21939fc7a7610"
+      },
+      {
+        "map_id": 195,
+        "map_name_token": "T25R1005",
+        "event_bank": 188,
+        "map_header_sha256": "f21fc1caa8691734dd2fc806bcb4e5319cfa52d7fe5236529a8f65ec4916797d"
+      },
+      {
+        "map_id": 196,
+        "map_name_token": "T25R1006",
+        "event_bank": 189,
+        "map_header_sha256": "3fa5d2aafe9933c3b9e85cea02eb8cbdd2b40e95be0ddc03ce16325d43bcc4fe"
+      },
+      {
+        "map_id": 197,
+        "map_name_token": "T25R0501",
+        "event_bank": 190,
+        "map_header_sha256": "466d0e549f18bd442d58ee277645a6ff386e1efa3e051190871372c2abd9d2f5"
+      },
+      {
+        "map_id": 198,
+        "map_name_token": "T25R0502",
+        "event_bank": 191,
+        "map_header_sha256": "fc58f0136d35a9639d47eefe2c599e68382c09fb8fa680b0c509c7e782e3c544"
+      },
+      {
+        "map_id": 199,
+        "map_name_token": "D37R0102",
+        "event_bank": 192,
+        "map_header_sha256": "f0617bbbf7169a1ad48567cc985dec7d827926b80010c19719ca588bfd319c2a"
+      },
+      {
+        "map_id": 200,
+        "map_name_token": "D37R0103",
+        "event_bank": 193,
+        "map_header_sha256": "c305b97efd8a64c65b21c6be9deae8f34582693e3f9e848130a9e0d3b910366a"
+      },
+      {
+        "map_id": 201,
+        "map_name_token": "D37R0104",
+        "event_bank": 194,
+        "map_header_sha256": "cd3e4702ca22a11db482fda37f609602737b0125dc659cef2c7490c72b1b9b47"
+      },
+      {
+        "map_id": 202,
+        "map_name_token": "D37R0105",
+        "event_bank": 195,
+        "map_header_sha256": "d70f4082191970e73ef1220fba13ed07983c156ec6fe7c19c3087803ebdd4679"
+      },
+      {
+        "map_id": 203,
+        "map_name_token": "T25R0401",
+        "event_bank": 196,
+        "map_header_sha256": "404a7b06496692594e3085fc67792d46e4a4a881a4a97f7dde5d6d0c4efebf6f"
+      },
+      {
+        "map_id": 204,
+        "map_name_token": "T25R0301",
+        "event_bank": 197,
+        "map_header_sha256": "04c198f19c320e3b78f9477455dc348255c53a2462b0e1e4a489d2f593cab425"
+      },
+      {
+        "map_id": 205,
+        "map_name_token": "T25R0801",
+        "event_bank": 198,
+        "map_header_sha256": "7027f062be324debec96679fb38124dbcd914e7b6056233580e5f9238928ad6d"
+      },
+      {
+        "map_id": 206,
+        "map_name_token": "T25R0901",
+        "event_bank": 199,
+        "map_header_sha256": "84055937e2dd5aaa6c2acd1e492bb802242dd046bcef5a65ba9d58d21f43a899"
+      },
+      {
+        "map_id": 207,
+        "map_name_token": "T25R1201",
+        "event_bank": 200,
+        "map_header_sha256": "618421d1c5cb0fe182117627b47f2db85794bf53643f13012c7328b278fa3927"
+      },
+      {
+        "map_id": 208,
+        "map_name_token": "T25R1301",
+        "event_bank": 0,
+        "map_header_sha256": "86b5d50c2c027f1f4ace903f0f9323ce17eab07704efbd1428f27b03b4db299b"
+      },
+      {
+        "map_id": 209,
+        "map_name_token": "T25R1302",
+        "event_bank": 0,
+        "map_header_sha256": "0a1aa214177ef4d04ef14bec677c070dbd1edda8dcecd3355384784481b36656"
+      },
+      {
+        "map_id": 210,
+        "map_name_token": "T25R1303",
+        "event_bank": 0,
+        "map_header_sha256": "8452da8aa0e2862674d0b273ed76b72e6e734af6474da4bdcde1c77a8fa54554"
+      },
+      {
+        "map_id": 211,
+        "map_name_token": "T25R1304",
+        "event_bank": 0,
+        "map_header_sha256": "d472c1f11a367ebc5ff25d0df145f20c1aedf1015d9ed533ef540dc0fbd039d9"
+      },
+      {
+        "map_id": 212,
+        "map_name_token": "T25R1305",
+        "event_bank": 0,
+        "map_header_sha256": "57877ff1b0ea3ff07e8d0a550d6194cc8e99288bb15ca724e0ffd6027ada030c"
+      },
+      {
+        "map_id": 213,
+        "map_name_token": "T25R1306",
+        "event_bank": 0,
+        "map_header_sha256": "c3fa744e969dc08867a6b87a4d1d6fa67cb06d2893d4e0f9c28aa97ea327c987"
+      },
+      {
+        "map_id": 214,
+        "map_name_token": "R39R0101",
+        "event_bank": 201,
+        "map_header_sha256": "5d330faf14f8f576a3a587ec7b6836ddf7b291d33b54d61847b1de425e82a128"
+      },
+      {
+        "map_id": 215,
+        "map_name_token": "R39R0201",
+        "event_bank": 202,
+        "map_header_sha256": "2ad8e59168a9732e30e02863e71ec32842ab129f2e9dd2a3898b40a4e9fa7f2b"
+      },
+      {
+        "map_id": 216,
+        "map_name_token": "T27R0202",
+        "event_bank": 203,
+        "map_header_sha256": "a0138208216817a85e08f0d7080ffed9a85ca2404d4fc061e1e51da44393bda5"
+      },
+      {
+        "map_id": 217,
+        "map_name_token": "D18R0102",
+        "event_bank": 204,
+        "map_header_sha256": "32e4a634b78c407c0da28db17fcf8e18b589e076d5ad360e00820164d0a71071"
+      },
+      {
+        "map_id": 218,
+        "map_name_token": "D24R0201",
+        "event_bank": 0,
+        "map_header_sha256": "e1740af399a784cb43365a8634c65751fc3191b6b70ff4f9c318764e7f565db4"
+      },
+      {
+        "map_id": 219,
+        "map_name_token": "T25PC0102",
+        "event_bank": 205,
+        "map_header_sha256": "4a1bd102f52e9723870ac24fff42a433ba49ede1618eb8a0ed81c32f74791bbc"
+      },
+      {
+        "map_id": 220,
+        "map_name_token": "D27R0102",
+        "event_bank": 206,
+        "map_header_sha256": "fc4b7b4ff42bf121791f3c14eb6dbd942ba0b5714810b5cbac3e7746943a9efb"
+      },
+      {
+        "map_id": 221,
+        "map_name_token": "D27R0103",
+        "event_bank": 207,
+        "map_header_sha256": "52eff749bb3ab47ff66a55e380eb83c8421cf68506f519b86e2b0da0adbacffd"
+      },
+      {
+        "map_id": 222,
+        "map_name_token": "D27R0104",
+        "event_bank": 208,
+        "map_header_sha256": "12569c70f512c847713bf5c6be0e22a6cfcb17b13736d17732a9e1c0c65222b7"
+      },
+      {
+        "map_id": 223,
+        "map_name_token": "D27R0105",
+        "event_bank": 209,
+        "map_header_sha256": "8e27499e81aae2475cd401799f97bda57be54e2562fd4724d8408e40b01bef0e"
+      },
+      {
+        "map_id": 224,
+        "map_name_token": "D27R0106",
+        "event_bank": 210,
+        "map_header_sha256": "256917eb90cf3b1672d51e909da3dc064a7251c3df6c16950dec90cd511313ff"
+      },
+      {
+        "map_id": 225,
+        "map_name_token": "D27R0107",
+        "event_bank": 211,
+        "map_header_sha256": "4b68f515450c19c1cd23c7706abf483847ad00f3c80424b92922c0b5164bf821"
+      },
+      {
+        "map_id": 226,
+        "map_name_token": "T26PC0101",
+        "event_bank": 212,
+        "map_header_sha256": "c6e84e733a56cf2563ad0bc084800302c77df9b56091fcae0444f51ba39367e5"
+      },
+      {
+        "map_id": 227,
+        "map_name_token": "T26FS0101",
+        "event_bank": 213,
+        "map_header_sha256": "02f6a8e1609cd9215f3d95894acf4867e0034a4b1d28f64f673461208ccb8740"
+      },
+      {
+        "map_id": 228,
+        "map_name_token": "T26R0301",
+        "event_bank": 214,
+        "map_header_sha256": "1eac4605676a2a77639ac00133b88b617596975b68ba2e45ffaef8920da5a943"
+      },
+      {
+        "map_id": 229,
+        "map_name_token": "T26R0501",
+        "event_bank": 215,
+        "map_header_sha256": "40709cdff3a436c20f6a8ec0531ce5c5758e57137e144fed24993ed4ef4103da"
+      },
+      {
+        "map_id": 230,
+        "map_name_token": "T26R0601",
+        "event_bank": 216,
+        "map_header_sha256": "74a5f08873a365519c10c357d14db58c979b74c62093ee57fa6516da4adc0f4c"
+      },
+      {
+        "map_id": 231,
+        "map_name_token": "T26R0701",
+        "event_bank": 217,
+        "map_header_sha256": "e9bd7bb26cd483ddad63c46c3f0e54c4a5a8b1201b6ca344b66c5a78c7b3d67e"
+      },
+      {
+        "map_id": 232,
+        "map_name_token": "T24R0201",
+        "event_bank": 218,
+        "map_header_sha256": "3969cf1a8969cf35110d50cc04b61c08e3ba97de66a81e8cfccbc4852f98b2b5"
+      },
+      {
+        "map_id": 233,
+        "map_name_token": "T24R0501",
+        "event_bank": 219,
+        "map_header_sha256": "186f9c489c9fa793a2f8d53791f507b47416dd7b86995959703ae5e83dc1cd97"
+      },
+      {
+        "map_id": 234,
+        "map_name_token": "T24R0601",
+        "event_bank": 220,
+        "map_header_sha256": "029a5bc62424689b47e17ebf2d5920c78cf46e27956f0be05eef6c1a4e0006df"
+      },
+      {
+        "map_id": 235,
+        "map_name_token": "T24R0701",
+        "event_bank": 221,
+        "map_header_sha256": "822db780e285aa5cad45fc6600fce109cc17cffc8e983ea50e46878bdeedd951"
+      },
+      {
+        "map_id": 236,
+        "map_name_token": "T24PC0101",
+        "event_bank": 222,
+        "map_header_sha256": "fb63e322e78d0fc0c9b452aae22668788992e958b6fe4f81c1acdf3a08715a15"
+      },
+      {
+        "map_id": 237,
+        "map_name_token": "D39R0102",
+        "event_bank": 223,
+        "map_header_sha256": "3bf733969b73e185c0df04cf0d5bd8b8f5957510acdf069d32d984ae5f3f527c"
+      },
+      {
+        "map_id": 238,
+        "map_name_token": "D39R0103",
+        "event_bank": 224,
+        "map_header_sha256": "ff3260a9b81bc93b71c6bbb85556902e1857a52adcdc3b02b69090aceabb0ebe"
+      },
+      {
+        "map_id": 239,
+        "map_name_token": "D39R0104",
+        "event_bank": 225,
+        "map_header_sha256": "c93528a58e736a523848edfbcd58257be0b1a12a1f9a21f2357297558d900420"
+      },
+      {
+        "map_id": 240,
+        "map_name_token": "P01R0101",
+        "event_bank": 226,
+        "map_header_sha256": "f506bf6bb47e218c4f22a7ea2ea41f67628d476b09432f2ec0002c96ec7c6f40"
+      },
+      {
+        "map_id": 241,
+        "map_name_token": "T24PC0102",
+        "event_bank": 227,
+        "map_header_sha256": "f52210b4aec4704643ba2f4f8869401c14e6f5013534a738cad0de06174c174a"
+      },
+      {
+        "map_id": 242,
+        "map_name_token": "D40R0102",
+        "event_bank": 228,
+        "map_header_sha256": "b18fcef8626a4f11dbc2d7ad14c6262a61a9aefcb68da7e9666c933504a115bc"
+      },
+      {
+        "map_id": 243,
+        "map_name_token": "D40R0104",
+        "event_bank": 229,
+        "map_header_sha256": "9560f8f1b8692effd70ed6b012c8ac5e275ae91081bdbba7fbf3773937d1827f"
+      },
+      {
+        "map_id": 244,
+        "map_name_token": "D40R0107",
+        "event_bank": 230,
+        "map_header_sha256": "1b0ee5473ebcb25ea45f6d377285ae09125e1dca70cc160bd8765708ac98192a"
+      },
+      {
+        "map_id": 245,
+        "map_name_token": "R43R0201",
+        "event_bank": 231,
+        "map_header_sha256": "91e3eb24a8a604a7a18a4d47300617e69b75087bf110df98d1e4c91f34fbc51b"
+      },
+      {
+        "map_id": 246,
+        "map_name_token": "T28PC0101",
+        "event_bank": 232,
+        "map_header_sha256": "230ef6046064f6d35d02a632773ced814fee0d4f168568178b83cf4ed937e0bd"
+      },
+      {
+        "map_id": 247,
+        "map_name_token": "D35R0102",
+        "event_bank": 233,
+        "map_header_sha256": "eb0f0a87fd7e0068f3749036880aae10fb50c1aac09a722baa5e9b2c9441d4c2"
+      },
+      {
+        "map_id": 248,
+        "map_name_token": "D35R0103",
+        "event_bank": 234,
+        "map_header_sha256": "dd933d1e04a98e0f82e361acc67d5533c8fbf1ee60c563b2995d7b5c958a034f"
+      },
+      {
+        "map_id": 249,
+        "map_name_token": "D35R0104",
+        "event_bank": 235,
+        "map_header_sha256": "43d1aa0e43ac6521a5fef7213ff9ee0b08da653ba034dee78bd5cc3c5683bc4d"
+      },
+      {
+        "map_id": 250,
+        "map_name_token": "D38R0102",
+        "event_bank": 236,
+        "map_header_sha256": "35f777a1dedfae13d29e0d6ead01cb0be13d46645d9c123bc66a58a9df9d918c"
+      },
+      {
+        "map_id": 251,
+        "map_name_token": "D38R0103",
+        "event_bank": 237,
+        "map_header_sha256": "44936aaf5a613d65a248e7e3bc65ddc71c1fd9d8de811cfd51c5443f641fdf2e"
+      },
+      {
+        "map_id": 252,
+        "map_name_token": "D38R0104",
+        "event_bank": 238,
+        "map_header_sha256": "edf80796c4dc63c37de8c70086bfa5323c885daffeaae6e306241d4cb49e9c2a"
+      },
+      {
+        "map_id": 253,
+        "map_name_token": "D44R0102",
+        "event_bank": 239,
+        "map_header_sha256": "30efeb94af121aaddebb0eccae0f0a1bd89b4797de7b05c4efa20fdbfcfa6a47"
+      },
+      {
+        "map_id": 254,
+        "map_name_token": "C11",
+        "event_bank": 0,
+        "map_header_sha256": "354116037816b2cdc6f3a371d51dfa9b4d8fab1bf4a1d116c4f5f368eaa21c5f"
+      },
+      {
+        "map_id": 255,
+        "map_name_token": "C11PC0101",
+        "event_bank": 0,
+        "map_header_sha256": "ed3b30d038adccfd761297cebf91d7319f3f328df3c2b4e6552f435cae14e186"
+      },
+      {
+        "map_id": 256,
+        "map_name_token": "C11PC0102",
+        "event_bank": 0,
+        "map_header_sha256": "ed3b30d038adccfd761297cebf91d7319f3f328df3c2b4e6552f435cae14e186"
+      },
+      {
+        "map_id": 257,
+        "map_name_token": "C11FS0101",
+        "event_bank": 0,
+        "map_header_sha256": "590427953850323efc8ba15b1d49388840f41c093320f5fc310db3c244eece15"
+      },
+      {
+        "map_id": 258,
+        "map_name_token": "C11R0101",
+        "event_bank": 0,
+        "map_header_sha256": "fe5f08ecae1ec5207485c7dfc67a0e586096611e051688c91e2058f6d15f9f07"
+      },
+      {
+        "map_id": 259,
+        "map_name_token": "C11R0201",
+        "event_bank": 0,
+        "map_header_sha256": "fe5f08ecae1ec5207485c7dfc67a0e586096611e051688c91e2058f6d15f9f07"
+      },
+      {
+        "map_id": 260,
+        "map_name_token": "C11R0301",
+        "event_bank": 0,
+        "map_header_sha256": "fe5f08ecae1ec5207485c7dfc67a0e586096611e051688c91e2058f6d15f9f07"
+      },
+      {
+        "map_id": 261,
+        "map_name_token": "C11R0401",
+        "event_bank": 0,
+        "map_header_sha256": "fe5f08ecae1ec5207485c7dfc67a0e586096611e051688c91e2058f6d15f9f07"
+      },
+      {
+        "map_id": 262,
+        "map_name_token": "C11PC0103",
+        "event_bank": 0,
+        "map_header_sha256": "ed3b30d038adccfd761297cebf91d7319f3f328df3c2b4e6552f435cae14e186"
+      },
+      {
+        "map_id": 263,
+        "map_name_token": "D31",
+        "event_bank": 0,
+        "map_header_sha256": "254322b6b13c84dfb63afd06f9044744d01df84c504b2081c04b8929c2bd5412"
+      },
+      {
+        "map_id": 264,
+        "map_name_token": "D31R0101",
+        "event_bank": 0,
+        "map_header_sha256": "27a382d3834481554534b95ce05ff9a67d3648de7d82ad7ef6b60c38443c7b38"
+      },
+      {
+        "map_id": 265,
+        "map_name_token": "D31R0201",
+        "event_bank": 240,
+        "map_header_sha256": "3a2c42d384f7d20955ff26f81e3ea1aad576085471cb2742ac1a1c9a2ee23c49"
+      },
+      {
+        "map_id": 266,
+        "map_name_token": "D31R0202",
+        "event_bank": 241,
+        "map_header_sha256": "7f943b0d7d6e68dfe58c7873cd8eb9e91c54ac6bf6d9f090b0a6b023066f5455"
+      },
+      {
+        "map_id": 267,
+        "map_name_token": "D31R0203",
+        "event_bank": 0,
+        "map_header_sha256": "033ffd6e6fead65fd091e651c29ee75c830803c66931a385094f78126d55cb5e"
+      },
+      {
+        "map_id": 268,
+        "map_name_token": "D31R0204",
+        "event_bank": 0,
+        "map_header_sha256": "033ffd6e6fead65fd091e651c29ee75c830803c66931a385094f78126d55cb5e"
+      },
+      {
+        "map_id": 269,
+        "map_name_token": "D31R0205",
+        "event_bank": 0,
+        "map_header_sha256": "033ffd6e6fead65fd091e651c29ee75c830803c66931a385094f78126d55cb5e"
+      },
+      {
+        "map_id": 270,
+        "map_name_token": "D31R0206",
+        "event_bank": 0,
+        "map_header_sha256": "033ffd6e6fead65fd091e651c29ee75c830803c66931a385094f78126d55cb5e"
+      },
+      {
+        "map_id": 271,
+        "map_name_token": "D31R0207",
+        "event_bank": 242,
+        "map_header_sha256": "3332850d2188a8f891bc3860a4b5e3dd9e71a3d2c79307a0823e54a16d79740a"
+      },
+      {
+        "map_id": 272,
+        "map_name_token": "D32",
+        "event_bank": 243,
+        "map_header_sha256": "b8b646dfa3900535d27e588379579540e722a5c19759d686d5f249862660cb57"
+      },
+      {
+        "map_id": 273,
+        "map_name_token": "D32R0101",
+        "event_bank": 244,
+        "map_header_sha256": "adec99a0ef50196c428a81ac734e32986f1cb6ac0c92fffba4ae6bf170ed9513"
+      },
+      {
+        "map_id": 274,
+        "map_name_token": "D32R0201",
+        "event_bank": 245,
+        "map_header_sha256": "c926d42bd65875b0ea38b00a02e26a05df72331f59a5c22ec48d2b226a346017"
+      },
+      {
+        "map_id": 275,
+        "map_name_token": "D32R0301",
+        "event_bank": 246,
+        "map_header_sha256": "c11d3d2ee6418ba213b1a652a29d7bf264de9ff5a007a565c941eeff73961b22"
+      },
+      {
+        "map_id": 276,
+        "map_name_token": "D32R0401",
+        "event_bank": 247,
+        "map_header_sha256": "eba202d4b64b8bfd17bebc3d080701929a743bd49dc7bc2872709338e02dc34f"
+      },
+      {
+        "map_id": 277,
+        "map_name_token": "D32R0501",
+        "event_bank": 248,
+        "map_header_sha256": "30105c47dc37a8c37ba2b25fe21db5da268dcfe2da1a9b7b41589a4e02741d29"
+      },
+      {
+        "map_id": 278,
+        "map_name_token": "D32R0601",
+        "event_bank": 249,
+        "map_header_sha256": "551293ee17e1c2ec661af5d0fad49af59d0e2dcdaca175e26a686db0a8848fad"
+      },
+      {
+        "map_id": 279,
+        "map_name_token": "D48R0101",
+        "event_bank": 250,
+        "map_header_sha256": "adbfc7d59340705fd34a776b88d0508e88475d701e3aff31b934255a80fd86b4"
+      },
+      {
+        "map_id": 280,
+        "map_name_token": "D49",
+        "event_bank": 251,
+        "map_header_sha256": "2be859e10abab45b4d1875fc72b8197219a91c65b0d6a29d8249c6fd278ba232"
+      },
+      {
+        "map_id": 281,
+        "map_name_token": "D49R0101",
+        "event_bank": 252,
+        "map_header_sha256": "74a65039bb5246e23310c92d9d5e971cadb3afccc17ee9a761ca79f7411bce59"
+      },
+      {
+        "map_id": 282,
+        "map_name_token": "D49R0102",
+        "event_bank": 253,
+        "map_header_sha256": "4052aebc004d13b0f7114dbc5c41f5f7ecbeac4e339a73f09ee8aad25c46cff8"
+      },
+      {
+        "map_id": 283,
+        "map_name_token": "D49R0103",
+        "event_bank": 254,
+        "map_header_sha256": "f02531c5aeb761af3b791cb0358d9b0fcb619c14011d72c51c1ff03dac8ad1a5"
+      },
+      {
+        "map_id": 284,
+        "map_name_token": "D49R0104",
+        "event_bank": 255,
+        "map_header_sha256": "0536e6a590f4e6e1cc71961f01e19c463f60cdf9dd60ef16434d19b35d7439c9"
+      },
+      {
+        "map_id": 285,
+        "map_name_token": "D49R0105",
+        "event_bank": 256,
+        "map_header_sha256": "ab7be9737c6267da1cedc60c1709a4134dc77aef89144cdb8d206f3e72521943"
+      },
+      {
+        "map_id": 286,
+        "map_name_token": "D49R0106",
+        "event_bank": 257,
+        "map_header_sha256": "42f754c8a992b4ec15e34bbed90cf022d4d63021af4e0eb2734e98b3eac3e17a"
+      },
+      {
+        "map_id": 287,
+        "map_name_token": "D49R0107",
+        "event_bank": 258,
+        "map_header_sha256": "f284ea8fbd030231229756ef0843cdac0dbc012ea1c25efaee2ae35f35f479c0"
+      },
+      {
+        "map_id": 288,
+        "map_name_token": "D44R0103",
+        "event_bank": 259,
+        "map_header_sha256": "1f959d2c234cdabd9de61b3e3851d5f416aabf4e9800b1693b105c28be0bdc23"
+      },
+      {
+        "map_id": 289,
+        "map_name_token": "T30R0201",
+        "event_bank": 260,
+        "map_header_sha256": "0beeb9231802f0ad4431fe8de56f8f72d5684ad2dc38c4890522be7540b10976"
+      },
+      {
+        "map_id": 290,
+        "map_name_token": "T30R0301",
+        "event_bank": 261,
+        "map_header_sha256": "c4aed6072d9a1426c0f4c6ef5f589b575013e18866edde7d1484687c92cbf914"
+      },
+      {
+        "map_id": 291,
+        "map_name_token": "T30R0601",
+        "event_bank": 262,
+        "map_header_sha256": "16a5e83b3f98355031b478a360cddf4a12fdf0f49ee0f8404472b8af85225a3f"
+      },
+      {
+        "map_id": 292,
+        "map_name_token": "T30FS0101",
+        "event_bank": 263,
+        "map_header_sha256": "a3ac078adeb50b5a82b9605fbcfeba28952b55ddcff587f2e775233b252a72ea"
+      },
+      {
+        "map_id": 293,
+        "map_name_token": "T30PC0101",
+        "event_bank": 264,
+        "map_header_sha256": "1c4b8722128bcdf6066428ff41f41c9b117cb7a64996a31392d749f091812572"
+      },
+      {
+        "map_id": 294,
+        "map_name_token": "T29R0101",
+        "event_bank": 265,
+        "map_header_sha256": "da870441b14239e55b05bc9c0e0fc5d60d2801df118b1c8d3a8d78b0536b1c10"
+      },
+      {
+        "map_id": 295,
+        "map_name_token": "T29R0201",
+        "event_bank": 266,
+        "map_header_sha256": "6cc9c27adefb62504a1b648809fd77f05909fdb895ffcb2064363ae73ffa8766"
+      },
+      {
+        "map_id": 296,
+        "map_name_token": "R26R0101",
+        "event_bank": 267,
+        "map_header_sha256": "3b4ebc388a149f491601808c99e5022addcf0f8f7ce299d4b12660af8f4b8a19"
+      },
+      {
+        "map_id": 297,
+        "map_name_token": "R26R0201",
+        "event_bank": 268,
+        "map_header_sha256": "4804aacd3358fb29bbabff113320249654bbc52890c54f8a53f89a3aedf79dec"
+      },
+      {
+        "map_id": 298,
+        "map_name_token": "D45R0102",
+        "event_bank": 269,
+        "map_header_sha256": "e82b6a909b90b334fc53e4399d1120bf52f01faa8b7052c49ceeeb069c36df2f"
+      },
+      {
+        "map_id": 299,
+        "map_name_token": "R22R0101",
+        "event_bank": 270,
+        "map_header_sha256": "d6e97bee4cf78b6b43c1ff54504ed1ba6b1e1d8a35cda5a0f339169634405050"
+      },
+      {
+        "map_id": 300,
+        "map_name_token": "T10R0101",
+        "event_bank": 271,
+        "map_header_sha256": "d8597d1d7f164e148bc22c88ccdce09dcbee729c928717a7faf13d3fdba29d14"
+      },
+      {
+        "map_id": 301,
+        "map_name_token": "T10R0201",
+        "event_bank": 272,
+        "map_header_sha256": "59693e290d2a24025c8ef1c339a9ec2790c7cf886e148f6155e3375e248c9e31"
+      },
+      {
+        "map_id": 302,
+        "map_name_token": "T10R0301",
+        "event_bank": 273,
+        "map_header_sha256": "0b5978b9dba41888f9dc4e115356da3d4e4ccc69887a62782f3674dc57261841"
+      },
+      {
+        "map_id": 303,
+        "map_name_token": "T10R0401",
+        "event_bank": 274,
+        "map_header_sha256": "202f2cd51462c8aa445c486420427cd8cae586d43e8e200b92258bbb4d9691a7"
+      },
+      {
+        "map_id": 304,
+        "map_name_token": "T10R0501",
+        "event_bank": 275,
+        "map_header_sha256": "f58118d02e35b1a4ccd628851bc61e4e00a2415ad05507568c5ca8f5fe20eac4"
+      },
+      {
+        "map_id": 305,
+        "map_name_token": "T10R0601",
+        "event_bank": 276,
+        "map_header_sha256": "bdf3994212453d85754f26ec67237763cbe781dae5c2751aa9d5afb1fffe062a"
+      },
+      {
+        "map_id": 306,
+        "map_name_token": "T10R0701",
+        "event_bank": 277,
+        "map_header_sha256": "25c099c09f0f47cc70efa096e0c8a5cd2386619ba88435ddd30e40908c3c4c07"
+      },
+      {
+        "map_id": 307,
+        "map_name_token": "P01R0301",
+        "event_bank": 278,
+        "map_header_sha256": "1b33b27de98f9c9bfddae1616a05079d16c9b6e3ae1239098f2d397beb52dfac"
+      },
+      {
+        "map_id": 308,
+        "map_name_token": "P01R0302",
+        "event_bank": 279,
+        "map_header_sha256": "b89d2afaed632ce1e31e851d3020ccc3a1940b4da0d9004bbdd7608e8cab2553"
+      },
+      {
+        "map_id": 309,
+        "map_name_token": "P01R0303",
+        "event_bank": 280,
+        "map_header_sha256": "069c7be0db05731a0f69ef2d448fa9dbfc574ca1727e75e8eb594dea6455b4fe"
+      },
+      {
+        "map_id": 310,
+        "map_name_token": "P01R0304",
+        "event_bank": 281,
+        "map_header_sha256": "46f0e3693ccc7454d6e72989fb2c9285845a9587f24ad89ff52c610476ff2d97"
+      },
+      {
+        "map_id": 311,
+        "map_name_token": "P01R0305",
+        "event_bank": 282,
+        "map_header_sha256": "16905d22c0cd95eb0bf2d1e331269348292348c6d16e76df09dc762ec5688a6f"
+      },
+      {
+        "map_id": 312,
+        "map_name_token": "D24R0202",
+        "event_bank": 283,
+        "map_header_sha256": "0ed8343e08494e1bb18d1c2fd8ebe805ba77c31f9190b8aaa3207d787f040898"
+      },
+      {
+        "map_id": 313,
+        "map_name_token": "D24R0203",
+        "event_bank": 284,
+        "map_header_sha256": "024984ce3308c60481d25264191c34b7779664f850a94e254d2fc30a6036997a"
+      },
+      {
+        "map_id": 314,
+        "map_name_token": "D24R0204",
+        "event_bank": 285,
+        "map_header_sha256": "68eb38e53f056fcf5aee2eafaeff6c370bb99af0d3bdd72dd64b074f62594637"
+      },
+      {
+        "map_id": 315,
+        "map_name_token": "D24R0205",
+        "event_bank": 286,
+        "map_header_sha256": "20172bd26556b937f12bc4349cd67114245385a1e3f0a02254659c31cd1df894"
+      },
+      {
+        "map_id": 316,
+        "map_name_token": "D24R0206",
+        "event_bank": 287,
+        "map_header_sha256": "525590e80e4d684875737b11e7a106dc027245d0dcc2f0cc95dfe256866700c3"
+      },
+      {
+        "map_id": 317,
+        "map_name_token": "D24R0207",
+        "event_bank": 288,
+        "map_header_sha256": "93ee03e898d4c90d66e3059832ac54cb17ff6802abfcdeb33c22581ade368b0d"
+      },
+      {
+        "map_id": 318,
+        "map_name_token": "D24R0208",
+        "event_bank": 289,
+        "map_header_sha256": "5fb2b492ed78f62aeb2147fda826c80dc908764a448594dc87e344f37faf65d0"
+      },
+      {
+        "map_id": 319,
+        "map_name_token": "D24R0209",
+        "event_bank": 290,
+        "map_header_sha256": "513dde5d1e510d83db8d553b568523025f728b3fbb24c1d407bd83356586452b"
+      },
+      {
+        "map_id": 320,
+        "map_name_token": "D24R0210",
+        "event_bank": 291,
+        "map_header_sha256": "a06176300057cfe3f14e236c3efe5147df3e45b6680966241a3d4b15aca307b0"
+      },
+      {
+        "map_id": 321,
+        "map_name_token": "D24R0102",
+        "event_bank": 292,
+        "map_header_sha256": "100f6adf9d7e456d604f63859192d92de10cf4708f7642bdfe3cf460fa6fe578"
+      },
+      {
+        "map_id": 322,
+        "map_name_token": "R27R0101",
+        "event_bank": 293,
+        "map_header_sha256": "181f0d6ea55c054f19590f9f469f688a3b69311853e104cef06c9224d4116db9"
+      },
+      {
+        "map_id": 323,
+        "map_name_token": "D24R0211",
+        "event_bank": 294,
+        "map_header_sha256": "e3dc3c4eb92911991c3759700056af8163e47931f0573752ebdd7467a180f422"
+      },
+      {
+        "map_id": 324,
+        "map_name_token": "D24R0212",
+        "event_bank": 295,
+        "map_header_sha256": "246bc18367a8c844f542f0a23e0919448c0b3dd58b6c5f3f7e9b1dec87a270d0"
+      },
+      {
+        "map_id": 325,
+        "map_name_token": "D24R0213",
+        "event_bank": 296,
+        "map_header_sha256": "63daae0f6d624a9220628df8042716754ed4e7347aa29986a585bce3c0840522"
+      },
+      {
+        "map_id": 326,
+        "map_name_token": "D24R0214",
+        "event_bank": 297,
+        "map_header_sha256": "9168b1c444a4c9acf628e3898b7fb87c55c22bb31976539ac89610c44380ce40"
+      },
+      {
+        "map_id": 327,
+        "map_name_token": "D24R0215",
+        "event_bank": 298,
+        "map_header_sha256": "0d528d3492257171693fa6a269399330b22483d7541f15ecdd9ea063db52c4e5"
+      },
+      {
+        "map_id": 328,
+        "map_name_token": "P01R0306",
+        "event_bank": 299,
+        "map_header_sha256": "9ae8d63293b03f286e23a691ca856753e2185da6d95b8144dc699f89ad67711f"
+      },
+      {
+        "map_id": 329,
+        "map_name_token": "P01R0307",
+        "event_bank": 300,
+        "map_header_sha256": "11b09ecd686fe428aac1b6c015d3c5f98b5dbcce97e181f06e499f24a9399c61"
+      },
+      {
+        "map_id": 330,
+        "map_name_token": "P01R0102",
+        "event_bank": 301,
+        "map_header_sha256": "853baceaa47e06aaa5eaccf4c4032eeae770dab282f941334a8b16eb9fb621c7"
+      },
+      {
+        "map_id": 331,
+        "map_name_token": "R34R0101",
+        "event_bank": 302,
+        "map_header_sha256": "6888b84e1a98213b3ea6f9126e94155e5217d3ba32da179b5b7f722db00e7205"
+      },
+      {
+        "map_id": 332,
+        "map_name_token": "D17R0102",
+        "event_bank": 303,
+        "map_header_sha256": "65fc97528257a60edbce8bb337fba0373d225aea732fafd2796dab39d55f8a6d"
+      },
+      {
+        "map_id": 333,
+        "map_name_token": "D17R0103",
+        "event_bank": 304,
+        "map_header_sha256": "afe89d4e9aea00e9f33f95ef5e1b1b3b27e7b1b6e4abce6c69bffdb607c7251c"
+      },
+      {
+        "map_id": 334,
+        "map_name_token": "D17R0104",
+        "event_bank": 305,
+        "map_header_sha256": "aa4ba10d1a04bffe40b9a2be60ce7698aa6dfb215a520af776fba0fabed8352f"
+      },
+      {
+        "map_id": 335,
+        "map_name_token": "D17R0105",
+        "event_bank": 306,
+        "map_header_sha256": "17d5331e2e378983e30be6c4e3c214398baa07f23a0241bf4eb21c9cd35dc273"
+      },
+      {
+        "map_id": 336,
+        "map_name_token": "D17R0106",
+        "event_bank": 307,
+        "map_header_sha256": "e579b70e7033d5a89b807d8450ab2442ad0803688b6318a1ba2eb9560b5bdbc2"
+      },
+      {
+        "map_id": 337,
+        "map_name_token": "D17R0107",
+        "event_bank": 308,
+        "map_header_sha256": "74d05d3f5b0be64bd041c5df89e86f13437f398ffed0e178d96d555ca09347d3"
+      },
+      {
+        "map_id": 338,
+        "map_name_token": "D17R0108",
+        "event_bank": 309,
+        "map_header_sha256": "0c8e90dc56778300a11e4aaa7dfe0292f3db64e3ae109f2c01bdae894dc830ee"
+      },
+      {
+        "map_id": 339,
+        "map_name_token": "D17R0109",
+        "event_bank": 310,
+        "map_header_sha256": "94aed06ad5d532741a6cfea2bd552f40222994cbc57e1a86ded4d46be641b90f"
+      },
+      {
+        "map_id": 340,
+        "map_name_token": "D17R0110",
+        "event_bank": 311,
+        "map_header_sha256": "e272f484b4760cdadc204760b840f30abc50b31e9bea96e6dfb4f094d69e1d03"
+      },
+      {
+        "map_id": 341,
+        "map_name_token": "D17R0112",
+        "event_bank": 312,
+        "map_header_sha256": "1d2a9b01eac1af6ab16fa1125c036c638ecf9aeacf21191728ab193196ca5f3b"
+      },
+      {
+        "map_id": 342,
+        "map_name_token": "D50R0101",
+        "event_bank": 313,
+        "map_header_sha256": "1b4b55a5f6c73c65517082b9ba74ba5941415d159f43644931f361fa4a2b0e0c"
+      },
+      {
+        "map_id": 343,
+        "map_name_token": "SAF01",
+        "event_bank": 0,
+        "map_header_sha256": "0943f793b498b73b2ade57ae1d8524f3b7fb8feaba16f24ab0ea3712a9cfdfcd"
+      },
+      {
+        "map_id": 344,
+        "map_name_token": "SAF02",
+        "event_bank": 0,
+        "map_header_sha256": "b7b9a5cb3512b12a718b6495796c9307e15bb866d95310d4a356c6662a391634"
+      },
+      {
+        "map_id": 345,
+        "map_name_token": "SAF03",
+        "event_bank": 0,
+        "map_header_sha256": "f24151aaac4d749a5f2c6cf72cf0d28c544c9a7f56cf68264a57f4557fb67c7b"
+      },
+      {
+        "map_id": 346,
+        "map_name_token": "SAF04",
+        "event_bank": 0,
+        "map_header_sha256": "787769ce3658259b0a0a975a2f971bfbfea0c4cd30211f46c52febb7602856e8"
+      },
+      {
+        "map_id": 347,
+        "map_name_token": "SAF05",
+        "event_bank": 0,
+        "map_header_sha256": "f230e52a8053919494426d3c36a06c425eddc715fcce21e9f46152a5c0143fc0"
+      },
+      {
+        "map_id": 348,
+        "map_name_token": "SAF06",
+        "event_bank": 0,
+        "map_header_sha256": "15213e518e523e371b305351e22f7d615fc4b5a351a57620c4a9793ecedaf005"
+      },
+      {
+        "map_id": 349,
+        "map_name_token": "SAF07",
+        "event_bank": 0,
+        "map_header_sha256": "f2a0621fbb46951b5701e00c336a13af7cf1467496453856be84981212018b13"
+      },
+      {
+        "map_id": 350,
+        "map_name_token": "SAF08",
+        "event_bank": 0,
+        "map_header_sha256": "00935588403a3c42c30837a73f3d7a3aa6d9e12e333e167187eaa3d8effb1a39"
+      },
+      {
+        "map_id": 351,
+        "map_name_token": "SAF09",
+        "event_bank": 0,
+        "map_header_sha256": "c64e193f8d18dc0d3a728d0e7af110a4f29bd2523c3e9e07a6e3d8ffd435382e"
+      },
+      {
+        "map_id": 352,
+        "map_name_token": "SAF10",
+        "event_bank": 0,
+        "map_header_sha256": "8975c8bfac1715bbc24104c3650c927187e6fc5dc600d67c50edd670dd8d0f6f"
+      },
+      {
+        "map_id": 353,
+        "map_name_token": "SAF11",
+        "event_bank": 0,
+        "map_header_sha256": "41e47ba06d0365f06cca71da981ada77185eb862c163e001597f87d29879854c"
+      },
+      {
+        "map_id": 354,
+        "map_name_token": "SAF12",
+        "event_bank": 0,
+        "map_header_sha256": "c3776981361e648806129501559c2fdecd3a87a183aaee6627050f14090abbae"
+      },
+      {
+        "map_id": 355,
+        "map_name_token": "SAF13",
+        "event_bank": 0,
+        "map_header_sha256": "b453a52e7d86065abb56cc3a15824a681231634f661e1edbcad9f8e1cbb3c899"
+      },
+      {
+        "map_id": 356,
+        "map_name_token": "SAF14",
+        "event_bank": 0,
+        "map_header_sha256": "011235d93b643ebe4060e9d91b3ff1e95825ad0b66f910c5b8670d71d6a91cd4"
+      },
+      {
+        "map_id": 357,
+        "map_name_token": "D47R0102",
+        "event_bank": 314,
+        "map_header_sha256": "b441ef5be964c3dccecd3279a95b144b0d595f30a7a3b2607b3eda463eba6d9d"
+      },
+      {
+        "map_id": 358,
+        "map_name_token": "T06PC0101",
+        "event_bank": 315,
+        "map_header_sha256": "20efd4f996ec95e1bb8a14d0019812dc1507f1cd3dfd08ccd193537a5ba00c67"
+      },
+      {
+        "map_id": 359,
+        "map_name_token": "T06PC0102",
+        "event_bank": 316,
+        "map_header_sha256": "c29e67639c9c8fcbc75870c52cfbff43153d57ef6099bc9a2fc8e5d01055a42f"
+      },
+      {
+        "map_id": 360,
+        "map_name_token": "T06FS0101",
+        "event_bank": 317,
+        "map_header_sha256": "493855e1c10d601554715c013cd20f420ddc0f527ada2725da9f9383dc763b14"
+      },
+      {
+        "map_id": 361,
+        "map_name_token": "T06R0101",
+        "event_bank": 318,
+        "map_header_sha256": "e9566007aca988e2b1fcc8cdedf202538835ecc80c00c32533d5cd452e661489"
+      },
+      {
+        "map_id": 362,
+        "map_name_token": "T06R0301",
+        "event_bank": 319,
+        "map_header_sha256": "70dabf113c43d6356cbad25756c25e8054db70a4a2e8a064420c077581e6ad5b"
+      },
+      {
+        "map_id": 363,
+        "map_name_token": "T06R0401",
+        "event_bank": 320,
+        "map_header_sha256": "5d537880c135824859256658d06fef7fcb937985cb5ae1d355d9d515a5e78ec1"
+      },
+      {
+        "map_id": 364,
+        "map_name_token": "T06R0601",
+        "event_bank": 321,
+        "map_header_sha256": "ba78cbb1a8ac2edca986f9453bdbcd90ba297ffbc30989160e103634a11aacac"
+      },
+      {
+        "map_id": 365,
+        "map_name_token": "T06GYM0101",
+        "event_bank": 322,
+        "map_header_sha256": "d9301c6aef4fc0361698b8ca8281ccbc1da1a4d22230b1794cb01fa5028beabc"
+      },
+      {
+        "map_id": 366,
+        "map_name_token": "W40R0101",
+        "event_bank": 323,
+        "map_header_sha256": "0e24f0d2d7dedc8ff045428e24fde7b5aeceda5fa8cf91c8aae1a42e566819ac"
+      },
+      {
+        "map_id": 367,
+        "map_name_token": "T26PC0102",
+        "event_bank": 324,
+        "map_header_sha256": "b2c026c9ed9c8592a98f26bd3b799d3d8ada4e081c134f663ab354e70aa8e390"
+      },
+      {
+        "map_id": 368,
+        "map_name_token": "T28PC0102",
+        "event_bank": 325,
+        "map_header_sha256": "476ac6440e6902a2b03c1101ebe38a8f6b131ebe5be38e5f46bd497ba7e37c88"
+      },
+      {
+        "map_id": 369,
+        "map_name_token": "T30PC0102",
+        "event_bank": 326,
+        "map_header_sha256": "034d5fa97635038de75b5ada5f98be9c91f5b0144fac67b237776215baa03f70"
+      },
+      {
+        "map_id": 370,
+        "map_name_token": "T07R0101",
+        "event_bank": 327,
+        "map_header_sha256": "db047da56f039536a467cba5f0ed83eb4129a3336c8d999083a3dc443a1dac5b"
+      },
+      {
+        "map_id": 371,
+        "map_name_token": "T07R0102",
+        "event_bank": 328,
+        "map_header_sha256": "0017ad9882ae9dca318833768f3d987aa96a4e532a4963512a11fa54e17d9c08"
+      },
+      {
+        "map_id": 372,
+        "map_name_token": "T07R0103",
+        "event_bank": 329,
+        "map_header_sha256": "8a6ef4e1618cea2830970d9282e8325a38d02cec4fc39c119d5cc07a045066bc"
+      },
+      {
+        "map_id": 373,
+        "map_name_token": "T07R0104",
+        "event_bank": 330,
+        "map_header_sha256": "480282537b05000b552a00a93bc128f39133c08a404eaba893e164e5ecbac404"
+      },
+      {
+        "map_id": 374,
+        "map_name_token": "T07R0105",
+        "event_bank": 331,
+        "map_header_sha256": "b367e21856fe13e65e9c7b7f70914fb4e8235de263de6c3c9073877ad6c304f4"
+      },
+      {
+        "map_id": 375,
+        "map_name_token": "T07R0106",
+        "event_bank": 332,
+        "map_header_sha256": "16dedaff6e4ec6feb19fec822c02375ae2c8e2bd26add596998b3f00dc2dc24e"
+      },
+      {
+        "map_id": 376,
+        "map_name_token": "T07R0201",
+        "event_bank": 333,
+        "map_header_sha256": "63eacb155c4dc6fad7257168c5b4d4b758b3306e3c213497f495c05dcc56c6e2"
+      },
+      {
+        "map_id": 377,
+        "map_name_token": "T07R0202",
+        "event_bank": 334,
+        "map_header_sha256": "155404649a618c6b2530ac1b5356a4b4e8563a89cf57b37775209c50bc1af578"
+      },
+      {
+        "map_id": 378,
+        "map_name_token": "T07R0203",
+        "event_bank": 335,
+        "map_header_sha256": "829f9945d7e99efcef97bbfc095f727079e402ef8b1570dc6daa7b4818c6852a"
+      },
+      {
+        "map_id": 379,
+        "map_name_token": "T07R0204",
+        "event_bank": 336,
+        "map_header_sha256": "623a79d1e1cdd0ef084a28ac4f9357a49c5aa2a5c83e42cd0b2a8ab9a02f7bc8"
+      },
+      {
+        "map_id": 380,
+        "map_name_token": "T07R0205",
+        "event_bank": 337,
+        "map_header_sha256": "2a0262ab62c9b2bd556ddc023872d444a3c7fc5171672d360e0c1ca2e7e75637"
+      },
+      {
+        "map_id": 381,
+        "map_name_token": "T07R0401",
+        "event_bank": 338,
+        "map_header_sha256": "8dbc91d2ef7394cb7d11dfc6d78d9d5019dac06357283454ed9749adcb805e67"
+      },
+      {
+        "map_id": 382,
+        "map_name_token": "T07R0501",
+        "event_bank": 339,
+        "map_header_sha256": "7198e782beb072418f45d142381210fda55c68b268bd1420fa2e031b9b61b2a9"
+      },
+      {
+        "map_id": 383,
+        "map_name_token": "T07R0701",
+        "event_bank": 340,
+        "map_header_sha256": "79fdd54ee9de9426abc857ff677b779466c23bbbb61bf136165c388d23271c70"
+      },
+      {
+        "map_id": 384,
+        "map_name_token": "T20R0402",
+        "event_bank": 341,
+        "map_header_sha256": "81da7997c37e2c532a1d213cf371761f4269a0116747e7bffeeb1f8057e580f8"
+      },
+      {
+        "map_id": 385,
+        "map_name_token": "T24R0801",
+        "event_bank": 342,
+        "map_header_sha256": "49352d881a7cde948e17fc8d1eb6a8ecb23a3ee9285c8a5bfd54b170c84e88c4"
+      },
+      {
+        "map_id": 386,
+        "map_name_token": "P01R0103",
+        "event_bank": 343,
+        "map_header_sha256": "53be7a97f7fb4591d7cca4d5340458588ce7b04abea69fc6139827394c51591d"
+      },
+      {
+        "map_id": 387,
+        "map_name_token": "P01R0104",
+        "event_bank": 344,
+        "map_header_sha256": "9f49b699dd3773d883f72f42fecaaf425a7df9b733a38b1e87265454f8ab5783"
+      },
+      {
+        "map_id": 388,
+        "map_name_token": "R10R0101",
+        "event_bank": 345,
+        "map_header_sha256": "89e03894e568f1591bc070cf54d68a67952b47166323888ca1adfb1f765a35eb"
+      },
+      {
+        "map_id": 389,
+        "map_name_token": "R06R0201",
+        "event_bank": 346,
+        "map_header_sha256": "b1b15b6158922f7510da049fc54794bf02cb817777b24f967e1619efdc436db7"
+      },
+      {
+        "map_id": 390,
+        "map_name_token": "R08R0201",
+        "event_bank": 347,
+        "map_header_sha256": "f4b9de43101de4863eac90bdc6f7cdc48892f0a48c96c04b83fa58492590ed8e"
+      },
+      {
+        "map_id": 391,
+        "map_name_token": "R05R0301",
+        "event_bank": 348,
+        "map_header_sha256": "ce50ede3b545352d757294314c75c049cc1c584900933aa4f4d85692622240f2"
+      },
+      {
+        "map_id": 392,
+        "map_name_token": "R15R0101",
+        "event_bank": 349,
+        "map_header_sha256": "ab06de7c37d10fd8432e1195ed273969bcafa47c80562175f62b4842360c73f6"
+      },
+      {
+        "map_id": 393,
+        "map_name_token": "T07PC0101",
+        "event_bank": 350,
+        "map_header_sha256": "88fd1ff10fa7b7293c2cbba81d9e16b6a35927946331005d065377ee4423486d"
+      },
+      {
+        "map_id": 394,
+        "map_name_token": "T07PC0102",
+        "event_bank": 351,
+        "map_header_sha256": "03f5905f00d62555966a7f8ab087122c58f589f7253bf77634f78f786d1eaee9"
+      },
+      {
+        "map_id": 395,
+        "map_name_token": "T07GYM0101",
+        "event_bank": 352,
+        "map_header_sha256": "a6f46d7f02d5d3a3d8e420eee01d59995e13fe658fd5470f43a539cfa96d283c"
+      },
+      {
+        "map_id": 396,
+        "map_name_token": "T28GYM0102",
+        "event_bank": 353,
+        "map_header_sha256": "0216b61ada5e1d9f5f010ef50f95cb551069133b014cea6273eff8442d3c3e5a"
+      },
+      {
+        "map_id": 397,
+        "map_name_token": "T28GYM0103",
+        "event_bank": 354,
+        "map_header_sha256": "1612211242e09750998a7e2bb07076eadd44d7e62cd28b38a6a5262f6937dbe5"
+      },
+      {
+        "map_id": 398,
+        "map_name_token": "T11R0101",
+        "event_bank": 355,
+        "map_header_sha256": "881410b5a5c46e42a6b073916850462d261c3bf955b01f4b4560294ea0b70fc1"
+      },
+      {
+        "map_id": 399,
+        "map_name_token": "T11R0501",
+        "event_bank": 356,
+        "map_header_sha256": "632bc37559a82b562488d860e120ff76c438f643d7f111b69d2393aa9b209b7e"
+      },
+      {
+        "map_id": 400,
+        "map_name_token": "T11R0601",
+        "event_bank": 357,
+        "map_header_sha256": "ebfe4fa97314ec0c9d0aec52e47d35aebcd61af6852ff5425dcf3f9c934d5ab1"
+      },
+      {
+        "map_id": 401,
+        "map_name_token": "T11R0602",
+        "event_bank": 358,
+        "map_header_sha256": "122b54026bb2dfe71589f9d4b494e18792ba93a2bc21b640086fffeeaa1cb9b2"
+      },
+      {
+        "map_id": 402,
+        "map_name_token": "T11R0701",
+        "event_bank": 359,
+        "map_header_sha256": "01a588ca527d12bbdb14edee684ee6d076a2e1a1958320c3759d4e4c51d2a946"
+      },
+      {
+        "map_id": 403,
+        "map_name_token": "T11R0702",
+        "event_bank": 360,
+        "map_header_sha256": "282a3a250f94eadb183fcc74624cc081e682f5ddf8a1e132eaf7d6d5efba70a3"
+      },
+      {
+        "map_id": 404,
+        "map_name_token": "T11R0801",
+        "event_bank": 361,
+        "map_header_sha256": "3d25ba2398e8129b3cc29b693fe7d0873e67aa076d07b628632b4cab76c75168"
+      },
+      {
+        "map_id": 405,
+        "map_name_token": "T11R0802",
+        "event_bank": 362,
+        "map_header_sha256": "8f365d2bab8968847714017b48a5cb0e6e97ddec4174339a79d63edbd9ca2c95"
+      },
+      {
+        "map_id": 406,
+        "map_name_token": "T11R0901",
+        "event_bank": 0,
+        "map_header_sha256": "10bbff74a957dbad0c61caa47a826bd5e3959102959e8982db1aae2c2856e079"
+      },
+      {
+        "map_id": 407,
+        "map_name_token": "T11PC0101",
+        "event_bank": 363,
+        "map_header_sha256": "90579aa7a38bfe4a85ee481f94c619b3c78cb935ee4698cc224f3b7481c90701"
+      },
+      {
+        "map_id": 408,
+        "map_name_token": "T11PC0102",
+        "event_bank": 364,
+        "map_header_sha256": "627f84bd6089cf59e836f36c98bfe8d1146b5f1c7f4753ada4b4d233d4bcffee"
+      },
+      {
+        "map_id": 409,
+        "map_name_token": "T11FS0101",
+        "event_bank": 365,
+        "map_header_sha256": "f98c229a2b6f68eb09324c9951db1066fd6f30f8b75041e7ff1f2d728256160b"
+      },
+      {
+        "map_id": 410,
+        "map_name_token": "T11GYM0101",
+        "event_bank": 366,
+        "map_header_sha256": "e2e440a35547f4ec1e9b9b930f9c2257eb408a199302cd08f06ec379eef1b158"
+      },
+      {
+        "map_id": 411,
+        "map_name_token": "D32R0102",
+        "event_bank": 367,
+        "map_header_sha256": "d45174618a670101389387e4eb7daea0cd995f38b1de4cb2028fddb7ade3f3dc"
+      },
+      {
+        "map_id": 412,
+        "map_name_token": "T25R1202",
+        "event_bank": 368,
+        "map_header_sha256": "0a7725054b425904d4effdedcefa75da7f160040cfd0ad5cd5dbb801de85f5f8"
+      },
+      {
+        "map_id": 413,
+        "map_name_token": "T25R1203",
+        "event_bank": 369,
+        "map_header_sha256": "ffb5e1641d0f2b7d07c8f5d617bf858220932f96f0d60ca7e00b81388cfd3716"
+      },
+      {
+        "map_id": 414,
+        "map_name_token": "R02R0101",
+        "event_bank": 370,
+        "map_header_sha256": "21a42858c4a8c06654ab49dab45442a8e59ad54885c0d80bc9def8b690c95db7"
+      },
+      {
+        "map_id": 415,
+        "map_name_token": "R16R0101",
+        "event_bank": 371,
+        "map_header_sha256": "567fc84b69d40d7ab2e5e5ae5d85a4049c1106f5ec444df57476e4f2a9258191"
+      },
+      {
+        "map_id": 416,
+        "map_name_token": "W20R0101",
+        "event_bank": 0,
+        "map_header_sha256": "446f3f7002591e20aa388e71e1e189eedc27967ce91e6735104c1716b08c889f"
+      },
+      {
+        "map_id": 417,
+        "map_name_token": "R02R0201",
+        "event_bank": 372,
+        "map_header_sha256": "4bbae36768a2c5fa0f41ededefaff7ee6f02b81282da560f158d8c1eaa2cba75"
+      },
+      {
+        "map_id": 418,
+        "map_name_token": "R02R0301",
+        "event_bank": 373,
+        "map_header_sha256": "6dad99cef60c4c5c9be0cbbae0ade2890f773b3abedd237d86061712c9395733"
+      },
+      {
+        "map_id": 419,
+        "map_name_token": "R02R0401",
+        "event_bank": 374,
+        "map_header_sha256": "4ce89e62795b69170b2b084be104c95ae3c8363e3fd4c7a7b5930880163cd2ae"
+      },
+      {
+        "map_id": 420,
+        "map_name_token": "R02R0501",
+        "event_bank": 375,
+        "map_header_sha256": "262553f388cddd269913c3a3c4ceb69ccbf70d9d0e44fd76bb90d96ad2f4c0a9"
+      },
+      {
+        "map_id": 421,
+        "map_name_token": "R16R0201",
+        "event_bank": 376,
+        "map_header_sha256": "9b2adcfe5f203b53afce4ecff82810e625d6e5813aab5f338c907d5a1bf640f6"
+      },
+      {
+        "map_id": 422,
+        "map_name_token": "R16R0301",
+        "event_bank": 377,
+        "map_header_sha256": "a55d2ab914bcea15b87e053062bf85c5ebc45953dd8d244fe64950cd48730569"
+      },
+      {
+        "map_id": 423,
+        "map_name_token": "R18R0101",
+        "event_bank": 378,
+        "map_header_sha256": "b69ece80a8e5a4655bf96e8b40067b754280f688e690c1a3799cc4a2168d2c20"
+      },
+      {
+        "map_id": 424,
+        "map_name_token": "W19R0101",
+        "event_bank": 379,
+        "map_header_sha256": "6e6b048023434bf8fb9d232f172922def1cbd928a6a6c7c7dcb8e40362bb753c"
+      },
+      {
+        "map_id": 425,
+        "map_name_token": "R11R0101",
+        "event_bank": 380,
+        "map_header_sha256": "ed05650ad69e7855224cb85ad268214d3f14636ec64f3a20fe96809c71e21635"
+      },
+      {
+        "map_id": 426,
+        "map_name_token": "T04FS0101",
+        "event_bank": 381,
+        "map_header_sha256": "f40f4ab370eecd718c8edb1fc0c19c5cac98034f85aa2f682953ffedf5bf967f"
+      },
+      {
+        "map_id": 427,
+        "map_name_token": "T04GYM0101",
+        "event_bank": 382,
+        "map_header_sha256": "a1661defe9fa1825fafb44ccbbc2a1955a9472c6cc96c48396a08715b3608f8a"
+      },
+      {
+        "map_id": 428,
+        "map_name_token": "T04PC0101",
+        "event_bank": 383,
+        "map_header_sha256": "9f953fe20f3b3a57871d5e9141009ad408c22e199430355c8662efaa9cfa329d"
+      },
+      {
+        "map_id": 429,
+        "map_name_token": "T04R0101",
+        "event_bank": 384,
+        "map_header_sha256": "eaee0c4d33f428ad0771ad3a8068b05d9f128c697a0463ea6b32ffa12702cab0"
+      },
+      {
+        "map_id": 430,
+        "map_name_token": "T04R0201",
+        "event_bank": 385,
+        "map_header_sha256": "c956fb0a337633e11dd97d80fadc276d6ef5acc26c95f60283586fdf32ea2119"
+      },
+      {
+        "map_id": 431,
+        "map_name_token": "T04R0301",
+        "event_bank": 386,
+        "map_header_sha256": "4e2708bca589f3e29d307c2b1384c5fbfefc23e366e0a905c7ecba0db966b59b"
+      },
+      {
+        "map_id": 432,
+        "map_name_token": "T04R0401",
+        "event_bank": 387,
+        "map_header_sha256": "7deacb315e0a1c0c21d4c2d9086cd79277ffa0cc60523072c5ca78757ac6f067"
+      },
+      {
+        "map_id": 433,
+        "map_name_token": "T05FS0101",
+        "event_bank": 388,
+        "map_header_sha256": "583b046f5121c509b0b28a7c91601289b71b09190a0f88644f7f87f80a4bf200"
+      },
+      {
+        "map_id": 434,
+        "map_name_token": "T05PC0101",
+        "event_bank": 389,
+        "map_header_sha256": "2de223d4c862d051830930d2f6f398e4e5aca49b8ca47345e19abcbe4b4d3bac"
+      },
+      {
+        "map_id": 435,
+        "map_name_token": "T05R0201",
+        "event_bank": 390,
+        "map_header_sha256": "8b200f688e98aafb45dc1d241d8fb84857647b13ef53246da9c225a6b91d314a"
+      },
+      {
+        "map_id": 436,
+        "map_name_token": "T05R0301",
+        "event_bank": 391,
+        "map_header_sha256": "54cec194e95526f34c238682ca8fef214ffed3c63ec924b67a3107765a522d6f"
+      },
+      {
+        "map_id": 437,
+        "map_name_token": "T05R0401",
+        "event_bank": 392,
+        "map_header_sha256": "a61a55fb37f0adceb4e72ac908e4c4f75378e10454605851dc0a2664b85c06ed"
+      },
+      {
+        "map_id": 438,
+        "map_name_token": "T05R0601",
+        "event_bank": 393,
+        "map_header_sha256": "55fe758df436d6e0db55dca382e6f32b08869d5a551f75e38689b2e10c6d9127"
+      },
+      {
+        "map_id": 439,
+        "map_name_token": "T05R0701",
+        "event_bank": 394,
+        "map_header_sha256": "ff6372fe27c2fa6ac648a6e2478008056d24d6296aaa18fc29a33f1793233c0c"
+      },
+      {
+        "map_id": 440,
+        "map_name_token": "R25R0101",
+        "event_bank": 395,
+        "map_header_sha256": "8d064ffd19584d6a72e6c99ad9c4b707e5d78750c5c3b3227c8c7169e3a8b269"
+      },
+      {
+        "map_id": 441,
+        "map_name_token": "T25R1007",
+        "event_bank": 396,
+        "map_header_sha256": "ef8cd6bd7aab180b87d0d0abbe949e3025f49e5e820089c3b58016904be13e07"
+      },
+      {
+        "map_id": 442,
+        "map_name_token": "T07R0107",
+        "event_bank": 397,
+        "map_header_sha256": "49c0f87ef6c7d8406464d7dd49aabed630f3a4a3b8e6f7070151b61d3517c7d0"
+      },
+      {
+        "map_id": 443,
+        "map_name_token": "T07R0206",
+        "event_bank": 398,
+        "map_header_sha256": "3506da13f89ed0c5379480ced806420f50d30b5e30c67524ad6d2427afd9f23a"
+      },
+      {
+        "map_id": 444,
+        "map_name_token": "T07R0207",
+        "event_bank": 399,
+        "map_header_sha256": "7acba2430bdc4b4dbdad2049d160da417be14173a2c31a1b305101ab28fbac9f"
+      },
+      {
+        "map_id": 445,
+        "map_name_token": "T11R0703",
+        "event_bank": 400,
+        "map_header_sha256": "58c61fc607323ddbceed0bd910c7f9bf79480f14d1e1dacb73a3427ddc6db489"
+      },
+      {
+        "map_id": 446,
+        "map_name_token": "D27R0108",
+        "event_bank": 401,
+        "map_header_sha256": "9653448cbd705343e2a5b734d5f09f97ddaab5da88b4c7b9502a47f1f5c0d5dc"
+      },
+      {
+        "map_id": 447,
+        "map_name_token": "D23R0107",
+        "event_bank": 402,
+        "map_header_sha256": "7e151db17835f10e77c60a53e66814997e359aae21a2af7346c7c5c754b394b8"
+      },
+      {
+        "map_id": 448,
+        "map_name_token": "D02R0102",
+        "event_bank": 403,
+        "map_header_sha256": "b96e3d428986db540e1214ba24c2da981b4df6cead7b706d3f6c228df24165a9"
+      },
+      {
+        "map_id": 449,
+        "map_name_token": "D02R0103",
+        "event_bank": 404,
+        "map_header_sha256": "76d9c41c654812b7c26f4a73cdd81ddb3f7b016aa50c4d62e69a8b553e9425e3"
+      },
+      {
+        "map_id": 450,
+        "map_name_token": "D03R0102",
+        "event_bank": 405,
+        "map_header_sha256": "097506602a16161c2b6ffc55bb5e99f8f1929d50edf9ab2676c1fb120446d78f"
+      },
+      {
+        "map_id": 451,
+        "map_name_token": "D03R0103",
+        "event_bank": 406,
+        "map_header_sha256": "4ff58f5e2233f0edcad1a941dbe48baeed658c324e13c54ee092babbc671e93a"
+      },
+      {
+        "map_id": 452,
+        "map_name_token": "D05R0102",
+        "event_bank": 407,
+        "map_header_sha256": "54f8da46765f72f1856c1ba40898014b0305c4520d3bf13c5734a9323802a898"
+      },
+      {
+        "map_id": 453,
+        "map_name_token": "D11R0102",
+        "event_bank": 408,
+        "map_header_sha256": "7e6c55f6c0ab9e0bfecd65a1bc2f25a20d2478eb985c05299de11221303a9e6c"
+      },
+      {
+        "map_id": 454,
+        "map_name_token": "D11R0103",
+        "event_bank": 409,
+        "map_header_sha256": "ba7ff4e7f7e91f4528e4d04426587d6ec7fc2f1e4dc44c4c896040b6e2ad3488"
+      },
+      {
+        "map_id": 455,
+        "map_name_token": "D11R0104",
+        "event_bank": 410,
+        "map_header_sha256": "287cab9711ceae8182e9fb04c0f6605a70c77fcc9df4d5600ddaa697ed3a2c74"
+      },
+      {
+        "map_id": 456,
+        "map_name_token": "D11R0105",
+        "event_bank": 411,
+        "map_header_sha256": "88a5708eed63a5b239632a574126236eb563532f4e05355cd4213103fd70b612"
+      },
+      {
+        "map_id": 457,
+        "map_name_token": "D11R0106",
+        "event_bank": 412,
+        "map_header_sha256": "aea306b7d6d16ba349f9191963a4ba4dfea8dacdfbcc9fd04ce64b8add08fe53"
+      },
+      {
+        "map_id": 458,
+        "map_name_token": "D11R0107",
+        "event_bank": 0,
+        "map_header_sha256": "8fd0c6be688d4a1b00f6216ef784587738803fa5f89a36838e6bdd9928a9cf7a"
+      },
+      {
+        "map_id": 459,
+        "map_name_token": "D41R0102",
+        "event_bank": 413,
+        "map_header_sha256": "ab494a448dd4f2cd1022b21ddcf6fd4d39ec5b4ddb8f1ce866fd6a29e442a54f"
+      },
+      {
+        "map_id": 460,
+        "map_name_token": "D41R0103",
+        "event_bank": 414,
+        "map_header_sha256": "99fcfc8d9401bd60df3edc008ef14a59da606f21f05f8ae5f1f698916b971e86"
+      },
+      {
+        "map_id": 461,
+        "map_name_token": "D41R0104",
+        "event_bank": 415,
+        "map_header_sha256": "c21f72ab05084cc013d334552b3524a3918a8321801e9e0cfb2a3616d6cdcc53"
+      },
+      {
+        "map_id": 462,
+        "map_name_token": "D41R0105",
+        "event_bank": 416,
+        "map_header_sha256": "5bd6cfc8f65918993f1de53ef73af512846a11b49505d03a9f12ca649e68843d"
+      },
+      {
+        "map_id": 463,
+        "map_name_token": "D41R0106",
+        "event_bank": 417,
+        "map_header_sha256": "12a31fc57cba93c18397f85fbf45ad5c1a17cd5680e5b6bfecbe16d075464ae6"
+      },
+      {
+        "map_id": 464,
+        "map_name_token": "D41R0107",
+        "event_bank": 418,
+        "map_header_sha256": "5f1b1f8cf119de1712be2200b194041d4c38d2650064f6be62e4d8efa4498033"
+      },
+      {
+        "map_id": 465,
+        "map_name_token": "D41R0108",
+        "event_bank": 419,
+        "map_header_sha256": "eacb4dbe39721879950a88b505390404747536a4acc4c58026ec1a7afc131a68"
+      },
+      {
+        "map_id": 466,
+        "map_name_token": "R10PC0101",
+        "event_bank": 420,
+        "map_header_sha256": "3d7cd653c4caa57f4767c3f3ee7fe0743a99a25ae5725cb5451d3d196788c4aa"
+      },
+      {
+        "map_id": 467,
+        "map_name_token": "R10R0201",
+        "event_bank": 421,
+        "map_header_sha256": "130d98935ea1da0d60ba5a47a66cd67f3df63fb6a23c189b8bd3bf310fa994f5"
+      },
+      {
+        "map_id": 468,
+        "map_name_token": "R05R0101",
+        "event_bank": 0,
+        "map_header_sha256": "106b7f0ccae886087084b6a3f1e328f7436b00dc82873257ce2511f7f049831b"
+      },
+      {
+        "map_id": 469,
+        "map_name_token": "R05R0201",
+        "event_bank": 422,
+        "map_header_sha256": "746c13775623bcf40cda13f5a0e9d22ca6537b02e3b16db42ec0ce1a0b3b7c2b"
+      },
+      {
+        "map_id": 470,
+        "map_name_token": "R06R0101",
+        "event_bank": 423,
+        "map_header_sha256": "fb59bc719b7a81f419377e6beab5418fc9b3decb126465c113cbdeb59639505c"
+      },
+      {
+        "map_id": 471,
+        "map_name_token": "T03R0101",
+        "event_bank": 424,
+        "map_header_sha256": "e41babb43da6ed8ab33853938caf762191505c55e8a6239ff490792f11f9035c"
+      },
+      {
+        "map_id": 472,
+        "map_name_token": "T03R0201",
+        "event_bank": 425,
+        "map_header_sha256": "142d88d9543f5c728d59fa5298d20d226c2926f12c066cd725156e87b0f3c380"
+      },
+      {
+        "map_id": 473,
+        "map_name_token": "T03GYM0101",
+        "event_bank": 426,
+        "map_header_sha256": "6f32897d2554927fb5b922980cbfd708e2bbf52436895fcea99917421006e085"
+      },
+      {
+        "map_id": 474,
+        "map_name_token": "T03FS0101",
+        "event_bank": 427,
+        "map_header_sha256": "77a53b579080e10e20d354d2a968386ed35c590dfe3912e861fc9fe1525bdb5a"
+      },
+      {
+        "map_id": 475,
+        "map_name_token": "T03PC0101",
+        "event_bank": 428,
+        "map_header_sha256": "59feae49a84ea9f8df555faed0ee9973a06383320258263dca14f89635f8021e"
+      },
+      {
+        "map_id": 476,
+        "map_name_token": "T03PC0102",
+        "event_bank": 429,
+        "map_header_sha256": "4c78732b38e8ed66d81ae27b95ebc75c63d2f2ba21f751cca7e1bd6302facff3"
+      },
+      {
+        "map_id": 477,
+        "map_name_token": "T03R0601",
+        "event_bank": 430,
+        "map_header_sha256": "d7651b4adeab57779f91339abb47a2eb8591ee891a6910fdf2ed727f30e8a2ec"
+      },
+      {
+        "map_id": 478,
+        "map_name_token": "T08FS0101",
+        "event_bank": 431,
+        "map_header_sha256": "4e5b2c0d09804b1e4e2a146d5943f099be3e5c6dd0fef35e173e38ecf1d73dce"
+      },
+      {
+        "map_id": 479,
+        "map_name_token": "T08R0201",
+        "event_bank": 432,
+        "map_header_sha256": "dcbb9c88920eb1803ea3d5ee02195cc1257ac4394d8f0b1640b63b0c1aa8c638"
+      },
+      {
+        "map_id": 480,
+        "map_name_token": "T08GYM0101",
+        "event_bank": 433,
+        "map_header_sha256": "ef4171800ad1a3a21094472cfc955ff36a7c8f427700f7e2828d6b2b1594b0fd"
+      },
+      {
+        "map_id": 481,
+        "map_name_token": "T08R0401",
+        "event_bank": 434,
+        "map_header_sha256": "8404d67327a5fc15684ac3af85edb78c26e7367320c1d0988509ab170cb404b9"
+      },
+      {
+        "map_id": 482,
+        "map_name_token": "T08PC0101",
+        "event_bank": 435,
+        "map_header_sha256": "005f95d8d3a7f36269b9ad7611324c22a4a41c5f2e1650bbb71aea946d324833"
+      },
+      {
+        "map_id": 483,
+        "map_name_token": "T08R0601",
+        "event_bank": 436,
+        "map_header_sha256": "b8814adaf28fc1f908004f0fcb8813063110558dfadadbb702fd273a61acd88a"
+      },
+      {
+        "map_id": 484,
+        "map_name_token": "R10PC0102",
+        "event_bank": 437,
+        "map_header_sha256": "281e88ccb21de9b42e5ad64c8fdcf1726eca89074c7286ada361ccfbb29270a5"
+      },
+      {
+        "map_id": 485,
+        "map_name_token": "T08PC0102",
+        "event_bank": 438,
+        "map_header_sha256": "4d984ee64e305595156c0b7666c13bb25f9880099df5a3406b0439cca196402d"
+      },
+      {
+        "map_id": 486,
+        "map_name_token": "D40R0106",
+        "event_bank": 439,
+        "map_header_sha256": "512e597529eaafa995e42f503ef57afc83d2478d46be9b2db022ee98637ffc65"
+      },
+      {
+        "map_id": 487,
+        "map_name_token": "D22R0102",
+        "event_bank": 440,
+        "map_header_sha256": "b31cfa48c586da111236e9c449363c0d7457e17cbcd772916ba70404ad6b450b"
+      },
+      {
+        "map_id": 488,
+        "map_name_token": "D22R0103",
+        "event_bank": 0,
+        "map_header_sha256": "7a2f45c443d9e4e17d1854579e980b2bbab3079a2a887addf862a41ccaadaacf"
+      },
+      {
+        "map_id": 489,
+        "map_name_token": "R10R0202",
+        "event_bank": 441,
+        "map_header_sha256": "d9c0efbc10e0f2f9f8684ca7f8437be919c989059f663e3be9d5c176c6e8a3e7"
+      },
+      {
+        "map_id": 490,
+        "map_name_token": "D24R0216",
+        "event_bank": 442,
+        "map_header_sha256": "ca2e6b25c615a909ba13adf681b475efaa29969136d82390687c669a249f3dde"
+      },
+      {
+        "map_id": 491,
+        "map_name_token": "D24R0217",
+        "event_bank": 443,
+        "map_header_sha256": "4d2feb6208069250554a44b63c9ff01909066b972428ebe7dd6c997878634fba"
+      },
+      {
+        "map_id": 492,
+        "map_name_token": "D24R0218",
+        "event_bank": 444,
+        "map_header_sha256": "014366d616f34db35cdfa4bf410d3678edfe3631fb36df28c948d69b321cd9b4"
+      },
+      {
+        "map_id": 493,
+        "map_name_token": "R07R0101",
+        "event_bank": 445,
+        "map_header_sha256": "2996ef2138e3ca9bb95b89ffe12628a7017c518eaf3f12216633c9b72977033e"
+      },
+      {
+        "map_id": 494,
+        "map_name_token": "T05PC0102",
+        "event_bank": 446,
+        "map_header_sha256": "06970da2a7ac96a72d34986019151c13909803aaab1b31b67b979d9aed90823f"
+      },
+      {
+        "map_id": 495,
+        "map_name_token": "T04PC0102",
+        "event_bank": 447,
+        "map_header_sha256": "26db3ddad01ed870914bffb25d0aedade78037e19f59abff86fb011cf284fffd"
+      },
+      {
+        "map_id": 496,
+        "map_name_token": "T02GYM0101",
+        "event_bank": 448,
+        "map_header_sha256": "3fe4f2e17ab3cdb9bad5d0fd0666c410427b3424a555c71c40c79c1682a901ab"
+      },
+      {
+        "map_id": 497,
+        "map_name_token": "T02R0201",
+        "event_bank": 449,
+        "map_header_sha256": "2e7c250071e21a8481b7df9d7c2eaf25708115e3491c385b77f3be2a2215d3f4"
+      },
+      {
+        "map_id": 498,
+        "map_name_token": "T02R0301",
+        "event_bank": 450,
+        "map_header_sha256": "80e49b16be83e30ae3f20f760a3a39ea622267dae7acb91f016c670ec71f7289"
+      },
+      {
+        "map_id": 499,
+        "map_name_token": "T02R0302",
+        "event_bank": 451,
+        "map_header_sha256": "07fae218d6513c0fe1e6c3f2f470a6e8630502d20a3df329c7146c61ab494b34"
+      },
+      {
+        "map_id": 500,
+        "map_name_token": "T02FS0101",
+        "event_bank": 452,
+        "map_header_sha256": "8cb919e47b07734b280d97b458d29e7bcc917c31d6daaf8c2ddade3a8682e18f"
+      },
+      {
+        "map_id": 501,
+        "map_name_token": "T02PC0101",
+        "event_bank": 453,
+        "map_header_sha256": "27b42f827d8f9ca8934973ded4dc1eb39b56d2b51d33cb6c616664c6bfa9f521"
+      },
+      {
+        "map_id": 502,
+        "map_name_token": "T02PC0102",
+        "event_bank": 454,
+        "map_header_sha256": "38fef57f2fe501d9277d2286ff85e883cf4db6378e2c977bce69ae273824003b"
+      },
+      {
+        "map_id": 503,
+        "map_name_token": "T01R0101",
+        "event_bank": 455,
+        "map_header_sha256": "8642aab552bc3fd492d35594a4444b09c1fbe51deea876b53d45d92a21581e69"
+      },
+      {
+        "map_id": 504,
+        "map_name_token": "T01R0201",
+        "event_bank": 456,
+        "map_header_sha256": "e43c7a4a3566018dc596ae032dcbc89df76d6f8458c237ab43a581ae7f1246cd"
+      },
+      {
+        "map_id": 505,
+        "map_name_token": "T01R0301",
+        "event_bank": 457,
+        "map_header_sha256": "fa88170f167e402a1b7c5153f16776cfee8e7e7e060ebdadc1a6883280976774"
+      },
+      {
+        "map_id": 506,
+        "map_name_token": "T01R0102",
+        "event_bank": 458,
+        "map_header_sha256": "d996302ab2557dba6e348d46c8d6a75962fc143f906aa5da5618f65a408fe458"
+      },
+      {
+        "map_id": 507,
+        "map_name_token": "T01R0202",
+        "event_bank": 459,
+        "map_header_sha256": "3a5452bcbaed205f9867884f0b4723c8b96699f47946cc51ceca9d0e003045d1"
+      },
+      {
+        "map_id": 508,
+        "map_name_token": "T09PC0101",
+        "event_bank": 460,
+        "map_header_sha256": "7d8a774da68cd7bb49c4e122eb37758a317f43c0c46d46f89cfc4836b8345417"
+      },
+      {
+        "map_id": 509,
+        "map_name_token": "T09PC0102",
+        "event_bank": 461,
+        "map_header_sha256": "0fcf008578795c495f49ccc44665002ff9c383ecccee1327db08b5ce50a94ab5"
+      },
+      {
+        "map_id": 510,
+        "map_name_token": "R28R0101",
+        "event_bank": 462,
+        "map_header_sha256": "7ab578a149395adeeb7fcf33df6fd45d757c56479caffa604e8adf3acd13b059"
+      },
+      {
+        "map_id": 511,
+        "map_name_token": "R03PC0101",
+        "event_bank": 463,
+        "map_header_sha256": "344f3fde9b2f637fa920ca56791f6f564c57bac818a38175dac4dde98f95784b"
+      },
+      {
+        "map_id": 512,
+        "map_name_token": "R03PC0102",
+        "event_bank": 464,
+        "map_header_sha256": "481530b133fec8c3d9ad62ecfcce0496501e0e99f9baf006c4fa88bebbc3fcde"
+      },
+      {
+        "map_id": 513,
+        "map_name_token": "D02R0104",
+        "event_bank": 465,
+        "map_header_sha256": "86f4086bb927be47a12b773dc0f2d180fc096a2cc6c8dd250f59c2a66c628a9a"
+      },
+      {
+        "map_id": 514,
+        "map_name_token": "T31PC0101",
+        "event_bank": 466,
+        "map_header_sha256": "830bacc3d7a27e423e251c0d39f5361471bf8fe39c6a89ead475ec200b24a818"
+      },
+      {
+        "map_id": 515,
+        "map_name_token": "T31PC0102",
+        "event_bank": 467,
+        "map_header_sha256": "fce35eaec0938538f4049b903073f76673f0e7265790873b8284864e40c7dd64"
+      },
+      {
+        "map_id": 516,
+        "map_name_token": "HIROBA",
+        "event_bank": 468,
+        "map_header_sha256": "893555be0b017bf22d12ebe115cb15c668acd5cce27556b3442b429b5433c71d"
+      },
+      {
+        "map_id": 517,
+        "map_name_token": "R05R0401",
+        "event_bank": 469,
+        "map_header_sha256": "fab124dd262d2f29460bd6473469108cd3333781cf6000fea84c584322b7ae0f"
+      },
+      {
+        "map_id": 518,
+        "map_name_token": "D02FS0101",
+        "event_bank": 470,
+        "map_header_sha256": "c46ff9927add21235508427dd952e70984b6e98562e7d92abed4f4c3ee0a9f49"
+      },
+      {
+        "map_id": 519,
+        "map_name_token": "T25R0503",
+        "event_bank": 471,
+        "map_header_sha256": "862ee8821933a0c7e639bdd9ce8be16df86e0c2e794bd7094485403b353289af"
+      },
+      {
+        "map_id": 520,
+        "map_name_token": "T11R0603",
+        "event_bank": 472,
+        "map_header_sha256": "b66efb40f5bce0d782307bb231e179dbf2411e670dc267d81870b2051e4a493c"
+      },
+      {
+        "map_id": 521,
+        "map_name_token": "D51R0101",
+        "event_bank": 473,
+        "map_header_sha256": "cd95f38ec8e4cf8e21fb18edcc02168bf3b30f175f6d373afc0067937230581d"
+      },
+      {
+        "map_id": 522,
+        "map_name_token": "D51R0201",
+        "event_bank": 474,
+        "map_header_sha256": "ec3e6ee469c7763b0bc6927c28824dbbd7a9366888fb7bd72b0f88b1a54dd64e"
+      },
+      {
+        "map_id": 523,
+        "map_name_token": "D51R0301",
+        "event_bank": 475,
+        "map_header_sha256": "1f248c3e60a11286c799e193ef4fc543a8625d8f9ab488a6cfbe6e0d6b622110"
+      },
+      {
+        "map_id": 524,
+        "map_name_token": "D52R0101",
+        "event_bank": 476,
+        "map_header_sha256": "3fccca33c1705981e539f71925c264137825a94671f051a93baf3cb507af0a96"
+      },
+      {
+        "map_id": 525,
+        "map_name_token": "D52R0102",
+        "event_bank": 477,
+        "map_header_sha256": "98543be8f8db433a932905797edb3164f001776c4459c3af072073f1bb6690ac"
+      },
+      {
+        "map_id": 526,
+        "map_name_token": "D52R0103",
+        "event_bank": 478,
+        "map_header_sha256": "22c266ef1c6da120cd935a85b8371e2462235f0054afd6af70880aa7ba38050e"
+      },
+      {
+        "map_id": 527,
+        "map_name_token": "T02R0401",
+        "event_bank": 479,
+        "map_header_sha256": "0647bc4ead0199fe88e62d483fdda1ac8898cb8b7aef88452464fe471d662b54"
+      },
+      {
+        "map_id": 528,
+        "map_name_token": "D32PC0101",
+        "event_bank": 480,
+        "map_header_sha256": "f8cd836483ebacaddd08db0b86c9f3475143f954178946f27f13d7e66155f5ac"
+      },
+      {
+        "map_id": 529,
+        "map_name_token": "D32PC0102",
+        "event_bank": 481,
+        "map_header_sha256": "5492416ee48d1c09cd59e526a5fb411840090f297e27a005befa546ad07543ea"
+      },
+      {
+        "map_id": 530,
+        "map_name_token": "D32FS0101",
+        "event_bank": 482,
+        "map_header_sha256": "f33ec1914edf872a13241cdeeec38a30d0c0fe9c63ff7c33adea9ee66bb0fea4"
+      },
+      {
+        "map_id": 531,
+        "map_name_token": "D32R0103",
+        "event_bank": 483,
+        "map_header_sha256": "130a09b64229a8f62fde38fb484d3e2ee40d63cb18279a0da4a91b3ea4c0e891"
+      },
+      {
+        "map_id": 532,
+        "map_name_token": "R05R0202",
+        "event_bank": 484,
+        "map_header_sha256": "57fcd60557221ef868b15b25e1e67f248c9db40b2306d1e8c727287fc4003537"
+      },
+      {
+        "map_id": 533,
+        "map_name_token": "R12R0101",
+        "event_bank": 485,
+        "map_header_sha256": "b476ee484506b1890ce386cc2ebef360d658732fcdc9f1e59255c484c128600a"
+      },
+      {
+        "map_id": 534,
+        "map_name_token": "D47PC0101",
+        "event_bank": 486,
+        "map_header_sha256": "8a967613b6eeada383bbb170c04b290f34309edb88e83d68e36f243c1ca74cb7"
+      },
+      {
+        "map_id": 535,
+        "map_name_token": "D47PC0102",
+        "event_bank": 487,
+        "map_header_sha256": "dfd40d235e40daeecb075299d8074c337cc56041210d3e53101bcacd906948bb"
+      },
+      {
+        "map_id": 536,
+        "map_name_token": "T25SP0101",
+        "event_bank": 488,
+        "map_header_sha256": "e282283f4d510d0378162dedd4dbc92269e7429fb9b2a2e713ade2256528bbfa"
+      },
+      {
+        "map_id": 537,
+        "map_name_token": "T07SP0101",
+        "event_bank": 489,
+        "map_header_sha256": "e5d07bcbb46ca60203619189ae7fbe9d7ad75cf01663e950c2ba6e8af1868a99"
+      },
+      {
+        "map_id": 538,
+        "map_name_token": "R00",
+        "event_bank": 0,
+        "map_header_sha256": "425cb2d9a9f39c984718091373a96f64430206e7d86dc2ff0022dc3197ad526b"
+      },
+      {
+        "map_id": 539,
+        "map_name_token": "T10R0801",
+        "event_bank": 490,
+        "map_header_sha256": "9570f23152ef6573e5efa91d90281e6aa78b46b0fc72ca6a6ee4d1931ebdc5dc"
+      }
+    ],
+    "filter": {
+      "model_ids": [
+        84,
+        85,
+        86
+      ],
+      "excluded_coordinate_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          6666,
+          6666
+        ]
+      ],
+      "no_other_coordinate_filter": true,
+      "records_counted_once_per_unique_event_bank": true
+    },
+    "event_flag_semantics": {
+      "source_path": "@HOME@/Games/Sacred-Gold/night-sprint/engine/upstream/pokeheartgold/src/map_object.c",
+      "source_sha256": "acc2d341c88a4a0f78f852e61fc8ec6c61b15cadee57b128528e6a166e4d15f2",
+      "source_function": "MapObject_CreateFromObjectEventWithId",
+      "behavior": "The helper checks FieldSystem_FlagCheck(eventFlag) and creates the object only when the flag is FALSE; a set flag can suppress object creation.",
+      "limit": "The report records eventFlag values only; current save flag state and actual visibility are not assessed."
+    },
+    "model_record_counts_before_coordinate_filter": {
+      "84": 38,
+      "85": 103,
+      "86": 48
+    },
+    "excluded_placeholder_record_counts": {
+      "84": 0,
+      "85": 2,
+      "86": 24
+    },
+    "valid_position_record_counts": {
+      "84": 38,
+      "85": 101,
+      "86": 24
+    },
+    "candidates": {
+      "84": [
+        {
+          "map_id": 176,
+          "map_name_token": "D42R0102",
+          "map_header_sha256": "30afacc46c0411eeeb9c482ad41cee081202b96cd56d0ba91daf18049c732290",
+          "event_bank": 169,
+          "event_bank_sha256": "e00b8cfdb86545ec44eb19cc81f2c504aaf6299c94aed1e6e383d6030e66a901",
+          "event_bank_map_refs": [
+            {
+              "map_id": 176,
+              "map_name_token": "D42R0102"
+            }
+          ],
+          "record_index": 0,
+          "object_id": 0,
+          "model_id": 84,
+          "script_id": 10002,
+          "event_flag": 0,
+          "event_local_tile_xz": [
+            28,
+            20
+          ],
+          "runtime_map_tile_xz": [
+            28,
+            20
+          ],
+          "runtime_tile_center_units": [
+            456,
+            328
+          ]
+        },
+        {
+          "map_id": 124,
+          "map_name_token": "D43R0101",
+          "map_header_sha256": "875b422f17c32f619a80630602781fc8ec7069471e0ad37e2ed6e73149fac6a5",
+          "event_bank": 121,
+          "event_bank_sha256": "af94ac51413fe5ae0125fb2a9d4d155515102915aff6459104de05b7b49d1d47",
+          "event_bank_map_refs": [
+            {
+              "map_id": 124,
+              "map_name_token": "D43R0101"
+            }
+          ],
+          "record_index": 3,
+          "object_id": 3,
+          "model_id": 84,
+          "script_id": 10002,
+          "event_flag": 0,
+          "event_local_tile_xz": [
+            43,
+            52
+          ],
+          "runtime_map_tile_xz": [
+            43,
+            52
+          ],
+          "runtime_tile_center_units": [
+            696,
+            840
+          ]
+        }
+      ],
+      "85": [
+        {
+          "map_id": 7,
+          "map_name_token": "D18R0101",
+          "map_header_sha256": "4c3de4da933be6283ae0cefed8081513b8859516f8d1066dfa39887d04088790",
+          "event_bank": 5,
+          "event_bank_sha256": "e4c65b11e31677715a5052898cd075a684a00aea9b8bbf4607714b30057771bc",
+          "event_bank_map_refs": [
+            {
+              "map_id": 7,
+              "map_name_token": "D18R0101"
+            }
+          ],
+          "record_index": 8,
+          "object_id": 8,
+          "model_id": 85,
+          "script_id": 10001,
+          "event_flag": 16,
+          "event_local_tile_xz": [
+            5,
+            22
+          ],
+          "runtime_map_tile_xz": [
+            5,
+            22
+          ],
+          "runtime_tile_center_units": [
+            88,
+            360
+          ]
+        },
+        {
+          "map_id": 7,
+          "map_name_token": "D18R0101",
+          "map_header_sha256": "4c3de4da933be6283ae0cefed8081513b8859516f8d1066dfa39887d04088790",
+          "event_bank": 5,
+          "event_bank_sha256": "e4c65b11e31677715a5052898cd075a684a00aea9b8bbf4607714b30057771bc",
+          "event_bank_map_refs": [
+            {
+              "map_id": 7,
+              "map_name_token": "D18R0101"
+            }
+          ],
+          "record_index": 9,
+          "object_id": 9,
+          "model_id": 85,
+          "script_id": 10001,
+          "event_flag": 17,
+          "event_local_tile_xz": [
+            6,
+            23
+          ],
+          "runtime_map_tile_xz": [
+            6,
+            23
+          ],
+          "runtime_tile_center_units": [
+            104,
+            376
+          ]
+        }
+      ],
+      "86": [
+        {
+          "map_id": 16,
+          "map_name_token": "R08",
+          "map_header_sha256": "9f949080b0eaf5dd51d35041c4a7586690b30e214f0a71aa3913df284e56a522",
+          "event_bank": 13,
+          "event_bank_sha256": "f1f62bdcfae13b56f63360a342c959cbf4a6d36019705ae3fac4eb941d61dac5",
+          "event_bank_map_refs": [
+            {
+              "map_id": 16,
+              "map_name_token": "R08"
+            }
+          ],
+          "record_index": 8,
+          "object_id": 8,
+          "model_id": 86,
+          "script_id": 10000,
+          "event_flag": 16,
+          "event_local_tile_xz": [
+            1375,
+            246
+          ],
+          "runtime_map_tile_xz": [
+            1375,
+            246
+          ],
+          "runtime_tile_center_units": [
+            22008,
+            3944
+          ]
+        },
+        {
+          "map_id": 16,
+          "map_name_token": "R08",
+          "map_header_sha256": "9f949080b0eaf5dd51d35041c4a7586690b30e214f0a71aa3913df284e56a522",
+          "event_bank": 13,
+          "event_bank_sha256": "f1f62bdcfae13b56f63360a342c959cbf4a6d36019705ae3fac4eb941d61dac5",
+          "event_bank_map_refs": [
+            {
+              "map_id": 16,
+              "map_name_token": "R08"
+            }
+          ],
+          "record_index": 9,
+          "object_id": 9,
+          "model_id": 86,
+          "script_id": 10000,
+          "event_flag": 17,
+          "event_local_tile_xz": [
+            1384,
+            242
+          ],
+          "runtime_map_tile_xz": [
+            1384,
+            242
+          ],
+          "runtime_tile_center_units": [
+            22152,
+            3880
+          ]
+        }
+      ]
+    }
+  }
+}

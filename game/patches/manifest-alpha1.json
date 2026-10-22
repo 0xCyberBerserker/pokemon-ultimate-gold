@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "status": "TESTED_PARTIAL",
+  "source": {
+    "kind": "clean external HeartGold USA",
+    "filename": "HeartGold-USA.nds",
+    "sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+    "size": 134217728
+  },
+  "target": {
+    "filename": "Ultimate-Gold-alpha1.nds",
+    "sha256": "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132",
+    "size": 127040288
+  },
+  "delta": {
+    "file": "ultimate-gold-alpha1.xdelta",
+    "sha256": "d4a6287d39b436f3b730ed33d26bac478b919764fe9319cf013fb7e1c3ec6e1f",
+    "size": 5051857
+  },
+  "build": {
+    "xdelta": "xdelta3",
+    "library_path": "external xdelta3 library directory",
+    "recipe": "xdelta3 -e -s HeartGold-USA.nds Ultimate-Gold-alpha1.nds patches/ultimate-gold-alpha1.xdelta",
+    "source_pins": ["HeartGold USA exact SHA-256", "Sacred Gold Plus 1.2.3 commit 5b90a788ac3c7d1e4733b4d175a97811cc6745a3", "Drayano 1.05 control SHA-256 49f29848878406990ea288f26872d4355c92c4a2677f56973750bbf2566c13c1", "native 18 Speed bytes", "+2 Ghost type interactions fixed", "native reusable TM Refill item 113 and New Bark pedestrian gift; exact-build QA in docs/qa-native-tm.json"]
+  },
+  "claims": {
+    "owned_tm99": "native reusable item 113, received from New Bark pedestrian; only owned TM01-TM92 quantities 1-98 become 99; HMs unchanged; no emulator cheat required",
+    "gameplay_acceptance": "TESTED_PARTIAL: native item use, reuse, NPC gift and quantity guard, normal battery save/fresh-process restart; inherited base battle/capture QA in docs/qa-493.md; full story and PC/evolution pending"
+  }
+}

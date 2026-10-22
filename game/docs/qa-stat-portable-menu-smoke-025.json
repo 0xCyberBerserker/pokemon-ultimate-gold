@@ -1,0 +1,229 @@
+{
+  "schema": "portable-stat-editor-menu-025-smoke-review/v1",
+  "status": "FAIL_VISUAL_CANCEL_RETURN",
+  "scope": "Exact candidate 025, fresh cold seed from native Alpha2 saved DSV e625, Bag USE 118, selector cancel, cancel-message acknowledgement. No state from candidate 604, no cheats, no save action, no source or ROM changes.",
+  "candidate": {
+    "path": "@HOME@/Games/Sacred-Gold/experiments/eviv/portable-stat-editor-menu/portable-stat-editor-menu-fix6a.nds",
+    "sha256": "025429759de1b688b6521839dbf44671e03bf54b9376ba34cb598d8da1265885",
+    "build_json_sha256": "955733fdef6ad07b6331094653e68181aac47c0c916c20f51bb0ba587ae0e3a7",
+    "static_review_path": "@HOME@/Games/Sacred-Gold/night-sprint/internal/stat-editor-research/portable-stat-editor-menu-independent-review.md",
+    "static_review_sha256": "9fcb9c8b00fd4574176322f540e2e68b3155413cf83418a44d553bcd82108209"
+  },
+  "runtime": {
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner.py",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "cheats": [],
+    "fresh_cold_frames": 5500,
+    "state_chain_rom_sha256": "025429759de1b688b6521839dbf44671e03bf54b9376ba34cb598d8da1265885"
+  },
+  "seed": {
+    "origin_snapshot": "@HOME@/Games/Sacred-Gold/night-sprint/qa/runs/portable-kit-launch-native-alpha2-seeded-cold/battery-evidence/portable-kit-launch-probe-fix2.dsv",
+    "sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+    "candidate_profile_filename": "portable-stat-editor-menu-fix6a.dsv",
+    "cross_rom_state_imported": false
+  },
+  "runs": [
+    {
+      "run": "portable-stat-editor-menu-025-cold",
+      "frames": 5500,
+      "result_sha256": "fc0346b9304cd7b78daddc4afd8f31f04499c83cee6f44da4a8dfd3eb78c9f32",
+      "input_script_sha256": "ba6b781866e8a0b01a8e10e7c8680c30f45aced1a743de843978a6d75bb5e45a",
+      "state_in_sha256": null,
+      "state_out_sha256": "50cc31c637d3a7c5cb10d94911d1327f63fc82bbc726bfe410ba2314c9a76113",
+      "battery_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "3b7379ec23da60b189c928cdcc9075fb95c9319bd1644d4459229817daf4284a",
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-025-cold/cold_loaded_field.png",
+          "sha256": "19dcd0bdb1601d9bdbfed41d1055fa0513e022bfc104affac76ed436300960c8"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-025-cold/cold_loaded_identity.png",
+          "sha256": "adfd494bb03e07f44a289c1a0bfeb5bd6e6974b969727a9a35a98a2a072f6a6d"
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-menu-025-bag-open",
+      "frames": 300,
+      "result_sha256": "882a54197c8d4be3dfc550feda85c176e6eef467674a008500ff79e99ad55737",
+      "input_script_sha256": "cd1fa4f4c1eefbd1627e637b39e35405b413749a2e82febd2477a5897188cd1d",
+      "state_in_sha256": "50cc31c637d3a7c5cb10d94911d1327f63fc82bbc726bfe410ba2314c9a76113",
+      "state_out_sha256": "a0b9cb4859d4093e7cc592ab3a947de16316ea58d94bc3b4e01a29e4bace7038",
+      "battery_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "de66688b615e731eca6e738b1bc3634a3485558fbebe455f28ed20a7e06a2beb",
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-025-bag-open/bag_open_final.png",
+          "sha256": "feeb15a91c982d979b7cc0e9036bc2bbfdea2752afbe98e84fa2aae0bddbef28"
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-menu-025-pocket-next",
+      "frames": 300,
+      "result_sha256": "3f680a436ade28257536e637c772b87d1359f4eeaab50576f824d782592b113f",
+      "input_script_sha256": "df4eea1f3d8b451d74827e26638d2dcdab59a45049fc3aa30f40d97cc6dceddf",
+      "state_in_sha256": "a0b9cb4859d4093e7cc592ab3a947de16316ea58d94bc3b4e01a29e4bace7038",
+      "state_out_sha256": "a5224a4869d854ca2e50ec09082e75c3af4ff9c124a5042369f695223e98acf6",
+      "battery_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "a8dbefb62bfa2dfc84c1c21fa5d8d7cdcff2e6ecef5bf87ac24258cd3837dda2",
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-025-pocket-next/final.png",
+          "sha256": "7ccfe03c3c33ff2e81c0f55f0343c5a66d5ddb59d5cfdc1f7122705997d99bb4"
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-menu-025-keyitems-r6",
+      "frames": 300,
+      "result_sha256": "b6e26ec3a6affdb195e798bca24dbad42f8c6eb9cab1ab29a5fe5a11262b13bb",
+      "input_script_sha256": "167f39ed3078c88df110c857da30c326c7eb1db574e415faf0acad5bbe54aa47",
+      "state_in_sha256": "a5224a4869d854ca2e50ec09082e75c3af4ff9c124a5042369f695223e98acf6",
+      "state_out_sha256": "29274376a3414d1155e0c5537c210c41f3a94c13ce0cf9da5ffa067281d8e29f",
+      "battery_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "c20671008a7978993dd1b1e526020fec1f696666eeb42cb3e5fbda502280c2ec",
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-025-keyitems-r6/key_items_final.png",
+          "sha256": "1599d172418d78d3905ac792b2ebf90ca0bd41692ab273d7c2387cab944438d9"
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-menu-025-kit-select",
+      "frames": 300,
+      "result_sha256": "24ad032ef260cbbf269c44f67ccb12e57c618f7c0bf4d8d809fa02a1d8008908",
+      "input_script_sha256": "7667409ed19797bed049d03b755efc04f977bec053391d6500b8fb02ad38329d",
+      "state_in_sha256": "29274376a3414d1155e0c5537c210c41f3a94c13ce0cf9da5ffa067281d8e29f",
+      "state_out_sha256": "108e0dde3e34a198f71bc0f50caddada227ef331956dbf10111c7a1882ac1d4b",
+      "battery_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "2bb014192097a727cfbec11416c2aa37a9c46c7f5add40b46d9ad203e67f5dd7",
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-025-kit-select/selected_feedback.png",
+          "sha256": "fa21267260538374c7a4fd238a20b59c7bfb9bb8e5e57eeb43ffe6a1f7fe9bbd"
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-menu-025-use-selector",
+      "frames": 500,
+      "result_sha256": "100eb1d044048ae03359fa276fb86bfc1dc457786a1489bad0f65348037a86be",
+      "input_script_sha256": "b5b2660757cbe40ffb64533843f736149b9bfdc00c4923028608bb71a70b0a84",
+      "state_in_sha256": "108e0dde3e34a198f71bc0f50caddada227ef331956dbf10111c7a1882ac1d4b",
+      "state_out_sha256": "97c68eb2dba65cd54498868449b99d46af7c4de3627fe5e49840610ae8851923",
+      "battery_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "dd9b51665639b3610f1c3868684007efa4b30efbb797e5c03ec47761d6c0faab",
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-025-use-selector/selector_stable.png",
+          "sha256": "f093d4bb3f0ea8d352090d95cae64d5656af6f5dd59a84d35629e014629e4b25"
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-menu-025-selector-cancel",
+      "frames": 300,
+      "result_sha256": "75b1c36a593c2467f02471a9eb115e1c783e350beef77465ff20e6a9373dbe5b",
+      "input_script_sha256": "fae56c48e460d2c4c88c12ec469f26e81a5630c873f236f0c49d5aa658d5bb23",
+      "state_in_sha256": "97c68eb2dba65cd54498868449b99d46af7c4de3627fe5e49840610ae8851923",
+      "state_out_sha256": "4e808e52656937d5555c4878036d097cc264517b563f73b745ec718eb80f55de",
+      "battery_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "9acd83f76377b9e10d4a335b8e960d191e9e48d3041cbdc4f03437e001e8048f",
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-025-selector-cancel/cancel_final.png",
+          "sha256": "b85b873071f052e9c10ae5bc843098bfa0bf629a04f582ee20e2b8aaec79f5f2"
+        }
+      ]
+    },
+    {
+      "run": "portable-stat-editor-menu-025-selector-cancel-ack",
+      "frames": 300,
+      "result_sha256": "78899a34cfd2b99893159cb1c5b7dd6996550f37b4d347d047d1688140098d5d",
+      "input_script_sha256": "0986cd6cb9b38a434230825861640f79e028c475b52cc8cc7005d0b387fed3e8",
+      "state_in_sha256": "4e808e52656937d5555c4878036d097cc264517b563f73b745ec718eb80f55de",
+      "state_out_sha256": "c597d17a5797fd7ae4bc2fb1ce1c6acc05da08e801bb0f8a9849e143d40f60a8",
+      "battery_dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "battery_sidecar_sha256": "37d193f3aac8182b9039c25e22924a239240bd16cdc6f7e06a370ea3bb4ad60f",
+      "screenshots": [
+        {
+          "path": "qa/runs/portable-stat-editor-menu-025-selector-cancel-ack/field_after_ack.png",
+          "sha256": "b85b873071f052e9c10ae5bc843098bfa0bf629a04f582ee20e2b8aaec79f5f2"
+        },
+        {
+          "path": "qa/runs/portable-stat-editor-menu-025-selector-cancel-ack/final.png",
+          "sha256": "b85b873071f052e9c10ae5bc843098bfa0bf629a04f582ee20e2b8aaec79f5f2"
+        }
+      ]
+    }
+  ],
+  "observations": {
+    "item118": {
+      "visible_in_key_items": true,
+      "quantity_before_and_after": 1,
+      "canonical_bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a"
+    },
+    "selector": {
+      "opened": true,
+      "screenshot": "qa/runs/portable-stat-editor-menu-025-use-selector/selector_stable.png"
+    },
+    "cancel": {
+      "button": "B",
+      "frames": 3,
+      "special_var_800C": 255,
+      "global_script_id": 2072,
+      "script_context_mode": "NATIVE",
+      "native_wait_callback": "0x02041001",
+      "pc": "0x022A8533",
+      "pc_opcode_u16": 53,
+      "state": "waiting at the cancellation-message WaitAB before CloseMsg",
+      "screenshot": "qa/runs/portable-stat-editor-menu-025-selector-cancel/cancel_final.png",
+      "visually_black": true
+    },
+    "acknowledgement": {
+      "button": "A",
+      "frames": 3,
+      "additional_frames": 300,
+      "screenshot": "qa/runs/portable-stat-editor-menu-025-selector-cancel-ack/field_after_ack.png",
+      "visually_black": true,
+      "field_system": "0x022A01D8",
+      "task_manager_pointer": "0x00000000",
+      "visible_field_return": false
+    },
+    "unchanged_data": {
+      "dsv_sha256": "e625ab4ae3aa14d2afb16af867b5cf29c894af718b165a8c0e7c632494dd3e8a",
+      "bag_sha256": "615a9d2d4560e3cdb38197b655c7ba74c4f4f462675b3fd82086348f373eb61a",
+      "item118_quantity": 1,
+      "party": "all 3 records match exact even-byte cipher boundaries against frozen e625 DSV; decodable slots contain no HM moves",
+      "fixed_ram_ranges": "0x023D5000, 0x023D6000, and 0x023D7000 remain byte-identical across cold/use/cancel/ack",
+      "0x023D8000": "UI/task scratch changes; not claimed immutable",
+      "party_checked_runs": [
+        "portable-stat-editor-menu-025-cold",
+        "portable-stat-editor-menu-025-use-selector",
+        "portable-stat-editor-menu-025-selector-cancel",
+        "portable-stat-editor-menu-025-selector-cancel-ack"
+      ]
+    }
+  },
+  "false_returns_discarded": [
+    "Black screen immediately after B was the script 2072 cancellation-message WaitAB state, not a field return.",
+    "After A acknowledged the message and 300 frames elapsed, capture remained black and TaskManager pointer was zero; this was not accepted as field return."
+  ],
+  "not_tested": [
+    "reopen/use after cancel",
+    "select slot 0",
+    "EV/IV menu Back/Exit",
+    "HP IV +1 preview with No/Yes",
+    "party mutation or readback",
+    "portable save/cold after use"
+  ],
+  "limitations": [
+    "Runner gameplay_acceptance remains NOT_ASSESSED.",
+    "No ROM, source, or runner modification; only generated run evidence and this report were written.",
+    "No further runtime should occur until static lifecycle diagnosis identifies a causal candidate correction."
+  ]
+}

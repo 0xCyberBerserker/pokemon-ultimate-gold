@@ -1,0 +1,611 @@
+{
+  "schema": "ultimate-gold-alpha2-frontier-qa/v1",
+  "date": "2026-10-22",
+  "status": "FIRST_BATTLE_REACHED",
+  "gameplay_acceptance": "PARTIAL_FIRST_BATTLE_PASS",
+  "target_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+  "summary": {
+    "en": "On exact Alpha2 FIX6a, a reproducible DSV fixture was placed outside the real Battle Tower hub door, entered through the native warp, and regenerated live map actors. The receptionist greeted the player; Single registration accepted three party members; the save prompt completed; opponent dialogue led to the first battle menu. The battle outcome is documented separately.",
+    "es": "En Alpha2 FIX6a exacta, un fixture DSV reproducible se colocó ante la puerta real de la sala central de Battle Tower, entró por el warp nativo y regeneró los actores. El recepcionista saludó; el registro Individual aceptó tres miembros; terminó el aviso de guardado y el diálogo del rival llevó al primer menú de combate. El resultado del combate se documenta aparte."
+  },
+  "runtime": {
+    "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner": "night-sprint/qa/headless_runner_fix6a.py",
+    "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+    "all_runs_cheats_empty": true,
+    "all_runs_completed": true,
+    "physical_input_scripts_and_states_verified": true,
+    "main_ram_dump_count": 9,
+    "main_ram_not_captured_count": 19,
+    "state_chain": [
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-native-hub-cold",
+        "result_json_sha256": "61d64a299cc191018ce33d6144fcedde632b35ace5e3018d96a51240ca2b5fb1",
+        "input_script_sha256": "6a55b8876bf0de714fae7df61cc400a20a77c62ab62723dc5348790464cbdb79",
+        "frames": 12500,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": null,
+        "state_output_sha256": "7a991c50637b8d76d2fc70415dc6397955b46a571aa58ba1992ee5369baea20a",
+        "main_ram_sha256": "9d3bcf899bdf15ec0159456712670acb38bd8174419c862b26b26050c2b97bd4",
+        "main_ram_capture_status": "CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-native-hub-door",
+        "result_json_sha256": "cecb68f48ac93db0c5a82fa723c7d86b0ddddecb644141cdd44bfd7bae149a83",
+        "input_script_sha256": "c6e2ff6f59cdc74a454f04b08a8afa63db0af4e9ddfdce4d777ade148c88c949",
+        "frames": 220,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "7a991c50637b8d76d2fc70415dc6397955b46a571aa58ba1992ee5369baea20a",
+        "state_output_sha256": "e428069d3ac635aa3d5c1d420137925d8f53840e8124279436995d00d333c24e",
+        "main_ram_sha256": "6960fce81bb9766834de15677729b4a717b3f75f652e3df2c32896625082592f",
+        "main_ram_capture_status": "CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-native-counter-approach",
+        "result_json_sha256": "4844abc13f3beebfa57e727965effdd08f49e26b6a7e3bb106ad1c19a01960ff",
+        "input_script_sha256": "31d25d01e8ab947372910dba15656a7db193f2d772acb49f79824fc91036398b",
+        "frames": 180,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "e428069d3ac635aa3d5c1d420137925d8f53840e8124279436995d00d333c24e",
+        "state_output_sha256": "55959eb6a6108a8d254748b935ecad85e3306fc6f910de9ef0b3fc45a3144e65",
+        "main_ram_sha256": "e5b8e838c1b1334668a43fb160e8043e9da2f8556e066902b4bf6e6931df76ba",
+        "main_ram_capture_status": "CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-native-greeting",
+        "result_json_sha256": "cbb09eb4cb4d5a984857b547b7618d42bdaf28e41118cb5c4566903c2f3b8392",
+        "input_script_sha256": "0a1651d44993bd4e62b309655a5a207d6dcf5f0b3ff959fb4016eefb26a30f03",
+        "frames": 90,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "55959eb6a6108a8d254748b935ecad85e3306fc6f910de9ef0b3fc45a3144e65",
+        "state_output_sha256": "23bc9f3d43d6d91385a658b4acd0b17f9166a89b9e1f4468929196f417d49bc2",
+        "main_ram_sha256": "738acde59a860452c72f05b884ebe67956be7f0c986f6ac5635925f0f85ee5c1",
+        "main_ram_capture_status": "CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage1",
+        "result_json_sha256": "88321844fc5ad440b43ef4490ee115b02aa1205f14c615e47d4cd10e21fe8f17",
+        "input_script_sha256": "6e208a1e655a5d3189ad3ec7edc674ade40cc8c41151ef9659d2d4f24c1457d9",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "23bc9f3d43d6d91385a658b4acd0b17f9166a89b9e1f4468929196f417d49bc2",
+        "state_output_sha256": "44d85fafac1b7c73ff8e021287944af2883dcb24c4d34ff7c7539b3adcd030b9",
+        "main_ram_sha256": "aa29b04b5fc3f2a76d250d873f08b552cd647faa8bba5c6292b95cdc77d38b28",
+        "main_ram_capture_status": "CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage2",
+        "result_json_sha256": "3764077efb23759c47613267028ed056dfeba1a9a27b4f19d9cd0814790a752b",
+        "input_script_sha256": "abb41e5f54af0e36fdfaa6517f37cb9070a55a0c22f4db97c0e30ed3e6961019",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "44d85fafac1b7c73ff8e021287944af2883dcb24c4d34ff7c7539b3adcd030b9",
+        "state_output_sha256": "8d7a472f79de74ddc7eca2928d8dcc44656218484a996ac4bebc2574d6289406",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage3",
+        "result_json_sha256": "24d5b8735d575861b9aaca6de6080a6d8566ac30ad2043fa3ed3fab4034d2fb5",
+        "input_script_sha256": "37b2444e1b5e40c6b7ca4a8d1232b2a0f905d1ffb68aa9d3ae42a41af3c7e7fe",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "8d7a472f79de74ddc7eca2928d8dcc44656218484a996ac4bebc2574d6289406",
+        "state_output_sha256": "e2af8f53ee1d0bc04f48f0f9af6e9d26e4dcb1cacbe70b05b5f94a0ab16dd89f",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage4",
+        "result_json_sha256": "67588f76af150dd4bb9f071312222a943183acb9c858035b0bd8f1719266ce42",
+        "input_script_sha256": "fa6a82bcb9b0be14bbcdef8b88fd232bd5ccfe8e6988977e7c3b358add798f1e",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "e2af8f53ee1d0bc04f48f0f9af6e9d26e4dcb1cacbe70b05b5f94a0ab16dd89f",
+        "state_output_sha256": "79df3db5ad69150c134678b2838fd62a044866d146b83ca595b04570421e5e73",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage5",
+        "result_json_sha256": "56b945600e354942dba2d517771b9c45892165995f9fba3fae3ddafbf307b0b8",
+        "input_script_sha256": "6ea19fe72f761fc8f62af971e50a64e0966deec5acd50237a25ad73a9748664f",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "79df3db5ad69150c134678b2838fd62a044866d146b83ca595b04570421e5e73",
+        "state_output_sha256": "4fc1ea6bee40b4da0ab83b0204cf506b864ba03707d1de1d78f83e6753fb47ef",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage6",
+        "result_json_sha256": "334fbbcaf5ab46d74ff5c47aafe8ac761b23b5b2e95493bc01bf2aed6b9da514",
+        "input_script_sha256": "15cd25f56847a4b63d41e4cbc6cce53a009fd375e32c49667e968817cdfc892b",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "4fc1ea6bee40b4da0ab83b0204cf506b864ba03707d1de1d78f83e6753fb47ef",
+        "state_output_sha256": "b6d7b6bcd44345a27f01eb6cabf767d0d7369ce0eae886e4da9adb3941ab8de2",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage7",
+        "result_json_sha256": "6bfa8f846732dd5df57b8bc92dee284b2d6a052427c1d542e9e1234d0ca7dcf4",
+        "input_script_sha256": "2eff4aa75936047b518b1633414d1a070026ad58d5884e6a4353108bfbbb7ab2",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "b6d7b6bcd44345a27f01eb6cabf767d0d7369ce0eae886e4da9adb3941ab8de2",
+        "state_output_sha256": "1bc4bba914be76729a7f70a33db8bf62e533a0da4b8264d67a75f964fd97b105",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage8",
+        "result_json_sha256": "5241888209be51424db5aad838a4e1beb6b3970997b417b8d5c58d4bea8b0b74",
+        "input_script_sha256": "352ed46d370af2d599e061ee883696cf1e8f442553cb1ae242423e5170fce68f",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "1bc4bba914be76729a7f70a33db8bf62e533a0da4b8264d67a75f964fd97b105",
+        "state_output_sha256": "ffe7f979e1f675fd957004e6376992ae933e0a1a1f7809b68e1870dc0e5f1fde",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage9",
+        "result_json_sha256": "6de66c57e53b04f7e176c093af0e15c2df7a1b080ab38fc2018fdd08fd4962cd",
+        "input_script_sha256": "39c3a322de713efd504fb446d28b596c8737d13a80755bbba2ed6b6f5fde76ff",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "ffe7f979e1f675fd957004e6376992ae933e0a1a1f7809b68e1870dc0e5f1fde",
+        "state_output_sha256": "d7dc90b0540d5c47bc460e6d4fb885a81bf5f82fb3cb42f7942b924082013032",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage10",
+        "result_json_sha256": "dbb0e6cb7d66e242ee10c6e0d84642289cc135566b1c3b8e482e3c3b998e1481",
+        "input_script_sha256": "fb6acd3756be3ea23fe18f6fdfc5de306f1018ca2caec6cc2c53a3c8d54e4318",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "d7dc90b0540d5c47bc460e6d4fb885a81bf5f82fb3cb42f7942b924082013032",
+        "state_output_sha256": "c53f2f843e8d1cb4932eb618eabdf3910463131bf5a7a0c28a73a8cf3fbf7ad8",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage11",
+        "result_json_sha256": "430561b9e31bf92a236f9a3f236fa742a82d97c6251b48c0f6b41277c7d77b19",
+        "input_script_sha256": "92dddf749553519d835f0101ee2ad048276ea9e3c1bdf68da6fcf24de4e5c7a8",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "c53f2f843e8d1cb4932eb618eabdf3910463131bf5a7a0c28a73a8cf3fbf7ad8",
+        "state_output_sha256": "60dcbd8409426c053e89cdb9fdae34bd0b0bbb245dfa67008665b2c57b18a59b",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage12a",
+        "result_json_sha256": "ec92340ac13031c485bc9f9e881701656641223dfd66c6728be0ee57aa8dca42",
+        "input_script_sha256": "754ebc686bf6d96703b8ec049f72cbe55c549c47a356e5c589e642cd6d78dca2",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "60dcbd8409426c053e89cdb9fdae34bd0b0bbb245dfa67008665b2c57b18a59b",
+        "state_output_sha256": "ca695df5c5c4aefc3064a7fb78abbe55fc264f1b7a8bda0af62d79c05c55c217",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage12b",
+        "result_json_sha256": "9e6386a46cdb93e93b08a016ff4877c9431996c5fbd6d1456a10ff249ff9eed7",
+        "input_script_sha256": "953c851f7d1422c2a02e269f5b5f3948fe63af3534b294e67e40a38f1ab4d9d6",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "ca695df5c5c4aefc3064a7fb78abbe55fc264f1b7a8bda0af62d79c05c55c217",
+        "state_output_sha256": "9a1f13201ba40eb3c66019ce1e461d5b388c3fb5922fa548f76c48a705e35f84",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage13",
+        "result_json_sha256": "95dd5955f1df21c072edad1baf8d8801995f566f8308a73b0ed3b6c6077f2f70",
+        "input_script_sha256": "8659a12d3fff0da17f0ec6314096b7d760151eac3ad06aa826c89bb5ca182275",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "9a1f13201ba40eb3c66019ce1e461d5b388c3fb5922fa548f76c48a705e35f84",
+        "state_output_sha256": "925e8b86c336df9951f1007b5fc6cb077a277d7aa8f69d816ca711fb1825c275",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage14",
+        "result_json_sha256": "e9bbc68d6c60cc54748fc82dc7c11fc9cdf942bb21823cc756fa0878c9ead111",
+        "input_script_sha256": "97cdfcfb30327b803e600b4b135d5bcde48dd45b752d863e229461cef2eaedca",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "925e8b86c336df9951f1007b5fc6cb077a277d7aa8f69d816ca711fb1825c275",
+        "state_output_sha256": "b041b54494e8f09d582229dd0d94be06b1488a95b508d1aeaee76503592ea17c",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage15",
+        "result_json_sha256": "bd2867c3f16a7c0d9376ba862b9181f3cf09b46f26e4259492410a6a2aca8879",
+        "input_script_sha256": "d8655bfe938885217fee4f1464753a218a5cf78e78997480649d1e7b9b3588ef",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "b041b54494e8f09d582229dd0d94be06b1488a95b508d1aeaee76503592ea17c",
+        "state_output_sha256": "5360ca3b57beb3709cad5adf4566fd428237230271d9c92ceb9d001d103237e2",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage16",
+        "result_json_sha256": "8b7ad8bfb86035362bce5790e8156afcbfa95aa44f181532f0e0eedb675a9e29",
+        "input_script_sha256": "f2a658c8a199da3c1df4ebf195e606b377c892a175cc49c26d2ec1b0276f032b",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "5360ca3b57beb3709cad5adf4566fd428237230271d9c92ceb9d001d103237e2",
+        "state_output_sha256": "5b978f81e3a112ff206095e3a61ee26056e9d9dba4fab73be8c9be5c8a0c3254",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage17",
+        "result_json_sha256": "04cae89603036e67e5ad427125370b575ac445926767317bd8c704dd327a545c",
+        "input_script_sha256": "571d2a0032f5b4dfb2e08a015d143484617679dda8bbfab48eb79fb1b01251f5",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "5b978f81e3a112ff206095e3a61ee26056e9d9dba4fab73be8c9be5c8a0c3254",
+        "state_output_sha256": "51be237894c36622078ebe0801d9d4ee62e21f597a77e97caa39e732fb25ff45",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage18",
+        "result_json_sha256": "6d8793fa1e0c35c1f894908cb831193c1de321a234239eba71b00f109d6379ab",
+        "input_script_sha256": "e50b43b251121a33a66400870d1fa330c8b7a565b96fb36228eab72808410d4b",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "51be237894c36622078ebe0801d9d4ee62e21f597a77e97caa39e732fb25ff45",
+        "state_output_sha256": "1658d9ff8a756e060c2767a61514814d4d0f37056c3a7a05a633e1974b04fd3e",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage19",
+        "result_json_sha256": "e83bc01345d681bffac07faf048e8209c26db56c49e264a6877c2a0bc995f559",
+        "input_script_sha256": "19df03d9030c5801a6b5407b66f7a0c2fe318a11a6aaa175cd8bcb1a9bbf3f62",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "1658d9ff8a756e060c2767a61514814d4d0f37056c3a7a05a633e1974b04fd3e",
+        "state_output_sha256": "a15b2ecb4e180121f426a15595bed16677c9681c544bbe97110c941c545ee8f4",
+        "main_ram_sha256": null,
+        "main_ram_capture_status": "NOT_CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage20",
+        "result_json_sha256": "65f9f56cf8d9efdbfd90bb770b07ab758a29f30c03f706731a35cfafc2ecba58",
+        "input_script_sha256": "f4c1722e1336bbedf97d73da568e3f952bca6fde49d80b9c2fba6b2ca79e9aa0",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "a15b2ecb4e180121f426a15595bed16677c9681c544bbe97110c941c545ee8f4",
+        "state_output_sha256": "a962ecb52f853ddd08bd708cd6154e1dbf45494c3c1840a412b0763573cfad3f",
+        "main_ram_sha256": "17e80c449daeb6ad5829ca6e1b0bec4e9569a179edd0a630100a68ac56123a2c",
+        "main_ram_capture_status": "CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage21",
+        "result_json_sha256": "ccaa8ede75b140fa15b13313b4c61754618817d30e5136c85ef0bdb9565c8a08",
+        "input_script_sha256": "55b271899cdbf316de2cdf606db60fb4a0c5c6cce8a38353a23d7ae75902f767",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "a962ecb52f853ddd08bd708cd6154e1dbf45494c3c1840a412b0763573cfad3f",
+        "state_output_sha256": "367b9fcf7a09dc924136a4698522d639a7c56f2af83ca0e21c66a3caa1268e20",
+        "main_ram_sha256": "96922a8cd5be0f611e4916f026a055a3d48bce7e315442864805a47ba4aea0cc",
+        "main_ram_capture_status": "CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage22",
+        "result_json_sha256": "4e89a5a5ab0265b53047c755e6352d4e75fc1cf1df03fae712b43cb5ddaeeb9c",
+        "input_script_sha256": "154fdfa96484463e6b0349eff23a95e90b12d566d8e3bff10a14eca6b0907d5f",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "367b9fcf7a09dc924136a4698522d639a7c56f2af83ca0e21c66a3caa1268e20",
+        "state_output_sha256": "595cda1b4b0a13479a51b48ba985bb620d3cec341ee78071f488403aa8b1ffaa",
+        "main_ram_sha256": "6df8f0e776f433d8cc3e54d1daf1f871ccfa58dc04041d916ac12594c14d7e97",
+        "main_ram_capture_status": "CAPTURED",
+        "cheats": []
+      },
+      {
+        "run": "night-sprint/qa/runs/alpha2-frontier-registration-stage23",
+        "result_json_sha256": "6e97a6b5cb28f04824339dda146e498cacd9bfde57a00de9be03e70d51261964",
+        "input_script_sha256": "570bb2b5613e10b911066858b31e1f886da271c0a070cc3838ca6cc5db43d784",
+        "frames": 1000,
+        "execution_status": "COMPLETED",
+        "runner_result": "PASS",
+        "gameplay_acceptance": "NOT_ASSESSED",
+        "state_input_sha256": "595cda1b4b0a13479a51b48ba985bb620d3cec341ee78071f488403aa8b1ffaa",
+        "state_output_sha256": "2041526c35669422814297ebac0740295fb6f4e42549242b351d826ad30759ef",
+        "main_ram_sha256": "1560f9be4ef616ddce2b3a6bd9121aba40f9274f29dcce52b4b1a66de28172c9",
+        "main_ram_capture_status": "CAPTURED",
+        "cheats": []
+      }
+    ]
+  },
+  "fixture": {
+    "classification": "SYNTHETIC_OUTSIDE_NATIVE_HUB_DOOR_THEN_NATIVE_WARP",
+    "source_dsv_local_path": "night-sprint/qa/runs/alpha2-frontier-cold-field-corrected/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+    "source_dsv_sha256": "5c00d11c632a0643962744887585d9f0cf18230b9b2b25371503baf2e4089234",
+    "pre_run_hub_profile_dsv_sha256": "401dda2e45380f390aecf06dab06c0ac8c8e95ab69b6e70abbd07e3ded5cd5ab",
+    "pre_run_hub_profile_dsv_local_path": "night-sprint/qa/runs/alpha2-frontier-outcome-recovery/pre-run-hub-profile.dsv",
+    "pre_run_fixture_provenance": "Regenerated deterministically from the pinned source DSV with alpha2_frontier_native_hub_fixture.py; exact complete-file SHA matches 401dda...",
+    "post_save_profile_dsv_sha256": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+    "post_save_profile_dsv_local_path": null,
+    "post_save_profile_dsv_status": "HISTORICAL_HASH_ONLY; original shared profile was overwritten by later outcome save and exact bytes were not recovered",
+    "current_shared_profile": {
+      "local_path": "night-sprint/qa/runs/alpha2-frontier-native-hub-entry/saves/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+      "sha256": "a15f0c19a0ca7fd491b253650c304ff79f54c656b24b094a0374bab1d2c9e3a5",
+      "counters": [
+        8,
+        7
+      ]
+    },
+    "post_save_slots_recorded_at_original_audit": [
+      {
+        "base": 0,
+        "save_counter": 6,
+        "crc16": 11630,
+        "crc_valid_recorded": true
+      },
+      {
+        "base": 262144,
+        "save_counter": 7,
+        "crc16": 63004,
+        "crc_valid_recorded": true
+      }
+    ],
+    "recovery_attempt": {
+      "status": "REJECTED_WHOLE_FILE_SHA_MISMATCH",
+      "method": "counter-6 slot from regenerated 401dda fixture plus counter-7 slot from current a15f DSV",
+      "candidate_sha256": "112b1cda645da2ebf558411c84fc403afbcb048faa674004f6b92f9c6a162a71",
+      "candidate_slots_crc_valid": true,
+      "candidate_whole_sha256_matches_historical_6819": false,
+      "candidate_file_written": false
+    },
+    "save_completed": true,
+    "save_counter": {
+      "before": 6,
+      "after": 7
+    },
+    "story_access_inferred": false,
+    "alpha1_emulator_state_imported": false
+  },
+  "native_entry_and_ui": {
+    "hub_map_id": 272,
+    "native_warp_destination_map_id": 265,
+    "live_map265_object_count": 14,
+    "receptionist": {
+      "object_id": 0,
+      "sprite_id": 282,
+      "script_id": 1,
+      "xyz": [
+        15,
+        0,
+        5
+      ]
+    },
+    "player_at_greeting": {
+      "xyz": [
+        15,
+        0,
+        6
+      ],
+      "facing": "north",
+      "avatar_state": 0
+    },
+    "single_mode_selected": true,
+    "party_selected": [
+      {
+        "slot": 0,
+        "species_id": 35,
+        "screen_name": "CLEFAIRY"
+      },
+      {
+        "slot": 1,
+        "species_id": 152,
+        "screen_name": "AAAAAAAA"
+      },
+      {
+        "slot": 2,
+        "species_id": 66,
+        "screen_name": "Machop"
+      }
+    ],
+    "rival_visible": {
+      "species": "Remoraid",
+      "level": 50
+    },
+    "first_battle_menu_visible": true,
+    "battle_turns_taken": 0,
+    "screenshots": [
+      {
+        "local_file": "night-sprint/qa/runs/alpha2-frontier-native-hub-door/tower_native_entry_stable.png",
+        "sha256": "c1e313c0ec5c7b96ca228df1a263fa8ca2edac79c0eb658714e853b94e016ab3",
+        "purpose": "native_map265_actors",
+        "included_in_repository": false
+      },
+      {
+        "local_file": "night-sprint/qa/runs/alpha2-frontier-native-greeting/tower_native_greeting_stable.png",
+        "sha256": "1f3ee18bb71bee914e6abf752f8e2ece0d1b79d4d7a00763be16f0cd4703d74a",
+        "purpose": "native_receptionist_greeting",
+        "included_in_repository": false
+      },
+      {
+        "local_file": "night-sprint/qa/runs/alpha2-frontier-registration-stage5/party_selector.png",
+        "sha256": "ab8657c6cbbe094936a6d41e7c18729719e3bcb1aee8a940b083060293cdc020",
+        "purpose": "party_selector",
+        "included_in_repository": false
+      },
+      {
+        "local_file": "night-sprint/qa/runs/alpha2-frontier-registration-stage15/team_confirmation.png",
+        "sha256": "23096e02e0a802ec3b999c5634719ac5aa302b9baa89d497ff6f16b1e3f848ed",
+        "purpose": "three_selected_members",
+        "included_in_repository": false
+      },
+      {
+        "local_file": "night-sprint/qa/runs/alpha2-frontier-registration-stage19/save_progress_300.png",
+        "sha256": "572b7cbddb1b13e85953bb430780d62e2b7e4cfb9552a8cf3e927547c05fad6a",
+        "purpose": "save_completed_prompt",
+        "included_in_repository": false
+      },
+      {
+        "local_file": "night-sprint/qa/runs/alpha2-frontier-registration-stage21/room_loaded_300.png",
+        "sha256": "455d5f77615dfa1151512f3fcfd9072b4cb9bc5390acb73f6b1bbe427965dcec",
+        "purpose": "opponent_dialogue",
+        "included_in_repository": false
+      },
+      {
+        "local_file": "night-sprint/qa/runs/alpha2-frontier-registration-stage23/first_battle_loaded.png",
+        "sha256": "eeca33ec74a8cd4b493c181cd5fe8211aac8bfbae95fbf3cc05b8a006a6fd526",
+        "purpose": "battle_menu",
+        "included_in_repository": false
+      }
+    ]
+  },
+  "integrity": {
+    "status": "PARTIAL_POST_SAVE_SNAPSHOT_UNAVAILABLE",
+    "post_save_dsv_exact_bytes_available": false,
+    "post_save_dsv_sha256_historically_recorded": "6819ba7342b8bb34bd414d62455dc60daf44f0884bb220d6d5ac2872c66a8404",
+    "save_array3_bag_comparison_reproducible": false,
+    "party_array_comparison_reproducible": false,
+    "reason": "The shared DSV path was later reused and now contains the post-battle DSV. Reconstructed slots matched recorded counters and CRC metadata but not the historical whole-file SHA, so the candidate was rejected.",
+    "legacy_observations_from_prior_report": {
+      "status": "HISTORICAL_ONLY_NOT_REPRODUCED",
+      "save_array3_bag_byte_identical_was_previously_reported": true,
+      "party_array_byte_identical_was_previously_reported": false,
+      "previously_reported_party_deltas": [
+        {
+          "slot": 0,
+          "species_id": 35,
+          "move_id": 27,
+          "pp": [
+            14,
+            15
+          ]
+        },
+        {
+          "slot": 2,
+          "species_id": 66,
+          "move_id": 43,
+          "pp": [
+            29,
+            30
+          ]
+        },
+        {
+          "slot": 2,
+          "species_id": 66,
+          "current_hp": [
+            8,
+            22
+          ]
+        }
+      ],
+      "use_as_currently_verified": false
+    }
+  },
+  "excluded_attempt": {
+    "classification": "INVALID_SYNTHETIC_DIRECT_MAP_ENTRY",
+    "evidence": "night-sprint/qa/runs/alpha2-frontier-live-object-diagnostic.json",
+    "reason": "Continue restored map-60 SavedMapObjects and map 265 had no live receptionist; the no-op greeting was not a gameplay failure. The accepted path below enters via the real hub door."
+  },
+  "limits": [
+    "No normal-story access or completion is established; the test used a synthetic outside-door DSV fixture followed by a native warp.",
+    "The exact post-registration DSV bytes are unavailable. Historical DSV hash and slot CRC metadata were recorded, but a whole-file reconstruction did not match; Bag and party byte comparisons from the earlier report are no longer reproducible.",
+    "No cold reload was performed after the native save.",
+    "The first battle was observed at its command menu; no turn, win/loss, return flow, or reward was tested.",
+    "The second selected Pokémon is species 152 but its nickname displays as AAAAAAAA; this is recorded as fixture data, not corrected.",
+    "The other four Battle Frontier facilities and other modes remain untested."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Headless runner once state-output edge closure",
+  "verdict": "PASS",
+  "artifacts": {
+    "wrapper": {
+      "path": "qa/headless_runner_once.py",
+      "sha256": "88d9254e8291486e4c78d2585976497d9ad9a69e224179b411aedbb55c959181"
+    },
+    "tests": {
+      "path": "qa/test_headless_runner_once.py",
+      "sha256": "4a90848247bd5a7ff0ba6790aed62e42d9e69787022ba5d9e9bbca134f8ea841",
+      "result": "12 tests PASS"
+    },
+    "pinned_runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8"
+  },
+  "verified": "The new negative test passes for state-out equal to run_dir: ValueError occurs before mkdir, leaving no run directory to launch into. The strict-descendant requirement now matches the file-write contract.",
+  "limits": [
+    "No emulator/core was started.",
+    "This closes only the RUN-ONCE-02 state-out-equals-directory edge; it is not a general concurrency or filesystem review."
+  ]
+}

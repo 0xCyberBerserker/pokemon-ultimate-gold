@@ -1,0 +1,150 @@
+{
+  "schema": "ultimate-gold-strength-native-qa/v1",
+  "status": "VERIFIED_NATIVE_STRENGTH_AND_BOULDER_PUSH",
+  "scope": "Only the Strength action on the exact FIX6a build is assessed.",
+  "build": {
+    "rom_path": "@HOME@/Games/Sacred-Gold/experiments/owned-hm/qa-kit-shop-owned-hm-paged-fix6a.nds",
+    "rom_sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
+    "runner_path": "@HOME@/Games/Sacred-Gold/night-sprint/qa/headless_runner_fix6a.py",
+    "runner_sha256": "0f2ca19bbfb6505baa4c35ee497b2c0cba15881bd7379def6a382ad44413cc26",
+    "core_path": "@HOME@/Games/Sacred-Gold/tools/usr/lib/libretro/desmume_libretro.so",
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89"
+  },
+  "exact_rom_target": {
+    "map_id": 176,
+    "map_token": "D42R0102",
+    "map_header_sha256": "30afacc46c0411eeeb9c482ad41cee081202b96cd56d0ba91daf18049c732290",
+    "event_bank": 169,
+    "event_bank_sha256": "e00b8cfdb86545ec44eb19cc81f2c504aaf6299c94aed1e6e383d6030e66a901",
+    "event_narc_path": "a/0/3/2",
+    "event_narc_sha256": "a72688a68f2683bba77e6ba1582247c5d3a8ef4c958c817d919601824c639606",
+    "object_id": 0,
+    "model_id": 84,
+    "event_flag": 0,
+    "script_id": 10002,
+    "event_local_xz": [28, 20],
+    "native_saved_current_xyz": [28, 8, 20],
+    "player_stand_xz": [27, 20],
+    "facing": "east",
+    "direction_code": 3
+  },
+  "fixture": {
+    "classification": "Synthetic position fixture; no story-access claim.",
+    "prepared_entry_dsv_sha256": "b83713ade92961cd55ce3afe34bdab5ae83318b7c7bc84dbc384037828a8e9b7",
+    "native_map176_save_run": "qa/runs/hm-remaining-strength-fix6a-native-save",
+    "native_map176_dsv_sha256": "38d7a65bfa0bad447d82505e6a224548de33daa99a960395eaeb80f2522ca4cf",
+    "final_fixture_helper": "qa/hm_remaining_strength_fix6a_native_fixture.py",
+    "final_fixture_helper_sha256": "d8ae08948c94b6774b20a483e9e9e4fe4991ddb19ef1046332124dd14300fb75",
+    "final_fixture_manifest": "qa/runs/hm-remaining-strength-fix6a-native-object-fixture/dsv-fixture.json",
+    "final_fixture_manifest_sha256": "0b81e3bb2249f5087a8240f8ac116a693489f8c71028556578d01e9341912a5d",
+    "final_fixture_dsv": "qa/runs/hm-remaining-strength-fix6a-native-object-fixture/qa-kit-shop-owned-hm-paged-fix6a.dsv",
+    "final_fixture_dsv_sha256": "f08cdb6351d10ad83194dfdbce450b5da3c5dd4546c32e24de1ba5dba4dd418a",
+    "modified_save_slot": {
+      "base": 262144,
+      "save_count": 9,
+      "selection_basis": "Higher valid saveCounter; upstream SaveSlotCheckCompare selects this slot.",
+      "older_slot_count": 8,
+      "older_slot_unchanged": true,
+      "crc16_valid": true
+    },
+    "allowed_fixture_changes": {
+      "LocalFieldData.currentPosition": {
+        "before": [176, -1, 26, 5, 1],
+        "after": [176, -1, 27, 20, 3]
+      },
+      "SavedMapObject_id255": {
+        "before_current_xyz": [26, 8, 5],
+        "after_initial_xyz": [27, 0, 20],
+        "after_current_xyz": [27, 8, 20],
+        "after_facing_codes": [3, 3, 3],
+        "internal_map_id_preserved": 1
+      },
+      "selected_slot_crc16": "recomputed and verified"
+    },
+    "native_event_object_preserved_byte_for_byte": {
+      "object_id": 0,
+      "map_id": 176,
+      "model_id": 84,
+      "event_flag": 0,
+      "script_id": 10002,
+      "current_xyz": [28, 8, 20],
+      "record_sha256": "1f1c0f67a6a3e51c61d8ab29f97cbe5550971681588f396ff0e80c8f6135ae14"
+    },
+    "fixture_cause_and_correction": "A position-only DSV retained stale SavedMapObjects and did not relocate player ID255. The final fixture starts from an in-game map176 save, preserves its native Strength object, and changes currentPosition plus saved avatar coordinates/facing. Source MapObjectManager_RestoreFromSave restores these saved object coordinates."
+  },
+  "runs": {
+    "native_save": {
+      "run": "qa/runs/hm-remaining-strength-fix6a-native-save",
+      "result_sha256": "8e6150ab53b0a80f5ed181c2e40297de58b4186c247b251ae3e4c4956f298768",
+      "input_state_sha256": "039ad1c3b39b7ff81e23b5ca937b413438169791e31c8c4cf388325be2e6108b",
+      "output_state_sha256": "9065a793fe22c32af91bcb6ca95380f92a7973de4ef7c8e6eaf3da4522f2c8ab",
+      "system_ram_sha256": "b35a4af5b204de8517411ab2853e509e3e0dc3f80f96bcd1bf98c4b572b7ba2f",
+      "cheats": []
+    },
+    "cold_action": {
+      "run": "qa/runs/hm-remaining-strength-fix6a-native-object-cold",
+      "result_sha256": "fd670826dd03571fe81b292f78a828ccc0907e8afc0fee4a415c26dd301d9e35",
+      "input_script": "qa/hm_remaining_strength_fix6a_native_cold.json",
+      "input_script_sha256": "62a5ab89f88720023ca208afe9596901a4595143c938762c486eb7f7a39b084a",
+      "fresh_cold_boot": true,
+      "savestate_input": null,
+      "system_ram_sha256": "b8b9bfb8be02570d9c0b094022c873a8785b058dc22464b7ba3f56d1e76ff71c",
+      "state_output_sha256": "13729a6391972c42c9117c346be7049eff619654f782b9158e7a8fc1a8f8c693",
+      "cheats": [],
+      "party_moves": [[27, 1, 0, 0], [33, 45, 0, 0], [67, 43, 0, 0]],
+      "recognized_hm_move_ids": [15, 19, 57, 70, 250, 249, 127, 431],
+      "party_contains_recognized_hm_move": false,
+      "activation_timing": "The repeated Continue A inputs span frames 2200-3900. The screenshot checkpoint at frame 4300 already shows CLEFAIRY used Strength!, so activation is inferred to have occurred during that cadence after the field loaded. The separate A at frame 5500 advanced to the follow-up message; exact activation frame was not captured.",
+      "screenshot_evidence": [
+        {
+          "path": "qa/runs/hm-remaining-strength-fix6a-native-object-cold/map176_loaded_before_action.png",
+          "sha256": "85cf04fd77a82b113a1c3c97ae059b08cb726d01eb21fa697138fe5a27635caf",
+          "interpretation": "Actually post-activation: CLEFAIRY used Strength!"
+        },
+        {
+          "path": "qa/runs/hm-remaining-strength-fix6a-native-object-cold/strength_action_result.png",
+          "sha256": "88b17a61d566d93ce0946ee585ffd3a561391cbe2572aa491f32fc984840054a",
+          "interpretation": "CLEFAIRY's Strength made it possible to move boulders around!"
+        }
+      ]
+    },
+    "native_push": {
+      "run": "qa/runs/hm-remaining-strength-fix6a-native-object-push",
+      "result_sha256": "5997d270aca9773b08297f92f430c968a8a6d4b69477d3f872762e92bd32337d",
+      "input_script": "qa/hm_remaining_strength_fix6a_push.json",
+      "input_script_sha256": "c7d9cc713d99e01c2a7d361565b7a1280e8148f63f1f7c6f949aac2342426edd",
+      "same_rom_state_input_sha256": "13729a6391972c42c9117c346be7049eff619654f782b9158e7a8fc1a8f8c693",
+      "system_ram_sha256": "6c9301606c86c98cbdbd8c81ba843085ca629d770f5f8c4ccec0f047987d9485",
+      "state_output_sha256": "43fd27c7329b10b47ded71d3d9abc3b93447b225b2c1db0bbfe605606ba2a816",
+      "cheats": [],
+      "actor_id255_current_xyz_after": [27, 8, 20],
+      "boulder_id0_model84_script10002_before_xyz": [28, 8, 20],
+      "boulder_id0_model84_script10002_after_xyz": [29, 8, 20],
+      "screenshot_evidence": [
+        {
+          "path": "qa/runs/hm-remaining-strength-fix6a-native-object-push/stable_after_push_attempt.png",
+          "sha256": "1e357a670b29964f5ef40eaf940a0993d8d20c91c2cf276d63d5685508bc3b77",
+          "interpretation": "Stable field frame; RAM object coordinates confirm one-tile boulder movement."
+        }
+      ]
+    }
+  },
+  "acceptance": {
+    "native_strength_dialogue": "VERIFIED",
+    "native_boulder_moved_one_tile": "VERIFIED",
+    "post_push_native_save_and_cold_reload": "PENDING",
+    "normal_story_access_to_map176": "NOT_ASSESSED",
+    "other_hm_actions": "NOT_ASSESSED"
+  },
+  "excluded_prior_fixture": {
+    "classification": "INVALID_POSITION_ONLY_FIXTURE; excluded from acceptance.",
+    "dsv_sha256": "d3b45ed5c1ea9537940b7eba3335a72f20986ea971ff761b60e0ce4f518f7dc0",
+    "cause": "It changed currentPosition without updating SavedMapObject ID255 coordinates and did not provide the native map176 SavedMapObjects table."
+  },
+  "limitations": [
+    "The map176 setup used a synthetic position fixture and native warp/save; normal story access was not tested.",
+    "Strength activated during the repeated Continue A cadence, so no true pre-action screenshot or exact activation frame was captured.",
+    "A same-build state continuation verified one boulder move; persistence after saving and cold reloading that moved boulder remains pending.",
+    "Only Strength is reported here; this does not assess the other HM actions."
+  ]
+}
