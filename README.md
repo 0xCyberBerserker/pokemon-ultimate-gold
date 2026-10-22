@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/assets/ultimate-gold-header.png" alt="Ultimate Gold — Ho-Oh over Johto / Ho-Oh sobre Johto" width="100%"></p>
+
 <div align="center">
   <p><strong>HEARTGOLD · JOHTO · FAN PROJECT</strong></p>
   <h1>ULTIMATE GOLD</h1>
