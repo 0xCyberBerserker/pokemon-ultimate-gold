@@ -4,6 +4,7 @@ All notable changes are documented here. The format follows Keep a Changelog and
 
 ## [Unreleased]
 
+- Prevented wiki rendering before its dataset loads, preserving early language, game-mode and route changes. Added a delayed-load browser regression and awaited initial content and sprite decoding in browser checks.
 - Corrected portable EV/IV menu setup, field return and numeric placeholders. The textfixed candidate independently passes bounded HP IV 15 → 16, HP EV 0 → 4 and separate all-EV/all-IV resets, including No/Yes, exact Party/Bag/reserve checks and native Save/fresh cold persistence. Larger-step and Repeat QA continues; earlier failed captures are retained. No editor was added to Alpha 2.
 - Verified confirmed HP-IV editing and separate EV/IV resets through native Save and fresh-process recovery, with independent review and negative provenance/integrity checks. Published exact scopes in the bilingual wiki; Alpha 2 remains unchanged.
 - Verified two native Bag launches of the isolated Cheat Kit probe, seeded from an actual Alpha 2 gift/save/cold chain. The complete-menu candidate passed static review but failed visual return after cancellation; preserved the failed evidence and stopped further editing QA.
@@ -53,6 +54,7 @@ Este registro sigue Keep a Changelog y SemVer.
 
 ### [Sin publicar]
 
+- Evitado el renderizado de la wiki antes de cargar sus datos, conservando los cambios tempranos de idioma, modo y sección. Añadida una prueba de navegador con carga retrasada y esperas de contenido y decodificación de sprites en las comprobaciones.
 - Corregidos inicio del editor portátil, vuelta al campo y argumentos numéricos. La candidata corregida supera revisión independiente de IV de PS 15 → 16, EV de PS 0 → 4 y reinicios separados de todos los EV/IV, incluidos No/Sí, comprobaciones exactas de equipo/Bolsa/reservas y persistencia tras guardado nativo/arranque en frío. Sigue el QA de pasos mayores y Repeat; se conservan las capturas fallidas anteriores. Alpha 2 sigue sin incluir el editor.
 - Verificados incremento confirmado de IV de PS y reinicios EV/IV separados mediante guardado nativo y recuperación en procesos nuevos, con revisión independiente y pruebas negativas de origen/integridad. Publicados los alcances exactos en la wiki bilingüe; Alpha 2 sigue igual.
 - Verificadas dos aperturas nativas desde la Bolsa de la sonda Cheat Kit, con partida procedente de regalo/guardado/recarga real de Alpha 2. La candidata con menú completo superó revisión estática, pero falló el retorno visual tras cancelar; conservada la evidencia y detenidas las pruebas de edición posteriores.

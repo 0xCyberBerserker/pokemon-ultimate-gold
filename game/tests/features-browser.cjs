@@ -12,7 +12,7 @@ const base = process.env.WIKI_URL || 'http://127.0.0.1:8767/web/wiki/';
     page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
 
     await page.goto(base);
-    assert(await page.locator('.home-features-link').isVisible());
+    await page.locator('.home-features-link').waitFor({state: 'visible'});
     await page.locator('.home-features-link').click();
     await page.getByRole('heading', {name: 'Ultimate Gold features', exact: true}).waitFor();
     assert.equal(await page.locator('.feature-group').count(), 4);
