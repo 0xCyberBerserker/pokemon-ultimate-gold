@@ -17,7 +17,10 @@ const base = process.env.WIKI_URL || 'http://127.0.0.1:8767/web/wiki/';
   assert.match(await page.locator('#content').innerText(), /Hada/);
   assert.match(await page.locator('#content').innerText(), /Usa Moon Stone/);
   assert.equal(await page.locator('#content progress').count(), 6);
-  assert(await page.locator('.sprite').first().evaluate(image => image.complete && image.naturalWidth > 0));
+  assert(await page.locator('.sprite').first().evaluate(async image => {
+    await image.decode();
+    return image.complete && image.naturalWidth > 0;
+  }));
   await page.locator('#search').fill('test');
   await page.locator('#search').fill('');
   await page.goto(base + '#/moves/27');

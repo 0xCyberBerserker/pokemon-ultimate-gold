@@ -161,6 +161,7 @@ window.addEventListener('message',event=>{
   }
 });
 function render(){
+  if(!state.data)return;
   const parts=location.hash.replace(/^#\/?/,'').split('/'),route=parts[0]||'';
   document.title=state.lang==='es'?'Ultimate Gold · Wiki':'Ultimate Gold Wiki';
   localizeChrome();setNav(route);
