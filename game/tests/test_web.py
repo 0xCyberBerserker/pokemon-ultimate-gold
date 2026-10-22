@@ -132,6 +132,30 @@ class WebBuildTests(unittest.TestCase):
                 self.assertGreater(len(guides[slug]["body"].get("es", "")), 100)
                 self.assertNotEqual(guides[slug]["body"]["en"], guides[slug]["body"]["es"])
 
+    def test_feature_page_has_four_bilingual_layers_and_scoped_lists(self):
+        feature = build_site.localized_guides()["features"]
+        for language in ("en", "es"):
+            with self.subTest(language=language):
+                body = feature["body"][language]
+                sections = []
+                for section in body.split("<h3>")[1:]:
+                    title, content = section.split("</h3>", 1)
+                    if title in ("Credits", "Créditos"):
+                        continue
+                    sections.append(content.split("<h3>", 1)[0])
+                self.assertEqual(len(sections), 4)
+                self.assertTrue(all(section.count("<li>") <= 4 for section in sections))
+                self.assertIn("HeartGold", body)
+                if language == "en":
+                    self.assertIn("Alpha 2", body)
+                    self.assertIn("not included in either download", body)
+                    self.assertNotIn("no están en ninguna descarga", body)
+                else:
+                    self.assertIn("Alfa 2", body)
+                    self.assertIn("no están en ninguna descarga", body)
+                    self.assertNotIn("not included in either download", body)
+                self.assertIn("<li>", body)
+
 
 @unittest.skipUnless(CLEAN and Path(CLEAN).is_file() and shutil.which("node"), "external ROM or node unavailable")
 class WebEngineTests(unittest.TestCase):

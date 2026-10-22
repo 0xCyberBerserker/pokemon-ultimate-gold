@@ -4,7 +4,7 @@
 
 **Experimental probes only. The downloadable Alpha 2 does not include this editor.**
 
-**Latest portable candidate:** no-REGISTER `03d8711…57c620` independently passes HP IV 15 → 16, native Save and fresh cold persistence, plus four native rejection checks at EV/IV limits. Its predecessor textfix `99810da…0684a` separately passes HP EV 0 → 4, EV/IV resets and HP IV 0 → 5 → Repeat → 10. These bounded cases do not establish complete editor or release acceptance. Alpha 2 still contains no editor. Earlier failures and exact scopes remain below.
+**Latest portable candidate:** no-REGISTER `03d8711…57c620` independently passes HP IV 15 → 16, native Save and fresh cold persistence, plus four native rejection checks at EV/IV limits. Its predecessor textfix `99810da…0684a` separately passes HP EV 0 → 4, EV/IV resets and HP IV 0 → 5 → Repeat → 10. Additional bounded EV-cap cases now pass independent review on private bd50: HP `252 → 255` at the per-stat cap and total EVs `508 → 510`, each with a no-change Repeat rejection. [Evidence and scope](qa-editor-ev-caps.md). These bounded cases do not establish complete editor or release acceptance. Alpha 2 still contains no editor. Earlier failures and exact scopes remain below.
 
 ### Textfixed portable editor: bounded persistence
 
@@ -176,7 +176,7 @@ Portable HP IV +1, HP EV +4, separate EV/IV resets, and one HP IV Repeat to 10 n
 
 **Solo sondas experimentales. La descarga Alpha 2 no incluye este editor.**
 
-**Última candidata portátil:** sin REGISTER `03d8711…57c620` supera revisión independiente de IV de PS 15 → 16, guardado nativo y persistencia tras arranque en frío, además de cuatro rechazos nativos en límites EV/IV. Su predecesora textfix `99810da…0684a` supera por separado EV de PS 0 → 4, reinicios EV/IV e IV de PS 0 → 5 → Repeat → 10. Estos casos acotados no aceptan el editor completo ni una release. Alpha 2 sigue sin incluir el editor. Debajo se conservan los fallos y alcances exactos anteriores.
+**Última candidata portátil:** sin REGISTER `03d8711…57c620` supera revisión independiente de IV de PS 15 → 16, guardado nativo y persistencia tras arranque en frío, además de cuatro rechazos nativos en límites EV/IV. Su predecesora textfix `99810da…0684a` supera por separado EV de PS 0 → 4, reinicios EV/IV e IV de PS 0 → 5 → Repeat → 10. Otros casos acotados de topes EV ya pasan revisión independiente en la bd50 privada: PS `252 → 255` en el límite individual y EV totales `508 → 510`, ambos con rechazo Repeat sin cambios. [Evidencia y alcance](qa-editor-ev-caps.md). Estos casos no aceptan el editor completo ni una release. Alpha 2 sigue sin incluir el editor. Debajo se conservan los fallos y alcances exactos anteriores.
 
 ### Editor portátil con texto corregido: persistencia acotada
 

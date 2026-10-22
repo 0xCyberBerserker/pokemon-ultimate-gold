@@ -8,6 +8,7 @@
       intro: 'Follow trainer teams by location, check Pokémon and move details, and look up items or machines as you play through Johto.',
       primary: 'Explore trainer teams',
       secondary: 'Open the Pokédex',
+      features: 'Builds & features',
       art: 'Johto starter Pokémon',
       artLabel: 'JOHTO / GENERATION II',
       countSpecies: 'Pokédex entries',
@@ -44,6 +45,7 @@
       intro: 'Consulta los equipos por ubicación, revisa datos de Pokémon y movimientos, y encuentra objetos o máquinas mientras recorres Johto.',
       primary: 'Explorar equipos',
       secondary: 'Abrir la Pokédex',
+      features: 'Versiones y características',
       art: 'Pokémon iniciales de Johto',
       artLabel: 'JOHTO / GENERACIÓN II',
       countSpecies: 'entradas de Pokédex',
@@ -116,7 +118,7 @@
           <p class="home-wordmark">ULTIMATE <strong>GOLD</strong><span>WIKI</span></p>
           <h1 id="home-title">${escapeHtml(text.title).replace(/\n/g, '<br>')}</h1>
           <p class="home-lede">${text.intro}</p>
-          <div class="home-actions"><a class="button button-primary" href="#/trainers">${text.primary}<span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#/pokemon">${text.secondary}<span aria-hidden="true">→</span></a></div>
+          <div class="home-actions"><a class="button button-primary" href="#/trainers">${text.primary}<span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#/pokemon">${text.secondary}<span aria-hidden="true">→</span></a><a class="button button-quiet home-features-link" href="#/guide/features">${text.features}<span aria-hidden="true">→</span></a></div>
         </div>
         <div class="home-hero-art" role="img" aria-label="${text.art}">
           <div class="home-art-caption"><span>01</span><span>${text.artLabel}</span></div>

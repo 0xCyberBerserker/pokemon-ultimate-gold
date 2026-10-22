@@ -2,7 +2,7 @@
 
 ## English
 
-This is a private repository. Request access from the repository owner, then clone it and enter the technical project subtree:
+Clone the repository and enter the technical project subtree. Direct pushes require collaborator access; request it from the repository owner if needed:
 
 ```sh
 git clone https://github.com/0xCyberBerserker/pokemon-ultimate-gold.git
@@ -35,11 +35,11 @@ The generated site is a local build artifact. This repository does not publish G
 
 ### Branches and review
 
-Create a topic branch under `features/`, for example `features/contributor-guide`. Push only that branch and open a pull request against the repository's configured default branch. Request review from a designated reviewer through GitHub. Include the commands and focused checks you ran. Do not force-push shared branches.
+Create a topic branch under `features/`, for example `features/contributor-guide`. Push only that branch and open a pull request against the repository's configured default branch. Request review from a project collaborator through their existing GitHub collaborator entry; do not guess or hard-code a username. Include the commands and focused checks you ran. Do not force-push shared branches.
 
 ## Español
 
-Este repositorio es privado. Pide acceso al propietario, clónalo y entra en el subdirectorio técnico del proyecto:
+Clona el repositorio y entra en el subdirectorio técnico del proyecto. Los pushes directos requieren acceso de colaborador; solicítalo al propietario si lo necesitas:
 
 ```sh
 git clone https://github.com/0xCyberBerserker/pokemon-ultimate-gold.git
@@ -72,6 +72,6 @@ El sitio generado es un artefacto de build local. Este repositorio no publica Gi
 
 ### Ramas y revisión
 
-Crea una rama temática bajo `features/`, por ejemplo `features/contributor-guide`. Sube solo esa rama y abre un pull request contra la rama predeterminada configurada en el repositorio. Solicita revisión a una persona revisora designada mediante GitHub. Incluye los comandos y comprobaciones acotadas que ejecutaste. No fuerces el push de ramas compartidas.
+Crea una rama temática bajo `features/`, por ejemplo `features/contributor-guide`. Sube solo esa rama y abre un pull request contra la rama predeterminada configurada en el repositorio. Solicita revisión a una persona colaboradora del proyecto mediante su entrada existente en GitHub; no adivines ni fijes un nombre de usuario. Incluye los comandos y comprobaciones acotadas que ejecutaste. No fuerces el push de ramas compartidas.
 
 Made with 🖤 in Barcelona City 🇪🇸

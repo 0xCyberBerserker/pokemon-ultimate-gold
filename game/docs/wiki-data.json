@@ -1305,7 +1305,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          45,
+          50,
+          70,
+          80,
+          80
+        ],
+        "target_stats": [
+          60,
+          45,
+          50,
+          80,
+          100,
+          100
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          10,
+          20,
+          20
+        ],
+        "baseline_total": 385,
+        "target_total": 435,
+        "total_delta": 50,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 13,
@@ -1557,7 +1593,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          65,
+          80,
+          40,
+          75,
+          45,
+          80
+        ],
+        "target_stats": [
+          65,
+          100,
+          40,
+          95,
+          45,
+          80
+        ],
+        "delta": [
+          0,
+          20,
+          0,
+          20,
+          0,
+          0
+        ],
+        "baseline_total": 385,
+        "target_total": 425,
+        "total_delta": 40,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 16,
@@ -1902,7 +1973,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          83,
+          80,
+          75,
+          91,
+          70,
+          70
+        ],
+        "target_stats": [
+          103,
+          91,
+          75,
+          91,
+          70,
+          70
+        ],
+        "delta": [
+          20,
+          11,
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 469,
+        "target_total": 500,
+        "total_delta": 31,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 19,
@@ -2128,7 +2234,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          55,
+          81,
+          60,
+          97,
+          50,
+          70
+        ],
+        "target_stats": [
+          65,
+          91,
+          60,
+          107,
+          50,
+          70
+        ],
+        "delta": [
+          10,
+          10,
+          0,
+          10,
+          0,
+          0
+        ],
+        "baseline_total": 413,
+        "target_total": 443,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 21,
@@ -2340,7 +2482,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          65,
+          90,
+          65,
+          100,
+          61,
+          61
+        ],
+        "target_stats": [
+          65,
+          95,
+          65,
+          105,
+          61,
+          61
+        ],
+        "delta": [
+          0,
+          5,
+          0,
+          5,
+          0,
+          0
+        ],
+        "baseline_total": 442,
+        "target_total": 452,
+        "total_delta": 10,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 23,
@@ -2570,7 +2747,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          85,
+          69,
+          80,
+          65,
+          79
+        ],
+        "target_stats": [
+          60,
+          91,
+          69,
+          86,
+          65,
+          79
+        ],
+        "delta": [
+          0,
+          6,
+          0,
+          6,
+          0,
+          0
+        ],
+        "baseline_total": 438,
+        "target_total": 450,
+        "total_delta": 12,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 25,
@@ -2694,7 +2906,43 @@
           }
         }
       ],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          35,
+          55,
+          30,
+          90,
+          50,
+          40
+        ],
+        "target_stats": [
+          35,
+          65,
+          30,
+          95,
+          60,
+          40
+        ],
+        "delta": [
+          0,
+          10,
+          0,
+          5,
+          10,
+          0
+        ],
+        "baseline_total": 300,
+        "target_total": 325,
+        "total_delta": 25,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 26,
@@ -2768,7 +3016,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          90,
+          55,
+          100,
+          90,
+          80
+        ],
+        "target_stats": [
+          60,
+          100,
+          55,
+          121,
+          100,
+          80
+        ],
+        "delta": [
+          0,
+          10,
+          0,
+          21,
+          10,
+          0
+        ],
+        "baseline_total": 475,
+        "target_total": 516,
+        "total_delta": 41,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 27,
@@ -3279,7 +3563,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          90,
+          82,
+          87,
+          76,
+          75,
+          85
+        ],
+        "target_stats": [
+          100,
+          82,
+          87,
+          76,
+          75,
+          85
+        ],
+        "delta": [
+          10,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 495,
+        "target_total": 505,
+        "total_delta": 10,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 32,
@@ -3566,7 +3884,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          81,
+          92,
+          77,
+          85,
+          85,
+          75
+        ],
+        "target_stats": [
+          81,
+          97,
+          77,
+          85,
+          90,
+          75
+        ],
+        "delta": [
+          0,
+          5,
+          0,
+          0,
+          5,
+          0
+        ],
+        "baseline_total": 495,
+        "target_total": 505,
+        "total_delta": 10,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 35,
@@ -4186,7 +4539,44 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          140,
+          70,
+          45,
+          45,
+          75,
+          50
+        ],
+        "target_stats": [
+          148,
+          70,
+          55,
+          45,
+          85,
+          65
+        ],
+        "delta": [
+          8,
+          0,
+          10,
+          0,
+          10,
+          15
+        ],
+        "baseline_total": 425,
+        "target_total": 468,
+        "total_delta": 43,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 41,
@@ -4752,7 +5142,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          75,
+          80,
+          85,
+          50,
+          100,
+          90
+        ],
+        "target_stats": [
+          75,
+          80,
+          85,
+          50,
+          110,
+          100
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          10,
+          10
+        ],
+        "baseline_total": 480,
+        "target_total": 500,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 46,
@@ -4956,7 +5381,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          95,
+          80,
+          30,
+          60,
+          80
+        ],
+        "target_stats": [
+          60,
+          115,
+          100,
+          30,
+          60,
+          80
+        ],
+        "delta": [
+          0,
+          20,
+          20,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 405,
+        "target_total": 445,
+        "total_delta": 40,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          2
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 48,
@@ -5188,7 +5648,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          65,
+          60,
+          90,
+          90,
+          75
+        ],
+        "target_stats": [
+          70,
+          65,
+          60,
+          90,
+          115,
+          75
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          25,
+          0
+        ],
+        "baseline_total": 450,
+        "target_total": 475,
+        "total_delta": 25,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 50,
@@ -5644,7 +6138,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          65,
+          70,
+          60,
+          115,
+          65,
+          65
+        ],
+        "target_stats": [
+          65,
+          90,
+          60,
+          115,
+          65,
+          65
+        ],
+        "delta": [
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 440,
+        "target_total": 460,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 54,
@@ -6622,7 +7150,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          90,
+          85,
+          95,
+          70,
+          70,
+          90
+        ],
+        "target_stats": [
+          90,
+          95,
+          100,
+          70,
+          70,
+          90
+        ],
+        "delta": [
+          0,
+          10,
+          5,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 500,
+        "target_total": 515,
+        "total_delta": 15,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          2
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 63,
@@ -7581,7 +8144,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          80,
+          105,
+          65,
+          70,
+          100,
+          60
+        ],
+        "target_stats": [
+          80,
+          115,
+          65,
+          70,
+          110,
+          60
+        ],
+        "delta": [
+          0,
+          10,
+          0,
+          0,
+          10,
+          0
+        ],
+        "baseline_total": 480,
+        "target_total": 500,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 72,
@@ -8995,7 +9593,45 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          52,
+          65,
+          55,
+          60,
+          58,
+          62
+        ],
+        "target_stats": [
+          55,
+          110,
+          55,
+          105,
+          60,
+          65
+        ],
+        "delta": [
+          3,
+          45,
+          0,
+          45,
+          2,
+          3
+        ],
+        "baseline_total": 352,
+        "target_total": 450,
+        "total_delta": 98,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 84,
@@ -9454,7 +10090,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          90,
+          70,
+          80,
+          70,
+          70,
+          95
+        ],
+        "target_stats": [
+          90,
+          70,
+          80,
+          70,
+          80,
+          95
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          10,
+          0
+        ],
+        "baseline_total": 475,
+        "target_total": 485,
+        "total_delta": 10,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 88,
@@ -10355,7 +11025,41 @@
           }
         }
       ],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          35,
+          45,
+          160,
+          70,
+          30,
+          45
+        ],
+        "target_stats": [
+          35,
+          80,
+          160,
+          70,
+          30,
+          45
+        ],
+        "delta": [
+          0,
+          35,
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 385,
+        "target_total": 420,
+        "total_delta": 35,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 96,
@@ -11497,7 +12201,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          80,
+          110,
+          45,
+          50,
+          80
+        ],
+        "target_stats": [
+          60,
+          80,
+          110,
+          70,
+          50,
+          80
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          25,
+          0,
+          0
+        ],
+        "baseline_total": 425,
+        "target_total": 450,
+        "total_delta": 25,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 106,
@@ -12857,7 +13595,43 @@
           }
         }
       ],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          55,
+          65,
+          95,
+          85,
+          95,
+          45
+        ],
+        "target_stats": [
+          65,
+          75,
+          95,
+          85,
+          95,
+          75
+        ],
+        "delta": [
+          10,
+          10,
+          0,
+          0,
+          0,
+          30
+        ],
+        "baseline_total": 440,
+        "target_total": 490,
+        "total_delta": 50,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 118,
@@ -13067,7 +13841,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          80,
+          92,
+          65,
+          68,
+          65,
+          80
+        ],
+        "target_stats": [
+          80,
+          102,
+          65,
+          88,
+          65,
+          80
+        ],
+        "delta": [
+          0,
+          10,
+          0,
+          20,
+          0,
+          0
+        ],
+        "baseline_total": 450,
+        "target_total": 480,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 120,
@@ -13633,7 +14442,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          65,
+          50,
+          35,
+          95,
+          115,
+          95
+        ],
+        "target_stats": [
+          65,
+          50,
+          35,
+          95,
+          120,
+          95
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          5,
+          0
+        ],
+        "baseline_total": 455,
+        "target_total": 460,
+        "total_delta": 5,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 125,
@@ -14902,7 +15745,46 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 1
+      "generation": 1,
+      "stat_comparison": {
+        "baseline_stats": [
+          65,
+          130,
+          60,
+          65,
+          95,
+          110
+        ],
+        "target_stats": [
+          110,
+          130,
+          65,
+          95,
+          60,
+          65
+        ],
+        "delta": [
+          45,
+          0,
+          5,
+          30,
+          -35,
+          -45
+        ],
+        "baseline_total": 525,
+        "target_total": 525,
+        "total_delta": 0,
+        "status": "redistributed",
+        "increased_stat_indices": [
+          0,
+          2,
+          3
+        ],
+        "decreased_stat_indices": [
+          4,
+          5
+        ]
+      }
     },
     {
       "id": 137,
@@ -17822,7 +18704,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          85,
+          76,
+          64,
+          90,
+          45,
+          55
+        ],
+        "target_stats": [
+          85,
+          86,
+          64,
+          108,
+          45,
+          55
+        ],
+        "delta": [
+          0,
+          10,
+          0,
+          18,
+          0,
+          0
+        ],
+        "baseline_total": 415,
+        "target_total": 443,
+        "total_delta": 28,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 163,
@@ -18070,7 +18987,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          100,
+          50,
+          50,
+          70,
+          76,
+          96
+        ],
+        "target_stats": [
+          100,
+          50,
+          50,
+          70,
+          86,
+          96
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          10,
+          0
+        ],
+        "baseline_total": 442,
+        "target_total": 452,
+        "total_delta": 10,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 165,
@@ -18302,7 +19253,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          55,
+          35,
+          50,
+          85,
+          55,
+          110
+        ],
+        "target_stats": [
+          55,
+          95,
+          50,
+          85,
+          35,
+          110
+        ],
+        "delta": [
+          0,
+          60,
+          0,
+          0,
+          -20,
+          0
+        ],
+        "baseline_total": 390,
+        "target_total": 430,
+        "total_delta": 40,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1
+        ],
+        "decreased_stat_indices": [
+          4
+        ]
+      }
     },
     {
       "id": 167,
@@ -18526,7 +19513,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          90,
+          70,
+          40,
+          60,
+          60
+        ],
+        "target_stats": [
+          70,
+          90,
+          70,
+          80,
+          60,
+          60
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          40,
+          0,
+          0
+        ],
+        "baseline_total": 390,
+        "target_total": 430,
+        "total_delta": 40,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 169,
@@ -18869,7 +19890,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          125,
+          58,
+          58,
+          67,
+          76,
+          76
+        ],
+        "target_stats": [
+          125,
+          58,
+          58,
+          67,
+          86,
+          86
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          10,
+          10
+        ],
+        "baseline_total": 460,
+        "target_total": 480,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 172,
@@ -20107,7 +21163,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          75,
+          80,
+          85,
+          50,
+          90,
+          100
+        ],
+        "target_stats": [
+          75,
+          80,
+          85,
+          50,
+          100,
+          110
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          10,
+          10
+        ],
+        "baseline_total": 480,
+        "target_total": 500,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 183,
@@ -20228,7 +21319,41 @@
           }
         }
       ],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          20,
+          50,
+          40,
+          20,
+          50
+        ],
+        "target_stats": [
+          70,
+          20,
+          50,
+          40,
+          50,
+          50
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          30,
+          0
+        ],
+        "baseline_total": 250,
+        "target_total": 280,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 184,
@@ -20351,7 +21476,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          100,
+          50,
+          80,
+          50,
+          50,
+          80
+        ],
+        "target_stats": [
+          110,
+          50,
+          80,
+          50,
+          90,
+          80
+        ],
+        "delta": [
+          10,
+          0,
+          0,
+          0,
+          40,
+          0
+        ],
+        "baseline_total": 410,
+        "target_total": 460,
+        "total_delta": 50,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 185,
@@ -20465,7 +21625,44 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          100,
+          115,
+          30,
+          30,
+          65
+        ],
+        "target_stats": [
+          75,
+          115,
+          130,
+          30,
+          30,
+          80
+        ],
+        "delta": [
+          5,
+          15,
+          15,
+          0,
+          0,
+          15
+        ],
+        "baseline_total": 410,
+        "target_total": 460,
+        "total_delta": 50,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 186,
@@ -20535,7 +21732,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          90,
+          75,
+          75,
+          70,
+          90,
+          100
+        ],
+        "target_stats": [
+          90,
+          75,
+          85,
+          75,
+          90,
+          100
+        ],
+        "delta": [
+          0,
+          0,
+          10,
+          5,
+          0,
+          0
+        ],
+        "baseline_total": 500,
+        "target_total": 515,
+        "total_delta": 15,
+        "status": "boosted",
+        "increased_stat_indices": [
+          2,
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 187,
@@ -21246,7 +22478,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          75,
+          75,
+          55,
+          30,
+          105,
+          85
+        ],
+        "target_stats": [
+          75,
+          75,
+          90,
+          30,
+          125,
+          95
+        ],
+        "delta": [
+          0,
+          0,
+          35,
+          0,
+          20,
+          10
+        ],
+        "baseline_total": 425,
+        "target_total": 490,
+        "total_delta": 65,
+        "status": "boosted",
+        "increased_stat_indices": [
+          2,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 193,
@@ -21587,7 +22855,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          95,
+          85,
+          85,
+          35,
+          65,
+          65
+        ],
+        "target_stats": [
+          95,
+          95,
+          95,
+          35,
+          65,
+          65
+        ],
+        "delta": [
+          0,
+          10,
+          10,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 430,
+        "target_total": 450,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          2
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 196,
@@ -22235,7 +23538,46 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          48,
+          72,
+          48,
+          48,
+          72,
+          48
+        ],
+        "target_stats": [
+          68,
+          92,
+          68,
+          68,
+          92,
+          68
+        ],
+        "delta": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "baseline_total": 336,
+        "target_total": 456,
+        "total_delta": 120,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 202,
@@ -22411,7 +23753,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          80,
+          65,
+          85,
+          90,
+          65
+        ],
+        "target_stats": [
+          70,
+          80,
+          65,
+          105,
+          110,
+          65
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          20,
+          20,
+          0
+        ],
+        "baseline_total": 455,
+        "target_total": 495,
+        "total_delta": 40,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 204,
@@ -22738,7 +24115,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          100,
+          70,
+          70,
+          45,
+          65,
+          65
+        ],
+        "target_stats": [
+          105,
+          80,
+          70,
+          45,
+          65,
+          65
+        ],
+        "delta": [
+          5,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 415,
+        "target_total": 430,
+        "total_delta": 15,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 207,
@@ -22966,7 +24378,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          75,
+          85,
+          200,
+          30,
+          55,
+          65
+        ],
+        "target_stats": [
+          75,
+          90,
+          200,
+          30,
+          55,
+          65
+        ],
+        "delta": [
+          0,
+          5,
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 510,
+        "target_total": 515,
+        "total_delta": 5,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 209,
@@ -23339,7 +24785,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          65,
+          95,
+          75,
+          85,
+          55,
+          55
+        ],
+        "target_stats": [
+          65,
+          100,
+          75,
+          85,
+          80,
+          55
+        ],
+        "delta": [
+          0,
+          5,
+          0,
+          0,
+          25,
+          0
+        ],
+        "baseline_total": 430,
+        "target_total": 460,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 212,
@@ -24206,7 +25687,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          50,
+          50,
+          120,
+          30,
+          80,
+          80
+        ],
+        "target_stats": [
+          50,
+          50,
+          135,
+          30,
+          115,
+          115
+        ],
+        "delta": [
+          0,
+          0,
+          15,
+          0,
+          35,
+          35
+        ],
+        "baseline_total": 410,
+        "target_total": 495,
+        "total_delta": 85,
+        "status": "boosted",
+        "increased_stat_indices": [
+          2,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 220,
@@ -24555,7 +26072,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          55,
+          55,
+          85,
+          35,
+          65,
+          85
+        ],
+        "target_stats": [
+          55,
+          55,
+          115,
+          35,
+          105,
+          110
+        ],
+        "delta": [
+          0,
+          0,
+          30,
+          0,
+          40,
+          25
+        ],
+        "baseline_total": 380,
+        "target_total": 475,
+        "total_delta": 95,
+        "status": "boosted",
+        "increased_stat_indices": [
+          2,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 223,
@@ -25871,7 +27424,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          73,
+          95,
+          62,
+          85,
+          85,
+          65
+        ],
+        "target_stats": [
+          73,
+          100,
+          62,
+          85,
+          85,
+          65
+        ],
+        "delta": [
+          0,
+          5,
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 465,
+        "target_total": 470,
+        "total_delta": 5,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 235,
@@ -25961,7 +27548,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 2
+      "generation": 2,
+      "stat_comparison": {
+        "baseline_stats": [
+          55,
+          20,
+          35,
+          75,
+          20,
+          45
+        ],
+        "target_stats": [
+          55,
+          20,
+          35,
+          110,
+          20,
+          45
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          35,
+          0,
+          0
+        ],
+        "baseline_total": 250,
+        "target_total": 285,
+        "total_delta": 35,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 236,
@@ -28920,7 +30541,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          90,
+          70,
+          70,
+          60,
+          60
+        ],
+        "target_stats": [
+          70,
+          105,
+          70,
+          80,
+          60,
+          60
+        ],
+        "delta": [
+          0,
+          15,
+          0,
+          10,
+          0,
+          0
+        ],
+        "baseline_total": 420,
+        "target_total": 445,
+        "total_delta": 25,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 263,
@@ -29142,7 +30798,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          78,
+          70,
+          61,
+          100,
+          50,
+          61
+        ],
+        "target_stats": [
+          78,
+          90,
+          61,
+          105,
+          50,
+          61
+        ],
+        "delta": [
+          0,
+          20,
+          0,
+          5,
+          0,
+          0
+        ],
+        "baseline_total": 420,
+        "target_total": 445,
+        "total_delta": 25,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 265,
@@ -29381,7 +31072,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          70,
+          50,
+          65,
+          90,
+          50
+        ],
+        "target_stats": [
+          60,
+          70,
+          50,
+          85,
+          105,
+          65
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          20,
+          15,
+          15
+        ],
+        "baseline_total": 385,
+        "target_total": 435,
+        "total_delta": 50,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 268,
@@ -29543,7 +31270,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          50,
+          70,
+          65,
+          50,
+          90
+        ],
+        "target_stats": [
+          60,
+          50,
+          70,
+          65,
+          65,
+          105
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          15,
+          15
+        ],
+        "baseline_total": 385,
+        "target_total": 415,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 270,
@@ -30328,7 +32090,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          85,
+          60,
+          125,
+          50,
+          50
+        ],
+        "target_stats": [
+          70,
+          95,
+          60,
+          125,
+          50,
+          50
+        ],
+        "delta": [
+          10,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 430,
+        "target_total": 450,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 278,
@@ -30540,7 +32337,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          50,
+          100,
+          65,
+          85,
+          70
+        ],
+        "target_stats": [
+          60,
+          50,
+          120,
+          65,
+          95,
+          70
+        ],
+        "delta": [
+          0,
+          0,
+          20,
+          0,
+          10,
+          0
+        ],
+        "baseline_total": 430,
+        "target_total": 460,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          2,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 280,
@@ -30661,7 +32493,41 @@
           }
         }
       ],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          28,
+          25,
+          25,
+          40,
+          45,
+          35
+        ],
+        "target_stats": [
+          28,
+          25,
+          25,
+          40,
+          65,
+          35
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        "baseline_total": 198,
+        "target_total": 218,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 281,
@@ -30799,7 +32665,41 @@
           }
         }
       ],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          38,
+          35,
+          35,
+          50,
+          65,
+          55
+        ],
+        "target_stats": [
+          38,
+          35,
+          35,
+          50,
+          95,
+          55
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          30,
+          0
+        ],
+        "baseline_total": 278,
+        "target_total": 308,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 282,
@@ -31117,7 +33017,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          60,
+          62,
+          60,
+          80,
+          82
+        ],
+        "target_stats": [
+          70,
+          60,
+          62,
+          90,
+          100,
+          102
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          30,
+          20,
+          20
+        ],
+        "baseline_total": 414,
+        "target_total": 484,
+        "total_delta": 70,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 285,
@@ -32745,7 +34681,41 @@
           }
         }
       ],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          30,
+          45,
+          135,
+          30,
+          45,
+          90
+        ],
+        "target_stats": [
+          30,
+          45,
+          135,
+          30,
+          65,
+          90
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        "baseline_total": 375,
+        "target_total": 395,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 300,
@@ -32951,7 +34921,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          65,
+          65,
+          70,
+          55,
+          55
+        ],
+        "target_stats": [
+          70,
+          75,
+          65,
+          90,
+          95,
+          55
+        ],
+        "delta": [
+          0,
+          10,
+          0,
+          20,
+          40,
+          0
+        ],
+        "baseline_total": 380,
+        "target_total": 450,
+        "total_delta": 70,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 302,
@@ -33074,7 +35080,44 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          50,
+          75,
+          75,
+          50,
+          65,
+          65
+        ],
+        "target_stats": [
+          60,
+          95,
+          95,
+          50,
+          65,
+          85
+        ],
+        "delta": [
+          10,
+          20,
+          20,
+          0,
+          0,
+          20
+        ],
+        "baseline_total": 380,
+        "target_total": 450,
+        "total_delta": 70,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 303,
@@ -33197,7 +35240,44 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          50,
+          85,
+          85,
+          50,
+          55,
+          55
+        ],
+        "target_stats": [
+          60,
+          105,
+          90,
+          50,
+          55,
+          90
+        ],
+        "delta": [
+          10,
+          20,
+          5,
+          0,
+          0,
+          35
+        ],
+        "baseline_total": 380,
+        "target_total": 450,
+        "total_delta": 70,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 304,
@@ -34108,7 +36188,44 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          50,
+          40,
+          95,
+          85,
+          75
+        ],
+        "target_stats": [
+          60,
+          50,
+          50,
+          115,
+          90,
+          85
+        ],
+        "delta": [
+          0,
+          0,
+          10,
+          20,
+          5,
+          10
+        ],
+        "baseline_total": 405,
+        "target_total": 450,
+        "total_delta": 45,
+        "status": "boosted",
+        "increased_stat_indices": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 312,
@@ -34218,7 +36335,44 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          40,
+          50,
+          95,
+          75,
+          85
+        ],
+        "target_stats": [
+          60,
+          50,
+          50,
+          115,
+          85,
+          90
+        ],
+        "delta": [
+          0,
+          10,
+          0,
+          20,
+          10,
+          5
+        ],
+        "baseline_total": 405,
+        "target_total": 450,
+        "total_delta": 45,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 313,
@@ -34329,7 +36483,47 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          65,
+          73,
+          55,
+          85,
+          47,
+          75
+        ],
+        "target_stats": [
+          80,
+          30,
+          60,
+          90,
+          100,
+          90
+        ],
+        "delta": [
+          15,
+          -43,
+          5,
+          5,
+          53,
+          15
+        ],
+        "baseline_total": 400,
+        "target_total": 450,
+        "total_delta": 50,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": [
+          1
+        ]
+      }
     },
     {
       "id": 314,
@@ -34448,7 +36642,47 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          65,
+          47,
+          55,
+          85,
+          73,
+          75
+        ],
+        "target_stats": [
+          80,
+          30,
+          60,
+          90,
+          90,
+          100
+        ],
+        "delta": [
+          15,
+          -17,
+          5,
+          5,
+          17,
+          25
+        ],
+        "baseline_total": 400,
+        "target_total": 450,
+        "total_delta": 50,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": [
+          1
+        ]
+      }
     },
     {
       "id": 315,
@@ -34807,7 +37041,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          100,
+          73,
+          83,
+          55,
+          73,
+          83
+        ],
+        "target_stats": [
+          100,
+          83,
+          83,
+          55,
+          83,
+          83
+        ],
+        "delta": [
+          0,
+          10,
+          0,
+          0,
+          10,
+          0
+        ],
+        "baseline_total": 467,
+        "target_total": 487,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 318,
@@ -35586,7 +37855,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          85,
+          140,
+          20,
+          85,
+          70
+        ],
+        "target_stats": [
+          70,
+          100,
+          140,
+          20,
+          100,
+          70
+        ],
+        "delta": [
+          0,
+          15,
+          0,
+          0,
+          15,
+          0
+        ],
+        "baseline_total": 470,
+        "target_total": 500,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 325,
@@ -35918,7 +38222,46 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          60,
+          60,
+          60,
+          60,
+          60
+        ],
+        "target_stats": [
+          80,
+          80,
+          80,
+          80,
+          80,
+          80
+        ],
+        "delta": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "baseline_total": 360,
+        "target_total": 480,
+        "total_delta": 120,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 328,
@@ -36240,7 +38583,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          80,
+          100,
+          80,
+          100,
+          80,
+          80
+        ],
+        "target_stats": [
+          80,
+          110,
+          80,
+          100,
+          100,
+          80
+        ],
+        "delta": [
+          0,
+          10,
+          0,
+          0,
+          20,
+          0
+        ],
+        "baseline_total": 520,
+        "target_total": 550,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 331,
@@ -36722,7 +39100,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          75,
+          70,
+          90,
+          80,
+          70,
+          105
+        ],
+        "target_stats": [
+          75,
+          70,
+          100,
+          80,
+          90,
+          105
+        ],
+        "delta": [
+          0,
+          0,
+          10,
+          0,
+          20,
+          0
+        ],
+        "baseline_total": 490,
+        "target_total": 520,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          2,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 335,
@@ -37046,7 +39459,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          55,
+          65,
+          70,
+          95,
+          85
+        ],
+        "target_stats": [
+          70,
+          55,
+          65,
+          70,
+          115,
+          85
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        "baseline_total": 440,
+        "target_total": 460,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 338,
@@ -37156,7 +39603,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          95,
+          85,
+          70,
+          55,
+          65
+        ],
+        "target_stats": [
+          70,
+          115,
+          85,
+          70,
+          55,
+          65
+        ],
+        "delta": [
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 440,
+        "target_total": 460,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 339,
@@ -38540,7 +41021,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          70,
+          70,
+          70,
+          70,
+          70
+        ],
+        "target_stats": [
+          70,
+          70,
+          70,
+          80,
+          110,
+          80
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          10,
+          40,
+          10
+        ],
+        "baseline_total": 420,
+        "target_total": 480,
+        "total_delta": 60,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 352,
@@ -38657,7 +41174,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          90,
+          70,
+          40,
+          60,
+          120
+        ],
+        "target_stats": [
+          80,
+          100,
+          80,
+          40,
+          60,
+          120
+        ],
+        "delta": [
+          20,
+          10,
+          10,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 440,
+        "target_total": 480,
+        "total_delta": 40,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          2
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 353,
@@ -38777,7 +41330,41 @@
           }
         }
       ],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          44,
+          75,
+          35,
+          45,
+          63,
+          33
+        ],
+        "target_stats": [
+          44,
+          75,
+          35,
+          45,
+          73,
+          33
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          10,
+          0
+        ],
+        "baseline_total": 295,
+        "target_total": 305,
+        "total_delta": 10,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 354,
@@ -38899,7 +41486,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          64,
+          115,
+          65,
+          65,
+          83,
+          63
+        ],
+        "target_stats": [
+          64,
+          115,
+          65,
+          65,
+          103,
+          63
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        "baseline_total": 455,
+        "target_total": 475,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 355,
@@ -39236,7 +41857,46 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          99,
+          68,
+          83,
+          51,
+          72,
+          87
+        ],
+        "target_stats": [
+          110,
+          90,
+          90,
+          65,
+          90,
+          90
+        ],
+        "delta": [
+          11,
+          22,
+          7,
+          14,
+          18,
+          3
+        ],
+        "baseline_total": 460,
+        "target_total": 535,
+        "total_delta": 75,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 358,
@@ -39353,7 +42013,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          65,
+          50,
+          70,
+          65,
+          95,
+          80
+        ],
+        "target_stats": [
+          65,
+          50,
+          70,
+          90,
+          110,
+          100
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          25,
+          15,
+          20
+        ],
+        "baseline_total": 425,
+        "target_total": 485,
+        "total_delta": 60,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 359,
@@ -39773,7 +42469,45 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          80,
+          80,
+          80,
+          80,
+          80,
+          80
+        ],
+        "target_stats": [
+          80,
+          100,
+          120,
+          60,
+          80,
+          60
+        ],
+        "delta": [
+          0,
+          20,
+          40,
+          -20,
+          0,
+          -20
+        ],
+        "baseline_total": 480,
+        "target_total": 500,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          2
+        ],
+        "decreased_stat_indices": [
+          3,
+          5
+        ]
+      }
     },
     {
       "id": 363,
@@ -40561,7 +43295,45 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 3
+      "generation": 3,
+      "stat_comparison": {
+        "baseline_stats": [
+          43,
+          30,
+          55,
+          97,
+          40,
+          65
+        ],
+        "target_stats": [
+          55,
+          30,
+          60,
+          125,
+          100,
+          80
+        ],
+        "delta": [
+          12,
+          0,
+          5,
+          28,
+          60,
+          15
+        ],
+        "baseline_total": 330,
+        "target_total": 450,
+        "total_delta": 120,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 371,
@@ -43490,7 +46262,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          85,
+          120,
+          70,
+          100,
+          50,
+          50
+        ],
+        "target_stats": [
+          90,
+          120,
+          75,
+          100,
+          50,
+          65
+        ],
+        "delta": [
+          5,
+          0,
+          5,
+          0,
+          0,
+          15
+        ],
+        "baseline_total": 475,
+        "target_total": 500,
+        "total_delta": 25,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          2,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 399,
@@ -43697,7 +46505,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          79,
+          85,
+          60,
+          71,
+          55,
+          60
+        ],
+        "target_stats": [
+          89,
+          95,
+          60,
+          71,
+          67,
+          60
+        ],
+        "delta": [
+          10,
+          10,
+          0,
+          0,
+          12,
+          0
+        ],
+        "baseline_total": 410,
+        "target_total": 442,
+        "total_delta": 32,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 401,
@@ -43854,7 +46698,44 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          77,
+          85,
+          51,
+          65,
+          55,
+          51
+        ],
+        "target_stats": [
+          77,
+          96,
+          59,
+          74,
+          55,
+          59
+        ],
+        "delta": [
+          0,
+          11,
+          8,
+          9,
+          0,
+          8
+        ],
+        "baseline_total": 384,
+        "target_total": 420,
+        "total_delta": 36,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 403,
@@ -44178,7 +47059,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          80,
+          120,
+          79,
+          70,
+          95,
+          79
+        ],
+        "target_stats": [
+          80,
+          120,
+          79,
+          82,
+          95,
+          79
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          12,
+          0,
+          0
+        ],
+        "baseline_total": 523,
+        "target_total": 535,
+        "total_delta": 12,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 406,
@@ -44915,7 +47830,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          59,
+          85,
+          36,
+          79,
+          105
+        ],
+        "target_stats": [
+          60,
+          59,
+          85,
+          36,
+          99,
+          125
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          20,
+          20
+        ],
+        "baseline_total": 424,
+        "target_total": 464,
+        "total_delta": 40,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 414,
@@ -45010,7 +47960,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          94,
+          50,
+          66,
+          94,
+          50
+        ],
+        "target_stats": [
+          70,
+          94,
+          50,
+          91,
+          109,
+          50
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          25,
+          15,
+          0
+        ],
+        "baseline_total": 424,
+        "target_total": 464,
+        "total_delta": 40,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 415,
@@ -45299,7 +48284,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          45,
+          70,
+          95,
+          45,
+          90
+        ],
+        "target_stats": [
+          60,
+          45,
+          70,
+          95,
+          100,
+          90
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          55,
+          0
+        ],
+        "baseline_total": 405,
+        "target_total": 460,
+        "total_delta": 55,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 418,
@@ -45709,7 +48728,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          60,
+          70,
+          85,
+          87,
+          78
+        ],
+        "target_stats": [
+          70,
+          60,
+          70,
+          85,
+          107,
+          78
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        "baseline_total": 450,
+        "target_total": 470,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 422,
@@ -46605,7 +49658,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          60,
+          60,
+          105,
+          105,
+          105
+        ],
+        "target_stats": [
+          60,
+          60,
+          60,
+          110,
+          110,
+          110
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          5,
+          5,
+          5
+        ],
+        "baseline_total": 495,
+        "target_total": 510,
+        "total_delta": 15,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 430,
@@ -46910,7 +49999,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          71,
+          82,
+          64,
+          112,
+          64,
+          59
+        ],
+        "target_stats": [
+          100,
+          86,
+          64,
+          112,
+          64,
+          59
+        ],
+        "delta": [
+          29,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 452,
+        "target_total": 485,
+        "total_delta": 33,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 433,
@@ -47217,7 +50341,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          103,
+          93,
+          67,
+          84,
+          71,
+          61
+        ],
+        "target_stats": [
+          103,
+          93,
+          67,
+          84,
+          77,
+          61
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        "baseline_total": 479,
+        "target_total": 485,
+        "total_delta": 6,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 436,
@@ -47334,7 +50492,41 @@
           }
         }
       ],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          57,
+          24,
+          86,
+          23,
+          24,
+          86
+        ],
+        "target_stats": [
+          57,
+          34,
+          86,
+          23,
+          24,
+          86
+        ],
+        "delta": [
+          0,
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseline_total": 300,
+        "target_total": 310,
+        "total_delta": 10,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 437,
@@ -47897,7 +51089,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          76,
+          65,
+          45,
+          91,
+          92,
+          42
+        ],
+        "target_stats": [
+          76,
+          65,
+          45,
+          111,
+          112,
+          42
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          20,
+          20,
+          0
+        ],
+        "baseline_total": 411,
+        "target_total": 451,
+        "total_delta": 40,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 442,
@@ -49429,7 +52656,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          74,
+          100,
+          72,
+          46,
+          90,
+          72
+        ],
+        "target_stats": [
+          74,
+          120,
+          72,
+          86,
+          90,
+          72
+        ],
+        "delta": [
+          0,
+          20,
+          0,
+          40,
+          0,
+          0
+        ],
+        "baseline_total": 454,
+        "target_total": 514,
+        "total_delta": 60,
+        "status": "boosted",
+        "increased_stat_indices": [
+          1,
+          3
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 456,
@@ -49651,7 +52913,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          69,
+          69,
+          76,
+          91,
+          69,
+          86
+        ],
+        "target_stats": [
+          69,
+          69,
+          76,
+          101,
+          89,
+          86
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          10,
+          20,
+          0
+        ],
+        "baseline_total": 460,
+        "target_total": 490,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 458,
@@ -49972,7 +53269,43 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          90,
+          92,
+          75,
+          60,
+          92,
+          85
+        ],
+        "target_stats": [
+          100,
+          100,
+          75,
+          60,
+          100,
+          85
+        ],
+        "delta": [
+          10,
+          8,
+          0,
+          0,
+          8,
+          0
+        ],
+        "baseline_total": 494,
+        "target_total": 520,
+        "total_delta": 26,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 461,
@@ -51793,7 +55126,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          60,
+          55,
+          145,
+          40,
+          75,
+          150
+        ],
+        "target_stats": [
+          60,
+          55,
+          145,
+          40,
+          85,
+          150
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          10,
+          0
+        ],
+        "baseline_total": 525,
+        "target_total": 535,
+        "total_delta": 10,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 477,
@@ -52024,7 +55391,41 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          70,
+          80,
+          70,
+          110,
+          80,
+          70
+        ],
+        "target_stats": [
+          70,
+          80,
+          70,
+          110,
+          100,
+          70
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0
+        ],
+        "baseline_total": 480,
+        "target_total": 500,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 479,
@@ -52114,7 +55515,42 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          50,
+          50,
+          77,
+          91,
+          95,
+          77
+        ],
+        "target_stats": [
+          50,
+          50,
+          77,
+          101,
+          105,
+          77
+        ],
+        "delta": [
+          0,
+          0,
+          0,
+          10,
+          10,
+          0
+        ],
+        "baseline_total": 440,
+        "target_total": 460,
+        "total_delta": 20,
+        "status": "boosted",
+        "increased_stat_indices": [
+          3,
+          4
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 480,
@@ -53057,7 +56493,46 @@
         "status": "not_implemented_in_target_format"
       },
       "evolutions": [],
-      "generation": 4
+      "generation": 4,
+      "stat_comparison": {
+        "baseline_stats": [
+          80,
+          80,
+          80,
+          80,
+          80,
+          80
+        ],
+        "target_stats": [
+          85,
+          85,
+          85,
+          85,
+          85,
+          85
+        ],
+        "delta": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "baseline_total": 480,
+        "target_total": 510,
+        "total_delta": 30,
+        "status": "boosted",
+        "increased_stat_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "decreased_stat_indices": []
+      }
     },
     {
       "id": 490,
@@ -222085,5 +225560,60 @@
     "item_descriptions": "Item names come from bank 222. Wiki English text for three custom items uses project strings patched into bank 223. The exact Alpha2 native Bag getter at 0x02077D64 reads bank 221, where entries 113, 114 and 118 are empty: this is a confirmed text-bank bug awaiting the integration build. Other item English descriptions use matched HGSS references; text does not prove native effects.",
     "acquisition": "Alpha2 preserves 150 explicitly documented upstream notes and 208 exact-target shop-by-map stock rows (194 shop inventories across 34 map links). Only the three Rocket gifts and two purchases have native action evidence; gift battery persistence is not tested.",
     "trainer_journey": "The 90-stage, 639-trainer route order is carried from Alpha1 because the exact build comparison proves trainer headers/parties and trainer name/class messages unchanged; it remains an order reference, not a gameplay route acceptance."
+  },
+  "species_stat_comparison": {
+    "schema": "ultimate-gold-heartgold-stat-comparison/v1",
+    "sources": {
+      "baseline": {
+        "label": "Clean HeartGold USA",
+        "sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105"
+      },
+      "target": {
+        "label": "Ultimate Gold Alpha 2 FIX6a",
+        "sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+      }
+    },
+    "record_layout": {
+      "path": "a/0/0/2",
+      "records": 508,
+      "record_size": 44,
+      "base_stat_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "base_stat_order": [
+        "hp",
+        "attack",
+        "defense",
+        "speed",
+        "special_attack",
+        "special_defense"
+      ],
+      "wiki_display_order": [
+        "hp",
+        "attack",
+        "defense",
+        "special_attack",
+        "special_defense",
+        "speed"
+      ]
+    },
+    "criterion": {
+      "boosted": "Target base-stat total is higher than clean HeartGold.",
+      "redistributed": "At least one base stat changed but the total is unchanged; excluded from the boosted filter.",
+      "lower_total": "Target base-stat total is lower; excluded from the boosted filter.",
+      "unchanged": "All six base stats match.",
+      "excluded_claims": "Type, ability, and move changes are not automatically classified as improvements."
+    },
+    "counts": {
+      "boosted": 97,
+      "redistributed": 1,
+      "lower_total": 0,
+      "unchanged": 395
+    }
   }
 }

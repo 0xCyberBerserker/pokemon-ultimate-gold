@@ -2,6 +2,16 @@
 
 ## English
 
+### Current snapshot 06
+
+The [snapshot 06 manifest](2026-10-22-source-manifest-06.json), SHA-256 `d9d9cee1f4147d811b851da5868c339fc469ab7db28d6e03ed213b485ad12376`, now describes all 1,647 files under `game/`. Its [delivery receipt copy](2026-10-22-delivery-validation-06.md) records 9 additions, 20 modifications and no removals relative to the privacy-reviewed public baseline. The original receipt SHA-256 is `f0ca55214651dc858d13b98be7d47b46b0e22385407917b42da986a7d165177c`; this copy only converts eight Markdown hard-break lines to list items to pass whitespace checks.
+
+This update adds the segmented Features guide, one combined Rebalanced viability filter (98 of 493 species), and bounded EV-cap/Kris research documentation. Experimental editor/Kris features remain outside the downloadable build; the header and icon awaiting human review are excluded. Integration checks passed: site build, 63 discovered unit tests with 9 ROM-dependent skips, and wiki JavaScript syntax. Independent delivery validation also passed 13 wiki and 7 Features browser checks. These checks do not accept a complete playable release.
+
+The current subtree must match snapshot 06. The records below preserve the historical snapshot 04 and its publication privacy overlay; their old hashes are provenance, not the current game-file inventory.
+
+### Historical baseline 04
+
 Export 2026-10-22-04 stages 1,638 files under `game/`: browser patcher, generated wiki, versioned patches and authored guides. The root management scaffold is preserved. The full experimental native editor/Kris engine and unresolved artwork remain outside this import.
 
 - [Source/export manifest](2026-10-22-source-manifest.json), SHA-256 `0bdfd94361807d657c697089684b98f186640506ed966ac6289665a0cfb19915`. Its `exported_files` paths are relative to `game/`.
@@ -16,6 +26,16 @@ The full initial-import whitespace check flags generated CSV CRLF and 19 existin
 ROMs, saves, states, raw memory dumps, archives, symlinks and Pages workflows are excluded. No release or automatic publication is configured. Privacy and redistribution rights are separate gates; a private review PR does not establish full-game or hardware acceptance.
 
 ## Español
+
+### Instantánea actual 06
+
+El [manifiesto de la instantánea 06](2026-10-22-source-manifest-06.json), SHA-256 `d9d9cee1f4147d811b851da5868c339fc469ab7db28d6e03ed213b485ad12376`, describe ahora los 1.647 archivos de `game/`. La [copia del recibo de entrega](2026-10-22-delivery-validation-06.md) registra 9 altas, 20 modificaciones y ninguna baja frente a la base pública revisada de privacidad. El SHA-256 del recibo original es `f0ca55214651dc858d13b98be7d47b46b0e22385407917b42da986a7d165177c`; esta copia solo convierte ocho líneas con saltos Markdown en elementos de lista para pasar la comprobación de espacios finales.
+
+La actualización añade la guía Features segmentada, un filtro conjunto de Viabilidad rebalanceada (98 de 493 especies) y documentación de pruebas acotadas de límites EV e investigación de Kris. El editor/Kris experimental sigue fuera del build descargable; se excluyen el header y el icono pendientes de revisión humana. En integración pasan el build, 63 pruebas unitarias descubiertas con 9 omisiones que requieren ROM y la sintaxis JavaScript de la wiki. La validación independiente de entrega también pasó 13 comprobaciones de navegador wiki y 7 de Features. Estos resultados no aceptan una release jugable completa.
+
+El subárbol actual debe coincidir con la instantánea 06. Los registros siguientes conservan el snapshot 04 histórico y su saneamiento de privacidad para publicación; sus hashes antiguos acreditan procedencia, no el inventario actual del juego.
+
+### Base histórica 04
 
 La exportación 2026-10-22-04 prepara 1.638 archivos bajo `game/`: patcher de navegador, wiki generada, parches por versión y guías propias. Se conserva la gestión en raíz. El motor nativo experimental completo del editor/Kris y el arte sin derechos resueltos quedan fuera.
 

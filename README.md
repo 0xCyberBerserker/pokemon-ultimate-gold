@@ -1,27 +1,97 @@
-# Pokémon Ultimate Gold
+<div align="center">
+  <p><strong>HEARTGOLD · JOHTO · FAN PROJECT</strong></p>
+  <h1>ULTIMATE GOLD</h1>
+  <p><strong>A fresh Johto journey, shaped by selected Sacred Gold lineage.</strong></p>
+  <p>A local-first browser patcher, a field guide, and two clearly labeled builds.</p>
+  <p>
+    <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/#/patcher"><strong>Open the patcher</strong></a>
+    · <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/">Explore the wiki</a>
+    · <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/#/guide/features">Features</a>
+  </p>
+  <p>
+    <a href="https://github.com/0xCyberBerserker/pokemon-ultimate-gold/actions/workflows/game-ci.yml"><img src="https://github.com/0xCyberBerserker/pokemon-ultimate-gold/actions/workflows/game-ci.yml/badge.svg?branch=main" alt="Game CI status"></a>
+    <a href="https://github.com/0xCyberBerserker/pokemon-ultimate-gold/actions/workflows/game-pages.yml"><img src="https://github.com/0xCyberBerserker/pokemon-ultimate-gold/actions/workflows/game-pages.yml/badge.svg?branch=main" alt="GitHub Pages workflow status"></a>
+  </p>
+</div>
 
-## English
+> **Build status:** Alpha 1 is the legacy selectable build. Alpha 2 is experimental.
 
-See [CI and future manual Pages deployment](WORKFLOWS.md) for automation checks and publication gates.
+## A familiar Johto, carefully revised
 
-Development tracking and human review. Start with the [sprint board](https://github.com/users/0xCyberBerserker/projects/4) and [review guide](manual_usuario.md).
+- **HeartGold at its core:** the National Pokédex stays at 493 species; no new species are added.
+- **Selected challenge changes:** trainer and encounter data draw on Drayano’s *Sacred Gold* work. Sacred Gold Plus 1.2.3 is a pinned source component; this project does not claim every upstream option is carried over.
+- **Built to explore:** browse the project wiki alongside the patcher, with HeartGold’s 493-species roster intact.
 
-If Projects fails to load, use the [sprint milestone](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/milestone/1): issues carry a readable status label.
+## Choose your build
 
-This review branch stages the initial technical snapshot under [`game/`](game/README.md): browser patcher, wiki, versioned patches and authored guides. See [contribution instructions](game/CONTRIBUTING.md) for setup and tests and the [import record](docs/imports/README.md) for provenance. Issue #1 remains subject to review; the experimental native editor/Kris engine is not included. No ROMs, saves or emulator states belong here. No release is declared ready.
+| Build | Status | What’s in it |
+| --- | --- | --- |
+| **Alpha 1** | Legacy | Native, reusable TM Refill. |
+| **Alpha 2** | Experimental | Rocket kit, evolution-shop stock, and eight field actions for HMs you already own. |
 
-The game lead proposes sprints in the existing Codex game chat. This management chat maintains issues and status. The designated reviewer reviews the playable results; the project owner decides scope and releases. See [responsibilities and workflow](arquitectura.md).
+Alpha 2 has bounded, exact-build testing; full-story coverage is still open. The private EV/IV editor and Kris preview are not included in either download.
+
+## Patch privately. Explore freely.
+
+Choose a build and patch a clean dump from your own Pokémon HeartGold USA cartridge in your browser. The patcher checks the expected source; the ROM stays on your device, and **this project does not distribute game ROMs**. Then head to the wiki for the field guide and project notes.
+
+<details>
+  <summary>Credits and project scope</summary>
+
+  <p><em>Sacred Gold / Storm Silver</em> are by Drayano. <em>Sacred Gold Plus</em> was originally created by NefariousnessNo3436; version 1.2.3 is continued by Umberto-DEV and contributors, with Fairy implementation by mikelan / Mikelan98. Ultimate Gold maintains its own patches and guides.</p>
+  <p><a href="https://gbatemp.net/threads/pokemon-sacred-gold-storm-silver.327567/">Drayano’s project thread</a> · <a href="https://github.com/Umberto-DEV/sacred-gold-plus">Sacred Gold Plus source</a> · <a href="https://github.com/0xCyberBerserker/pokemon-ultimate-gold/blob/main/game/docs/project-status.md">Current build evidence</a></p>
+  <p>Pokémon, HeartGold, and third-party work remain the property of their respective rights holders. Ultimate Gold is a fan project.</p>
+</details>
+
+<p align="center"><strong>Made with 🖤 in Barcelona City 🇪🇸</strong></p>
+
+---
 
 ## Español
 
-Consulta [CI y despliegue manual futuro de Pages](WORKFLOWS.md) para las pruebas automáticas y los requisitos de publicación.
+<div align="center">
+  <p><strong>HEARTGOLD · JOHTO · PROYECTO DE FANS</strong></p>
+  <h1>ULTIMATE GOLD</h1>
+  <p><strong>Una nueva aventura por Johto, basada en aportaciones seleccionadas de Sacred Gold.</strong></p>
+  <p>Un parcheador local en el navegador, una guía de campo y dos versiones claramente diferenciadas.</p>
+  <p>
+    <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/#/patcher"><strong>Abrir el parcheador</strong></a>
+    · <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/">Explorar la wiki</a>
+    · <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/#/guide/features">Características</a>
+  </p>
+  <p>
+    <a href="https://github.com/0xCyberBerserker/pokemon-ultimate-gold/actions/workflows/game-ci.yml"><img src="https://github.com/0xCyberBerserker/pokemon-ultimate-gold/actions/workflows/game-ci.yml/badge.svg?branch=main" alt="Estado de CI del juego"></a>
+    <a href="https://github.com/0xCyberBerserker/pokemon-ultimate-gold/actions/workflows/game-pages.yml"><img src="https://github.com/0xCyberBerserker/pokemon-ultimate-gold/actions/workflows/game-pages.yml/badge.svg?branch=main" alt="Estado del workflow de GitHub Pages"></a>
+  </p>
+</div>
 
-Espacio para organizar el desarrollo y revisar resultados. Empieza por el [tablero de sprints](https://github.com/users/0xCyberBerserker/projects/4) y la [guía de revisión](manual_usuario.md).
+> **Estado de las versiones:** Alfa 1 es la versión seleccionable anterior. Alfa 2 es experimental.
 
-Si Projects falla al cargar, usa el [hito del sprint](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/milestone/1): las issues tienen una etiqueta de estado legible.
+## Una Johto familiar, revisada con cuidado
 
-Esta rama de revisión prepara el snapshot técnico inicial bajo [`game/`](game/README.md): patcher de navegador, wiki, parches por versión y guías propias. Consulta las [instrucciones de colaboración](game/CONTRIBUTING.md) para preparar el entorno y ejecutar pruebas, y el [registro de importación](docs/imports/README.md) para la procedencia. La issue #1 sigue sujeta a revisión; no se incluye el motor nativo experimental del editor/Kris. Las ROMs, partidas y estados del emulador quedan fuera. Ninguna release se declara lista.
+- **HeartGold como base:** la Pokédex Nacional conserva sus 493 especies; no se añaden especies nuevas.
+- **Cambios seleccionados al desafío:** entrenadores y encuentros incorporan trabajo de *Sacred Gold* de Drayano. Sacred Gold Plus 1.2.3 es un componente fuente fijado; no se afirma que se conserven todas sus opciones.
+- **Para explorar:** consulta la wiki del proyecto junto al parcheador, con la Pokédex de 493 especies de HeartGold.
 
-El chat técnico propone los sprints. Este chat mantiene las tareas y su estado. La persona revisora revisa los resultados jugables y el propietario decide alcance y releases. Consulta [responsabilidades y flujo](arquitectura.md).
+## Elige tu versión
 
-Made with 🖤 in Barcelona City 🇪🇸
+| Versión | Estado | Contenido |
+| --- | --- | --- |
+| **Alfa 1** | Anterior | TM Refill reutilizable nativo. |
+| **Alfa 2** | Experimental | Kit Rocket, existencias de objetos evolutivos y ocho acciones de campo para las MO que ya tienes. |
+
+Alfa 2 cuenta con pruebas acotadas sobre el build exacto; la historia completa sigue pendiente. El editor privado de EV/IV y la vista previa de Kris no están incluidos en ninguna descarga.
+
+## Parchea en privado. Explora a tu ritmo.
+
+Elige una versión y aplica el parche en el navegador a un volcado limpio de tu propio cartucho de Pokémon HeartGold USA. El parcheador verifica la fuente esperada; la ROM permanece en tu dispositivo y **este proyecto no distribuye ROMs del juego**. Después, consulta la wiki y sus guías de campo.
+
+<details>
+  <summary>Créditos y alcance</summary>
+
+  <p><em>Sacred Gold / Storm Silver</em> son de Drayano. <em>Sacred Gold Plus</em> fue creado originalmente por NefariousnessNo3436; la versión 1.2.3 continúa a cargo de Umberto-DEV y colaboradores, con la implementación Hada de mikelan / Mikelan98. Ultimate Gold mantiene sus propios parches y guías.</p>
+  <p><a href="https://gbatemp.net/threads/pokemon-sacred-gold-storm-silver.327567/">Hilo del proyecto de Drayano</a> · <a href="https://github.com/Umberto-DEV/sacred-gold-plus">Fuente de Sacred Gold Plus</a> · <a href="https://github.com/0xCyberBerserker/pokemon-ultimate-gold/blob/main/game/docs/project-status.md">Evidencia de las versiones</a></p>
+  <p>Pokémon, HeartGold y las obras de terceros pertenecen a sus respectivos titulares. Ultimate Gold es un proyecto de fans.</p>
+</details>
+
+<p align="center"><strong>Made with 🖤 in Barcelona City 🇪🇸</strong></p>
