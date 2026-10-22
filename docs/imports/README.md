@@ -2,13 +2,13 @@
 
 ## English
 
-### Current snapshot 07
+### Current snapshot 07 with cache-reference overlay
 
 The [snapshot 07 manifest](2026-10-22-source-manifest-07.json), SHA-256 `2fa5d3c8a87c445f9d15718c7fb1e59c7d40f7e5a7d9165df40e8663b4084c6d`, describes all 1,652 files under `game/`. Its byte-identical [delivery receipt](2026-10-22-delivery-validation-07.md), SHA-256 `84fda1c00968a218aa341189d7bfb4ba8beb899e3d4ec45aedc768db7866f267`, records four additions, ten modifications and no removals or mode changes relative to public main `4ce39ffa00676af5f4be15803999cd5c1cfe5471`. The prior loading fix and all 1,648 tracked game files are preserved; the root README remains unchanged.
 
 This update includes the approved homepage header and wiki/patcher favicon, bilingual branding provenance, and bounded Frontier/Nature QA documentation. Approved artwork hashes are pinned in the receipt; the PNG retains C2PA. Alpha 2 and downloadable patches are unchanged. Frontier reaches the next battle menu without proving turns, victory, rewards or a new cold boot; Nature covers Back and unchanged Party, Bag and battery bytes, without accepting nature application or persistence. Motion and editorial proposals are excluded.
 
-The current subtree must match snapshot 07. Independent delivery validation passed 63 unit tests discovered (54 executed, nine expected skips), plus 13 wiki, seven Features and four delayed-load browser checks in a separate copy. Integration-head and deployed-site checks are recorded separately; none establish full playable-release acceptance. Earlier manifests and the publication overlay remain historical provenance.
+The current subtree matches snapshot 07 except for the two HTML files documented in the [cache-reference overlay](2026-10-22-cache-reference-overlay.md), SHA-256 `d1f4af103db195ec3561546d53089b5b134f03659940ab6f70122c702ba560d6`. The overlay changes only three asset-version references in each file; the other 1,650 game files remain byte-identical to snapshot 07. The immutable manifest is unchanged. Independent delivery validation passed 63 unit tests discovered (54 executed, nine expected skips), plus 13 wiki, seven Features and four delayed-load browser checks in a separate copy. Integration-head and deployed-site checks are recorded separately; none establish full playable-release acceptance. Earlier manifests and the publication overlay remain historical provenance.
 
 ### Historical snapshot 06
 
@@ -35,13 +35,13 @@ ROMs, saves, states, raw memory dumps, archives, symlinks and Pages workflows ar
 
 ## Español
 
-### Instantánea actual 07
+### Instantánea actual 07 con ajuste de referencias de caché
 
 El [manifiesto de la instantánea 07](2026-10-22-source-manifest-07.json), SHA-256 `2fa5d3c8a87c445f9d15718c7fb1e59c7d40f7e5a7d9165df40e8663b4084c6d`, describe los 1.652 archivos de `game/`. El [recibo de entrega](2026-10-22-delivery-validation-07.md), copiado byte a byte y con SHA-256 `84fda1c00968a218aa341189d7bfb4ba8beb899e3d4ec45aedc768db7866f267`, registra cuatro altas, diez modificaciones y ninguna baja ni cambio de permisos frente al main público `4ce39ffa00676af5f4be15803999cd5c1cfe5471`. Se conservan la corrección de carga y los 1.648 archivos de juego ya versionados; el README raíz no cambia.
 
 Se incorporan la cabecera aprobada de portada y el favicon de wiki/parcheador, procedencia bilingüe y documentación acotada de Frontier/Nature. Los hashes del arte aprobado constan en el recibo; el PNG conserva C2PA. Alfa 2 y sus parches descargables no cambian. Frontier llega al siguiente menú de combate sin acreditar turnos, victoria, premios ni nuevo arranque en frío; Nature comprueba Back y bytes intactos de equipo, Bolsa y partida, sin aceptar aplicación ni persistencia de naturaleza. Las propuestas de animaciones y revisión editorial quedan fuera.
 
-El subárbol actual debe coincidir con la instantánea 07. La validación independiente en otra copia pasó 63 unitarias descubiertas (54 ejecutadas y nueve omisiones previstas), además de 13 comprobaciones de wiki, siete de Features y cuatro de carga retrasada. El head de integración y la web desplegada se verifican aparte; estas pruebas no aceptan una release jugable completa. Los manifiestos anteriores y el saneamiento de publicación conservan su valor histórico.
+El subárbol actual coincide con la instantánea 07 salvo los dos HTML documentados en el [ajuste de referencias de caché](2026-10-22-cache-reference-overlay.md), SHA-256 `d1f4af103db195ec3561546d53089b5b134f03659940ab6f70122c702ba560d6`. Solo cambian tres versiones de recursos en cada archivo; los otros 1.650 archivos de juego conservan exactamente sus bytes. El manifiesto inmutable no cambia. La validación independiente en otra copia pasó 63 unitarias descubiertas (54 ejecutadas y nueve omisiones previstas), además de 13 comprobaciones de wiki, siete de Features y cuatro de carga retrasada. El head de integración y la web desplegada se verifican aparte; estas pruebas no aceptan una release jugable completa. Los manifiestos anteriores y el saneamiento de publicación conservan su valor histórico.
 
 ### Instantánea histórica 06
 
