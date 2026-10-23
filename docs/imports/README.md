@@ -2,7 +2,13 @@
 
 ## English
 
-### Current snapshot 10
+### Local candidate snapshot 11
+
+The [snapshot 11 manifest](2026-10-23-source-manifest-11.json), SHA-256 `b388dc033ab6203eea4871849cf0fa66c82223a5ac22254a93968ac00adf2f76`, describes 1,654 game files. The byte-identical [delivery receipt](2026-10-23-delivery-validation-11.md) has SHA-256 `e06cd540153075b871634fdf8ee2c9aa780b044f8b29c6a532058ddacaeb927d`. This is a local candidate, not a publication: the deployed baseline remains snapshot 08 at `269f9690ca1037425698e21c87ed9ab97c0e6936`. Relative to local snapshot 10, two files are added (the post-Use Save guide and its HTML entry) and two change (editor status and generated wiki data). Code, patches, defaults and artwork remain unchanged.
+
+The new independently reviewed bd50 case records Save after opening/leaving the Stat Editor, identical 1,460 stored Party bytes with three valid stored checksums, and item 119 ×1 observed in a cold process without input savestate or cheats. Runtime slot 2 remains checksum-inconclusive; runner `NOT_ASSESSED`/`NOT_TESTED` statuses are retained. This is not global editor, Alpha 2, human or complete-game acceptance. Source build/idempotence results are attributed to the receipt; receiver checks cover frozen inventory, scope and links, without new builds, cores or UI. All prior records remain immutable. Integration into a local branch does not authorise push, release or deployment.
+
+### Historical local candidate snapshot 10
 
 The [snapshot 10 manifest](2026-10-23-source-manifest-10.json), SHA-256 `88dbb967c4be4060f862c19afa3b14b69311c05ef3ec16e1f21d14219151bc24`, describes all 1,652 game files. Its byte-identical [delivery receipt](2026-10-23-delivery-validation-10.md) has SHA-256 `abfb66bf0335f5d6b9a58bc238fc44033284764672dc2028a55990c1a0619b68`. Against base `269f9690ca1037425698e21c87ed9ab97c0e6936`, only project status, current editor status and four generated wiki EN/ES body leaves change. No game files are added or removed. The stored-Party follow-up closes the grant-save comparison before Use; two later RAM checksums and post-Use Save/cold remain unaccepted. Alpha 2 downloads, code, patches, defaults and artwork are unchanged. Receiver checks verified inventory and documentation scope; source build/idempotence/test results are attributed to the receipt. No rendered or full-game acceptance follows. Earlier snapshots remain immutable historical records.
 
@@ -45,7 +51,13 @@ ROMs, saves, states, raw memory dumps, archives, symlinks and Pages workflows ar
 
 ## Español
 
-### Instantánea actual 10
+### Instantánea candidata local 11
+
+El [manifiesto 11](2026-10-23-source-manifest-11.json) describe 1.654 archivos de juego; su hash y el del [recibo idéntico](2026-10-23-delivery-validation-11.md) constan arriba. Es una candidata local, sin publicar: la base desplegada sigue siendo la instantánea 08 en `269f9690ca1037425698e21c87ed9ab97c0e6936`. Frente a la candidata local 10 se añaden la guía de guardado tras Use y su entrada HTML, y cambian el estado del editor y el JSON wiki. Código, parches, valores predeterminados y arte siguen iguales.
+
+El caso bd50 revisado acredita Save tras abrir/salir del Stat Editor, 1.460 bytes guardados idénticos con tres checksums válidos y objeto 119 ×1 observado tras arranque frío sin estado de entrada ni trucos. El slot 2 en RAM sigue inconcluso; se conservan los estados `NOT_ASSESSED`/`NOT_TESTED` del runner. No acepta editor global, Alfa 2, experiencia humana ni juego completo. Build/idempotencia del origen se atribuyen al recibo; el receptor comprueba inventario congelado, alcance y enlaces, sin nuevos builds, cores ni interfaz. Los registros previos permanecen inmutables. Integrar en una rama local no autoriza push, release ni despliegue.
+
+### Instantánea candidata local histórica 10
 
 El [manifiesto 10](2026-10-23-source-manifest-10.json) describe los 1.652 archivos de juego; manifiesto y [recibo idéntico](2026-10-23-delivery-validation-10.md) tienen los hashes indicados arriba. Frente a la base `269f9690ca1037425698e21c87ed9ab97c0e6936` sólo cambian estado del proyecto, estado del editor y cuatro cuerpos EN/ES del JSON wiki, sin altas ni bajas de juego. El seguimiento del equipo guardado cierra la comparación anterior a Use; quedan pendientes dos checksums RAM posteriores y otro Save/frío tras Use. Alfa 2 descargable, código, parches, valores predeterminados y arte no cambian. El receptor comprobó inventario y alcance documental; build, idempotencia y pruebas del origen se atribuyen al recibo. Sin aceptación de renderizado ni del juego completo. Los snapshots anteriores conservan su valor histórico inmutable.
 

@@ -2,6 +2,8 @@
 
 ## English
 
+**Save after using the editor:** a [separate, independently reviewed bd50 case](qa-item119-post-use-save.md) now verifies native Save after opening/leaving the editor: all 1,460 stored Party bytes remain identical, with three valid Pokémon checksums. A state-free cold run finds Stat Editor ×1. Runtime slot 2 still fails checksum decoding, so whole-Party runtime integrity and global editor acceptance remain inconclusive. Four core calls total, including one corrected navigation failure; no stat edit in this case.
+
 The Stat Editor is a private test version, not part of downloadable Alpha 2; that download keeps its existing features. A Pokémon's Nature can influence some of its stats. One bounded test changed a test Chikorita's Nature to Adamant, saved, reopened the game without restoring an emulator save state, and showed Adamant in Summary. This does not establish an in-game way to obtain the editor or verify battle/PC effects. The latest [second-party-slot test](qa-editor-second-party-slot.md) verifies Chikorita's HP IV 15→16, preservation of the other party slots, native Save and same-ROM cold persistence; root reproduced its report exactly. A [bounded PC round-trip](qa-editor-pc-roundtrip.md) now passes independent review on private bd50; broader PC flows and global editor acceptance remain pending.
 
 **IV 31 ceiling:** the [native Defense ceiling case](qa-editor-iv31.md) passes the complete chain audit, root's exact replay and independent review. It reaches 31 with +5, clamps 30→31, rejects the next increase and retains 31 after native Save/cold. Its scope is one selected stat/species boundary case, not the entire editor or a release.
@@ -29,6 +31,8 @@ The [independent v3 coverage review](qa-nature-reset-v3-review.md) now confirms 
 Earlier engineering documents retain their historical candidate-specific limits. This status page summarizes subsequent verified results without treating earlier probe evidence as full integration acceptance.
 
 ## Español
+
+**Guardar después de usar el editor:** un [caso bd50 separado y revisado independientemente](qa-item119-post-use-save.md) verifica el guardado nativo tras abrir/salir del editor: los 1.460 bytes del equipo guardado coinciden exactamente y los tres Pokémon tienen checksums válidos. Un arranque en frío sin estado encuentra Stat Editor ×1. La posición 2 en RAM sigue sin validar el checksum; permanecen inconclusas la integridad de todo el equipo en ejecución y la aceptación global del editor. Cuatro invocaciones en total, incluido un fallo de navegación corregido; este caso no editó estadísticas.
 
 El Stat Editor es una versión privada de prueba, no forma parte de Alpha 2 descargable, que conserva sus funciones actuales. La naturaleza de un Pokémon puede influir en algunas estadísticas. Una prueba acotada cambió la naturaleza de una Chikorita de prueba a Adamant, guardó, volvió a cargar sin restaurar un estado de emulador y mostró Adamant en el Resumen (Summary). Esto no demuestra cómo obtener el editor durante la partida ni verifica efectos en combate o en el PC. La última [prueba sobre otra posición del equipo](qa-editor-second-party-slot.md) verifica el IV de PS de Chikorita 15→16, la conservación del resto del equipo, el guardado nativo y la persistencia en frío con la misma ROM; root reprodujo exactamente su informe. Una [ida y vuelta acotada al PC](qa-editor-pc-roundtrip.md) ya pasa revisión independiente en bd50 privada; los flujos PC más amplios y la aceptación global del editor siguen pendientes.
 
