@@ -24,10 +24,10 @@ Ultimate Gold has ten new item designs in its **private test candidate**. These 
 ### Verified in this candidate
 
 - All ten icons appear with their names in the Bag on the exact combined build.
-- The new title shows Ultimate Gold, the studio credit, the unofficial-project notice and upstream credits. A shared-palette defect was found and corrected before publication.
+- The new title shows Ultimate Gold, the studio credit, the unofficial-project notice and upstream credits. The in-game notice reads “Unofficial fan project / Proyecto fan no oficial”. A shared-palette defect was found and corrected before publication.
 - One disposable synthetic inventory passed native Save and a fresh-process reload. Both save records have valid CRCs; the full Bag and three stored Pokémon match after reload. Independent review and an exact offline replay passed.
 
-These checks cover candidate `e59680f052c450d0cc3c9e4f71da06e70ffc95be05958ed5548d4b9d6eea0d9b`, not the whole adventure, every item effect, acquisition or all emulators. The generic runner flag still says `battery_save_load: NOT_TESTED`; the separate audit verifies the observed DSV save/reload case. See the [scoped evidence summary](qa-branding-art.json).
+These checks cover candidate `4b23cd1615fb3082e9f9d05021688aa7f55f9b440e95fdbd5601a3e9e7f16b2c`, not the whole adventure, every item effect, acquisition or all emulators. The generic runner flag still says `battery_save_load: NOT_TESTED`; the separate audit verifies the observed DSV save/reload case. See the [scoped evidence summary](qa-branding-art.json).
 
 The same ten 32 × 32 PNG files supply the ROM conversion and candidate web art. Their pinned master was generated with AI assistance; Ho-Oh and other franchise imagery are not claimed as original studio-owned art. The project wordmark reuses the approved Ultimate Gold lettering.
 
@@ -57,10 +57,10 @@ Ultimate Gold tiene diez diseños nuevos de objetos en su **candidata privada de
 ### Comprobado en esta candidata
 
 - Los diez iconos aparecen con su nombre en la Bolsa de la build combinada exacta.
-- La portada muestra Ultimate Gold, el crédito del estudio, el aviso no oficial y los autores upstream. Se detectó y corrigió un fallo de paleta compartida antes de publicar.
+- La portada muestra Ultimate Gold, el crédito del estudio, el aviso no oficial y los autores upstream. El aviso del juego dice «Unofficial fan project / Proyecto fan no oficial». Se detectó y corrigió un fallo de paleta compartida antes de publicar.
 - Un inventario sintético desechable pasó guardado nativo y recarga en un proceso nuevo. Ambos registros tienen CRC válido; coinciden la Bolsa completa y los tres Pokémon guardados. Pasaron revisión independiente y reproducción offline exacta.
 
-Estas pruebas cubren la candidata `e59680f052c450d0cc3c9e4f71da06e70ffc95be05958ed5548d4b9d6eea0d9b`, no toda la aventura, todos los efectos, la obtención ni todos los emuladores. El campo genérico del runner aún dice `battery_save_load: NOT_TESTED`; la auditoría separada verifica el caso observado de guardado/recarga DSV. Véase el [resumen de evidencia acotada](qa-branding-art.json).
+Estas pruebas cubren la candidata `4b23cd1615fb3082e9f9d05021688aa7f55f9b440e95fdbd5601a3e9e7f16b2c`, no toda la aventura, todos los efectos, la obtención ni todos los emuladores. El campo genérico del runner aún dice `battery_save_load: NOT_TESTED`; la auditoría separada verifica el caso observado de guardado/recarga DSV. Véase el [resumen de evidencia acotada](qa-branding-art.json).
 
 Los mismos diez PNG de 32 × 32 sirven de origen para la ROM y el arte web de la candidata. El master fijado por hash se generó con asistencia de IA; Ho-Oh y otras imágenes de la franquicia no se presentan como propiedad original del estudio. Las letras del proyecto reutilizan la marca Ultimate Gold aprobada.
 
