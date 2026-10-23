@@ -234,7 +234,7 @@ def inline(value: str) -> str:
 
 def guide_image_gallery(line: str) -> str | None:
     """Crop location images; preserve both screens in local QA menu images."""
-    pattern = re.compile(r"!\[([^\]]*)\]\((\.\./assets/(?:locations|qa)/[A-Za-z0-9][A-Za-z0-9._-]*\.png)\)")
+    pattern = re.compile(r"!\[([^\]]*)\]\((\.\./(?:assets/(?:locations|qa)|web/assets/qa)/[A-Za-z0-9][A-Za-z0-9._-]*\.png)\)")
     matches = list(pattern.finditer(line))
     if not matches:
         return None
@@ -244,6 +244,8 @@ def guide_image_gallery(line: str) -> str | None:
         if line[cursor:match.start()].strip():
             return None
         alt, source = match.groups()
+        if source.startswith("../web/assets/qa/"):
+            source = "../assets/qa/" + source.removeprefix("../web/assets/qa/")
         safe_alt = html.escape(alt, quote=True)
         safe_source = html.escape(source, quote=True)
         full_screen_class = ' guide-capture-full' if source.startswith('../assets/qa/') else ''

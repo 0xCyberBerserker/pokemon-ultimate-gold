@@ -1,0 +1,54 @@
+{
+  "schema": "ultimate-gold-branding-art-qa/v1",
+  "status": "PRIVATE_CANDIDATE_BOUNDED_QA_NOT_A_RELEASE",
+  "candidate_sha256": "e59680f052c450d0cc3c9e4f71da06e70ffc95be05958ed5548d4b9d6eea0d9b",
+  "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+  "runner_sha256": "907a8ef3da22b71577289cc9454f764f27de8c4a248bfe6f913f6cc6c537814b",
+  "title": {
+    "result": "PASS_OBSERVED_CHECKPOINTS_700_1000_1450",
+    "shared_palette_4": "UNCHANGED",
+    "modified_members": [
+      0,
+      3,
+      15,
+      17
+    ],
+    "review_sha256": "eba831a6a4d2a53fbc9e58f44ee664cd70a3ea018e09d19b93b709ff4a311073"
+  },
+  "bag": {
+    "custom_icons_observed": 10,
+    "full_slots": 594,
+    "key_pocket_capacity": 60,
+    "control_item_501": "PRESERVED"
+  },
+  "save_reload": {
+    "result": "PASS_ONE_SYNTHETIC_FIXTURE",
+    "state_imported": false,
+    "cheats": false,
+    "main_counter_before": 11,
+    "main_counter_after": 12,
+    "both_main_crc_valid": true,
+    "stored_party_records": 3,
+    "stored_party_byte_comparison_and_checksums": "PASS",
+    "full_bag_equal_after_reload": true,
+    "generic_runner_battery_flag": "NOT_TESTED",
+    "audit_sha256": "5bc50a5df2b88524b1c405ef7df1f64894c379b06a0d012e4be4d64ae7d8bf8f",
+    "independent_review_sha256": "2da5dc337515c8c333ad9894d7dd71614dab764a398bd861340a92f05dd747e8",
+    "root_offline_replay": "BYTE_EXACT_PASS"
+  },
+  "art": {
+    "icon_master_sha256": "355afb27a1ed054a488b8c84c97dd703a3dee9ecf6467230e0825648f4c70db9",
+    "derivation_manifest_sha256": "7c529e271ac39178c8081e585fd47bdb2b6a2b679680eb72bb06d595e730f5b8",
+    "dimensions": [
+      32,
+      32
+    ],
+    "native_and_web_share_source_pngs": true
+  },
+  "limits": [
+    "No change to downloadable Alpha 2 or its default selection.",
+    "Item effects/acquisition, whole story, all emulators and hardware are not accepted.",
+    "Only the named candidate and synthetic save fixture were tested.",
+    "This summary does not redistribute ROMs, saves or raw QA evidence."
+  ]
+}

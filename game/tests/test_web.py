@@ -23,6 +23,15 @@ class WebBuildTests(unittest.TestCase):
         for path in ('https://example.com/menu.png', '../assets/qa/../private.png'):
             self.assertIsNone(build_site.guide_image_gallery(f'![Menu]({path})'))
 
+    def test_guide_gallery_normalizes_repository_relative_qa_assets(self):
+        rendered = build_site.guide_image_gallery('![Candidate](../web/assets/qa/custom-item-art-candidate.png)')
+        self.assertIsNotNone(rendered)
+        self.assertIn('src="../assets/qa/custom-item-art-candidate.png"', rendered)
+        self.assertIn('href="../assets/qa/custom-item-art-candidate.png"', rendered)
+        self.assertIn('guide-capture-full', rendered)
+        for path in ('../web/assets/qa/../private.png', '../web/assets/locations/field.png', 'https://example.com/image.png'):
+            self.assertIsNone(build_site.guide_image_gallery(f'![Candidate]({path})'))
+
     def test_renderer_links_and_single_table(self):
         rendered = build_site.render_markdown("| Name | Value |\n| --- | --- |\n| [local](README.md) | [upstream](https://example.com) |")
         self.assertEqual(rendered.count("<table>"), 1)
