@@ -2,6 +2,7 @@
 
 ## English
 
+- [ ] Integrate candidate item artwork/title into a future release. Ten custom icons, title branding and one native Save/fresh-reload fixture pass bounded independent QA; Alpha 2 is unchanged. See [candidate art and limits](docs/custom-item-art.md).
 - [x] Local repository on `features/initial-project`.
 - [x] Reproducible xdelta patch and hash manifest.
 - [x] Safe standard-library patcher and focused tests.
@@ -46,6 +47,7 @@
 
 ## Español
 
+- [ ] Integrar los nuevos iconos y portada en una futura release. Pasan QA independiente acotado los diez iconos, la portada y un fixture de guardado/recarga nativa; Alfa 2 no cambia. Véanse [arte de la candidata y límites](docs/custom-item-art.md).
 - [x] Repositorio local en `features/initial-project`.
 - [x] Patch xdelta reproducible y manifiesto de hashes.
 - [x] Patcher seguro de biblioteca estándar y pruebas enfocadas.
