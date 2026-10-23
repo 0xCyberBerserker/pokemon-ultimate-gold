@@ -1,7 +1,7 @@
 {
   "schema": "ultimate-gold-branding-art-qa/v1",
   "status": "PRIVATE_CANDIDATE_BOUNDED_QA_NOT_A_RELEASE",
-  "candidate_sha256": "e59680f052c450d0cc3c9e4f71da06e70ffc95be05958ed5548d4b9d6eea0d9b",
+  "candidate_sha256": "4b23cd1615fb3082e9f9d05021688aa7f55f9b440e95fdbd5601a3e9e7f16b2c",
   "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
   "runner_sha256": "907a8ef3da22b71577289cc9454f764f27de8c4a248bfe6f913f6cc6c537814b",
   "title": {
@@ -13,7 +13,14 @@
       15,
       17
     ],
-    "review_sha256": "eba831a6a4d2a53fbc9e58f44ee664cd70a3ea018e09d19b93b709ff4a311073"
+    "review_sha256": "603b4b4248046dd02fe24096448c7d15d5a077ed629281600b8dc7cf16e67d9e",
+    "notice_languages": [
+      "en",
+      "es"
+    ],
+    "notice_text": "Unofficial fan project / Proyecto fan no oficial",
+    "v4_to_v5_scope": "Only title NARC member 15 differs; code, icons, palette and other files are unchanged.",
+    "native_evidence": "Dedicated cold title run; mislabeled title checkpoints from the save run are excluded."
   },
   "bag": {
     "custom_icons_observed": 10,
@@ -32,8 +39,8 @@
     "stored_party_byte_comparison_and_checksums": "PASS",
     "full_bag_equal_after_reload": true,
     "generic_runner_battery_flag": "NOT_TESTED",
-    "audit_sha256": "5bc50a5df2b88524b1c405ef7df1f64894c379b06a0d012e4be4d64ae7d8bf8f",
-    "independent_review_sha256": "2da5dc337515c8c333ad9894d7dd71614dab764a398bd861340a92f05dd747e8",
+    "audit_sha256": "d550796145255fc627a21a2089fbf9a3bc93ec3edd4dca7554e0251a69877561",
+    "independent_review_sha256": "603b4b4248046dd02fe24096448c7d15d5a077ed629281600b8dc7cf16e67d9e",
     "root_offline_replay": "BYTE_EXACT_PASS"
   },
   "art": {
