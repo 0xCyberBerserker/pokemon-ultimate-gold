@@ -2,7 +2,13 @@
 
 ## English
 
-### Local candidate snapshot 11
+### Local candidate snapshot 12
+
+The [snapshot 12 manifest](2026-10-23-source-manifest-12.json), SHA-256 `1c8f2ece31519ec9b1413f4f71dfd34d7111daee279d53d81f58f35877ea2b07`, describes 1,654 game files. Its byte-identical [delivery receipt](2026-10-23-delivery-validation-12.md) has SHA-256 `1ae2849254624ffc043933fff92afd27aac084c862c414c92778dfa99c027d78`. This is a local candidate only; published/deployed content remains snapshot08 at `269f9690ca1037425698e21c87ed9ab97c0e6936`. Versus local snapshot11, exactly four existing files change: Kris feasibility, provenance JSON and its generated copy, and wiki JSON. No game files are added or removed.
+
+The new evidence maps female battle-portrait selection in pinned upstream source, preserving ordinary/link backpic differences. Trainer Card selection, target-ROM/runtime mapping and Kris asset rights remain unresolved. No sprite, asset, code, patch, default or release change is included. Receiver checks verify frozen inventory, scoped JSON changes and links; source builds/idempotence are attributed to the receipt. No rebuild, emulator or UI was repeated. Earlier local candidates and deployed history remain immutable; a local commit does not authorise publication.
+
+### Historical local candidate snapshot 11
 
 The [snapshot 11 manifest](2026-10-23-source-manifest-11.json), SHA-256 `b388dc033ab6203eea4871849cf0fa66c82223a5ac22254a93968ac00adf2f76`, describes 1,654 game files. The byte-identical [delivery receipt](2026-10-23-delivery-validation-11.md) has SHA-256 `e06cd540153075b871634fdf8ee2c9aa780b044f8b29c6a532058ddacaeb927d`. This is a local candidate, not a publication: the deployed baseline remains snapshot 08 at `269f9690ca1037425698e21c87ed9ab97c0e6936`. Relative to local snapshot 10, two files are added (the post-Use Save guide and its HTML entry) and two change (editor status and generated wiki data). Code, patches, defaults and artwork remain unchanged.
 
@@ -51,7 +57,13 @@ ROMs, saves, states, raw memory dumps, archives, symlinks and Pages workflows ar
 
 ## Español
 
-### Instantánea candidata local 11
+### Instantánea candidata local 12
+
+El [manifiesto 12](2026-10-23-source-manifest-12.json) describe 1.654 archivos; su hash y el del [recibo idéntico](2026-10-23-delivery-validation-12.md) constan arriba. Sólo candidata local: la publicación/despliegue continúa en snapshot08, `269f9690ca1037425698e21c87ed9ab97c0e6936`. Frente a la candidata local11 cambian exactamente cuatro archivos existentes: viabilidad de Kris, procedencia JSON y su copia generada, y JSON wiki. Sin altas ni bajas de juego.
+
+Se mapea la selección de retratos femeninos de combate en fuentes upstream fijadas, separando reversos ordinarios/de enlace. Trainer Card, mapeo de ROM objetivo/runtime y derechos de Kris siguen pendientes. No se incluyen sprites, recursos, código, parches, valores predeterminados ni release nuevos. El receptor comprueba inventario congelado, JSON acotado y enlaces; build/idempotencia del origen se atribuyen al recibo. Sin repetir build, emulación ni interfaz. Candidatas previas e histórico desplegado permanecen inmutables; el commit local no autoriza publicar.
+
+### Instantánea candidata local histórica 11
 
 El [manifiesto 11](2026-10-23-source-manifest-11.json) describe 1.654 archivos de juego; su hash y el del [recibo idéntico](2026-10-23-delivery-validation-11.md) constan arriba. Es una candidata local, sin publicar: la base desplegada sigue siendo la instantánea 08 en `269f9690ca1037425698e21c87ed9ab97c0e6936`. Frente a la candidata local 10 se añaden la guía de guardado tras Use y su entrada HTML, y cambian el estado del editor y el JSON wiki. Código, parches, valores predeterminados y arte siguen iguales.
 

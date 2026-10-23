@@ -121,6 +121,19 @@
     ],
     "scope_limit": "These are static IDs from the pinned decomp, not a target-ROM member inventory or a mapping from the artist sheet."
   },
+  "battle_source_map": {
+    "review_date": "2026-10-23",
+    "repository": "pret/pokeheartgold",
+    "commit": "6988158691eb6178cff697cda0428045ddcba5fb",
+    "status": "PINNED_ORIGINAL_SOURCE_ONLY",
+    "female_gender_and_trainer_class": 1,
+    "front": {"condition": "battlerPosition == 2 with Lyra trainer class", "narc_id": 58, "narc_path": "a/0/5/8", "ncgr_member": 5},
+    "back_ordinary": {"condition": "battlerPosition != 2 and isLink == FALSE", "narc_id": 6, "narc_path": "a/0/0/6", "backpic_id": 1, "ncgr_member": 5},
+    "back_link": {"condition": "battlerPosition != 2 and isLink == TRUE", "narc_id": 6, "narc_path": "a/0/0/6", "backpic_id": 16, "ncgr_member": 80},
+    "associated_member_offsets": {"nclr": 1, "ncer": 2, "nanr": 3, "ncbr": 4},
+    "source_references": ["src/battle/battle_setup.c:566-569", "src/pokemon.c:2719-2739", "src/pokemon.c:4132-4165", "include/constants/trainer_class.h:4-5,145-161"],
+    "scope_limit": "Static source arithmetic, not target-ROM resource or runtime validation. sub_02070D84 explicitly supplies FALSE; other caller paths are not fully traced. Trainer Card female avatar selection and Kris asset rights remain unresolved."
+  },
   "design_and_acceptance_limits": {
     "player_gender_flag": "Keep female profile semantics; Kris is a cosmetic/story presentation choice, not a new gender value.",
     "npc_counterpart": "Open design decision. Trace gender-conditional scenes and decide the counterpart presentation explicitly; do not assume Lyra must remain unchanged as an NPC.",
