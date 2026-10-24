@@ -1,0 +1,2088 @@
+{
+  "schema": "ultimate-gold.kris-bag-native.v1",
+  "issue": 33,
+  "status": "BOUNDED_BAG_CYCLE_AND_REENTRY_NATIVE_REVIEWED",
+  "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+  "core_invocation": 23,
+  "frames": 3130,
+  "accepted_commands": 42,
+  "observed_pocket_views": 8,
+  "termination": "quit",
+  "unload_and_deinit_completed": true,
+  "evidence_manifest_sha256": "161c52e2139c48066d83c7354c1635f2613ecff3a7af4e16db56658aa8346063",
+  "independent_review_sha256": "fde0569a493f224541e1310c4d916ea401c27fc363d56038787790b2d5853023",
+  "root_review_sha256": "cb0d553d7ceb5bbd0dece9e611c022f6c21df1beda3c81b21e4d5f31d0be7e9a",
+  "source_and_copy_seed_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+  "source_save_unchanged": true,
+  "run_battery_unchanged": true,
+  "cheats": [],
+  "save_states": [],
+  "ordinary_save_exercised": false,
+  "alpha2_changed": false,
+  "observed": {
+    "en": [
+      "The project-authored female Bag body and colors render through all eight pockets, wraparound, normal exit, one re-entry and return to the field.",
+      "The stock Bag framing crops the upper head, as in the original comparison run.",
+      "Native colors appear flatter than the separate synthetic preview."
+    ],
+    "es": [
+      "El cuerpo femenino de la Bolsa creado para el proyecto y sus colores aparecen en ocho bolsillos, vuelta al inicio, salida normal, una reentrada y regreso al campo.",
+      "El encuadre original de la Bolsa recorta la parte superior de la cabeza, igual que en la comparación original.",
+      "Los colores nativos se ven más planos que en la previsualización sintética independiente."
+    ]
+  },
+  "not_established": {
+    "en": [
+      "Cap appearance outside the visible frame or exact pixel/shading equivalence.",
+      "Male profile, full Kris integration, broader K11 coverage, human review or release acceptance. Core25’s bounded HOF ceremony does not establish legitimate League progression.",
+      "Other K11 consumers beyond the observed Bag navigation.",
+      "Nurse Joy healing persistence; the Core29 diagnostic did not save the healed copy."
+    ],
+    "es": [
+      "Aspecto del gorro fuera del encuadre o equivalencia exacta de píxeles/sombreado.",
+      "Perfil masculino, integración completa de Kris, más cobertura K11, revisión humana o aceptación de release. La ceremonia HOF acotada de Core25 no demuestra progreso legítimo por la Liga.",
+      "Otros consumidores K11 fuera de la navegación de Bolsa observada.",
+      "Persistencia de la curación de Joy; el diagnóstico Core29 no guardó la copia curada."
+    ]
+  },
+  "hall_of_fame_fixture": {
+    "status": "NATIVE_ENTRY_READINESS_FAILED_CAUSE_PENDING",
+    "sha256": "8665c386df79f76822aa6b006e7547906b73db0cad5f84be5bf275a19937280c",
+    "stored_rtc_date": [
+      26,
+      10,
+      23
+    ],
+    "synthetic": true,
+    "legitimate_story_clear": false,
+    "core_invocation": 24,
+    "frames": 1566,
+    "accepted_commands": 9,
+    "viewer_reached": false,
+    "source_and_copy_unchanged": true,
+    "root_finding_sha256": "be39c41a8f0d86eabec5adf6d0cf06612f680b8af4874482cccb6199de8cd879",
+    "evidence_manifest_sha256": "1af4e7db34097848da8935ebb172487844674945396458fc1c2398ba461b9b4e",
+    "independent_review_sha256": "930d7eae3b4dcf24b2012dd8aefb7bb7c8b135dd3f3daba0144ac49091c03ca8",
+    "trainer_front_test_surface": "NATURAL_HOF_REGISTRATION_CEREMONY",
+    "pc_viewer_is_trainer_front_acceptance": false,
+    "pc_fixture_promoted": false,
+    "surface_source_review_sha256": "e25c4d71be865067e81d60a906488be63b4799f1f991b0f86b953e140dadfadd",
+    "surface_rom_binding_sha256": "978fd85685aac504a9fad4cc01fe3694c83c489b8681d5b79029101e8934e105"
+  },
+  "previous_observation": {
+    "core_invocation": 22,
+    "frames": 2184,
+    "accepted_commands": 25,
+    "pocket_views": 7,
+    "termination": "wall_or_idle_timeout",
+    "evidence_manifest_sha256": "1cae23e7f5ca490bc59ffd0e3b7e276f336533575201ea4f1af85236ca7d103e",
+    "independent_review_sha256": "89396aaf3b08c679c5a131ce59c763e301a5b2c9f87710b5b8ad1a5f93bd5046",
+    "root_review_sha256": "064ccc4dab4ce106a1f3a7bc2037d3967511c5e687c83312bcae615d95f9ef72"
+  },
+  "hall_of_fame_registration": {
+    "status": "BOUNDED_NATIVE_HOF_FRONT_AND_AUTOMATIC_SAVE_REVIEWED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "core_invocation": 25,
+    "frames": 13436,
+    "accepted_commands": 47,
+    "ram_captures": 7,
+    "termination": "quit",
+    "unload_and_deinit_completed": true,
+    "evidence_manifest_sha256": "423af9925353ceac8413ae1ac8a4f05f9b36d314d1870c4588845506f918baa0",
+    "independent_review_sha256": "09463d12515f51b5ada4311cfc4a03318f1f4e16101d6d5dcf2e37b478ef23bb",
+    "root_review_sha256": "f106db4e5b7ea64c3d6b55594646c071bff6c4916f2ac868b0ff4b8394fa21cc",
+    "save_delta_independent_review_sha256": "5b72387f986e2caafb17c609e18acacdc2bba1380ee0270863ac96a6d8339b7a",
+    "fixture_sha256": "dbbeb835c7d2e12c1eab9b82cb05461adee924a5cc66487f858786629062d5af",
+    "saved_copy_sha256": "36a219d86e190ed9354bb2fd04e7608019855e7b65d205590258974fb2695689",
+    "original_and_fixture_unchanged": true,
+    "automatic_save_scope": "RUN_COPY_ONLY",
+    "manual_save_used": false,
+    "cheats": [],
+    "save_states": false,
+    "cold_load_tested": false,
+    "legitimate_league_progression": false,
+    "complete_kris_acceptance": false,
+    "alpha2_changed": false,
+    "observed": {
+      "en": [
+        "Fresh Hall of Fame entry, Lance dialogue, party registration and visible Kris front; qualitative comparison because the composition partially occludes the portrait.",
+        "Natural automatic save, credits, THE END and reboot intro; no manual Save or state.",
+        "MAIN/HOF checksums validate; counter13→14, one record with three matching Pokémon and Bag unchanged. Party deltas are restored current PP/HP; profile changes only gameClear."
+      ],
+      "es": [
+        "Entrada al Salón de la Fama dibujado, diálogo de Lance, registro del equipo y frontal visible de Kris; comparación cualitativa porque la composición tapa parte del retrato.",
+        "Guardado automático natural, créditos, THE END e intro tras reinicio; sin Guardar manual ni estados.",
+        "CRC MAIN/HOF válidos; contador13→14, un registro con tres Pokémon concordantes y Bolsa intacta. Se restauran PP/PS actuales del equipo; en el perfil solo cambia gameClear."
+      ]
+    },
+    "limits": {
+      "en": [
+        "Core25 does not itself test cold-load; follow-up Core26 is recorded separately. Synthetic direct entry is not a legitimate League playthrough.",
+        "No exact pixel/pose/full-animation, male regression, complete Kris, human or release acceptance."
+      ],
+      "es": [
+        "Core25 no prueba por sí solo la recarga en frío; Core26 se registra por separado. La entrada sintética no equivale a una partida legítima de Liga.",
+        "Sin aceptación exacta de píxeles/poses/animación completa, regresión masculina, Kris completa, experiencia humana ni release."
+      ]
+    },
+    "cold_load_followup_core": 26
+  },
+  "private_patch": {
+    "status": "REPRODUCIBLE_PRIVATE_PROTOTYPE_NOT_RELEASE",
+    "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+    "source_size": 134217728,
+    "target_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "target_size": 127523092,
+    "delta_sha256": "068f9a8995ac682ba77158f3046ba9e84f1a417b696e1fa7645cd1a5c4e412f5",
+    "delta_size": 6023456,
+    "manifest_sha256": "097a088f7304a99529dc3ee76ddf1541ae38d7a2078e33c6f197ac3f32cf1bec",
+    "verification_receipt_sha256": "af6d33959a1f7e859b76bf69f5c309bd9127c7bd16cbf4590c68e9fde5fd186d",
+    "independent_review_sha256": "43b5faf25e9e106304b4400004f51b16032c013e82be50ec1b57ede41ec60b71",
+    "deterministic_second_encoding": true,
+    "existing_cli_roundtrip": true,
+    "vendored_js_engine_roundtrip": true,
+    "browser_ui_tested": false,
+    "public_distribution": false,
+    "alpha2_changed": false
+  },
+  "hall_of_fame_cold_load": {
+    "status": "BOUNDED_SEPARATE_PROCESS_COLD_CONTINUE_REVIEWED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "core_invocation": 26,
+    "source_save_core_invocation": 25,
+    "frames": 1718,
+    "accepted_commands": 13,
+    "ram_captures": 4,
+    "termination": "quit",
+    "unload_and_deinit_completed": true,
+    "distinct_processes_verified": true,
+    "source_and_copy_sha256": "36a219d86e190ed9354bb2fd04e7608019855e7b65d205590258974fb2695689",
+    "source_and_copy_byte_identical": true,
+    "evidence_manifest_sha256": "b31714a57d821f3088e34444e655e338f284cdeeeafd37f8b993960afaaff5a5",
+    "report_sha256": "7bfeb5ecacf6d65e2c208d0c0f9131e1cd0ffb9048bb51ece94f84b99d9576d8",
+    "independent_review_sha256": "205c70c99230bbfdadd21da5cf29f786bb101c8df1fc5c7bbe72412ce9356d07",
+    "root_review_sha256": "daa2f9bf51894789d0c6344186d1783407aa7d89bc532e8706a957ab20478524",
+    "map_id": 64,
+    "observed_positions": [
+      [
+        6,
+        6
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        6,
+        6
+      ]
+    ],
+    "female_profile_and_avatar_verified": true,
+    "bag_ram_equal_to_saved_copy": true,
+    "party_count": 3,
+    "ram_party_records_validated": 2,
+    "third_party_ram_record_semantics": "INCONCLUSIVE_EXISTING_DECODER_CHECKSUM",
+    "new_save_write_exercised": false,
+    "runner_battery_save_load": "NOT_TESTED",
+    "cheats": [],
+    "save_states": false,
+    "complete_kris_acceptance": false,
+    "alpha2_changed": false,
+    "observed": {
+      "en": "A new process loads the authentic Core25 saved copy into the bedroom and allows brief normal DOWN/UP movement. DSV, MAIN counter14 and HOF data remain unchanged.",
+      "es": "Otro proceso carga la copia auténtica guardada por Core25 en el dormitorio y permite caminar abajo/arriba. DSV, contador MAIN14 y datos HOF permanecen intactos."
+    },
+    "limits": {
+      "en": "Two Party records validate in RAM; the third remains inconclusive with the existing decoder although its saved record validates. No corruption or complete-party persistence is inferred. No new save, full Kris, male, Oak/League, human or release acceptance.",
+      "es": "Dos registros del equipo validan en RAM; el tercero queda inconcluso con el decoder existente aunque su registro guardado valida. No se deducen corrupción ni persistencia completa del equipo. Sin otro guardado, Kris completa, perfil masculino, Oak/Liga, aceptación humana ni release."
+    }
+  },
+  "core27_summary_menu_save": {
+    "status": "BOUNDED_SUMMARY_AND_NORMAL_MENU_SAVE_REVIEWED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "core_invocation": 27,
+    "frames": 3368,
+    "accepted_commands": 44,
+    "evidence_manifest_sha256": "ad6461a29d121dddf43c7a5b7881f4a4cfbde9ea16c6f187243f3f8dcd07dd50",
+    "preparation_manifest_sha256": "b695a1fa2ff5217be660666775e7400f954a4de5b3c79e67109b5261b538497c",
+    "root_review_sha256": "56c813f96f78c2f9e6537e47ea5d08b9d0a5eaed0a1e9287a5585ea6fd5d4ca9",
+    "independent_review_sha256": "6c760e2e5540c39ee99ce28607748bbd91a66734fef4092897eef3131e8c2f59",
+    "friendship_addendum_sha256": "ea7dd65954500b5816a346b0190655ad93691ac762c41402ed5bea10cc79642f",
+    "summary_capture_sha256": "f4ef2547990f1847450ab764455d5a4da38c974dfcb63d2a6e35eedc8b5a2993",
+    "skills_capture_sha256": "98cff876756b8ee8cc773f985817eca07d21f0382b31da60bbd61fcad13aadbe",
+    "pokemon_summary": {
+      "species": "Machop",
+      "species_id": 66,
+      "gender": "female",
+      "level": 5,
+      "hp": "22/22",
+      "stats": {
+        "attack": 14,
+        "defense": 11,
+        "special_attack": 11,
+        "special_defense": 8,
+        "speed": 10
+      },
+      "moves": [
+        {
+          "name": "Low Kick",
+          "pp": "20/20"
+        },
+        {
+          "name": "Leer",
+          "pp": "30/30"
+        }
+      ]
+    },
+    "normal_menu_save": {
+      "authorized_scope": "RUN_COPY_ONLY",
+      "run_copy_sha256": "97423365f97fb5294915e77613cde7301a2a7fe4c7570c20bc7e9fb77e92afab",
+      "saved_bytes": 524410,
+      "main_counter_before_after": [
+        14,
+        15
+      ],
+      "main_crc_both_slots_valid": true,
+      "saved_location": [
+        64,
+        -1,
+        6,
+        8,
+        1
+      ],
+      "quit_location_after_unsaved_up": {
+        "en": "(6,6) on map 64",
+        "es": "(6,6) en mapa 64"
+      },
+      "saved_continue_flag_966": false,
+      "profile_exact": true,
+      "bag_exact": true,
+      "hof_copies_valid_and_exact": true,
+      "party_identity_moves_levels_battle_stats_preserved": true,
+      "party_friendship_before_after": [
+        [
+          70,
+          71
+        ],
+        [
+          71,
+          72
+        ],
+        [
+          70,
+          71
+        ]
+      ],
+      "friendship_cause": "NOT_ATTRIBUTED"
+    },
+    "avatar_observation": {
+      "gender_field": 1,
+      "sprite_id_sequence_field_save_return": [
+        97,
+        199,
+        199,
+        97
+      ],
+      "claim_limit": "Settled RAM observations only; no exact-pixel or full-animation acceptance."
+    },
+    "cold_load_after_this_save": "COMPLETED_SEPARATE_PROCESS_CORE28",
+    "issue33_full_acceptance": false,
+    "release_acceptance": false,
+    "cold_load_followup_core": 28,
+    "runner_battery_save_load": "NOT_TESTED",
+    "bounded_normal_save_cold_cycle_reviewed": true
+  },
+  "core28_normal_save_cold_continue": {
+    "status": "BOUNDED_NORMAL_SAVE_COLD_CONTINUE_REVIEWED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "core_invocation": 28,
+    "frames": 2186,
+    "accepted_commands": 30,
+    "requested_ram_snapshots": 6,
+    "evidence_file_counts": {
+      "run_files": 74,
+      "provenance_refs": 31
+    },
+    "preparation_manifest_sha256": "2e13778c43b852467d926c27c04d3c885584f8c0b8f371eb98e9fbbd777e2305",
+    "evidence_manifest_sha256": "a77003079b58d71ea3e3f5f33e81b077f29d5a8b3afc2a45b4ac4efc696c61a4",
+    "evidence_report_json_sha256": "d27c13b00528790c73683e3345e3aa4167b0d8f7386cc0735584cdf5c8b36dd2",
+    "evidence_report_markdown_sha256": "914f9021b4fb0c5626b0d147beb3cbb78c5d3ace79b7b24ed531769e15e46979",
+    "independent_review_sha256": "da614d4218f9e78491bb2dfe1a0d12623cfd1bf7419328217eb9f5a5adca57ff",
+    "root_review_sha256": "8e5729eda3236b8b02bdc44da97ce8144250a27e9ce623dd22c1dba3547dd51e",
+    "seed_and_run_copy": {
+      "sha256": "97423365f97fb5294915e77613cde7301a2a7fe4c7570c20bc7e9fb77e92afab",
+      "byte_identical": true,
+      "main_counter": 15,
+      "flag_966": false,
+      "hof_valid_and_unchanged": true
+    },
+    "cold_continue": {
+      "source": "Core27 normal menu Save copy",
+      "separate_process": true,
+      "initial_saved_location": [
+        64,
+        -1,
+        6,
+        8,
+        1
+      ],
+      "normal_field_route_map64": [
+        [
+          6,
+          8
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "no_save_performed_in_core28": true
+    },
+    "visible_summary": {
+      "species": "Machop",
+      "species_id": 66,
+      "gender": "female",
+      "level": 5,
+      "hp": "22/22",
+      "stats": {
+        "attack": 14,
+        "defense": 11,
+        "special_attack": 11,
+        "special_defense": 8,
+        "speed": 10
+      },
+      "moves": [
+        {
+          "name": "Low Kick",
+          "pp": "20/20"
+        },
+        {
+          "name": "Leer",
+          "pp": "30/30"
+        }
+      ]
+    },
+    "avatar_observation": {
+      "gender_field": 1,
+      "sprite_id": 97,
+      "claim_limit": "Existing RAM helper observations; not pixel or full-animation acceptance."
+    },
+    "ram_invariants": {
+      "profile_and_bag_preserved": true,
+      "party_checksums_valid_in_summary_and_skills": [
+        1696,
+        1758
+      ],
+      "third_party_record_field_phase": "INCONCLUSIVE_WITH_EXISTING_DECODER",
+      "hof_preserved_from_unchanged_save": true
+    },
+    "issue33_full_acceptance": false,
+    "release_acceptance": false,
+    "remaining_scope": {
+      "en": [
+        "Core28 did not perform another Save. Male profile, full Kris integration, broader K11 coverage, human review and release acceptance remain open.",
+        "Core25’s bounded direct-entry HOF ceremony does not establish legitimate League progression."
+      ],
+      "es": [
+        "Core28 no realizó otro guardado. Siguen pendientes el perfil masculino, la integración completa de Kris, más cobertura K11, la revisión humana y la aceptación de release.",
+        "La ceremonia HOF acotada y de entrada directa de Core25 no demuestra progreso legítimo por la Liga."
+      ]
+    },
+    "runner_battery_save_load": "NOT_TESTED",
+    "bounded_normal_save_cold_cycle_reviewed": true
+  },
+  "battery_save_load_scope": {
+    "en": "The generic runner battery_save_load check remains NOT_TESTED. Core27–28 separately reviewed the bounded normal Save/cold Continue cycle; Core29 separately observed Nurse Joy healing without saving the healed copy. Core30 separately reviewed bounded male field/menu behavior without Save.",
+    "es": "La comprobación genérica battery_save_load del runner sigue NOT_TESTED. Core27–28 revisó por separado el ciclo acotado de guardado normal/continuación en frío; Core29 observó la curación de Joy sin guardar la copia curada. Core30 revisó por separado el comportamiento masculino acotado de campo/menú, sin guardar."
+  },
+  "core29_nurse_healing_diagnostic": {
+    "status": "BOUNDED_NURSE_HEALING_DIAGNOSTIC_REVIEWED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "core_invocation": 29,
+    "surface": "NURSE_JOY_FRESH_MAP_HEALING_DIAGNOSTIC",
+    "execution": {
+      "frames": 3660,
+      "accepted_commands": 67,
+      "requested_ram_captures": 15,
+      "raw_run_files_verified": 157,
+      "provenance_files_verified": 28,
+      "explicit_quit": true,
+      "unload_and_deinit_completed": true,
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    "pins": {
+      "preparation_manifest_sha256": "e7aed709680ec47e7e3d28bb2771b19bec0c6eb18fd42d6bde1fc66ff98ad5e3",
+      "evidence_manifest_sha256": "dbb04e2d1a9023e9521515b951932225826b82b586df4f226bf070e8abecbc6f",
+      "evidence_report_json_sha256": "f9be330ae7f95a28ef826bfbc1768bb34e021a623f0f151c158260fb2d367af2",
+      "evidence_report_markdown_sha256": "d5c2d8eb7ea722dc87bbe6476525da057447adb957fad37319b1fa535e8e9ac8",
+      "root_review_sha256": "f6477695921ca7330018e8830317626f5e2ffa46a57c1d063e90eec9e76e02da",
+      "independent_review_markdown_sha256": "6d4113d64212e6280339e83abd10017b13e43211fae1e974e48555a20e896c39",
+      "independent_review_json_sha256": "979d3ddd79fe86deaafc5cfd8caa79080db8827d35d5f402e9d6ae3492ffaed1"
+    },
+    "visible_summary_before_after": {
+      "pokemon": "Machop",
+      "species_id": 66,
+      "gender": "female",
+      "level": 5,
+      "before": {
+        "hp": "8/22",
+        "stats": {
+          "attack": 14,
+          "defense": 11,
+          "special_attack": 11,
+          "special_defense": 8,
+          "speed": 10
+        },
+        "moves": [
+          {
+            "name": "Low Kick",
+            "pp": "20/20"
+          },
+          {
+            "name": "Leer",
+            "pp": "29/30"
+          }
+        ]
+      },
+      "after": {
+        "hp": "22/22",
+        "stats": {
+          "attack": 14,
+          "defense": 11,
+          "special_attack": 11,
+          "special_defense": 8,
+          "speed": 10
+        },
+        "moves": [
+          {
+            "name": "Low Kick",
+            "pp": "20/20"
+          },
+          {
+            "name": "Leer",
+            "pp": "30/30"
+          }
+        ]
+      },
+      "source": "Native Summary/Skills screenshots"
+    },
+    "party_ram_comparison": {
+      "before_capture_commands": [
+        17,
+        19
+      ],
+      "after_capture_commands": [
+        54,
+        56
+      ],
+      "all_three_record_checksums_valid": true,
+      "identity_level_moves_max_hp_and_five_stats_unchanged_all_slots": true,
+      "current_hp_delta": {
+        "slot": 2,
+        "before": 8,
+        "after": 22,
+        "block_tail_offset": "0x06"
+      },
+      "current_pp_deltas": [
+        {
+          "slot": 0,
+          "before": 14,
+          "after": 15,
+          "block": "B",
+          "offset": "0x08"
+        },
+        {
+          "slot": 2,
+          "before": 29,
+          "after": 30,
+          "block": "B",
+          "offset": "0x09"
+        }
+      ],
+      "all_other_decrypted_blocks_and_party_tail_bytes_unchanged": true,
+      "decoder": "Existing hm_matrix loader and Core25 party_semantics helper",
+      "struct_reference_commit": "6988158691eb6178cff697cda0428045ddcba5fb",
+      "struct_reference_file_sha256": "9954449a01d004180c11ab7cb49b6bbecec3406c3f5aa904b434e1dd8e99ed69",
+      "field_phase_party_checksum_status": "INCONCLUSIVE"
+    },
+    "avatar_ram_observation": {
+      "profile_gender": 1,
+      "avatar_gender": 1,
+      "player_sprite_ids_by_capture_command": {
+        "27": 97,
+        "33": 201,
+        "35": 201,
+        "36": 201,
+        "37": 201,
+        "44": 97
+      },
+      "avatar_state_field": 0,
+      "source_selector_constant_10_is_a_distinct_field": true,
+      "numeric_sprite_ids_source": "Existing RAM inspector; screenshots support visible appearance only"
+    },
+    "save_scope": {
+      "fixture_and_run_copy_sha256": "ad7465f34817090587b71336396e67f299a93e0134a01c7e9936772b3e36dc43",
+      "fixture_and_run_copy_byte_identical": true,
+      "original_profile_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+      "menu_save_authorized": false,
+      "menu_save_performed": false,
+      "healing_persistence": "NOT_TESTED",
+      "bag_opened": false,
+      "compared_bag_bytes_preserved": true,
+      "runner_battery_save_load": "NOT_TESTED"
+    },
+    "not_established": {
+      "en": [
+        "Healing persistence after saving/reloading.",
+        "Male route, Rocket, other K11 consumers, complete Kris support, human acceptance or release readiness.",
+        "Legitimate story travel or progression to the fresh map; entry used a disposable QA fixture."
+      ],
+      "es": [
+        "Persistencia de la curación tras guardar/recargar.",
+        "Recorrido masculino, Rocket, otros consumidores K11, soporte completo de Kris, aceptación humana o preparación para release.",
+        "Recorrido legítimo o progreso de la historia hasta el mapa; la entrada usó un fixture de QA desechable."
+      ]
+    },
+    "arrival": {
+      "kind": "DISPOSABLE_FRESH_MAP_QA_FIXTURE",
+      "legitimate_story_travel_tested": false,
+      "en": "The fresh-map arrival used a disposable QA fixture; legitimate story travel or progression was not tested.",
+      "es": "La llegada al mapa usó un fixture de QA desechable; no se probó el recorrido legítimo ni el progreso de la historia."
+    }
+  },
+  "core30_male_field_menu_diagnostic": {
+    "status": "BOUNDED_MALE_FIELD_AND_MENU_NATIVE_REVIEWED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "core_invocation": 30,
+    "surface": "MALE_FIELD_MENU_WALK_RUN_PARTY_SUMMARY_SKILLS",
+    "execution": {
+      "frames": 2218,
+      "accepted_commands": 40,
+      "requested_ram_captures": 15,
+      "raw_run_files_verified": 103,
+      "provenance_files_verified": 41,
+      "explicit_quit": true,
+      "unload_and_deinit_completed": true,
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    "pins": {
+      "seed_and_run_copy_sha256": "6c4c3ed8e4f00f1b8d4c836eef185b8c4ce1f93238432350a2c48a9ddc0e28ce",
+      "evidence_manifest_sha256": "6d079454058e0c3e3679d6c6f10a788078d9110d80f1d328f6990c0be65dc3b1",
+      "evidence_report_json_sha256": "c27580d7f046f16518def912ba7121b9779d0caeaed827747dcf244d5a888294",
+      "evidence_report_markdown_sha256": "4f31c99cddebb7af7ddcfb3e42f832411136e1a03305b31499a6fa7fa7fb0dcc",
+      "independent_review_markdown_sha256": "68657e06bcb659319adc3c9be125cdfc621ed77d32b77084da7fad16305f99b4",
+      "root_review_markdown_sha256": "30c3e23831ec2ae1e79b6a7598f32cde1ab9964af4ff008f9e190729325c2726"
+    },
+    "observed": {
+      "en": [
+        "Male profile/avatar gender 0 and sprite ID 0 remained consistent across 15 RAM samples.",
+        "Four-direction walking and B-held running to the right and left were exercised, with field return at (685, 408). Normal menu, Party, Summary, Skills and return to field were observed.",
+        "Clefairy was visible in Summary/Skills. Canonical Party comparison found slot 0 friendship A+0x0C changing 70→71, cause unassigned; sampled identity, moves, HP, stats, other Party fields, Bag and profile were preserved."
+      ],
+      "es": [
+        "El perfil/avatar masculino mantuvo género 0 e ID de sprite 0 en 15 muestras RAM.",
+        "Se probaron pasos en cuatro direcciones y carreras con B a derecha e izquierda; el regreso al campo quedó en (685, 408). Se observaron el menú normal, Equipo, Resumen, Habilidades y el regreso al campo.",
+        "Clefairy apareció en Resumen/Habilidades. La comparación canónica del equipo detectó amistad A+0x0C del puesto 0 de 70→71, sin causa atribuida; se preservaron identidad, movimientos, PS, estadísticas y demás campos muestreados, Bolsa y perfil."
+      ]
+    },
+    "party_delta": {
+      "slot0_friendship_before": 70,
+      "slot0_friendship_after": 71,
+      "field": "canonical Party block A+0x0C",
+      "cause": "UNASSIGNED",
+      "other_canonical_party_fields_preserved": true,
+      "phase_valid_ram_commands": [
+        19,
+        27,
+        31,
+        33
+      ],
+      "phase_valid_ram_frames": [
+        1478,
+        1696,
+        1880,
+        1942
+      ],
+      "field_phase_status": "CHECKSUM_INCONCLUSIVE_WITH_EXISTING_PARSER"
+    },
+    "runner_battery_save_load": "NOT_TESTED",
+    "menu_save_performed": false,
+    "not_established": {
+      "en": [
+        "All-frame behavior, pixel equivalence, complete male or Kris integration, broad field/story coverage, human acceptance, issue #33 closure or release acceptance."
+      ],
+      "es": [
+        "Comportamiento de todos los fotogramas, equivalencia de píxeles, integración masculina o de Kris completa, cobertura amplia de campo/historia, aceptación humana, cierre de la issue #33 ni aceptación de release."
+      ]
+    },
+    "alpha2_changed": false
+  },
+  "core31_female_field_menu_diagnostic": {
+    "status": "BOUNDED_FEMALE_FIELD_MENU_AND_MAP_PHONE_NATIVE_REVIEWED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "core_invocation": 31,
+    "surface": "FEMALE_FIELD_WALK_RUN_TRAINER_CARD_POKEGEAR_PHONE_MAP_RETURN",
+    "execution": {
+      "frames": 3342,
+      "accepted_commands": 66,
+      "requested_ram_captures": 14,
+      "raw_run_files_verified": 154,
+      "termination": "explicit_quit",
+      "unload_and_deinit_completed": true,
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    "pins": {
+      "seed_and_run_copy_sha256": "bc9807c11d5bdeab8970b0f55c0c07d7b9004b2ce7a66071a9ef54c1d57f4000",
+      "original_female_save_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+      "evidence_manifest_sha256": "64edd9f0bf1af3b3ebfd261a85ad868eb6b9723242c13759e01ddaa5adabf8cc",
+      "evidence_report_json_sha256": "3b7b5c01a0aa56698762ce8a20d7bfdec0816715b95c8a13fef7eb17d1743f05",
+      "evidence_report_markdown_sha256": "e1a3365c09f1f448c73ca3e4cf59be74c0d90eb1d7341494e41d803955fc5e08",
+      "independent_review_markdown_sha256": "4a8d89129e92771f7669a8fa36c7aa6614b19338363bee1c35fe7bd2336bb938",
+      "independent_review_json_sha256": "211a1e0100ab65e483a48225cbc11339454d69e68ecce37db2efdc667fc63f73",
+      "root_review_markdown_sha256": "76a4bbd69b793de50584a2a272ad8140c1551960fc65cf139feec729cc00af73"
+    },
+    "observed": {
+      "en": [
+        "Four-direction walking, B-held directional movement, normal menu return, Trainer Card, Pokégear phone and map, and field return were observed.",
+        "The Trainer Card showed the blue-haired Kris portrait; the phone list showed Mother and Professor Elm; the map showed the red cursor and Kris marker.",
+        "Fourteen RAM captures retained the female profile/avatar and sprite ID 97; profile bytes and Bag matched the seed. In ten phase-valid Party snapshots, friendship values were [70, 71, 70], matching the seed; no canonical Party blocks changed. Field-phase Party reads remain checksum-inconclusive.",
+        "An accidental Options screen opened during navigation; Back returned to the menu without changing the first four option bytes or other checked settings."
+      ],
+      "es": [
+        "Se observaron pasos en cuatro direcciones, movimiento con B, regreso al menú normal, ficha de entrenador, teléfono/mapa del Pokégear y vuelta al campo.",
+        "La ficha mostró el retrato de Kris con pelo azul; la lista telefónica mostró a Madre y al profesor Elm; el mapa mostró el cursor rojo y el marcador de Kris.",
+        "Catorce capturas RAM conservaron perfil/avatar femenino e ID de sprite 97; perfil y Bolsa coincidieron con la semilla. En diez capturas Party válidas por fase, los valores de amistad fueron [70, 71, 70], iguales a la semilla; no cambió ningún bloque canónico del equipo. Las lecturas Party en fase de campo siguen siendo inconclusas por checksum.",
+        "La navegación abrió Options por accidente; volver al menú no cambió los cuatro primeros bytes de opciones ni los demás ajustes comprobados."
+      ]
+    },
+    "party_delta": {
+      "friendship_values": [
+        70,
+        71,
+        70
+      ],
+      "seed_friendship_values": [
+        70,
+        71,
+        70
+      ],
+      "friendship_values_match_seed": true,
+      "changed_canonical_blocks_vs_seed": [
+        [],
+        [],
+        []
+      ],
+      "cause": "NOT_APPLICABLE_NO_DELTA",
+      "identity_moves_hp_stats_and_other_canonical_fields": "PRESERVED_IN_PHASE_VALID_SNAPSHOTS",
+      "field_phase_status": "CHECKSUM_INCONCLUSIVE_WITH_EXISTING_PARSER"
+    },
+    "save_scope": {
+      "menu_save_performed": false,
+      "seed_and_run_copy_byte_identical": true,
+      "original_female_save_unchanged": true,
+      "bag_matches_seed": true,
+      "runner_battery_save_load": "NOT_TESTED"
+    },
+    "not_established": {
+      "en": [
+        "Per-frame animation or pixel equivalence, settings changes, Save/cold-load persistence, all female avatar states, complete Kris support, broad story coverage, human acceptance, issue #33 closure or release acceptance.",
+        "This observation does not transfer K01–K03 acceptance; only the relevant static resource/code dependencies were compared across the builds."
+      ],
+      "es": [
+        "Animación por fotograma o equivalencia de píxeles, cambios de ajustes, persistencia tras guardar/recargar, todos los estados femeninos, soporte completo de Kris, cobertura amplia de historia, aceptación humana, cierre de la issue #33 ni aceptación de release.",
+        "Esta observación no transfiere la aceptación de K01–K03; solo se compararon entre builds las dependencias estáticas pertinentes de recursos/código."
+      ]
+    }
+  },
+  "core36_female_rocket_transition": {
+    "schema": "ultimate-gold.kris-core36-female-rocket-transition.v1",
+    "status": "BOUNDED_NATIVE_TRANSITION_AND_FIELD_RETURN_REVIEWED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "surface": "K04_ROCKET_FEMALE_DIAGNOSTIC",
+    "execution": {
+      "invocation": 36,
+      "frames": 2536,
+      "accepted_commands_including_quit": 31,
+      "ram_captures": 8,
+      "raw_run_files_verified": 78,
+      "provenance_files_verified": 53,
+      "explicit_quit": true,
+      "unload_and_deinit_completed": true,
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    "pins": {
+      "fixture_and_run_copy_sha256": "3828bf3bcd0b7f9ab24f8ebe3a0fa17368c55a76d3a5945f7d5612c16ab8998d",
+      "evidence_manifest_sha256": "ead2ec328c2ec86d124d44d066084685b6c94a781109931aa6d8d8d4e120b661",
+      "evidence_report_json_sha256": "0b846f6111dd7cd439298541efce9a52d6f32047a38121506402c880eee245db",
+      "root_native_review_sha256": "0244c20ad620f20c1d0f48db729f926059418ef9be3724894171e2d20882f47c",
+      "independent_native_review_sha256": "b7849c5dc934d1bf60c57e67b95b77d13fc1cfef32832c9c6e8baa46f6e0f0e2"
+    },
+    "observed": {
+      "en": [
+        "A normal scripted Rocket costume event was observed from a synthetic QA entry: the female field avatar changed from sprite 97/state 0 to sprite 259/state 3, the dialogue closed, and field movement returned.",
+        "The profile and Bag matched the fixture across eight RAM samples. The third Pokémon in the party (index 2) passed the existing checksum/seed comparison in four phases; four other phases were checksum-inconclusive."
+      ],
+      "es": [
+        "Se observó un evento guionizado normal del atuendo Rocket desde una entrada sintética de QA: el avatar femenino de campo cambió de sprite 97/estado 0 a sprite 259/estado 3, se cerró el diálogo y volvió el movimiento por el campo.",
+        "El perfil y la Bolsa coincidieron con la fixture en ocho muestras RAM. El tercer Pokémon del equipo (índice 2) pasó la comparación de checksum/semilla en cuatro fases; otras cuatro quedaron inconclusas por checksum."
+      ]
+    },
+    "save_scope": {
+      "synthetic_qa_entry": true,
+      "legitimate_story_acquisition_tested": false,
+      "fixture_and_run_copy_byte_identical": true,
+      "original_female_save_unchanged": true,
+      "menu_save_performed": false,
+      "automatic_save_scope": "RUN_COPY_ONLY",
+      "battery_save_load": "NOT_TESTED"
+    },
+    "not_established": {
+      "scene_variable_0x4077_runtime_value": "NOT_MEASURED",
+      "full_artwork_or_all_poses": "NOT_ASSESSED",
+      "no_lyra_flash": "NOT_ASSESSED",
+      "costume_removal_or_persistence": "NOT_ASSESSED",
+      "hardware_or_human_acceptance": "NOT_ASSESSED",
+      "issue_33_or_release_acceptance": "NOT_ASSESSED",
+      "en": [
+        "The synthetic entry does not prove legitimate story acquisition. Full artwork/pose coverage, no-Lyra-flash behavior, costume removal, persistence, hardware, human acceptance, issue #33 closure and release acceptance remain open."
+      ],
+      "es": [
+        "La entrada sintética no demuestra adquisición legítima en la historia. Siguen pendientes el arte y las poses completos, la ausencia de destellos de Lira, retirar el atuendo, persistencia, hardware, aceptación humana, cierre de #33 y aceptación de release."
+      ]
+    },
+    "alpha2_changed": false,
+    "default_manifest_changed": false
+  },
+  "k01_k03_static_dependency_equivalence": {
+    "status": "STATIC_DEPENDENCY_EQUIVALENCE_ONLY",
+    "parent_sha256": "69d7b0133546f2c6fd3d463dc39c8f647a355e9c44ce893cfd690c8e6fff76ba",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "comparison_report_sha256": "a93453eac4b0938b43b1c6270232f2b4bfde5ca33a88b5f74fdcd88e894a5650",
+    "pins_sha256": "226c58cd2a915d3e68185b61e9c9f3b0fafb942f06d3b8bca5edb24711080a0e",
+    "compared": {
+      "K01_narc_members": "67/67 identical",
+      "K02_narc_members": "106/106 identical",
+      "K03_narc_members": "19/19 identical",
+      "ARM9_and_ARM7": "identical",
+      "ARM9_overlays": "129/129 identical"
+    },
+    "scope": {
+      "en": "Read-only in-memory comparison; no ROM/resource copy. Static identity supports reuse only for the exact corresponding surfaces, not general gameplay or visual/text acceptance.",
+      "es": "Comparación de solo lectura en memoria; no se copiaron ROMs ni recursos. La identidad estática permite reutilizar evidencia solo para las superficies exactas correspondientes, no implica aceptación general jugable ni visual/textual."
+    }
+  },
+  "k04_k05_pilot_a": {
+    "schema": "ultimate-gold.kris-k04-k05-pilot-a.v1",
+    "issue": 33,
+    "status": "CLOSED_NOT_PROMOTED",
+    "global_efficiency": "INCONCLUSIVE_TOTAL_SETUP_REVIEW_NOT_MEASURED",
+    "native_character_detection": "NOT_ASSESSED",
+    "full_pilot_acceptance": false,
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "core32": {
+      "status": "INCONCLUSIVE_EXPECTATION_MISMATCH",
+      "frames": 1582,
+      "accepted_commands_including_quit": 24,
+      "interpretation": {
+        "en": "The corrected baseline stopped when a legal B-held movement endpoint differed from the obsolete return-to-origin expectation. This is an inconclusive scenario-contract mismatch, not an attributed ROM defect.",
+        "es": "La línea base corregida se detuvo porque el destino legal de un movimiento con B no coincidió con la expectativa obsoleta de volver al origen. Es una discrepancia inconclusa del contrato de escenario, no un defecto atribuido a la ROM."
+      }
+    },
+    "core34_off": {
+      "status": "SEALED_DIAGNOSTIC_COMPLETE_OBSERVER_NOT_ASSESSED",
+      "frames": 2062,
+      "scenario_steps": 35,
+      "accepted_commands_including_quit": 36,
+      "requested_ram_captures": 13,
+      "scenario_gates_passed": 14,
+      "observer_coverage": "NOT_ASSESSED",
+      "observer_detection": "NOT_ASSESSED",
+      "inclusive_client_ns": 9885448772,
+      "save_performed": false
+    },
+    "core35_on": {
+      "status": "SEALED_DIAGNOSTIC_COVERAGE_PASS_DETECTION_NOT_ASSESSED",
+      "frames": 2062,
+      "scenario_steps": 35,
+      "accepted_commands_including_quit": 36,
+      "requested_ram_captures": 13,
+      "scenario_gates_passed": 14,
+      "observer_windows": [
+        {
+          "name": "movement",
+          "valid_frames": 256,
+          "expected_frames": 256,
+          "coverage": "PASS"
+        },
+        {
+          "name": "normal_menu_transition",
+          "valid_frames": 480,
+          "expected_frames": 480,
+          "coverage": "PASS"
+        }
+      ],
+      "observer_coverage": "PASS_FOR_CONFIGURED_736_FRAMES_ONLY",
+      "observer_detection": "NOT_ASSESSED",
+      "inclusive_client_ns": 11239375164,
+      "save_performed": false
+    },
+    "party_checks": {
+      "settled_canonical_matches_per_run": 3,
+      "field_phase_checksum_inconclusive_per_run": 10,
+      "friendship_tolerance": "0..1",
+      "cause": "NOT_ATTRIBUTED",
+      "complete_party_identity_claim": false
+    },
+    "paired_timing": {
+      "sample_size_per_condition": 1,
+      "off34_inclusive_client_ns": 9885448772,
+      "on35_inclusive_client_ns": 11239375164,
+      "delta_ns": 1353926392,
+      "delta_percent": 13.696155,
+      "result": "ON_SLOWER_IN_THIS_SINGLE_PAIR",
+      "performance_or_labor_saving_claim": false,
+      "total_setup_or_review_time": "NOT_MEASURED"
+    },
+    "integrity": {
+      "source_seed_and_run_copies_unchanged": true,
+      "menu_save_performed": false,
+      "original_runner_or_defaults_promoted": false,
+      "pilot_tool_promoted": false,
+      "alpha2_changed": false
+    },
+    "evidence_pins": {
+      "core34_manifest_sha256": "e2b841cd9a3f2aa2743536373b4919288a6f91a00ebf7d6e7763a5e1d1849ee3",
+      "core35_manifest_sha256": "373c2a307e24c832c4482076c32ac4392762f89b5d8893a6e2d656b3ed28759f",
+      "pilot_result_markdown_sha256": "74d1668cd616062e1e30aea2e2b483c9313aead1c3f4fdc91b6f818aecc62b86",
+      "pilot_result_json_sha256": "57226fc6e95d532371b0104f0188f29fe6afcfe1a00d6290244f3232958bf79f",
+      "independent_pilot_review_markdown_sha256": "f63e589267dc0b09f2787adcb8fd0ac34d0df2ef5c55a1e51e5b700820b91645",
+      "independent_pilot_review_json_sha256": "c8a2a4e47a76dd3e73fc51fb8259d37dbca3faaaf61ec26737655bad96015443",
+      "core34_native_review_sha256": "6c91d7bbc08b4979b9a8c346583af58f88f78d695332d164765cc54503565dec",
+      "core35_native_review_sha256": "97f7c74d4031f32c30082cd50d590d435df1421929a65982c69d7ad6e5e90102"
+    },
+    "not_established": {
+      "en": [
+        "Detection accuracy or known-bad fingerprint calibration; coverage outside the two ON windows; all-frame identity or no-flash behavior.",
+        "Total setup/review time, a general performance result, hardware behavior, new-save persistence, human acceptance, full issue #33 completion or release acceptance."
+      ],
+      "es": [
+        "Precisión de detección o calibración de fingerprints negativos; cobertura fuera de las dos ventanas ON; identidad en todos los fotogramas o ausencia de parpadeo.",
+        "Tiempo total de preparación/revisión, resultado general de rendimiento, comportamiento en hardware, persistencia de un guardado nuevo, aceptación humana, cierre completo de la issue #33 o aceptación de release."
+      ]
+    }
+  },
+  "k04_surf_historical_dependency_reuse": {
+    "schema": "ultimate-gold.kris-k04-surf-historical-dependency-reuse.v1",
+    "status": "HISTORICAL_DEPENDENCY_REUSE_ONLY",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "historical_native_build_sha256": "04837191cc07dad26d2e3efebe615c95ea70e0c7e72cd900c399804af720e2a4",
+    "historical_run": {
+      "result_status": "EXECUTED_NOT_ACCEPTED",
+      "result_sha256": "8d69a9aa44f0b9d0a60107f9f38ef4822fa87e670c68cb1d20fba67e67324a36",
+      "surf_sprite_id": 179,
+      "water_observation_frames_inclusive": [
+        7013,
+        8829
+      ],
+      "land_return_sprite_id": 97,
+      "land_return_frame": 8830,
+      "reusable_scope": "Only the already captured on-water/return milestones as historical evidence on the 0483 build; no native execution is transferred to 94f."
+    },
+    "unchanged_dependencies": {
+      "standard_surf_script_ids": [
+        10004,
+        10011
+      ],
+      "script_bank_member": 146,
+      "script_member_sha256": "17e9ec91bf130ca23f3f176c82d4b1253f1d121e183d075cb34245d418d9f62a",
+      "message_bank_member": 211,
+      "field_entry_message_ids": [
+        14,
+        15
+      ],
+      "menu_entry_message_ids": [
+        15
+      ],
+      "message_member_sha256": "70b5946efa44191fec1acdff1e0c04784958b5f46b96bbd16a9fabf03c77bb1b",
+      "effect_resource": {
+        "narc_id": 103,
+        "path": "a/1/0/3",
+        "member": 86,
+        "format": "BMD0",
+        "member_sha256": "eba0693d5c7630494c18c51cb15c4f6765a3b30d1910bac13099a95e6d05fbae"
+      },
+      "surf_related_texture_resource": {
+        "path": "a/0/8/1",
+        "member": 74,
+        "format": "BTX0",
+        "member_sha256": "134a8422a5a37ed1b145688d2f64376e97962f1cf187fe26ad0d49cac2be22ae",
+        "scope_note": "Separate texture resource; does not establish geometry or exact pose/frame mapping."
+      }
+    },
+    "changed_shore_message_bank": {
+      "member": 542,
+      "changed_message_ids": [
+        15,
+        25,
+        27,
+        31
+      ],
+      "changed_names": "Lyra to Kris",
+      "used_by_standard_surf_route": false,
+      "pre_surf_A_presses": "UNATTRIBUTED_TO_SCRIPT_CONTEXT"
+    },
+    "observed": {
+      "en": [
+        "The existing Core13 capture shows Surf sprite 179 on water at frames 7013–8829 and sprite 97 on land at frame 8830.",
+        "The standard Surf script/message members and separately traced effect member are byte-identical between 0483 and 94f."
+      ],
+      "es": [
+        "La captura existente de Core13 muestra el sprite Surf 179 sobre el agua en los fotogramas 7013–8829 y el sprite 97 en tierra en el fotograma 8830.",
+        "Los miembros de script/mensajes estándar de Surf y el miembro separado del efecto trazado son idénticos byte a byte entre 0483 y 94f."
+      ]
+    },
+    "not_established": {
+      "current_94f_native_execution": "NOT_RUN",
+      "all_shore_interactions_or_pre_surf_dialogue": "NOT_ESTABLISHED",
+      "complete_surf_rendering_phases_directions_or_pose_mapping": "NOT_ESTABLISHED",
+      "hm177": "NOT_OBSERVED",
+      "save_cold_load_human_hardware_link_full_issue33_or_release_acceptance": "NOT_ESTABLISHED"
+    },
+    "evidence_pins": {
+      "root_bounded_reuse_decision_sha256": "557bcc66790934d41ded0fd3698c00bca417a80648ea03f7af3ad66cbbd3ee6e",
+      "shore_dispatch_package_readme_sha256": "0c05a9a7d80c52d66dcb8660d1f2e5e78b478620b66a111ee0d69848b7478b4c",
+      "shore_dispatch_verifier_sha256": "fb10437a5c73ea240686ed9acf70f6ef347117b7b7152002d6ac786d98df6efd",
+      "shore_dispatch_independent_review_sha256": "b0f4150c3aad6e5e593914f0ca52b8b9fce7a14bc4ce6d1a7a44fa0e1bffdf7d",
+      "effect_followup_independent_review_sha256": "849563fe39201b3d38a116d1d7843183f1905c9671ae9648eed100c75aa24e28",
+      "surf_resource_partial_independent_review_sha256": "6a7395666dc5ae1df4badf308e64a957edc531d464cbdc846749d962db45cd90",
+      "historical_native_independent_review_sha256": "b682e9058f31fb5f763b1cc8b895adbc55f5f609d7689f2865124769d105e398"
+    },
+    "alpha2_changed": false,
+    "default_changed": false
+  },
+  "core39_female_fishing_owner_linked": {
+    "schema": "ultimate-gold.kris-core39-female-fishing-owner-linked.v1",
+    "status": "BOUNDED_NATIVE_DIAGNOSTIC_REVIEWED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "surface": "K04_FEMALE_FISHING_OWNER_LINKED_DIAGNOSTIC",
+    "execution": {
+      "invocation": 39,
+      "frames": 1754,
+      "accepted_commands_including_quit": 19,
+      "ram_captures": 10,
+      "unload_and_deinit_completed": true,
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "battery_save_load": "NOT_TESTED"
+    },
+    "pins": {
+      "evidence_manifest_sha256": "080b45671a77740b4bf62136032676f45d66e1b4c4ad4ef4b94384ec144ff0bf",
+      "evidence_report_sha256": "c8819383e9f6b3963119c7737faf578710edd268630194aa4c0856135b1b8ba5",
+      "independent_review_sha256": "7027d6e717eab992fe002161889b0aaf3391013fca64d1596176b2c053b61b02",
+      "root_review_sha256": "47058561c3bc0255d64094e31d69a139692d7134a2a19ce8c8c7bf37f3560748",
+      "fixture_and_run_copy_sha256": "c712d17b5d7af676731a09a78505f91a7d49d5fb500bdb664133fc00e15cade5",
+      "original_female_seed_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+      "sequence_member_286_sha256": "057bc9ff5b21dd45a97cef53074df7aa5307c221f978d455656c0c7eef194b3b"
+    },
+    "observed": {
+      "one_Y_cast": {
+        "command": 8,
+        "frame": 1328
+      },
+      "no_bite_message": {
+        "command": 12,
+        "frame": 1592,
+        "text": "Not even a nibble…"
+      },
+      "owner_linked_sprite_189_samples": [
+        {
+          "command": 9,
+          "frame": 1358,
+          "sequence_index": 64,
+          "selected_slot": 15,
+          "texture_entry": 7,
+          "palette_entry": 0
+        },
+        {
+          "command": 10,
+          "frame": 1382,
+          "sequence_index": 64,
+          "selected_slot": 15,
+          "texture_entry": 7,
+          "palette_entry": 0
+        },
+        {
+          "command": 11,
+          "frame": 1472,
+          "sequence_index": 64,
+          "selected_slot": 15,
+          "texture_entry": 7,
+          "palette_entry": 0
+        },
+        {
+          "command": 12,
+          "frame": 1592,
+          "sequence_index": 48,
+          "selected_slot": 12,
+          "texture_entry": 4,
+          "palette_entry": 0
+        },
+        {
+          "command": 13,
+          "frame": 1594,
+          "sequence_index": 48,
+          "selected_slot": 12,
+          "texture_entry": 4,
+          "palette_entry": 0
+        }
+      ],
+      "return_sprite_97": {
+        "commands": [
+          14,
+          16,
+          18
+        ]
+      },
+      "walk_left_then_right_returned_to_fixture_x": true,
+      "source_and_run_copy_byte_identical": true,
+      "original_source_unchanged": true,
+      "profile_and_bag_bytes_match_all_10_RAM_snapshots": true
+    },
+    "party_and_options": {
+      "third_party_pokemon_checksum_commands_14_18": "INCONCLUSIVE_WITH_EXISTING_PARSER",
+      "saved_in_game_options": "NOT_DECODED",
+      "no_cause_attributed": true
+    },
+    "not_established": {
+      "bite_encounter_or_catch": "NOT_OBSERVED",
+      "renderer_submit_timing_or_exact_visible_pose": "NOT_ESTABLISHED",
+      "all_fishing_poses_or_all_32_selectors": "NOT_ESTABLISHED",
+      "menu_save_or_cold_load": "NOT_TESTED",
+      "hardware_human_full_kris_issue33_or_release_acceptance": "NOT_ESTABLISHED"
+    },
+    "alpha2_and_defaults_changed": false,
+    "guide_screenshots_added": false
+  },
+  "k05_core31_walking_owner_reuse": {
+    "schema": "ultimate-gold.kris-k05-core31-walking-owner-reuse.v1",
+    "status": "STATIC_AND_CAPTURED_OWNER_BINDING_REVIEWED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "scope": "Reuse of the current female walking resource and owner-linked checkpoints from Core31; no new native execution.",
+    "execution": {
+      "source_run_invocation": 31,
+      "frames": 3342,
+      "accepted_commands_including_quit": 66,
+      "ram_captures": 14,
+      "new_core_run": "NOT_RUN",
+      "gameplay_acceptance": "NOT_ASSESSED"
+    },
+    "current_resource": {
+      "archive_path": "a/0/8/1",
+      "archive_file_id": 210,
+      "archive_sha256": "0a29af0b982c2b7a10013eee2980918c37c109e043f96f16d87b3e0b0ec82072",
+      "member70_sha256": "e0ac72e7fa137d80e72407ae7fb88884b74af7b37f89eb14cbcd79d0300b7e3e",
+      "member281_sha256": "f781433b3f562eb8737fb8eb4e59fe6c86d6bfc3e23bfab752aef4fc60366d0a",
+      "member281_bytes": 132,
+      "female_sprite_id": 97,
+      "resource_model": 70,
+      "callback_class": 3,
+      "mapping_matches_existing_build_report": true,
+      "sequence_selections": 32,
+      "unique_texture_payloads": 24,
+      "aliases": 8
+    },
+    "owner_linked_checkpoints": [
+      {
+        "command": 7,
+        "frame": 1326,
+        "sequence_index": 32,
+        "selected_slot": 8,
+        "texture_index": 31,
+        "palette_index": 0
+      },
+      {
+        "command": 15,
+        "frame": 1454,
+        "sequence_index": 0,
+        "selected_slot": 0,
+        "texture_index": 0,
+        "palette_index": 0
+      },
+      {
+        "command": 23,
+        "frame": 1582,
+        "sequence_index": 0,
+        "selected_slot": 0,
+        "texture_index": 0,
+        "palette_index": 0
+      },
+      {
+        "command": 25,
+        "frame": 1644,
+        "sequence_index": 0,
+        "selected_slot": 0,
+        "texture_index": 0,
+        "palette_index": 0
+      },
+      {
+        "command": 35,
+        "frame": 2004,
+        "sequence_index": 0,
+        "selected_slot": 0,
+        "texture_index": 0,
+        "palette_index": 0
+      },
+      {
+        "command": 43,
+        "frame": 2360,
+        "sequence_index": 0,
+        "selected_slot": 0,
+        "texture_index": 0,
+        "palette_index": 0
+      },
+      {
+        "command": 63,
+        "frame": 3280,
+        "sequence_index": 0,
+        "selected_slot": 0,
+        "texture_index": 0,
+        "palette_index": 0
+      },
+      {
+        "command": 65,
+        "frame": 3342,
+        "sequence_index": 0,
+        "selected_slot": 0,
+        "texture_index": 0,
+        "palette_index": 0
+      }
+    ],
+    "inconclusive_commands": [
+      33,
+      41,
+      55,
+      57,
+      59,
+      61
+    ],
+    "integrity": {
+      "raw_run_files_checked": 154,
+      "raw_run_pin_mismatches": 0,
+      "ram_captures_checked": 14,
+      "ram_pin_mismatches": 0,
+      "provenance_manifest_fully_verified": false,
+      "stale_test_pin": {
+        "file": "test_cli_guard.py",
+        "expected_sha256": "9b22ac16dd1c88d6404b248fe83456c363fcce60cc6e07b4fe6269b4c7601dcc",
+        "actual_sha256": "3eb6240a815e80e6fdaf9b0997eacdfb2186eb874df75237950d91bf5baa858d",
+        "kind": "test source drift; not a runtime capture or launch driver"
+      }
+    },
+    "pins": {
+      "core31_manifest_sha256": "64edd9f0bf1af3b3ebfd261a85ad868eb6b9723242c13759e01ddaa5adabf8cc",
+      "core31_report_sha256": "3b7b5c01a0aa56698762ce8a20d7bfdec0816715b95c8a13fef7eb17d1743f05",
+      "movement_build_report_sha256": "8c9cb70b45ab25e09b362ee9fa58a302e184758934057093fcff8109fcaaec17",
+      "proof_report_sha256": "19e9bc62827ab021acffa0a849dc9f0e58ad5848f8c91951564315d41be6884f",
+      "proof_verifier_sha256": "74ac0092df7b8bc210b02cd9e707676fc8007da061a7bc580c2176e50f44c408",
+      "proof_readme_sha256": "6c314064b87a96d5332504ccb84447cceb306c4d90360e9946057f36b6a70459",
+      "independent_review_sha256": "fb4a699b4cb6fc25e89b79b3a3eb63fbd697362bef9090b1f0d293e025fbf57b",
+      "root_review_sha256": "fbaacfe39443fa90879a50d76b6f4b49e598af04c9a16c85bae50e276d7e459f"
+    },
+    "not_established": {
+      "six_owner_samples": "INCONCLUSIVE; renderer owner pointer was unavailable or invalid in the captured state, cause unassigned",
+      "renderer_submit_timing_or_exact_visible_pose": "NOT_ESTABLISHED",
+      "all_32_visible_phases_or_full_walking_acceptance": "NOT_ESTABLISHED",
+      "pixel_identity_no_lyra_flash_or_full_issue33_human_hardware_release_acceptance": "NOT_ESTABLISHED"
+    },
+    "alpha2_and_defaults_changed": false,
+    "guide_screenshots_added": false
+  },
+  "k05_core40_walkrun_owner_trace": {
+    "schema": "ultimate-gold.kris-k05-core40-walkrun-owner-trace.v1",
+    "status": "BOUNDED_NATIVE_DIAGNOSTIC_REVIEWED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "execution": {
+      "invocation": 40,
+      "frames": 1694,
+      "accepted_commands_including_quit": 44,
+      "ram_captures": 11,
+      "owner_trace_windows": 8,
+      "owner_trace_rows": 304,
+      "trace_sampling": "POST_RETRO_RUN",
+      "unload_and_deinit_completed": true,
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "battery_save_load": "NOT_TESTED"
+    },
+    "save_scope": {
+      "seed_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+      "run_copy_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+      "source_and_copy_identical": true,
+      "original_unchanged": true,
+      "menu_save_authorized": false
+    },
+    "observed": {
+      "bootstrap": {
+        "command": 7,
+        "frame": 1326,
+        "female_profile_gender": 1,
+        "avatar_gender": 1,
+        "avatar_state": 0,
+        "sprite_id": 97,
+        "location": [
+          60,
+          -1,
+          685,
+          408,
+          2
+        ],
+        "running_shoes": {
+          "hasRunningShoes": 1,
+          "runningShoesLock": 0,
+          "state": 0
+        }
+      },
+      "normal_walk": {
+        "directions": [
+          "RIGHT",
+          "DOWN",
+          "LEFT",
+          "UP"
+        ],
+        "held_frames_per_direction": 8,
+        "release_frames_per_direction": 24,
+        "returned_to_start": true
+      },
+      "b_held_direction_trials": {
+        "directions": [
+          "RIGHT",
+          "DOWN",
+          "LEFT",
+          "UP"
+        ],
+        "held_frames": [
+          8,
+          16,
+          8,
+          16
+        ],
+        "release_frames_each": 24,
+        "running_shoes_precondition_confirmed": true,
+        "controller_state_9_observed": true,
+        "animation_ids_observed": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "exact_run_label_proven": false,
+        "final_untraced_normal_return_to_start": true
+      },
+      "owner_trace": {
+        "sprite_id": 97,
+        "sequence_member": 281,
+        "member_arrays_match_all_rows": true,
+        "observed_slots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          26,
+          27,
+          30,
+          31
+        ],
+        "missing_slots": [
+          17,
+          25,
+          28,
+          29
+        ],
+        "observed_palette_entries": [
+          0
+        ]
+      },
+      "ram_preservation": {
+        "profile32_equal_seed_all_11": true,
+        "bag_equal_seed_all_11": true,
+        "party": {
+          "slot0_friendship": {
+            "seed": 70,
+            "first_observed": 71,
+            "first_command": 14
+          },
+          "slot1_friendship": {
+            "seed": 71,
+            "first_observed": 72,
+            "first_command": 14,
+            "command43_checksum": "INCONCLUSIVE"
+          },
+          "slot2_checksum": "INCONCLUSIVE_IN_10_OF_11_CAPTURES",
+          "slot2_command43": {
+            "checksum": "VALID",
+            "friendship_seed": 70,
+            "friendship_observed": 71
+          },
+          "cause_attributed": false
+        }
+      },
+      "saved_game_options": "NOT_DECODED",
+      "effective_emulator_options": "PINNED_CONFIGURATION_ONLY"
+    },
+    "not_established": {
+      "renderer_submit_timing_or_exact_pixels": "NOT_ESTABLISHED",
+      "all_32_sequence_slots": "NOT_ESTABLISHED",
+      "complete_run_poses_or_no_flash": "NOT_ESTABLISHED",
+      "party_integrity_in_all_phases": "NOT_ESTABLISHED",
+      "save_or_cold_load": "NOT_TESTED",
+      "full_kris_issue33_human_hardware_or_release_acceptance": "NOT_ESTABLISHED"
+    },
+    "pins": {
+      "evidence_manifest_sha256": "9bfb2d9db76d26789b4b72c1888a7a1b59c556caa5d59b6325374b7725318e48",
+      "evidence_report_sha256": "e1d430b56f166d02b81a53f55ae91b38e0c6b2ba9945f48175cda10c2f3c7337",
+      "independent_review_sha256": "aecf2448d372d85dd175529e28a0289697471fae6cec3e4ec0b5e09e574e0397",
+      "root_review_sha256": "ccb08b02aea7ed1fb9c5d8a0106a712b04c420aabb2bb1dcf83dc80cfdca63ce"
+    },
+    "alpha2_and_defaults_changed": false,
+    "guide_screenshots_added": false
+  }
+,
+  "k05_core41_missing_phase_trace": {
+    "schema": "ultimate-gold.kris-bag-native.v1",
+    "status": "BOUNDED_NATIVE_SELECTOR_OBSERVATION_ONLY",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "surface": "K05_FEMALE_MISSING_PHASE_TRACE",
+    "core_invocation": 41,
+    "execution": {
+      "frames": 1698,
+      "accepted_commands_including_quit": 32,
+      "ram_snapshots": 7,
+      "trace_windows": 3,
+      "owner_trace_rows": 180,
+      "rows_per_window": [
+        60,
+        60,
+        60
+      ],
+      "observed_slot_count": 22,
+      "previously_unobserved_slots_observed": [
+        17,
+        25,
+        28,
+        29
+      ],
+      "core40_historical_slot_count": 28,
+      "core40_historical_missing_slots": [
+        17,
+        25,
+        28,
+        29
+      ],
+      "combined_core40_core41_owner_rows": 484,
+      "combined_selector_indices_covered": 32,
+      "running_shoes_confirmed_before_b": {
+        "hasRunningShoes": 1,
+        "runningShoesLock": 0,
+        "state": 0
+      },
+      "normal_return_location": [
+        60,
+        -1,
+        685,
+        408,
+        2
+      ],
+      "explicit_quit": true,
+      "unload_and_deinit_completed": true,
+      "pid_absent_at_seal": true,
+      "original_seed_unchanged": true,
+      "run_copy_unchanged": true,
+      "save_or_menu_action_used": false,
+      "cheats_used": false,
+      "savestates_used": false
+    },
+    "save_snapshot_checks": {
+      "profile_32_bytes_equal_seed_all_7": true,
+      "bag_bytes_equal_seed_all_7": true,
+      "party_slots_0_1_checksum_valid_all_7": true,
+      "party_slot_2_checksum_inconclusive_commands": [
+        7,
+        9,
+        16,
+        20,
+        31
+      ],
+      "party_command_12": {
+        "all_three_checksums_valid": true,
+        "friendship_before_after_by_slot": [
+          [
+            70,
+            71
+          ],
+          [
+            71,
+            72
+          ],
+          [
+            70,
+            71
+          ]
+        ],
+        "other_canonical_blocks_equal_seed": true,
+        "canonical_tails_equal_seed": true
+      },
+      "party_command_27_slot_2": {
+        "checksum_valid": true,
+        "friendship_before_after": [
+          70,
+          71
+        ],
+        "tail_differs_from_seed": true,
+        "cause_attributed": false
+      },
+      "saved_game_options": "NOT_DECODED"
+    },
+    "pins": {
+      "seed_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+      "evidence_manifest_sha256": "9e7d8cb720babc0b9b4be4093be5eb867344d249210c1ed7bd6d030dd7a26545",
+      "evidence_report_json_sha256": "24284e642ef73b12d4cec36746724036eed9169df8a1ee0284e59a1c6baf2932",
+      "evidence_report_markdown_sha256": "202a338c01c4caa33941314ab07fdf6b8ed3ca9e44ffac7c67b1bc52766d525e",
+      "independent_review_sha256": "5f904a3f98e93ec105514f694ec514fed912e5b07a31ad4e4316349e959e81fc",
+      "independent_review_json_sha256": "e3ad606fc3b3c9091471db6db41708ace08548abaa343a23f1d4d69f2faac17c",
+      "root_review_sha256": "c3ec9952f3716adfffbe72c561cdeddb37d2a686ebf577e8d19d3a9fb72f2d20"
+    },
+    "runner_gameplay_acceptance": "NOT_ASSESSED",
+    "battery_save_load": "NOT_TESTED",
+    "not_established": [
+      "Renderer submission or pixel identity",
+      "All poses, all animation phases, no-Lyra-flash behavior, or complete movement acceptance",
+      "Save persistence or cold load",
+      "Human, hardware, issue-wide, or release acceptance"
+    ],
+    "alpha2_changed": false,
+    "default_manifest_changed": false
+  }
+,
+  "k06_backthrow_historical_reuse": {
+    "schema": "ultimate-gold.k06-backthrow-reuse.v1",
+    "status": "BOUNDED_HISTORICAL_BACK_APPEARANCE_REUSE",
+    "historical_native_candidate_sha256": "4d3dab1512535260e10c6b92fb38964ed015ed3f30fcccebb037a300f8635cd6",
+    "current_candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "historical_surface": "ordinary battle-intro back appearance only",
+    "historical_run_invocation": 21,
+    "historical_evidence_manifest_sha256": "683add6529d6062c3220260d2fa9086eff69ee53ba03ef3d8cd135f3844fb450",
+    "historical_peer_review_sha256": "d966dd11d5b595f49c0783626347973dfef5d1836fb26064008cd46483bcdb6b",
+  "readiness_note_sha256": "7d29b1d476bf594dcb6da21d7554668b80f9ef9c6cf9ee97d82fb9ba2770ae1a",
+  "current_94f_independent_readiness_review_sha256": "68eeabfd97676c6eb47df696d9b63af4cf2a79e1d7f176ce9ac8f281ed6ec518",
+  "root_readiness_decision_sha256": "36785823c22a9a2f6bc00cfd5be69eb3c2d5873cd64f898383a9dcf42ffc77eb",
+    "current_94f_native_run": "NOT_PERFORMED",
+    "dependency_comparison": {
+      "method": "independent in-memory ndspy comparison",
+      "arm9_arm7_equal": true,
+      "overlay_tables_equal": true,
+      "arm9_overlay_payloads_equal": 129,
+      "nitrofs_file_count": 513,
+      "nitrofs_filename_mapping_equal": true,
+      "battle_back_file_id": 135,
+      "battle_back_path": "a/0/0/6",
+      "battle_back_narc_sha256": "730933bd5f155ff8b5fe3b157305c6387281cfa730be4f470037e8fed6a37327",
+      "battle_back_member_count": 85,
+      "battle_back_members_identical": true,
+      "only_changed_nitrofs_paths": [
+        "a/0/1/5",
+        "a/0/2/7"
+      ],
+      "a_0_1_5_change": "Bag model archive; outside the battle-back consumer",
+      "a_0_2_7_change": "Message data; exact displayed lines not fully mapped"
+    },
+    "throw_intermediate_frames": "NOT_CAPTURED_IN_CORE21",
+    "next_gate": "Preparation of one finite 94f-only throw-transition capture is pending if K06 acceptance requires this coverage; this is not authority to launch.",
+    "not_established": [
+      "A native battle-back observation on 94f",
+      "Complete throw animation, exact pixels, or renderer-submit timing",
+      "Behavior of changed dialogue data",
+      "Trainer front, link battle, save/load, human/hardware, issue-wide, or release acceptance"
+    ],
+    "alpha2_changed": false,
+    "default_manifest_changed": false
+  },
+  "k06_core42_encounter_gate": {
+    "schema": "ultimate-gold.kris-k06-core42-encounter-gate.v1",
+    "status": "INCONCLUSIVE_ENCOUNTER_GATE_NOT_REACHED",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "execution": {
+      "invocation": 42,
+      "frames": 1616,
+      "accepted_commands_including_quit": 17,
+      "ram_snapshots": 2,
+      "y_cast_commands": [
+        8
+      ],
+      "encounter_observed": false,
+      "throw_window_entered": false,
+      "nibble_message_command": 14,
+      "nibble_message_frame": 1518,
+      "b_return_command": 15,
+      "neutral_step_command": 16,
+      "neutral_step_frames": 96,
+      "neutral_step_capture_count": 1,
+      "neutral_step_capture_kind": "single final PNG; not dense sampling",
+      "quit_command": 17,
+      "exit_code": 0,
+      "unload_and_deinit_completed": true,
+      "pid_absent_at_seal": true,
+      "mapped_emulator_cores_empty_at_seal": true,
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "battery_save_load": "NOT_TESTED"
+    },
+    "save_scope": {
+      "original_seed_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+      "qa_fixture_and_run_copy_sha256": "c712d17b5d7af676731a09a78505f91a7d49d5fb500bdb664133fc00e15cade5",
+      "fixture_and_copy_unchanged": true,
+      "original_seed_unchanged": true,
+      "profile_32_bytes_equal_seed_both_captures": true,
+      "bag_bytes_equal_seed_both_captures": true,
+      "raw_options_4_bytes_equal_seed_both_captures": true,
+      "options_ui_or_settings_decode": "NOT_TESTED",
+      "party_count": 3,
+      "party_slots_0_1_checksum_valid_both_captures": true,
+      "third_pokemon_index_2_checksum": "INCONCLUSIVE_BOTH_CAPTURES",
+      "third_pokemon_cause_attributed": false,
+      "blanket_party_semantic_preservation_claim": false,
+      "save_menu_used": false,
+      "cheats_or_savestates_used": false
+    },
+    "observations": {
+      "cast": "One Y cast; the result was ‘Not even a nibble…’ at command 14/frame 1518.",
+      "return": "B closed the dialogue; one 96-frame neutral step ended at command 16 and produced one final PNG.",
+      "exit": "Explicit quit at command 17; process exited normally and unloaded/deinitialized.",
+      "scope": "No encounter, battle, throw-transition capture, capture attempt, Save, second cast, item, cheat, savestate, injection or touch input occurred.",
+      "failed_precondition": "The encounter-gated dense window was never entered. The earlier rejected capture-start preparation and its review remain preserved separately."
+    },
+    "evidence_pins": {
+      "evidence_manifest_sha256": "93253a928019df723c53386bdde5758fc651b0338ab682bb7407f3b8ca7f13d6",
+      "evidence_report_json_sha256": "aeb2dd2cd7804fd54da495d4d601e85694843fcf4354f1897630f01d85f068f0",
+      "evidence_report_markdown_sha256": "0f508538c362875c910883b091aae2dd604248cb0c793d72a7799c4497ca14e5",
+      "independent_native_review_sha256": "77cbdcd1fb7bff6f5c2c0c5a24c0e3053719975db1dc496099dac332f3cf653b",
+      "independent_native_review_json_sha256": "483df194104f5c77201a443f3937aff6c979980667750ef1d6205f9538e23dcc",
+      "root_native_review_sha256": "56d3b9fbd8fbbd5f604171f2404143d7c990186de6ab2db57cf860cbdc3091c7"
+    },
+    "not_established": [
+      "Wild encounter, battle entry, any throw frames, or a dense transition capture",
+      "Correctness or incorrectness of the throw animation, exact pixels, or renderer submission",
+      "Options-menu behavior or decoded game settings",
+      "Checksum-valid semantics for the third Pokémon/index 2 in either captured phase",
+      "Save/reload persistence, complete K06, issue-wide, human, hardware, or release acceptance"
+    ],
+    "related_scope": {
+      "historical_core21_back_appearance_reuse": "Separate bounded evidence on candidate 4d3d; no new 94f run is implied.",
+      "hof_front_core25": "Separate bounded evidence; not part of this K06 throw check.",
+      "k06_status": "OPEN",
+      "issue33_status": "OPEN",
+      "alpha2_changed": false,
+      "default_manifest_changed": false,
+      "replay_authorized": false
+    },
+    "summary_en": "Core42 did not reach the wild-encounter gate. One Y cast showed ‘Not even a nibble…’. B returned to the field; one 96-frame neutral step produced a single final PNG, not dense sampling. No encounter or throw frames were observed. K06 and issue #33 remain open.",
+    "summary_es": "Core42 no alcanzó el requisito de encuentro salvaje. Un único lance con Y mostró «Not even a nibble…». B devolvió al campo; un solo paso neutral de 96 fotogramas produjo un PNG final, no un muestreo denso. No se observó encuentro ni fotogramas del lanzamiento. K06 y la issue #33 siguen abiertas."
+  }
+,
+  "k06_core43_trainer_throw_observation": {
+    "schema": "ultimate-gold.kris-k06-core43-trainer-throw.v1",
+    "status": "PASS_BOUNDED_NATIVE_THROW_OBSERVATION_ONLY",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "execution": {
+      "invocation": 43,
+      "commands_including_quit": 277,
+      "frames": 1888,
+      "rendered_png_frames": 256,
+      "rendered_png_frame_range": [1633, 1888],
+      "dense_capture_commands": [21, 276],
+      "quit_command": 277,
+      "exit_code": 0,
+      "unload_deinit_completed": true,
+      "runner_pid": 370751,
+      "runner_pid_absent_after_exit": true,
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "battery_save_load": "NOT_TESTED",
+      "input_scope": "Ordinary controller buttons only; one normal trainer encounter and send-out to the first battle menu, then explicit quit.",
+      "battle_action_save_or_test_aid": false
+    },
+    "visual_review": {
+      "consecutive_frames_reviewed": [1748, 1770],
+      "arm_raise_begins_frame": 1752,
+      "arm_and_ball_action_frames": [1753, 1762],
+      "follow_through_left_edge_crop_frames": [1763, 1766],
+      "sprite_absent_from_review_crop_by_frame": 1767,
+      "observed_opponent": "Jigglypuff",
+      "send_out_text": "Go! CLEFAIRY!",
+      "target_displayed_trainer_name": "Idol Carly",
+      "source_fixture_label_only": "Don",
+      "qualitative_result": "Yellow cap, blue/dark-teal hair and pale outfit remain visually consistent in the reviewed segment; no obvious identity/color flash or static pose break was seen in that interval.",
+      "exact_pixel_or_renderer_submit_proof": false,
+      "all_poses_or_global_no_flash_claim": false
+    },
+    "save_scope": {
+      "source_save_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+      "fixture_and_run_copy_sha256": "6ab48d4683c868a956b93b06e574dccb891e009b4d137ebcd4e07b037bd379f4",
+      "fixture_equals_run_copy": true,
+      "source_and_fixture_preserved": true,
+      "ram_snapshots": 2,
+      "profile_32_bytes_match_seed": true,
+      "raw_options_4_bytes_match_seed": true,
+      "options_ui_or_semantics": "NOT_TESTED",
+      "bag_bytes_match_seed": true,
+      "party_all_three_checksums_valid_at_both_snapshots": true,
+      "party_value_equality_or_persistence_claim": false,
+      "save_menu_used": false
+    },
+    "evidence_pins": {
+      "seal_manifest_sha256": "1310e9e2fa6d28054ec0f2669481f64ef286c160392b1ccf8bd2fc9a6d14ff55",
+      "seal_report_json_sha256": "718bdc745628bdd97d1c408d3c9b128aa5de08901d825f4b948135b64eec00fe",
+      "seal_report_markdown_sha256": "2cf15bfbbb3a5d7d3b942a4c13782ba925357462dd82dc893063076f49ef2ecf",
+      "independent_review_sha256": "592b7cb270cf4ff0579b514d25d8f8c9a667f4cdf602ec0f55213162e330206e",
+      "independent_review_json_sha256": "86008ab5295170a0518fb10fea03272e124e23f85fadb47304a8a6572b94e3e3",
+      "root_review_sha256": "2c42ba671abb98b926146e05bc3fcd7629f7f6540aa1915e65fc35b666eef20c"
+    },
+    "not_established": [
+      "Complete K06 or issue #33 acceptance",
+      "Full throw pose, exact pixel equivalence, renderer submission, or absence of flashes outside reviewed frames",
+      "Wild-battle coverage, capture success, Save/reload persistence, human, hardware, or release acceptance"
+    ],
+    "alpha2_changed": false,
+    "default_manifest_changed": false
+  }
+,
+  "k10_core44_photo_capture_and_save_observation": {
+    "status": "PASS_BOUNDED_NATIVE_PHOTO_CAPTURE_AND_SAVE_ONLY",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "invocation": 44,
+    "native_run": {
+      "frames": 3396,
+      "commands_including_quit": 49,
+      "quit_command": 49,
+      "requested_ram_captures": 9,
+      "exit_code": 0,
+      "unload_deinit_completed": true,
+      "runner_pid_absent_after_exit": true,
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "battery_save_load": "NOT_TESTED"
+    },
+    "capture": {
+      "photo_data_entry": 10,
+      "entry_used_synthetic_position_fixture": true,
+      "profile_gender": 1,
+      "observed_player_sprite_sequence": [
+        97,
+        259,
+        97
+      ],
+      "temporary_avatar_state": 3,
+      "party_visible_in_sampled_camera_composition": true,
+      "photo_transition_checkpoint_frame": 2120,
+      "pc_album_viewer_opened": false
+    },
+    "saved_record": {
+      "normal_menu_save_count": 1,
+      "scope": "RUN_COPY_ONLY",
+      "output_dsv_sha256": "b6b935d3108efbea468249312fc44683b39620d23f49b602e2f8178485bb380a",
+      "main_slot_counters": [
+        14,
+        13
+      ],
+      "both_main_crcs_valid": true,
+      "album_occupied_slots": 1,
+      "record_slot": 0,
+      "first_free_slot": 1,
+      "num_mons": 3,
+      "record_gender": 1,
+      "icon_id": 6,
+      "avatar_state_bak": 3,
+      "map_id": 199,
+      "camera_coordinates": [
+        17,
+        6
+      ]
+    },
+    "source_and_fixture_preserved": {
+      "female_source_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+      "synthetic_entry_fixture_sha256": "66e39a04646dd01e80803c2125f014d58c0dda66d12bbd805b670c8e89e8ae8d",
+      "source_and_fixture_unchanged": true
+    },
+    "evidence_pins": {
+      "seal_manifest_sha256": "0cb57f2f653ba3d5a0cd13ae6c30e3b0075c5d22bc7e64854906228e9078e9d9",
+      "independent_review_sha256": "520b01f7b6fa6aea04cffcb013f19d5ef1157c07fe4f9c59efd4900cdc48154a",
+      "independent_review_json_sha256": "df013545194352948154dbe6e8450eb90b24145e366d711aa034875421e516b0",
+      "root_review_sha256": "2f75e3b1288a3a72a1b70978436eebc6ecda31c93d15c8e4ddb26e23eb107087"
+    },
+    "not_established": [
+      "PC Album viewing",
+      "cold reload or save/reload persistence",
+      "old-photo compatibility",
+      "natural story reachability",
+      "full K10 or full issue #33 acceptance",
+      "all-frame or global no-flash behavior",
+      "human or release acceptance"
+    ],
+    "alpha2_changed": false,
+    "default_manifest_changed": false
+  },
+  "k02_core46_unskipped_movie_observation":   {
+    "status": "PASS_BOUNDED_UNSKIPPED_MOVIE_OBSERVATION_ONLY",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "core_invocation": 46,
+    "frames": 3000,
+    "accepted_commands": 6,
+    "neutral_commands": 5,
+    "frames_per_neutral_command": 600,
+    "quit_command": 6,
+    "termination": "stable_title_then_quit",
+    "unload_and_deinit_completed": true,
+    "sampled_pngs": 201,
+    "sampling_interval_frames": 15,
+    "sample_bytes": 2639237,
+    "capture_filename_index": "zero_based_emulated_frame",
+    "buttons": [],
+    "touch": false,
+    "ordinary_save_exercised": false,
+    "source_save_copy_performed": false,
+    "blank_run_dsv_autocreated": true,
+    "scene2_female_appearance": "QUALITATIVE_MATCH_TO_REVIEWED_KRIS_ADAPTATION",
+    "scene4_female_portrait": "ORIGINAL_LYRA_ART_PENDING_REPLACEMENT",
+    "evidence_pins": {
+      "seal_manifest_sha256": "44d150496fc35c8c1514393e991cd419f8a4cb1d60f7848d27b2989c232fb9b9",
+      "independent_review_sha256": "f6e97a4749fbeff65e593d0d673a8ce24ce47183a3d8846b47b3a6dd87a5afb1",
+      "independent_review_json_sha256": "126b43301dd138ab73c847b064d1e5aaf557556696321c3e9ed39018d9ba3243",
+      "root_review_sha256": "c73a346bb71eb79e688b81c71f58c5c4976a7911014368c57a1eb994e1db4cf7"
+    },
+    "observed": {
+      "en": [
+        "Unskipped cold-boot movie reached the stable title on the exact 94f candidate.",
+        "Sampled scene 2 shows the female Kris adaptation; scene 4 still shows the original Lyra portrait."
+      ],
+      "es": [
+        "La película de arranque sin saltos llegó al título estable en la candidata exacta 94f.",
+        "La escena 2 muestreada muestra la adaptación femenina de Kris; la escena 4 conserva el retrato original de Lyra."
+      ]
+    },
+    "not_established": {
+      "en": [
+        "Every-frame correctness or absence of flashes between 15-frame samples.",
+        "Complete K02, later gameplay/save behavior, hardware, human or release acceptance, or full issue #33."
+      ],
+      "es": [
+        "Corrección de todos los frames o ausencia de destellos entre muestras separadas por 15 frames.",
+        "K02 completo, juego/guardado posterior, hardware, aceptación humana o de release, ni cierre de la issue #33."
+      ]
+    },
+    "alpha2_changed": false,
+    "default_manifest_changed": false,
+    "gameplay_acceptance": "NOT_ASSESSED",
+    "battery_save_load": "NOT_TESTED"
+  },
+  "k10_core45_photo_cold_view_observation": {
+    "status": "PASS_BOUNDED_NATIVE_PHOTO_COLD_VIEW_ONLY",
+    "candidate_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "invocation": 45,
+    "native_run": {
+      "frames": 2816,
+      "commands_including_quit": 36,
+      "quit_command": 36,
+      "requested_ram_captures": 4,
+      "exit_code": 0,
+      "unload_deinit_completed": true,
+      "runner_pid_absent_after_exit": true,
+      "gameplay_acceptance": "NOT_ASSESSED",
+      "battery_save_load": "NOT_TESTED"
+    },
+    "cold_view": {
+      "continued_from_core44_saved_output": true,
+      "normal_pc_album_path": [
+        "PC",
+        "A's PC",
+        "PHOTO ALBUM",
+        "VIEW"
+      ],
+      "album_views": 1,
+      "saved_record_count": 1,
+      "record_details": {
+        "location": "Goldenrod Tunnel",
+        "photo_label": "CLEFAIRY and friends",
+        "date": "10/24/2026"
+      },
+      "rendered_photo_observation": "Rocket-costumed female protagonist and her three party members; qualitative native observation",
+      "returned_to_field_before_quit": true
+    },
+    "input_and_fixture": {
+      "source_save_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+      "core44_saved_output_sha256": "b6b935d3108efbea468249312fc44683b39620d23f49b602e2f8178485bb380a",
+      "six_byte_fixture_sha256": "c6a406d29e2ada8008fdc0f5b60950437bcb968b8df56db80ed0cadcb77b4453",
+      "fixture_changed_bytes": 6,
+      "fixture_allowlist": [
+        "active MAIN dynamic-warp position",
+        "flag 966 bit 0x40",
+        "active MAIN CRC16"
+      ],
+      "synthetic_positioning": true,
+      "fixture_and_run_copy_unchanged_during_core45": true,
+      "protected_source_and_inputs_preserved": true,
+      "core45_save_or_photo_mutation": false
+    },
+    "evidence_pins": {
+      "raw_seal_manifest_sha256": "e30ba8f57d3e1b9882e9df529dce79ef17ee4d4ca89c159005beb2bcf34f1385",
+      "preparation_manifest_sha256": "d57b6270c2d2f73c1f3ffb354fb4c6676b69b7e87b4282808f8e0afb14bc859d",
+      "independent_native_review_sha256": "880c9720a6487f54cec42031f01b62484af54563400b27ec2a28b032dce9fb81",
+      "independent_native_review_json_sha256": "a422489494ffd261b76ff629217b27b5c66a4f97bb23fa1b230f72ee02785df5",
+      "root_native_decision_sha256": "3b7583b3841a7312cdc2141daf085fc659cff66af7697e6d3a126665ea7a2206"
+    },
+    "not_established": [
+      "Old-photo compatibility, all photos, or natural story access; Core45 used the reviewed synthetic-position fixture",
+      "A further Save after viewing, or a broader cold-load/persistence guarantee",
+      "Full K10 or issue #33 acceptance, every-frame behavior, or global absence of visual flashes",
+      "Human, hardware, or release acceptance"
+    ]
+  },
+  "k04_k05_core47_rendered_walkrun_observation": {
+    "schema": "ultimate-gold.kris-k04-k05-core47-rendered-walkrun.v1",
+    "status": "PASS_BOUNDED_NATIVE_RENDERED_WALKRUN_ONLY",
+    "target_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "baseline_seed_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+    "evidence": {
+      "prepared_manifest_sha256": "bf8ce1f9d06168c4d7462c34a869a58d5cddc3b71b24d2e0312f9d5caf4b88ae",
+      "seal_sha256": "35972529a575396e3a2c56fc1885d2180a4942faaa7823e3b6ad60e97fff2ac9",
+      "native_review_sha256": "db90bb7529fb039ca25d788f9b2b3de953cc2ae64325e8dcfb40d815e608916e",
+      "running_interpretation_review_sha256": "a486b8c5846e5372a4c4951cd6d84aeaea15a3ca4a6d67d787870111b27e61a8",
+      "root_decision_sha256": "c7272ee65a9bc85f6af8c7e8c59921987756bd56ca05572bd295c016e824a543"
+    },
+    "observed": {
+      "frames_total": 1694,
+      "commands_including_quit": 44,
+      "owner_windows": 8,
+      "owner_frames_and_paired_pngs": 304,
+      "command_endpoint_pngs": 43,
+      "total_pngs": 347,
+      "total_png_bytes": 5991148,
+      "window_frame_counts": [
+        36,
+        36,
+        36,
+        36,
+        36,
+        44,
+        36,
+        44
+      ],
+      "directions": [
+        "right",
+        "down",
+        "left",
+        "up"
+      ],
+      "ordinary_walk_and_b_held_running_controls": true,
+      "idle_turn_start_stop_within_observed_windows": true,
+      "independent_visual_review_all_eight_windows": true,
+      "material_wrong_avatar_flash_observed": false,
+      "all_304_owner_rows_sequence_match": true,
+      "return_position": [
+        685,
+        408
+      ],
+      "ordinary_menu_save": false,
+      "original_and_run_copy_unchanged": true,
+      "process_exited_unloaded_and_deinitialized": true
+    },
+    "interpretation": {
+      "en": "Source, distinct live action/animation IDs, and genuine native PNGs support bounded walking and B-held running controls in all four directions. The captured windows show idle, turn, start and stop; independent visual review found no material wrong-avatar flash or major visual defect in these samples.",
+      "es": "La fuente, las acciones/animaciones distintas en vivo y los PNG nativos respaldan caminar y los controles de carrera con B en las cuatro direcciones de forma acotada. Las ventanas muestran reposo, giro, inicio y parada; la revisión independiente no encontró destellos materiales del avatar incorrecto ni defectos visuales graves en estas muestras."
+    },
+    "not_established": [
+      "A one-to-one renderer-submit timing proof for each paired RAM row and pixel",
+      "Every unique pose or field state, or universal absence of visual flashes",
+      "New save/reload persistence, hardware or human acceptance",
+      "Complete issue #33, the entire adventure, or release acceptance"
+    ]
+  },
+  "k04_core48_cycle_menu_inconclusive": {
+    "schema": "ultimate-gold.kris-k04-core48-cycle-menu-inconclusive.v1",
+    "status": "INCONCLUSIVE_BICYCLE_MENU_GATE_NOT_REACHED",
+    "target_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "baseline_seed_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+    "evidence": {
+      "prepared_manifest_sha256": "aaed91ee8ad75456a5a64e92c9a49e2ee9a9c333b91770e5dac7e26840fb9f36",
+      "seal_sha256": "5359ec7a31aa2ecd8f9421799d46a887826560af170383620bb5b5352ad0da59",
+      "native_review_sha256": "99fdc5ddf807e7cb2da2248f71c1cbdb9414eae2e548d56d5ea6c20085c9ddcf",
+      "root_decision_sha256": "66882e9b202d8707376a4228c6a4afc1691c72ba7606ed9cc051e10943661e1a",
+      "navigation_correction_note_sha256": "2b938bdf173bb393aadaf6ceb7c063a104bdae5860bbbad114ae220fe9c7e257"
+    },
+    "execution": {
+      "invocation": 48,
+      "cycling_case_attempt_index": 1,
+      "frames_total": 1694,
+      "commands_including_quit": 20,
+      "window_pngs": 34,
+      "endpoint_pngs": 19,
+      "total_pngs": 53,
+      "total_png_bytes": 355342,
+      "process_exit_code": 0,
+      "unload_and_deinit_completed": true,
+      "ordinary_menu_save": false,
+      "original_and_run_copy_unchanged": true
+    },
+    "observed": {
+      "bootstrap_live_gate_ready": true,
+      "bicycle_menu_gate_reached": false,
+      "visible_item_context": "Items / Moon Stone",
+      "final_map_id": 60,
+      "final_gender": 1,
+      "final_avatar_state": 0,
+      "final_sprite_id": 97,
+      "final_position": [
+        685,
+        408
+      ],
+      "cycling_directions_attempted": false,
+      "dismount_attempted": false,
+      "rom_defect_established": false
+    },
+    "cause": {
+      "en": "The operator used LEFT in the item grid and sent dependent A inputs before inspecting the returned screen. The named capture window therefore does not establish a Bicycle mount. The attempt was stopped and its authority is consumed.",
+      "es": "Se usó IZQUIERDA en la cuadrícula de objetos y se enviaron entradas A antes de inspeccionar la captura devuelta. Por ello, el nombre de la ventana no demuestra un montaje en Bicicleta. Se detuvo el intento y su autorización está consumida."
+    },
+    "not_established": [
+      "Bicycle mount, cycling directions or WALK dismount",
+      "Cycling pose, transition or visual acceptance",
+      "A ROM defect, new save/reload persistence, human or release acceptance",
+      "Complete issue #33 acceptance"
+    ]
+  },
+  "k04_core49_bicycle_roundtrip": {
+    "schema": "ultimate-gold.kris-k04-core49-bicycle-roundtrip.v1",
+    "status": "PASS_BOUNDED_NATIVE_BICYCLE_ROUNDTRIP",
+    "target_sha256": "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
+    "baseline_seed_sha256": "18fc249e8fad06ce5b337f4fa4f1a94f11123b9e88bcb118ffc34a9d4110e7b3",
+    "evidence": {
+      "prepared_manifest_sha256": "f27dcb3c43e6d42f1ba563b289028d067879d5fb6ae2e3dedcdffa19e0291092",
+      "seal_sha256": "7549b60241920fe1e787903efad9230f1ed6ed54afb1eea78a90b69ecc05fd37",
+      "native_review_sha256": "1a8dd3589efa29f06db8e0003183b09836c1e96c54d5114b1ad8876b340249e4",
+      "party_delta_review_sha256": "e8a58dd4243c9d48f7483d81d282251dc00adf792fada294cde5a735846f2cd0",
+      "root_decision_sha256": "e22acf74bb6e00cdf3d8a919c745c2e516b26b4162137f3287856b7dcfd73326"
+    },
+    "execution": {
+      "invocation": 49,
+      "cycling_case_attempt_index": 2,
+      "case_attempts_consumed": 2,
+      "case_attempt_limit": 2,
+      "frames_total": 3154,
+      "cycling_case_frames_total": 4848,
+      "cycling_case_frame_limit": 6194,
+      "commands_including_quit": 56,
+      "window_pngs": 388,
+      "endpoint_pngs": 55,
+      "total_pngs": 443,
+      "total_png_bytes": 4957621,
+      "process_exit_code": 0,
+      "unload_and_deinit_completed": true,
+      "ordinary_menu_save": false,
+      "original_and_run_copy_unchanged": true
+    },
+    "observed": {
+      "ordinary_bag_use_mount": true,
+      "cycling_directions": [
+        "RIGHT",
+        "DOWN",
+        "LEFT",
+        "UP"
+      ],
+      "cycle_loop_returned_to_initial_tile": true,
+      "ordinary_bag_walk_dismount": true,
+      "post_dismount_walking_control": true,
+      "following_pokemon_visible_again": true,
+      "map_id": 60,
+      "gender": 1,
+      "avatar_states": [
+        0,
+        1,
+        0
+      ],
+      "sprite_ids": [
+        97,
+        98,
+        97
+      ],
+      "initial_position": [
+        685,
+        408
+      ],
+      "cycle_loop_end_position": [
+        685,
+        408
+      ],
+      "post_dismount_walk_end_position": [
+        686,
+        408
+      ],
+      "profile_bytes_match_in_all_ten_snapshots": true,
+      "bag_bytes_match_in_all_ten_snapshots": true
+    },
+    "party_limit": {
+      "checksum_valid_commands": [
+        31,
+        34,
+        38,
+        50,
+        53
+      ],
+      "checksum_rejected_commands": [
+        7,
+        36,
+        40,
+        42,
+        55
+      ],
+      "rejections_isolated_to_slot_index": 2,
+      "source_cipher_boundaries_match": true,
+      "decoded_box_delta": {
+        "slot_index": 0,
+        "field": "friendship",
+        "from": 70,
+        "to": 71,
+        "runtime_cause": "NOT_ESTABLISHED"
+      },
+      "blanket_party_byte_equality": false
+    },
+    "result": {
+      "en": "The ordinary Bicycle mount, four-direction cycle loop, WALK dismount and subsequent walking/follower return were independently reviewed on this exact private build. Core48 remains inconclusive; no third cycling attempt is authorized.",
+      "es": "Montaje normal de Bicicleta, circuito en las cuatro direcciones, desmontaje WALK y regreso a pie/con acompañante revisados independientemente en esta build privada exacta. Core48 conserva su resultado inconcluso; no se autoriza un tercer intento."
+    },
+    "not_established": [
+      "All fifteen field states or residual counterpart contexts",
+      "Every pose or universal absence of wrong-avatar flashes",
+      "New Save/cold Continue persistence or blanket Party byte equality",
+      "Human, hardware, full issue #33 or release acceptance"
+    ],
+    "previous_entries_unchanged": true,
+    "default_download_changed": false
+  }
+}
