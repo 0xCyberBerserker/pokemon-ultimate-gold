@@ -2,6 +2,12 @@
 
 ## English
 
+**Latest reviewed Kris result — issue #33 remains open:**
+
+- **Opening portrait (Core51):** Kris appeared in scene 4. Independent review covered all 500 dense scene-4 frames and 201 periodic samples (667 unique PNGs). The compared scene-2 frame, Ethan upper screen and two title frames match the previous candidate pixel for pixel. The bounded technical check passed; portrait scale/crop adjustment remains in progress and visual acceptance is pending.
+- **Ladder (Core50):** the avatar reached the ladder tile, but the entry check expected actor height 0 and observed 2. Core50 did not test ladder transit. No ROM defect was established and this packet authorizes no retry.
+- **Still pending:** ordinary Continue/field verification after the portrait integration, other required field/counterpart contexts and full Kris acceptance. The movie run made no gameplay Save and proves neither every-frame no-flash behavior nor later gameplay. Downloads remain unchanged. Earlier entries below retain their historical build-specific scope. [Reviewed QA](qa-kris-bag.json).
+
 ### Sprint 1 status — 24 October 2026
 
 Issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) remains **open / in progress**. On candidate build `94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2`, independently reviewed bounded evidence includes the normal-menu Save/Summary cycle (Core27), a separate-process Continue after saving (Core28), the [Bag QA report](qa-kris-bag.json), and a native Bicycle mount, four-direction ride and dismount round trip (Core49). Core48 remains inconclusive; the cycling case used both authorized attempts, Core48 and Core49.
@@ -80,6 +86,12 @@ The additional battle-source review distinguishes ordinary and link backpics; re
 ---
 
 ## Español
+
+**Último resultado revisado de Kris — la issue #33 sigue abierta:**
+
+- **Retrato inicial (Core51):** Kris apareció en la escena 4. La revisión independiente cubrió los 500 fotogramas densos de esa escena y 201 muestras periódicas (667 PNG únicos). El fotograma comparado de la escena 2, la pantalla superior con Ethan y dos fotogramas de título coinciden píxel a píxel con la candidata anterior. La comprobación técnica acotada pasó; el ajuste de escala/recorte sigue en curso y la aceptación visual está pendiente.
+- **Escalera (Core50):** el avatar llegó a la casilla de la escalera, pero la comprobación de entrada esperaba altura del actor 0 y observó 2. Core50 no probó el tránsito de la escalera. No se demostró un defecto de ROM y este paquete no autoriza reintento.
+- **Pendiente:** verificar Continue y campo ordinarios tras integrar el retrato, otros contextos requeridos de campo/contraparte y la aceptación completa de Kris. La prueba de película no guardó una partida jugable ni demuestra ausencia de destellos en todos los fotogramas o el juego posterior. Las descargas no cambian. Las entradas anteriores conservan abajo su alcance histórico por build. [QA revisado](qa-kris-bag.json).
 
 ### Estado del Sprint 1 — 24 de octubre de 2026
 
