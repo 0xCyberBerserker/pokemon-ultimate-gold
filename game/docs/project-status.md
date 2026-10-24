@@ -2,11 +2,13 @@
 
 ## English
 
-**Latest reviewed Kris result — issue #33 remains open:**
+**Latest reviewed Kris result — issue #33 remains open; Alpha 2 is unchanged:**
 
-- **Opening portrait (Core51):** Kris appeared in scene 4. Independent review covered all 500 dense scene-4 frames and 201 periodic samples (667 unique PNGs). The compared scene-2 frame, Ethan upper screen and two title frames match the previous candidate pixel for pixel. The bounded technical check passed; portrait scale/crop adjustment remains in progress and visual acceptance is pending.
-- **Ladder (Core50):** the avatar reached the ladder tile, but the entry check expected actor height 0 and observed 2. Core50 did not test ladder transit. No ROM defect was established and this packet authorizes no retry.
-- **Still pending:** ordinary Continue/field verification after the portrait integration, other required field/counterpart contexts and full Kris acceptance. The movie run made no gameplay Save and proves neither every-frame no-flash behavior nor later gameplay. Downloads remain unchanged. Earlier entries below retain their historical build-specific scope. [Reviewed QA](qa-kris-bag.json).
+- **Credits (Core57/Core59):** across the two profile branches, captured frames contain exact positive matches for all 12 Kris sprite cells. This does not prove every pose in each branch, continuous absence of flashes, ordinary male-avatar play or complete Kris support.
+- **Opening exit (Core62):** fixed-size integration and file-scope checks passed. Native playback corrected the first target exit frame; the next still matches the clipped baseline. Independent review confirmed the correction is incomplete; a complete-tail candidate awaits native verification.
+- **Bag (Core61):** independent native comparison confirms the diagnostic deliberately contains only the face and that the original view already crops the head. This does not establish a camera fault or full-body fit. Keep the original camera; complete-body Kris remains unassessed.
+- **Apricorn tree (Core53):** three read-only reader assumptions were corrected against captured memory and game source, including the expected green-fruited tree. The cached entry gate passes, but tree interaction remains untested.
+- **Still pending:** complete-body fit, native verification of the complete-tail candidate, remaining required contexts and full Kris acceptance. Downloads remain unchanged. Earlier entries below retain their historical build-specific scope. [Reviewed QA](qa-kris-bag.json).
 
 This page separates the downloadable build from isolated prototypes. Updated on 24 October 2026. A feature appearing in the wiki does not mean that it is already included in the patch download.
 
@@ -68,11 +70,13 @@ The [EV/IV feasibility study](ev-iv-kit-feasibility.md) preserves the earlier de
 
 ## Español
 
-**Último resultado revisado de Kris — la issue #33 sigue abierta:**
+**Último resultado revisado de Kris — la issue #33 sigue abierta; Alfa 2 no cambia:**
 
-- **Retrato inicial (Core51):** Kris apareció en la escena 4. La revisión independiente cubrió los 500 fotogramas densos de esa escena y 201 muestras periódicas (667 PNG únicos). El fotograma comparado de la escena 2, la pantalla superior con Ethan y dos fotogramas de título coinciden píxel a píxel con la candidata anterior. La comprobación técnica acotada pasó; el ajuste de escala/recorte sigue en curso y la aceptación visual está pendiente.
-- **Escalera (Core50):** el avatar llegó a la casilla de la escalera, pero la comprobación de entrada esperaba altura del actor 0 y observó 2. Core50 no probó el tránsito de la escalera. No se demostró un defecto de ROM y este paquete no autoriza reintento.
-- **Pendiente:** verificar Continue y campo ordinarios tras integrar el retrato, otros contextos requeridos de campo/contraparte y la aceptación completa de Kris. La prueba de película no guardó una partida jugable ni demuestra ausencia de destellos en todos los fotogramas o el juego posterior. Las descargas no cambian. Las entradas anteriores conservan abajo su alcance histórico por build. [QA revisado](qa-kris-bag.json).
+- **Créditos (Core57/Core59):** entre las dos ramas de perfil, las capturas contienen coincidencias positivas exactas de las 12 celdas del sprite de Kris. Esto no demuestra todas las poses en cada rama, ausencia continua de destellos, juego ordinario con avatar masculino ni soporte completo de Kris.
+- **Salida de la intro (Core62):** pasaron la integración de tamaño fijo y las comprobaciones del alcance de archivos. La reproducción nativa corrigió el primer fotograma objetivo; el siguiente aún coincide con la referencia recortada. La revisión independiente confirmó que la corrección está incompleta; una candidata que cubre toda la cola espera verificación nativa.
+- **Bolsa (Core61):** la comparación nativa independiente confirma que el diagnóstico contiene intencionadamente solo la cara y que la vista original ya recorta la cabeza. Esto no demuestra un fallo de cámara ni el encaje del cuerpo completo. Se conserva la cámara original; el cuerpo completo de Kris sigue sin evaluar.
+- **Árbol de bonguris (Core53):** se corrigieron tres supuestos del lector contrastando la memoria capturada y el código del juego, incluido el árbol esperado con fruto verde. La comprobación de entrada con memoria capturada pasa, pero la interacción con el árbol sigue sin probarse.
+- **Pendiente:** encaje del cuerpo completo, verificación nativa de la candidata que cubre toda la cola, los demás contextos requeridos y aceptación completa de Kris. Las descargas no cambian. Las entradas anteriores conservan abajo su alcance histórico por build. [QA revisado](qa-kris-bag.json).
 
 Esta página distingue la versión descargable de los prototipos aislados. Actualizada el 24 de octubre de 2026. Que una función aparezca en la wiki no significa que ya esté incluida en el parche descargable.
 
