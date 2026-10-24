@@ -2,9 +2,9 @@
 
 ## English
 
-This page separates the downloadable build from isolated prototypes. Updated on 23 October 2026. A feature appearing in the wiki does not mean that it is already included in the patch download.
+This page separates the downloadable build from isolated prototypes. Updated on 24 October 2026. A feature appearing in the wiki does not mean that it is already included in the patch download.
 
-The [local Alpha 2 activation record](qa-alpha2-activation.json) records 44 passing automated tests and four browser QA flows, with the retained data counts and build-specific limits. Nothing has been published to GitHub Pages.
+The [local Alpha 2 activation record](qa-alpha2-activation.json) records 44 passing automated tests and four browser QA flows, with the retained data counts and build-specific limits. The public [wiki and patcher](https://0xcyberberserker.github.io/pokemon-ultimate-gold/) are available; this does not change the Alpha 2 download.
 
 ### Verified and available
 
@@ -52,6 +52,8 @@ The combined prototype includes the Rocket kit, additional evolution-item shop s
 
 ### Private prototypes and future studies
 
+**Kris Sprint 1:** issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) remains open. The current candidate has bounded, independently reviewed native passes for Save/Continue, the Bag cycle and the bicycle round trip. Core48 remains inconclusive; the bicycle case used both authorized attempts, Core48 and Core49. Core50 stopped at its entry gate: live player height was 2 while the gate expected 0, and no ladder input was sent. This is inconclusive, with no defect inferred. Complete integration and the remaining acceptance matrix are still pending. See the [Kris coverage](kris-feasibility.md) and [Bag QA report](qa-kris-bag.json).
+
 **Native editor QA:** the private bd50 build has independently reviewed cases for staged EV/IV changes, zero resets, IV 31, EV caps, one party↔PC round trip and Nature changes. Chikorita retained Adamant after a native save and a fresh start without an emulator state. These are bounded cases, not acceptance of every species, battle consumer or the complete adventure. The editor is not included in downloadable Alpha 2. See the [current editor status](qa-editor-current-status.md), [Nature evidence](qa-nature-integrated-reset-review.md), [party↔PC case](qa-editor-pc-roundtrip.md) and [EV-cap limits](qa-editor-ev-caps.md).
 
 **Selector integration:** an isolated candidate now passes cancel/slot-0 selection and visible field return, with independent review of seven runs, twenty captures and strict party/Bag/save integrity. The [native editor QA guide](stat-editor-qa.md) shows both-screen menu captures and the field return. This is not the final portable editor or an Alpha 2 feature.
@@ -60,9 +62,9 @@ The [EV/IV feasibility study](ev-iv-kit-feasibility.md) preserves the earlier de
 
 ## Español
 
-Esta página distingue la versión descargable de los prototipos aislados. Actualizada el 23 de octubre de 2026. Que una función aparezca en la wiki no significa que ya esté incluida en el parche descargable.
+Esta página distingue la versión descargable de los prototipos aislados. Actualizada el 24 de octubre de 2026. Que una función aparezca en la wiki no significa que ya esté incluida en el parche descargable.
 
-El [registro de activación local de alfa 2](qa-alpha2-activation.json) recoge 44 pruebas automáticas superadas y cuatro flujos QA de navegador, con los datos conservados y los límites de cada versión. No se ha publicado nada en GitHub Pages.
+El [registro de activación local de alfa 2](qa-alpha2-activation.json) recoge 44 pruebas automáticas superadas y cuatro flujos QA de navegador, con los datos conservados y los límites de cada versión. La [wiki y el parcheador públicos](https://0xcyberberserker.github.io/pokemon-ultimate-gold/) están disponibles; esto no cambia la descarga Alfa 2.
 
 ### Verificado y disponible
 
@@ -109,6 +111,8 @@ El prototipo anterior de MO, fix4, superó ocho casos independientes de menú, i
 El prototipo combinado incluye el kit Rocket, más objetos evolutivos en tiendas y acciones de MO sin enseñar movimientos. El candidato de tiendas y kit superó **89 comprobaciones de compra y recarga desde batería**: las compras de Moon Stone (Piedra Lunar) y Covenant Orb (Orbe Pacto) aumentaron solo las cantidades previstas, descontaron 2.100 y 3.500 respectivamente y sobrevivieron al guardado nativo y a un proceso nuevo sin cargar un estado del emulador. No había códigos activos durante la compra, el guardado ni la recuperación. Consulta [el informe de tiendas](qa-evolution-shop.json). El build combinado con MO sigue en pruebas. El posicionamiento sintético no demuestra el acceso normal por historia ni todas las evoluciones.
 
 ### Prototipos privados y estudios futuros
+
+**Sprint 1 de Kris:** la issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) sigue abierta. La candidata actual tiene aprobados nativos acotados y revisados independientemente para Guardar/Continuar, el ciclo de Bolsa y el recorrido en bicicleta. Core48 sigue inconcluso; el ciclo de bicicleta consumió ambos intentos autorizados, Core48 y Core49. Core50 se detuvo en el gate de entrada: la altura actual del jugador era 2, mientras el gate esperaba 0, y no se envió ninguna entrada de escalera. Es inconcluso y no se infiere un defecto. Siguen pendientes la integración completa y la matriz de aceptación restante. Consulta la [cobertura de Kris](kris-feasibility.md) y el [informe QA de la Bolsa](qa-kris-bag.json).
 
 **QA nativa del editor:** la build privada bd50 tiene casos revisados independientemente de cambios EV/IV por etapas, reinicios a cero, IV 31, topes EV, una ida y vuelta entre equipo y PC y cambios de naturaleza. Chikorita conservó Adamant tras guardar y arrancar en un proceso nuevo sin estado del emulador. Son casos acotados, no aceptación de todas las especies, consumidores de combate ni toda la aventura. El editor no está incluido en Alfa 2 descargable. Consulta el [estado actual del editor](qa-editor-current-status.md), la [evidencia de naturalezas](qa-nature-integrated-reset-review.md), el [caso de equipo↔PC](qa-editor-pc-roundtrip.md) y los [límites de las pruebas EV](qa-editor-ev-caps.md).
 
