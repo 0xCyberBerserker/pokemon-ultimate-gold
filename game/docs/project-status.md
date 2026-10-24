@@ -2,6 +2,12 @@
 
 ## English
 
+**Latest reviewed Kris result — private candidate, issue #33 remains open:**
+
+- **Opening portrait (Core51):** Kris now appears in scene 4 on a new private candidate. Independent review covered all 500 dense scene-4 frames and 201 periodic samples (667 unique PNGs). The compared scene-2 frame, Ethan upper screen and two title frames match the previous candidate pixel for pixel.
+- **Ladder (Core50):** the avatar reached the ladder tile, but the entry check expected actor height 0 and observed 2. The run stopped before UP/DOWN; ladder transit remains untested. No ROM defect was established and this packet authorizes no retry.
+- **Still pending:** ordinary Continue/field verification after the portrait integration, other required field/counterpart contexts and full Kris acceptance. The movie run made no gameplay Save and proves neither every-frame no-flash behavior nor later gameplay. Downloads remain unchanged. Earlier entries below retain their historical build-specific scope. [Reviewed QA](qa-kris-bag.json).
+
 This page separates the downloadable build from isolated prototypes. Updated on 24 October 2026. A feature appearing in the wiki does not mean that it is already included in the patch download.
 
 The [local Alpha 2 activation record](qa-alpha2-activation.json) records 44 passing automated tests and four browser QA flows, with the retained data counts and build-specific limits. The public [wiki and patcher](https://0xcyberberserker.github.io/pokemon-ultimate-gold/) are available; this does not change the Alpha 2 download.
@@ -61,6 +67,12 @@ The combined prototype includes the Rocket kit, additional evolution-item shop s
 The [EV/IV feasibility study](ev-iv-kit-feasibility.md) preserves the earlier design and isolated probes; use the current status linked above for later native results. The [Kris study](kris-feasibility.md) identifies required assets and compatibility gaps. The [future PWT study](world-tournament-feasibility.md) evaluates an HGSS-native tournament and reuse conditions; no licensed drop-in module was found in the bounded review. Kris and PWT are not included in the downloadable ROM.
 
 ## Español
+
+**Último resultado revisado de Kris — candidata privada, la issue #33 sigue abierta:**
+
+- **Retrato inicial (Core51):** Kris ya aparece en la escena 4 de una nueva candidata privada. La revisión independiente cubrió los 500 fotogramas densos de esa escena y 201 muestras periódicas (667 PNG únicos). El fotograma comparado de la escena 2, la pantalla superior con Ethan y dos fotogramas de título coinciden píxel a píxel con la candidata anterior.
+- **Escalera (Core50):** el avatar llegó a la casilla de la escalera, pero la comprobación de entrada esperaba altura del actor 0 y observó 2. Se detuvo antes de pulsar UP/DOWN; el tránsito sigue sin probarse. No se demostró un defecto de ROM y este paquete no autoriza reintento.
+- **Pendiente:** verificar Continue y campo ordinarios tras integrar el retrato, otros contextos requeridos de campo/contraparte y la aceptación completa de Kris. La prueba de película no guardó una partida jugable ni demuestra ausencia de destellos en todos los fotogramas o el juego posterior. Las descargas no cambian. Las entradas anteriores conservan abajo su alcance histórico por build. [QA revisado](qa-kris-bag.json).
 
 Esta página distingue la versión descargable de los prototipos aislados. Actualizada el 24 de octubre de 2026. Que una función aparezca en la wiki no significa que ya esté incluida en el parche descargable.
 

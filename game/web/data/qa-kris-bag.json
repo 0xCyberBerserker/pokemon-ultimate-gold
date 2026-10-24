@@ -2084,5 +2084,70 @@
     ],
     "previous_entries_unchanged": true,
     "default_download_changed": false
+  },
+  "k04_core50_and_k02_core51_reviewed_delta": {
+    "status": "REVIEWED_BOUNDED_RESULTS_ISSUE33_OPEN",
+    "previous_qa_sha256": "a29466737ce1efe25eb8feb0bdcfbe454b073671ae1add9924b4215ea6f5a37c",
+    "k04_core50_ladder": {
+      "status": "INCONCLUSIVE_ENTRY_HEIGHT_MISMATCH",
+      "evidence_manifest_sha256": "5f6c5e0c8bf8c8aa9703f91fb8f4d58bb80e98742d93bf5db1f7114deec6d0fa",
+      "independent_review_sha256": "1438b2a3097c70322faffc40c813a0dff947a874fca1fca9509f12c66302c959",
+      "root_review_sha256": "b61a25fd3073380e453a55b4a414f6a21b9537077cc74b7d58d081996651541e",
+      "frames": 1326,
+      "commands_including_quit": 8,
+      "endpoint_pngs": 7,
+      "dense_windows": 0,
+      "actual_actor_current_y": 2,
+      "expected_actor_current_y": 0,
+      "ladder_input_sent": false,
+      "ordinary_save": false,
+      "source_and_fixture_unchanged": true,
+      "retry_authorized_in_packet": false,
+      "result": {
+        "en": "The female avatar reached the ladder tile, but the entry guard rejected actor height 2 against expected 0. The operator quit before UP/DOWN. Warp or matrix height 0 does not establish runtime actor height 0. No ladder transit or ROM defect was demonstrated.",
+        "es": "El avatar femenino llegó a la casilla de la escalera, pero la guarda rechazó la altura del actor 2 frente a la esperada 0. Se salió antes de pulsar UP/DOWN. La altura 0 del warp o de la matriz no demuestra altura 0 del actor en ejecución. No se probó el tránsito ni se demostró un defecto de ROM."
+      }
+    },
+    "k02_core51_scene4": {
+      "status": "PASS_BOUNDED_NATIVE_SCENE4_KRIS_PORTRAIT_AND_TITLE",
+      "private_candidate_binding": "Retained in private evidence; candidate hash intentionally excluded from public export.",
+      "evidence_manifest_sha256": "c1f1a3a512d05e299a487b01349e66fb62ea1999d3e997d0a93a5d62b4ec8b0b",
+      "independent_review_sha256": "f9d63a0f73630db770b755767cf50eb0c1a5dd3a697f518ee4212d222659a66a",
+      "independent_review_json_sha256": "0971f76a423dffa82af9954ac63f2c5c65f98ce22b8b876d26f9ed7ebc1222d8",
+      "root_review_sha256": "411df1ce58767d85a6bc2012ae2f3dd55e1c2d14d79a23bd5eed8a86b438e08a",
+      "frames": 3000,
+      "neutral_steps": 5,
+      "commands_including_quit": 6,
+      "unique_pngs": 667,
+      "periodic_pngs": 201,
+      "dense_scene4_pngs": 500,
+      "dense_zero_based_range": [
+        1900,
+        2399
+      ],
+      "png_bytes": 5855525,
+      "source_save_copy": false,
+      "controller_input": false,
+      "touch": false,
+      "cheats": false,
+      "savestate": false,
+      "ordinary_save": false,
+      "run_local_blank_dsv_created_by_core": true,
+      "battery_save_load": "NOT_TESTED",
+      "runner_gameplay_acceptance": "NOT_ASSESSED",
+      "source_pins_before_after_equal": true,
+      "result": {
+        "en": "Kris appears in the reviewed scene-4 portrait. All 500 dense frames and 201 periodic samples were independently reviewed; overlapping samples yield 667 unique images. The compared scene-2 frame, Ethan upper screen and two title frames match the previous candidate pixel for pixel. This is bounded movie evidence, not all-frame no-flash, later field/save or full Kris acceptance.",
+        "es": "Kris aparece en el retrato revisado de la escena 4. Se revisaron independientemente los 500 fotogramas densos y las 201 muestras periódicas; el solapamiento deja 667 imágenes únicas. El fotograma comparado de la escena 2, la pantalla superior con Ethan y dos fotogramas de título coinciden píxel a píxel con la candidata anterior. Es evidencia acotada de la película, sin aceptar ausencia continua de destellos, campo/guardado posterior ni Kris completa."
+      },
+      "remaining": [
+        "Ordinary Continue/field check after ROM relayout",
+        "Other required field and counterpart contexts",
+        "Full K02 and issue #33 acceptance"
+      ],
+      "public_artwork_or_candidate_released": false
+    },
+    "previous_entries_unchanged": true,
+    "default_download_changed": false
   }
 }
