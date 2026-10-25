@@ -6,6 +6,8 @@
 
 **Pokéathlon entry:** Separate checks reached the receptionist menu and showed Kris in the sports outfit after one Speed selection. The competition, return to the ordinary field and save/reload remain pending; #33 stays open. [QA details](docs/qa-kris-bag.json).
 
+**Apricorn interaction:** One Grn Apricorn was collected, with captured movement during the interaction and ordinary field movement afterward. Save/reload, the remaining required field contexts and complete Kris acceptance remain pending. Public downloads are unchanged. [QA details](docs/qa-kris-bag.json).
+
 - **Credits (Core57/Core59):** across the two profile branches, captured frames contain exact positive matches for all 12 Kris sprite cells. This does not prove every pose in each branch, continuous absence of flashes, ordinary male-avatar play or complete Kris support.
 - **Opening exit (Core62):** fixed-size integration and file-scope checks passed. Native playback corrected the first target exit frame; the next still matches the clipped baseline. Independent review confirmed that correction is incomplete. Core63 later captured the complete exit tail; see below.
 - **Bag (Core61):** independent native comparison confirms the diagnostic deliberately contains only the face and that the original view already crops the head. This does not establish a camera fault or full-body fit. Keep the original camera; complete-body Kris remains unassessed.
@@ -62,6 +64,8 @@
 **Último resultado revisado de Kris — la issue #33 sigue abierta; Alfa 2 no cambia:**
 
 **Entrada al Pokéathlon:** En pruebas separadas se llegó al menú de la recepcionista y se vio a Kris con el atuendo deportivo tras seleccionar Speed una vez. Siguen pendientes la competición, la vuelta al campo normal y guardar/recargar; la #33 continúa abierta. [Detalles QA](docs/qa-kris-bag.json).
+
+**Interacción con Apricorn:** Se recogió un Grn Apricorn (Bonguri Verde); se capturó movimiento durante la interacción y movimiento normal por el campo después. Siguen pendientes guardar/recargar, los demás contextos de campo requeridos y la aceptación completa de Kris. Las descargas públicas no cambian. [Detalles QA](docs/qa-kris-bag.json).
 
 - **Créditos (Core57/Core59):** entre las dos ramas de perfil, las capturas contienen coincidencias positivas exactas de las 12 celdas del sprite de Kris. Esto no demuestra todas las poses en cada rama, ausencia continua de destellos, juego ordinario con avatar masculino ni soporte completo de Kris.
 - **Salida de la intro (Core62):** pasaron la integración de tamaño fijo y las comprobaciones del alcance de archivos. La reproducción nativa corrigió el primer fotograma objetivo; el siguiente aún coincide con la referencia recortada. La revisión independiente confirmó que esta corrección está incompleta. Core63 capturó después toda la salida; véase abajo.
