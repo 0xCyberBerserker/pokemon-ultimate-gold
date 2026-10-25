@@ -4,6 +4,8 @@
 
 **Latest reviewed Kris result — issue #33 remains open; Alpha 2 is unchanged:**
 
+On the private Kris candidate, one check at Cherrygrove City Pokémon Center showed her appearance remain consistent through the visible healing sequence and return to the field; no change to Lyra was observed in that interval. Save/reload and remaining required contexts are pending; full Kris integration is not yet accepted. [QA details](docs/qa-kris-bag.json).
+
 **Pokéathlon entry:** Separate checks reached the receptionist menu and showed Kris in the sports outfit after one Speed selection. The competition, return to the ordinary field and save/reload remain pending; #33 stays open. [QA details](docs/qa-kris-bag.json).
 
 **Apricorn interaction:** One Grn Apricorn was collected, with captured movement during the interaction and ordinary field movement afterward. Save/reload, the remaining required field contexts and complete Kris acceptance remain pending. Public downloads are unchanged. [QA details](docs/qa-kris-bag.json).
@@ -62,6 +64,8 @@
 ## Español
 
 **Último resultado revisado de Kris — la issue #33 sigue abierta; Alfa 2 no cambia:**
+
+En una prueba de la candidata privada de Kris en Cherrygrove City Pokémon Center (Centro Pokémon de Ciudad Cerezo), mantuvo su aspecto durante la secuencia visible de curación y la vuelta al campo; no se observó un cambio a Lyra en ese intervalo. Guardar/recargar y los contextos restantes siguen pendientes; la integración completa de Kris aún no está aceptada. [Detalles QA](docs/qa-kris-bag.json).
 
 **Entrada al Pokéathlon:** En pruebas separadas se llegó al menú de la recepcionista y se vio a Kris con el atuendo deportivo tras seleccionar Speed una vez. Siguen pendientes la competición, la vuelta al campo normal y guardar/recargar; la #33 continúa abierta. [Detalles QA](docs/qa-kris-bag.json).
 
