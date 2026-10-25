@@ -4,6 +4,8 @@
 
 **Latest reviewed Kris result — issue #33 remains open; Alpha 2 is unchanged:**
 
+On the private Kris candidate, one check at Cherrygrove City Pokémon Center showed her appearance remain consistent through the visible healing sequence and return to the field; no change to Lyra was observed in that interval. Save/reload and remaining required contexts are pending; full Kris integration is not yet accepted. [QA details](qa-kris-bag.json).
+
 - **Credits (Core57/Core59):** across the two profile branches, captured frames contain exact positive matches for all 12 Kris sprite cells. This does not prove every pose in each branch, continuous absence of flashes, ordinary male-avatar play or complete Kris support.
 - **Opening exit (Core62):** fixed-size integration and file-scope checks passed. Native playback corrected the first target exit frame; the next still matches the clipped baseline. Independent review confirmed that correction is incomplete. Core63 later captured the complete exit tail; see below.
 - **Bag (Core61):** independent native comparison confirms the diagnostic deliberately contains only the face and that the original view already crops the head. This does not establish a camera fault or full-body fit. Keep the original camera; complete-body Kris remains unassessed.
@@ -77,6 +79,8 @@ The [EV/IV feasibility study](ev-iv-kit-feasibility.md) preserves the earlier de
 ## Español
 
 **Último resultado revisado de Kris — la issue #33 sigue abierta; Alfa 2 no cambia:**
+
+En una prueba de la candidata privada de Kris en Cherrygrove City Pokémon Center (Centro Pokémon de Ciudad Cerezo), mantuvo su aspecto durante la secuencia visible de curación y la vuelta al campo; no se observó un cambio a Lyra en ese intervalo. Guardar/recargar y los contextos restantes siguen pendientes; la integración completa de Kris aún no está aceptada. [Detalles QA](qa-kris-bag.json).
 
 - **Créditos (Core57/Core59):** entre las dos ramas de perfil, las capturas contienen coincidencias positivas exactas de las 12 celdas del sprite de Kris. Esto no demuestra todas las poses en cada rama, ausencia continua de destellos, juego ordinario con avatar masculino ni soporte completo de Kris.
 - **Salida de la intro (Core62):** pasaron la integración de tamaño fijo y las comprobaciones del alcance de archivos. La reproducción nativa corrigió el primer fotograma objetivo; el siguiente aún coincide con la referencia recortada. La revisión independiente confirmó que esta corrección está incompleta. Core63 capturó después toda la salida; véase abajo.
