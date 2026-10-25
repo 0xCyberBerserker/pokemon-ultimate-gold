@@ -4,7 +4,7 @@
 
 **Latest reviewed Kris result — issue #33 remains open; Alpha 2 is unchanged:**
 
-A bounded native test of the private Kris candidate observed the Team Rocket outfit being removed, a complete victory over the Rocket trainer, and a visible return to the field as Kris with the expected story progress. Player movement after the scene and ordinary save/reload remain unverified.
+A bounded native test of the private Kris candidate verified removal of the Team Rocket outfit, a complete victory over the Rocket trainer, return to the field as Kris, and one step north after the scene with the expected story progress. Ordinary save/reload of that progress remains unverified.
 
 On the private Kris candidate, one check at Cherrygrove City Pokémon Center showed her appearance remain consistent through the visible healing sequence and return to the field; no change to Lyra was observed in that interval. Save/reload and remaining required contexts are pending; full Kris integration is not yet accepted. [QA details](qa-kris-bag.json).
 
@@ -82,7 +82,7 @@ The [EV/IV feasibility study](ev-iv-kit-feasibility.md) preserves the earlier de
 
 **Último resultado revisado de Kris — la issue #33 sigue abierta; Alfa 2 no cambia:**
 
-Una prueba nativa acotada de la candidata privada de Kris observó la retirada del uniforme del Team Rocket, la victoria completa contra el recluta y el regreso visible al mapa como Kris con el progreso esperado. Siguen pendientes de verificar el movimiento del jugador tras la escena y guardar/recargar de forma ordinaria.
+Una prueba nativa acotada de la candidata privada de Kris verificó la retirada del uniforme del Team Rocket, la victoria contra el recluta, el regreso al mapa como Kris y un paso al norte tras la escena con el progreso esperado. Sigue pendiente verificar un guardado y recarga ordinarios de ese progreso.
 
 En una prueba de la candidata privada de Kris en Cherrygrove City Pokémon Center (Centro Pokémon de Ciudad Cerezo), mantuvo su aspecto durante la secuencia visible de curación y la vuelta al campo; no se observó un cambio a Lyra en ese intervalo. Guardar/recargar y los contextos restantes siguen pendientes; la integración completa de Kris aún no está aceptada. [Detalles QA](qa-kris-bag.json).
 
