@@ -4,6 +4,8 @@
 
 **Latest reviewed Kris result — issue #33 remains open:**
 
+The private Kris candidate also loads a prepared test save with the female character already in the Team Rocket story uniform. Removing the uniform during the story and checking an ordinary save/reload are still pending. [QA details](qa-kris-bag.json).
+
 On the private Kris candidate, one check at Cherrygrove City Pokémon Center showed her appearance remain consistent through the visible healing sequence and return to the field; no change to Lyra was observed in that interval. Save/reload and remaining required contexts are pending; full Kris integration is not yet accepted. [QA details](qa-kris-bag.json).
 
 **Pokéathlon entry — partial test:** Separate checks reached the Pokéathlon map and receptionist menu; after one Speed selection, Kris appeared in the sports outfit before the event. The competition, return to her normal field appearance and save/reload remain untested, so issue #33 stays open. [QA details](qa-kris-bag.json).
@@ -94,6 +96,8 @@ The additional battle-source review distinguishes ordinary and link backpics; re
 ## Español
 
 **Último resultado revisado de Kris — la issue #33 sigue abierta:**
+
+La candidata privada de Kris también carga una partida de prueba preparada en la que la protagonista ya lleva el uniforme de la historia del Team Rocket. Aún está pendiente retirarlo durante la historia y comprobar un guardado/recarga ordinarios. [Detalles QA](qa-kris-bag.json).
 
 En una prueba de la candidata privada de Kris en Cherrygrove City Pokémon Center (Centro Pokémon de Ciudad Cerezo), mantuvo su aspecto durante la secuencia visible de curación y la vuelta al campo; no se observó un cambio a Lyra en ese intervalo. Guardar/recargar y los contextos restantes siguen pendientes; la integración completa de Kris aún no está aceptada. [Detalles QA](qa-kris-bag.json).
 
