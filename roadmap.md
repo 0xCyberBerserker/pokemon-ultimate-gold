@@ -7,7 +7,7 @@ The live backlog is in [Projects](https://github.com/users/0xCyberBerserker/proj
 - Import reviewed game source and evidence without disrupting active development.
 - Sprint 0, confirmed with the game lead: **Integrated editor and reproducible evidence**. Track the active editor/PC/Kris work without invented deadlines.
 - Complete bounded tests, then prepare a short playable review for The designated reviewer.
-- Decide a release only after gameplay, provenance/licensing and human acceptance. Kris integration is pending asset provenance; the editor prototype is separate from downloadable Alpha 2. The previously deferred PWT implementation remains outside current scope.
+- Decide a release only after gameplay, provenance/licensing and human acceptance. Kris remains incomplete: the bounded Core92 run passed capture-integrity review only, and the I/O-phase cause is still under diagnosis; the single Route A K11 candidate exceeded the current triangle cap and stopped before integration. See [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) for scope and limitations. Asset provenance remains a gate; the editor prototype is separate from downloadable Alpha 2. The previously deferred PWT implementation remains outside current scope.
 
 ### Future platform proposals — UG-PORTS-20261023
 
@@ -35,7 +35,7 @@ El backlog vigente está en [Projects](https://github.com/users/0xCyberBerserker
 - Importar fuentes y evidencias revisadas sin interrumpir el trabajo activo.
 - Sprint 0 confirmado con el chat técnico: **Editor integrado y evidencia reproducible**. Seguimiento del editor, PC y Kris sin inventar fechas.
 - Completar las pruebas acotadas y preparar una revisión jugable breve para La persona revisora.
-- Decidir la release tras validar juego, procedencia/licencias y aceptación humana. Kris depende de la procedencia de recursos; el prototipo del editor sigue separado de Alpha 2 descargable. Implementar PWT sigue aplazado.
+- Decidir la release tras validar juego, procedencia/licencias y aceptación humana. Kris sigue incompleta: la ejecución acotada de Core92 solo superó la revisión de integridad de captura y la causa de fase de E/S sigue en diagnóstico; la única candidata K11 de ruta A superó el límite vigente de triángulos y se detuvo antes de integrarse. Consulta el alcance y sus límites en la [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33). La procedencia de recursos sigue siendo un gate; el prototipo del editor permanece separado de Alpha 2 descargable. Implementar PWT sigue aplazado.
 
 ### Propuestas futuras de plataformas — UG-PORTS-20261023
 
