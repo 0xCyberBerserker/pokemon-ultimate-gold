@@ -6,6 +6,8 @@
 
 **Pokéathlon entry — partial test:** Separate checks reached the Pokéathlon map and receptionist menu; after one Speed selection, Kris appeared in the sports outfit before the event. The competition, return to her normal field appearance and save/reload remain untested, so issue #33 stays open. [QA details](qa-kris-bag.json).
 
+**Apricorn harvest — bounded result:** In one tested interaction, Kris collected a Grn Apricorn; captured frames show character movement during the interaction and ordinary field movement afterward. Save/reload, the remaining required field contexts and complete Kris acceptance remain untested. Public downloads are unchanged. [QA details](qa-kris-bag.json).
+
 - **Opening portrait (Core51):** Kris appeared in scene 4. Independent review covered all 500 dense scene-4 frames and 201 periodic samples (667 unique PNGs). The compared scene-2 frame, Ethan upper screen and two title frames match the previous candidate pixel for pixel. The bounded technical check passed; portrait scale/crop adjustment remains in progress and visual acceptance is pending.
 - **Ladder (Core50):** the avatar reached the ladder tile, but the entry check expected actor height 0 and observed 2. Core50 did not test ladder transit. No ROM defect was established and this packet authorizes no retry.
 - **Still pending:** ordinary Continue/field verification after the portrait integration, other required field/counterpart contexts and full Kris acceptance. The movie run made no gameplay Save and proves neither every-frame no-flash behavior nor later gameplay. Downloads remain unchanged. Earlier entries below retain their historical build-specific scope. [Reviewed QA](qa-kris-bag.json).
@@ -92,6 +94,8 @@ The additional battle-source review distinguishes ordinary and link backpics; re
 **Último resultado revisado de Kris — la issue #33 sigue abierta:**
 
 **Entrada al Pokéathlon — prueba parcial:** En pruebas separadas se llegó al mapa del Pokéathlon y al menú de la recepcionista; tras seleccionar Speed una vez, Kris apareció con el atuendo deportivo antes del evento. Siguen sin probarse la competición, la vuelta a su aspecto normal en el campo y guardar/recargar; la issue #33 sigue abierta. [Detalles QA](qa-kris-bag.json).
+
+**Cosecha de Apricorn — resultado acotado:** En una interacción probada, Kris recogió un Grn Apricorn (Bonguri Verde); las capturas muestran movimiento del personaje durante la interacción y movimiento normal por el campo después. Siguen sin probarse guardar/recargar, los demás contextos de campo requeridos y la aceptación completa de Kris. Las descargas públicas no cambian. [Detalles QA](qa-kris-bag.json).
 
 - **Retrato inicial (Core51):** Kris apareció en la escena 4. La revisión independiente cubrió los 500 fotogramas densos de esa escena y 201 muestras periódicas (667 PNG únicos). El fotograma comparado de la escena 2, la pantalla superior con Ethan y dos fotogramas de título coinciden píxel a píxel con la candidata anterior. La comprobación técnica acotada pasó; el ajuste de escala/recorte sigue en curso y la aceptación visual está pendiente.
 - **Escalera (Core50):** el avatar llegó a la casilla de la escalera, pero la comprobación de entrada esperaba altura del actor 0 y observó 2. Core50 no probó el tránsito de la escalera. No se demostró un defecto de ROM y este paquete no autoriza reintento.

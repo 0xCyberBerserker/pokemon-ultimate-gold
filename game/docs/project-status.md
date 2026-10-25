@@ -34,6 +34,8 @@ Fix5 now has native evidence for Party Healer, reusable Rare Candy and Oran Berr
 
 **Pokéathlon checks:** Separate tests reached the receptionist menu and showed Kris in the sports outfit after one Speed selection. The competition, return to the ordinary field appearance and save/reload remain untested. [Kris QA](qa-kris-bag.json).
 
+**Apricorn interaction:** One Grn Apricorn was collected; captured frames show interaction movement and ordinary field movement resumed afterward. Save/reload, the remaining required field contexts and complete Kris acceptance remain untested. Public downloads are unchanged. [Kris QA](qa-kris-bag.json).
+
 **Alpha 2 Rocket gift:** exact-target native acceptance and independent review confirm nine intended gifts, with the marker last and no unrelated Bag changes. A walking friendship increment is explicitly accounted for. Later independently reviewed evidence adds native Save and fresh-process recovery of the kit. Decline and full-bag behavior remain unaccepted. See [gift QA and location capture](qa-alpha2-gift.md).
 
 **Alpha 2 evolution shop:** the exact fix6a target passed one native Moon Stone and one Covenant Orb purchase, exact prices, inventory/party/guard preservation, native saving and state-free cold reload. Root regenerated the audit from all 22 runs and reviewed purchase screenshots. The wiki includes the Goldenrod Department Store 2F location image. See [current shop QA](alpha2-shop-qa.md); other purchases and normal story access remain untested.
@@ -105,6 +107,8 @@ Fix5 ya tiene evidencias nativas de Party Healer (curador del equipo), Rare Cand
 ### En pruebas
 
 **Pruebas del Pokéathlon:** En pruebas separadas se llegó al menú de la recepcionista y apareció Kris con el atuendo deportivo tras seleccionar Speed una vez. Siguen sin probarse la competición, la vuelta al aspecto normal en el campo y guardar/recargar. [QA de Kris](qa-kris-bag.json).
+
+**Interacción con Apricorn:** Se recogió un Grn Apricorn (Bonguri Verde); las capturas muestran movimiento durante la interacción y la reanudación del movimiento normal por el campo. Siguen sin probarse guardar/recargar, los demás contextos de campo requeridos y la aceptación completa de Kris. Las descargas públicas no cambian. [QA de Kris](qa-kris-bag.json).
 
 **Regalo Rocket de alfa 2:** la aceptación nativa del hash exacto y la revisión independiente confirman los nueve regalos previstos, el marcador al final y ningún cambio de Bolsa ajeno a ellos. Se registra expresamente un incremento de amistad al caminar. Otra evidencia posterior, revisada independientemente, añade guardado nativo y recuperación del kit en un proceso nuevo. Faltan aceptación del rechazo y bolsa llena. Consulta [QA y captura de localización](qa-alpha2-gift.md).
 
