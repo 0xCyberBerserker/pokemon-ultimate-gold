@@ -4,7 +4,7 @@
 
 **Latest reviewed Kris result — issue #33 remains open:**
 
-The private Kris candidate also loads a prepared test save with the female character already in the Team Rocket story uniform. Removing the uniform during the story and checking an ordinary save/reload are still pending. [QA details](qa-kris-bag.json).
+A bounded native run of the private Kris candidate using its prepared save observed the Team Rocket uniform being removed during dialogue and a visual return to Kris. The subsequent battle, free return to the field and ordinary save/reload remain pending. [QA details](qa-kris-bag.json).
 
 On the private Kris candidate, one check at Cherrygrove City Pokémon Center showed her appearance remain consistent through the visible healing sequence and return to the field; no change to Lyra was observed in that interval. Save/reload and remaining required contexts are pending; full Kris integration is not yet accepted. [QA details](qa-kris-bag.json).
 
@@ -97,7 +97,7 @@ The additional battle-source review distinguishes ordinary and link backpics; re
 
 **Último resultado revisado de Kris — la issue #33 sigue abierta:**
 
-La candidata privada de Kris también carga una partida de prueba preparada en la que la protagonista ya lleva el uniforme de la historia del Team Rocket. Aún está pendiente retirarlo durante la historia y comprobar un guardado/recarga ordinarios. [Detalles QA](qa-kris-bag.json).
+En una ejecución nativa acotada de la candidata privada de Kris con su partida preparada, se observó la retirada del uniforme del Team Rocket durante el diálogo y la vuelta visual a Kris. Siguen pendientes el combate posterior, el regreso libre al campo y un guardado/recarga ordinarios. [Detalles QA](qa-kris-bag.json).
 
 En una prueba de la candidata privada de Kris en Cherrygrove City Pokémon Center (Centro Pokémon de Ciudad Cerezo), mantuvo su aspecto durante la secuencia visible de curación y la vuelta al campo; no se observó un cambio a Lyra en ese intervalo. Guardar/recargar y los contextos restantes siguen pendientes; la integración completa de Kris aún no está aceptada. [Detalles QA](qa-kris-bag.json).
 
