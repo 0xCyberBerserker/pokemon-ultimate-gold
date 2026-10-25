@@ -4,6 +4,8 @@
 
 **Latest reviewed Kris result — issue #33 remains open; Alpha 2 is unchanged:**
 
+The private Kris candidate also loads a prepared test save with the female character already in the Team Rocket story uniform. Removing the uniform during the story and checking an ordinary save/reload are still pending. [QA details](qa-kris-bag.json).
+
 On the private Kris candidate, one check at Cherrygrove City Pokémon Center showed her appearance remain consistent through the visible healing sequence and return to the field; no change to Lyra was observed in that interval. Save/reload and remaining required contexts are pending; full Kris integration is not yet accepted. [QA details](qa-kris-bag.json).
 
 - **Credits (Core57/Core59):** across the two profile branches, captured frames contain exact positive matches for all 12 Kris sprite cells. This does not prove every pose in each branch, continuous absence of flashes, ordinary male-avatar play or complete Kris support.
@@ -79,6 +81,8 @@ The [EV/IV feasibility study](ev-iv-kit-feasibility.md) preserves the earlier de
 ## Español
 
 **Último resultado revisado de Kris — la issue #33 sigue abierta; Alfa 2 no cambia:**
+
+La candidata privada de Kris también carga una partida de prueba preparada en la que la protagonista ya lleva el uniforme de la historia del Team Rocket. Aún está pendiente retirarlo durante la historia y comprobar un guardado/recarga ordinarios. [Detalles QA](qa-kris-bag.json).
 
 En una prueba de la candidata privada de Kris en Cherrygrove City Pokémon Center (Centro Pokémon de Ciudad Cerezo), mantuvo su aspecto durante la secuencia visible de curación y la vuelta al campo; no se observó un cambio a Lyra en ese intervalo. Guardar/recargar y los contextos restantes siguen pendientes; la integración completa de Kris aún no está aceptada. [Detalles QA](qa-kris-bag.json).
 
