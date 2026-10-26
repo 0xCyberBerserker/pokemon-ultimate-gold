@@ -557,10 +557,10 @@
       ]
     }
   ],
-  "full_screen_source_references": 3543,
-  "unique_byte_distinct_images": 2306,
-  "duplicate_source_references": 1237,
-  "unique_png_bytes": 31107772,
+  "full_screen_source_references": 3596,
+  "unique_byte_distinct_images": 2329,
+  "duplicate_source_references": 1267,
+  "unique_png_bytes": 31234481,
   "excluded_png_references": 27,
   "excluded_png_references_by_reason": {
     "decoded_resource_or_art_crop": 6,
@@ -623,6 +623,125 @@
       "status_note": {
         "en": "Bounded historical evidence; this gallery does not imply full feature or release acceptance.",
         "es": "Evidencia histórica acotada; esta galería no implica aceptación completa de la función ni de la versión."
+      }
+    },
+    "k02-core97": {
+      "caption": {
+        "en": "Kris portrait entry, hold and exit in the opening movie; complete captured interval.",
+        "es": "Entrada, pausa y salida del retrato de Kris en la película inicial; intervalo capturado completo."
+      },
+      "stage": "qa_partial",
+      "permissions": {
+        "public_gallery_export_authorized": true,
+        "publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "status_note": {
+        "en": "The native runtime completed 2,200 frames. The outer postflight exited 1 because it required explicit ram:false in 55 commands although the protocol allows omission. All 53 captures were visually reviewed as 25 distinct RGB states; this is bounded evidence, not full Scene4, whole-game or human acceptance. No ROM change since Core93; K11 Bag model remains pending.",
+        "es": "El runtime nativo completó 2.200 fotogramas. El postflight exterior terminó con código 1 porque exigía ram:false explícito en 55 comandos aunque el protocolo permite omitirlo. Se revisaron las 53 capturas como 25 estados RGB distintos; es evidencia acotada, no aceptación de toda Scene4, del juego completo ni humana. La ROM no cambia respecto a Core93; el modelo de la Bolsa K11 sigue pendiente."
+      },
+      "capture_inventory": {
+        "source_references": 53,
+        "unique_byte_distinct_images_within_core97": 25,
+        "duplicate_source_references_within_core97": 28,
+        "unique_png_bytes": 139033,
+        "dimensions": [
+          256,
+          384
+        ],
+        "zero_based_frame_indices": [
+          2080,
+          2081,
+          2082,
+          2083,
+          2084,
+          2085,
+          2086,
+          2087,
+          2088,
+          2089,
+          2090,
+          2091,
+          2092,
+          2093,
+          2094,
+          2095,
+          2096,
+          2097,
+          2098,
+          2099,
+          2100,
+          2101,
+          2102,
+          2103,
+          2104,
+          2105,
+          2106,
+          2107,
+          2108,
+          2109,
+          2110,
+          2111,
+          2112,
+          2113,
+          2114,
+          2115,
+          2116,
+          2117,
+          2118,
+          2119,
+          2120,
+          2121,
+          2122,
+          2123,
+          2124,
+          2125,
+          2126,
+          2127,
+          2128,
+          2129,
+          2130,
+          2131,
+          2199
+        ],
+        "distinct_rgb_states": 25,
+        "deduplication": "SHA-256 plus exact byte comparison only; every source reference retained. No crop, resize, re-encoding or metadata removal."
+      },
+      "provenance": {
+        "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+        "source_evidence": {
+          "run_id": "core97-v1",
+          "result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "frame_trace_sha256": "d1e896ae372d819a9d727248f6799374df83334aed4b7be396d85ca40a1942fa",
+          "independent_review_sha256": "e3332213bfe9e30b07603ff07b9f5a8315aa845845bc682b16500b4090afdabc",
+          "root_disposition_sha256": "085700ad9e715c6378a77fdb44e38c4d3baad24f8b3380f3eb0e1d7f6d5085a6",
+          "native_runtime_status": "COMPLETED",
+          "frames_completed": 2200,
+          "outer_process_exit_code": 1,
+          "strict_postflight_status": "FAILED",
+          "strict_postflight_cause": {
+            "en": "Exact dictionary equality required explicit ram:false on 55 non-endpoint commands; the pinned protocol accepts omission as false. The two explicit ram:true endpoints matched. Original exit status is preserved.",
+            "es": "La igualdad exacta de diccionarios exigía ram:false explícito en 55 comandos sin muestra RAM; el protocolo fijado admite omitirlo y aplica false. Los dos extremos con ram:true explícito coincidieron. Se conserva el código de salida original."
+          }
+        },
+        "frozen_export_sha256": {
+          "manifest.json": "c484d31324baf4cf32d09fce7f6ccf33889f2c715d73ca8cc84f5bfb32c3c711",
+          "index.json": "5d5a7fc549ad26345675bcb037cb763bef193ff213578d9be143158dd024e6f9",
+          "README.md": "59da32a7a2e3555c7c89bacffce14101c0a7f08914541d988dcb1a295b3b5148"
+        },
+        "independent_export_review_sha256": "517da4f3cb2e5cead04b488ac11c45b676cec87fe176ec4f49f0fa7f93a23f65"
+      },
+      "editorial_selection": {
+        "status": "published bounded interval; not feature or release acceptance",
+        "highlight_frame": 2127,
+        "highlight_reason": {
+          "en": "A newly covered intermediate exit frame. This adds temporal coverage, not a new ROM correction or a before/after comparison.",
+          "es": "Fotograma intermedio de salida cubierto ahora. Amplía la cobertura temporal; no es una nueva corrección de ROM ni una comparación antes/después."
+        }
       }
     },
     "k04-core36": {
@@ -739,25 +858,6 @@
         "es": "Evidencia histórica acotada; esta galería no implica aceptación completa de la función ni de la versión."
       }
     },
-    "k04-k05-core47": {
-      "caption": {
-        "en": "Female field walking and running visual trace; bounded sample.",
-        "es": "Traza visual acotada de caminata y carrera de la protagonista."
-      },
-      "stage": "qa_partial",
-      "permissions": {
-        "public_gallery_export_authorized": true,
-        "publication_status": "not_published",
-        "credit": {
-          "en": "Project QA capture archive",
-          "es": "Archivo de capturas de QA del proyecto"
-        }
-      },
-      "status_note": {
-        "en": "Bounded historical evidence; this gallery does not imply full feature or release acceptance.",
-        "es": "Evidencia histórica acotada; esta galería no implica aceptación completa de la función ni de la versión."
-      }
-    },
     "k04-k05-core32": {
       "caption": {
         "en": "Observer pilot stopped on a contract gate; detection not assessed.",
@@ -802,6 +902,25 @@
         "es": "Piloto del observador con captura activada; detección no evaluada."
       },
       "stage": "experimental",
+      "permissions": {
+        "public_gallery_export_authorized": true,
+        "publication_status": "not_published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "status_note": {
+        "en": "Bounded historical evidence; this gallery does not imply full feature or release acceptance.",
+        "es": "Evidencia histórica acotada; esta galería no implica aceptación completa de la función ni de la versión."
+      }
+    },
+    "k04-k05-core47": {
+      "caption": {
+        "en": "Female field walking and running visual trace; bounded sample.",
+        "es": "Traza visual acotada de caminata y carrera de la protagonista."
+      },
+      "stage": "qa_partial",
       "permissions": {
         "public_gallery_export_authorized": true,
         "publication_status": "not_published",
@@ -1238,6 +1357,7 @@
     "k01-core16": 157,
     "k02-core46": 201,
     "k02-core51": 669,
+    "k02-core97": 53,
     "k04-core36": 30,
     "k04-core39": 18,
     "k04-core48": 53,
@@ -2597,6 +2717,61 @@
           "run_id": "core49",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-030409d7fb96d43d",
+      "file": "png/img-030409d7fb96d43d.png",
+      "sha256": "030409d7fb96d43dae4a8a529e59f92b2f7e5717b8826495832e92b66ae071de",
+      "size_bytes": 6599,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait entering from the left.",
+        "es": "Retrato de Kris entrando por la izquierda."
+      },
+      "alt": {
+        "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2089.",
+        "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2089."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002089.png",
+          "source_file_sha256": "030409d7fb96d43dae4a8a529e59f92b2f7e5717b8826495832e92b66ae071de",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2089,
+          "completed_frames": 2090,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait entering from the left.",
+            "es": "Retrato de Kris entrando por la izquierda."
+          },
+          "alt": {
+            "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2089.",
+            "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2089."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -15338,6 +15513,61 @@
       ]
     },
     {
+      "id": "img-1ed689f182e7b008",
+      "file": "png/img-1ed689f182e7b008.png",
+      "sha256": "1ed689f182e7b00831bfab746f2a5ae59721e3ccb07c5c88fa339fef6665eecb",
+      "size_bytes": 6261,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2119.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2119."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002119.png",
+          "source_file_sha256": "1ed689f182e7b00831bfab746f2a5ae59721e3ccb07c5c88fa339fef6665eecb",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2119,
+          "completed_frames": 2120,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2119.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2119."
+          },
+          "public_publication_status": "published"
+        }
+      ]
+    },
+    {
       "id": "img-1ed81d81d5a36577",
       "file": "png/img-1ed81d81d5a36577.png",
       "sha256": "1ed81d81d5a36577efadbd14e189a545b78bdfe0834ae1cf4ef34aad67906693",
@@ -20406,6 +20636,61 @@
           "run_id": "core51",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-2b352fecef157c4c",
+      "file": "png/img-2b352fecef157c4c.png",
+      "sha256": "2b352fecef157c4c0d5fad0d136f6237013714d50bd13c77d3ef6fc05b4e339a",
+      "size_bytes": 6675,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2118.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2118."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002118.png",
+          "source_file_sha256": "2b352fecef157c4c0d5fad0d136f6237013714d50bd13c77d3ef6fc05b4e339a",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2118,
+          "completed_frames": 2119,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2118.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2118."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -26073,6 +26358,61 @@
           "run_id": "core52",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-39a7862bbce21a62",
+      "file": "png/img-39a7862bbce21a62.png",
+      "sha256": "39a7862bbce21a626924e92eff6195225d4f08bea9e293ce8dd41a1f17e48a77",
+      "size_bytes": 3623,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2128.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2128."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002128.png",
+          "source_file_sha256": "39a7862bbce21a626924e92eff6195225d4f08bea9e293ce8dd41a1f17e48a77",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2128,
+          "completed_frames": 2129,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2128.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2128."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -38682,6 +39022,61 @@
       ]
     },
     {
+      "id": "img-51eea55126cd06b4",
+      "file": "png/img-51eea55126cd06b4.png",
+      "sha256": "51eea55126cd06b4dcf5684c8956fc5d2700f7c8a6aa7337028d3ef41d02bca1",
+      "size_bytes": 6217,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2122.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2122."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002122.png",
+          "source_file_sha256": "51eea55126cd06b4dcf5684c8956fc5d2700f7c8a6aa7337028d3ef41d02bca1",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2122,
+          "completed_frames": 2123,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2122.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2122."
+          },
+          "public_publication_status": "published"
+        }
+      ]
+    },
+    {
       "id": "img-51fcade38feb73cf",
       "file": "png/img-51fcade38feb73cf.png",
       "sha256": "51fcade38feb73cf1c0835a76e8f4aca7a6523ab3f9ca45e9f1da1355bf65475",
@@ -44611,6 +45006,61 @@
           "run_id": "core22",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-5f32c47d65f9bcbd",
+      "file": "png/img-5f32c47d65f9bcbd.png",
+      "sha256": "5f32c47d65f9bcbd34a26c5287c309df909cdbc73e7ceb1e1c50cda2097f8d09",
+      "size_bytes": 5697,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait entering from the left.",
+        "es": "Retrato de Kris entrando por la izquierda."
+      },
+      "alt": {
+        "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2088.",
+        "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2088."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002088.png",
+          "source_file_sha256": "5f32c47d65f9bcbd34a26c5287c309df909cdbc73e7ceb1e1c50cda2097f8d09",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2088,
+          "completed_frames": 2089,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait entering from the left.",
+            "es": "Retrato de Kris entrando por la izquierda."
+          },
+          "alt": {
+            "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2088.",
+            "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2088."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -56613,6 +57063,567 @@
       ]
     },
     {
+      "id": "img-789ce9eded3f6371",
+      "file": "png/img-789ce9eded3f6371.png",
+      "sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+      "size_bytes": 6940,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait held on screen.",
+        "es": "Retrato de Kris mantenido en pantalla."
+      },
+      "alt": {
+        "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+        "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002094.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2094,
+          "completed_frames": 2095,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002095.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2095,
+          "completed_frames": 2096,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002096.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2096,
+          "completed_frames": 2097,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002097.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2097,
+          "completed_frames": 2098,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002098.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2098,
+          "completed_frames": 2099,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002099.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2099,
+          "completed_frames": 2100,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002100.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2100,
+          "completed_frames": 2101,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002101.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2101,
+          "completed_frames": 2102,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002102.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2102,
+          "completed_frames": 2103,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002103.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2103,
+          "completed_frames": 2104,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002104.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2104,
+          "completed_frames": 2105,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002105.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2105,
+          "completed_frames": 2106,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002106.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2106,
+          "completed_frames": 2107,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002107.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2107,
+          "completed_frames": 2108,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002108.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2108,
+          "completed_frames": 2109,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002109.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2109,
+          "completed_frames": 2110,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002110.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2110,
+          "completed_frames": 2111,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002111.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2111,
+          "completed_frames": 2112,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002112.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2112,
+          "completed_frames": 2113,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002113.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2113,
+          "completed_frames": 2114,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002114.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2114,
+          "completed_frames": 2115,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002115.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2115,
+          "completed_frames": 2116,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002116.png",
+          "source_file_sha256": "789ce9eded3f6371056a847a96889bce186af4122a07186870e74c31d9010570",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2116,
+          "completed_frames": 2117,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait held on screen.",
+            "es": "Retrato de Kris mantenido en pantalla."
+          },
+          "alt": {
+            "en": "Kris portrait held on screen. Original full dual-screen capture; zero-based source frames 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116.",
+            "es": "Retrato de Kris mantenido en pantalla. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116."
+          },
+          "public_publication_status": "published"
+        }
+      ]
+    },
+    {
       "id": "img-78a2de551d796f21",
       "file": "png/img-78a2de551d796f21.png",
       "sha256": "78a2de551d796f21711f8aebd5f7fa1c7e558173914fc46bba39533e19a2ef76",
@@ -59956,6 +60967,61 @@
           "run_id": "core43",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-811cb30e8e979fa5",
+      "file": "png/img-811cb30e8e979fa5.png",
+      "sha256": "811cb30e8e979fa56fa327422675eddf57a3d0d491649350fb04766994260bda",
+      "size_bytes": 6908,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait entering from the left.",
+        "es": "Retrato de Kris entrando por la izquierda."
+      },
+      "alt": {
+        "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2092.",
+        "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2092."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002092.png",
+          "source_file_sha256": "811cb30e8e979fa56fa327422675eddf57a3d0d491649350fb04766994260bda",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2092,
+          "completed_frames": 2093,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait entering from the left.",
+            "es": "Retrato de Kris entrando por la izquierda."
+          },
+          "alt": {
+            "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2092.",
+            "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2092."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -63374,6 +64440,61 @@
           "run_id": "core51",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-888d315c0ca9c41f",
+      "file": "png/img-888d315c0ca9c41f.png",
+      "sha256": "888d315c0ca9c41f06e2a96fe391b00a37ffa58e8075d1e0a325697e670599af",
+      "size_bytes": 2850,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait entering from the left.",
+        "es": "Retrato de Kris entrando por la izquierda."
+      },
+      "alt": {
+        "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2085.",
+        "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2085."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002085.png",
+          "source_file_sha256": "888d315c0ca9c41f06e2a96fe391b00a37ffa58e8075d1e0a325697e670599af",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2085,
+          "completed_frames": 2086,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait entering from the left.",
+            "es": "Retrato de Kris entrando por la izquierda."
+          },
+          "alt": {
+            "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2085.",
+            "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2085."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -70500,7 +71621,8 @@
       },
       "build_sha256": "ae4208c7642590f691be25da8591dc43be541120b17e8340981218a8a8e36d13",
       "build_sha256s": [
-        "ae4208c7642590f691be25da8591dc43be541120b17e8340981218a8a8e36d13"
+        "ae4208c7642590f691be25da8591dc43be541120b17e8340981218a8a8e36d13",
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
       ],
       "caption": {
         "en": "Historical opening-movie capture with the small scene-four portrait before scale correction; title also shown.",
@@ -70532,8 +71654,50 @@
           "run_id": "core51",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002199.png",
+          "source_file_sha256": "9621ed8da92cc591f15dd26d6fc200ddab06c96708f8ee43afc483815836a594",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2199,
+          "completed_frames": 2200,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Later opening-movie control: Cyndaquil and fire effect.",
+            "es": "Control posterior de la película inicial: Cyndaquil y efecto de fuego."
+          },
+          "alt": {
+            "en": "Later opening-movie control: Cyndaquil and fire effect. Original full dual-screen capture; zero-based source frame 2199.",
+            "es": "Control posterior de la película inicial: Cyndaquil y efecto de fuego. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2199."
+          },
+          "public_publication_status": "published"
         }
-      ]
+      ],
+      "collection_contexts": {
+        "k02-core97": {
+          "caption": {
+            "en": "Later opening-movie control: Cyndaquil and fire effect.",
+            "es": "Control posterior de la película inicial: Cyndaquil y efecto de fuego."
+          },
+          "alt": {
+            "en": "Later opening-movie control: Cyndaquil and fire effect. Original full dual-screen capture; zero-based source frame 2199.",
+            "es": "Control posterior de la película inicial: Cyndaquil y efecto de fuego. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2199."
+          },
+          "review_scope": {
+            "en": "The native runtime completed 2,200 frames. The outer postflight exited 1 because it required explicit ram:false in 55 commands although the protocol allows omission. All 53 captures were visually reviewed as 25 distinct RGB states; this is bounded evidence, not full Scene4, whole-game or human acceptance. No ROM change since Core93; K11 Bag model remains pending.",
+            "es": "El runtime nativo completó 2.200 fotogramas. El postflight exterior terminó con código 1 porque exigía ram:false explícito en 55 comandos aunque el protocolo permite omitirlo. Se revisaron las 53 capturas como 25 estados RGB distintos; es evidencia acotada, no aceptación de toda Scene4, del juego completo ni humana. La ROM no cambia respecto a Core93; el modelo de la Bolsa K11 sigue pendiente."
+          }
+        }
+      },
+      "publication_status_by_collection": {
+        "k02-core97": "published"
+      }
     },
     {
       "id": "img-9655ffa3efcf8e2d",
@@ -71702,6 +72866,61 @@
           "run_id": "core29",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-98d7a00d3749dfad",
+      "file": "png/img-98d7a00d3749dfad.png",
+      "sha256": "98d7a00d3749dfad5163b54c4fbd740c4d0a44688946b034ac8b454bb3bfde34",
+      "size_bytes": 6850,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait entering from the left.",
+        "es": "Retrato de Kris entrando por la izquierda."
+      },
+      "alt": {
+        "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2091.",
+        "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2091."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002091.png",
+          "source_file_sha256": "98d7a00d3749dfad5163b54c4fbd740c4d0a44688946b034ac8b454bb3bfde34",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2091,
+          "completed_frames": 2092,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait entering from the left.",
+            "es": "Retrato de Kris entrando por la izquierda."
+          },
+          "alt": {
+            "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2091.",
+            "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2091."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -75231,6 +76450,61 @@
       ]
     },
     {
+      "id": "img-a18882c891bdcd96",
+      "file": "png/img-a18882c891bdcd96.png",
+      "sha256": "a18882c891bdcd96f8e9c8d12c34e954e7e2f19bf2b3f033f3a3f2c3917dfc44",
+      "size_bytes": 2526,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2129.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2129."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002129.png",
+          "source_file_sha256": "a18882c891bdcd96f8e9c8d12c34e954e7e2f19bf2b3f033f3a3f2c3917dfc44",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2129,
+          "completed_frames": 2130,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2129.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2129."
+          },
+          "public_publication_status": "published"
+        }
+      ]
+    },
+    {
       "id": "img-a197349af4661588",
       "file": "png/img-a197349af4661588.png",
       "sha256": "a197349af46615886f75f0e596439281c6f322c9c0e8dac091825646985b16f2",
@@ -75609,6 +76883,61 @@
           "run_id": "core47",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-a28aa93789c51d20",
+      "file": "png/img-a28aa93789c51d20.png",
+      "sha256": "a28aa93789c51d201c7a032a97f1c42e00a3d3d1cb1a02602ae79d0e0217b646",
+      "size_bytes": 5446,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2126.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2126."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002126.png",
+          "source_file_sha256": "a28aa93789c51d201c7a032a97f1c42e00a3d3d1cb1a02602ae79d0e0217b646",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2126,
+          "completed_frames": 2127,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2126.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2126."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -77333,6 +78662,61 @@
       ]
     },
     {
+      "id": "img-a6be22803011761e",
+      "file": "png/img-a6be22803011761e.png",
+      "sha256": "a6be22803011761e764d4a0aac6c49821794f82ca3e0e27dd20e270c947e5d8a",
+      "size_bytes": 5968,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2125.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2125."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002125.png",
+          "source_file_sha256": "a6be22803011761e764d4a0aac6c49821794f82ca3e0e27dd20e270c947e5d8a",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2125,
+          "completed_frames": 2126,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2125.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2125."
+          },
+          "public_publication_status": "published"
+        }
+      ]
+    },
+    {
       "id": "img-a6e981ff6421603f",
       "file": "png/img-a6e981ff6421603f.png",
       "sha256": "a6e981ff6421603f947fe912b2e3e1d365d9fb2459ba1031d7b113e6f0460cc6",
@@ -77375,6 +78759,61 @@
           "run_id": "core51",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-a6f117cbb045556a",
+      "file": "png/img-a6f117cbb045556a.png",
+      "sha256": "a6f117cbb045556af1005ec679701b472f0e481b1d9796c515903d76955c2c9b",
+      "size_bytes": 6956,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2117.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2117."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002117.png",
+          "source_file_sha256": "a6f117cbb045556af1005ec679701b472f0e481b1d9796c515903d76955c2c9b",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2117,
+          "completed_frames": 2118,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2117.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2117."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -79913,6 +81352,61 @@
       ]
     },
     {
+      "id": "img-ab98777dceed4230",
+      "file": "png/img-ab98777dceed4230.png",
+      "sha256": "ab98777dceed42301d927c9d999582b6eb3d39670371217ad592639f1639f612",
+      "size_bytes": 4735,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait entering from the left.",
+        "es": "Retrato de Kris entrando por la izquierda."
+      },
+      "alt": {
+        "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2087.",
+        "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2087."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002087.png",
+          "source_file_sha256": "ab98777dceed42301d927c9d999582b6eb3d39670371217ad592639f1639f612",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2087,
+          "completed_frames": 2088,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait entering from the left.",
+            "es": "Retrato de Kris entrando por la izquierda."
+          },
+          "alt": {
+            "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2087.",
+            "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2087."
+          },
+          "public_publication_status": "published"
+        }
+      ]
+    },
+    {
       "id": "img-abc0b00d52b80daa",
       "file": "png/img-abc0b00d52b80daa.png",
       "sha256": "abc0b00d52b80daa781a42df5b908564441e372a1a6bdff770b4c601cec90de4",
@@ -80688,6 +82182,61 @@
           "run_id": "core51",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-ae0af8db6e3aa6da",
+      "file": "png/img-ae0af8db6e3aa6da.png",
+      "sha256": "ae0af8db6e3aa6da851b4c48540738937ed7ebdf6bd30af57198baa4de6bf67a",
+      "size_bytes": 4589,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2127.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2127."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002127.png",
+          "source_file_sha256": "ae0af8db6e3aa6da851b4c48540738937ed7ebdf6bd30af57198baa4de6bf67a",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2127,
+          "completed_frames": 2128,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2127.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2127."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -89708,6 +91257,61 @@
       ]
     },
     {
+      "id": "img-b920860aaa7a0845",
+      "file": "png/img-b920860aaa7a0845.png",
+      "sha256": "b920860aaa7a08450c8f3f35f37db6d53e8650a6a81de5f7c8ceb7738abee0ca",
+      "size_bytes": 6215,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2124.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2124."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002124.png",
+          "source_file_sha256": "b920860aaa7a08450c8f3f35f37db6d53e8650a6a81de5f7c8ceb7738abee0ca",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2124,
+          "completed_frames": 2125,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2124.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2124."
+          },
+          "public_publication_status": "published"
+        }
+      ]
+    },
+    {
       "id": "img-b94cb164a9829e59",
       "file": "png/img-b94cb164a9829e59.png",
       "sha256": "b94cb164a9829e597bf7f3fb1cb638fe34b057df43e42269d51049cc97dcac0f",
@@ -93221,6 +94825,84 @@
       ]
     },
     {
+      "id": "img-c12a6ee89688e304",
+      "file": "png/img-c12a6ee89688e304.png",
+      "sha256": "c12a6ee89688e3040029c217e1f28926b3e53a4964abe7f1fe6c3628b5398f43",
+      "size_bytes": 6244,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frames 2120, 2121.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2120, 2121."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002120.png",
+          "source_file_sha256": "c12a6ee89688e3040029c217e1f28926b3e53a4964abe7f1fe6c3628b5398f43",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2120,
+          "completed_frames": 2121,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frames 2120, 2121.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2120, 2121."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002121.png",
+          "source_file_sha256": "c12a6ee89688e3040029c217e1f28926b3e53a4964abe7f1fe6c3628b5398f43",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2121,
+          "completed_frames": 2122,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frames 2120, 2121.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2120, 2121."
+          },
+          "public_publication_status": "published"
+        }
+      ]
+    },
+    {
       "id": "img-c1487dbec9ec7c30",
       "file": "png/img-c1487dbec9ec7c30.png",
       "sha256": "c1487dbec9ec7c3055a26c4435f80a59817502276e1b01ebe3fbc32fc5b0a497",
@@ -95261,6 +96943,61 @@
           "run_id": "core43",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-c6cf2f924d3b6178",
+      "file": "png/img-c6cf2f924d3b6178.png",
+      "sha256": "c6cf2f924d3b6178384d7646c1c9d29d24e5178fc900738ac7376c662c29d791",
+      "size_bytes": 3582,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait entering from the left.",
+        "es": "Retrato de Kris entrando por la izquierda."
+      },
+      "alt": {
+        "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2086.",
+        "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2086."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002086.png",
+          "source_file_sha256": "c6cf2f924d3b6178384d7646c1c9d29d24e5178fc900738ac7376c662c29d791",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2086,
+          "completed_frames": 2087,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait entering from the left.",
+            "es": "Retrato de Kris entrando por la izquierda."
+          },
+          "alt": {
+            "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2086.",
+            "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2086."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -106263,6 +108000,61 @@
       ]
     },
     {
+      "id": "img-de31d3b8b126ae61",
+      "file": "png/img-de31d3b8b126ae61.png",
+      "sha256": "de31d3b8b126ae613af6c11738a85d9fbfe25cdc601b63309f984835c8328dfc",
+      "size_bytes": 6968,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait entering from the left.",
+        "es": "Retrato de Kris entrando por la izquierda."
+      },
+      "alt": {
+        "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2093.",
+        "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2093."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002093.png",
+          "source_file_sha256": "de31d3b8b126ae613af6c11738a85d9fbfe25cdc601b63309f984835c8328dfc",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2093,
+          "completed_frames": 2094,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait entering from the left.",
+            "es": "Retrato de Kris entrando por la izquierda."
+          },
+          "alt": {
+            "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2093.",
+            "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2093."
+          },
+          "public_publication_status": "published"
+        }
+      ]
+    },
+    {
       "id": "img-de36d1e019da39bf",
       "file": "png/img-de36d1e019da39bf.png",
       "sha256": "de36d1e019da39bf86a0ccb13a7d229c603dc4fe5a838bdd6080a38a043957dd",
@@ -107722,6 +109514,61 @@
       ]
     },
     {
+      "id": "img-e06174701b1dd132",
+      "file": "png/img-e06174701b1dd132.png",
+      "sha256": "e06174701b1dd1321d2c4a3cf521fc20ffd47f26446e3be4bff353a68976d202",
+      "size_bytes": 1824,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2130.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2130."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002130.png",
+          "source_file_sha256": "e06174701b1dd1321d2c4a3cf521fc20ffd47f26446e3be4bff353a68976d202",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2130,
+          "completed_frames": 2131,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2130.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2130."
+          },
+          "public_publication_status": "published"
+        }
+      ]
+    },
+    {
       "id": "img-e06cef5a303dbbed",
       "file": "png/img-e06cef5a303dbbed.png",
       "sha256": "e06cef5a303dbbed656ca029fa83b87fe1a7b3afaaec771bdf5d4ebff00fb6c9",
@@ -108146,6 +109993,61 @@
           "run_id": "core51",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-e0f0991568f4ba9a",
+      "file": "png/img-e0f0991568f4ba9a.png",
+      "sha256": "e0f0991568f4ba9a6d08696a2ba51d867cf6b7bf2756fc77035cba2f6512ac5f",
+      "size_bytes": 6834,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait entering from the left.",
+        "es": "Retrato de Kris entrando por la izquierda."
+      },
+      "alt": {
+        "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2090.",
+        "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2090."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002090.png",
+          "source_file_sha256": "e0f0991568f4ba9a6d08696a2ba51d867cf6b7bf2756fc77035cba2f6512ac5f",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2090,
+          "completed_frames": 2091,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait entering from the left.",
+            "es": "Retrato de Kris entrando por la izquierda."
+          },
+          "alt": {
+            "en": "Kris portrait entering from the left. Original full dual-screen capture; zero-based source frame 2090.",
+            "es": "Retrato de Kris entrando por la izquierda. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2090."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
@@ -110146,7 +112048,8 @@
       "build_sha256": null,
       "build_sha256s": [
         "94f4989ba85460c88b95ae58a2896047b110271847bc10ba85480ad0233857a2",
-        "ae4208c7642590f691be25da8591dc43be541120b17e8340981218a8a8e36d13"
+        "ae4208c7642590f691be25da8591dc43be541120b17e8340981218a8a8e36d13",
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
       ],
       "caption": {
         "en": "Opening movie before the portrait update; historical comparison.",
@@ -110780,8 +112683,165 @@
           "run_id": "core51",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002080.png",
+          "source_file_sha256": "e402f16234cc995a6209a42ff24b5e62d7f04e303175ef0f2a899e071352b99b",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2080,
+          "completed_frames": 2081,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Background before and after the portrait.",
+            "es": "Fondo anterior y posterior al retrato."
+          },
+          "alt": {
+            "en": "Background before and after the portrait. Original full dual-screen capture; zero-based source frames 2080, 2081, 2082, 2083, 2084, 2131.",
+            "es": "Fondo anterior y posterior al retrato. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2080, 2081, 2082, 2083, 2084, 2131."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002081.png",
+          "source_file_sha256": "e402f16234cc995a6209a42ff24b5e62d7f04e303175ef0f2a899e071352b99b",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2081,
+          "completed_frames": 2082,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Background before and after the portrait.",
+            "es": "Fondo anterior y posterior al retrato."
+          },
+          "alt": {
+            "en": "Background before and after the portrait. Original full dual-screen capture; zero-based source frames 2080, 2081, 2082, 2083, 2084, 2131.",
+            "es": "Fondo anterior y posterior al retrato. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2080, 2081, 2082, 2083, 2084, 2131."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002082.png",
+          "source_file_sha256": "e402f16234cc995a6209a42ff24b5e62d7f04e303175ef0f2a899e071352b99b",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2082,
+          "completed_frames": 2083,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Background before and after the portrait.",
+            "es": "Fondo anterior y posterior al retrato."
+          },
+          "alt": {
+            "en": "Background before and after the portrait. Original full dual-screen capture; zero-based source frames 2080, 2081, 2082, 2083, 2084, 2131.",
+            "es": "Fondo anterior y posterior al retrato. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2080, 2081, 2082, 2083, 2084, 2131."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002083.png",
+          "source_file_sha256": "e402f16234cc995a6209a42ff24b5e62d7f04e303175ef0f2a899e071352b99b",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2083,
+          "completed_frames": 2084,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Background before and after the portrait.",
+            "es": "Fondo anterior y posterior al retrato."
+          },
+          "alt": {
+            "en": "Background before and after the portrait. Original full dual-screen capture; zero-based source frames 2080, 2081, 2082, 2083, 2084, 2131.",
+            "es": "Fondo anterior y posterior al retrato. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2080, 2081, 2082, 2083, 2084, 2131."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002084.png",
+          "source_file_sha256": "e402f16234cc995a6209a42ff24b5e62d7f04e303175ef0f2a899e071352b99b",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2084,
+          "completed_frames": 2085,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Background before and after the portrait.",
+            "es": "Fondo anterior y posterior al retrato."
+          },
+          "alt": {
+            "en": "Background before and after the portrait. Original full dual-screen capture; zero-based source frames 2080, 2081, 2082, 2083, 2084, 2131.",
+            "es": "Fondo anterior y posterior al retrato. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2080, 2081, 2082, 2083, 2084, 2131."
+          },
+          "public_publication_status": "published"
+        },
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002131.png",
+          "source_file_sha256": "e402f16234cc995a6209a42ff24b5e62d7f04e303175ef0f2a899e071352b99b",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2131,
+          "completed_frames": 2132,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Background before and after the portrait.",
+            "es": "Fondo anterior y posterior al retrato."
+          },
+          "alt": {
+            "en": "Background before and after the portrait. Original full dual-screen capture; zero-based source frames 2080, 2081, 2082, 2083, 2084, 2131.",
+            "es": "Fondo anterior y posterior al retrato. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2080, 2081, 2082, 2083, 2084, 2131."
+          },
+          "public_publication_status": "published"
         }
-      ]
+      ],
+      "collection_contexts": {
+        "k02-core97": {
+          "caption": {
+            "en": "Background before and after the portrait.",
+            "es": "Fondo anterior y posterior al retrato."
+          },
+          "alt": {
+            "en": "Background before and after the portrait. Original full dual-screen capture; zero-based source frames 2080, 2081, 2082, 2083, 2084, 2131.",
+            "es": "Fondo anterior y posterior al retrato. Captura original completa de las dos pantallas; fotogramas de origen numerados desde cero: 2080, 2081, 2082, 2083, 2084, 2131."
+          },
+          "review_scope": {
+            "en": "The native runtime completed 2,200 frames. The outer postflight exited 1 because it required explicit ram:false in 55 commands although the protocol allows omission. All 53 captures were visually reviewed as 25 distinct RGB states; this is bounded evidence, not full Scene4, whole-game or human acceptance. No ROM change since Core93; K11 Bag model remains pending.",
+            "es": "El runtime nativo completó 2.200 fotogramas. El postflight exterior terminó con código 1 porque exigía ram:false explícito en 55 comandos aunque el protocolo permite omitirlo. Se revisaron las 53 capturas como 25 estados RGB distintos; es evidencia acotada, no aceptación de toda Scene4, del juego completo ni humana. La ROM no cambia respecto a Core93; el modelo de la Bolsa K11 sigue pendiente."
+          }
+        }
+      },
+      "publication_status_by_collection": {
+        "k02-core97": "published"
+      }
     },
     {
       "id": "img-e430d0ae18a11487",
@@ -119286,6 +121346,61 @@
           "run_id": "core43",
           "capture_origin": "native_run_file",
           "frame_number_basis": "index parsed from the sealed source filename; no command timing inferred"
+        }
+      ]
+    },
+    {
+      "id": "img-f47d4c3ac53b0b59",
+      "file": "png/img-f47d4c3ac53b0b59.png",
+      "sha256": "f47d4c3ac53b0b590bf37e80bd60cec0b1d2b550ecaa6f1a32f823dd232bcd2b",
+      "size_bytes": 6202,
+      "dimensions": {
+        "width": 256,
+        "height": 384
+      },
+      "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+      "caption": {
+        "en": "Kris portrait leaving through the right edge.",
+        "es": "Retrato de Kris saliendo por el borde derecho."
+      },
+      "alt": {
+        "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2123.",
+        "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2123."
+      },
+      "build_sha256s": [
+        "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009"
+      ],
+      "permissions": {
+        "gallery_export_authorized_by_request": true,
+        "public_publication_status": "published",
+        "credit": {
+          "en": "Project QA capture archive",
+          "es": "Archivo de capturas de QA del proyecto"
+        }
+      },
+      "source_references": [
+        {
+          "run_id": "core97-v1",
+          "collection_id": "k02-core97",
+          "source_file": "movie-frame-002123.png",
+          "source_file_sha256": "f47d4c3ac53b0b590bf37e80bd60cec0b1d2b550ecaa6f1a32f823dd232bcd2b",
+          "build_sha256": "a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009",
+          "source_result_sha256": "c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72",
+          "source_capture_index_sha256": "284e555eb861f5200db0c251c1a4f9f36b712534022c2c4accb273c0ffb1ce98",
+          "status_as_recorded": "native_runtime_COMPLETED_outer_postflight_FAILED_exit_1",
+          "frame_index_from_filename": 2123,
+          "completed_frames": 2124,
+          "capture_origin": "native_run_file",
+          "frame_number_basis": "Zero-based callback-visible image index; completed_frames equals frame index plus one.",
+          "caption": {
+            "en": "Kris portrait leaving through the right edge.",
+            "es": "Retrato de Kris saliendo por el borde derecho."
+          },
+          "alt": {
+            "en": "Kris portrait leaving through the right edge. Original full dual-screen capture; zero-based source frame 2123.",
+            "es": "Retrato de Kris saliendo por el borde derecho. Captura original completa de las dos pantallas; fotograma de origen numerado desde cero: 2123."
+          },
+          "public_publication_status": "published"
         }
       ]
     },
