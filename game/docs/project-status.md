@@ -2,11 +2,23 @@
 
 ## English
 
-**Latest reviewed Kris result — issue #33 remains open; Alpha 2 is unchanged:**
+### Kris sprint status — 26 October 2026
+
+**Issue #33 remains open; downloadable Alpha 2 and patcher defaults are unchanged.** The current private model is frozen at the user's request and provisionally accepted. Kris now uses a rear backpack instead of the side bag. All eight Bag pockets, ordinary exit and re-entry were exercised; some views still crop the cap/head and native lighting leaves the outfit low in contrast.
+
+One ordinary menu Save, full emulator-process shutdown and Continue in a separate process passed independent review on the same candidate. The checked player identity, female profile/avatar, money, Bag, full three-Pokémon party and progress fields were preserved. This was a disposable assisted test, not repeated reliability evidence or a complete playthrough.
+
+Reviewed bounded captures cover the corrected portrait's entry, held state and exit. In the male credits route Ethan is the player and Kris the companion; the questioned poses 6/7 are Kris. The bounded K02/K06 reconciliation passed independent review. The private patch also reproducibly rebuilds from the user's clean source with the existing CLI and web patch engine; browser UI was not exercised.
+
+**K04 Pokéathlon remains on HOLD:** static review traced a normal single-player results-to-teardown-to-field route, but did not establish activity-progression inputs, finite completion time, native participation or post-event player control. B is a pre-event selector cancellation, and transition `0x10` is not a general exit signal. Do not repeat the earlier `TIMEOUT_PARTIAL` run. See [Kris feasibility and limits](kris-feasibility.md) and [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33).
+
+The build-specific QA records below retain their original run scope; this summary is the current status.
+
+### Earlier Core97 gallery capture — bounded interval
 
 **Core97 bounded native continuity capture (Scene 4 interval):** One corrected native run covered 2,200 frames and ended with an explicit quit. It produced 53 PNGs for frames 2080–2131 and 2199, representing 25 RGB states. The independent review found no Lyra flash or residual in those observed frames. Core93 controls matched 9/9 and Core96 matched 4/4; the reviewed 57-step sequence, two RAM checkpoints, 183 I/O records, capture freshness and DSV preservation are bounded to this run.
 
-The outer postflight validator remains **FAILED (exit 1)** because it required an explicit `ram:false` in 55 commands, while the command protocol permits that field to be omitted. Keep this as a validator/protocol mismatch, not a passing check or a gameplay failure. The result covers only the stated interval; it does not establish the whole Scene 4, the full intro or game, Bag-model acceptance, full Kris, human acceptance or release acceptance. No third capture is reported; K11 remains pending. Run-result SHA-256: `c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72`; independent-review SHA-256: `e3332213bfe9e30b07603ff07b9f5a8315aa845845bc682b16500b4090afdabc`; pinned ROM SHA-256: `a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009`.
+The outer postflight validator remains **FAILED (exit 1)** because it required an explicit `ram:false` in 55 commands, while the command protocol permits that field to be omitted. Keep this as a validator/protocol mismatch, not a passing check or a gameplay failure. The result covers only the stated interval; it does not establish the whole Scene 4, the full intro or game, Bag-model acceptance, full Kris, human acceptance or release acceptance. No third capture was reported in that run; K11 was still pending at the time. Run-result SHA-256: `c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72`; independent-review SHA-256: `e3332213bfe9e30b07603ff07b9f5a8315aa845845bc682b16500b4090afdabc`; pinned ROM SHA-256: `a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009`.
 
 The bilingual public progress gallery now includes the 25 byte-distinct captures and all 53 frame references from this bounded interval. Exact-byte duplicates share one image while every frame reference remains available.
 
@@ -96,11 +108,23 @@ The [EV/IV feasibility study](ev-iv-kit-feasibility.md) preserves the earlier de
 
 ## Español
 
-**Último resultado revisado de Kris — la issue #33 sigue abierta; Alfa 2 no cambia:**
+### Estado del sprint de Kris — 26 de octubre de 2026
+
+**La issue #33 sigue abierta; la descarga de Alfa 2 y los valores predeterminados del parcheador no cambian.** El modelo privado actual queda congelado por petición del usuario y aceptado provisionalmente. Kris usa ahora mochila trasera en lugar de bolso lateral. Se probaron los ocho bolsillos de la Bolsa, salir con normalidad y volver a entrar; algunas vistas aún recortan cabeza/gorra y la iluminación nativa deja poco contraste en la ropa.
+
+Pasó una prueba independiente de un guardado ordinario desde el menú, cierre completo del proceso del emulador y Continue en un proceso separado sobre la misma candidata. Se conservaron la identidad, el perfil/avatar femenino, el dinero, la Bolsa, el equipo completo de tres Pokémon y los campos de progreso comprobados. Fue una prueba asistida y desechable, no evidencia de fiabilidad repetida ni una partida completa.
+
+Las capturas acotadas revisadas cubren la entrada, el retrato mantenido y la salida observados. En los créditos con protagonista masculino, Ethan es el jugador y Kris la acompañante; las poses cuestionadas 6/7 son de Kris. La conciliación acotada K02/K06 pasó revisión independiente. El parche privado también reconstruye la candidata de forma reproducible desde la fuente limpia del usuario con el CLI y el motor web existentes; no se probó la interfaz del navegador.
+
+**El Pokéathlon K04 sigue en HOLD:** la revisión estática trazó una ruta normal de resultados a cierre de la aplicación y regreso al campo para un jugador, pero no estableció las entradas para progresar en la actividad, un tiempo finito de finalización, participación nativa ni el control del jugador tras volver. B cancela el selector previo al evento y la transición `0x10` no es una señal general de salida. No repetir la ejecución anterior `TIMEOUT_PARTIAL`. Véanse la [viabilidad y los límites de Kris](kris-feasibility.md) y la [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33).
+
+Los registros de QA por build que siguen conservan su alcance original; este resumen refleja el estado actual.
+
+### Captura anterior y acotada de la galería Core97
 
 **Captura nativa continua acotada Core97 (intervalo de la Escena 4):** Una única ejecución corregida cubrió 2.200 fotogramas y terminó con una salida explícita. Produjo 53 PNG de los fotogramas 2080–2131 y 2199, que representan 25 estados RGB. La revisión independiente no encontró destello de Lyra ni residuos en esos fotogramas observados. Coincidieron 9/9 controles Core93 y 4/4 Core96; la secuencia revisada de 57 pasos, dos puntos de control de RAM, 183 registros I/O, la frescura de captura y la conservación del DSV se limitan a esta ejecución.
 
-El postflight exterior sigue **FALLIDO (exit 1)** porque exigió `ram:false` explícito en 55 comandos, aunque el protocolo permite omitir ese campo. Se conserva como discrepancia del comprobador/protocolo, no como comprobación superada ni como fallo jugable. El resultado solo cubre el intervalo indicado; no acredita toda la Escena 4, la intro o el juego completos, la aceptación del modelo de la Bolsa, Kris completa, la aceptación humana ni la de release. No se informa de una tercera captura; K11 sigue pendiente. SHA-256 del resultado del run: `c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72`; SHA-256 de la revisión independiente: `e3332213bfe9e30b07603ff07b9f5a8315aa845845bc682b16500b4090afdabc`; SHA-256 de la ROM fijada: `a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009`.
+El postflight exterior sigue **FALLIDO (exit 1)** porque exigió `ram:false` explícito en 55 comandos, aunque el protocolo permite omitir ese campo. Se conserva como discrepancia del comprobador/protocolo, no como comprobación superada ni como fallo jugable. El resultado solo cubre el intervalo indicado; no acredita toda la Escena 4, la intro o el juego completos, la aceptación del modelo de la Bolsa, Kris completa, la aceptación humana ni la de release. Esa ejecución no informó de una tercera captura; K11 aún estaba pendiente en ese momento. SHA-256 del resultado del run: `c2b2bb50424c236b3b39dd3c792dee4cbf616b54775d80ca95670e44f19b8a72`; SHA-256 de la revisión independiente: `e3332213bfe9e30b07603ff07b9f5a8315aa845845bc682b16500b4090afdabc`; SHA-256 de la ROM fijada: `a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009`.
 
 La galería pública de progreso bilingüe ya incluye las 25 capturas distintas por bytes y las 53 referencias de fotograma de este intervalo acotado. Los duplicados exactos comparten una imagen y conservan todas las referencias de fotograma.
 
