@@ -2,13 +2,15 @@
 
 ## English
 
-### Current sprint boundary — 26 October 2026
+### Current sprint boundary — 27 October 2026
 
 Issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) remains open and Alpha 2 is unchanged. The current model is frozen at the user's request and provisionally accepted; the known crop and contrast limits remain. The Bag pocket cycle and one normal save/full-process shutdown/Continue sequence have bounded native coverage and independent review. See the [current project status](project-status.md) for the precise scope.
 
+One Nurse Joy healing cycle in the Rocket costume, one ordinary menu Save in that costume and one cold Continue from its accepted copied save each have bounded independent-review passes. The healing-component PASS was observed in the second combined private test attempt, which later stopped during Save; earlier combined heal/Save attempts also remained partial. The ordinary Save and cold Continue PASSes are separate later cases. The cold test restored the reviewed Rocket profile, Bag, party and field control. It crossed in-game midnight, so three tracked daily variables changed as documented; the walking-related friendship change was accounted for separately. These cases do not establish unchanged values for every daily variable, repeated reliability or other save families. See the [bounded Rocket QA record](qa-kris-rocket-bounded.md).
+
 K04 Pokéathlon now has a bounded native PASS on one single-player Speed course: Hurdle Dash, Pennant Capture and Relay Run completed naturally, followed by results/medals, field return, final-dialogue closure and restored control demonstrated by one directional movement input. Independent review covered the same privately pinned candidate. This does not cover other courses, link/multiplayer, hardware compatibility, the complete adventure or release acceptance; earlier `TIMEOUT_PARTIAL` records remain in the history alongside subsequent attempts and the final PASS.
 
-Issue #33 remains open. Dev's current receipt-backed matrix still has applicable K01–K12 contexts that are uncredited or partial, including field-move use/return, watering, Rocket healing/save, ladder traversal/return, the Pokégear pose, Apricorn shaking and other K09 routes. The 15 field-state pairs and applicable regression flows are not all accepted. Dev is reconciling existing receipts; no additional native run has started. See the [current project status](project-status.md) and [QA records](qa-kris-bag.json).
+Issue #33 remains open. Dev's current receipt-backed matrix still has applicable K01–K12 contexts that are uncredited or partial, including field-move use/return, watering, ladder traversal/return, the Pokégear pose, Apricorn shaking and other K09 routes. The 15 field-state pairs and applicable regression flows are not all accepted. Dev is preparing one possible bounded ladder round-trip; this is preparation only, with no additional native Core run admitted. See the [current project status](project-status.md), [bounded Rocket QA record](qa-kris-rocket-bounded.md) and [QA records](qa-kris-bag.json).
 
 ### Earlier build-specific native results
 
@@ -103,13 +105,15 @@ The additional battle-source review distinguishes ordinary and link backpics; re
 
 ## Español
 
-### Límite actual del sprint — 26 de octubre de 2026
+### Límite actual del sprint — 27 de octubre de 2026
 
 La [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) sigue abierta y Alfa 2 no cambia. El modelo actual queda congelado por petición del usuario y aceptado provisionalmente; se mantienen los límites conocidos de recorte y contraste. El ciclo de bolsillos de la Bolsa y una secuencia de guardado normal/cierre completo/Continue tienen cobertura nativa acotada y revisión independiente. Véase el [estado actual del proyecto](project-status.md) para el alcance preciso.
 
+Un ciclo de curación con Enfermera Joy y uniforme Rocket, un guardado ordinario desde el menú con ese uniforme y un Continue en frío desde una copia de su guardado aceptado tienen PASS de revisión independiente acotados. El PASS del componente de curación se observó en el segundo intento combinado privado, que después se detuvo durante Guardar; los intentos combinados anteriores de curación/guardado también fueron parciales. Los PASS de Guardar ordinario y Continue en frío son casos posteriores y distintos. La prueba en frío restauró el perfil Rocket, la Bolsa, el equipo revisado y el control del campo. Cruzó la medianoche del juego: tres variables diarias controladas cambiaron según lo documentado y el cambio de amistad por caminar se contabilizó aparte. Estos casos no demuestran que todas las variables diarias queden iguales, fiabilidad repetida ni otras familias de guardado. Véase la [QA acotada Rocket](qa-kris-rocket-bounded.md).
+
 El Pokéathlon K04 ya tiene un PASS nativo acotado en un curso Speed individual: Hurdle Dash, Pennant Capture y Relay Run terminaron de forma natural; después llegaron resultados/medallas, el regreso al campo, el cierre del diálogo final y el control restaurado, demostrado con una entrada direccional de movimiento. La revisión independiente cubrió la misma candidata fijada en privado. No cubre otros cursos, conexión/multijugador, compatibilidad de hardware, la aventura completa ni la aceptación de una release; los registros anteriores `TIMEOUT_PARTIAL` permanecen en el historial junto con los intentos posteriores y el PASS final.
 
-La issue #33 sigue abierta. La matriz actual basada en recibos de Dev aún tiene contextos K01–K12 aplicables sin acreditar o parciales: uso/regreso de movimientos de campo, riego, curación/guardado con el uniforme Rocket, tránsito/regreso por escalera, pose del Pokégear, sacudida del bonguri y otras rutas K09. Los 15 pares de estado de campo y los flujos de regresión aplicables aún no están aceptados en conjunto. Dev está conciliando los recibos existentes; no ha empezado otra ejecución nativa. Véanse el [estado actual del proyecto](project-status.md) y los [registros QA](qa-kris-bag.json).
+La issue #33 sigue abierta. La matriz actual basada en recibos de Dev aún tiene contextos K01–K12 aplicables sin acreditar o parciales: uso/regreso de movimientos de campo, riego, tránsito/regreso por escalera, pose del Pokégear, sacudida del bonguri y otras rutas K09. Los 15 pares de estado de campo y los flujos de regresión aplicables aún no están aceptados en conjunto. Dev prepara una posible ida y vuelta acotada por escalera; solo está en preparación y no se ha admitido otra ejecución nativa de Core. Véanse el [estado actual del proyecto](project-status.md), la [QA acotada Rocket](qa-kris-rocket-bounded.md) y los [registros QA](qa-kris-bag.json).
 
 ### Resultados nativos anteriores y acotados
 
