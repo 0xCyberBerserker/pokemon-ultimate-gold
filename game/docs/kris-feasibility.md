@@ -2,7 +2,13 @@
 
 ## English
 
-**Latest reviewed Kris result — issue #33 remains open:**
+### Current sprint boundary — 26 October 2026
+
+Issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) remains open and Alpha 2 is unchanged. The current model is frozen at the user's request and provisionally accepted; the known crop and contrast limits remain. The Bag pocket cycle and one normal save/full-process shutdown/Continue sequence have bounded native coverage and independent review. See the [current project status](project-status.md) for the precise scope.
+
+K04 Pokéathlon remains on HOLD for the post-entry return check. A static source/byte trace found a natural single-player result-to-field path, but event progression inputs, a finite activity duration, native participation and return of player control remain unverified. The earlier B cancel is pre-event only; it is not a post-entry exit test. No static result closes playable acceptance.
+
+### Earlier build-specific native results
 
 A bounded native test of the private Kris candidate verified removal of the Team Rocket outfit, a complete victory over the Rocket trainer, return to the field as Kris, and one step north after the scene with the expected story progress. A separate bounded native test, independently reviewed, verified one ordinary save and the initial cold Continue checkpoint: the saved profile, Bag, party and Rocket progress matched. Repeated load cycles and field movement after loading remain unverified; the movement subcheck was incomplete, and full Kris integration remains unaccepted.
 
@@ -95,7 +101,13 @@ The additional battle-source review distinguishes ordinary and link backpics; re
 
 ## Español
 
-**Último resultado revisado de Kris — la issue #33 sigue abierta:**
+### Límite actual del sprint — 26 de octubre de 2026
+
+La [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) sigue abierta y Alfa 2 no cambia. El modelo actual queda congelado por petición del usuario y aceptado provisionalmente; se mantienen los límites conocidos de recorte y contraste. El ciclo de bolsillos de la Bolsa y una secuencia de guardado normal/cierre completo/Continue tienen cobertura nativa acotada y revisión independiente. Véase el [estado actual del proyecto](project-status.md) para el alcance preciso.
+
+El retorno posterior al inicio del Pokéathlon K04 sigue en HOLD. Un rastreo estático de fuente/bytes encontró una ruta natural de resultados al campo para un jugador, pero siguen sin verificarse las entradas para progresar en el evento, una duración finita, la participación nativa y la recuperación del control del jugador. La cancelación con B es solo anterior al evento; no prueba una salida posterior al inicio. Ningún resultado estático cierra la aceptación jugable.
+
+### Resultados nativos anteriores y acotados
 
 Una prueba nativa acotada de la candidata privada de Kris verificó la retirada del uniforme del Team Rocket, la victoria contra el recluta, el regreso al mapa como Kris y un paso al norte tras la escena con el progreso esperado. Otra prueba nativa acotada, revisada de forma independiente, verificó un guardado ordinario y el checkpoint inicial de Continuar en frío: coincidían el perfil guardado, la Bolsa, el equipo y el progreso Rocket. No se han verificado ciclos de carga repetidos ni el movimiento por el campo después de cargar; la subprueba de movimiento quedó incompleta y la integración completa de Kris aún no está aceptada.
 
