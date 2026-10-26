@@ -6,7 +6,9 @@
 
 Issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) remains open and Alpha 2 is unchanged. The current model is frozen at the user's request and provisionally accepted; the known crop and contrast limits remain. The Bag pocket cycle and one normal save/full-process shutdown/Continue sequence have bounded native coverage and independent review. See the [current project status](project-status.md) for the precise scope.
 
-K04 Pokéathlon remains on HOLD for the post-entry return check. A static source/byte trace found a natural single-player result-to-field path, but event progression inputs, a finite activity duration, native participation and return of player control remain unverified. The earlier B cancel is pre-event only; it is not a post-entry exit test. No static result closes playable acceptance.
+K04 Pokéathlon now has a bounded native PASS on one single-player Speed course: Hurdle Dash, Pennant Capture and Relay Run completed naturally, followed by results/medals, field return, final-dialogue closure and restored control demonstrated by one directional movement input. Independent review covered the same privately pinned candidate. This does not cover other courses, link/multiplayer, hardware compatibility, the complete adventure or release acceptance; earlier `TIMEOUT_PARTIAL` records remain in the history alongside subsequent attempts and the final PASS.
+
+Issue #33 remains open. Dev's current receipt-backed matrix still has applicable K01–K12 contexts that are uncredited or partial, including field-move use/return, watering, Rocket healing/save, ladder traversal/return, the Pokégear pose, Apricorn shaking and other K09 routes. The 15 field-state pairs and applicable regression flows are not all accepted. Dev is reconciling existing receipts; no additional native run has started. See the [current project status](project-status.md) and [QA records](qa-kris-bag.json).
 
 ### Earlier build-specific native results
 
@@ -14,7 +16,7 @@ A bounded native test of the private Kris candidate verified removal of the Team
 
 On the private Kris candidate, one check at Cherrygrove City Pokémon Center showed her appearance remain consistent through the visible healing sequence and return to the field; no change to Lyra was observed in that interval. Persistence from this specific Cherrygrove check and the remaining required contexts are pending; full Kris integration is not yet accepted. [QA details](qa-kris-bag.json).
 
-**Pokéathlon entry — partial test:** Separate checks reached the Pokéathlon map and receptionist menu; after one Speed selection, Kris appeared in the sports outfit before the event. The competition, return to her normal field appearance and save/reload remain untested, so issue #33 stays open. [QA details](qa-kris-bag.json).
+**Earlier Pokéathlon entry-only check:** Separate checks reached the Pokéathlon map and receptionist menu; after one Speed selection, Kris appeared in the sports outfit before the event. That earlier partial record is superseded by the bounded course and field-return PASS above; other courses and save/reload are outside its scope. [QA details](qa-kris-bag.json).
 
 **Apricorn harvest — bounded result:** In one tested interaction, Kris collected a Grn Apricorn; captured frames show character movement during the interaction and ordinary field movement afterward. Save/reload, the remaining required field contexts and complete Kris acceptance remain untested. Public downloads are unchanged. [QA details](qa-kris-bag.json).
 
@@ -105,7 +107,9 @@ The additional battle-source review distinguishes ordinary and link backpics; re
 
 La [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) sigue abierta y Alfa 2 no cambia. El modelo actual queda congelado por petición del usuario y aceptado provisionalmente; se mantienen los límites conocidos de recorte y contraste. El ciclo de bolsillos de la Bolsa y una secuencia de guardado normal/cierre completo/Continue tienen cobertura nativa acotada y revisión independiente. Véase el [estado actual del proyecto](project-status.md) para el alcance preciso.
 
-El retorno posterior al inicio del Pokéathlon K04 sigue en HOLD. Un rastreo estático de fuente/bytes encontró una ruta natural de resultados al campo para un jugador, pero siguen sin verificarse las entradas para progresar en el evento, una duración finita, la participación nativa y la recuperación del control del jugador. La cancelación con B es solo anterior al evento; no prueba una salida posterior al inicio. Ningún resultado estático cierra la aceptación jugable.
+El Pokéathlon K04 ya tiene un PASS nativo acotado en un curso Speed individual: Hurdle Dash, Pennant Capture y Relay Run terminaron de forma natural; después llegaron resultados/medallas, el regreso al campo, el cierre del diálogo final y el control restaurado, demostrado con una entrada direccional de movimiento. La revisión independiente cubrió la misma candidata fijada en privado. No cubre otros cursos, conexión/multijugador, compatibilidad de hardware, la aventura completa ni la aceptación de una release; los registros anteriores `TIMEOUT_PARTIAL` permanecen en el historial junto con los intentos posteriores y el PASS final.
+
+La issue #33 sigue abierta. La matriz actual basada en recibos de Dev aún tiene contextos K01–K12 aplicables sin acreditar o parciales: uso/regreso de movimientos de campo, riego, curación/guardado con el uniforme Rocket, tránsito/regreso por escalera, pose del Pokégear, sacudida del bonguri y otras rutas K09. Los 15 pares de estado de campo y los flujos de regresión aplicables aún no están aceptados en conjunto. Dev está conciliando los recibos existentes; no ha empezado otra ejecución nativa. Véanse el [estado actual del proyecto](project-status.md) y los [registros QA](qa-kris-bag.json).
 
 ### Resultados nativos anteriores y acotados
 
@@ -113,7 +117,7 @@ Una prueba nativa acotada de la candidata privada de Kris verificó la retirada 
 
 En una prueba de la candidata privada de Kris en Cherrygrove City Pokémon Center (Centro Pokémon de Ciudad Cerezo), mantuvo su aspecto durante la secuencia visible de curación y la vuelta al campo; no se observó un cambio a Lyra en ese intervalo. La persistencia de esta comprobación concreta en Cherrygrove City Pokémon Center y los contextos restantes siguen pendientes; la integración completa de Kris aún no está aceptada. [Detalles QA](qa-kris-bag.json).
 
-**Entrada al Pokéathlon — prueba parcial:** En pruebas separadas se llegó al mapa del Pokéathlon y al menú de la recepcionista; tras seleccionar Speed una vez, Kris apareció con el atuendo deportivo antes del evento. Siguen sin probarse la competición, la vuelta a su aspecto normal en el campo y guardar/recargar; la issue #33 sigue abierta. [Detalles QA](qa-kris-bag.json).
+**Prueba anterior de entrada al Pokéathlon:** En pruebas separadas se llegó al mapa del Pokéathlon y al menú de la recepcionista; tras seleccionar Speed una vez, Kris apareció con el atuendo deportivo antes del evento. Ese registro parcial quedó superado por el PASS acotado actual del curso y regreso al campo; otros cursos y guardar/recargar quedan fuera de su alcance. [Detalles QA](qa-kris-bag.json).
 
 **Cosecha de Apricorn — resultado acotado:** En una interacción probada, Kris recogió un Grn Apricorn (Bonguri Verde); las capturas muestran movimiento del personaje durante la interacción y movimiento normal por el campo después. Siguen sin probarse guardar/recargar, los demás contextos de campo requeridos y la aceptación completa de Kris. Las descargas públicas no cambian. [Detalles QA](qa-kris-bag.json).
 
