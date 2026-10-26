@@ -2149,5 +2149,80 @@
     },
     "previous_entries_unchanged": true,
     "default_download_changed": false
+  },
+  "issue33_current_receipt_matrix_2026_10_26": {
+    "schema": "ultimate-gold.kris-current-receipt-matrix.v1",
+    "issue": 33,
+    "status": "OPEN_RESIDUAL_EVIDENCE_RECONCILIATION",
+    "k04_pokeathlon_speed_course": {
+      "status": "PASS_BOUNDED_NATIVE_SINGLE_PLAYER",
+      "candidate_binding": "The same privately pinned candidate was used for the native run and independent review; its full fingerprint is intentionally omitted.",
+      "course": "Speed",
+      "events_completed_naturally": [
+        "Hurdle Dash",
+        "Pennant Capture",
+        "Relay Run"
+      ],
+      "results_and_medals_reached": true,
+      "returned_to_field": true,
+      "final_dialogue_closed": true,
+      "normal_control_restored": true,
+      "post_event_movement_inputs": 1,
+      "independent_review": "PASS on the same exact candidate",
+      "scope_en": "One single-player Speed course only. This does not cover other courses, link/multiplayer, hardware compatibility, the full adventure or release acceptance.",
+      "scope_es": "Solo un curso Speed de un jugador. No cubre otros cursos, conexión/multijugador, compatibilidad de hardware, la aventura completa ni la aceptación de una release."
+    },
+    "issue_matrix": {
+      "field_state_pairs": 15,
+      "case_families": "K01-K12",
+      "uncredited_or_partial": [
+        {
+          "status": "UNACCREDITED",
+          "criterion_en": "Natural field-move use and return, including the HM context",
+          "criterion_es": "Uso y regreso naturales de movimientos de campo, incluido el contexto de MO"
+        },
+        {
+          "status": "UNACCREDITED",
+          "criterion_en": "Watering interaction/caller and return",
+          "criterion_es": "Interacción/llamada de riego y regreso"
+        },
+        {
+          "status": "UNACCREDITED",
+          "criterion_en": "Rocket healing and saved-context cases",
+          "criterion_es": "Curación Rocket y contextos de guardado"
+        },
+        {
+          "status": "PARTIAL",
+          "criterion_en": "Ladder traversal and return",
+          "criterion_es": "Tránsito por escalera y regreso"
+        },
+        {
+          "status": "PARTIAL",
+          "criterion_en": "Pokégear pose",
+          "criterion_es": "Pose del Pokégear"
+        },
+        {
+          "status": "PARTIAL",
+          "criterion_en": "Apricorn shake animation; the bounded harvest interaction is separately accepted",
+          "criterion_es": "Animación de sacudida del bonguri; la recolección acotada tiene aceptación separada"
+        },
+        {
+          "status": "PARTIAL",
+          "criterion_en": "Other K09 routes and contexts",
+          "criterion_es": "Otras rutas y contextos K09"
+        }
+      ],
+      "bounded_passes": [
+        "K04 single-player Speed course",
+        "K02 portrait interval",
+        "K06 role mapping",
+      "K12 normal Save/cold Continue",
+      "Private patch reproduction from the pinned base"
+      ],
+      "decision_en": "Issue #33 stays open. Dev is assessing existing receipts and applicability before any additional run; no new native execution has started.",
+      "decision_es": "La issue #33 sigue abierta. Dev está evaluando los recibos existentes y su aplicabilidad antes de cualquier otra prueba; no ha empezado una ejecución nativa nueva."
+    },
+    "historical_timeout_partials_preserved": true,
+    "default_download_changed": false
   }
 }
