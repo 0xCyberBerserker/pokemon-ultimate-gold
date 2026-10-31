@@ -7,6 +7,38 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { createServer } from 'vite';
 import { stageIllustration } from '../src/features/trainers/stage-art.ts';
 
+function pngDimensions(image) {
+  assert.equal(image.toString('hex', 0, 8), '89504e470d0a1a0a', 'valid PNG signature');
+  assert.equal(image.toString('ascii', 12, 16), 'IHDR', 'PNG starts with IHDR');
+  return [image.readUInt32BE(16), image.readUInt32BE(20)];
+}
+
+function webpDimensions(image) {
+  assert.equal(image.toString('ascii', 0, 4), 'RIFF', 'valid WebP RIFF container');
+  assert.equal(image.toString('ascii', 8, 12), 'WEBP', 'valid WebP signature');
+  for (let offset = 12; offset + 8 <= image.length;) {
+    const type = image.toString('ascii', offset, offset + 4);
+    const size = image.readUInt32LE(offset + 4);
+    const data = offset + 8;
+    assert.ok(data + size <= image.length, `${type} chunk stays inside the WebP file`);
+    if (type === 'VP8X') {
+      assert.ok(size >= 10, 'VP8X header has canvas dimensions');
+      return [1 + image.readUIntLE(data + 4, 3), 1 + image.readUIntLE(data + 7, 3)];
+    }
+    if (type === 'VP8L') {
+      assert.ok(size >= 5 && image[data] === 0x2f, 'VP8L header is valid');
+      const b1 = image[data + 1], b2 = image[data + 2], b3 = image[data + 3], b4 = image[data + 4];
+      return [1 + (((b2 & 0x3f) << 8) | b1), 1 + (((b4 & 0x0f) << 10) | (b3 << 2) | (b2 >> 6))];
+    }
+    if (type === 'VP8 ') {
+      assert.ok(size >= 10 && image[data + 3] === 0x9d && image[data + 4] === 0x01 && image[data + 5] === 0x2a, 'VP8 frame header is valid');
+      return [image.readUInt16LE(data + 6) & 0x3fff, image.readUInt16LE(data + 8) & 0x3fff];
+    }
+    offset = data + size + (size & 1);
+  }
+  assert.fail('WebP has no supported image dimension chunk');
+}
+
 test('decorative illustrations are bound to their own documented stages', async () => {
   const journey = JSON.parse(await readFile(new URL('../../web/data/trainer-journey.json', import.meta.url)));
   const cases = [
@@ -59,6 +91,14 @@ test('decorative illustrations are bound to their own documented stages', async 
     assert.equal(stageIllustration(id), `../assets/locations/${file}`);
     const image = await readFile(new URL(`../../web/assets/locations/${file}`, import.meta.url));
     assert.equal(createHash('sha256').update(image).digest('hex'), hash);
+    const webpPath = new URL(`../../web/assets/locations/${file.replace(/\.png$/, '.webp')}`, import.meta.url);
+    const webp = await readFile(webpPath);
+    assert.ok(webp.byteLength > 0, `${file} WebP exists`);
+    const [sourceWidth, sourceHeight] = pngDimensions(image);
+    const [webpWidth, webpHeight] = webpDimensions(webp);
+    assert.ok(webpWidth <= 1600 && webpHeight <= 1600, `${file} WebP stays within 1600px`);
+    assert.ok(webpWidth <= sourceWidth && webpHeight <= sourceHeight, `${file} WebP is not enlarged`);
+    assert.ok(Math.abs(webpWidth / webpHeight - sourceWidth / sourceHeight) < 0.01, `${file} aspect ratio is preserved`);
   }
   assert.equal(stageIllustration('stage-04'), undefined);
   assert.equal(stageIllustration('other'), undefined);
@@ -119,6 +159,8 @@ test('stage banners label art in both languages and leave other stages neutral',
       const html = renderToStaticMarkup(React.createElement(TrainerExplorer, { data, language, mode: 'normal' }));
       assert.ok(html.includes(label));
       assert.ok(html.includes(file));
+      assert.ok(html.includes(file.replace(/\.png$/, '.webp')));
+      assert.ok(html.includes(`<picture><source type="image/webp" srcSet="../assets/locations/${file.replace(/\.png$/, '.webp')}"/><img class="journey-illustration" src="../assets/locations/${file}" alt=""/></picture>`));
       assert.match(html, /journey-hero has-art/);
     }
     globalThis.sessionStorage = { getItem: () => JSON.stringify({ stage: 'stage-04' }) };
