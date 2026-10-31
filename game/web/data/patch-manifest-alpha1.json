@@ -21,10 +21,22 @@
     "xdelta": "xdelta3",
     "library_path": "external xdelta3 library directory",
     "recipe": "xdelta3 -e -s HeartGold-USA.nds Ultimate-Gold-alpha1.nds patches/ultimate-gold-alpha1.xdelta",
-    "source_pins": ["HeartGold USA exact SHA-256", "Sacred Gold Plus 1.2.3 commit 5b90a788ac3c7d1e4733b4d175a97811cc6745a3", "Drayano 1.05 control SHA-256 49f29848878406990ea288f26872d4355c92c4a2677f56973750bbf2566c13c1", "native 18 Speed bytes", "+2 Ghost type interactions fixed", "native reusable TM Refill item 113 and New Bark pedestrian gift; exact-build QA in docs/qa-native-tm.json"]
+    "source_pins": [
+      "HeartGold USA exact SHA-256",
+      "Sacred Gold Plus 1.2.3 commit 5b90a788ac3c7d1e4733b4d175a97811cc6745a3",
+      "Drayano 1.05 control SHA-256 49f29848878406990ea288f26872d4355c92c4a2677f56973750bbf2566c13c1",
+      "native 18 Speed bytes",
+      "+2 Ghost type interactions fixed",
+      "native reusable TM Refill item 113 and New Bark pedestrian gift; exact-build QA in docs/qa-native-tm.json"
+    ]
   },
   "claims": {
     "owned_tm99": "native reusable item 113, received from New Bark pedestrian; only owned TM01-TM92 quantities 1-98 become 99; HMs unchanged; no emulator cheat required",
     "gameplay_acceptance": "TESTED_PARTIAL: native item use, reuse, NPC gift and quantity guard, normal battery save/fresh-process restart; inherited base battle/capture QA in docs/qa-493.md; full story and PC/evolution pending"
-  }
+  },
+  "default": false,
+  "publication_metadata": {
+    "source_manifest_sha256": "c0458af347f329d045002848ec91bd92afffb4fc610a7c8d54e67113efabab9d"
+  },
+  "limits": []
 }

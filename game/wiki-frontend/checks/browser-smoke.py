@@ -271,6 +271,7 @@ def main():
                         standalone = opened.value
                         expect(standalone.locator("#rom")).to_be_visible()
                         expect(standalone.locator("#language")).to_have_value("es")
+                        expect(standalone.locator("#version")).to_have_value("kris-sprint2")
                         standalone.goto(f"{origin}{PREFIX}index.html?standalone=1&lang=en", wait_until="domcontentloaded")
                         expect(standalone.locator("#language")).to_have_value("en")
                         standalone.locator("#language").select_option("es")
@@ -290,6 +291,7 @@ def main():
                     check_width(page, f"{name} patcher source")
                     expect(page.frame_locator("iframe").locator("#rom")).to_be_attached()
                     expect(page.frame_locator("iframe").locator("#language")).to_have_value("es")
+                    expect(page.frame_locator("iframe").locator("#version")).to_have_value("kris-sprint2")
                     if name == "desktop":
                         frame = page.frame_locator("iframe")
                         expect(frame.locator("#apply")).to_be_enabled()

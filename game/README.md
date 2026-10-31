@@ -1,6 +1,6 @@
 # Ultimate Gold — browser patcher and game wiki
 
-Browser-only patcher and game wiki for GitHub Pages, with optional CLI and Qt tools. Both builds start from the exact clean Pokémon HeartGold USA source, based on Sacred Gold Plus and Drayano's work. No ROM is included.
+Browser-only patcher and game wiki for GitHub Pages, with optional CLI and Qt tools. Builds start from the exact clean Pokémon HeartGold USA source, based on Sacred Gold Plus and Drayano's work. No ROM is included.
 
 ## English
 
@@ -10,9 +10,9 @@ Browser-only patcher and game wiki for GitHub Pages, with optional CLI and Qt to
 2. Preview with `python3 -m http.server 8767 --bind 127.0.0.1 --directory web` and open `http://127.0.0.1:8767/`.
 3. Choose a build and your clean 128 MiB `.nds`, apply the patch, then download the verified result. Extract ZIP files before using the browser interface.
 
-**Builds:** Alpha 2 is the default experimental build with the Rocket kit, evolution-shop stock and all eight owned-HM field actions. Alpha 1 remains selectable as the earlier native TM Refill build. Exact-target tests cover representative actions, not the complete story. EV/IV editing and Kris are not included. [Current scope](docs/project-status.md).
+**Builds:** Kris Sprint 2 is the experimental browser default, including Kris, updated credits and an experimental EV/IV/nature editor by reviewed lineage. Limited editor cases were tested on earlier builds; no new editor QA was performed on this candidate. Alpha 1 and Alpha 2 remain selectable. The wiki and cheat catalog describe Alpha 2 and have not been verified for the newer target. Exact-target tests cover representative actions, not the complete story. [Current scope](docs/project-status.md).
 
-All ROM processing happens in the browser. No backend, account, upload, CDN or installed xdelta tool is required. [Web guide](docs/web-patcher.md). The generated `web/` directory is the Pages payload; the manual workflow only builds an artifact. Nothing is deployed automatically.
+All ROM processing happens in the browser. No backend, account, ROM upload or installed xdelta tool is required. [Web guide](docs/web-patcher.md). The generated `web/` directory is the Pages payload.
 
 Documentation: [our final guides](docs/README.md), [493-species table](docs/species-493.csv), [source cross-checks](docs/sources-inventory.md). These are authored guides and derived data, not copies of upstream manuals.
 
@@ -41,9 +41,9 @@ The manifest names each output. Alpha 2's Rocket NPC in New Bark Town offers the
 
 La interfaz principal es el patcher de navegador y nuestra wiki para GitHub Pages. Genera la web con `python3 tools/build_site.py`; previsualiza con `python3 -m http.server 8767 --bind 127.0.0.1 --directory web` y abre `http://127.0.0.1:8767/`. Elige versión y tu `.nds` limpio de 128 MiB, aplica el parche y descarga el resultado verificado. Extrae antes los ZIP.
 
-**Versiones:** alfa 2 es la experimental predeterminada, con kit Rocket, inventario evolutivo y las ocho acciones de MO sin enseñar movimientos. Alfa 1 sigue seleccionable como versión anterior con TM Refill (Recarga MT). Las pruebas del hash exacto cubren casos representativos, no la historia completa. No incluye editor EV/IV ni Kris. [Alcance actual](docs/project-status.md).
+**Versiones:** Kris Sprint 2 es la opción web experimental predeterminada, con Kris, créditos actualizados y un editor EV/IV/naturalezas experimental por linaje revisado. Algunos casos del editor se probaron en versiones anteriores; no se realizaron nuevas pruebas del editor en esta candidata. Alfa 1 y Alfa 2 siguen disponibles. Los datos de la wiki y el catálogo de trucos describen Alfa 2 y no se han verificado para el nuevo destino. Las pruebas del hash exacto cubren casos representativos, no la historia completa. [Alcance actual](docs/project-status.md).
 
-Todo el procesamiento de la ROM es local. No necesita backend, cuenta, subir archivos, CDN ni xdelta instalado. [Guía web](docs/web-patcher.md). `web/` contiene la entrega para Pages; el workflow manual sólo construye un artefacto. No publica automáticamente.
+Todo el procesamiento de la ROM es local. No necesita backend, cuenta, subir la ROM ni xdelta instalado. [Guía web](docs/web-patcher.md). `web/` contiene la entrega para Pages.
 
 Guías: [documentación final propia](docs/README.md), [tabla de 493 especies](docs/species-493.csv), [fuentes contrastadas](docs/sources-inventory.md). No son copias de los manuales originales.
 

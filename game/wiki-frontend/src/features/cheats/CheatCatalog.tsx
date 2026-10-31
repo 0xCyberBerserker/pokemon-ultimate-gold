@@ -5,7 +5,7 @@ import { filterCheats, retroarchProfile, validateCheatCatalog, type CheatCatalog
 const copy = {
   en: {
     title: 'Cheat catalog', intro: 'Complete Action Replay codes, organized by category. All are optional; this page only displays text.',
-    scope: 'The 2,110 catalog status labels are unchanged. A bounded Alpha1 runtime test covers 00-006 and 80-002; it verifies emulated-memory effects after a code-off process reload, not battery-save persistence or normal gameplay.',
+    scope: 'This catalog is checked against Alpha 2; its codes have not been verified for the newer Kris build. The 2,110 status labels are unchanged. A bounded Alpha 1 runtime test covers 00-006 and 80-002; it verifies emulated-memory effects after a code-off process reload, not battery-save persistence or normal gameplay.',
     limitedStatus: 'Bounded Alpha 1 RAM test · no battery persistence', limited: 'A separate bounded Alpha1 test kept the value after a code-off emulator process reload. This does not establish battery-save persistence or normal gameplay.',
     original: 'Original source titles and instructions are retained where no authored translation exists.', search: 'Search codes, titles or IDs', category: 'All categories', folder: 'All source folders', status: 'All checks',
     static_only: 'Syntax checked · effect untested', guard_mismatch: 'ROM guard mismatch', syntax_issue: 'Syntax issue', unknownStatus: 'Status unavailable',
@@ -20,7 +20,7 @@ const copy = {
   },
   es: {
     title: 'Catálogo de trucos', intro: 'Códigos Action Replay completos, organizados por categorías. Son opcionales; esta página sólo muestra texto.',
-    scope: 'Las etiquetas de estado de las 2.110 entradas no se han cambiado. Una prueba acotada en Alpha1 cubre 00-006 y 80-002; verifica efectos en la memoria del emulador tras recargar un estado en un proceso sin códigos, no persistencia en la batería ni jugabilidad normal.',
+    scope: 'Este catálogo está comprobado contra Alfa 2; sus códigos no se han verificado para la versión más reciente con Kris. Las etiquetas de las 2.110 entradas no han cambiado. Una prueba acotada en Alfa 1 cubre 00-006 y 80-002; verifica efectos en la memoria del emulador tras recargar un estado en un proceso sin códigos, no persistencia en la batería ni jugabilidad normal.',
     limitedStatus: 'Prueba RAM acotada en Alfa 1 · sin persistencia en batería', limited: 'Una prueba separada en Alpha1 mantuvo el valor tras cargar un estado en otro proceso del emulador sin códigos. No demuestra persistencia en la batería ni jugabilidad normal.',
     original: 'Se conservan títulos e instrucciones originales de la fuente cuando no hay traducción propia.', search: 'Buscar códigos, títulos o ID', category: 'Todas las categorías', folder: 'Todas las carpetas de origen', status: 'Todas las comprobaciones',
     static_only: 'Sintaxis comprobada · efecto sin probar', guard_mismatch: 'Condición incompatible con la ROM', syntax_issue: 'Error de sintaxis', unknownStatus: 'Estado no disponible',

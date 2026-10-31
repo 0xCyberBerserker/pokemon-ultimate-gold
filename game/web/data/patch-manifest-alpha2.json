@@ -1,7 +1,7 @@
 {
   "format": 1,
   "status": "EXPERIMENTAL_TESTED_PARTIAL",
-  "default": true,
+  "default": false,
   "source": {
     "kind": "clean external HeartGold USA",
     "filename": "HeartGold-USA.nds",
@@ -132,7 +132,9 @@
   "limits": [
     "Full story not tested.",
     "EVIV/stat-editor and Kris editor are not included.",
-    "Alpha 2 is the default experimental build; Alpha 1 remains selectable through its versioned manifest.",
     "Do not generalize exact-target QA beyond the cases and limits in the linked reports."
-  ]
+  ],
+  "publication_metadata": {
+    "source_manifest_sha256": "1aa04f24df2945f8c37065e135643fc9dc0baa8754cfd81af896be0598ea1bba"
+  }
 }

@@ -50,7 +50,12 @@ test('built frontend and shared site resources resolve under a Pages project sub
     const data = await (await get(new URL('../data/wiki-data.json', wikiUrl))).json();
     const catalog = await (await get(new URL('../data/patch-catalog.json', wikiUrl))).json();
     const manifest = await (await get(new URL(`../data/${catalog.versions[catalog.default].manifest.slice(2)}`, wikiUrl))).json();
-    assert.equal(data.target_sha256, manifest.target.sha256);
+    const dataManifest = await (await get(new URL(`../data/${catalog.versions[catalog.wiki_data].manifest.slice(2)}`, wikiUrl))).json();
+    assert.equal(catalog.default, 'kris-sprint2');
+    assert.equal(catalog.wiki_data, 'alpha2');
+    assert.equal(data.target_sha256, dataManifest.target.sha256);
+    assert.notEqual(data.target_sha256, manifest.target.sha256);
+    assert.deepEqual(dataManifest.source, manifest.source);
   } finally {
     server.closeAllConnections();
     await new Promise((done) => server.close(done));

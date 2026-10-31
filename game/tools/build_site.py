@@ -20,6 +20,8 @@ MANIFEST = ROOT / "patches" / "manifest.json"
 MANIFEST_ALPHA1 = ROOT / "patches" / "manifest-alpha1.json"
 MANIFEST_ALPHA2 = ROOT / "patches" / "manifest-alpha2.json"
 MANIFEST_KRIS_SPRINT2 = ROOT / "patches" / "manifest-kris-sprint2.json"
+PATCHER_DEFAULT = "kris-sprint2"
+WIKI_DATA_VERSION = "alpha2"
 CHEAT = ROOT / "config" / "cheats" / "DeSmuME" / "Sacred-Gold-Plus-Drayano-QoL-fix1.cht"
 
 GUIDES = {
@@ -119,20 +121,21 @@ def verify_manifest(path: Path | None = None) -> dict:
             raise SystemExit(f"QA report does not match manifest: {evidence['file']}")
     return manifest
 
-def build_patch_catalog(alpha1: dict, alpha2: dict, kris_sprint2: dict, default_version: str = "alpha1") -> dict:
-    if default_version not in ("alpha1", "alpha2"):
+def build_patch_catalog(alpha1: dict, alpha2: dict, kris_sprint2: dict, default_version: str = PATCHER_DEFAULT) -> dict:
+    if default_version not in ("alpha1", "alpha2", "kris-sprint2"):
         raise SystemExit("Unknown default build")
-    if alpha2.get("status") != "EXPERIMENTAL_TESTED_PARTIAL" or alpha2.get("default") is not (default_version == "alpha2"):
-        raise SystemExit("Alpha 2 must remain experimental and match the selected default")
+    if alpha2.get("status") != "EXPERIMENTAL_TESTED_PARTIAL" or alpha2.get("default") is not True:
+        raise SystemExit("Historical Alpha 2 manifest must remain experimental and unchanged")
     if alpha2["source"] != alpha1["source"]:
         raise SystemExit("Alpha 2 source must match the clean Alpha 1 input")
     if (kris_sprint2.get("status") != "EXPERIMENTAL_SPRINT_ACCEPTED"
             or kris_sprint2.get("default") is not False
             or kris_sprint2.get("source") != alpha1["source"]):
-        raise SystemExit("Kris Sprint 2 must remain experimental, opt-in, and match the clean source")
+        raise SystemExit("Historical Kris Sprint 2 manifest must remain experimental and match the clean source")
     return {
         "schema": "ultimate-gold-patch-catalog/v1",
         "default": default_version,
+        "wiki_data": WIKI_DATA_VERSION,
         "versions": {
             "alpha1": {
                 "label": {"en": "Alpha 1 — previous build", "es": "Alfa 1 — versión anterior"},
@@ -148,8 +151,8 @@ def build_patch_catalog(alpha1: dict, alpha2: dict, kris_sprint2: dict, default_
                 "experimental": True,
             },
             "kris-sprint2": {
-                "label": {"en": "Kris + updated credits — experimental", "es": "Kris + créditos actualizados — experimental"},
-                "note": {"en": "Accepted Kris and title-credit sprint scope. Known Bag crop/contrast limits remain; full-adventure and hardware testing are not certified. Wiki data is based on Alpha 2 and has not been verified against this candidate. Cross-build save compatibility has not been established. Uses your clean HeartGold USA dump.", "es": "Alcance de los sprints de Kris y créditos aceptado. Se mantienen los límites de recorte/contraste de la Bolsa; no se certifican aventura completa ni hardware. Los datos de la wiki corresponden a Alfa 2 y no se han verificado contra esta candidata. No se ha establecido la compatibilidad de partidas entre versiones. Usa tu dump limpio de HeartGold USA."},
+                "label": {"en": "Ultimate Gold — cumulative, experimental", "es": "Ultimate Gold — acumulativa, experimental"},
+                "note": {"en": "Latest cumulative candidate: Kris and updated credits, with earlier features and an experimental stat editor included by reviewed lineage. Editor cases were tested on earlier builds; no new editor QA was performed on this candidate. Known Bag crop/contrast limits remain; full adventure and hardware are not certified. Wiki data and cheat checks are based on Alpha 2 and have not been verified against this candidate. Cross-build save compatibility has not been established. Uses your clean HeartGold USA dump.", "es": "Candidata acumulativa más reciente: Kris y créditos actualizados, con funciones anteriores y un editor de estadísticas experimental incluidos por linaje revisado. Los casos del editor se probaron en versiones anteriores; no se realizaron nuevas pruebas del editor en esta candidata. Se mantienen los límites de recorte/contraste de la Bolsa; no se certifican aventura completa ni hardware. Los datos de la wiki y las comprobaciones de trucos corresponden a Alfa 2 y no se han verificado contra esta candidata. No se ha establecido la compatibilidad de partidas entre versiones. Usa tu dump limpio de HeartGold USA."},
                 "manifest": "./patch-manifest-kris-sprint2.json",
                 "status": kris_sprint2["status"],
                 "experimental": True,
@@ -157,18 +160,24 @@ def build_patch_catalog(alpha1: dict, alpha2: dict, kris_sprint2: dict, default_
         },
     }
 
-def export_patch_payload(web_root: Path, alpha1: dict, alpha2: dict, kris_sprint2: dict, default_version: str = "alpha1") -> dict:
+def export_patch_payload(web_root: Path, alpha1: dict, alpha2: dict, kris_sprint2: dict, default_version: str = PATCHER_DEFAULT) -> dict:
     catalog = build_patch_catalog(alpha1, alpha2, kris_sprint2, default_version)
     assets = web_root / "assets"; assets.mkdir(parents=True, exist_ok=True)
     data_dir = web_root / "data"; data_dir.mkdir(parents=True, exist_ok=True)
-    for manifest, source, filename in (
-            (alpha1, MANIFEST_ALPHA1, "patch-manifest-alpha1.json"),
-            (alpha2, MANIFEST_ALPHA2, "patch-manifest-alpha2.json"),
-            (kris_sprint2, MANIFEST_KRIS_SPRINT2, "patch-manifest-kris-sprint2.json")):
+    published = {}
+    for version, manifest, source, filename in (
+            ("alpha1", alpha1, MANIFEST_ALPHA1, "patch-manifest-alpha1.json"),
+            ("alpha2", alpha2, MANIFEST_ALPHA2, "patch-manifest-alpha2.json"),
+            ("kris-sprint2", kris_sprint2, MANIFEST_KRIS_SPRINT2, "patch-manifest-kris-sprint2.json")):
         delta = ROOT / "patches" / manifest["delta"]["file"]
         shutil.copyfile(delta, assets / delta.name)
-        shutil.copyfile(source, data_dir / filename)
-    shutil.copyfile(MANIFEST, data_dir / "patch-manifest.json")
+        public_manifest = json.loads(json.dumps(manifest))
+        public_manifest["default"] = version == default_version
+        public_manifest["publication_metadata"] = {"source_manifest_sha256": digest(source)}
+        public_manifest["limits"] = [limit for limit in public_manifest.get("limits", []) if "default" not in limit.lower()]
+        published[version] = json.dumps(public_manifest, ensure_ascii=False, indent=2) + "\n"
+        (data_dir / filename).write_text(published[version], encoding="utf-8")
+    (data_dir / "patch-manifest.json").write_text(published[default_version], encoding="utf-8")
     (data_dir / "patch-catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return catalog
 
@@ -277,10 +286,9 @@ def main(react_dist: Path | None = None) -> int:
     alpha1 = verify_manifest(MANIFEST_ALPHA1)
     alpha2 = verify_manifest(MANIFEST_ALPHA2)
     kris_sprint2 = verify_manifest(MANIFEST_KRIS_SPRINT2)
-    matching = [version for version, manifest in (("alpha1", alpha1), ("alpha2", alpha2)) if manifest == current]
-    if len(matching) != 1:
-        raise SystemExit("Default manifest must match exactly one versioned manifest")
-    export_patch_payload(WEB, alpha1, alpha2, kris_sprint2, matching[0])
+    if current != alpha2:
+        raise SystemExit("Wiki data reference manifest must match Alpha 2")
+    export_patch_payload(WEB, alpha1, alpha2, kris_sprint2)
     shutil.copyfile(CHEAT, WEB / "assets" / "Sacred-Gold-Plus-Drayano-QoL-fix1.cht")
     wiki = WEB / "wiki"; wiki.mkdir(parents=True, exist_ok=True)
     pages = sorted((ROOT / "docs").glob("*.md"))

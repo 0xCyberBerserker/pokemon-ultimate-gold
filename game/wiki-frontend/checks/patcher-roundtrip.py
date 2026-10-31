@@ -46,11 +46,11 @@ def main():
                 page.on("request", lambda request: requests.append((request.method, request.url)) if request.url.startswith(("http:", "https:")) else None)
                 page.goto(origin + fixtures["PREFIX"] + "wiki/#/patcher", wait_until="domcontentloaded")
                 frame = page.frame_locator("iframe")
-                expect(frame.locator("#version")).to_have_value("alpha2")
+                expect(frame.locator("#version")).to_have_value("kris-sprint2")
                 expect(frame.locator("#apply")).to_be_enabled()
                 for version in ("alpha1", "alpha2", args.version):
                     expect(frame.locator(f'#version option[value="{version}"]')).to_have_count(1)
-                if args.version != "alpha2":
+                if args.version != "kris-sprint2":
                     frame.locator("#version").select_option(args.version)
                     expect(frame.locator("#apply")).to_be_enabled()
                 if args.version == "kris-sprint2":

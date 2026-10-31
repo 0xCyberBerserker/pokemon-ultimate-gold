@@ -1,7 +1,7 @@
 {
   "format": 1,
   "status": "EXPERIMENTAL_SPRINT_ACCEPTED",
-  "default": false,
+  "default": true,
   "source": {
     "kind": "clean external HeartGold USA",
     "filename": "HeartGold-USA.nds",
@@ -37,7 +37,6 @@
   "limits": [
     "Full adventure and physical hardware are not certified.",
     "Cross-build save compatibility is not established by patch reconstruction.",
-    "Alpha 2 and previous versions remain available; this is not the default.",
     "Each player supplies a clean HeartGold USA dump; no ROM source is provided."
   ],
   "attribution": [
@@ -45,5 +44,8 @@
     "Sacred Gold Plus: Umberto-DEV and credited contributors",
     "Ultimate Gold: R'LYEH FANGAME STUDIOS",
     "Pokémon: respective rights holders"
-  ]
+  ],
+  "publication_metadata": {
+    "source_manifest_sha256": "7d01e595415ac5301e94b2e14e5e6d59a1f572c4d45b50cde1b40c27467158aa"
+  }
 }

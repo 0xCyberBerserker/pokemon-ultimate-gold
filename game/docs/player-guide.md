@@ -6,7 +6,7 @@ Follow the play path in order: patch, start safely, learn the build, consult the
 
 ### 1. Prepare the game
 
-Use the [browser patcher](../web/wiki/#/patcher) with your own clean, supported Pokémon HeartGold USA ROM. Choose the build before applying: **Alpha 2 — experimental** adds the Rocket kit, evolution-shop stock and owned-HM actions; **Alpha 1** is the earlier TM Refill build. Each has a separate exact output hash. The browser verifies the files locally and does not upload your ROM. Keep the original and backups of your saves; see [patching instructions](web-patcher.md).
+Use the [browser patcher](../web/wiki/#/patcher) with your own clean, supported Pokémon HeartGold USA ROM. The default is the experimental cumulative candidate with Kris and updated credits; Alpha 1 and Alpha 2 remain available. Each patch applies directly to the clean input and has its own output hash. The browser verifies files locally and does not upload your ROM. Keep the original and backups of your saves; see [patching instructions](web-patcher.md).
 
 ### 2. First steps
 
@@ -30,7 +30,7 @@ Use the generated wiki to look up species, moves, items, trainers, and documente
 
 ### Scope and verification
 
-Both builds have partial runtime acceptance; tests belong to their recorded hashes. Alpha 2 has representative evidence for all eight HMs, two evolution-item purchases with save/cold recovery, the Rocket gift and bounded reusable-item effects. Full story, every evolution, PC transfer, physical controls and audio pacing remain pending. The EV/IV editor and Kris are not included. See [current status](project-status.md), [item locations](item-locations.md) and [TM/HM details](tm-guide.md).
+Tests belong to their recorded hashes. Alpha 2 has representative evidence for the listed features; the latest candidate includes Kris and an experimental EV/IV/nature editor. Limited editor cases were tested on an earlier build, with no new editor QA on this candidate. The wiki data and cheat catalog still describe Alpha 2 and have not been verified for the latest candidate. Full story, hardware and complete editor coverage remain pending. See [current status](project-status.md), [item locations](item-locations.md) and [TM/HM details](tm-guide.md).
 
 Made with 🖤 in Barcelona City 🇪🇸
 
@@ -40,7 +40,7 @@ Sigue el recorrido en este orden: aplica el parche, inicia una partida segura, c
 
 ### 1. Prepara el juego
 
-Abre el [parcheador web](../web/wiki/#/patcher) con tu propia ROM limpia y compatible de Pokémon HeartGold USA. Elige versión antes de aplicar: **Alfa 2 — experimental** añade kit Rocket, inventario evolutivo y acciones de MO sin enseñar movimientos; **Alfa 1** es la anterior con TM Refill (Recarga MT). Cada versión tiene un hash de salida propio. El navegador verifica los archivos localmente y no sube tu ROM. Conserva la original y copias de las partidas; consulta [las instrucciones](web-patcher.md).
+Abre el [parcheador web](../web/wiki/#/patcher) con tu propia ROM limpia y compatible de Pokémon HeartGold USA. Por defecto se selecciona la candidata acumulativa experimental con Kris y créditos actualizados; Alfa 1 y Alfa 2 siguen disponibles. Cada parche se aplica directamente sobre la entrada limpia y tiene su propio hash de salida. El navegador verifica los archivos localmente y no sube tu ROM. Conserva la original y copias de las partidas; consulta [las instrucciones](web-patcher.md).
 
 ### 2. Primeros pasos
 
@@ -64,6 +64,6 @@ Usa la wiki generada para consultar especies, movimientos, objetos, entrenadores
 
 ### Alcance y verificación
 
-Ambas versiones tienen aceptación parcial; cada prueba corresponde a su hash registrado. Alfa 2 tiene evidencia representativa de las ocho MO, dos compras evolutivas con guardado/recarga en frío, regalo Rocket y usos acotados de objetos reutilizables. Faltan historia completa, todas las evoluciones, transferencia al PC, controles físicos y ritmo musical. No incluye editor EV/IV ni Kris. Consulta [el estado actual](project-status.md), [ubicaciones de objetos](item-locations.md) y [detalles MT/MO](tm-guide.md).
+Cada prueba corresponde a su hash registrado. Alfa 2 tiene evidencia representativa de las funciones indicadas; la candidata más reciente incluye a Kris y un editor EV/IV/naturalezas experimental. Algunos casos del editor se probaron en una versión anterior, sin nuevas pruebas del editor en esta candidata. Los datos de la wiki y el catálogo de trucos siguen describiendo Alfa 2 y no se han verificado para la candidata más reciente. Faltan historia completa, hardware y cobertura completa del editor. Consulta [el estado actual](project-status.md), [ubicaciones de objetos](item-locations.md) y [detalles MT/MO](tm-guide.md).
 
 Made with 🖤 in Barcelona City 🇪🇸
