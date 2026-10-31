@@ -714,28 +714,28 @@
 :root {
   font-family: Georgia, "Times New Roman", serif;
   color: #29251e;
-  background: #f5efdf;
+  background: #faf7ee;
   font-synthesis: none;
-  --bg: #f5efdf;
-  --surface: #fffdf7;
-  --line: #e4d8bd;
+  --bg: #faf7ee;
+  --surface: #fffdf8;
+  --line: #e6dfd1;
   --text: #29251e;
   --muted: #665c4c;
   --gold: #875f16;
-  --gold-soft: #f4dfa1;
-  --nav: #f3ead3;
+  --gold-soft: #f6edd8;
+  --nav: #fbf7ed;
   --focus: #805400;
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #1e1b18;
-  --surface: #2c2823;
-  --line: #554b3b;
-  --text: #f4ead8;
-  --muted: #cbbca4;
+  --bg: #191a1b;
+  --surface: #262728;
+  --line: #494a49;
+  --text: #f2f0ea;
+  --muted: #c9c8c1;
   --gold: #ebc56f;
-  --gold-soft: #4a3920;
-  --nav: #24211d;
+  --gold-soft: #37352f;
+  --nav: #222324;
   --focus: #f4ca6b;
 }
 * {
@@ -904,7 +904,7 @@ main {
 .preview-note {
   border-left: 3px solid var(--gold);
   padding: 8px 12px;
-  background: var(--gold-soft);
+  background: var(--surface);
   font-size: 0.8rem;
   border-radius: 4px;
   margin-bottom: 26px;

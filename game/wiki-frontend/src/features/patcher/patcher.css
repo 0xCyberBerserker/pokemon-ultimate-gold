@@ -1,13 +1,13 @@
 .patcher-page {
-  --patcher-paper: #f5efdf;
-  --patcher-card: #fffdf7;
-  --patcher-card-warm: #fbf5e7;
+  --patcher-paper: #faf7ee;
+  --patcher-card: #fffdf8;
+  --patcher-card-warm: #fbf8f0;
   --patcher-ink: #29251e;
   --patcher-muted: #746b5b;
   --patcher-gold: #a9781c;
   --patcher-gold-dark: #78520b;
-  --patcher-gold-wash: #f4e2aa;
-  --patcher-line: #e4d8bd;
+  --patcher-gold-wash: #f6edd8;
+  --patcher-line: #e6dfd1;
   display: grid;
   gap: 16px;
   width: min(100%, 1120px);
@@ -16,15 +16,15 @@
 }
 
 :root[data-theme="dark"] .patcher-page {
-  --patcher-paper: #1e1b18;
-  --patcher-card: #2c2823;
-  --patcher-card-warm: #24211d;
-  --patcher-ink: #f4ead8;
-  --patcher-muted: #cbbca4;
+  --patcher-paper: #191a1b;
+  --patcher-card: #262728;
+  --patcher-card-warm: #222324;
+  --patcher-ink: #f2f0ea;
+  --patcher-muted: #c9c8c1;
   --patcher-gold: #ebc56f;
   --patcher-gold-dark: #ebc56f;
-  --patcher-gold-wash: #4a3920;
-  --patcher-line: #554b3b;
+  --patcher-gold-wash: #37352f;
+  --patcher-line: #494a49;
 }
 
 .patcher-hero {
@@ -37,7 +37,7 @@
   padding: clamp(22px, 4vw, 42px);
   border: 1px solid var(--patcher-line);
   border-radius: 18px;
-  background: linear-gradient(118deg, var(--patcher-card) 0%, var(--patcher-card-warm) 62%, var(--patcher-gold-wash) 145%);
+  background: var(--patcher-card);
   box-shadow: 0 12px 30px #76510c0d;
 }
 

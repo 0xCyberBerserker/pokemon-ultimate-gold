@@ -40,6 +40,7 @@ The existing generator also accepts an explicit local preview option, from `game
 - The displayed wiki-data version is distinct from Normal/Plus and is identified after matching the data target to the default version's patch manifest. The patcher may independently select another patch version.
 - The preview embeds the existing patcher using an iframe and same-origin `patcher-ready`, `patcher-height` and `wiki-language` messages. Local Chromium roundtrips for Alpha 1 and Alpha 2 produced the manifest hashes from a matching user-provided input; see `PARITY.md` for scope. Its scripts, workers, manifests and hashes must remain untouched.
 - The guide offers light and dark themes, stage navigation and branching evolution families. A selected trainer outside the current filters remains visible with an explicit notice. The patcher offers a separate-page fallback if the embedded view is unavailable.
+- Visual palette: use light cream for broad light-theme surfaces and neutral charcoal in dark mode. Reserve gold for accents and small selected controls, not page or panel backgrounds.
 - Full data parity, search coverage and accessibility verification remain incomplete. Do not claim complete functional parity or acceptance.
 - The current wiki CSP restricts scripts and styles to `self`; any integration must retain its protections and avoid inline script/style requirements.
 
@@ -83,5 +84,6 @@ El generador existente también admite una opción explícita de vista local, de
 - La versión mostrada de los datos de la wiki es independiente del modo Normal/Plus y se identifica tras comparar su hash con el manifiesto de la versión predeterminada. El parcheador puede seleccionar otra versión de forma independiente.
 - La vista integra el parcheador existente mediante un iframe y mensajes del mismo origen `patcher-ready`, `patcher-height` y `wiki-language`. Pruebas locales en Chromium generaron Alfa 1 y Alfa 2 con los hashes del manifiesto desde un original aportado por el usuario que coincide con el hash requerido; consulta `PARITY.md` para el alcance. Sus scripts, workers, manifiestos y hashes deben permanecer intactos.
 - La guía ofrece temas claro y oscuro, navegación por etapas y familias de evolución ramificadas. Si el entrenador seleccionado queda fuera de los filtros, permanece visible con un aviso explícito. El parcheador ofrece una página independiente si la vista integrada no está disponible.
+- Paleta visual: usa crema claro en las superficies amplias del tema claro y gris carbón neutro en modo oscuro. Reserva el dorado para acentos y pequeños controles seleccionados, no para fondos de página o paneles.
 - Quedan pendientes la equivalencia de datos completa, la cobertura de búsqueda y la comprobación de accesibilidad. No se puede afirmar equivalencia funcional completa ni aceptación.
 - La CSP actual restringe scripts y estilos a `self`; la integración debe conservar sus protecciones y evitar requisitos de script o estilos inline.

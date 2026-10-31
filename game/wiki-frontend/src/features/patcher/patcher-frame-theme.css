@@ -1,24 +1,24 @@
 :root.patcher-embedded[data-wiki-theme="light"] {
   color-scheme: light;
-  --paper: #f5efdf;
-  --surface: #fffdf7;
+  --paper: #faf7ee;
+  --surface: #fffdf8;
   --ink: #29251e;
   --muted: #746b5b;
   --gold: #a9781c;
-  --gold-wash: #f4e2aa;
-  --line: #e4d8bd;
+  --gold-wash: #f6edd8;
+  --line: #e6dfd1;
 }
 
 :root.patcher-embedded[data-wiki-theme="dark"] {
   color-scheme: dark;
-  --paper: #1e1b18;
-  --surface: #2c2823;
-  --nav: #24211d;
-  --ink: #f4ead8;
-  --muted: #cbbca4;
+  --paper: #191a1b;
+  --surface: #262728;
+  --nav: #222324;
+  --ink: #f2f0ea;
+  --muted: #c9c8c1;
   --gold: #ebc56f;
-  --gold-wash: #4a3920;
-  --line: #554b3b;
+  --gold-wash: #37352f;
+  --line: #494a49;
   --status-error: #ff9d93;
   --status-success: #92d9a4;
 }
