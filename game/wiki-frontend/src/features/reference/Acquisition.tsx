@@ -1,6 +1,24 @@
 import type { Acquisition as AcquisitionRecord, Language } from '../../data/types';
 import { localized } from '../../data/wiki';
 
+const spanishClaims: Record<string, string> = {
+  'Upstream documentation; not verified in this target ROM.': 'Documentación de origen; no contrastada con esta ROM.',
+  'Base-game renewable method, not a verified pickup or wild encounter in Ultimate Gold.': 'Método renovable del juego base; no confirma una recogida ni un encuentro salvaje en Ultimate Gold.',
+  'Static item-slot comparison only; does not establish encounter tables, location, or native capture.': 'Solo comparación estática de ranuras de objeto; no confirma tablas de encuentros, ubicación ni captura nativa.',
+  'HGSS rock-smash reference only. Does not establish unchanged target loot tables.': 'Solo referencia de Golpe Roca de HGSS; no confirma que las tablas de botín de esta ROM no hayan cambiado.',
+  'HGSS renewable method only; no target-ROM or native-capture claim.': 'Solo método renovable de HGSS; no acredita el comportamiento de esta ROM ni una captura nativa.',
+  'HGSS renewable method only. No target encounter or acquisition was tested.': 'Solo método renovable de HGSS; no se probó ningún encuentro ni obtención en esta ROM.',
+  'HGSS acquisition references only; no route, event, encounter, rate, or native acquisition is asserted for the target ROM.': 'Solo referencias de obtención de HGSS; no se afirma una ruta, evento, encuentro, probabilidad ni obtención nativa en esta ROM.',
+  'HGSS reference only; the Luvdisc rate is not asserted for the target ROM, and no encounter or native acquisition is verified.': 'Solo referencia de HGSS; no se afirma la probabilidad de Luvdisc en esta ROM ni se verifica un encuentro u obtención nativa.',
+  'HGSS reference only; no native target shop stock or acquisition is verified.': 'Solo referencia de HGSS; no se verifica el stock de tienda ni la obtención nativa en esta ROM.',
+  'HGSS reference only; no native target event or pickup is verified.': 'Solo referencia de HGSS; no se verifica un evento ni una recogida nativa en esta ROM.',
+  'HGSS reference only; the listed rate is not asserted for the target ROM, and no encounter or native acquisition is verified.': 'Solo referencia de HGSS; no se afirma la probabilidad indicada para esta ROM ni se verifica un encuentro u obtención nativa.',
+  'HGSS reference only; no native target event or gift is verified.': 'Solo referencia de HGSS; no se verifica un evento ni un regalo nativo en esta ROM.',
+  'HeartGold reference only; no native target event or gift is verified.': 'Solo referencia de HeartGold; no se verifica un evento ni un regalo nativo en esta ROM.',
+  'The guide explicitly says no location change; exact base-game spot not transcribed.': 'La guía indica expresamente que la ubicación no cambia; no se ha transcrito el punto exacto del juego base.',
+  'WikiDex gives the HGSS location; the pinned exact-ROM event/script comparison is static only and does not establish native collection.': 'WikiDex indica la ubicación de HGSS; la comparación de evento y script con la ROM fijada es solo estática y no confirma la recogida nativa.',
+};
+
 function localPath(path: string | undefined, image = false): string | undefined {
   if (!path) return undefined;
   try {
@@ -41,7 +59,7 @@ export default function Acquisition({ records, language }: { records?: Acquisiti
       {(evidence || record.source?.claim || record.source?.reference || record.source?.transcription || record.price != null) && <details><summary>{es ? 'Fuentes y comprobación' : 'Sources and verification'}</summary>
         {record.source?.reference && <p>{es ? 'Referencia de origen' : 'Source reference'}: <code>{record.source.reference}</code></p>}
         {record.price != null && <p>{es ? 'Precio registrado' : 'Recorded price'}: ₽{record.price.toLocaleString(language)}{record.shop_id != null && ` · ${es ? 'Tienda' : 'Shop'} ${record.shop_id}`}</p>}
-        {record.source?.claim && <p>{es ? 'Alcance original de la fuente' : 'Original source claim'}: {record.source.claim}</p>}
+        {record.source?.claim && <p>{es ? 'Alcance de la fuente' : 'Original source claim'}: {es ? (spanishClaims[record.source.claim] || record.source.claim) : record.source.claim}</p>}
         {record.source?.transcription && <p>{es ? 'Transcripción' : 'Transcription'}: {record.source.transcription.startsWith('https://') ? <a className="text-link" href={record.source.transcription}>{es ? 'Abrir fuente' : 'Open source'}</a> : record.source.transcription}</p>}
         {evidence?.scope && <p>{es ? 'Alcance' : 'Scope'}: {statusLabel(evidence.scope, es)}</p>}
         {evidence?.proof && <p>{es ? 'Registro de evidencia' : 'Evidence record'}: {evidence.proof.kind}{evidence.proof.item_id != null && ` · ID ${evidence.proof.item_id}`}{evidence.proof.species_ids?.map((id) => <span key={id}> · <a className="text-link" href={`#/pokemon/${id}`}>#{id}</a></span>)}</p>}

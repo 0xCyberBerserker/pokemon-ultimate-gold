@@ -57,6 +57,11 @@ test('reference views render actual bilingual data and hash links', async () => 
     const upstream = renderToStaticMarkup(React.createElement(Acquisition, { language: 'en', records: data.items['80'].acquisition }));
     assert.match(upstream, /Upstream documentation; not verified in this target ROM/);
     assert.match(upstream, /pokemon-sacred-gold-storm-silver-important-item-locations/);
+    const claims = new Set(Object.values(data.items).flatMap((item) => (item.acquisition || []).map((record) => record.source?.claim).filter(Boolean)));
+    for (const claim of claims) {
+      const spanish = renderToStaticMarkup(React.createElement(Acquisition, { language: 'es', records: [{ source: { claim } }] }));
+      assert.ok(!spanish.includes(claim), `Missing Spanish source claim: ${claim}`);
+    }
     const unsafe = renderToStaticMarkup(React.createElement(Acquisition, { language: 'en', records: [{ method: { en: 'example', es: 'ejemplo' }, evidence: { report: { path: 'https://outside.invalid/report' }, screenshots: [{ path: '//outside.invalid/photo.png' }] } }] }));
     assert.doesNotMatch(unsafe, /outside\.invalid/);
     const galleryData = JSON.parse(await readFile(new URL('../../web/data/kris-gallery.json', import.meta.url)));
