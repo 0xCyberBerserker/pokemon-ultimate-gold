@@ -1,0 +1,58 @@
+.patcher-page {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.patcher-page > .eyebrow {
+  margin: 0 0 10px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+}
+.patcher-page > h1 {
+  margin: 0 0 12px;
+  font: 700 clamp(2rem, 4vw, 3rem) Georgia, serif;
+}
+.patcher-intro {
+  max-width: 72ch;
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.patcher-note,
+.patcher-disclaimer {
+  margin: 10px 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.patcher-note code {
+  overflow-wrap: anywhere;
+}
+.patcher-disclaimer {
+  border-style: dashed;
+}
+.patcher-frame {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+  background: transparent;
+}
+.patcher-fallback {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.patcher-fallback a {
+  color: var(--text);
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 3px;
+}

@@ -17,11 +17,13 @@ test('reference views render actual bilingual data and hash links', async () => 
     assert.match(dex, /#\/pokemon\/2/);
     assert.match(dex, /Nivel 16/);
     assert.match(dex, /class="pokemon-evolution"/);
+    assert.match(dex, /sprites\/types\/12\.png/);
     assert.match(dex, /sprites\/pokemon\/2\.png/);
     assert.match(dex, /#\/abilities\/65/);
     const list = renderToStaticMarkup(React.createElement(Pokedex, { data, language: 'en' }));
     assert.equal((list.match(/class="dex-card"/g) || []).length, 60);
     assert.ok(list.includes(` / ${data.species.length}`));
+    assert.match(list, /sprites\/types\/12\.png/);
     const move = renderToStaticMarkup(React.createElement(Reference, { data, language: 'es', route: '#/moves/27' }));
     const ability = renderToStaticMarkup(React.createElement(Reference, { data, language: 'es', route: '#/abilities/65' }));
     assert.match(ability, /Espesura/);
@@ -29,6 +31,13 @@ test('reference views render actual bilingual data and hash links', async () => 
     assert.match(move, /Voz Cautivadora/);
     assert.match(move, /Hada/);
     assert.match(move, /Potencia: 40/);
+    assert.match(move, /sprites\/types\/9\.png/);
+    const items = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: '#/items' }));
+    assert.match(items, /<details class="panel item-entry"/);
+    assert.match(items, /sprites\/items\/1\.png/);
+    assert.match(items, /href="#\/items\/1"/);
+    assert.match(items, /ROM placeholder icon/);
+    assert.match(items, /Goldenrod Department Store 2F/);
     const guide = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: '#/guide/player' }));
     assert.ok(guide.includes(data.guides.player.title.en));
     for (const language of ['en', 'es']) {
