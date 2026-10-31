@@ -31,6 +31,15 @@ test('decorative illustrations are bound to their own documented stages', async 
     ['stage-33', 'Route 47', 'route-47.png', 'aefc11e3b949081cd099b7db69511349f797bccd503e14bdb2004dd09fd3d61a'],
     ['stage-48', 'Route 27', 'route-27.png', 'cf8a817aa52822c2d3de4b270a397a74f9a5dbc03832f40de489ea01dc9a350f'],
     ['stage-49', 'Route 26', 'route-26.png', '9dab37d3d985c3a85d4ebb78bc2b95f28e67832cbe895b3304bbf16da1f318f0'],
+    ['stage-55', 'Route 6', 'route-6.png', '899aba4ce43a223a9736dd9d27d7a5839959cf34d6652e390cb6b1acfd337d98'],
+    ['stage-56', 'Route 2 ~ North', 'route-2.png', '509eb8461ba80710eb4944f804139db164de95ff3073992e7c511d593592d547'],
+    ['stage-57', 'Route 3', 'route-3.png', 'fecf55b5731c1c2a8099bf1d055ed9753c174c15b9854f6f0ab323322591e164'],
+    ['stage-60', 'Route 4', 'route-4.png', '0b7d06b84e52422acf2408a005913eb3ded9722bf340674c1cb321fc021f9970'],
+    ['stage-61', 'Route 9', 'route-9.png', '24dba49c7fcaf52310c261bfc5dbd2de20d21fec61173bcfd739fe693f8d5765'],
+    ['stage-62', 'Route 24', 'route-24.png', '23486e15757cc245eadef9bb0bec161d8b98cb92577ee38750d9bc874854e13b'],
+    ['stage-63', 'Route 25', 'route-25.png', 'a8e496d92b915a7e3e349483029e13666ed17a6fc9d14e8c8eee76e2bca7d327'],
+    ['stage-66', 'Route 10', 'route-10.png', '23e72deb07b22526d7fff591f2fb9780db4e714eaec342adbc2ca468adf9422b'],
+    ['stage-85', 'Route 2 ~ South', 'route-2.png', '509eb8461ba80710eb4944f804139db164de95ff3073992e7c511d593592d547'],
   ];
   for (const [id, name, file, hash] of cases) {
     assert.equal(journey.stages.find((stage) => stage.id === id)?.name.en, name);
@@ -70,6 +79,15 @@ test('stage banners label art in both languages and leave other stages neutral',
       ['stage-33', 'es', 'Ilustración decorativa', 'route-47.png'],
       ['stage-48', 'en', 'Decorative illustration', 'route-27.png'],
       ['stage-49', 'es', 'Ilustración decorativa', 'route-26.png'],
+      ['stage-55', 'en', 'Decorative illustration', 'route-6.png'],
+      ['stage-56', 'es', 'Ilustración decorativa', 'route-2.png'],
+      ['stage-57', 'en', 'Decorative illustration', 'route-3.png'],
+      ['stage-60', 'es', 'Ilustración decorativa', 'route-4.png'],
+      ['stage-61', 'en', 'Decorative illustration', 'route-9.png'],
+      ['stage-62', 'es', 'Ilustración decorativa', 'route-24.png'],
+      ['stage-63', 'en', 'Decorative illustration', 'route-25.png'],
+      ['stage-66', 'es', 'Ilustración decorativa', 'route-10.png'],
+      ['stage-85', 'en', 'Decorative illustration', 'route-2.png'],
     ]) {
       globalThis.sessionStorage = { getItem: () => JSON.stringify({ stage }) };
       const html = renderToStaticMarkup(React.createElement(TrainerExplorer, { data, language, mode: 'normal' }));
