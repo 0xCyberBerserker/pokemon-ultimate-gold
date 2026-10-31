@@ -29,7 +29,7 @@ const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
     page.on('pageerror', error => errors.push(error.message));
     page.on('request', request => requests.push({method: request.method(), url: request.url()}));
     await page.goto(url);
-    await page.waitForFunction(() => document.querySelector('#version').options.length === 2);
+    await page.waitForFunction(count => document.querySelector('#version').options.length === count, Object.keys(catalog.versions).length);
     assert.equal(await page.locator('#version').inputValue(), defaultVersion);
     await page.selectOption('#language', 'en');
     await page.click('#apply');

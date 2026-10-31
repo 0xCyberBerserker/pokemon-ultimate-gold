@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "status": "EXPERIMENTAL_SPRINT_ACCEPTED",
+  "default": false,
+  "source": {
+    "kind": "clean external HeartGold USA",
+    "filename": "HeartGold-USA.nds",
+    "sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+    "size": 134217728
+  },
+  "target": {
+    "filename": "Ultimate-Gold-Kris-Sprint2.nds",
+    "sha256": "fc0bf04ec57fa30121fdb50a4da3a94c300fc0abe171c96b3e60bc2e674baff4",
+    "size": 127901556,
+    "build": "Accepted Kris candidate plus Sprint 2 title credits"
+  },
+  "delta": {
+    "file": "ultimate-gold-kris-sprint2.xdelta",
+    "sha256": "8b99a32c572469985158690ee00251d842e43f1fdb4cb69777e3c6ccd1aa3f99",
+    "size": 6348509
+  },
+  "lineage": {
+    "kris_parent_sha256": "d577d8e8a47020deca8f9d5691af9480fd5671af79d0a92322f509de165f6267",
+    "title_issue": 34,
+    "title_file_id": 175,
+    "title_members": [
+      0,
+      3,
+      15,
+      17
+    ]
+  },
+  "claims": {
+    "kris": "Accepted documented Sprint 1 scope; known crop/contrast limits retained.",
+    "title_credits": "Bounded native boot/Save/cold review and scoped human visual approval."
+  },
+  "limits": [
+    "Full adventure and physical hardware are not certified.",
+    "Cross-build save compatibility is not established by patch reconstruction.",
+    "Alpha 2 and previous versions remain available; this is not the default.",
+    "Each player supplies a clean HeartGold USA dump; no ROM source is provided."
+  ],
+  "attribution": [
+    "Sacred Gold: Drayano",
+    "Sacred Gold Plus: Umberto-DEV and credited contributors",
+    "Ultimate Gold: R'LYEH FANGAME STUDIOS",
+    "Pokémon: respective rights holders"
+  ]
+}

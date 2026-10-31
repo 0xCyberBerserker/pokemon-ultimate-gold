@@ -1,7 +1,7 @@
 export const strings = {
   en: {
     title: 'Battle preparation', intro: 'Find a trainer and inspect their team before your next battle.',
-    preview: 'Migration preview · verification in progress.', search: 'Search trainer, Pokémon, move or location',
+    preview: 'Wiki data from the indicated build.', search: 'Search trainer, Pokémon, move or location',
     kind: 'Encounter', allKinds: 'All encounters', first_visit: 'First visit', rematch: 'Rematches', other: 'Order unconfirmed',
     stage: 'Journey stage', allStages: 'Whole journey', mode: 'Game mode', language: 'Language', theme: 'Theme',
     team: 'Team', location: 'Location', item: 'Held item', abilities: 'Possible abilities', moves: 'Moves',
@@ -16,7 +16,7 @@ export const strings = {
   },
   es: {
     title: 'Preparación de combates', intro: 'Busca un entrenador y examina su equipo antes del próximo combate.',
-    preview: 'Vista previa de migración · verificación en curso.', search: 'Buscar entrenador, Pokémon, movimiento o ubicación',
+    preview: 'Datos de la wiki de la versión indicada.', search: 'Buscar entrenador, Pokémon, movimiento o ubicación',
     kind: 'Encuentro', allKinds: 'Todos los encuentros', first_visit: 'Primera visita', rematch: 'Revancha', other: 'Orden por confirmar',
     stage: 'Tramo de aventura', allStages: 'Todo el recorrido', mode: 'Modo de juego', language: 'Idioma', theme: 'Tema',
     team: 'Equipo', location: 'Ubicación', item: 'Objeto equipado', abilities: 'Habilidades posibles', moves: 'Movimientos',

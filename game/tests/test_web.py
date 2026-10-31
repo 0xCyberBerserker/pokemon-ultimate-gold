@@ -96,37 +96,75 @@ class WebBuildTests(unittest.TestCase):
     def test_patch_catalog_matches_default_and_keeps_both_builds_visible(self):
         alpha1 = json.loads(build_site.MANIFEST_ALPHA1.read_text(encoding="utf-8"))
         alpha2 = json.loads(build_site.MANIFEST_ALPHA2.read_text(encoding="utf-8"))
+        kris = build_site.verify_manifest(build_site.MANIFEST_KRIS_SPRINT2)
         default = "alpha2" if build_site.verify_manifest() == alpha2 else "alpha1"
-        catalog = build_site.build_patch_catalog(alpha1, alpha2, default)
+        self.assertEqual(default, "alpha2")
+        catalog = build_site.build_patch_catalog(alpha1, alpha2, kris, default)
         self.assertEqual(catalog["default"], default)
         self.assertIn("alpha1", catalog["versions"])
         self.assertIn("alpha2", catalog["versions"])
+        self.assertIn("kris-sprint2", catalog["versions"])
         self.assertTrue(catalog["versions"]["alpha2"]["experimental"])
         self.assertIn("EVIV", catalog["versions"]["alpha2"]["note"]["en"])
+        self.assertTrue(catalog["versions"]["kris-sprint2"]["experimental"])
+        self.assertEqual(catalog["versions"]["kris-sprint2"]["label"]["es"], "Kris + créditos actualizados — experimental")
+        self.assertIn("Wiki data is based on Alpha 2", catalog["versions"]["kris-sprint2"]["note"]["en"])
+        self.assertIn("Los datos de la wiki corresponden a Alfa 2", catalog["versions"]["kris-sprint2"]["note"]["es"])
+        shipped = json.loads((ROOT / "web/data/patch-catalog.json").read_text(encoding="utf-8"))
+        self.assertEqual(shipped, catalog)
 
     def test_patch_catalog_requires_consistent_experimental_default(self):
         alpha1 = json.loads(build_site.MANIFEST_ALPHA1.read_text(encoding="utf-8"))
         alpha2 = json.loads(build_site.MANIFEST_ALPHA2.read_text(encoding="utf-8"))
+        kris = build_site.verify_manifest(build_site.MANIFEST_KRIS_SPRINT2)
         alpha2["default"] = True
-        catalog = build_site.build_patch_catalog(alpha1, alpha2, "alpha2")
+        catalog = build_site.build_patch_catalog(alpha1, alpha2, kris, "alpha2")
         self.assertEqual(catalog["default"], "alpha2")
         self.assertTrue(catalog["versions"]["alpha2"]["experimental"])
         self.assertNotIn("Selected by default", catalog["versions"]["alpha1"]["note"]["en"])
         with self.assertRaises(SystemExit):
-            build_site.build_patch_catalog(alpha1, alpha2, "alpha1")
+            build_site.build_patch_catalog(alpha1, alpha2, kris, "alpha1")
+        invalid = dict(kris, status="TESTED_PARTIAL")
+        with self.assertRaisesRegex(SystemExit, "Kris Sprint 2"):
+            build_site.build_patch_catalog(alpha1, alpha2, invalid, "alpha2")
+        invalid = dict(kris, default=True)
+        with self.assertRaisesRegex(SystemExit, "Kris Sprint 2"):
+            build_site.build_patch_catalog(alpha1, alpha2, invalid, "alpha2")
+        invalid = dict(kris, source={"sha256": "0" * 64})
+        with self.assertRaisesRegex(SystemExit, "Kris Sprint 2"):
+            build_site.build_patch_catalog(alpha1, alpha2, invalid, "alpha2")
 
-    def test_patch_payload_exports_both_local_builds_without_roms(self):
+    def test_kris_sprint2_manifest_pins_hashes_and_clean_source(self):
         alpha1 = build_site.verify_manifest(build_site.MANIFEST_ALPHA1)
         alpha2 = build_site.verify_manifest(build_site.MANIFEST_ALPHA2)
+        kris = build_site.verify_manifest(build_site.MANIFEST_KRIS_SPRINT2)
+        self.assertEqual(hashlib.sha256(build_site.MANIFEST_KRIS_SPRINT2.read_bytes()).hexdigest(), "7d01e595415ac5301e94b2e14e5e6d59a1f572c4d45b50cde1b40c27467158aa")
+        self.assertEqual(kris["status"], "EXPERIMENTAL_SPRINT_ACCEPTED")
+        self.assertIs(kris["default"], False)
+        self.assertEqual(kris["source"], alpha1["source"])
+        self.assertEqual(alpha2["source"], alpha1["source"])
+        self.assertEqual(kris["delta"]["sha256"], "8b99a32c572469985158690ee00251d842e43f1fdb4cb69777e3c6ccd1aa3f99")
+        self.assertEqual(kris["delta"]["size"], 6348509)
+        web_manifest = ROOT / "web/data/patch-manifest-kris-sprint2.json"
+        web_delta = ROOT / "web/assets/ultimate-gold-kris-sprint2.xdelta"
+        self.assertEqual(web_manifest.read_bytes(), build_site.MANIFEST_KRIS_SPRINT2.read_bytes())
+        self.assertEqual(hashlib.sha256(web_delta.read_bytes()).hexdigest(), kris["delta"]["sha256"])
+
+    def test_patch_payload_exports_all_local_builds_without_roms(self):
+        alpha1 = build_site.verify_manifest(build_site.MANIFEST_ALPHA1)
+        alpha2 = build_site.verify_manifest(build_site.MANIFEST_ALPHA2)
+        kris = build_site.verify_manifest(build_site.MANIFEST_KRIS_SPRINT2)
         default = "alpha2" if build_site.verify_manifest() == alpha2 else "alpha1"
         with tempfile.TemporaryDirectory() as directory:
             web = Path(directory)
-            build_site.export_patch_payload(web, alpha1, alpha2, default)
+            build_site.export_patch_payload(web, alpha1, alpha2, kris, default)
             catalog = json.loads((web / "data/patch-catalog.json").read_text(encoding="utf-8"))
             self.assertEqual(catalog["default"], default)
-            for manifest in (alpha1, alpha2):
+            for manifest in (alpha1, alpha2, kris):
                 self.assertTrue((web / "assets" / manifest["delta"]["file"]).is_file())
                 self.assertEqual(hashlib.sha256((web / "assets" / manifest["delta"]["file"]).read_bytes()).hexdigest(), manifest["delta"]["sha256"])
+            self.assertEqual((web / "data/patch-manifest-kris-sprint2.json").read_bytes(), build_site.MANIFEST_KRIS_SPRINT2.read_bytes())
+            self.assertEqual(catalog["versions"]["kris-sprint2"]["status"], "EXPERIMENTAL_SPRINT_ACCEPTED")
             self.assertFalse(any(web.rglob("*.nds")))
             self.assertFalse(any(web.rglob("*.sav")))
 

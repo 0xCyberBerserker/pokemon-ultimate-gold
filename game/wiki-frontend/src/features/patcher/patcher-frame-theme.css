@@ -1,0 +1,212 @@
+:root.patcher-embedded[data-wiki-theme="light"] {
+  color-scheme: light;
+  --paper: #f5efdf;
+  --surface: #fffdf7;
+  --ink: #29251e;
+  --muted: #746b5b;
+  --gold: #a9781c;
+  --gold-wash: #f4e2aa;
+  --line: #e4d8bd;
+}
+
+:root.patcher-embedded[data-wiki-theme="dark"] {
+  color-scheme: dark;
+  --paper: #1e1b18;
+  --surface: #2c2823;
+  --nav: #24211d;
+  --ink: #f4ead8;
+  --muted: #cbbca4;
+  --gold: #ebc56f;
+  --gold-wash: #4a3920;
+  --line: #554b3b;
+  --status-error: #ff9d93;
+  --status-success: #92d9a4;
+}
+
+.patcher-embedded .patcher-root {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.patcher-embedded .steps {
+  gap: 8px;
+}
+
+.patcher-embedded .steps li {
+  min-width: 0;
+  gap: 6px;
+  padding: 12px;
+  border-color: var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 4px 14px #76510c0a;
+}
+
+.patcher-embedded .steps b {
+  color: var(--gold);
+}
+
+.patcher-embedded .steps span {
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.patcher-embedded .workspace {
+  width: 100%;
+  max-width: none;
+  gap: 11px;
+  padding: 16px 0 12px;
+  font-family: system-ui, sans-serif;
+}
+
+.patcher-embedded .version-selector {
+  gap: 7px;
+  padding: 13px;
+  border-color: var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.patcher-embedded .version-selector label,
+.patcher-embedded #source-label {
+  color: var(--ink);
+  font-size: 0.82rem;
+}
+
+.patcher-embedded .version-selector select,
+.patcher-embedded input[type="file"] {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  font: 600 0.82rem/1.35 system-ui, sans-serif;
+}
+
+.patcher-embedded input[type="file"]::file-selector-button {
+  margin-right: 10px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--gold-wash);
+  color: var(--ink);
+  font: 650 0.76rem system-ui, sans-serif;
+}
+
+.patcher-embedded .micro,
+.patcher-embedded .version-selector p {
+  margin: 0;
+  color: var(--muted);
+  font: 0.74rem/1.5 system-ui, sans-serif;
+}
+
+.patcher-embedded code {
+  color: var(--gold);
+  font: 600 0.7rem/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+
+.patcher-embedded button,
+.patcher-embedded #download:not([hidden]) {
+  width: max-content;
+  max-width: 100%;
+  min-height: 42px;
+  padding: 10px 15px;
+  border: 1px solid var(--gold);
+  border-radius: 9px;
+  background: var(--gold-wash);
+  color: var(--ink);
+  font: 750 0.82rem/1.25 system-ui, sans-serif;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.patcher-embedded button:hover,
+.patcher-embedded #download:not([hidden]):hover {
+  border-color: var(--gold);
+  filter: brightness(0.97);
+}
+
+.patcher-embedded #status {
+  min-height: 1.25em;
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  font: 0.8rem/1.5 system-ui, sans-serif;
+}
+
+.patcher-embedded #status.error {
+  padding: 8px 10px;
+  border: 1px solid color-mix(in srgb, var(--status-error, #ae3328) 32%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--status-error, #ae3328) 12%, var(--paper));
+  color: var(--status-error, #ae3328);
+}
+
+.patcher-embedded #status.success {
+  padding: 8px 10px;
+  border: 1px solid color-mix(in srgb, var(--status-success, #237a48) 32%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--status-success, #237a48) 12%, var(--paper));
+  color: var(--status-success, #237a48);
+}
+
+.patcher-embedded .patcher-root > nav {
+  gap: 8px 18px;
+  color: var(--muted);
+  font: 0.76rem/1.45 system-ui, sans-serif;
+}
+
+.patcher-embedded .patcher-root > nav a {
+  color: var(--gold);
+  text-underline-offset: 3px;
+}
+
+.patcher-embedded footer {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-color: var(--line);
+  color: var(--muted);
+  font: 0.7rem/1.4 system-ui, sans-serif;
+}
+
+.patcher-embedded input:focus-visible,
+.patcher-embedded select:focus-visible,
+.patcher-embedded button:focus-visible,
+.patcher-embedded a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+  .patcher-embedded .steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .patcher-embedded .steps li {
+    grid-template-columns: 32px minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .patcher-embedded .steps b {
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .patcher-embedded .steps span {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .patcher-embedded .workspace {
+    padding-top: 12px;
+  }
+
+  .patcher-embedded input[type="file"] {
+    font-size: 0.72rem;
+  }
+}

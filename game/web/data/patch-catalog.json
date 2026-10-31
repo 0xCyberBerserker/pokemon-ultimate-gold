@@ -26,6 +26,19 @@
       "manifest": "./patch-manifest-alpha2.json",
       "status": "EXPERIMENTAL_TESTED_PARTIAL",
       "experimental": true
+    },
+    "kris-sprint2": {
+      "label": {
+        "en": "Kris + updated credits — experimental",
+        "es": "Kris + créditos actualizados — experimental"
+      },
+      "note": {
+        "en": "Accepted Kris and title-credit sprint scope. Known Bag crop/contrast limits remain; full-adventure and hardware testing are not certified. Wiki data is based on Alpha 2 and has not been verified against this candidate. Cross-build save compatibility has not been established. Uses your clean HeartGold USA dump.",
+        "es": "Alcance de los sprints de Kris y créditos aceptado. Se mantienen los límites de recorte/contraste de la Bolsa; no se certifican aventura completa ni hardware. Los datos de la wiki corresponden a Alfa 2 y no se han verificado contra esta candidata. No se ha establecido la compatibilidad de partidas entre versiones. Usa tu dump limpio de HeartGold USA."
+      },
+      "manifest": "./patch-manifest-kris-sprint2.json",
+      "status": "EXPERIMENTAL_SPRINT_ACCEPTED",
+      "experimental": true
     }
   }
 }

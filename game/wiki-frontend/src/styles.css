@@ -712,33 +712,30 @@
   }
 }
 :root {
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
-  color: #28343b;
-  background: #f5f2e8;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #29251e;
+  background: #f5efdf;
   font-synthesis: none;
-  --bg: #f5f2e8;
+  --bg: #f5efdf;
   --surface: #fffdf7;
-  --line: #e5dec9;
-  --text: #28343b;
-  --muted: #5c696f;
-  --gold: #b77916;
-  --gold-soft: #fae7b5;
-  --nav: #fdf8eb;
-  --focus: #956600;
+  --line: #e4d8bd;
+  --text: #29251e;
+  --muted: #665c4c;
+  --gold: #875f16;
+  --gold-soft: #f4dfa1;
+  --nav: #f3ead3;
+  --focus: #805400;
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #111c29;
-  --surface: #1b2a3a;
-  --line: #394857;
-  --text: #edf2f5;
-  --muted: #b9c6ce;
-  --gold: #edc774;
-  --gold-soft: #594923;
-  --nav: #172432;
+  --bg: #1e1b18;
+  --surface: #2c2823;
+  --line: #554b3b;
+  --text: #f4ead8;
+  --muted: #cbbca4;
+  --gold: #ebc56f;
+  --gold-soft: #4a3920;
+  --nav: #24211d;
   --focus: #f4ca6b;
 }
 * {
