@@ -13,6 +13,7 @@ test('wiki data remains pinned to its verified build when the patch default chan
   try {
     const result = await loadWiki(new AbortController().signal);
     assert.equal(result.version.en, 'Alpha 2');
+    assert.equal(result.patchVersion.en, 'Kris');
     assert.equal(result.data.target_sha256, 'alpha2');
     catalog.wiki_data = 'kris-sprint2';
     await assert.rejects(() => loadWiki(new AbortController().signal), /target mismatch/);
