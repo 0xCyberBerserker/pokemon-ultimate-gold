@@ -25,6 +25,10 @@ python3 -m http.server 8767 --bind 127.0.0.1 --directory web
 
 Open `http://127.0.0.1:8767/` for the wiki home, or `http://127.0.0.1:8767/wiki/#/patcher` for its integrated patcher. The server command stays in the foreground; stop it with Ctrl+C. `tools/build_site.py` writes the local `web/` payload and does not publish it.
 
+### React wiki preview
+
+The React migration is not yet release-verified. In an isolated checkout, inspect the lockfile and dependency provenance, then run `pnpm audit`, `pnpm install --frozen-lockfile --ignore-scripts`, `pnpm test` and `pnpm build` from `wiki-frontend/` using Node.js 26.12.1 and pnpm 12.16.1. An audit with no advisories is not a security guarantee. From `game/`, `python3 tools/build_site.py --react-dist wiki-frontend/dist` generates the site with the React entry point; it rewrites local `web/`, so protect existing changes and use a disposable checkout. The ordinary command without `--react-dist` retains the original wiki. See [the frontend README](wiki-frontend/README.md) for the local HTTP check and remaining verification. The updated Pages workflow is manual and has not been run or deployed as part of this migration.
+
 The optional clean-ROM end-to-end test runs only when `SACRED_GOLD_CLEAN_ROM` points to a file outside the repository. It must be a clean HeartGold USA image of 134,217,728 bytes with SHA-256 `65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105`, as pinned in `patches/manifest.json`. The Python CLI test also needs `xdelta3` already available on `PATH` or selected through `SACRED_GOLD_XDELTA`; the browser-engine test runs only when Node.js is available. This guide does not install tools. Without the clean ROM, ROM-dependent positive tests are skipped. Never add the ROM or its path to Git. Other candidate QA must use the exact ROM SHA recorded in that candidate's evidence; do not infer compatibility across builds.
 
 ### Scope and data handling
@@ -61,6 +65,10 @@ python3 -m http.server 8767 --bind 127.0.0.1 --directory web
 ```
 
 Abre `http://127.0.0.1:8767/` para el inicio de la wiki, o `http://127.0.0.1:8767/wiki/#/patcher` para su parcheador integrado. El servidor queda en primer plano; detenlo con Ctrl+C. `tools/build_site.py` genera la carpeta local `web/` y no la publica.
+
+### Vista previa de la wiki React
+
+La migración a React aún no está verificada para release. En una copia aislada, revisa el lockfile y la procedencia de las dependencias; después ejecuta `pnpm audit`, `pnpm install --frozen-lockfile --ignore-scripts`, `pnpm test` y `pnpm build` desde `wiki-frontend/` con Node.js 26.12.1 y pnpm 12.16.1. Una auditoría sin avisos no garantiza la seguridad. Desde `game/`, `python3 tools/build_site.py --react-dist wiki-frontend/dist` genera el sitio con la entrada React; modifica la carpeta local `web/`, por lo que debes proteger los cambios existentes y usar una copia desechable. El comando normal sin `--react-dist` conserva la wiki original. Consulta [el README del frontend](wiki-frontend/README.md) para la comprobación HTTP local y las verificaciones pendientes. El workflow de Pages actualizado es manual y no se ha ejecutado ni desplegado como parte de esta migración.
 
 La prueba E2E opcional con ROM limpia solo se ejecuta si `SACRED_GOLD_CLEAN_ROM` apunta a un archivo fuera del repositorio. Debe ser una imagen limpia de HeartGold USA de 134.217.728 bytes con SHA-256 `65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105`, fijado en `patches/manifest.json`. La prueba CLI de Python también requiere que `xdelta3` ya esté disponible en `PATH` o se seleccione mediante `SACRED_GOLD_XDELTA`; la prueba del motor web solo se ejecuta si Node.js está disponible. Esta guía no instala herramientas. Sin la ROM se omiten las pruebas positivas que dependen de ella. Nunca añadas la ROM ni su ruta a Git. El QA de otras candidatas debe usar el SHA exacto indicado en su propia evidencia; no infieras compatibilidad entre builds.
 
