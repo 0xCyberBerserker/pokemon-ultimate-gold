@@ -12,6 +12,14 @@ const illustrations: Record<string, string> = {
   'stage-25': '../assets/locations/route-39.png',
   'stage-28': '../assets/locations/route-40.png',
   'stage-29': '../assets/locations/route-41.png',
+  'stage-37': '../assets/locations/route-42.png',
+  'stage-39': '../assets/locations/route-43.png',
+  'stage-44': '../assets/locations/route-44.png',
+  'stage-45': '../assets/locations/route-45.png',
+  'stage-16': '../assets/locations/route-46.png',
+  'stage-33': '../assets/locations/route-47.png',
+  'stage-48': '../assets/locations/route-27.png',
+  'stage-49': '../assets/locations/route-26.png',
 };
 
 export function stageIllustration(stage: string): string | undefined {
