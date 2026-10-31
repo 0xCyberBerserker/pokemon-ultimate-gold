@@ -64,7 +64,8 @@ def main():
     missing_resources = set()
     try:
         with sync_playwright() as playwright:
-            browser = playwright.chromium.launch(headless=True)
+            browser_path = os.environ.get("PUG_CHROMIUM")
+            browser = playwright.chromium.launch(headless=True, **({"executable_path": browser_path} if browser_path else {}))
             try:
                 for name, width, height in [("desktop", 1440, 900), ("mobile", 390, 844)]:
                     context = browser.new_context(viewport={"width": width, "height": height}, reduced_motion="reduce")
