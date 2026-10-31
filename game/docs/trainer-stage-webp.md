@@ -2,15 +2,15 @@
 
 ## English
 
-The 53 unique PNG illustrations referenced by the trainer stage map have WebP derivatives. The source PNGs remain unchanged and are the `<img>` fallback; `<picture>` offers WebP. Conversion used ImageMagick at quality 90 with `-resize '1600x>'`, which preserves aspect ratio, never upscales, and does not crop. Stage 79/81 share Route 20 art, and stages 56/85 share Route 2 art; each source has one derivative.
+The 57 unique PNG illustrations referenced by the trainer stage map have WebP derivatives. The source PNGs remain unchanged and are the `<img>` fallback; `<picture>` offers WebP. Conversion used ImageMagick at quality 90 with `-resize '1600x>'`, which preserves aspect ratio, never upscales, and does not crop. Stage 79/81 share Route 20 art, and stages 56/85 share Route 2 art; each source has one derivative.
 
-Combined transfer size for these unique files: PNG 155,802,252 bytes; WebP 16,639,532 bytes (89.32% smaller). SHA-256 hashes below identify the generated WebP files. The twelve new derivatives come from owner-retained OpenAI-generated originals; artifact IDs and source PNG hashes are recorded in the bilingual table below and in `wiki-frontend/LOCATION-ART.md`.
+Combined transfer size for these unique files: PNG 166,880,230 bytes; WebP 17,815,412 bytes (89.32% smaller). SHA-256 hashes below identify the generated WebP files. The sixteen new derivatives come from owner-retained OpenAI-generated originals; artifact IDs and source PNG hashes are recorded in the bilingual table below and in `wiki-frontend/LOCATION-ART.md`.
 
 ## Español
 
-Las 53 ilustraciones PNG únicas referenciadas por el mapa de etapas de entrenadores tienen derivados WebP. Los PNG originales permanecen intactos y sirven de fallback en `<img>`; `<picture>` ofrece WebP. Se convirtieron con ImageMagick, calidad 90 y `-resize '1600x>'`, que conserva la proporción, no amplía ni recorta. Las etapas 79/81 comparten el arte de la Ruta 20, y las etapas 56/85 comparten el de la Ruta 2; cada fuente tiene un solo derivado.
+Las 57 ilustraciones PNG únicas referenciadas por el mapa de etapas de entrenadores tienen derivados WebP. Los PNG originales permanecen intactos y sirven de fallback en `<img>`; `<picture>` ofrece WebP. Se convirtieron con ImageMagick, calidad 90 y `-resize '1600x>'`, que conserva la proporción, no amplía ni recorta. Las etapas 79/81 comparten el arte de la Ruta 20, y las etapas 56/85 comparten el de la Ruta 2; cada fuente tiene un solo derivado.
 
-Transferencia conjunta de estos archivos únicos: PNG 155,802,252 bytes; WebP 16,639,532 bytes (89.32% menos). Los SHA-256 siguientes identifican los WebP generados. Los doce derivados nuevos proceden de originales generados con OpenAI y conservados por el propietario; los identificadores de artefacto y SHA-256 de los PNG fuente figuran en la tabla bilingüe siguiente y en `wiki-frontend/LOCATION-ART.md`.
+Transferencia conjunta de estos archivos únicos: PNG 166,880,230 bytes; WebP 17,815,412 bytes (89.32% menos). Los SHA-256 siguientes identifican los WebP generados. Los dieciséis derivados nuevos proceden de originales generados con OpenAI y conservados por el propietario; los identificadores de artefacto y SHA-256 de los PNG fuente figuran en la tabla bilingüe siguiente y en `wiki-frontend/LOCATION-ART.md`.
 
 | Source / Fuente | Original SHA-256 | Artifact / Artefacto | WebP SHA-256 |
 |---|---|---|---|
@@ -27,6 +27,10 @@ Transferencia conjunta de estos archivos únicos: PNG 155,802,252 bytes; WebP 16
 | `burned-tower.png` | `e75e36447476b7b769116153bf718f4dec3cd3cc7df671efcc52980899f9d844` | `exec-9206ac78-cbb1-4e40-b46d-0f26f7dde656` | `5c2444bdf9f4c113dd8bdadb1d52c76d99c76adc1f20858fcded2e3bb238c58f` |
 | `ecruteak-city.png` | `7337ec490276d83e212bee375039b25768b3e835893875da1b4eabaa94d3a0fa` | `exec-4ebbd0b2-7fe5-4f17-9a95-d06abcaea66b` | `8aaa19b429e3237af91bfd4234797026e0e0841cc5b96ac66b54227da0b139c1` |
 
+| `ecruteak-city-gym.png` | `aacafc5bb04851f7db431f78c033d3d2b379b548963eec84e18271f464265e61` | `exec-d26bcfc7-5aca-4854-a678-5b448a395e0c` | `183414ab1f3861050765fe4bf9a2926f62cc86dd37cefcca0e28d1196713b32b` |
+| `olivine-city.png` | `2a1d6ab023a032d548d120d31ce35af6b13c9d1ed175161cfc71b90416587a15` | `exec-e8888aa4-8ac9-48d9-bd36-96a548438c29` | `7d21a38215741ecde7b9ba3772e9d1b2daa26a6b5cb6f30016cc889483905f39` |
+| `olivine-lighthouse.png` | `1de06c970b908c2d51ef266cfd5f20cb65246c32ef0706bd921752d03169697e` | `exec-aad3b4c0-646e-45e0-946a-5a50a015a17f` | `39701b1ea3c520cb0b065c8a0d28be222c4bde1a8fc95171696e693b996a44fc` |
+| `cianwood-city.png` | `3c489ee2b9f1231adead8801b2968806cea27d4c2d3ce8979ad34ac437687a75` | `exec-be8783e2-bc0a-4eb2-ba34-cd36f17a27a6` | `302672d8c3e8962c01911c09c41121fd16dc4cb99bad9aa46de7b4b6a8c7ddaf` |
 | Derivative / Derivado | Dimensions / Dimensiones | SHA-256 |
 |---|---:|---|
 | `cherrygrove-city.webp` | 1600x571 | `435ca350f889d1b6f63f537d4d02361e4df6369306fc7735ecda435728b1da33` |
@@ -61,6 +65,10 @@ Transferencia conjunta de estos archivos únicos: PNG 155,802,252 bytes; WebP 16
 | `route-4.webp` | 1600x571 | `661b10f176c6591d58b23dcacb23536a1ad141c9a15cc55dc0c2eba6f4b1cc4a` |
 | `route-40.webp` | 1600x600 | `8b88eed8eb4006a9c868ac4feaae8833b0474acb73a927eb8abf1a436f80eb0b` |
 | `route-41.webp` | 1600x600 | `cd7aad160b7334e330c122d449922cfc4bd84ee59c3db964b0c8eefb2b9cafb1` |
+| `ecruteak-city-gym.webp` | 1600x600 | `183414ab1f3861050765fe4bf9a2926f62cc86dd37cefcca0e28d1196713b32b` |
+| `olivine-city.webp` | 1600x640 | `7d21a38215741ecde7b9ba3772e9d1b2daa26a6b5cb6f30016cc889483905f39` |
+| `olivine-lighthouse.webp` | 1600x640 | `39701b1ea3c520cb0b065c8a0d28be222c4bde1a8fc95171696e693b996a44fc` |
+| `cianwood-city.webp` | 1600x533 | `302672d8c3e8962c01911c09c41121fd16dc4cb99bad9aa46de7b4b6a8c7ddaf` |
 | `route-42.webp` | 1600x533 | `4b591f030fcee2c0e41140a17183356afceb7f9f3abb96fa4e50d1c7d6783375` |
 | `route-43.webp` | 1600x533 | `0167ec19675a246803cc214051cdc4fd896e5eba950502e0bc7e501fc33c6ac0` |
 | `route-44.webp` | 1600x580 | `66ae5b60d76b3615a1b870f98b3209d107674e35002fbf50e510e3d4a3afa4ca` |
