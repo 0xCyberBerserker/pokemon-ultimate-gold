@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Build the static Pages payload from local docs and the verified delta."""
 from pathlib import Path
+from html.parser import HTMLParser
+import argparse
 import html
 import csv
 import json
@@ -156,7 +158,107 @@ def export_patch_payload(web_root: Path, alpha1: dict, alpha2: dict, default_ver
     (data_dir / "patch-catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return catalog
 
-def main() -> int:
+class ReactIndexParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.csp = None
+        self.csp_count = 0
+        self.assets = []
+        self.in_head = False
+        self.resource_seen = False
+        self.invalid_csp_order = False
+        self.duplicate_attributes = False
+
+    def handle_starttag(self, tag, attrs):
+        names = [name for name, _ in attrs]
+        if len(names) != len(set(names)):
+            self.duplicate_attributes = True
+        attrs = dict(attrs)
+        if tag == "head":
+            self.in_head = True
+        if tag == "meta" and attrs.get("http-equiv", "").lower() == "content-security-policy":
+            self.csp = attrs.get("content", "")
+            self.csp_count += 1
+            if not self.in_head or self.resource_seen:
+                self.invalid_csp_order = True
+        if tag == "script":
+            self.resource_seen = True
+            self.assets.append(attrs.get("src", ""))
+        if tag == "link" and attrs.get("rel") == "stylesheet":
+            self.resource_seen = True
+            self.assets.append(attrs.get("href", ""))
+
+    def handle_endtag(self, tag):
+        if tag == "head":
+            self.in_head = False
+
+def prepare_react_site(dist: Path, wiki: Path, legacy_index: bytes):
+    """Preflight an opt-in React build before the generator writes anything."""
+    index = dist / "index.html"
+    assets = dist / "assets"
+    if dist.is_symlink() or wiki.is_symlink() or index.is_symlink() or assets.is_symlink() or not index.is_file() or not assets.is_dir():
+        raise ValueError("React build index or assets missing or unsafe")
+    index_bytes = index.read_bytes()
+    parser = ReactIndexParser()
+    parser.feed(index_bytes.decode("utf-8"))
+    directives = [part.strip() for part in (parser.csp or "").split(";") if part.strip()]
+    directive_names = [part.split()[0].lower() for part in directives]
+    required = {"default-src 'self'", "script-src 'self'", "style-src 'self'", "object-src 'none'", "base-uri 'none'"}
+    if parser.csp_count != 1 or parser.invalid_csp_order or parser.duplicate_attributes or len(directive_names) != len(set(directive_names)) or not required.issubset(set(directives)) or "unsafe-inline" in (parser.csp or "") or "unsafe-eval" in (parser.csp or ""):
+        raise ValueError("React build CSP is missing or relaxed")
+    files = {}
+    for path in assets.iterdir():
+        if path.is_symlink() or not path.is_file() or not re.fullmatch(r"[A-Za-z0-9_-]+-[A-Za-z0-9_-]+\.(?:js|css)", path.name):
+            raise ValueError("React build contains an unsafe asset")
+        files[path.name] = path.read_bytes()
+    if not parser.assets or not any(name.endswith('.js') for name in parser.assets) or not any(name.endswith('.css') for name in parser.assets):
+        raise ValueError("React build entry assets missing")
+    if any(not name.startswith('./assets/') or name[9:] not in files for name in parser.assets):
+        raise ValueError("React build entry asset invalid or missing")
+    destination_index = wiki / "index.html"
+    receipt_path = wiki / ".react-build.json"
+    if receipt_path.is_symlink():
+        raise ValueError("Existing React build receipt is unsafe")
+    receipt_hash = None
+    if receipt_path.exists():
+        try:
+            receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+            if receipt.get("schema") != "ultimate-gold-react-index/v1" or not re.fullmatch(r"[0-9a-f]{64}", receipt.get("index_sha256", "")):
+                raise ValueError("Invalid receipt")
+            receipt_hash = receipt["index_sha256"]
+        except (OSError, ValueError, TypeError, AttributeError) as error:
+            raise ValueError("Existing React build receipt is invalid") from error
+    existing_index = destination_index.read_bytes() if destination_index.is_file() and not destination_index.is_symlink() else None
+    known_index = existing_index in (legacy_index, index_bytes) or (existing_index is not None and receipt_hash == hashlib.sha256(existing_index).hexdigest())
+    if destination_index.is_symlink() or (destination_index.exists() and not known_index):
+        raise ValueError("Existing wiki index has local changes")
+    destination = wiki / "assets"
+    if destination.is_symlink() or (destination.exists() and not destination.is_dir()):
+        raise ValueError("Existing wiki assets directory is unsafe")
+    for name, content in files.items():
+        target = destination / name
+        if target.is_symlink() or (target.exists() and (not target.is_file() or target.read_bytes() != content)):
+            raise ValueError("Existing wiki asset conflicts with React build")
+    return index_bytes, files
+
+def install_react_site(plan, wiki: Path):
+    index, files = plan
+    destination = wiki / "assets"
+    if wiki.is_symlink() or destination.is_symlink() or (wiki / "index.html").is_symlink() or (wiki / ".react-build.json").is_symlink():
+        raise ValueError("Wiki destination changed after preflight")
+    destination.mkdir(parents=True, exist_ok=True)
+    for name, content in files.items():
+        target = destination / name
+        if target.is_symlink() or (target.exists() and target.read_bytes() != content):
+            raise ValueError("Existing wiki asset changed after preflight")
+        if not target.exists():
+            target.write_bytes(content)
+    (wiki / "index.html").write_bytes(index)
+    receipt = {"schema": "ultimate-gold-react-index/v1", "index_sha256": hashlib.sha256(index).hexdigest()}
+    (wiki / ".react-build.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
+
+def main(react_dist: Path | None = None) -> int:
+    react_plan = prepare_react_site(react_dist, WEB / "wiki", (WEB / "wiki-template.html").read_bytes()) if react_dist is not None else None
     current = verify_manifest()
     alpha1 = verify_manifest(MANIFEST_ALPHA1)
     alpha2 = verify_manifest(MANIFEST_ALPHA2)
@@ -214,6 +316,8 @@ def main() -> int:
     provenance = {'engine': 'RomPatcher.js', 'upstream_commit': '4f17297cd1dc0835a0b0747497fa15f5f63f1623', 'license': 'MIT', 'files': {p.name: digest(p) for p in (WEB / 'vendor' / 'rompatcher').glob('*.js')}}
     (WEB / "vendor" / "provenance.json").write_text(json.dumps(provenance, indent=2) + "\n", encoding="utf-8")
     (WEB / "LICENSES.html").write_text('<!doctype html><html lang="en"><head><meta charset="utf-8">' + csp + '<meta name="viewport" content="width=device-width,initial-scale=1"><title>Credits / Créditos</title><link rel="stylesheet" href="./style.css"></head><body><main><h1>Credits / Créditos</h1><h2>English</h2><p>Sacred Gold and the official Speed-Up: Drayano. Plus 1.2.3: Umberto-DEV and contributors, building on NefariousnessNo3436 and the Fairy work credited to mikelan / Mikelan98. Upstream tools use GPL-3.0-or-later; third-party game rights remain with their owners.</p><p>RomPatcher.js: Marc Robledo, vendored under MIT. Original VCDIFF attribution also credits Joshua MacDonald under Apache-2.0. The retained <a href="./vendor/rompatcher/LICENSE">license</a>, source notices and <a href="./vendor/provenance.json">file hashes</a> identify the shipped engine.</p><p>Our authored guides and factual exports do not relicense third-party assets. No ROM, save, original manual or emulator binary is included.</p><h2 lang="es">Español</h2><p>Sacred Gold y Speed-Up oficial: Drayano. Plus 1.2.3: Umberto-DEV y colaboradores, sobre el trabajo de NefariousnessNo3436 y Hada de mikelan / Mikelan98. Las herramientas upstream usan GPL-3.0-or-later; los recursos del juego conservan los derechos de sus titulares.</p><p>RomPatcher.js: Marc Robledo, bajo MIT. Los avisos originales de VCDIFF acreditan además a Joshua MacDonald bajo Apache-2.0. Se conservan licencia, avisos y hashes del motor. Nuestras guías y tablas factuales no relicencian recursos de terceros. No se incluyen ROM, partidas, manuales originales ni binarios de emulador.</p><p><a href="./wiki/sources-inventory.html">Sources / Fuentes</a> · <a href="./">Patcher</a> · <a href="./wiki/">Wiki</a></p><footer>Made with 🖤 in Barcelona City 🇪🇸</footer></main></body></html>', encoding="utf-8")
+    if react_plan is not None:
+        install_react_site(react_plan, wiki)
     return 0
 
 def inline(value: str) -> str:
@@ -301,4 +405,7 @@ def render_data(path: Path) -> str:
         return '<label for="table-filter">Filter / Filtrar</label> <input id="table-filter" type="search"><div class="table-wrap"><table id="data-table"><thead><tr>' + ''.join(f'<th>{html.escape(c)}</th>' for c in head) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<td>{html.escape(c)}</td>' for c in row) + '</tr>' for row in body) + '</tbody></table></div>'
     return "<pre><code>" + html.escape(json.dumps(json.loads(path.read_text(encoding="utf-8")), ensure_ascii=False, indent=2)) + "</code></pre>"
 
-if __name__ == "__main__": raise SystemExit(main())
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--react-dist", type=Path, help="opt in to a prebuilt React wiki after local verification")
+    raise SystemExit(main(parser.parse_args().react_dist))

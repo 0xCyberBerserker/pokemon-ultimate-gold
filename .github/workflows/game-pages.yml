@@ -22,9 +22,39 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 26.12.1
+          package-manager-cache: false
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+        with:
+          version: 12.16.1
+          run_install: false
+
+      - name: Install locked frontend dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+        working-directory: game/wiki-frontend
+
+      - name: Build frontend
+        run: pnpm build
+        working-directory: game/wiki-frontend
+
       - name: Build static site
-        run: python3 tools/build_site.py
+        run: python3 tools/build_site.py --react-dist wiki-frontend/dist
         working-directory: game
+
+      - name: Test frontend against regenerated data
+        run: pnpm test
+        working-directory: game/wiki-frontend
+
+      - name: Check production resource paths
+        run: node --test checks/production-http.test.mjs
+        working-directory: game/wiki-frontend
+        env:
+          PUG_INTEGRATED: "1"
 
       - name: Run standard-library tests
         run: python3 -m unittest discover -s tests -v
