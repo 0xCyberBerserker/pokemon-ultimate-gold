@@ -1,0 +1,109 @@
+.detail-page {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.detail-header h1 {
+  margin: 0 0 10px;
+  overflow-wrap: anywhere;
+}
+
+.detail-description h2,
+.detail-related h2 {
+  margin: 0 0 10px;
+}
+
+.detail-description > p,
+.detail-related > p,
+.detail-caveat {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.detail-coverage {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.detail-caveat {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+}
+
+.detail-slot + .detail-slot,
+.detail-machine + .detail-machine {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.detail-slot h3,
+.detail-machine h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.detail-link-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 6px 16px;
+  margin: 0;
+  padding-inline-start: 20px;
+}
+
+.detail-link-list a,
+.detail-machine h3 a {
+  color: var(--gold);
+}
+
+.detail-pokemon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+}
+
+.detail-pokemon-link img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.move-learners li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+
+.move-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr));
+  gap: 8px;
+  margin: 16px 0 0;
+}
+
+.move-stat-grid > div {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+}
+
+.move-stat-grid dt {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.move-stat-grid dd {
+  margin: 3px 0 0;
+  font-weight: 700;
+}
+
+.move-stat-grid small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  line-height: 1.45;
+}
