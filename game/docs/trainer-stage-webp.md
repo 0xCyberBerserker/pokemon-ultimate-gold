@@ -2,15 +2,15 @@
 
 ## English
 
-The 65 unique PNG illustrations referenced by the trainer stage map have WebP derivatives. The source PNGs remain unchanged and are the `<img>` fallback; `<picture>` offers WebP. Conversion used ImageMagick at quality 90 with `-resize '1600x>'`, which preserves aspect ratio, never upscales, and does not crop. Stage 79/81 share Route 20 art, and stages 56/85 share Route 2 art; each source has one derivative.
+The 73 unique PNG illustrations referenced by the trainer stage map have WebP derivatives. The source PNGs remain unchanged and are the `<img>` fallback; `<picture>` offers WebP. Conversion used ImageMagick at quality 90 with `-resize '1600x>'`, which preserves aspect ratio, never upscales, and does not crop. Stage 79/81 share Route 20 art, and stages 56/85 share Route 2 art; each source has one derivative.
 
-Combined transfer size for these unique files: PNG 189,702,512 bytes; WebP 20,163,970 bytes (89.37% smaller). SHA-256 hashes below identify the generated WebP files. The twenty-four new derivatives come from owner-retained OpenAI-generated originals; artifact IDs and source PNG hashes are recorded in the bilingual table below and in `wiki-frontend/LOCATION-ART.md`.
+Combined transfer size for these unique files: PNG 211,482,880 bytes; WebP 22,290,366 bytes (89.46% smaller). SHA-256 hashes below identify the generated WebP files. The thirty-two new derivatives come from owner-retained OpenAI-generated originals; artifact IDs and source PNG hashes are recorded in the bilingual table below and in `wiki-frontend/LOCATION-ART.md`.
 
 ## Español
 
-Las 65 ilustraciones PNG únicas referenciadas por el mapa de etapas de entrenadores tienen derivados WebP. Los PNG originales permanecen intactos y sirven de fallback en `<img>`; `<picture>` ofrece WebP. Se convirtieron con ImageMagick, calidad 90 y `-resize '1600x>'`, que conserva la proporción, no amplía ni recorta. Las etapas 79/81 comparten el arte de la Ruta 20, y las etapas 56/85 comparten el de la Ruta 2; cada fuente tiene un solo derivado.
+Las 73 ilustraciones PNG únicas referenciadas por el mapa de etapas de entrenadores tienen derivados WebP. Los PNG originales permanecen intactos y sirven de fallback en `<img>`; `<picture>` ofrece WebP. Se convirtieron con ImageMagick, calidad 90 y `-resize '1600x>'`, que conserva la proporción, no amplía ni recorta. Las etapas 79/81 comparten el arte de la Ruta 20, y las etapas 56/85 comparten el de la Ruta 2; cada fuente tiene un solo derivado.
 
-Transferencia conjunta de estos archivos únicos: PNG 189,702,512 bytes; WebP 20,163,970 bytes (89.37% menos). Los SHA-256 siguientes identifican los WebP generados. Los veinticuatro derivados nuevos proceden de originales generados con OpenAI y conservados por el propietario; los identificadores de artefacto y SHA-256 de los PNG fuente figuran en la tabla bilingüe siguiente y en `wiki-frontend/LOCATION-ART.md`.
+Transferencia conjunta de estos archivos únicos: PNG 211,482,880 bytes; WebP 22,290,366 bytes (89.46% menos). Los SHA-256 siguientes identifican los WebP generados. Los treinta y dos derivados nuevos proceden de originales generados con OpenAI y conservados por el propietario; los identificadores de artefacto y SHA-256 de los PNG fuente figuran en la tabla bilingüe siguiente y en `wiki-frontend/LOCATION-ART.md`.
 
 | Source / Fuente | Original SHA-256 | Artifact / Artefacto | WebP SHA-256 |
 |---|---|---|---|
@@ -39,6 +39,14 @@ Transferencia conjunta de estos archivos únicos: PNG 189,702,512 bytes; WebP 20
 | `mt-mortar.png` | `c89f88a7ec6a396329027bc4de8a95abe64d57e9dac38fa80a7578c0303425f9` | `exec-cbfadad6-94f2-4c95-8e72-ca2e4c8ae6e4` | `c6e3c6198eeaa0a39e3603f0051535ac0b0df572c0db2b0a4e60946068c58379` |
 | `team-rocket-hq.png` | `1152ca9bd0ee8820c4ace942573f92a2070a041605cbd7f0d3147ffb8434b11a` | `exec-d0c6150f-f750-4ba5-a583-d3ddb427e934` | `05ce9d7354e84be9e5df9f645e47137e0092574a55d48e1c49162ee476a5d02f` |
 | `mahogany-town-gym.png` | `72d86ab611a20d6c68937a3192cf0935d03262bf7038e6f4571857145e4f4986` | `exec-e0351971-6fde-4067-aeb2-623c0c176203` | `fab2b7bfc956098cd19014548411b21a8f0c98c86e96f7775a8206e0e4cc9f58` |
+| `radio-tower.png` | `4b767c16d7c1b7c4a357d28911ea043a14a8605ab9bf434ea30b062055d64490` | `exec-8dea83df-f849-48b5-8120-e1f1f626e365` | `f501b6707663e1546a8523d8934b10b2c4dc91fc6f271872292f733469706fc0` |
+| `goldenrod-city.png` | `2f6de28a66810d7868d1e214a2c7bebadbb7e9670a4481e049c9e2bb999300b5` | `exec-43338bf7-2d62-4e1d-b966-9c403000cb3d` | `4fba9b58e262a713aba9fc6d3e0319d264baeb6d4a01f318943b17130f5d39cd` |
+| `blackthorn-city-gym.png` | `5f7b41ddcd9af4b6881bb2302a453c9c8acc96ca5fac995ced2768df687ef79e` | `exec-febece92-ed6b-416b-abc8-9d189569bca1` | `f96c97c2609619e8b2dc3cdb8405eaf993573c5b5f6d47d9791991001c640032` |
+| `dragons-den.png` | `30ecd58da4cb5f72fbcb7d51490cafb2191f3292f35651c82e490a505ae6fe7b` | `exec-e2cd2c87-37d2-4e2e-bed7-365e48b88f4b` | `cca189a58fa26fd76b812536654ac4a75156713bbc5a1d70d8fc8249a72daf47` |
+| `victory-road.png` | `02d2f0261a25b4f60119cf9c55b69d2277458d32a77810239f8459c366570388` | `exec-4b423592-1fc2-4e38-a8c5-dde9f13f1231` | `215c38168d87ad92124139c58a56326954240806e8c01ac7ea84a36ee82d474c` |
+| `pokemon-league.png` | `d4527a60433705149381b7c283f3148a397f5bff1f009fff7b2f1a6084cc93a2` | `exec-69e68f0d-6a51-43df-91ba-489d4d0ab489` | `a1883516f937964365a7862cbb29deee24a1936c5378e097854577401c11f19f` |
+| `ss-aqua.png` | `d3a47e7d69f0eb984f9662e34abe7f9ff3cadfe271b06af7b60b38e0240b9de4` | `exec-96571db2-0d5b-4142-9440-31ee058615cf` | `5ed02377122e467d84b9f47af82ccb3407bd037e4dcc81180709c923ad58eef3` |
+| `pewter-city-gym.png` | `375ebf97b2b8152f654d1acbf9dffda1eb39eacf195de9d1ba8711e621715eba` | `exec-7212571f-fdf9-4dee-bd15-fe860514f9ce` | `7d493cffa86d3a817e0e0b59d18a0985eba1e06cc37f8d1141e34fc66f0fe24e` |
 | Derivative / Derivado | Dimensions / Dimensiones | SHA-256 |
 |---|---:|---|
 | `cherrygrove-city.webp` | 1600x571 | `435ca350f889d1b6f63f537d4d02361e4df6369306fc7735ecda435728b1da33` |
@@ -81,6 +89,14 @@ Transferencia conjunta de estos archivos únicos: PNG 189,702,512 bytes; WebP 20
 | `cliff-edge-gate.webp` | 1600x585 | `e8c00b33833275ee439b18327695428e6f8e56e67a1a9f422359316398aeeddc` |
 | `cliff-cave.webp` | 1600x640 | `51ed7508f16bb058dc35b99b8af6df4bc66b3d486b9783a806647a0dea98edde` |
 | `safari-zone-gate.webp` | 1600x600 | `ac1d4a3baed8820e0420951ed6fab5fd1d7871fc37c04f820ccd8dfbbcf6f1e3` |
+| `radio-tower.webp` | 1600x533 | `f501b6707663e1546a8523d8934b10b2c4dc91fc6f271872292f733469706fc0` |
+| `goldenrod-city.webp` | 1600x539 | `4fba9b58e262a713aba9fc6d3e0319d264baeb6d4a01f318943b17130f5d39cd` |
+| `blackthorn-city-gym.webp` | 1600x600 | `f96c97c2609619e8b2dc3cdb8405eaf993573c5b5f6d47d9791991001c640032` |
+| `dragons-den.webp` | 1600x600 | `cca189a58fa26fd76b812536654ac4a75156713bbc5a1d70d8fc8249a72daf47` |
+| `victory-road.webp` | 1600x600 | `215c38168d87ad92124139c58a56326954240806e8c01ac7ea84a36ee82d474c` |
+| `pokemon-league.webp` | 1600x600 | `a1883516f937964365a7862cbb29deee24a1936c5378e097854577401c11f19f` |
+| `ss-aqua.webp` | 1600x533 | `5ed02377122e467d84b9f47af82ccb3407bd037e4dcc81180709c923ad58eef3` |
+| `pewter-city-gym.webp` | 1600x533 | `7d493cffa86d3a817e0e0b59d18a0985eba1e06cc37f8d1141e34fc66f0fe24e` |
 | `olivine-city-gym.webp` | 1600x533 | `ccdf5bf84be32dc7ff2894a9840c37145159db261d027eb190ad3586893ac381` |
 | `mt-mortar.webp` | 1600x578 | `c6e3c6198eeaa0a39e3603f0051535ac0b0df572c0db2b0a4e60946068c58379` |
 | `team-rocket-hq.webp` | 1600x533 | `05ce9d7354e84be9e5df9f645e47137e0092574a55d48e1c49162ee476a5d02f` |
