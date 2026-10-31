@@ -38,12 +38,14 @@ test('reference views render actual bilingual data and hash links', async () => 
     assert.match(ability, /#\/pokemon\/1/);
     const abilities = renderToStaticMarkup(React.createElement(Reference, { data, language: 'es', route: '#/abilities' }));
     assert.equal((abilities.match(/class="panel ability-card"/g) || []).length, Object.keys(data.abilities).length);
+    assert.match(abilities, /class="reference-list ability-list reference-list--rows"/);
     assert.match(abilities, /href="#\/abilities\/65"/);
     assert.match(move, /Voz Cautivadora/);
     assert.match(move, /Hada/);
     assert.match(move, /Potencia: 40/);
     assert.match(move, /sprites\/types\/9\.png/);
     const items = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: '#/items' }));
+    assert.match(items, /class="reference-list reference-list--rows"/);
     assert.match(items, /<details class="panel item-entry"/);
     assert.match(items, /sprites\/items\/1\.png/);
     assert.match(items, /href="#\/items\/1"/);
@@ -69,8 +71,11 @@ test('reference views render actual bilingual data and hash links', async () => 
     assert.ok(item.includes('shop-locations-alpha2.json'));
     assert.ok(item.includes(data.target_sha256));
     const machines = renderToStaticMarkup(React.createElement(Reference, { data, language: 'es', route: '#/machines' }));
+    assert.match(machines, /class="reference-list reference-list--rows"/);
     assert.match(machines, /MT 1 · Puño Certero/);
     assert.match(machines, /También se puede comprar en Ciudad Azafrán/);
+    const moves = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: '#/moves' }));
+    assert.match(moves, /class="reference-list reference-list--rows"/);
     const { default: Acquisition } = await server.ssrLoadModule('/src/features/reference/Acquisition.tsx');
     const bounded = renderToStaticMarkup(React.createElement(Acquisition, { language: 'en', records: data.items['81'].acquisition }));
     assert.match(bounded, /Scope: Purchase and save\/reload verified in a bounded case/);
