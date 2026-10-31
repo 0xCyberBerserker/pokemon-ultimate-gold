@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { orderedGallery, galleryImagePath, galleryStatuses } from '../src/data/krisGallery.ts';
+import { orderedGallery, galleryImagePath, galleryStatuses, editorialGallery } from '../src/data/krisGallery.ts';
 
 const gallery = JSON.parse(await readFile(new URL('../../web/data/kris-gallery.json', import.meta.url)));
 
@@ -42,4 +42,15 @@ test('every gallery image matches its recorded SHA-256', async () => {
 test('shared captures retain all evidence statuses', () => {
   const image = gallery.images.find((entry) => entry.id === 'img-56ab4f92c2277c33');
   assert.deepEqual(new Set(galleryStatuses(image, gallery.collections)), new Set(['historical', 'qa_partial']));
+});
+
+test('editorial selection falls back to partial QA and honors explicit image or collection selections', () => {
+  const selected = editorialGallery(gallery);
+  const expected = gallery.images.filter((image) => galleryStatuses(image, gallery.collections).includes('qa_partial'));
+  assert.deepEqual(selected, new Set(expected.map((image) => image.id)));
+  const first = gallery.images[0];
+  assert.deepEqual(editorialGallery({ ...gallery, editorial_selection: { images: [first.id] } }), new Set([first.id]));
+  const collectionId = first.source_references[0].collection_id;
+  const matching = gallery.images.filter((image) => image.source_references.some((ref) => ref.collection_id === collectionId));
+  assert.deepEqual(editorialGallery({ ...gallery, editorial_selection: [{ collection_id: collectionId }] }), new Set(matching.map((image) => image.id)));
 });

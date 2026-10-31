@@ -59,6 +59,7 @@ def main():
     wiki_data = json.loads((WEB / "data/wiki-data.json").read_text())
     cheat_data = json.loads((WEB / "data/cheat-catalog.json").read_text())
     cheat = next(entry for entry in cheat_data["entries"] if entry["id"] == "00-006")
+    gallery = json.loads((WEB / "data/kris-gallery.json").read_text())
     mode_trainer = next(trainer for trainer in wiki_data["trainers"] if trainer["id"] == 1)
     errors = []
     missing_resources = set()
@@ -102,6 +103,14 @@ def main():
                     expect(first.locator(".trainer-preview img").first).to_be_visible()
                     first.click()
                     expect(page.locator(".member-card").first).to_be_visible()
+                    expect(page.locator(".trainer-detail")).to_be_focused()
+                    page.get_by_role("button", name="Añadir equipo a comparación").click()
+                    page.locator(".trainer-option").nth(1).click()
+                    page.get_by_role("button", name="Añadir equipo a comparación").click()
+                    expect(page.locator(".team-comparison .comparison-team")).to_have_count(2)
+                    page.get_by_role("button", name="Quitar de comparación").first.click()
+                    page.get_by_role("button", name="Quitar de comparación").first.click()
+                    first.click()
                     expect(page.locator(".trainer-detail")).to_be_focused()
                     check_accessible_names(page, "trainers")
                     assert page.locator(".member-card progress").count() == page.locator(".member-card").count() * 12
@@ -177,6 +186,8 @@ def main():
                     assert cheat["code"].replace("\n", "+") in profile
                     page.goto(wiki + "#/kris-progress", wait_until="domcontentloaded")
                     expect(page.locator(".kris-gallery-card").first).to_be_visible()
+                    page.get_by_label("Mostrar archivo completo").check()
+                    expect(page.locator(".kris-progress [role=status]")).to_contain_text(f'{len(gallery["images"])} / {len(gallery["images"])}')
                     check_accessible_names(page, "kris-progress")
                     page.goto(wiki + "#/patcher", wait_until="domcontentloaded")
                     manifest = json.loads((WEB / "data/patch-manifest-alpha2.json").read_text())

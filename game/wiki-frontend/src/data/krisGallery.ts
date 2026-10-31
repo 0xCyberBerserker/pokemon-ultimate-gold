@@ -14,6 +14,8 @@ export interface GalleryReference {
 export interface GalleryImage {
   id: string;
   file: string;
+  filename?: string;
+  editorial_selected?: boolean;
   sha256: string;
   caption: Localized;
   alt: Localized;
@@ -25,6 +27,7 @@ export interface GalleryCollection { caption: Localized; stage: string; status_n
 export interface GalleryManifest {
   collections: Record<string, GalleryCollection>;
   images: GalleryImage[];
+  editorial_selection?: { images?: (string | Record<string, string>)[]; items?: (string | Record<string, string>)[] } | (string | Record<string, string>)[];
 }
 export interface OrderedImage { image: GalleryImage; primary: GalleryReference }
 
@@ -34,6 +37,14 @@ export function galleryStatuses(image: GalleryImage, collections: Record<string,
 
 export function galleryImagePath(file: string): string | null {
   return /^png\/[A-Za-z0-9._-]+\.png$/.test(file) ? `../assets/kris-progress/${file}` : null;
+}
+
+export function editorialGallery(manifest: GalleryManifest): Set<string> {
+  const selection = manifest.editorial_selection;
+  const rows = Array.isArray(selection) ? selection : selection?.images || selection?.items || [];
+  const selected = new Set(rows.flatMap((row) => typeof row === 'string' ? [row] : [row.id, row.image_id, row.filename, row.file, row.sha256, row.collection_id].filter((value): value is string => Boolean(value))));
+  const explicit = manifest.images.filter((image) => image.editorial_selected || [image.id, image.filename, image.file, image.sha256, ...(image.source_references || []).map((ref) => ref.collection_id)].some((value) => value && selected.has(value)));
+  return new Set((explicit.length ? explicit : manifest.images.filter((image) => galleryStatuses(image, manifest.collections).includes('qa_partial'))).map((image) => image.id));
 }
 
 export function orderedGallery(manifest: GalleryManifest, collectionId = ''): OrderedImage[] {

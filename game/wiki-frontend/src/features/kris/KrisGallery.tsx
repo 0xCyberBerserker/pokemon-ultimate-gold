@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { Language } from '../../data/types';
 import { localized } from '../../data/wiki';
-import { galleryImagePath, galleryStatuses, orderedGallery, type GalleryManifest } from '../../data/krisGallery';
+import { editorialGallery, galleryImagePath, galleryStatuses, orderedGallery, type GalleryManifest } from '../../data/krisGallery';
 
 const sceneNames: Record<string, [string, string]> = {
   'k01-core16': ['Early new-game and naming test', 'Prueba temprana de partida nueva y nombre'],
@@ -50,24 +50,28 @@ export default function KrisGallery({ language, initialManifest }: { language: L
   const [query, setQuery] = useState('');
   const [scene, setScene] = useState('');
   const [status, setStatus] = useState('');
+  const [showAll, setShowAll] = useState(false);
   const [page, setPage] = useState(0);
   useEffect(() => {
+    if (initialManifest) return;
     const controller = new AbortController();
     fetch('../data/kris-gallery.json', { signal: controller.signal }).then((response) => { if (!response.ok) throw new Error('Gallery unavailable'); return response.json(); })
       .then((value: unknown) => { if (!value || typeof value !== 'object' || !Array.isArray((value as GalleryManifest).images) || !(value as GalleryManifest).collections) throw new Error('Invalid gallery'); setManifest(value as GalleryManifest); })
       .catch(() => { if (!controller.signal.aborted) setError(true); });
     return () => controller.abort();
-  }, []);
+  }, [initialManifest]);
+  const selected = useMemo(() => manifest ? editorialGallery(manifest) : new Set<string>(), [manifest]);
   const matches = useMemo(() => {
     if (!manifest) return [];
     const term = query.trim().toLocaleLowerCase();
     return orderedGallery(manifest, scene).filter(({ image }) => {
+      if (!showAll && selected.size && !selected.has(image.id)) return false;
       const refs = image.source_references || [];
       if (status && !galleryStatuses(image, manifest.collections).includes(status)) return false;
       const searchable = [image.caption?.en, image.caption?.es, ...refs.flatMap((ref) => { const id = ref.collection_id || ''; return [id, sceneNames[id]?.[0], sceneNames[id]?.[1], manifest.collections[id]?.caption?.en, manifest.collections[id]?.caption?.es]; })].join(' ').toLocaleLowerCase();
       return searchable.includes(term);
     });
-  }, [manifest, scene, status, query]);
+  }, [manifest, scene, status, query, selected, showAll]);
   if (error) return <p role="alert">{es ? 'No se pudo cargar el índice de la galería.' : 'The gallery index could not be loaded.'}</p>;
   if (!manifest) return <p role="status">{es ? 'Cargando galería…' : 'Loading gallery…'}</p>;
   const pages = Math.max(1, Math.ceil(matches.length / pageSize));
@@ -79,6 +83,7 @@ export default function KrisGallery({ language, initialManifest }: { language: L
     <div className="filters"><label>{es ? 'Buscar escenas o capturas' : 'Search scenes or captures'}<input type="search" value={query} onChange={(event) => { setQuery(event.target.value); setPage(0); }} /></label>
       <label>{es ? 'Escena' : 'Scene'}<select value={scene} onChange={(event) => { setScene(event.target.value); setPage(0); }}><option value="">{es ? 'Todas las escenas' : 'All scenes'}</option>{Object.entries(manifest.collections).map(([id, collection]) => <option value={id} key={id}>{sceneNames[id]?.[es ? 1 : 0] || localized(collection.caption, language)}</option>)}</select></label>
       <label>{es ? 'Estado' : 'Status'}<select value={status} onChange={(event) => { setStatus(event.target.value); setPage(0); }}><option value="">{es ? 'Todos los estados' : 'All statuses'}</option><option value="historical">{es ? 'Histórica' : 'Historical'}</option><option value="qa_partial">{es ? 'Prueba parcial' : 'Partial testing'}</option><option value="experimental">{es ? 'Experimental' : 'Experimental'}</option><option value="current">{es ? 'Actual' : 'Current'}</option></select></label></div>
+    <label><input type="checkbox" checked={showAll} onChange={(event) => { setShowAll(event.target.checked); setPage(0); }} /> {es ? 'Mostrar archivo completo' : 'Show complete archive'}</label>
     <p role="status">{matches.length} / {manifest.images.length} {es ? 'capturas' : 'captures'}</p>
     <div className="kris-gallery-grid">{matches.slice(currentPage * pageSize, (currentPage + 1) * pageSize).map(({ image, primary }) => {
       const path = galleryImagePath(image.file);
