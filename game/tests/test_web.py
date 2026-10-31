@@ -76,7 +76,7 @@ class WebBuildTests(unittest.TestCase):
             with self.assertRaisesRegex(SystemExit, "QA report does not match"):
                 build_site.verify_manifest(bad)
 
-    def test_default_build_matches_wiki_and_cheat_catalog(self):
+    def test_wiki_and_cheat_catalog_remain_pinned_to_alpha2(self):
         expected = build_site.verify_manifest()["target"]["sha256"]
         for name in ("wiki-data.json", "cheat-catalog.json"):
             with self.subTest(dataset=name):
@@ -97,19 +97,20 @@ class WebBuildTests(unittest.TestCase):
         alpha1 = json.loads(build_site.MANIFEST_ALPHA1.read_text(encoding="utf-8"))
         alpha2 = json.loads(build_site.MANIFEST_ALPHA2.read_text(encoding="utf-8"))
         kris = build_site.verify_manifest(build_site.MANIFEST_KRIS_SPRINT2)
-        default = "alpha2" if build_site.verify_manifest() == alpha2 else "alpha1"
-        self.assertEqual(default, "alpha2")
+        default = build_site.PATCHER_DEFAULT
+        self.assertEqual(default, "kris-sprint2")
         catalog = build_site.build_patch_catalog(alpha1, alpha2, kris, default)
         self.assertEqual(catalog["default"], default)
+        self.assertEqual(catalog["wiki_data"], "alpha2")
         self.assertIn("alpha1", catalog["versions"])
         self.assertIn("alpha2", catalog["versions"])
         self.assertIn("kris-sprint2", catalog["versions"])
         self.assertTrue(catalog["versions"]["alpha2"]["experimental"])
         self.assertIn("EVIV", catalog["versions"]["alpha2"]["note"]["en"])
         self.assertTrue(catalog["versions"]["kris-sprint2"]["experimental"])
-        self.assertEqual(catalog["versions"]["kris-sprint2"]["label"]["es"], "Kris + créditos actualizados — experimental")
-        self.assertIn("Wiki data is based on Alpha 2", catalog["versions"]["kris-sprint2"]["note"]["en"])
-        self.assertIn("Los datos de la wiki corresponden a Alfa 2", catalog["versions"]["kris-sprint2"]["note"]["es"])
+        self.assertEqual(catalog["versions"]["kris-sprint2"]["label"]["es"], "Ultimate Gold — acumulativa, experimental")
+        self.assertIn("based on Alpha 2", catalog["versions"]["kris-sprint2"]["note"]["en"])
+        self.assertIn("corresponden a Alfa 2", catalog["versions"]["kris-sprint2"]["note"]["es"])
         shipped = json.loads((ROOT / "web/data/patch-catalog.json").read_text(encoding="utf-8"))
         self.assertEqual(shipped, catalog)
 
@@ -123,7 +124,9 @@ class WebBuildTests(unittest.TestCase):
         self.assertTrue(catalog["versions"]["alpha2"]["experimental"])
         self.assertNotIn("Selected by default", catalog["versions"]["alpha1"]["note"]["en"])
         with self.assertRaises(SystemExit):
-            build_site.build_patch_catalog(alpha1, alpha2, kris, "alpha1")
+            build_site.build_patch_catalog(alpha1, alpha2, kris, "unknown")
+        with self.assertRaisesRegex(SystemExit, "Historical Alpha 2"):
+            build_site.build_patch_catalog(alpha1, dict(alpha2, default=False), kris, "kris-sprint2")
         invalid = dict(kris, status="TESTED_PARTIAL")
         with self.assertRaisesRegex(SystemExit, "Kris Sprint 2"):
             build_site.build_patch_catalog(alpha1, alpha2, invalid, "alpha2")
@@ -147,14 +150,18 @@ class WebBuildTests(unittest.TestCase):
         self.assertEqual(kris["delta"]["size"], 6348509)
         web_manifest = ROOT / "web/data/patch-manifest-kris-sprint2.json"
         web_delta = ROOT / "web/assets/ultimate-gold-kris-sprint2.xdelta"
-        self.assertEqual(web_manifest.read_bytes(), build_site.MANIFEST_KRIS_SPRINT2.read_bytes())
+        published = json.loads(web_manifest.read_text(encoding="utf-8"))
+        self.assertTrue(published["default"])
+        self.assertEqual(published["publication_metadata"]["source_manifest_sha256"], hashlib.sha256(build_site.MANIFEST_KRIS_SPRINT2.read_bytes()).hexdigest())
+        for key in ("source", "target", "delta"):
+            self.assertEqual(published[key], kris[key])
         self.assertEqual(hashlib.sha256(web_delta.read_bytes()).hexdigest(), kris["delta"]["sha256"])
 
     def test_patch_payload_exports_all_local_builds_without_roms(self):
         alpha1 = build_site.verify_manifest(build_site.MANIFEST_ALPHA1)
         alpha2 = build_site.verify_manifest(build_site.MANIFEST_ALPHA2)
         kris = build_site.verify_manifest(build_site.MANIFEST_KRIS_SPRINT2)
-        default = "alpha2" if build_site.verify_manifest() == alpha2 else "alpha1"
+        default = build_site.PATCHER_DEFAULT
         with tempfile.TemporaryDirectory() as directory:
             web = Path(directory)
             build_site.export_patch_payload(web, alpha1, alpha2, kris, default)
@@ -163,7 +170,13 @@ class WebBuildTests(unittest.TestCase):
             for manifest in (alpha1, alpha2, kris):
                 self.assertTrue((web / "assets" / manifest["delta"]["file"]).is_file())
                 self.assertEqual(hashlib.sha256((web / "assets" / manifest["delta"]["file"]).read_bytes()).hexdigest(), manifest["delta"]["sha256"])
-            self.assertEqual((web / "data/patch-manifest-kris-sprint2.json").read_bytes(), build_site.MANIFEST_KRIS_SPRINT2.read_bytes())
+            latest = json.loads((web / "data/patch-manifest-kris-sprint2.json").read_text(encoding="utf-8"))
+            old = json.loads((web / "data/patch-manifest-alpha2.json").read_text(encoding="utf-8"))
+            self.assertTrue(latest["default"])
+            self.assertFalse(old["default"])
+            self.assertEqual((web / "data/patch-manifest.json").read_bytes(), (web / "data/patch-manifest-kris-sprint2.json").read_bytes())
+            self.assertEqual(latest["publication_metadata"]["source_manifest_sha256"], hashlib.sha256(build_site.MANIFEST_KRIS_SPRINT2.read_bytes()).hexdigest())
+            self.assertEqual(latest["target"], kris["target"])
             self.assertEqual(catalog["versions"]["kris-sprint2"]["status"], "EXPERIMENTAL_SPRINT_ACCEPTED")
             self.assertFalse(any(web.rglob("*.nds")))
             self.assertFalse(any(web.rglob("*.sav")))
@@ -195,12 +208,12 @@ class WebBuildTests(unittest.TestCase):
                 self.assertIn("HeartGold", body)
                 if language == "en":
                     self.assertIn("Alpha 2", body)
-                    self.assertIn("not included in either download", body)
-                    self.assertNotIn("no están en ninguna descarga", body)
+                    self.assertIn("editor has bounded cases on earlier builds", body)
+                    self.assertIn("World Tournament study is not included", body)
                 else:
                     self.assertIn("Alfa 2", body)
-                    self.assertIn("no están en ninguna descarga", body)
-                    self.assertNotIn("not included in either download", body)
+                    self.assertIn("editor tiene casos acotados en versiones anteriores", body)
+                    self.assertIn("estudio del Torneo Mundial no está incluido", body)
                 self.assertIn("<li>", body)
 
 

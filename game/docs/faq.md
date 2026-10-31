@@ -24,9 +24,9 @@ The selector in the wiki changes the trainer data shown on this website and reme
 
 ### Which build should I select?
 
-Alpha 2 is the default experimental build: it adds the Rocket kit, evolution-shop stock and all eight field HMs without teaching those moves. Alpha 1 remains selectable as the earlier Sacred Gold Plus base with reusable native TM Refill. Exact-target tests cover each HM in a representative fixture, with Fly/Surf save/cold recovery and bounded reusable-item checks. Full story, every obstacle location and all item effects remain unverified. Wiki data describes Alpha 2; guides mark Alpha 1 differences. Read [the feature coverage](../web/wiki/#/guide/progress) before choosing.
+The default is the latest experimental candidate with Kris and updated credits. Its reviewed lineage includes earlier additions and an experimental stat editor with bounded tests. Alpha 1 and Alpha 2 remain selectable; each is applied directly to the clean input. Wiki data and cheat checks describe Alpha 2, not the new target. Full-story, hardware and all item effects remain unverified. Read [the feature coverage](../web/wiki/#/guide/progress) before choosing.
 
-Neither download contains the EV/IV editor or Kris. A separate QA-only editor probe has changed an IV through native APIs and retained it after saving and cold reload; the production menu and remaining operations are still pending. Nature overrides remain a study. Wiki trainer IV/EV bars are reference data.
+The latest candidate includes Kris and an experimental EV/IV/nature editor. Individual editor cases were tested on an earlier build; no new editor QA was performed on this candidate. Complete behavior across species, battle and PC remains unverified. Wiki trainer IV/EV bars are Alpha 2 reference data.
 
 ### Where can I see current test status?
 
@@ -60,9 +60,9 @@ El selector de la wiki cambia los datos de entrenadores que muestra esta web y r
 
 ### ¿Qué versión selecciono?
 
-Alfa 2 es la experimental predeterminada: añade kit Rocket, inventario evolutivo y las ocho MO en campo sin enseñar los movimientos. Alfa 1 sigue seleccionable como base anterior de Sacred Gold Plus con TM Refill (Recarga MT) reutilizable. Las pruebas del hash exacto cubren un caso representativo por MO, guardado/recarga en frío de Fly/Surf (Vuelo/Surf) y usos acotados de objetos reutilizables. Faltan historia completa, todas las ubicaciones de obstáculos y todos los efectos de objetos. Los datos de la wiki describen alfa 2; las guías indican las diferencias de alfa 1. Consulta [la cobertura](../web/wiki/#/guide/progress) antes de elegir.
+La opción predeterminada es la candidata experimental más reciente, con Kris y créditos actualizados. Su linaje revisado incluye las mejoras anteriores y un editor de estadísticas experimental con pruebas acotadas. Alfa 1 y Alfa 2 siguen disponibles; cada parche se aplica directamente sobre la entrada limpia. Los datos de la wiki y las comprobaciones de trucos describen Alfa 2, no el nuevo destino. Faltan pruebas de historia completa, hardware y todos los efectos de objetos. Consulta [la cobertura](../web/wiki/#/guide/progress) antes de elegir.
 
-Ninguna descarga contiene el editor EV/IV ni Kris. Un prototipo separado y exclusivo de QA ya cambió un IV mediante APIs nativas y lo conservó tras guardar y arrancar en frío; faltan el menú de producción y las demás operaciones. El override de naturaleza sigue en estudio. Las barras IV/EV de entrenadores en la wiki son datos de referencia.
+La candidata más reciente incluye a Kris y un editor experimental de EV/IV/naturalezas. Se probaron casos concretos del editor en una versión anterior; no se realizaron nuevas pruebas del editor en esta candidata. Falta verificar el comportamiento completo entre especies, combates y PC. Las barras IV/EV de entrenadores son datos de referencia de Alfa 2.
 
 ### ¿Dónde puedo consultar el estado de las pruebas?
 

@@ -239,7 +239,7 @@ async function initializeCatalog() {
     const response = await fetch(CATALOG_URL, {cache:'no-store'});
     if (!response.ok) throw new Error('catalog');
     catalog = await response.json();
-    if (catalog.schema !== 'ultimate-gold-patch-catalog/v1' || !['alpha1', 'alpha2'].includes(catalog.default) ||
+    if (catalog.schema !== 'ultimate-gold-patch-catalog/v1' || !['alpha1', 'alpha2', 'kris-sprint2'].includes(catalog.default) ||
         !catalog.versions?.alpha1 || !catalog.versions?.alpha2) throw new Error('catalog');
     $('version').replaceChildren(...Object.keys(catalog.versions).map((id) => {
       const option = document.createElement('option'); option.value = id; option.textContent = catalog.versions[id].label[language]; return option;

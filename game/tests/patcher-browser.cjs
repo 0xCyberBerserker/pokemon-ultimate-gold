@@ -9,17 +9,18 @@ const root = path.resolve(__dirname, '..');
 const siteRoot = path.resolve(process.env.PATCHER_ROOT || path.join(root, 'web'));
 const alpha1 = JSON.parse(fs.readFileSync(path.join(siteRoot, 'data/patch-manifest-alpha1.json'), 'utf8'));
 const alpha2 = JSON.parse(fs.readFileSync(path.join(siteRoot, 'data/patch-manifest-alpha2.json'), 'utf8'));
+const kris = JSON.parse(fs.readFileSync(path.join(siteRoot, 'data/patch-manifest-kris-sprint2.json'), 'utf8'));
 const catalog = JSON.parse(fs.readFileSync(path.join(siteRoot, 'data/patch-catalog.json'), 'utf8'));
 const current = JSON.parse(fs.readFileSync(path.join(siteRoot, 'data/patch-manifest.json'), 'utf8'));
-const defaultVersion = current.target.sha256 === alpha2.target.sha256 ? 'alpha2' : 'alpha1';
+const defaultVersion = catalog.default;
 const source = process.env.SACRED_GOLD_CLEAN_ROM;
 const url = process.env.PATCHER_URL || 'http://127.0.0.1:8767/';
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 
 (async () => {
   assert(source, 'SACRED_GOLD_CLEAN_ROM is required');
-  assert.equal(catalog.default, defaultVersion);
-  assert.deepEqual(current, defaultVersion === 'alpha2' ? alpha2 : alpha1);
+  assert.equal(defaultVersion, 'kris-sprint2');
+  assert.deepEqual(current, {alpha1, alpha2, 'kris-sprint2': kris}[defaultVersion]);
   assert.equal(alpha2.status, 'EXPERIMENTAL_TESTED_PARTIAL');
   const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'ultimate-gold-browser-'));
   const browser = await chromium.launch({headless: true});

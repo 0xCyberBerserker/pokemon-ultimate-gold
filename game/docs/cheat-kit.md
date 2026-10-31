@@ -2,7 +2,7 @@
 
 ## English
 
-**Current availability (2026-10-22):** the patcher defaults to **Alpha 2 — experimental**, with the Rocket kit, target SHA-256 `24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`. Alpha 1 remains selectable and contains TM Refill only. Alpha 2 has exact-target [Candy/Berry use](kit-regression-fix6a.md) and [Repel evidence](repel-reuse.md); full campaign acceptance remains pending. EV/IV editing is not included.
+**Alpha 2 evidence:** Alpha 2 includes the Rocket kit, target SHA-256 `24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`, with exact-target [Candy/Berry use](kit-regression-fix6a.md) and [Repel evidence](repel-reuse.md). It does not include EV/IV editing. The latest experimental default carries the kit by reviewed lineage and includes an experimental editor; limited editor cases were tested on an earlier build, without new editor QA on this candidate. Alpha 2's test results are not automatically new-target tests. Full campaign acceptance remains pending.
 
 **Alpha 2 gift checked:** the Rocket NPC's offer and acceptance added the nine intended entries at quantity 1, including TM Refill, Party Healer and the final Cheat Kit marker. The full Bag and save-array comparison found no other inventory changes; a +1 walking friendship event is recorded separately. [Exact-target evidence and location capture](qa-alpha2-gift.md), [independent review](qa-alpha2-gift-review.md). Post-gift save/cold recovery, decline/repeat and full-bag cases have not been tested on Alpha 2.
 
@@ -39,7 +39,7 @@ Full story progression, held berries in battle, Escape Rope in a cave and physic
 
 ## Español
 
-**Disponibilidad actual (22-10-2026):** el parcheador abre **Alfa 2 — experimental** por defecto, con el kit Rocket, SHA-256 `24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`. Alfa 1 sigue seleccionable y solo contiene TM Refill (Recarga MT). Alfa 2 tiene pruebas de su hash exacto de [caramelo/baya](kit-regression-fix6a.md) y [repelentes](repel-reuse.md); falta aceptar la aventura completa. No incluye edición EV/IV.
+**Evidencia de Alfa 2:** Alfa 2 incluye el kit Rocket, SHA-256 `24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`, con pruebas de su hash exacto de [caramelo/baya](kit-regression-fix6a.md) y [repelentes](repel-reuse.md). No incluye edición EV/IV. La versión experimental más reciente y predeterminada conserva el kit por linaje revisado e incluye un editor experimental; algunos casos del editor se probaron en una versión anterior, sin nuevas pruebas del editor en esta candidata. Las pruebas de Alfa 2 no se convierten automáticamente en pruebas del nuevo destino. Falta aceptar la aventura completa.
 
 **Regalo de alfa 2 comprobado:** la oferta y aceptación del NPC Rocket añadieron las nueve entradas previstas con cantidad 1, incluidos TM Refill (Recarga MT), Party Healer (Curador del equipo) y el marcador final Cheat Kit (Kit de trucos). La comparación completa de Bolsa y array de guardado no encontró otros cambios de inventario; se registra aparte un incremento de amistad al caminar. [Evidencia del hash exacto y captura de localización](qa-alpha2-gift.md), [revisión independiente](qa-alpha2-gift-review.md). Falta probar guardado/recarga tras el regalo, rechazo/repetición y bolsa llena en alfa 2.
 

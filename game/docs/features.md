@@ -5,9 +5,9 @@
 Ultimate Gold is a custom HeartGold patch with checked components from the Drayano and Sacred Gold Plus lineages. The diagram separates credited lineage from the actual patch route.
 
 ### HeartGold foundation
-- Both selectable builds target the same clean 128 MiB Pokémon HeartGold USA input. The patcher verifies its exact hash; no ROM is distributed here.
+- All selectable builds target the same clean 128 MiB Pokémon HeartGold USA input. The patcher verifies its exact hash; no ROM is distributed here.
 - The downloads retain HeartGold’s original 493-species National Pokédex. No new species are added.
-- Alpha 1 and Alpha 2 are separate direct patches from the clean input. Do not stack one whole-ROM patch onto another.
+- Each version is a direct patch from the clean input. Do not stack whole-ROM patches.
 
 ### Drayano’s Sacred Gold / Storm Silver
 - The project inherits selected Sacred Gold 1.05 content. Both trainer archives match the original 1.05 control: 738 records and 2,086 team members.
@@ -20,8 +20,8 @@ Ultimate Gold is a custom HeartGold patch with checked components from the Draya
 
 ### Ultimate Gold builds and prototypes
 - **Alpha 1 — tested partial:** the earlier selectable download includes native reusable TM Refill.
-- **Alpha 2 — experimental, default:** adds the Rocket kit, evolution-shop stock, and owned-HM actions; exact-build QA is bounded and full-story testing remains open.
-- The private `bd50` EV/IV/nature candidate, Kris preview, and World Tournament study are not included in either download. The build adds no species.
+- **Alpha 2 — experimental:** adds the Rocket kit, evolution-shop stock, and owned-HM actions; exact-build QA is bounded.
+- **Kris + updated credits — experimental, default:** carries the reviewed earlier lineage, Kris and an experimental EV/IV/nature editor. The editor has bounded cases on earlier builds; no new editor QA was performed on this candidate. Full-story and hardware testing remain open; the World Tournament study is not included. The build adds no species.
 
 ### Credits
 - Sacred Gold / Storm Silver and the official Speed-Up: Drayano. Sacred Gold Plus was created by NefariousnessNo3436; the 1.2.3 continuation is by Umberto-DEV and contributors, with Fairy implementation by mikelan / Mikelan98.
@@ -32,9 +32,9 @@ Ultimate Gold is a custom HeartGold patch with checked components from the Draya
 Ultimate Gold es un parche personalizado de HeartGold con componentes comprobados de las líneas de Drayano y Sacred Gold Plus. El diagrama separa el linaje acreditado de la ruta real del parche.
 
 ### Base HeartGold
-- Ambas versiones seleccionables parten de la misma entrada limpia de Pokémon HeartGold USA, de 128 MiB. El parcheador verifica su hash exacto; aquí no se distribuye ninguna ROM.
+- Todas las versiones seleccionables parten de la misma entrada limpia de Pokémon HeartGold USA, de 128 MiB. El parcheador verifica su hash exacto; aquí no se distribuye ninguna ROM.
 - Las descargas conservan la Pokédex Nacional original de 493 especies de HeartGold. No se añaden especies.
-- Alfa 1 y Alfa 2 son parches directos separados sobre la entrada limpia. No apiles un parche de ROM completa sobre otro.
+- Cada versión es un parche directo sobre la entrada limpia. No apiles parches de ROM completa.
 
 ### Sacred Gold / Storm Silver de Drayano
 - El proyecto hereda componentes seleccionados de Sacred Gold 1.05. Ambos archivos de entrenadores coinciden con el control original 1.05: 738 registros y 2.086 integrantes.
@@ -47,8 +47,8 @@ Ultimate Gold es un parche personalizado de HeartGold con componentes comprobado
 
 ### Builds y prototipos de Ultimate Gold
 - **Alfa 1 — pruebas parciales:** la descarga anterior incluye TM Refill reutilizable nativo.
-- **Alfa 2 — experimental, predeterminada:** añade el kit Rocket, existencias de objetos evolutivos y acciones de MO sin enseñar el movimiento; el QA corresponde al hash exacto y sigue pendiente probar la historia completa.
-- La candidata privada `bd50` de EV/IV/naturaleza, la vista previa de Kris y el estudio del Torneo Mundial no están en ninguna descarga. El build no añade especies.
+- **Alfa 2 — experimental:** añade el kit Rocket, existencias de objetos evolutivos y acciones de MO sin enseñar el movimiento; el QA del hash exacto es acotado.
+- **Kris + créditos actualizados — experimental, predeterminada:** conserva el linaje previo revisado e incluye a Kris y un editor EV/IV/naturalezas experimental. El editor tiene casos acotados en versiones anteriores; no se realizaron nuevas pruebas del editor en esta candidata. Faltan pruebas de aventura completa y hardware; el estudio del Torneo Mundial no está incluido. El build no añade especies.
 
 ### Créditos
 - Sacred Gold / Storm Silver y Speed-Up oficial: Drayano. Sacred Gold Plus fue creado por NefariousnessNo3436; la continuación 1.2.3 es de Umberto-DEV y colaboradores, con implementación Hada de mikelan / Mikelan98.

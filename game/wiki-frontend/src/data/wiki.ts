@@ -20,13 +20,17 @@ export async function loadWiki(signal: AbortSignal): Promise<{ data: WikiData; v
   if (!data || typeof data !== 'object' || !Array.isArray((data as WikiData).trainers) || !Array.isArray((data as WikiData).species)) {
     throw new Error('Invalid wiki data');
   }
-  const catalog = rawCatalog as { default?: string; versions?: Record<string, { manifest?: string; label?: Localized }> } | null;
-  const version = catalog?.default ? catalog.versions?.[catalog.default] : undefined;
-  if (!version?.manifest || !/^\.\/patch-manifest-[a-z0-9-]+\.json$/.test(version.manifest) || !version.label?.en || !version.label.es) {
-    throw new Error('Invalid patch catalog');
-  }
-  const manifest = await readJson(`../data/${version.manifest.slice(2)}`, signal) as { target?: { sha256?: string }; source?: PatchSource } | null;
-  if (!manifest?.target?.sha256 || manifest.target.sha256 !== (data as WikiData).target_sha256) throw new Error('Wiki data target mismatch');
-  if (!manifest.source || !/^[a-f0-9]{64}$/.test(manifest.source.sha256) || !Number.isSafeInteger(manifest.source.size) || manifest.source.size <= 0) throw new Error('Invalid source manifest');
-  return { data: data as WikiData, version: version.label, source: manifest.source };
+  const catalog = rawCatalog as { default?: string; wiki_data?: string; versions?: Record<string, { manifest?: string; label?: Localized }> } | null;
+  const dataVersion = catalog?.wiki_data ? catalog.versions?.[catalog.wiki_data] : undefined;
+  const patchVersion = catalog?.default ? catalog.versions?.[catalog.default] : undefined;
+  const valid = (entry: typeof dataVersion) => !!entry?.manifest && /^\.\/patch-manifest-[a-z0-9-]+\.json$/.test(entry.manifest) && !!entry.label?.en && !!entry.label.es;
+  if (!valid(dataVersion) || !valid(patchVersion) || !dataVersion?.manifest || !dataVersion.label || !patchVersion?.manifest) throw new Error('Invalid patch catalog');
+  const [dataManifest, patchManifest] = await Promise.all([
+    readJson(`../data/${dataVersion.manifest.slice(2)}`, signal),
+    readJson(`../data/${patchVersion.manifest.slice(2)}`, signal),
+  ]) as [{ target?: { sha256?: string } } | null, { source?: PatchSource } | null];
+  if (!dataManifest?.target?.sha256 || dataManifest.target.sha256 !== (data as WikiData).target_sha256) throw new Error('Wiki data target mismatch');
+  const source = patchManifest?.source;
+  if (!source || !/^[a-f0-9]{64}$/.test(source.sha256) || !Number.isSafeInteger(source.size) || source.size <= 0) throw new Error('Invalid source manifest');
+  return { data: data as WikiData, version: dataVersion.label, source };
 }

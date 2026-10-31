@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "status": "EXPERIMENTAL_TESTED_PARTIAL",
+  "status": "EXPERIMENTAL_SPRINT_ACCEPTED",
   "default": true,
   "source": {
     "kind": "clean external HeartGold USA",
@@ -9,130 +9,43 @@
     "size": 134217728
   },
   "target": {
-    "filename": "Ultimate-Gold-alpha2.nds",
-    "sha256": "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6",
-    "size": 127045920,
-    "build": "exact FIX6a shop/owned-HM/Repel target; stat-editor absent"
+    "filename": "Ultimate-Gold-Kris-Sprint2.nds",
+    "sha256": "fc0bf04ec57fa30121fdb50a4da3a94c300fc0abe171c96b3e60bc2e674baff4",
+    "size": 127901556,
+    "build": "Accepted Kris candidate plus Sprint 2 title credits"
   },
   "delta": {
-    "file": "ultimate-gold-alpha2.xdelta",
-    "sha256": "1c7ba7258893cbcdb54748b28038c240b509e5e613a7b61a0be462eae3c9f045",
-    "size": 5015258
+    "file": "ultimate-gold-kris-sprint2.xdelta",
+    "sha256": "8b99a32c572469985158690ee00251d842e43f1fdb4cb69777e3c6ccd1aa3f99",
+    "size": 6348509
   },
-  "build": {
-    "tool": "xdelta3 3.2.2",
-    "library_path": "external xdelta3 library directory",
-    "recipe": "xdelta3 -e -s HeartGold-USA.nds qa-kit-shop-owned-hm-paged-fix6a.nds patches/ultimate-gold-alpha2.xdelta",
-    "roundtrip_report": "docs/qa-alpha2-build.json",
-    "roundtrip_report_sha256": "12f76a7c3afff0942ea7bc920fda4c0c45341c162d80f60627b8bba5787301a3"
+  "lineage": {
+    "kris_parent_sha256": "d577d8e8a47020deca8f9d5691af9480fd5671af79d0a92322f509de165f6267",
+    "title_issue": 34,
+    "title_file_id": 175,
+    "title_members": [
+      0,
+      3,
+      15,
+      17
+    ]
   },
   "claims": {
-    "rocket_kit_items": "TESTED_PARTIAL: exact FIX6a Rocket NPC offer/acceptance adds nine expected gifts, with independent review. Separate native-use checks cover one Rare Candy and one Oran Berry. Post-gift save/cold, decline/repeat/full-bag cases and other item effects are not accepted by this suite.",
-    "evolution_shop": "BOUNDED_NATIVE_PURCHASE_SAVE_COLD: exact FIX6a Moon Stone and Covenant Orb unit purchases, correct quantities/prices and native save/state-free cold reload. Other purchases and story access remain untested.",
-    "owned_hm_8": "PARTIAL_NATIVE_ACTIONS: individual exact-target reports cover Cut, Fly, Surf, Strength, Rock Smash, Waterfall, Whirlpool, and Rock Climb; story access and persistence remain report-specific.",
-    "repels": "PARTIAL_NATIVE: exact-target reports cover Max Repel retention/duration, Super Repel and Repel retention, accelerated expiry and reuse; 250 native steps not walked."
+    "kris": "Accepted documented Sprint 1 scope; known crop/contrast limits retained.",
+    "title_credits": "Bounded native boot/Save/cold review and scoped human visual approval."
   },
-  "evidence_reports": [
-    {
-      "file": "docs/qa-alpha2-frontier-review.json",
-      "sha256": "f71f476e4d7fa64ace77d51d74c193eee2c08b2f5fe054981d70a0047f6bfaae",
-      "status": "PASS_BOUNDED_OFFLINE_REVIEW_WITH_HISTORICAL_LIMIT"
-    },
-    {
-      "file": "docs/qa-alpha2-frontier.json",
-      "sha256": "55033dc223efa5ea021624d54cdc63bf5bd3314a3a614bad037241a224ff52ef",
-      "status": "FIRST_BATTLE_REACHED"
-    },
-    {
-      "file": "docs/qa-alpha2-frontier-outcome.json",
-      "sha256": "d245cf7f1a07deffd16f400c5bed0f772501fbb35154ee032b89194baf4d2c46",
-      "status": "BOUNDED_FIRST_MATCH_RETURN_SAVE_COLD_PASS"
-    },
-    {
-      "file": "docs/qa-alpha2-activation.json",
-      "sha256": "3ec0fbbe614914fb606bb911c061f488fd89a44b3761c363bb4c228031ab33a8",
-      "status": "PASS_LOCAL_DEFAULT_ACTIVATION_WITH_BOUNDED_GAMEPLAY_QA"
-    },
-    {
-      "file": "docs/qa-alpha2-gift.json",
-      "sha256": "536089678104335b246edd63cb8f05b961932ff591840b3483f1dd2e266e1b69",
-      "status": "NATIVE_GIFT_ACTION_CONFIRMED_WITH_LIMITS"
-    },
-    {
-      "file": "docs/qa-alpha2-gift-review.json",
-      "sha256": "89b877c54f29ad379e5b685eb945e432b6e3f2569068631129a0861850c25483",
-      "status": "PASS_BOUNDED_NATIVE_GIFT_WITH_LIMITS"
-    },
-    {
-      "file": "docs/qa-alpha2-shop.json",
-      "sha256": "939507da49726aad09c452692cf421e8445a7f05f5c36b0848f1823fdeaa2cc6",
-      "status": "PASS_BOUNDED_NATIVE_PURCHASE_SAVE_COLD"
-    },
-    {
-      "file": "docs/qa-alpha2-shop-review.json",
-      "sha256": "3075ccf74f99678336c2026ccfd57c04203f722bcda7aeae0809088a0d424029",
-      "status": "PASS_ROOT_OFFLINE_REVIEW"
-    },
-    {
-      "file": "docs/qa-alpha2-browser.json",
-      "sha256": "399360fd29e5cdfd28891dfe8e6427fa04b4f1b17df17dac505556524c95fcf2",
-      "status": "PASS_REAL_BROWSER_LOCAL_PATCH_AND_DOWNLOAD"
-    },
-    {
-      "file": "docs/qa-kit-regression-fix6a.json",
-      "sha256": "dc269504b11e12fd398226a4d84d461dd0b943d1e59f60c4799481f65e8a09a4",
-      "status": "NATIVE_EMULATED_REGRESSION_PASS"
-    },
-    {
-      "file": "docs/qa-repel-reuse.json",
-      "sha256": "6f319a481dfbf96104bb92d9aa0057f4731c31291346fa083cbb90a877028c48",
-      "status": "PARTIAL_NATIVE_RETENTION_PASS"
-    },
-    {
-      "file": "docs/qa-repel-remaining.json",
-      "sha256": "3e486cc04263796113036049d7305b99e71cd924f25c466e9458385be7e92de4",
-      "status": "BOUNDED_NATIVE_QA_PASS"
-    },
-    {
-      "file": "docs/qa-hm-cut-fix6a.json",
-      "sha256": "d010d5cc66415f3e0290a0f467aefbed277590524aa86dfc53379016d6f138e7",
-      "status": "NATIVE_ACTION_CONFIRMED"
-    },
-    {
-      "file": "docs/qa-hm-fly-surf-fix6a.json",
-      "sha256": "ad36af19d97837fbeec75973746bf03bf805282d63f5d35feb7be9451ecca9f0",
-      "status": "PASS_NATIVE_FLY_SURF_SAVE_COLD_WALKING_FRIENDSHIP"
-    },
-    {
-      "file": "docs/qa-rock-smash-fix6a.json",
-      "sha256": "ccc1054df9696e936911b1e92c8e83e12c46dec8e7fe2e947896281588d4d076",
-      "status": "NATIVE_ACTION_CONFIRMED"
-    },
-    {
-      "file": "docs/qa-hm-strength-fix6a.json",
-      "sha256": "009fdc9ab59caeacb70fcaa92217f89f2971e58b73f73b49cb72e5129e44a0d3",
-      "status": "VERIFIED_NATIVE_STRENGTH_AND_BOULDER_PUSH"
-    },
-    {
-      "file": "docs/qa-hm-waterfall-fix6a.json",
-      "sha256": "ef6933e83cbc0b44ba8633d73c1219157b30d983efe67769344e5a07471fc75e",
-      "status": "PASS_NATIVE_PROMPT_AND_ASCENT"
-    },
-    {
-      "file": "docs/qa-hm-whirlpool-fix6a.json",
-      "sha256": "8426e8afeceb028cfdf5096b36dd3b7e552b3846e49d5e5fffd2173368eea57b",
-      "status": "PASS_NATIVE_PROMPT_AND_CROSSING"
-    },
-    {
-      "file": "docs/qa-hm-rock-climb-walk-fix6a.json",
-      "sha256": "5947f186b7503c4150195579e22c6332f803dd779ffeba08db6296dd94aca733",
-      "status": "PASS_NATIVE_ON_FOOT_ACTION_AND_ASCENT_FROM_POSITION_FIXTURE"
-    }
-  ],
   "limits": [
-    "Full story not tested.",
-    "EVIV/stat-editor and Kris editor are not included.",
-    "Alpha 2 is the default experimental build; Alpha 1 remains selectable through its versioned manifest.",
-    "Do not generalize exact-target QA beyond the cases and limits in the linked reports."
-  ]
+    "Full adventure and physical hardware are not certified.",
+    "Cross-build save compatibility is not established by patch reconstruction.",
+    "Each player supplies a clean HeartGold USA dump; no ROM source is provided."
+  ],
+  "attribution": [
+    "Sacred Gold: Drayano",
+    "Sacred Gold Plus: Umberto-DEV and credited contributors",
+    "Ultimate Gold: R'LYEH FANGAME STUDIOS",
+    "Pokémon: respective rights holders"
+  ],
+  "publication_metadata": {
+    "source_manifest_sha256": "7d01e595415ac5301e94b2e14e5e6d59a1f572c4d45b50cde1b40c27467158aa"
+  }
 }
