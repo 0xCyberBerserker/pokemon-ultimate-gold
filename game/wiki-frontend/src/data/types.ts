@@ -44,7 +44,7 @@ export interface WikiData {
   species: Species[];
   species_stat_comparison?: { counts: { boosted: number; redistributed: number; unchanged: number }; record_layout: { path: string }; sources: { baseline: { sha256: string }; target: { sha256: string } } };
   trainers: Trainer[];
-  types: Record<string, Localized>;
+  types: Record<string, Localized & { icon?: string }>;
   moves: Record<string, { name: Localized; type_id: number; category: number; power: number; accuracy: number; pp: number; description: Localized }>;
   abilities: Record<string, { name: Localized; description: Localized }>;
   items: Record<string, { name: Localized; description: Localized; sprite?: string; category_id?: string; category?: Localized; nds_id?: number; icon_status?: string; acquisition?: Acquisition[] }>;

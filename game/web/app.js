@@ -1,7 +1,9 @@
-const embedded = new URLSearchParams(location.search).get('embedded') === 'wiki';
+const params = new URLSearchParams(location.search);
+const embedded = params.get('embedded') === 'wiki';
+const standalone = params.get('standalone') === '1';
 if (embedded) {
   document.documentElement.classList.add('patcher-embedded');
-} else {
+} else if (!standalone) {
   const wikiUrl = new URL('./wiki/', document.baseURI);
   wikiUrl.hash = location.hash;
   location.replace(wikiUrl.href);
@@ -62,7 +64,8 @@ const text = {
 };
 
 const $ = (id) => document.getElementById(id);
-let language = new URLSearchParams(location.search).get('lang') === 'es' ? 'es' : (localStorage.getItem('sgp-language') || 'en');
+const requestedLanguage = params.get('lang');
+let language = requestedLanguage === 'en' || requestedLanguage === 'es' ? requestedLanguage : (localStorage.getItem('sgp-language') === 'es' ? 'es' : 'en');
 let catalog = null;
 let currentManifest = null;
 let currentManifestUrl = null;

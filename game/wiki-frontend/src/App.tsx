@@ -1,5 +1,5 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
-import { BookOpen, Compass, Moon, Sun, Swords, Package, Sparkles, Disc3, Wrench } from 'lucide-react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { BookOpen, Compass, Moon, Sun, Swords, Package, Sparkles, Disc3, Wrench, Menu, X } from 'lucide-react';
 import { loadWiki, type PatchSource } from './data/wiki';
 import type { GameMode, Language, Localized, WikiData } from './data/types';
 import { strings } from './i18n';
@@ -22,6 +22,8 @@ export default function App() {
   const [wikiVersion, setWikiVersion] = useState<Localized | null>(null);
   const [patchSource, setPatchSource] = useState<PatchSource | null>(null);
   const [error, setError] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
   const [route, setRoute] = useState(() => location.hash || '#/');
   const t = strings[language];
   useEffect(() => {
@@ -88,7 +90,8 @@ export default function App() {
   ];
   return <div className="app-shell">
     <aside className="sidebar"><a className="brand" href="#/"><span className="brand-symbol">UG</span><span><strong>ULTIMATE GOLD</strong><small>FAN WIKI</small></span></a>
-      <nav aria-label="Wiki">{navigation.map((group) => <div className="nav-group" key={group.title}><p className="nav-heading">{group.title}</p>{group.links.map(({ href, label, icon: Icon, active }) => <a key={href} className={active ? 'nav-current' : ''} aria-current={active ? 'page' : undefined} href={href}><Icon size={19} />{label}</a>)}</div>)}</nav><p className="sidebar-foot">{t.project}</p>
+      <button ref={menuButton} className="mobile-menu-button" aria-controls="wiki-navigation" aria-expanded={navOpen} aria-label={language === 'es' ? (navOpen ? 'Cerrar menú' : 'Abrir menú') : (navOpen ? 'Close menu' : 'Open menu')} onClick={() => setNavOpen(!navOpen)}>{navOpen ? <X size={22} /> : <Menu size={22} />}</button>
+      <nav id="wiki-navigation" className={navOpen ? 'nav-open' : ''} aria-label="Wiki" onClick={() => setNavOpen(false)} onKeyDown={(event) => { if (event.key === 'Escape' && navOpen) { setNavOpen(false); menuButton.current?.focus(); } }}>{navigation.map((group) => <div className="nav-group" key={group.title}><p className="nav-heading">{group.title}</p>{group.links.map(({ href, label, icon: Icon, active }) => <a key={href} className={active ? 'nav-current' : ''} aria-current={active ? 'page' : undefined} href={href}><Icon size={19} />{label}</a>)}</div>)}</nav><p className="sidebar-foot">{t.project}</p>
     </aside>
     <div className="main-column"><header className="topbar"><strong>ULTIMATE GOLD <span> / {currentLabel}</span></strong><div className="controls">{data && <GlobalSearch data={data} language={language} />}
       <label><span>{t.mode}</span><select value={mode} onChange={(event) => { const next = event.target.value as GameMode; setMode(next); localStorage.setItem('ultimate-gold-game-mode', next); }}><option value="normal">Normal</option><option value="plus">Plus</option></select></label>

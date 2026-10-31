@@ -7,6 +7,7 @@ import { memberForMode } from '../../data/team';
 import { orderTrainers } from '../../data/journey';
 import { normalizeSearch } from '../../data/text';
 import { strings } from '../../i18n';
+import TypeBadge from '../reference/TypeBadge';
 
 type Props = { data: WikiData; language: Language; mode: GameMode };
 const PAGE_SIZE = 40;
@@ -30,14 +31,14 @@ function MemberCard({ member, data, language, mode }: Props & { member: Member }
     <div className="member-heading">
       <img src={`../sprites/pokemon/${member.species_id}.png`} alt="" loading="lazy" />
       <div><h3><a href={`#/pokemon/${member.species_id}`}>{localized(species?.name, language)}</a></h3><span>{language === 'es' ? 'Nv.' : 'Lv.'} {resolved.level}</span>
-        <div className="type-list">{species?.types.map((id) => <span className={`type-badge type-${id}`} key={id}>{localized(data.types[id], language)}</span>)}</div>
+        <div className="type-list">{species?.types.map((id) => <TypeBadge id={id} types={data.types} language={language} key={id} />)}</div>
       </div>
     </div>
     {!!member.form && <p className="note">{language === 'es' ? `Código de forma registrado: ${member.form}. El sprite y las habilidades mostrados corresponden a la especie base; la apariencia de esta forma no está verificada aquí.` : `Recorded form code: ${member.form}. The displayed sprite and abilities belong to the base species; this form’s appearance is not verified here.`}</p>}
-    <p><strong>{t.item}:</strong> {member.item_id ? <a className="text-link" href={`#/items/${member.item_id}`}>{localized(data.items[member.item_id]?.name, language)}</a> : t.noItem}</p>
+    <p><strong>{t.item}:</strong> {member.item_id ? <a className="text-link held-item" href={`#/items/${member.item_id}`}>{data.items[member.item_id]?.sprite && <img src={data.items[member.item_id].sprite} alt="" loading="lazy" />}{localized(data.items[member.item_id]?.name, language)}</a> : t.noItem}</p>
     <p><strong>{t.abilities}:</strong> {species?.abilities.length ? species.abilities.map((id, index) => <span key={id}>{index > 0 && ', '}<a className="text-link" href={`#/abilities/${id}`}>{localized(data.abilities[id]?.name, language)}</a></span>) : t.unknown}</p>
     <p className="note">{t.abilityNote}</p>
-    <div className="move-list"><strong>{t.moves}</strong>{moveIds.map((id, index) => { const move = data.moves[id]; return <a className="move-link" href={`#/moves/${id}`} key={`${index}-${id}`}>{localized(move?.name, language)}<small>{localized(move ? data.types[move.type_id] : undefined, language)} · {language === 'es' ? 'Potencia' : 'Power'} {move?.power ?? '—'} · PP {move?.pp ?? '—'}</small></a>; })}</div>
+    <div className="move-list"><strong>{t.moves}</strong>{moveIds.map((id, index) => { const move = data.moves[id]; return <a className="move-link" href={`#/moves/${id}`} key={`${index}-${id}`}>{localized(move?.name, language)}<small>{move && <TypeBadge id={move.type_id} types={data.types} language={language} />} · {language === 'es' ? 'Potencia' : 'Power'} {move?.power ?? '—'} · PP {move?.pp ?? '—'}</small></a>; })}</div>
     <p className="note">{t.moveNote}: {member.move_resolution === 'derived_from_target_learnset' ? t.derived_from_target_learnset : member.move_resolution === 'explicit_target_record' ? (language === 'es' ? 'Registro explícito' : 'Explicit record') : member.move_resolution === 'alternate_form_pending' ? (language === 'es' ? 'Forma alternativa pendiente' : 'Alternate form pending') : t.unknown}</p>
     <div className="stat-tables">{stats.map((values, group) => <div className="stat-group" key={group}>
       <h4>{group === 0 ? 'IV' : 'EV'}</h4>

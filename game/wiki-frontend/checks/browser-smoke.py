@@ -1,10 +1,12 @@
 """Local-only browser checks; run only after browser automation is authorized."""
 
 from functools import partial
+from contextlib import ExitStack
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from tempfile import mkdtemp, TemporaryDirectory
 from threading import Thread
+from time import monotonic, sleep
 from urllib.parse import unquote, urlsplit
 import json
 import os
@@ -38,6 +40,9 @@ class LocalSite(SimpleHTTPRequestHandler):
 
 
 def check_accessible_names(page, route):
+    # Firefox 150's patched Juggler cannot evaluate scripts under this page's CSP.
+    if os.environ.get("PUG_FIREFOX"):
+        return
     missing = page.evaluate("""() => [...document.querySelectorAll('button, input:not([type=hidden]), select, textarea, a[href], img')]
       .filter(el => el.getClientRects().length && !el.closest('[hidden], [aria-hidden=true]'))
       .filter(el => el.tagName === 'IMG' ? !el.hasAttribute('alt') :
@@ -49,13 +54,18 @@ def check_accessible_names(page, route):
     assert not missing, f"Unnamed controls or images on {route}: {missing}"
 
 
+def check_width(page, description):
+    if not os.environ.get("PUG_FIREFOX"):
+        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Horizontal overflow: {description}"
+
+
 def main():
     server = ThreadingHTTPServer(("127.0.0.1", 0), partial(LocalSite, directory=str(WEB)))
     thread = Thread(target=server.serve_forever, daemon=True)
     thread.start()
     origin = f"http://127.0.0.1:{server.server_port}"
     wiki = f"{origin}{PREFIX}wiki/"
-    captures = Path(mkdtemp(prefix="pug-react-visual-"))
+    captures = Path(mkdtemp(prefix="pug-react-visual-", dir=os.environ.get("PUG_EVIDENCE_DIR")))
     wiki_data = json.loads((WEB / "data/wiki-data.json").read_text())
     cheat_data = json.loads((WEB / "data/cheat-catalog.json").read_text())
     cheat = next(entry for entry in cheat_data["entries"] if entry["id"] == "00-006")
@@ -64,9 +74,16 @@ def main():
     errors = []
     missing_resources = set()
     try:
-        with sync_playwright() as playwright:
-            browser_path = os.environ.get("PUG_CHROMIUM")
-            browser = playwright.chromium.launch(headless=True, **({"executable_path": browser_path} if browser_path else {}))
+        with ExitStack() as stack:
+            firefox_path = os.environ.get("PUG_FIREFOX")
+            if firefox_path:
+                from invisible_playwright import InvisiblePlaywright
+                download_dir = Path(stack.enter_context(TemporaryDirectory(prefix="pug-firefox-downloads-")))
+                browser = stack.enter_context(InvisiblePlaywright(seed=42, headless=True, binary_path=firefox_path, locale="en-US", timezone="Europe/Madrid", humanize=False, extra_prefs={"zoom.stealth.canvas.substitute_pixels": False, "zoom.stealth.fpp.hw_seed": 0, "browser.download.folderList": 2, "browser.download.dir": str(download_dir), "browser.download.useDownloadDir": True}))
+            else:
+                playwright = stack.enter_context(sync_playwright())
+                browser_path = os.environ.get("PUG_CHROMIUM")
+                browser = playwright.chromium.launch(headless=True, **({"executable_path": browser_path} if browser_path else {}))
             try:
                 for name, width, height in [("desktop", 1440, 900), ("mobile", 390, 844)]:
                     context = browser.new_context(viewport={"width": width, "height": height}, reduced_motion="reduce")
@@ -79,7 +96,7 @@ def main():
                     page.goto(wiki, wait_until="domcontentloaded")
                     expect(page.locator(".home-page")).to_be_visible()
                     check_accessible_names(page, "home")
-                    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
+                    check_width(page, f"{name} home")
                     page.screenshot(path=str(captures / f"{name}-home.png"), full_page=True)
                     page.keyboard.press("Control+k")
                     page.locator('input[role="combobox"]').fill("Bulbasaur")
@@ -95,7 +112,17 @@ def main():
                     expect(page.locator("html")).to_have_attribute("lang", "es")
                     page.locator(".theme-button").click()
                     page.screenshot(path=str(captures / f"{name}-theme.png"), full_page=False)
+                    if name == "mobile":
+                        page.get_by_role("button", name="Abrir menú").click()
+                        expect(page.get_by_role("button", name="Cerrar menú")).to_have_attribute("aria-expanded", "true")
+                        page.get_by_role("navigation", name="Wiki").get_by_role("link", name="Trucos", exact=True).focus()
+                        page.keyboard.press("Escape")
+                        expect(page.get_by_role("button", name="Abrir menú")).to_be_focused()
+                        expect(page.get_by_role("button", name="Abrir menú")).to_have_attribute("aria-expanded", "false")
+                        page.get_by_role("button", name="Abrir menú").click()
                     page.get_by_role("navigation", name="Wiki").get_by_role("link", name="Trucos", exact=True).click()
+                    if name == "mobile":
+                        expect(page.get_by_role("button", name="Abrir menú")).to_have_attribute("aria-expanded", "false")
                     expect(page.get_by_role("heading", name="Catálogo de trucos")).to_be_visible()
                     page.goto(wiki + "#/trainers", wait_until="domcontentloaded")
                     first = page.locator(".trainer-option").first
@@ -115,7 +142,7 @@ def main():
                     check_accessible_names(page, "trainers")
                     assert page.locator(".member-card progress").count() == page.locator(".member-card").count() * 12
                     page.screenshot(path=str(captures / f"{name}-trainer.png"), full_page=False)
-                    trainer_hash = page.evaluate("location.hash")
+                    trainer_hash = page.url.split("#", 1)[-1]
                     species_name = page.locator(".member-card h3 a").first.inner_text()
                     page.get_by_label("Pokémon", exact=True).fill(species_name)
                     expect(page.locator(".trainer-option").first).to_be_visible()
@@ -123,7 +150,7 @@ def main():
                     expect(page.locator(".member-card").first).to_be_visible()
                     page.reload(wait_until="domcontentloaded")
                     expect(page.locator(".member-card").first).to_be_visible()
-                    assert page.evaluate("location.hash") == trainer_hash
+                    assert page.url.split("#", 1)[-1] == trainer_hash
                     expect(page.locator(".controls select").first).to_have_value("plus")
                     expect(page.get_by_label("Pokémon", exact=True)).to_have_value(species_name)
                     page.get_by_label("Pokémon", exact=True).fill("")
@@ -132,7 +159,8 @@ def main():
                     expect(page.locator(".section-title .count")).to_contain_text(str(expected_rivals))
                     page.locator(".member-card h3 a").first.click()
                     expect(page.locator(".pokemon-evolution").first).to_be_visible()
-                    page.wait_for_function("() => window.scrollY === 0")
+                    if not firefox_path:
+                        page.wait_for_function("() => window.scrollY === 0")
                     check_accessible_names(page, "pokemon")
                     page.go_back()
                     expect(page.get_by_label("Categoría de entrenador")).to_have_value("Rival")
@@ -154,9 +182,11 @@ def main():
                     expect(page.locator(".pokemon-evolution").first).to_be_visible()
                     page.goto(wiki + "#/pokemon", wait_until="domcontentloaded")
                     expect(page.locator(".dex-card").first).to_be_visible()
-                    page.wait_for_function("""() => [...document.querySelectorAll('.dex-card img')]
-                      .filter(img => img.getBoundingClientRect().top < innerHeight && img.getBoundingClientRect().bottom > 0)
-                      .every(img => img.complete && img.naturalWidth > 0)""")
+                    expect(page.locator(".dex-card .type-badge img").first).to_be_visible()
+                    if not firefox_path:
+                        page.wait_for_function("""() => [...document.querySelectorAll('.dex-card img')]
+                          .filter(img => img.getBoundingClientRect().top < innerHeight && img.getBoundingClientRect().bottom > 0)
+                          .every(img => img.complete && img.naturalWidth > 0)""")
                     page.screenshot(path=str(captures / f"{name}-pokedex.png"), full_page=False)
                     page.get_by_label("Buscar Pokémon").fill("Bulbasaur")
                     expect(page.locator(".dex-card")).to_have_count(1)
@@ -170,7 +200,7 @@ def main():
                     page.goto(wiki + "#/pokemon/12", wait_until="domcontentloaded")
                     page.get_by_text("Fuente y criterio", exact=True).click()
                     expect(page.get_by_text(wiki_data["species_stat_comparison"]["sources"]["baseline"]["sha256"])).to_be_visible()
-                    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Horizontal overflow: {name} comparison source"
+                    check_width(page, f"{name} comparison source")
                     page.goto(wiki + "#/cheats", wait_until="domcontentloaded")
                     expect(page.locator(".cheat-card").first).to_be_visible()
                     check_accessible_names(page, "cheats")
@@ -179,11 +209,31 @@ def main():
                     expect(card).to_contain_text(cheat["id"])
                     card.get_by_text("Código completo", exact=True).click()
                     expect(card.locator("pre code")).to_have_text(cheat["code"])
-                    with page.expect_download() as exported:
+                    if firefox_path:
+                        before = set(download_dir.iterdir())
                         card.get_by_role("button", name="Perfil RetroArch · desactivado").click()
-                    profile = Path(exported.value.path()).read_text()
+                        deadline = monotonic() + 30
+                        while monotonic() < deadline:
+                            files = [path for path in set(download_dir.iterdir()) - before if path.suffix == ".cht"]
+                            if files and not list(download_dir.glob("*.part")):
+                                break
+                            sleep(0.1)
+                        else:
+                            raise AssertionError("Firefox did not save the RetroArch profile")
+                        profile = files[0].read_text()
+                    else:
+                        with page.expect_download() as exported:
+                            card.get_by_role("button", name="Perfil RetroArch · desactivado").click()
+                        profile = Path(exported.value.path()).read_text()
                     assert 'cheat0_enable = "false"' in profile
                     assert cheat["code"].replace("\n", "+") in profile
+                    if firefox_path:
+                        # This older patched Juggler can leave the download navigation pending.
+                        page.close()
+                        page = context.new_page()
+                        page.on("pageerror", lambda error: errors.append(str(error)))
+                        page.on("response", lambda response: missing_resources.add(f"{response.status} {response.url}") if response.url.startswith(origin + "/") and response.status >= 400 else None)
+                        page.on("request", lambda request: patch_requests.append(request.url) if request.url.endswith(".xdelta") else None)
                     page.goto(wiki + "#/kris-progress", wait_until="domcontentloaded")
                     expect(page.locator(".kris-gallery-card").first).to_be_visible()
                     page.get_by_label("Mostrar archivo completo").check()
@@ -191,9 +241,25 @@ def main():
                     check_accessible_names(page, "kris-progress")
                     page.goto(wiki + "#/patcher", wait_until="domcontentloaded")
                     manifest = json.loads((WEB / "data/patch-manifest-alpha2.json").read_text())
-                    expect(page.locator(".patcher-source")).to_contain_text(manifest["source"]["sha256"])
-                    expect(page.locator(".patcher-source")).to_contain_text("128 MiB")
-                    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Horizontal overflow: {name} patcher source"
+                    expect(page.get_by_role("heading", name="Parcheador de Ultimate Gold")).to_be_visible()
+                    patcher_link = page.get_by_role("link", name="Abrir parcheador independiente")
+                    expect(patcher_link).to_have_attribute("target", "_blank")
+                    expect(patcher_link).to_have_attribute("href", "../index.html?standalone=1&lang=es")
+                    if name == "desktop":
+                        with page.expect_popup() as opened:
+                            patcher_link.click()
+                        standalone = opened.value
+                        expect(standalone.locator("#rom")).to_be_visible()
+                        expect(standalone.locator("#language")).to_have_value("es")
+                        standalone.goto(f"{origin}{PREFIX}index.html?standalone=1&lang=en", wait_until="domcontentloaded")
+                        expect(standalone.locator("#language")).to_have_value("en")
+                        standalone.locator("#language").select_option("es")
+                        standalone.close()
+                    expect(page.get_by_text("La ROM seleccionada no se sube y no necesitas una cuenta.")).to_be_visible()
+                    expect(page.locator(".patcher-note")).to_contain_text(manifest["source"]["sha256"])
+                    expect(page.locator(".patcher-note")).to_contain_text("128 MiB")
+                    page.screenshot(path=str(captures / f"{name}-patcher.png"), full_page=True)
+                    check_width(page, f"{name} patcher source")
                     expect(page.frame_locator("iframe").locator("#rom")).to_be_attached()
                     expect(page.frame_locator("iframe").locator("#language")).to_have_value("es")
                     if name == "desktop":
@@ -203,32 +269,42 @@ def main():
                         frame.locator("#apply").click()
                         expect(frame.locator("#status")).to_contain_text("tamaño incorrecto")
                         expect(frame.locator("#download")).to_be_hidden()
-                        with TemporaryDirectory(prefix="pug-invalid-input-") as temp:
-                            invalid = Path(temp) / "wrong-hash.nds"
-                            with invalid.open("wb") as stream:
-                                stream.truncate(manifest["source"]["size"])
-                            frame.locator("#rom").set_input_files(str(invalid))
-                            frame.locator("#apply").click()
-                            expect(frame.locator("#status")).to_contain_text("no coincide con el SHA-256", timeout=30000)
-                            expect(frame.locator("#download")).to_be_hidden()
+                        if not firefox_path:
+                            with TemporaryDirectory(prefix="pug-invalid-input-") as temp:
+                                invalid = Path(temp) / "wrong-hash.nds"
+                                with invalid.open("wb") as stream:
+                                    stream.truncate(manifest["source"]["size"])
+                                frame.locator("#rom").set_input_files(str(invalid))
+                                frame.locator("#apply").click()
+                                expect(frame.locator("#status")).to_contain_text("no coincide con el SHA-256", timeout=30000)
+                                expect(frame.locator("#download")).to_be_hidden()
                         assert not patch_requests, "A rejected input requested a patch"
                     for route in ("moves", "items", "machines", "abilities", "evolutions", "guides", "faq", "mechanics", "guide/player", "guide/features"):
                         page.goto(wiki + "#/" + route, wait_until="domcontentloaded")
                         expect(page.locator("main h1").first).to_be_visible()
-                        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Horizontal overflow: {name} {route}"
+                        check_width(page, f"{name} {route}")
                         check_accessible_names(page, route)
                         if route == "guides":
                             expect(page.get_by_role("heading", name="Informes de QA y verificación")).to_be_visible()
                             page.get_by_label("Buscar", exact=True).fill("Preguntas frecuentes")
                             expect(page.locator('a[href="#/guide/faq"]')).to_be_visible()
                             expect(page.get_by_role("heading", name="Informes de QA y verificación")).to_have_count(0)
+                        if route == "items":
+                            page.get_by_label("Buscar", exact=True).fill("Ultra Ball")
+                            item = page.locator(".item-entry").first
+                            expect(item).to_contain_text("Ultra Ball")
+                            expect(item.locator("summary img")).to_be_visible()
+                            item.locator(":scope > summary").click()
+                            expect(item.get_by_role("link", name="Abrir ficha del objeto")).to_be_visible()
+                            expect(item.locator(".acquisition-record").first).to_be_visible()
+                            page.screenshot(path=str(captures / f"{name}-items.png"), full_page=False)
                     expect(page.get_by_label("Linaje y ruta de los parches")).to_contain_text("Sacred Gold Plus 1.2.3")
                     expect(page.get_by_label("Linaje y ruta de los parches")).to_contain_text("no una secuencia para apilar parches")
                     page.goto(wiki + "#/items/87", wait_until="domcontentloaded")
                     held_item = page.locator('.acquisition-record').filter(has=page.locator('a[href="#/pokemon/46"]')).first
                     held_item.get_by_text("Fuentes y comprobación", exact=True).click()
                     expect(held_item.locator('a[href="#/pokemon/46"]')).to_be_visible()
-                    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Horizontal overflow: {name} item evidence"
+                    check_width(page, f"{name} item evidence")
                     page.locator(".controls select").nth(1).select_option("en")
                     page.goto(wiki + "#/guide/features", wait_until="domcontentloaded")
                     expect(page.get_by_label("Lineage and patch routes")).to_contain_text("not a patch-stacking recipe")
@@ -241,7 +317,7 @@ def main():
         server.shutdown()
         server.server_close()
         thread.join()
-    print(json.dumps({"result": "passed", "captures": str(captures), "scope": "local browser UI smoke; no ROM or patch execution"}))
+    print(json.dumps({"result": "passed", "captures": str(captures), "scope": "local browser UI smoke; no ROM or patch execution", "firefox_skipped": ["DOM evaluation checks under CSP", "large wrong-hash input"] if os.environ.get("PUG_FIREFOX") else []}))
 
 
 if __name__ == "__main__":
