@@ -45,6 +45,8 @@ Chromium opened all 87 guide routes in English and Spanish and found the source 
 
 All 2,329 images in the Kris gallery manifest exist and match their recorded SHA-256; this integrity check is included in the frontend test suite. Hash matching does not identify which image shows a particular early mockup.
 
+The frontend suite also checks that all 999 distinct referenced Pokémon, trainer and item sprites exist locally and have a PNG signature. This does not establish their visual correctness or image provenance.
+
 Local Chromium also patched a hash-matched user-provided HeartGold source through the React iframe for both versions. Downloaded outputs matched the manifests: Alpha 1 `6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132`; Alpha 2 `24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`. Temporary outputs were deleted and the source hash remained unchanged. This verifies the local patching flow, not gameplay or deployment.
 
 The browser smoke test also rejects a short synthetic file and a correctly sized synthetic file with a wrong hash; neither produces a download or requests a delta.
@@ -97,6 +99,8 @@ Para el truco `00-006`, la prueba busca por ID, compara el bloque completo mostr
 Chromium abrió las 87 rutas de guía en inglés y español y comprobó que el texto de origen está presente en cada página renderizada, teniendo en cuenta la nota documentada sobre evidencia no publicada. Esto no verifica cada afirmación ni revisa visualmente todas las páginas.
 
 Las 2.329 imágenes del manifiesto de la galería de Kris existen y coinciden con su SHA-256 registrado; esta comprobación de integridad forma parte de las pruebas del frontend. La coincidencia de hashes no identifica qué imagen muestra un mockup temprano concreto.
+
+Las pruebas del frontend comprueban además que los 999 sprites distintos referenciados de Pokémon, entrenadores y objetos existen localmente y tienen firma PNG. Esto no demuestra su corrección visual ni su procedencia.
 
 Chromium local también parcheó, mediante el iframe de React, un HeartGold aportado por el usuario cuyo hash coincide con el manifiesto, para ambas versiones. Las descargas coincidieron con los manifiestos: Alfa 1 `6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132`; Alfa 2 `24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`. Se eliminaron las salidas temporales y el hash del original no cambió. Esto verifica el flujo local de parcheo, no la jugabilidad ni el despliegue.
 

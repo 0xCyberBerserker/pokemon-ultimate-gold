@@ -34,3 +34,22 @@ test('all current encyclopedia and trainer references resolve without altering m
     assert.ok(data.moves[machine.move_id], `machine ${machine.kind} ${machine.number}: move`);
   }
 });
+
+test('all referenced species, trainer and item sprites are local PNG files', async () => {
+  const web = new URL('../../web/', import.meta.url);
+  const data = JSON.parse(await readFile(new URL('data/wiki-data.json', web)));
+  const paths = new Set(data.species.map((entry) => `sprites/pokemon/${entry.id}.png`));
+  for (const entry of data.trainers) if (entry.portrait?.src) {
+    assert.match(entry.portrait.src, /^\.\.\/sprites\/trainers\/[a-z0-9._-]+\.png$/i);
+    paths.add(entry.portrait.src.slice(3));
+  }
+  for (const entry of Object.values(data.items)) if (entry.sprite) {
+    assert.match(entry.sprite, /^\.\.\/sprites\/items\/[a-z0-9._-]+\.png$/i);
+    paths.add(entry.sprite.slice(3));
+  }
+  const signature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+  for (const path of paths) {
+    const bytes = await readFile(new URL(path, web));
+    assert.ok(bytes.subarray(0, 8).equals(signature), `Invalid PNG: ${path}`);
+  }
+});
