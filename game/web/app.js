@@ -65,7 +65,13 @@ const text = {
 
 const $ = (id) => document.getElementById(id);
 const requestedLanguage = params.get('lang');
-let language = requestedLanguage === 'en' || requestedLanguage === 'es' ? requestedLanguage : (localStorage.getItem('sgp-language') === 'es' ? 'es' : 'en');
+function readLanguagePreference() {
+  try { return localStorage.getItem('sgp-language'); } catch { return null; }
+}
+function saveLanguagePreference(value) {
+  try { localStorage.setItem('sgp-language', value); } catch { /* The selected language remains active in this page. */ }
+}
+let language = requestedLanguage === 'en' || requestedLanguage === 'es' ? requestedLanguage : (readLanguagePreference() === 'es' ? 'es' : 'en');
 let catalog = null;
 let currentManifest = null;
 let currentManifestUrl = null;
@@ -87,7 +93,7 @@ function setStatusCode(key, kind = '', detail = '') {
 
 function translate() {
   language = $('language').value;
-  localStorage.setItem('sgp-language', language);
+  saveLanguagePreference(language);
   document.documentElement.lang = language;
   const t = text[language];
   $('eyebrow').textContent = t.eyebrow;

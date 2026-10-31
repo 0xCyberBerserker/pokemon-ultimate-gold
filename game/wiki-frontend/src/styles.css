@@ -1,9 +1,29 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "Outfit";
+  src: url("../../web/assets/fonts/outfit.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../../web/assets/fonts/nunito-sans.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+}
+h1, h2, h3, h4 { font-family: "Outfit", sans-serif; }
 .dex-pagination { max-width: 300px; margin: 20px auto; }
 .learnset-filter{display:grid;gap:5px;max-width:320px;margin-bottom:12px;color:var(--muted);font-size:.8rem;font-weight:700}.learnset-filter input{background:var(--surface);color:var(--text);border:1px solid var(--line);padding:8px;border-radius:8px}.learnset small{display:block;color:var(--muted)}
+.compatible-machines { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 6px; }
+.compatible-machine { display: flex; gap: 8px; align-items: baseline; padding: 8px; border: 1px solid var(--line); border-radius: 8px; color: var(--text); text-decoration: none; }
+.compatible-machine:hover { border-color: var(--gold); }
+.compatible-machine strong { white-space: nowrap; }
+.section-error button { padding: 9px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--gold-soft); color: var(--text); cursor: pointer; }
 .cheat-catalog > h1 {
   font:
-    700 clamp(2rem, 4vw, 3rem) Georgia,
+    700 clamp(2rem, 4vw, 3rem) "Outfit",
     serif;
   margin-bottom: 14px;
 }
@@ -16,7 +36,7 @@
 }
 .cheat-card h2 {
   font:
-    700 1.2rem Georgia,
+    700 1.2rem "Outfit",
     serif;
   margin: 8px 0;
 }
@@ -186,7 +206,7 @@
 }
 .kris-progress > h1 {
   font:
-    700 clamp(2rem, 4vw, 3rem) Georgia,
+    700 clamp(2rem, 4vw, 3rem) "Outfit",
     serif;
   margin-bottom: 14px;
 }
@@ -380,7 +400,7 @@
 }
 .home-hero h1 {
   font:
-    700 clamp(2rem, 4vw, 3rem) Georgia,
+    700 clamp(2rem, 4vw, 3rem) "Outfit",
     serif;
   margin: 0 0 12px;
 }
@@ -402,7 +422,7 @@
 }
 .home-page > h2 {
   font:
-    700 1.5rem Georgia,
+    700 1.5rem "Outfit",
     serif;
   margin: 28px 0 15px;
 }
@@ -419,7 +439,7 @@
 }
 .home-grid .panel > svg { color: var(--gold); flex: none; }
 .home-grid .panel > span:not(.home-card-arrow) { display: grid; gap: 4px; }
-.home-grid small { color: var(--muted); font: .76rem system-ui, sans-serif; }
+.home-grid small { color: var(--muted); font: .76rem "Nunito Sans", sans-serif; }
 .home-card-arrow { margin-left: auto; color: var(--muted); }
 .home-start { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .home-start .panel { display: flex; align-items: flex-start; gap: 14px; margin: 0; min-height: 160px; }
@@ -521,6 +541,7 @@
 .search-results small {
   color: var(--muted);
 }
+.search-result-label { display: grid; gap: 3px; }
 @media (max-width: 600px) {
   .search-trigger span {
     display: none;
@@ -550,6 +571,13 @@
   color: var(--muted);
   font-size: 0.8rem;
 }
+.ability-list {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 12px;
+}
+.ability-list .ability-card { align-content: start; gap: 8px; padding: 18px; }
+.ability-card strong { font: 700 1.05rem/1.25 "Outfit", sans-serif; }
+.ability-list .ability-card span { font-size: .9rem; line-height: 1.45; }
 .guide-html {
   margin-top: 20px;
   line-height: 1.7;
@@ -559,7 +587,7 @@
 .guide-html h2,
 .guide-html h3 {
   margin: 1em 0 0.5em;
-  font-family: Georgia, serif;
+  font-family: "Outfit", sans-serif;
 }
 .guide-html p,
 .guide-html ul,
@@ -653,7 +681,7 @@
 }
 .pokemon-hero h1 {
   font:
-    700 2.5rem Georgia,
+    700 2.5rem "Outfit",
     serif;
   margin: 4px 0;
 }
@@ -675,7 +703,7 @@
 }
 .panel h2 {
   font:
-    700 1.25rem Georgia,
+    700 1.25rem "Outfit",
     serif;
   margin: 0 0 14px;
 }
@@ -732,7 +760,7 @@
   }
 }
 :root {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Nunito Sans", sans-serif;
   color: #29251e;
   background: #faf7ee;
   font-synthesis: none;
@@ -936,7 +964,7 @@ main {
   gap: 15px;
 }
 .section-title h1 {
-  font-family: Georgia, serif;
+  font-family: "Outfit", sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.1;
   margin: 4px 0 10px;
@@ -1064,7 +1092,7 @@ main {
   image-rendering: pixelated;
 }
 .detail-heading h2 {
-  font-family: Georgia, serif;
+  font-family: "Outfit", sans-serif;
   font-size: 1.8rem;
   margin: 2px 0;
 }
@@ -1073,7 +1101,7 @@ main {
   color: var(--muted);
 }
 .trainer-detail > h2 {
-  font-family: Georgia, serif;
+  font-family: "Outfit", sans-serif;
   font-size: 1.4rem;
   margin: 22px 0 12px;
 }
@@ -1134,7 +1162,7 @@ main {
   border-radius: 14px;
 }
 .member-heading h3 {
-  font-family: Georgia, serif;
+  font-family: "Outfit", sans-serif;
   font-size: 1.2rem;
   margin: 0;
 }

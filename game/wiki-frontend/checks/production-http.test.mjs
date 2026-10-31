@@ -40,11 +40,12 @@ test('built frontend and shared site resources resolve under a Pages project sub
     for (const [, path] of html.matchAll(/(?:src|href)="(\.\/assets\/[^"#]+)"/g)) await get(new URL(path, wikiUrl));
     const assets = await readdir(resolve(dist, 'assets'));
     assert.ok(assets.some((name) => name.endsWith('.js')) && assets.some((name) => name.endsWith('.css')));
+    assert.equal(assets.filter((name) => name.endsWith('.ttf')).length, 2, 'Both local font families must be bundled');
     for (const name of assets) {
       const response = await get(new URL(`assets/${name}`, wikiUrl));
       assert.deepEqual(Buffer.from(await response.arrayBuffer()), await readFile(resolve(dist, 'assets', name)), `Asset mismatch: ${name}`);
     }
-    for (const path of ['../sprites/pokemon/1.png', '../assets/branding/ultimate-gold-header.png', '../data/kris-gallery.json', '../cheat-catalog.js', '../?embed=1', '../app.js', '../LICENSES.html', '../style.css']) await get(new URL(path, wikiUrl));
+    for (const path of ['../sprites/pokemon/1.png', '../assets/branding/ultimate-gold-header.png', '../assets/fonts/outfit.ttf', '../assets/fonts/nunito-sans.ttf', '../assets/fonts/OFL-Outfit.txt', '../assets/fonts/OFL-Nunito-Sans.txt', '../data/kris-gallery.json', '../cheat-catalog.js', '../?embed=1', '../app.js', '../LICENSES.html', '../style.css']) await get(new URL(path, wikiUrl));
     const legacy = await (await get(new URL('species-493.html', wikiUrl))).text();
     assert.match(legacy, /#\/pokemon/);
     const data = await (await get(new URL('../data/wiki-data.json', wikiUrl))).json();

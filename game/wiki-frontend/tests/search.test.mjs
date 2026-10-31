@@ -23,3 +23,14 @@ test('search keeps results grouped and does not let one group monopolize matches
   assert.equal(expanded[0].entries.length, 11);
   assert.equal(expanded[0].total, 11);
 });
+
+test('trainer search distinguishes first battles and rematches with their locations', () => {
+  for (const [language, first, rematch] of [['es', 'Primera visita', 'Revancha'], ['en', 'First visit', 'Rematch']]) {
+    const results = searchGroups(buildSearchIndex(data, language), 'Falkner', 20).flatMap((group) => group.entries);
+    const initial = results.find((entry) => entry.href === '#/trainers/20' && entry.detail);
+    const later = results.find((entry) => entry.href === '#/trainers/712' && entry.detail);
+    assert.match(initial.detail, new RegExp(first));
+    assert.match(later.detail, new RegExp(rematch));
+    assert.notEqual(initial.detail, later.detail);
+  }
+});

@@ -20,6 +20,14 @@ test('reference views render actual bilingual data and hash links', async () => 
     assert.match(dex, /sprites\/types\/12\.png/);
     assert.match(dex, /sprites\/pokemon\/2\.png/);
     assert.match(dex, /#\/abilities\/65/);
+    const compatibleData = { ...data, tmhm_compatibility: { target_sha256: data.target_sha256, by_species: { '1': [data.tmhm[0].item_id] } } };
+    const compatibleDex = renderToStaticMarkup(React.createElement(Pokedex, { data: compatibleData, language: 'es', id: 1 }));
+    assert.match(compatibleDex, /MT y MO compatibles/);
+    assert.match(compatibleDex, /MT 1/);
+    assert.match(compatibleDex, new RegExp(`href="#/items/${data.tmhm[0].item_id}"`));
+    const mismatchedData = { ...compatibleData, tmhm_compatibility: { ...compatibleData.tmhm_compatibility, target_sha256: 'not-the-target' } };
+    const mismatchedDex = renderToStaticMarkup(React.createElement(Pokedex, { data: mismatchedData, language: 'es', id: 1 }));
+    assert.match(mismatchedDex, /compatibilidad individual aún no está disponible/);
     const list = renderToStaticMarkup(React.createElement(Pokedex, { data, language: 'en' }));
     assert.equal((list.match(/class="dex-card"/g) || []).length, 60);
     assert.ok(list.includes(` / ${data.species.length}`));
@@ -28,6 +36,9 @@ test('reference views render actual bilingual data and hash links', async () => 
     const ability = renderToStaticMarkup(React.createElement(Reference, { data, language: 'es', route: '#/abilities/65' }));
     assert.match(ability, /Espesura/);
     assert.match(ability, /#\/pokemon\/1/);
+    const abilities = renderToStaticMarkup(React.createElement(Reference, { data, language: 'es', route: '#/abilities' }));
+    assert.equal((abilities.match(/class="panel ability-card"/g) || []).length, Object.keys(data.abilities).length);
+    assert.match(abilities, /href="#\/abilities\/65"/);
     assert.match(move, /Voz Cautivadora/);
     assert.match(move, /Hada/);
     assert.match(move, /Potencia: 40/);
@@ -42,7 +53,7 @@ test('reference views render actual bilingual data and hash links', async () => 
     assert.ok(guide.includes(data.guides.player.title.en));
     for (const language of ['en', 'es']) {
       const index = renderToStaticMarkup(React.createElement(Reference, { data, language, route: '#/guides' }));
-      assert.ok(index.includes(language === 'es' ? 'Informes de QA y verificación' : 'QA and verification reports'));
+      assert.ok(index.includes(language === 'es' ? 'Documentación técnica' : 'Technical documentation'));
       for (const id of Object.keys(data.guides)) assert.equal((index.match(new RegExp(`href="#/guide/${id}"`, 'g')) || []).length, 1, id);
     }
     const missingGuide = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: '#/guide/not-a-real-guide' }));
@@ -120,6 +131,8 @@ test('reference views render actual bilingual data and hash links', async () => 
       const selected = renderToStaticMarkup(React.createElement(App));
       assert.equal((selected.match(/aria-current="page"/g) || []).length, 1, route);
     }
+    globalThis.localStorage = { getItem: () => { throw new Error('SecurityError'); } };
+    assert.match(renderToStaticMarkup(React.createElement(App)), /app-shell/);
     delete globalThis.localStorage; delete globalThis.location; delete globalThis.matchMedia;
   } finally { await server.close(); }
 });

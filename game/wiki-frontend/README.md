@@ -4,6 +4,8 @@
 
 This React frontend is used by the published wiki. The generated game data and existing patcher remain the reference; changes require review and the relevant checks before deployment.
 
+The locally bundled Outfit and Nunito Sans fonts are documented in [font provenance](FONTS.md).
+
 ### Local use
 
 Node.js 26 and pnpm 12 were used. From `game/`, start the existing site on loopback:
@@ -48,6 +50,8 @@ The existing generator also accepts an explicit local preview option, from `game
 ## Español
 
 Este frontend React se usa en la wiki publicada. Los datos generados del juego y el parcheador existente siguen siendo la referencia; los cambios requieren revisión y las comprobaciones pertinentes antes de desplegar.
+
+Las fuentes Outfit y Nunito Sans incluidas localmente se documentan en [procedencia tipográfica](FONTS.md).
 
 ### Uso local
 

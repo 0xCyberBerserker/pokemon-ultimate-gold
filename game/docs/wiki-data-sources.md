@@ -13,6 +13,16 @@ Catalog coverage does not establish complete gameplay acceptance.
 ability slots, TM/HM assignments and English names. The Normal/Plus selector reflects documented
 native level scaling, not invented EV spreads or hidden abilities.
 
+The Pokédex and machine index derive per-species TM/HM compatibility from the 13-byte bitfield at
+offset 28 in each 44-byte record in `a/0/0/2`. The extractor verifies the clean source and delta
+hashes, reconstructs targets in memory, and checks each complete target hash before parsing. The
+Alpha 2 and Kris Sprint 2 records share the same personal-NARC SHA-256
+(`5f193d2eacddf0ffef9daf7acebd35dcdb21c30f59ab497759c3b7cc335f2d40`); their ordered 100-move
+tables and all 493 compatibility lists also compare equal. The generated wiki block is still
+selected by its exact `target_sha256`. This is static record evidence, not a gameplay test of
+teaching a move or using TM Refill. See [`tmhm-compatibility.json`](tmhm-compatibility.json) and
+[`tools/extract_tmhm_compatibility.cjs`](../tools/extract_tmhm_compatibility.cjs).
+
 The Pokédex's Alpha 2 stat filter compares the six base stats in the exact clean HeartGold USA
 ROM (`65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105`) and Alpha 2 FIX6a
 (`24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`). It labels a species
@@ -65,6 +75,17 @@ miembros. Cubrir el catálogo no demuestra aceptación de toda la aventura.
 `tools/build_wiki_data.py` lee registros de combate, equipos, espacios de habilidades estándar,
 asignaciones MT/MO y nombres ingleses del objetivo exacto. Normal/Plus refleja el escalado nativo
 documentado; no inventa repartos EV ni habilidades ocultas.
+
+La Pokédex y el índice de máquinas derivan la compatibilidad MT/MO por especie del campo de 13
+bytes situado en el offset 28 de cada registro personal de 44 bytes en `a/0/0/2`. El extractor
+verifica hashes de la ROM limpia y los parches, reconstruye los destinos en memoria y comprueba el
+hash completo de cada resultado antes de analizarlo. Los registros Alpha 2 y Kris Sprint 2 comparten
+el mismo SHA-256 de NARC personal (`5f193d2eacddf0ffef9daf7acebd35dcdb21c30f59ab497759c3b7cc335f2d40`);
+también coinciden las 100 entradas ordenadas de movimientos y las listas de compatibilidad de las
+493 especies. El bloque exportado a la wiki se selecciona siempre por `target_sha256` exacto. Es
+evidencia de registros estáticos, no una prueba de enseñar movimientos ni de usar Recarga MT.
+Consulta [`tmhm-compatibility.json`](tmhm-compatibility.json) y el
+[`extractor`](../tools/extract_tmhm_compatibility.cjs).
 
 El filtro de estadísticas de la Pokédex compara las seis estadísticas base de la ROM limpia
 HeartGold USA (`65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105`) y Alpha 2

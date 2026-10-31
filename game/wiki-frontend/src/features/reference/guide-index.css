@@ -1,0 +1,18 @@
+.guide-index { display: grid; gap: 1.5rem; }
+.guide-index-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
+.guide-index-heading h2, .guide-index-section h2, .guide-index-section h3 { margin: .2rem 0 .8rem; }
+.guide-index-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: .75rem; }
+.guide-index-card { display: flex; min-height: 5.5rem; flex-direction: column; align-items: flex-start; justify-content: center; gap: .55rem; border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; }
+.guide-index-card:hover, .guide-index-card:focus-visible { border-color: var(--gold); outline: 2px solid var(--gold); outline-offset: 2px; }
+.guide-index-card-featured { min-height: 7rem; }
+.guide-index-tag { border: 1px solid var(--line); border-radius: 999px; padding: .2rem .6rem; background: var(--surface); font-size: .8rem; }
+.guide-index-tag-start { font-weight: 700; }
+.guide-index-tag-technical { opacity: .8; }
+.guide-index-technical { border-top: 1px solid var(--line); padding-top: 1.25rem; }
+.guide-index-intro { margin: .25rem 0 1rem; }
+.guide-index-section + .guide-index-section { margin-top: 1.25rem; }
+
+@media (max-width: 40rem) {
+  .guide-index-cards { grid-template-columns: 1fr; }
+  .guide-index-card { min-height: 4.5rem; }
+}

@@ -29,6 +29,21 @@ export function filterMachines(data: WikiData, language: Language, query: string
       normalizeSearch(`${machine.kind} ${machine.number} ${searchNames(move?.name)} ${localized(move?.name, language)} ${searchNames(item?.name)} ${item ? acquisitionSearch(item) : ''}`).includes(normalized);
   });
 }
+export function filterMachinesForSearch(data: WikiData, language: Language, query: string, kind: string, type: string) {
+  const normalized = normalizeSearch(query.trim());
+  const speciesMatches = normalized
+    ? data.species.filter((species) => normalizeSearch(`${species.name.en} ${species.name.es}`).includes(normalized))
+    : [];
+  const machines = filterMachines(data, language, query, kind, type);
+  const compatibility = data.tmhm_compatibility?.target_sha256 === data.target_sha256
+    ? data.tmhm_compatibility.by_species
+    : undefined;
+  if (!speciesMatches.length || !compatibility) return machines;
+  const found = new Set(machines.map((machine) => machine.item_id));
+  const speciesMachines = filterMachines(data, language, '', kind, type)
+    .filter((machine) => !found.has(machine.item_id) && speciesMatches.some((species) => compatibility[String(species.id)]?.includes(machine.item_id)));
+  return [...machines, ...speciesMachines];
+}
 export function filterLearnset(species: Species, moves: WikiData['moves'], query: string) {
   const normalized = normalizeSearch(query.trim());
   return species.learnset.filter((entry) => normalizeSearch(`${entry.level} ${searchNames(moves[entry.move_id]?.name)}`).includes(normalized));

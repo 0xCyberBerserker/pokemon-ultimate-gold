@@ -5,6 +5,7 @@ import type { GameMode, Language, Localized, WikiData } from './data/types';
 import { strings } from './i18n';
 import { parseRoute } from './data/routes';
 import GlobalSearch from './features/search/GlobalSearch';
+import SectionErrorBoundary from './SectionErrorBoundary';
 
 const TrainerExplorer = lazy(() => import('./features/trainers/TrainerExplorer'));
 const Pokedex = lazy(() => import('./features/pokedex/Pokedex'));
@@ -14,10 +15,18 @@ const Home = lazy(() => import('./features/home/Home'));
 const CheatCatalog = lazy(() => import('./features/cheats/CheatCatalog'));
 const KrisGallery = lazy(() => import('./features/kris/KrisGallery'));
 
+function readPreference(key: string): string | null {
+  try { return localStorage.getItem(key); } catch { return null; }
+}
+
+function writePreference(key: string, value: string) {
+  try { localStorage.setItem(key, value); } catch { /* Preferences remain active for this session. */ }
+}
+
 export default function App() {
-  const [language, setLanguage] = useState<Language>(() => localStorage.getItem('sgp-language') === 'es' ? 'es' : 'en');
-  const [mode, setMode] = useState<GameMode>(() => localStorage.getItem('ultimate-gold-game-mode') === 'plus' ? 'plus' : 'normal');
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => localStorage.getItem('ug-preview-theme') === 'light' ? 'light' : localStorage.getItem('ug-preview-theme') === 'dark' ? 'dark' : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const [language, setLanguage] = useState<Language>(() => readPreference('sgp-language') === 'es' ? 'es' : 'en');
+  const [mode, setMode] = useState<GameMode>(() => readPreference('ultimate-gold-game-mode') === 'plus' ? 'plus' : 'normal');
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => readPreference('ug-preview-theme') === 'light' ? 'light' : readPreference('ug-preview-theme') === 'dark' ? 'dark' : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   const [data, setData] = useState<WikiData | null>(null);
   const [wikiVersion, setWikiVersion] = useState<Localized | null>(null);
   const [patchSource, setPatchSource] = useState<PatchSource | null>(null);
@@ -35,7 +44,7 @@ export default function App() {
   useEffect(() => { document.documentElement.dataset.theme = theme; document.documentElement.lang = language; }, [theme, language]);
   useEffect(() => {
     const preference = matchMedia('(prefers-color-scheme: dark)');
-    const onChange = (event: MediaQueryListEvent) => { if (!localStorage.getItem('ug-preview-theme')) setTheme(event.matches ? 'dark' : 'light'); };
+    const onChange = (event: MediaQueryListEvent) => { if (!readPreference('ug-preview-theme')) setTheme(event.matches ? 'dark' : 'light'); };
     preference.addEventListener('change', onChange);
     return () => preference.removeEventListener('change', onChange);
   }, []);
@@ -100,9 +109,9 @@ export default function App() {
       </nav><p className="sidebar-foot">{t.project}</p>
     </aside>
     <div className="main-column"><header className="topbar"><div className="current-section">{currentLabel}</div><div className="controls">{data && <GlobalSearch data={data} language={language} />}
-      <label><span>{t.mode}</span><select value={mode} onChange={(event) => { const next = event.target.value as GameMode; setMode(next); localStorage.setItem('ultimate-gold-game-mode', next); }}><option value="normal">Normal</option><option value="plus">Plus</option></select></label>
-      <label><span>{t.language}</span><select value={language} onChange={(event) => { const next = event.target.value as Language; setLanguage(next); localStorage.setItem('sgp-language', next); }}><option value="en">English</option><option value="es">Español</option></select></label>
-      <button className="theme-button" aria-label={t.theme} onClick={() => { const next = theme === 'light' ? 'dark' : 'light'; setTheme(next); localStorage.setItem('ug-preview-theme', next); }}>{theme === 'light' ? <Moon size={19} /> : <Sun size={19} />}</button>
-    </div></header><main><Suspense fallback={<p role="status">{t.loading}</p>}>{error ? <p role="alert">{t.error}</p> : data ? isHome ? <Home data={data} language={language} /> : isPokedex ? <Pokedex data={data} language={language} id={pokemonId} /> : isReference ? <Reference key={routeName} data={data} language={language} route={route} /> : isPatcher && patchSource ? <Patcher language={language} source={patchSource} /> : isKris ? <KrisGallery language={language} /> : isCheats ? <CheatCatalog language={language} target={data.target_sha256} /> : parsed.kind === 'trainers' ? <TrainerExplorer data={data} language={language} mode={mode} /> : <p role="alert">{language === 'es' ? 'Sección no encontrada.' : 'Section not found.'}</p> : <p role="status">{t.loading}</p>}</Suspense></main><footer>{wikiVersion && <span>{language === 'es' ? 'Datos' : 'Data'}: {wikiVersion[language].split(' — ')[0]} · </span>}Made with 🖤 in Barcelona City 🇪🇸</footer></div>
+      <label><span>{t.mode}</span><select value={mode} onChange={(event) => { const next = event.target.value as GameMode; setMode(next); writePreference('ultimate-gold-game-mode', next); }}><option value="normal">Normal</option><option value="plus">Plus</option></select></label>
+      <label><span>{t.language}</span><select value={language} onChange={(event) => { const next = event.target.value as Language; setLanguage(next); writePreference('sgp-language', next); }}><option value="en">English</option><option value="es">Español</option></select></label>
+      <button className="theme-button" aria-label={t.theme} onClick={() => { const next = theme === 'light' ? 'dark' : 'light'; setTheme(next); writePreference('ug-preview-theme', next); }}>{theme === 'light' ? <Moon size={19} /> : <Sun size={19} />}</button>
+    </div></header><main><SectionErrorBoundary key={route} language={language}><Suspense fallback={<p role="status">{t.loading}</p>}>{error ? <div className="panel section-error" role="alert"><p>{t.error}</p><button type="button" onClick={() => window.location.reload()}>{language === 'es' ? 'Reintentar' : 'Try again'}</button></div> : data ? isHome ? <Home data={data} language={language} /> : isPokedex ? <Pokedex data={data} language={language} id={pokemonId} /> : isReference ? <Reference key={routeName} data={data} language={language} route={route} /> : isPatcher && patchSource ? <Patcher language={language} source={patchSource} /> : isKris ? <KrisGallery language={language} /> : isCheats ? <CheatCatalog language={language} target={data.target_sha256} /> : parsed.kind === 'trainers' ? <TrainerExplorer data={data} language={language} mode={mode} /> : <p role="alert">{language === 'es' ? 'Sección no encontrada.' : 'Section not found.'}</p> : <p role="status">{t.loading}</p>}</Suspense></SectionErrorBoundary></main><footer>{wikiVersion && <span>{language === 'es' ? 'Datos' : 'Data'}: {wikiVersion[language].split(' — ')[0]} · </span>}Made with 🖤 in Barcelona City 🇪🇸</footer></div>
   </div>;
 }
