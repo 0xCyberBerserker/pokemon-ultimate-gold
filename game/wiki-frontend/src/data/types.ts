@@ -57,11 +57,14 @@ export interface Acquisition {
   location?: { name?: Localized };
   method?: Localized;
   status?: string;
-  source?: { title?: string; reference?: string; url?: string; author_reference?: string };
+  price?: number;
+  shop_id?: number;
+  source?: { title?: string; reference?: string; url?: string; author_reference?: string; claim?: string; transcription?: string };
   evidence?: {
     scope?: string;
     rom_sha256?: string;
     base_rom_sha256?: string;
+    proof?: { kind?: string; item_id?: number; species_ids?: number[] };
     report?: { path?: string; sha256?: string };
     screenshots?: { path?: string; alt?: string; sha256?: string }[];
   };

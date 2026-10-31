@@ -184,7 +184,13 @@ def main():
                         check_accessible_names(page, route)
                     expect(page.get_by_label("Linaje y ruta de los parches")).to_contain_text("Sacred Gold Plus 1.2.3")
                     expect(page.get_by_label("Linaje y ruta de los parches")).to_contain_text("no una secuencia para apilar parches")
+                    page.goto(wiki + "#/items/87", wait_until="domcontentloaded")
+                    held_item = page.locator('.acquisition-record').filter(has=page.locator('a[href="#/pokemon/46"]')).first
+                    held_item.get_by_text("Fuentes y comprobación", exact=True).click()
+                    expect(held_item.locator('a[href="#/pokemon/46"]')).to_be_visible()
+                    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Horizontal overflow: {name} item evidence"
                     page.locator(".controls select").nth(1).select_option("en")
+                    page.goto(wiki + "#/guide/features", wait_until="domcontentloaded")
                     expect(page.get_by_label("Lineage and patch routes")).to_contain_text("not a patch-stacking recipe")
                     context.close()
                 assert not errors, errors

@@ -24,7 +24,7 @@ function statusLabel(status: string | undefined, es: boolean): string {
     case 'native_purchase_save_cold_bounded': return es ? 'Compra y guardado/recarga comprobados en caso acotado' : 'Purchase and save/reload verified in a bounded case';
     case 'documented_base_game': return es ? 'Ubicación de HGSS; contraste con esta ROM pendiente' : 'HGSS location; target comparison pending';
     case 'documented_upstream': return es ? 'Guía original; pendiente de contraste' : 'Upstream guide; target check pending';
-    default: return es ? 'Estado pendiente' : 'Status pending';
+    default: return status ? `${es ? 'Estado de origen' : 'Source status'}: ${status}` : (es ? 'Estado pendiente' : 'Status pending');
   }
 }
 
@@ -38,13 +38,17 @@ export default function Acquisition({ records, language }: { records?: Acquisiti
     return <article className="acquisition-record" key={index}>
       <strong>{localized(record.location?.name, language)}</strong><p>{localized(record.method, language)}</p>
       <small>{statusLabel(record.status, es)}{record.source?.title && ` · ${record.source.title}`}{external?.startsWith('https://') && <> · <a className="text-link" href={external}>{es ? 'Fuente' : 'Source'}</a></>}</small>
-      {evidence && <details><summary>{es ? 'Fuentes y comprobación' : 'Sources and verification'}</summary>
+      {(evidence || record.source?.claim || record.source?.reference || record.source?.transcription || record.price != null) && <details><summary>{es ? 'Fuentes y comprobación' : 'Sources and verification'}</summary>
         {record.source?.reference && <p>{es ? 'Referencia de origen' : 'Source reference'}: <code>{record.source.reference}</code></p>}
-        {evidence.scope && <p>{es ? 'Alcance' : 'Scope'}: {statusLabel(evidence.scope, es)}</p>}
-        {evidence.rom_sha256 && <p>ROM SHA-256: <code>{evidence.rom_sha256}</code></p>}
-        {evidence.base_rom_sha256 && <p>{es ? 'ROM base SHA-256' : 'Base ROM SHA-256'}: <code>{evidence.base_rom_sha256}</code></p>}
-        {report && <p><a className="text-link" href={report}>{es ? 'Informe QA' : 'QA report'}</a>{evidence.report?.sha256 && <> · <code>{evidence.report.sha256}</code></>}</p>}
-        {evidence.screenshots?.map((shot, shotIndex) => { const path = localPath(shot.path, true); return path ? <figure key={shotIndex}><a href={path}><img src={path} alt={shot.alt || (es ? 'Captura de la pantalla superior' : 'Upper-screen capture')} loading="lazy" /></a>{shot.sha256 && <figcaption><code>{shot.sha256}</code></figcaption>}</figure> : null; })}
+        {record.price != null && <p>{es ? 'Precio registrado' : 'Recorded price'}: ₽{record.price.toLocaleString(language)}{record.shop_id != null && ` · ${es ? 'Tienda' : 'Shop'} ${record.shop_id}`}</p>}
+        {record.source?.claim && <p>{es ? 'Alcance original de la fuente' : 'Original source claim'}: {record.source.claim}</p>}
+        {record.source?.transcription && <p>{es ? 'Transcripción' : 'Transcription'}: {record.source.transcription.startsWith('https://') ? <a className="text-link" href={record.source.transcription}>{es ? 'Abrir fuente' : 'Open source'}</a> : record.source.transcription}</p>}
+        {evidence?.scope && <p>{es ? 'Alcance' : 'Scope'}: {statusLabel(evidence.scope, es)}</p>}
+        {evidence?.proof && <p>{es ? 'Registro de evidencia' : 'Evidence record'}: {evidence.proof.kind}{evidence.proof.item_id != null && ` · ID ${evidence.proof.item_id}`}{evidence.proof.species_ids?.map((id) => <span key={id}> · <a className="text-link" href={`#/pokemon/${id}`}>#{id}</a></span>)}</p>}
+        {evidence?.rom_sha256 && <p>ROM SHA-256: <code>{evidence.rom_sha256}</code></p>}
+        {evidence?.base_rom_sha256 && <p>{es ? 'ROM base SHA-256' : 'Base ROM SHA-256'}: <code>{evidence.base_rom_sha256}</code></p>}
+        {report && <p><a className="text-link" href={report}>{es ? 'Informe QA' : 'QA report'}</a>{evidence?.report?.sha256 && <> · <code>{evidence.report.sha256}</code></>}</p>}
+        {evidence?.screenshots?.map((shot, shotIndex) => { const path = localPath(shot.path, true); return path ? <figure key={shotIndex}><a href={path}><img src={path} alt={shot.alt || (es ? 'Captura de la pantalla superior' : 'Upper-screen capture')} loading="lazy" /></a>{shot.sha256 && <figcaption><code>{shot.sha256}</code></figcaption>}</figure> : null; })}
       </details>}
     </article>;
   })}</div>;

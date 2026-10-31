@@ -53,6 +53,10 @@ test('reference views render actual bilingual data and hash links', async () => 
     const compared = renderToStaticMarkup(React.createElement(Acquisition, { language: 'en', records: data.items['87'].acquisition }));
     assert.match(compared, /Base ROM SHA-256/);
     assert.match(compared, /65f02a56842b75aa92d775d56d657a56/);
+    assert.match(compared, /href="#\/pokemon\/46"/);
+    const upstream = renderToStaticMarkup(React.createElement(Acquisition, { language: 'en', records: data.items['80'].acquisition }));
+    assert.match(upstream, /Upstream documentation; not verified in this target ROM/);
+    assert.match(upstream, /pokemon-sacred-gold-storm-silver-important-item-locations/);
     const unsafe = renderToStaticMarkup(React.createElement(Acquisition, { language: 'en', records: [{ method: { en: 'example', es: 'ejemplo' }, evidence: { report: { path: 'https://outside.invalid/report' }, screenshots: [{ path: '//outside.invalid/photo.png' }] } }] }));
     assert.doesNotMatch(unsafe, /outside\.invalid/);
     const galleryData = JSON.parse(await readFile(new URL('../../web/data/kris-gallery.json', import.meta.url)));
