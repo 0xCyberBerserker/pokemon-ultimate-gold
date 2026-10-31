@@ -36,7 +36,17 @@ export default function App() {
     preference.addEventListener('change', onChange);
     return () => preference.removeEventListener('change', onChange);
   }, []);
-  useEffect(() => { const onRoute = () => setRoute(location.hash || '#/'); window.addEventListener('hashchange', onRoute); return () => window.removeEventListener('hashchange', onRoute); }, []);
+  useEffect(() => {
+    let previous = location.hash || '#/';
+    const onRoute = () => {
+      const next = location.hash || '#/';
+      if (parseRoute(previous).kind !== 'trainers' || parseRoute(next).kind !== 'trainers') window.scrollTo(0, 0);
+      previous = next;
+      setRoute(next);
+    };
+    window.addEventListener('hashchange', onRoute);
+    return () => window.removeEventListener('hashchange', onRoute);
+  }, []);
   const parsed = parseRoute(route);
   const isPokedex = parsed.kind === 'pokemon';
   const routeName = parsed.kind === 'home' ? '' : parsed.kind;
