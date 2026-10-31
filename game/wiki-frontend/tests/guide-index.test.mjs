@@ -8,13 +8,14 @@ import { createServer } from 'vite';
 test('guide index preserves all documents, separates audiences, and accepts the existing filter', async () => {
   const data = JSON.parse(await readFile(new URL('../../web/data/wiki-data.json', import.meta.url)));
   const entries = Object.entries(data.guides).map(([id, guide]) => ({ id, title: guide.title.en, description: '', href: `#/guide/${id}` }));
+  assert.ok(entries.length >= 87, 'the existing guide collection must remain available');
   const server = await createServer({ server: { middlewareMode: true, ws: false }, appType: 'custom' });
   try {
     const { default: GuideIndex } = await server.ssrLoadModule('/src/features/reference/GuideIndex.tsx');
     const { default: Reference } = await server.ssrLoadModule('/src/features/reference/Reference.tsx');
     for (const language of ['en', 'es']) {
       const html = renderToStaticMarkup(React.createElement(GuideIndex, { entries, language }));
-      assert.equal((html.match(/href="#\/guide\//g) || []).length, 87);
+      assert.equal((html.match(/href="#\/guide\//g) || []).length, entries.length);
       assert.ok(html.includes(language === 'es' ? 'Empieza aquí' : 'Start here'));
       assert.ok(html.includes(language === 'es' ? 'Documentación técnica' : 'Technical documentation'));
       assert.ok(html.includes(language === 'es' ? 'Para empezar' : 'Start here'));
@@ -26,6 +27,10 @@ test('guide index preserves all documents, separates audiences, and accepts the 
     assert.doesNotMatch(filtered, /Technical documentation/);
     const { classifyGuide } = await server.ssrLoadModule('/src/data/guide-groups.ts');
     assert.equal(classifyGuide('future-unclassified-document').audience, 'technical');
+    const extendedEntries = [...entries, { id: 'future-unclassified-document', title: 'Future document', description: '', href: '#/guide/future-unclassified-document' }];
+    const extended = renderToStaticMarkup(React.createElement(GuideIndex, { entries: extendedEntries, language: 'en' }));
+    assert.equal((extended.match(/href="#\/guide\//g) || []).length, extendedEntries.length);
+    assert.equal((extended.match(/href="#\/guide\/future-unclassified-document"/g) || []).length, 1);
 
     const integratedIndex = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: '#/guides' }));
     assert.equal((integratedIndex.match(/href="#\/guide\//g) || []).length, Object.keys(data.guides).length);
