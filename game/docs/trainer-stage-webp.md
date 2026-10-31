@@ -2,15 +2,15 @@
 
 ## English
 
-The 57 unique PNG illustrations referenced by the trainer stage map have WebP derivatives. The source PNGs remain unchanged and are the `<img>` fallback; `<picture>` offers WebP. Conversion used ImageMagick at quality 90 with `-resize '1600x>'`, which preserves aspect ratio, never upscales, and does not crop. Stage 79/81 share Route 20 art, and stages 56/85 share Route 2 art; each source has one derivative.
+The 65 unique PNG illustrations referenced by the trainer stage map have WebP derivatives. The source PNGs remain unchanged and are the `<img>` fallback; `<picture>` offers WebP. Conversion used ImageMagick at quality 90 with `-resize '1600x>'`, which preserves aspect ratio, never upscales, and does not crop. Stage 79/81 share Route 20 art, and stages 56/85 share Route 2 art; each source has one derivative.
 
-Combined transfer size for these unique files: PNG 166,880,230 bytes; WebP 17,815,412 bytes (89.32% smaller). SHA-256 hashes below identify the generated WebP files. The sixteen new derivatives come from owner-retained OpenAI-generated originals; artifact IDs and source PNG hashes are recorded in the bilingual table below and in `wiki-frontend/LOCATION-ART.md`.
+Combined transfer size for these unique files: PNG 189,702,512 bytes; WebP 20,163,970 bytes (89.37% smaller). SHA-256 hashes below identify the generated WebP files. The twenty-four new derivatives come from owner-retained OpenAI-generated originals; artifact IDs and source PNG hashes are recorded in the bilingual table below and in `wiki-frontend/LOCATION-ART.md`.
 
 ## Español
 
-Las 57 ilustraciones PNG únicas referenciadas por el mapa de etapas de entrenadores tienen derivados WebP. Los PNG originales permanecen intactos y sirven de fallback en `<img>`; `<picture>` ofrece WebP. Se convirtieron con ImageMagick, calidad 90 y `-resize '1600x>'`, que conserva la proporción, no amplía ni recorta. Las etapas 79/81 comparten el arte de la Ruta 20, y las etapas 56/85 comparten el de la Ruta 2; cada fuente tiene un solo derivado.
+Las 65 ilustraciones PNG únicas referenciadas por el mapa de etapas de entrenadores tienen derivados WebP. Los PNG originales permanecen intactos y sirven de fallback en `<img>`; `<picture>` ofrece WebP. Se convirtieron con ImageMagick, calidad 90 y `-resize '1600x>'`, que conserva la proporción, no amplía ni recorta. Las etapas 79/81 comparten el arte de la Ruta 20, y las etapas 56/85 comparten el de la Ruta 2; cada fuente tiene un solo derivado.
 
-Transferencia conjunta de estos archivos únicos: PNG 166,880,230 bytes; WebP 17,815,412 bytes (89.32% menos). Los SHA-256 siguientes identifican los WebP generados. Los dieciséis derivados nuevos proceden de originales generados con OpenAI y conservados por el propietario; los identificadores de artefacto y SHA-256 de los PNG fuente figuran en la tabla bilingüe siguiente y en `wiki-frontend/LOCATION-ART.md`.
+Transferencia conjunta de estos archivos únicos: PNG 189,702,512 bytes; WebP 20,163,970 bytes (89.37% menos). Los SHA-256 siguientes identifican los WebP generados. Los veinticuatro derivados nuevos proceden de originales generados con OpenAI y conservados por el propietario; los identificadores de artefacto y SHA-256 de los PNG fuente figuran en la tabla bilingüe siguiente y en `wiki-frontend/LOCATION-ART.md`.
 
 | Source / Fuente | Original SHA-256 | Artifact / Artefacto | WebP SHA-256 |
 |---|---|---|---|
@@ -31,6 +31,14 @@ Transferencia conjunta de estos archivos únicos: PNG 166,880,230 bytes; WebP 17
 | `olivine-city.png` | `2a1d6ab023a032d548d120d31ce35af6b13c9d1ed175161cfc71b90416587a15` | `exec-e8888aa4-8ac9-48d9-bd36-96a548438c29` | `7d21a38215741ecde7b9ba3772e9d1b2daa26a6b5cb6f30016cc889483905f39` |
 | `olivine-lighthouse.png` | `1de06c970b908c2d51ef266cfd5f20cb65246c32ef0706bd921752d03169697e` | `exec-aad3b4c0-646e-45e0-946a-5a50a015a17f` | `39701b1ea3c520cb0b065c8a0d28be222c4bde1a8fc95171696e693b996a44fc` |
 | `cianwood-city.png` | `3c489ee2b9f1231adead8801b2968806cea27d4c2d3ce8979ad34ac437687a75` | `exec-be8783e2-bc0a-4eb2-ba34-cd36f17a27a6` | `302672d8c3e8962c01911c09c41121fd16dc4cb99bad9aa46de7b4b6a8c7ddaf` |
+| `cianwood-city-gym.png` | `6518614adde0640ffcf60d552b822cbf9046af982ebc68a70ef88a2e38b19748` | `exec-9d4c8016-68a7-43f8-9e03-99cff732d818` | `241c37ba4a38795ec7876a3fa1cb039dcc69b08888bc2731e6725ba5fdeb1f49` |
+| `cliff-edge-gate.png` | `71f7ce3ef20faa23f9584243310d94b732906bc325de9b13d3223f88abe65adb` | `exec-80db663c-768e-4c24-95fe-aa66729d67c5` | `e8c00b33833275ee439b18327695428e6f8e56e67a1a9f422359316398aeeddc` |
+| `cliff-cave.png` | `1abd4aed86eecbb77341862b0cc92b57c578ea37b07801d91fd13e6aeb1e52fa` | `exec-15c12c3b-f1a4-4d2e-befb-66db31e243d7` | `51ed7508f16bb058dc35b99b8af6df4bc66b3d486b9783a806647a0dea98edde` |
+| `safari-zone-gate.png` | `c548a70decbe660657ffcbae64d43e6ac7cb91b1686dd1be94cea57b6ac5050a` | `exec-c33409c8-4541-4670-877d-900c5fa28b37` | `ac1d4a3baed8820e0420951ed6fab5fd1d7871fc37c04f820ccd8dfbbcf6f1e3` |
+| `olivine-city-gym.png` | `1834f4b7fce28acdc03b9e44071062316c5c92530682cf57cbd3546c6c2a600d` | `exec-396ee167-8397-4fc2-a594-aa01272b22f9` | `ccdf5bf84be32dc7ff2894a9840c37145159db261d027eb190ad3586893ac381` |
+| `mt-mortar.png` | `c89f88a7ec6a396329027bc4de8a95abe64d57e9dac38fa80a7578c0303425f9` | `exec-cbfadad6-94f2-4c95-8e72-ca2e4c8ae6e4` | `c6e3c6198eeaa0a39e3603f0051535ac0b0df572c0db2b0a4e60946068c58379` |
+| `team-rocket-hq.png` | `1152ca9bd0ee8820c4ace942573f92a2070a041605cbd7f0d3147ffb8434b11a` | `exec-d0c6150f-f750-4ba5-a583-d3ddb427e934` | `05ce9d7354e84be9e5df9f645e47137e0092574a55d48e1c49162ee476a5d02f` |
+| `mahogany-town-gym.png` | `72d86ab611a20d6c68937a3192cf0935d03262bf7038e6f4571857145e4f4986` | `exec-e0351971-6fde-4067-aeb2-623c0c176203` | `fab2b7bfc956098cd19014548411b21a8f0c98c86e96f7775a8206e0e4cc9f58` |
 | Derivative / Derivado | Dimensions / Dimensiones | SHA-256 |
 |---|---:|---|
 | `cherrygrove-city.webp` | 1600x571 | `435ca350f889d1b6f63f537d4d02361e4df6369306fc7735ecda435728b1da33` |
@@ -69,6 +77,14 @@ Transferencia conjunta de estos archivos únicos: PNG 166,880,230 bytes; WebP 17
 | `olivine-city.webp` | 1600x640 | `7d21a38215741ecde7b9ba3772e9d1b2daa26a6b5cb6f30016cc889483905f39` |
 | `olivine-lighthouse.webp` | 1600x640 | `39701b1ea3c520cb0b065c8a0d28be222c4bde1a8fc95171696e693b996a44fc` |
 | `cianwood-city.webp` | 1600x533 | `302672d8c3e8962c01911c09c41121fd16dc4cb99bad9aa46de7b4b6a8c7ddaf` |
+| `cianwood-city-gym.webp` | 1600x640 | `241c37ba4a38795ec7876a3fa1cb039dcc69b08888bc2731e6725ba5fdeb1f49` |
+| `cliff-edge-gate.webp` | 1600x585 | `e8c00b33833275ee439b18327695428e6f8e56e67a1a9f422359316398aeeddc` |
+| `cliff-cave.webp` | 1600x640 | `51ed7508f16bb058dc35b99b8af6df4bc66b3d486b9783a806647a0dea98edde` |
+| `safari-zone-gate.webp` | 1600x600 | `ac1d4a3baed8820e0420951ed6fab5fd1d7871fc37c04f820ccd8dfbbcf6f1e3` |
+| `olivine-city-gym.webp` | 1600x533 | `ccdf5bf84be32dc7ff2894a9840c37145159db261d027eb190ad3586893ac381` |
+| `mt-mortar.webp` | 1600x578 | `c6e3c6198eeaa0a39e3603f0051535ac0b0df572c0db2b0a4e60946068c58379` |
+| `team-rocket-hq.webp` | 1600x533 | `05ce9d7354e84be9e5df9f645e47137e0092574a55d48e1c49162ee476a5d02f` |
+| `mahogany-town-gym.webp` | 1600x533 | `fab2b7bfc956098cd19014548411b21a8f0c98c86e96f7775a8206e0e4cc9f58` |
 | `route-42.webp` | 1600x533 | `4b591f030fcee2c0e41140a17183356afceb7f9f3abb96fa4e50d1c7d6783375` |
 | `route-43.webp` | 1600x533 | `0167ec19675a246803cc214051cdc4fd896e5eba950502e0bc7e501fc33c6ac0` |
 | `route-44.webp` | 1600x580 | `66ae5b60d76b3615a1b870f98b3209d107674e35002fbf50e510e3d4a3afa4ca` |
