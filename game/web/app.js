@@ -124,9 +124,12 @@ function refreshVersionLabels() {
 
 function translateNotes() {
   const t = text[language];
+  const selectedVersion = $('version').value;
   $('privacy').textContent = t.privacy;
-  $('tmNote').textContent = $('version').value === 'alpha2' ? t.tmNoteAlpha2 : t.tmNote;
+  $('tmNote').textContent = selectedVersion === 'alpha2' ? t.tmNoteAlpha2 : t.tmNote;
+  $('tmNote').hidden = !['alpha1', 'alpha2'].includes(selectedVersion);
   $('buildNote').textContent = t.buildNote;
+  $('buildNote').hidden = selectedVersion !== 'alpha2';
   $('source-note').textContent = t.sourceNote;
   $('disclaimer').textContent = t.disclaimer;
   if (!$('download').hidden) $('download').textContent = t.download;

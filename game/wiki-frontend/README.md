@@ -1,8 +1,8 @@
-# Ultimate Gold Wiki — React migration preview
+# Ultimate Gold Wiki — React frontend
 
 ## English
 
-This is an incomplete, isolated preview. The existing wiki and patcher remain the reference; do not publish or replace them with this preview. Source revision: `236947a596f6a264b8ed95acc615557be393fc51`.
+This React frontend is used by the published wiki. The generated game data and existing patcher remain the reference; changes require review and the relevant checks before deployment.
 
 ### Local use
 
@@ -39,12 +39,13 @@ The existing generator also accepts an explicit local preview option, from `game
 - The team view uses `levels_by_mode` and `move_ids_by_mode`. IVs are calculated from trainer records and EVs use native creation defaults; unknown values are displayed as unavailable. Species abilities are explicitly labelled as possible, not as the individual Pokémon's confirmed ability. Nonzero form codes are shown with a base-species sprite caveat.
 - The displayed wiki-data version is distinct from Normal/Plus and is identified after matching the data target to the default version's patch manifest. The patcher may independently select another patch version.
 - The preview embeds the existing patcher using an iframe and same-origin `patcher-ready`, `patcher-height` and `wiki-language` messages. Local Chromium roundtrips for Alpha 1 and Alpha 2 produced the manifest hashes from a matching user-provided input; see `PARITY.md` for scope. Its scripts, workers, manifests and hashes must remain untouched.
-- Full data parity, search coverage, accessibility verification and production Pages integration remain incomplete. Do not claim functional parity or acceptance.
+- The guide offers light and dark themes, stage navigation and branching evolution families. A selected trainer outside the current filters remains visible with an explicit notice. The patcher offers a separate-page fallback if the embedded view is unavailable.
+- Full data parity, search coverage and accessibility verification remain incomplete. Do not claim complete functional parity or acceptance.
 - The current wiki CSP restricts scripts and styles to `self`; any integration must retain its protections and avoid inline script/style requirements.
 
 ## Español
 
-Esta es una vista previa aislada e incompleta. La wiki y el parcheador existentes siguen siendo la referencia; no se deben publicar ni sustituir por esta vista. Revisión de origen: `236947a596f6a264b8ed95acc615557be393fc51`.
+Este frontend React se usa en la wiki publicada. Los datos generados del juego y el parcheador existente siguen siendo la referencia; los cambios requieren revisión y las comprobaciones pertinentes antes de desplegar.
 
 ### Uso local
 
@@ -81,5 +82,6 @@ El generador existente también admite una opción explícita de vista local, de
 - La ficha del equipo usa `levels_by_mode` y `move_ids_by_mode`. Los IV se calculan a partir de registros de entrenador y los EV proceden de los valores de creación nativa; los valores desconocidos se muestran como no disponibles. Las habilidades de especie se indican como posibles, no como habilidad individual confirmada. Los códigos de forma distintos de cero se muestran con una aclaración sobre el sprite de la especie base.
 - La versión mostrada de los datos de la wiki es independiente del modo Normal/Plus y se identifica tras comparar su hash con el manifiesto de la versión predeterminada. El parcheador puede seleccionar otra versión de forma independiente.
 - La vista integra el parcheador existente mediante un iframe y mensajes del mismo origen `patcher-ready`, `patcher-height` y `wiki-language`. Pruebas locales en Chromium generaron Alfa 1 y Alfa 2 con los hashes del manifiesto desde un original aportado por el usuario que coincide con el hash requerido; consulta `PARITY.md` para el alcance. Sus scripts, workers, manifiestos y hashes deben permanecer intactos.
-- Quedan pendientes la equivalencia de datos completa, la cobertura de búsqueda, la comprobación de accesibilidad y la integración de Pages en producción. No se puede afirmar equivalencia funcional ni aceptación.
+- La guía ofrece temas claro y oscuro, navegación por etapas y familias de evolución ramificadas. Si el entrenador seleccionado queda fuera de los filtros, permanece visible con un aviso explícito. El parcheador ofrece una página independiente si la vista integrada no está disponible.
+- Quedan pendientes la equivalencia de datos completa, la cobertura de búsqueda y la comprobación de accesibilidad. No se puede afirmar equivalencia funcional completa ni aceptación.
 - La CSP actual restringe scripts y estilos a `self`; la integración debe conservar sus protecciones y evitar requisitos de script o estilos inline.

@@ -16,7 +16,9 @@ test('selected team renders every available IV and EV without closed sections', 
     assert.equal((html.match(/<progress\b/g) || []).length, trainer.members.length * 12);
     assert.equal((html.match(/class="member-card"/g) || []).length, trainer.members.length);
     assert.doesNotMatch(html, /<button[^>]*style=/);
-    assert.doesNotMatch(html, /<details\b/);
+    for (const card of html.match(/<article class="member-card">[\s\S]*?<\/article>/g) || []) {
+      assert.equal((card.slice(0, card.indexOf('<details')).match(/<progress\b/g) || []).length, 12);
+    }
     assert.match(html, /IVs calculated from the trainer record/);
     assert.match(html, /standard native creation defaults/);
     assert.match(html, /Possible abilities/);

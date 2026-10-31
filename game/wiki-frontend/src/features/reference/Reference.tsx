@@ -9,6 +9,7 @@ import { publicGuideHtml } from '../../data/guide-links';
 import { normalizeSearch } from '../../data/text';
 import { groupGuides } from '../../data/guide-groups';
 import TypeBadge from './TypeBadge';
+import './evolutions.css';
 
 type Props = { data: WikiData; language: Language; route: string };
 export default function Reference({ data, language, route }: Props) {
@@ -44,7 +45,22 @@ export default function Reference({ data, language, route }: Props) {
   }
   if (kind === 'evolutions') {
     const filtered = evolutionFamilies(data.species).filter((family) => family.members.some((member) => normalizeSearch(`${member.name.en} ${member.name.es}`).includes(q)));
-    return <section><h1>{es ? 'Evoluciones' : 'Evolutions'}</h1><p>{es ? 'Cada ficha reúne una familia completa y las condiciones de cada cambio, según los datos de esta ROM.' : 'Each card groups a complete family and the condition for every transition, using this ROM’s data.'}</p><div className="filters dex-filters"><label>{es ? 'Buscar Pokémon' : 'Search Pokémon'}<input type="search" value={query} onChange={(event) => setQuery(event.target.value)} /></label></div><p role="status">{filtered.length} {es ? 'familias evolutivas' : 'evolution families'}</p><div className="reference-list">{filtered.map((family) => <article className="evolution-family panel" key={family.roots[0].id}><h2>{es ? `Familia de ${family.roots.map((root) => localized(root.name, language)).join(' · ')}` : `${family.roots.map((root) => localized(root.name, language)).join(' · ')} family`}</h2><p>{family.members.length} {es ? 'especies' : 'species'} · {family.edges.length} {es ? 'cambios' : 'transitions'}</p><div className="evolution-members">{family.members.map((member) => <a href={`#/pokemon/${member.id}`} key={member.id}><img src={`../sprites/pokemon/${member.id}.png`} alt="" loading="lazy" /><span>{localized(member.name, language)}</span></a>)}</div>{family.edges.map(({ from, to, evolution }, index) => <div className="evolution-edge" key={`${from.id}-${to.id}-${index}`}><a className="text-link" href={`#/pokemon/${from.id}`}>{localized(from.name, language)}</a><span> → {localized(evolution.condition, language)} → </span><a className="text-link" href={`#/pokemon/${to.id}`}>{localized(to.name, language)}</a></div>)}</article>)}</div></section>;
+    return <section><h1>{es ? 'Evoluciones' : 'Evolutions'}</h1><p>{es ? 'Cada ficha reúne una familia completa y las condiciones de cada cambio, según los datos de esta ROM.' : 'Each card groups a complete family and the condition for every transition, using this ROM’s data.'}</p><div className="filters dex-filters"><label>{es ? 'Buscar Pokémon' : 'Search Pokémon'}<input type="search" value={query} onChange={(event) => setQuery(event.target.value)} /></label></div><p role="status">{filtered.length} {es ? 'familias evolutivas' : 'evolution families'}</p><div className="reference-list">{filtered.map((family) => {
+      const transitions = new Map<number, typeof family.edges>();
+      family.edges.forEach((edge) => transitions.set(edge.from.id, [...(transitions.get(edge.from.id) || []), edge]));
+      return <article className="evolution-family panel" key={family.roots[0].id}><h2>{es ? `Familia de ${family.roots.map((root) => localized(root.name, language)).join(' · ')}` : `${family.roots.map((root) => localized(root.name, language)).join(' · ')} family`}</h2><p>{family.members.length} {es ? 'especies' : 'species'} · {family.edges.length} {es ? 'cambios' : 'transitions'}</p>
+        <div className="evolution-paths" aria-label={es ? 'Rutas de evolución' : 'Evolution paths'}>
+          {[...transitions].map(([sourceId, edges]) => {
+            const source = family.members.find((member) => member.id === sourceId)!;
+            return <div className="evolution-path" key={sourceId}>
+              <a className="evolution-pokemon" href={`#/pokemon/${source.id}`}><img src={`../sprites/pokemon/${source.id}.png`} alt="" loading="lazy" /><strong>{localized(source.name, language)}</strong></a>
+              <span className="evolution-path-arrow" aria-hidden="true">→</span>
+              <div className="evolution-branches">{edges.map(({ to, evolution }, index) => <a className="evolution-edge" href={`#/pokemon/${to.id}`} key={`${source.id}-${to.id}-${index}`}><span className="evolution-condition">{localized(evolution.condition, language)}</span><span aria-hidden="true" className="evolution-branch-arrow">→</span><span className="evolution-target"><img src={`../sprites/pokemon/${to.id}.png`} alt="" loading="lazy" /><strong>{localized(to.name, language)}</strong></span></a>)}</div>
+            </div>;
+          })}
+        </div>
+      </article>;
+    })}</div></section>;
   }
   if ((kind === 'moves' || kind === 'items') && key) {
     const entry = kind === 'moves' ? data.moves[key] : data.items[key];
