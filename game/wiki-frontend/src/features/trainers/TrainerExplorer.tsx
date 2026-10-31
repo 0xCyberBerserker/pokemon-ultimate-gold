@@ -12,6 +12,14 @@ type Props = { data: WikiData; language: Language; mode: GameMode };
 const PAGE_SIZE = 40;
 const STAT_ORDER = [0, 1, 2, 4, 5, 3];
 
+function savedFilters() {
+  const defaults = { query: '', pokemonQuery: '', moveQuery: '', kind: 'first_visit', stage: '', category: '', page: 0 };
+  try {
+    const saved = JSON.parse(sessionStorage.getItem('ug-trainer-filters') || '{}');
+    return { query: typeof saved.query === 'string' ? saved.query : defaults.query, pokemonQuery: typeof saved.pokemonQuery === 'string' ? saved.pokemonQuery : defaults.pokemonQuery, moveQuery: typeof saved.moveQuery === 'string' ? saved.moveQuery : defaults.moveQuery, kind: typeof saved.kind === 'string' ? saved.kind : defaults.kind, stage: typeof saved.stage === 'string' ? saved.stage : defaults.stage, category: typeof saved.category === 'string' ? saved.category : defaults.category, page: Number.isSafeInteger(saved.page) && saved.page >= 0 ? saved.page : 0 };
+  } catch { return defaults; }
+}
+
 function MemberCard({ member, data, language, mode }: Props & { member: Member }) {
   const t = strings[language];
   const species = data.species.find((entry) => entry.id === member.species_id);
@@ -42,13 +50,15 @@ function MemberCard({ member, data, language, mode }: Props & { member: Member }
 export default function TrainerExplorer({ data, language, mode }: Props) {
   const t = strings[language];
   const reducedMotion = useReducedMotion();
-  const [query, setQuery] = useState('');
-  const [pokemonQuery, setPokemonQuery] = useState('');
-  const [moveQuery, setMoveQuery] = useState('');
-  const [kind, setKind] = useState('first_visit');
-  const [stage, setStage] = useState('');
-  const [category, setCategory] = useState('');
-  const [page, setPage] = useState(0);
+  const [initial] = useState(savedFilters);
+  const [query, setQuery] = useState(initial.query);
+  const [pokemonQuery, setPokemonQuery] = useState(initial.pokemonQuery);
+  const [moveQuery, setMoveQuery] = useState(initial.moveQuery);
+  const [kind, setKind] = useState(initial.kind);
+  const [stage, setStage] = useState(initial.stage);
+  const [category, setCategory] = useState(initial.category);
+  const [page, setPage] = useState(initial.page);
+  useEffect(() => { try { sessionStorage.setItem('ug-trainer-filters', JSON.stringify({ query, pokemonQuery, moveQuery, kind, stage, category, page })); } catch { /* Browsing still works when session storage is unavailable. */ } }, [query, pokemonQuery, moveQuery, kind, stage, category, page]);
   const detail = useRef<HTMLDivElement>(null);
   const [selected, setSelected] = useState<number | null>(() => {
     const match = location.hash.match(/^#\/trainers\/(\d+)$/);
