@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { orderedGallery, galleryImagePath, galleryStatuses } from '../src/data/krisGallery.ts';
 
 const gallery = JSON.parse(await readFile(new URL('../../web/data/kris-gallery.json', import.meta.url)));
@@ -28,6 +29,14 @@ test('gallery accepts only project PNG files and rejects external paths', () => 
   assert.equal(galleryImagePath('../../secrets.png'), null);
   assert.equal(galleryImagePath('https://example.com/a.png'), null);
   assert.equal(galleryImagePath('png/img.svg'), null);
+});
+
+test('every gallery image matches its recorded SHA-256', async () => {
+  for (const image of gallery.images) {
+    assert.ok(galleryImagePath(image.file), image.id);
+    const bytes = await readFile(new URL(`../../web/assets/kris-progress/${image.file}`, import.meta.url));
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), image.sha256, image.id);
+  }
 });
 
 test('shared captures retain all evidence statuses', () => {

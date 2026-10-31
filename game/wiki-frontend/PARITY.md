@@ -41,6 +41,8 @@ A basic DOM check found labels or text for visible controls and links, and `alt`
 
 For cheat `00-006`, the browser test searches by ID, compares the complete displayed block with the catalog and checks that the downloaded RetroArch profile contains the same code and is disabled. This does not test the code in an emulator.
 
+All 2,329 images in the Kris gallery manifest exist and match their recorded SHA-256; this integrity check is included in the frontend test suite. Hash matching does not identify which image shows a particular early mockup.
+
 Local Chromium also patched a hash-matched user-provided HeartGold source through the React iframe for both versions. Downloaded outputs matched the manifests: Alpha 1 `6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132`; Alpha 2 `24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`. Temporary outputs were deleted and the source hash remained unchanged. This verifies the local patching flow, not gameplay or deployment.
 
 After the latest frontend changes, the generator was run in a disposable copy and the browser smoke and both patcher roundtrips passed against its actual `web/` output. The protected checkout was not regenerated.
@@ -87,6 +89,8 @@ La prueba comprueba además Ctrl+K, navegación con Intro, devolución del foco 
 Una comprobación básica del DOM encontró etiquetas o texto en controles y enlaces visibles, y atributos `alt` en las imágenes visibles de las rutas cubiertas para ambos tamaños. Esta heurística no es una auditoría completa de nombre accesible, contraste, lector de pantalla ni WCAG.
 
 Para el truco `00-006`, la prueba busca por ID, compara el bloque completo mostrado con el catálogo y comprueba que el perfil RetroArch descargado contiene el mismo código y está desactivado. No prueba el código en un emulador.
+
+Las 2.329 imágenes del manifiesto de la galería de Kris existen y coinciden con su SHA-256 registrado; esta comprobación de integridad forma parte de las pruebas del frontend. La coincidencia de hashes no identifica qué imagen muestra un mockup temprano concreto.
 
 Chromium local también parcheó, mediante el iframe de React, un HeartGold aportado por el usuario cuyo hash coincide con el manifiesto, para ambas versiones. Las descargas coincidieron con los manifiestos: Alfa 1 `6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132`; Alfa 2 `24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`. Se eliminaron las salidas temporales y el hash del original no cambió. Esto verifica el flujo local de parcheo, no la jugabilidad ni el despliegue.
 
