@@ -3,6 +3,7 @@ import { LazyMotion, domAnimation, useReducedMotion } from 'motion/react';
 import * as m from 'motion/react-m';
 import type { GameMode, Language, Member, Trainer, WikiData } from '../../data/types';
 import { localized } from '../../data/wiki';
+import { displayMovePower } from '../../data/move-values';
 import { memberForMode } from '../../data/team';
 import { orderTrainers } from '../../data/journey';
 import { normalizeSearch } from '../../data/text';
@@ -39,7 +40,7 @@ function MemberCard({ member, data, language, mode }: Props & { member: Member }
     {!!member.form && <p className="note">{language === 'es' ? `Código de forma registrado: ${member.form}. El sprite y las habilidades mostrados corresponden a la especie base; la apariencia de esta forma no está verificada aquí.` : `Recorded form code: ${member.form}. The displayed sprite and abilities belong to the base species; this form’s appearance is not verified here.`}</p>}
     <p><strong>{t.item}:</strong> {member.item_id ? <a className="text-link held-item" href={`#/items/${member.item_id}`}>{data.items[member.item_id]?.sprite && <img src={data.items[member.item_id].sprite} alt="" loading="lazy" />}{localized(data.items[member.item_id]?.name, language)}</a> : t.noItem}</p>
     <p><strong>{t.abilities}:</strong> {species?.abilities.length ? species.abilities.map((id, index) => <span key={id}>{index > 0 && ', '}<a className="text-link" href={`#/abilities/${id}`}>{localized(data.abilities[id]?.name, language)}</a></span>) : t.unknown}</p>
-    <div className="move-list"><strong>{t.moves}</strong>{moveIds.map((id, index) => { const move = data.moves[id]; return <a className="move-link" href={`#/moves/${id}`} key={`${index}-${id}`}>{localized(move?.name, language)}<small>{move && <TypeBadge id={move.type_id} types={data.types} language={language} />} · {language === 'es' ? 'Potencia' : 'Power'} {move?.power ?? '—'} · PP {move?.pp ?? '—'}</small></a>; })}</div>
+    <div className="move-list"><strong>{t.moves}</strong>{moveIds.map((id, index) => { const move = data.moves[id]; const power = move && displayMovePower(move.power, language); return <a className="move-link" href={`#/moves/${id}`} key={`${index}-${id}`}>{localized(move?.name, language)}<small>{move && <TypeBadge id={move.type_id} types={data.types} language={language} />} · {language === 'es' ? 'Potencia' : 'Power'} {power?.value ?? '—'} · PP {move?.pp ?? '—'}</small>{power?.note && <small>{power.note}</small>}</a>; })}</div>
     <div className="stat-tables">{stats.map((values, group) => <div className={`stat-group ${group === 0 ? 'stat-group-iv' : 'stat-group-ev'}`} key={group}>
       <h4>{group === 0 ? 'IV' : 'EV'}</h4>
       {t.stats.map((name, index) => { const value = values?.[STAT_ORDER[index]]; return <div className="stat-line" key={name}><span title={name}>{statLabels[index]}</span>{value != null && <progress aria-label={`${group === 0 ? 'IV' : 'EV'} ${name}`} max={group === 0 ? 31 : 255} value={value} />}<strong>{value ?? '—'}</strong></div>; })}
