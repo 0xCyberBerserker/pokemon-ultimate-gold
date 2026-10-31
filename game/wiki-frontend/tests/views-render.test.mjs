@@ -99,8 +99,12 @@ test('reference views render actual bilingual data and hash links', async () => 
     const gallery = renderToStaticMarkup(React.createElement(KrisGallery, { language: 'es', initialManifest: galleryData }));
     assert.match(gallery, /Una primera variante experimental/);
     assert.match(gallery, /no identifica qué captura corresponde/);
-    assert.match(gallery, /ordenadas por ejecución y fotograma/);
-    assert.equal((gallery.match(/class="kris-gallery-card"/g) || []).length, 24);
+    assert.match(gallery, /El orden no demuestra la cronología entre pruebas distintas/);
+    const archiveStart = gallery.indexOf('<details><summary>Archivo técnico completo y filtros</summary>');
+    assert.ok(archiveStart > 0);
+    assert.equal((gallery.slice(0, archiveStart).match(/class="kris-gallery-card"/g) || []).length, 3);
+    assert.equal((gallery.slice(archiveStart).match(/class="kris-gallery-card"/g) || []).length, 24);
+    assert.ok(gallery.slice(archiveStart).includes(`${galleryData.images.length} capturas`));
     const cheatData = JSON.parse(await readFile(new URL('../../web/data/cheat-catalog.json', import.meta.url)));
     const { default: CheatCatalog } = await server.ssrLoadModule('/src/features/cheats/CheatCatalog.tsx');
     const cheats = renderToStaticMarkup(React.createElement(CheatCatalog, { language: 'es', target: cheatData.target_sha256, initialCatalog: cheatData }));

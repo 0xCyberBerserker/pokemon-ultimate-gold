@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { Language } from '../../data/types';
 import { localized } from '../../data/wiki';
-import { editorialGallery, galleryImagePath, galleryStatuses, orderedGallery, type GalleryManifest } from '../../data/krisGallery';
+import { galleryImagePath, galleryStatuses, orderedGallery, type GalleryManifest } from '../../data/krisGallery';
 
 const sceneNames: Record<string, [string, string]> = {
   'k01-core16': ['Early new-game and naming test', 'Prueba temprana de partida nueva y nombre'],
@@ -50,7 +50,6 @@ export default function KrisGallery({ language, initialManifest }: { language: L
   const [query, setQuery] = useState('');
   const [scene, setScene] = useState('');
   const [status, setStatus] = useState('');
-  const [showAll, setShowAll] = useState(false);
   const [page, setPage] = useState(0);
   useEffect(() => {
     if (initialManifest) return;
@@ -60,33 +59,23 @@ export default function KrisGallery({ language, initialManifest }: { language: L
       .catch(() => { if (!controller.signal.aborted) setError(true); });
     return () => controller.abort();
   }, [initialManifest]);
-  const selected = useMemo(() => manifest ? editorialGallery(manifest) : new Set<string>(), [manifest]);
   const matches = useMemo(() => {
     if (!manifest) return [];
     const term = query.trim().toLocaleLowerCase();
     return orderedGallery(manifest, scene).filter(({ image }) => {
-      if (!showAll && selected.size && !selected.has(image.id)) return false;
       const refs = image.source_references || [];
       if (status && !galleryStatuses(image, manifest.collections).includes(status)) return false;
       const searchable = [image.caption?.en, image.caption?.es, ...refs.flatMap((ref) => { const id = ref.collection_id || ''; return [id, sceneNames[id]?.[0], sceneNames[id]?.[1], manifest.collections[id]?.caption?.en, manifest.collections[id]?.caption?.es]; })].join(' ').toLocaleLowerCase();
       return searchable.includes(term);
     });
-  }, [manifest, scene, status, query, selected, showAll]);
+  }, [manifest, scene, status, query]);
   if (error) return <p role="alert">{es ? 'No se pudo cargar el índice de la galería.' : 'The gallery index could not be loaded.'}</p>;
   if (!manifest) return <p role="status">{es ? 'Cargando galería…' : 'Loading gallery…'}</p>;
   const pages = Math.max(1, Math.ceil(matches.length / pageSize));
   const currentPage = Math.min(page, pages - 1);
-  return <section className="kris-progress"><h1>{es ? 'Progreso de Kris' : 'Kris progress'}</h1>
-    <div className="preview-note"><strong>{es ? 'Una protagonista alternativa' : 'An alternative protagonist'}</strong><p>{es ? 'Kris es la protagonista alternativa incluida en la candidata experimental del parcheador. Se han revisado escenas y situaciones concretas del juego; la aventura completa y el funcionamiento en hardware siguen pendientes de verificación.' : 'Kris is the alternative protagonist included in the patcher’s experimental candidate. Specific scenes and gameplay situations have been reviewed; the full adventure and hardware behavior remain unverified.'}</p></div>
-    <p>{es ? 'Estas capturas documentan pruebas concretas de una candidata privada. Están agrupadas por escena y ordenadas por ejecución y fotograma; ese orden no demuestra la cronología entre pruebas distintas.' : 'These captures document specific tests of a private candidate. They are grouped by scene and ordered by run and frame; that order does not establish the chronology between separate tests.'}</p>
-    <div className="preview-note"><strong>{es ? 'Una primera variante experimental' : 'An early experimental variant'}</strong><p>{es ? 'Se construyó una primera variante privada sobre una ROM de prueba, pero se rechazó visualmente porque los recortes incluían fragmentos de otros sprites. La construcción y el aspecto visual son comprobaciones distintas; esta galería aún no identifica qué captura corresponde a esa variante.' : 'A first private variant was built on a test ROM, but was visually rejected because the crops included fragments of other sprites. Building the variant and checking its appearance are separate checks; this gallery does not yet identify which capture corresponds to that variant.'} <a className="text-link" href="#/guide/kris">{es ? 'Consultar el contexto y sus límites' : 'Read the context and its limits'}</a>.</p></div>
-    <p>{es ? 'Las imágenes son evidencia parcial; no demuestran una partida completa ni aceptación de la versión. Alfa 2 no incluye esta candidata privada.' : 'These images are partial evidence; they do not establish a complete playthrough or release acceptance. Alpha 2 does not include this private candidate.'}</p>
-    <div className="filters"><label>{es ? 'Buscar escenas o capturas' : 'Search scenes or captures'}<input type="search" value={query} onChange={(event) => { setQuery(event.target.value); setPage(0); }} /></label>
-      <label>{es ? 'Escena' : 'Scene'}<select value={scene} onChange={(event) => { setScene(event.target.value); setPage(0); }}><option value="">{es ? 'Todas las escenas' : 'All scenes'}</option>{Object.entries(manifest.collections).map(([id, collection]) => <option value={id} key={id}>{sceneNames[id]?.[es ? 1 : 0] || localized(collection.caption, language)}</option>)}</select></label>
-      <label>{es ? 'Estado' : 'Status'}<select value={status} onChange={(event) => { setStatus(event.target.value); setPage(0); }}><option value="">{es ? 'Todos los estados' : 'All statuses'}</option><option value="historical">{es ? 'Histórica' : 'Historical'}</option><option value="qa_partial">{es ? 'Prueba parcial' : 'Partial testing'}</option><option value="experimental">{es ? 'Experimental' : 'Experimental'}</option><option value="current">{es ? 'Actual' : 'Current'}</option></select></label></div>
-    <label><input type="checkbox" checked={showAll} onChange={(event) => { setShowAll(event.target.checked); setPage(0); }} /> {es ? 'Mostrar archivo completo' : 'Show complete archive'}</label>
-    <p role="status">{matches.length} / {manifest.images.length} {es ? 'capturas' : 'captures'}</p>
-    <div className="kris-gallery-grid">{matches.slice(currentPage * pageSize, (currentPage + 1) * pageSize).map(({ image, primary }) => {
+  const featuredIds = new Set(['img-811cb30e8e979fa5', 'img-789ce9eded3f6371', 'img-39a7862bbce21a62']);
+  const featured = orderedGallery(manifest, 'k02-core97').filter(({ image }) => featuredIds.has(image.id));
+  const renderCapture = ({ image, primary }: (typeof featured)[number]) => {
       const path = galleryImagePath(image.file);
       if (!path) return null;
       const id = primary.collection_id || '';
@@ -96,7 +85,20 @@ export default function KrisGallery({ language, initialManifest }: { language: L
       const statuses = galleryStatuses(image, manifest.collections).map((stage) => stage === 'historical' ? (es ? 'Histórica' : 'Historical') : stage === 'qa_partial' ? (es ? 'Prueba parcial' : 'Partial testing') : stage === 'experimental' ? 'Experimental' : stage === 'current' ? (es ? 'Actual' : 'Current') : stage);
       const scopeNotes = [...new Set(image.source_references.map((ref) => localized(manifest.collections[ref.collection_id || '']?.status_note, language)).filter((note) => note !== '—'))];
       return <figure className="kris-gallery-card" key={image.id}><a href={path} target="_blank" rel="noopener noreferrer"><img src={path} alt={localized(image.alt, language)} loading="lazy" /></a><figcaption><strong>{title}</strong><p>{localized(image.caption, language)}</p><p>{statuses.join(' · ') || '—'}{frame != null && ` · ${es ? 'Fotograma' : 'Frame'} ${frame}`}</p><a href={path} download>{es ? 'Abrir PNG original' : 'Open original PNG'}</a></figcaption><details><summary>{es ? 'Detalles y procedencia' : 'Details and provenance'}</summary>{scopeNotes.map((note) => <p key={note}>{note}</p>)}<p>{es ? 'Descripción original' : 'Original description'}: {localized(image.alt, language)}</p><p>SHA-256: <code>{image.sha256}</code></p><p>{es ? 'Builds' : 'Builds'}: <code>{(image.build_sha256s || []).join(', ') || '—'}</code></p><p>{localized(image.permissions?.credit, language)}</p><ul>{image.source_references.map((ref, index) => <li key={index}>{ref.collection_id} · {ref.run_id || '—'} · {ref.source_file || '—'}{ref.status_as_sealed && <> · {ref.status_as_sealed}</>}{ref.source_seal && <> · {ref.source_seal}</>}{ref.source_seal_sha256 && <> · <code>{ref.source_seal_sha256}</code></>}{ref.build_sha256 && <> · <code>{ref.build_sha256}</code></>}</li>)}</ul></details></figure>;
-    })}</div>{!matches.length && <p>{es ? 'Ninguna captura coincide con los filtros.' : 'No captures match these filters.'}</p>}
+  };
+  return <section className="kris-progress"><h1>{es ? 'Progreso de Kris' : 'Kris progress'}</h1>
+    <div className="preview-note"><strong>{es ? 'Una protagonista alternativa' : 'An alternative protagonist'}</strong><p>{es ? 'Kris es la protagonista alternativa incluida en la candidata experimental del parcheador. Se han revisado escenas y situaciones concretas del juego; la aventura completa y el funcionamiento en hardware siguen pendientes de verificación.' : 'Kris is the alternative protagonist included in the patcher’s experimental candidate. Specific scenes and gameplay situations have been reviewed; the full adventure and hardware behavior remain unverified.'}</p></div>
+    <p>{es ? 'Selección de una prueba nativa de la película inicial. Las capturas se revisaron visualmente para esa prueba concreta; no suponen aceptación de la aventura ni de la versión. El postflight terminó con código 1 por una discrepancia en la validación de comandos.' : 'Selection from a native opening-movie test. The captures were visually reviewed for that specific test; they do not establish acceptance of the adventure or release. Postflight exited with code 1 due to a command-validation discrepancy.'}</p>
+    <div className="kris-gallery-grid">{featured.map(renderCapture)}</div>
+    <details><summary>{es ? 'Archivo técnico completo y filtros' : 'Complete technical archive and filters'}</summary>
+    <div className="preview-note"><strong>{es ? 'Una primera variante experimental' : 'An early experimental variant'}</strong><p>{es ? 'Se construyó una primera variante privada sobre una ROM de prueba, pero se rechazó visualmente porque los recortes incluían fragmentos de otros sprites. La construcción y el aspecto visual son comprobaciones distintas; esta galería aún no identifica qué captura corresponde a esa variante.' : 'A first private variant was built on a test ROM, but was visually rejected because the crops included fragments of other sprites. Building the variant and checking its appearance are separate checks; this gallery does not yet identify which capture corresponds to that variant.'}</p></div>
+    <p>{es ? 'Capturas históricas y pruebas parciales agrupadas por escena. El orden no demuestra la cronología entre pruebas distintas.' : 'Historical captures and partial tests grouped by scene. Their order does not establish chronology between separate tests.'} <a className="text-link" href="#/guide/kris">{es ? 'Contexto y límites' : 'Context and limits'}</a>.</p>
+    <div className="filters"><label>{es ? 'Buscar escenas o capturas' : 'Search scenes or captures'}<input type="search" value={query} onChange={(event) => { setQuery(event.target.value); setPage(0); }} /></label>
+      <label>{es ? 'Escena' : 'Scene'}<select value={scene} onChange={(event) => { setScene(event.target.value); setPage(0); }}><option value="">{es ? 'Todas las escenas' : 'All scenes'}</option>{Object.entries(manifest.collections).map(([id, collection]) => <option value={id} key={id}>{sceneNames[id]?.[es ? 1 : 0] || localized(collection.caption, language)}</option>)}</select></label>
+      <label>{es ? 'Estado' : 'Status'}<select value={status} onChange={(event) => { setStatus(event.target.value); setPage(0); }}><option value="">{es ? 'Todos los estados' : 'All statuses'}</option><option value="historical">{es ? 'Histórica' : 'Historical'}</option><option value="qa_partial">{es ? 'Prueba parcial' : 'Partial testing'}</option><option value="experimental">{es ? 'Experimental' : 'Experimental'}</option><option value="current">{es ? 'Actual' : 'Current'}</option></select></label></div>
+    <p role="status">{matches.length} / {manifest.images.length} {es ? 'capturas' : 'captures'}</p>
+    <div className="kris-gallery-grid">{matches.slice(currentPage * pageSize, (currentPage + 1) * pageSize).map(renderCapture)}</div>{!matches.length && <p>{es ? 'Ninguna captura coincide con los filtros.' : 'No captures match these filters.'}</p>}
     <nav className="kris-gallery-pager" aria-label={es ? 'Páginas de capturas' : 'Capture pages'}><button disabled={currentPage === 0} onClick={() => setPage(currentPage - 1)}>{es ? 'Anterior' : 'Previous'}</button><span>{currentPage + 1} / {pages}</span><button disabled={currentPage >= pages - 1} onClick={() => setPage(currentPage + 1)}>{es ? 'Siguiente' : 'Next'}</button></nav>
+    </details>
   </section>;
 }

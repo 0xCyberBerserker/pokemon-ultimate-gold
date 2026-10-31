@@ -54,3 +54,28 @@ test('editorial selection falls back to partial QA and honors explicit image or 
   const matching = gallery.images.filter((image) => image.source_references.some((ref) => ref.collection_id === collectionId));
   assert.deepEqual(editorialGallery({ ...gallery, editorial_selection: [{ collection_id: collectionId }] }), new Set(matching.map((image) => image.id)));
 });
+
+test('featured captures are reviewed native Core97 evidence and the full archive remains accessible', async () => {
+  const React = (await import('react')).default;
+  const { renderToStaticMarkup } = await import('react-dom/server');
+  const { createServer } = await import('vite');
+  const server = await createServer({ server: { middlewareMode: true, ws: false }, appType: 'custom' });
+  try {
+    const { default: KrisGallery } = await server.ssrLoadModule('/src/features/kris/KrisGallery.tsx');
+    const ids = ['img-811cb30e8e979fa5', 'img-789ce9eded3f6371', 'img-39a7862bbce21a62'];
+    for (const language of ['en', 'es']) {
+      const html = renderToStaticMarkup(React.createElement(KrisGallery, { language, initialManifest: gallery }));
+      const archive = html.indexOf(language === 'es' ? 'Archivo técnico completo y filtros' : 'Complete technical archive and filters');
+      assert.ok(archive > 0);
+      assert.ok(html.indexOf(language === 'es' ? 'Una primera variante experimental' : 'An early experimental variant') > archive);
+      assert.ok(html.includes(language === 'es' ? 'esta galería aún no identifica qué captura corresponde' : 'this gallery does not yet identify which capture corresponds'));
+      for (const id of ids) {
+        assert.ok(html.indexOf(`${id}.png`) < archive);
+        const image = gallery.images.find((entry) => entry.id === id);
+        assert.ok(image.source_references.some((ref) => ref.collection_id === 'k02-core97' && ref.capture_origin === 'native_run_file' && ref.build_sha256 === 'a19c9a41ef57e232e3cb64023f61623e660afcbeba0e6abe971d7f5d702fe009'));
+      }
+      assert.ok(html.includes(` / ${gallery.images.length} `));
+      assert.match(html, /postflight/i);
+    }
+  } finally { await server.close(); }
+});
