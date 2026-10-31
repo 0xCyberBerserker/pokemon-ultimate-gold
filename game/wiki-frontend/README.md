@@ -22,7 +22,7 @@ pnpm build
 pnpm check:production
 ```
 
-Vite proxies the shared data, sprites, assets, credits, legacy wiki pages and `/patcher-source` to that site server. The preview reads the existing generated JSON and sprites; the production output goes to `dist/`, not `game/web/`. Kris progress and the cheat catalog use React views over their existing datasets; browser checks cover representative interactions. Do not deploy it. The lockfile was checked with `pnpm audit`; a clean report does not guarantee a dependency is safe.
+Vite proxies the shared data, sprites, assets, credits, legacy wiki pages and `/patcher-source` to that site server. The preview reads the existing generated JSON and sprites; the production output goes to `dist/`, not `game/web/`. Kris progress and the cheat catalog use React views over their existing datasets; browser checks cover representative interactions. The lockfile was checked with `pnpm audit`; a clean report does not guarantee a dependency is safe.
 
 `check:production` rebuilds the preview and serves it with the existing shared site files under a simulated Pages project subdirectory on loopback. After an opt-in site build, `PUG_INTEGRATED=1 node --test checks/production-http.test.mjs` checks the actual generated `web/` output against `dist/`. Neither check runs a browser or executes the patcher.
 
@@ -30,7 +30,7 @@ For authorized local browser QA, build first and run `PUG_CHROMIUM=/path/to/chro
 
 `PUG_CHROMIUM=/path/to/chromium python checks/guide-parity.py` opens every guide in both languages and compares its source text with the rendered page. This is a content-preservation check, not a visual or factual review.
 
-The existing generator also accepts an explicit local preview option, from `game/`: `python3 tools/build_site.py --react-dist wiki-frontend/dist`. It regenerates `web/` before installing the prebuilt React index and hashed assets; run it only in a clean, disposable checkout after protecting local changes. It rejects a modified wiki index, conflicting asset names, missing assets and a relaxed entry-point CSP. A `.react-build.json` receipt records the generated index hash so a later build can update it without accepting unrecorded edits; old hashed assets are retained. Without this option it retains the original wiki. The locally modified Pages workflow builds this opt-in output only when manually dispatched; it has not been run or deployed.
+The existing generator also accepts an explicit local preview option, from `game/`: `python3 tools/build_site.py --react-dist wiki-frontend/dist`. It regenerates `web/` before installing the prebuilt React index and hashed assets; run it only in a clean, disposable checkout after protecting local changes. It rejects a modified wiki index, conflicting asset names, missing assets and a relaxed entry-point CSP. A `.react-build.json` receipt records the generated index hash so a later build can update it without accepting unrecorded edits; old hashed assets are retained. Without this option it retains the original wiki. The Pages workflow builds this output when manually dispatched from the default branch.
 
 ### Contracts and status
 
@@ -64,7 +64,7 @@ pnpm build
 pnpm check:production
 ```
 
-Vite redirige los datos, sprites, recursos, créditos, páginas antiguas y `/patcher-source` al servidor local. La vista consume el JSON generado y los sprites existentes; la salida de producción va a `dist/`, no a `game/web/`. El progreso de Kris y el catálogo de trucos usan vistas React sobre sus datos existentes; se han comprobado interacciones representativas en navegador. No la despliegues. Se ha comprobado el lockfile con `pnpm audit`; un informe limpio no garantiza que una dependencia sea segura.
+Vite redirige los datos, sprites, recursos, créditos, páginas antiguas y `/patcher-source` al servidor local. La vista consume el JSON generado y los sprites existentes; la salida de producción va a `dist/`, no a `game/web/`. El progreso de Kris y el catálogo de trucos usan vistas React sobre sus datos existentes; se han comprobado interacciones representativas en navegador. Se ha comprobado el lockfile con `pnpm audit`; un informe limpio no garantiza que una dependencia sea segura.
 
 `check:production` recompila la vista y la sirve con los archivos compartidos del sitio bajo un subdirectorio de Pages simulado en loopback. Tras generar el sitio con la opción React, `PUG_INTEGRATED=1 node --test checks/production-http.test.mjs` comprueba el `web/` generado real frente a `dist/`. Ninguna de estas pruebas ejecuta un navegador ni el parcheador.
 
@@ -72,7 +72,7 @@ Para QA local autorizado en navegador, compila primero y ejecuta `PUG_CHROMIUM=/
 
 `PUG_CHROMIUM=/ruta/a/chromium python checks/guide-parity.py` abre cada guía en ambos idiomas y compara el texto de origen con la página renderizada. Comprueba la conservación del contenido, no su presentación visual ni la veracidad de cada afirmación.
 
-El generador existente también admite una opción explícita de vista local, desde `game/`: `python3 tools/build_site.py --react-dist wiki-frontend/dist`. Regenera `web/` antes de instalar el índice React compilado y sus recursos versionados; ejecútala solo en una copia limpia y desechable, tras proteger los cambios locales. Rechaza índices de wiki modificados, nombres de recursos en conflicto, recursos ausentes y una CSP relajada en el punto de entrada. Un recibo `.react-build.json` registra el hash del índice generado para que una compilación posterior pueda actualizarlo sin aceptar ediciones no registradas; se conservan los recursos versionados anteriores. Sin esta opción mantiene la wiki original. El workflow de Pages modificado localmente compila esta salida optativa solo cuando se activa manualmente; no se ha ejecutado ni desplegado.
+El generador existente también admite una opción explícita de vista local, desde `game/`: `python3 tools/build_site.py --react-dist wiki-frontend/dist`. Regenera `web/` antes de instalar el índice React compilado y sus recursos versionados; ejecútala solo en una copia limpia y desechable, tras proteger los cambios locales. Rechaza índices de wiki modificados, nombres de recursos en conflicto, recursos ausentes y una CSP relajada en el punto de entrada. Un recibo `.react-build.json` registra el hash del índice generado para que una compilación posterior pueda actualizarlo sin aceptar ediciones no registradas; se conservan los recursos versionados anteriores. Sin esta opción mantiene la wiki original. El workflow de Pages compila esta salida cuando se activa manualmente desde la rama predeterminada.
 
 ### Contratos y estado
 
