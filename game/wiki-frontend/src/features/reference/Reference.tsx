@@ -13,6 +13,8 @@ import MechanicsPage from './MechanicsPage';
 import PlayerGuide from './PlayerGuide';
 import FeaturesPage from './FeaturesPage';
 import ProjectStatusPage from './ProjectStatusPage';
+import AbilityDetail from './AbilityDetail';
+import MoveDetail from './MoveDetail';
 import TypeBadge from './TypeBadge';
 import './evolutions.css';
 
@@ -70,12 +72,7 @@ export default function Reference({ data, language, route, patchDefault, wikiVer
   }
   if ((kind === 'guide' && key) || kind === 'faq' || kind === 'mechanics') return <p>{es ? 'Entrada no disponible.' : 'Entry unavailable.'}</p>;
   if (kind === 'abilities') {
-    if (key) {
-      const ability = data.abilities[key];
-      if (!ability) return <p>{es ? 'Habilidad no disponible.' : 'Ability unavailable.'}</p>;
-      const species = data.species.filter((entry) => entry.ability_slots?.some((slot) => slot.ability_id === Number(key)));
-      return <section><a className="back-link" href="#/abilities">← {es ? 'Habilidades' : 'Abilities'}</a><article className="panel"><h1>{localized(ability.name, language)}</h1><p>{localized(ability.description, language)}</p><h2>{es ? 'Especies con esta habilidad estándar' : 'Species with this standard ability'}</h2><p>{es ? 'Las habilidades individuales de los entrenadores pueden no estar verificadas.' : 'Individual trainer Pokémon abilities may not be verified.'}</p><div className="evolution-members">{species.map((entry) => <a key={entry.id} href={`#/pokemon/${entry.id}`}><img src={`../sprites/pokemon/${entry.id}.png`} alt="" loading="lazy" /><span>{localized(entry.name, language)}</span></a>)}</div>{!species.length && <p>{es ? 'Ninguna especie registrada.' : 'No species recorded.'}</p>}</article></section>;
-    }
+    if (key) return <AbilityDetail data={data} language={language} id={key} />;
     const abilities = Object.entries(data.abilities).filter(([, ability]) => normalizeSearch(`${ability.name.en} ${ability.name.es} ${ability.description.en} ${ability.description.es}`).includes(q));
     return <section><div className="section-title"><h1>{es ? 'Habilidades' : 'Abilities'}</h1><span className="count" role="status">{abilities.length}</span></div><div className="filters"><label>{es ? 'Buscar habilidad' : 'Search abilities'}<input type="search" value={query} onChange={(event) => setQuery(event.target.value)} /></label></div><div className="reference-list ability-list reference-list--rows">{abilities.map(([id, ability]) => <a className="panel ability-card" key={id} href={`#/abilities/${id}`}><strong>{localized(ability.name, language)}</strong><span>{localized(ability.description, language)}</span></a>)}</div>{!abilities.length && <p>{es ? 'No se encontraron habilidades.' : 'No abilities found.'}</p>}</section>;
   }
@@ -98,12 +95,11 @@ export default function Reference({ data, language, route, patchDefault, wikiVer
       </article>;
     })}</div></section>;
   }
-  if ((kind === 'moves' || kind === 'items') && key) {
-    const entry = kind === 'moves' ? data.moves[key] : data.items[key];
+  if (kind === 'moves' && key) return <MoveDetail data={data} language={language} id={key} />;
+  if (kind === 'items' && key) {
+    const entry = data.items[key];
     if (!entry) return <p>{es ? 'Entrada no disponible.' : 'Entry unavailable.'}</p>;
-    const power = kind === 'moves' ? displayMovePower(data.moves[key].power, language) : undefined;
-    const accuracy = kind === 'moves' ? displayMoveAccuracy(data.moves[key].accuracy, language) : undefined;
-    return <section><a className="back-link" href={`#/${kind}`}>← {title}</a><article className="panel"><h1>{kind === 'items' && es && entry.name.en !== entry.name.es ? `${entry.name.en} · ${entry.name.es}` : localized(entry.name, language)}</h1>{kind === 'items' && data.items[key].sprite && <img src={data.items[key].sprite} alt="" />}{kind === 'items' && data.items[key].icon_status === 'rom_placeholder' && <p>{es ? 'Icono provisional de la ROM' : 'ROM placeholder icon'}</p>}{kind === 'moves' && <TypeBadge id={data.moves[key].type_id} types={data.types} language={language} />}<p>{localized(entry.description, language)}</p>{kind === 'moves' && <><p>{es ? 'Potencia' : 'Power'}: {power?.value} · {es ? 'Precisión' : 'Accuracy'}: {accuracy?.value} · PP: {data.moves[key].pp}</p>{power?.note && <p>{power.note}</p>}{accuracy?.note && <p>{accuracy.note}</p>}</>}{kind === 'items' && <><p>ID: {data.items[key].nds_id || key} · {localized(data.items[key].category, language)}</p><h2>{es ? 'Obtención documentada' : 'Documented acquisition'}</h2><Acquisition records={data.items[key].acquisition} language={language} /></>}</article></section>;
+    return <section><a className="back-link" href="#/items">← {title}</a><article className="panel"><h1>{es && entry.name.en !== entry.name.es ? `${entry.name.en} · ${entry.name.es}` : localized(entry.name, language)}</h1>{entry.sprite && <img src={entry.sprite} alt="" />}{entry.icon_status === 'rom_placeholder' && <p>{es ? 'Icono provisional de la ROM' : 'ROM placeholder icon'}</p>}<p>{localized(entry.description, language)}</p><p>ID: {entry.nds_id || key} · {localized(entry.category, language)}</p><h2>{es ? 'Obtención documentada' : 'Documented acquisition'}</h2><Acquisition records={entry.acquisition} language={language} /></article></section>;
   }
   const compatibility = data.tmhm_compatibility?.target_sha256 === data.target_sha256 ? data.tmhm_compatibility.by_species : undefined;
   const compatibleSpeciesByItem = compatibility

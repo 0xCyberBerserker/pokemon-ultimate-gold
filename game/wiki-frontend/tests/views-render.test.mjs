@@ -42,7 +42,7 @@ test('reference views render actual bilingual data and hash links', async () => 
     assert.match(abilities, /href="#\/abilities\/65"/);
     assert.match(move, /Voz Cautivadora/);
     assert.match(move, /Hada/);
-    assert.match(move, /Potencia: 40/);
+    assert.match(move, /<dt>Potencia<\/dt><dd>40<\/dd>/);
     assert.match(move, /sprites\/types\/9\.png/);
     const items = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: '#/items' }));
     assert.match(items, /class="reference-list reference-list--rows"/);

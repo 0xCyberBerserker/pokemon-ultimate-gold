@@ -33,9 +33,9 @@ test('move stat sentinels are explained conservatively in reference and learnset
     assert.equal(displayMoveAccuracy(95, 'en').value, '95');
 
     const statusView = renderToStaticMarkup(React.createElement(Reference, { data, language: 'es', route: `#/moves/${statusMove[0]}` }));
-    assert.match(statusView, /Potencia: —/);
+    assert.match(statusView, /<dt>Potencia<\/dt><dd>—<\/dd>/);
     const accuracyView = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: `#/moves/${zeroAccuracyMove[0]}` }));
-    assert.match(accuracyView, /Accuracy: —/);
+    assert.match(accuracyView, /<dt>Accuracy<\/dt><dd>—<\/dd>/);
     assert.match(accuracyView, /not verified here/);
 
     const [learnsetMoveId] = codedOffenseMove;
