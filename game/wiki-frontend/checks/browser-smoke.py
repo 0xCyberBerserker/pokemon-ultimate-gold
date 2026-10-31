@@ -217,6 +217,11 @@ def main():
                         expect(page.locator("main h1").first).to_be_visible()
                         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Horizontal overflow: {name} {route}"
                         check_accessible_names(page, route)
+                        if route == "guides":
+                            expect(page.get_by_role("heading", name="Informes de QA y verificación")).to_be_visible()
+                            page.get_by_label("Buscar", exact=True).fill("Preguntas frecuentes")
+                            expect(page.locator('a[href="#/guide/faq"]')).to_be_visible()
+                            expect(page.get_by_role("heading", name="Informes de QA y verificación")).to_have_count(0)
                     expect(page.get_by_label("Linaje y ruta de los parches")).to_contain_text("Sacred Gold Plus 1.2.3")
                     expect(page.get_by_label("Linaje y ruta de los parches")).to_contain_text("no una secuencia para apilar parches")
                     page.goto(wiki + "#/items/87", wait_until="domcontentloaded")

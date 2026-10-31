@@ -31,6 +31,11 @@ test('reference views render actual bilingual data and hash links', async () => 
     assert.match(move, /Potencia: 40/);
     const guide = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: '#/guide/player' }));
     assert.ok(guide.includes(data.guides.player.title.en));
+    for (const language of ['en', 'es']) {
+      const index = renderToStaticMarkup(React.createElement(Reference, { data, language, route: '#/guides' }));
+      assert.ok(index.includes(language === 'es' ? 'Informes de QA y verificación' : 'QA and verification reports'));
+      for (const id of Object.keys(data.guides)) assert.equal((index.match(new RegExp(`href="#/guide/${id}"`, 'g')) || []).length, 1, id);
+    }
     const missingGuide = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: '#/guide/not-a-real-guide' }));
     assert.match(missingGuide, /Entry unavailable/);
     const evolution = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: '#/evolutions' }));

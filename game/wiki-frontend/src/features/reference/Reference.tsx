@@ -7,6 +7,7 @@ import { filterItems, filterMachines, filterMoves } from '../../data/reference';
 import { splitFaq } from '../../data/faq';
 import { publicGuideHtml } from '../../data/guide-links';
 import { normalizeSearch } from '../../data/text';
+import { groupGuides } from '../../data/guide-groups';
 
 type Props = { data: WikiData; language: Language; route: string };
 export default function Reference({ data, language, route }: Props) {
@@ -62,10 +63,10 @@ export default function Reference({ data, language, route }: Props) {
       {kind === 'items' && <label>{es ? 'Categoría' : 'Category'}<select value={itemCategory} onChange={(event) => setItemCategory(event.target.value)}><option value="">{es ? 'Todas' : 'All'}</option>{[...categories].map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>}
       {kind === 'machines' && <label>{es ? 'Clase de máquina' : 'Machine kind'}<select value={machineKind} onChange={(event) => setMachineKind(event.target.value)}><option value="">{es ? 'Todas' : 'All'}</option><option value="tm">{es ? 'MT' : 'TM'}</option><option value="hm">{es ? 'MO' : 'HM'}</option></select></label>}
     </div>
-    <div className="reference-list">{filtered.map((entry) => {
+    {kind === 'guides' ? groupGuides(filtered, language).map((group) => <section key={group.label}><h2>{group.label}</h2><div className="reference-list">{group.entries.map((entry) => <a className="panel" href={entry.href} key={entry.id}><strong>{entry.title}</strong></a>)}</div></section>) : <div className="reference-list">{filtered.map((entry) => {
       const machine = kind === 'machines' ? data.tmhm.find((item) => `${item.kind}-${item.number}` === entry.id) : undefined;
       if (machine) return <details className="panel machine-entry" key={entry.id}><summary><strong>{entry.title}</strong><span>{entry.description}</span></summary><p><a className="text-link" href={entry.href}>{es ? 'Abrir ficha del objeto' : 'Open item page'}</a> · <a className="text-link" href={`#/moves/${machine.move_id}`}>{es ? 'Ver movimiento' : 'View move'}</a></p><Acquisition records={data.items[machine.item_id]?.acquisition} language={language} /></details>;
       return <a className="panel" href={entry.href} key={entry.id}><strong>{entry.title}</strong><span>{entry.description}</span></a>;
-    })}</div>
+    })}</div>}
   </section>;
 }
