@@ -2,7 +2,11 @@
 
 ## English
 
-### Current Kris delivery status — 27 October 2026
+### Current delivery status — 31 October 2026
+
+Issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) is closed after the documented bounded review. Kris Sprint 2 is the experimental browser default, with Alpha 1 and Alpha 2 selectable. It includes the experimental EV/IV/nature editor by reviewed lineage; limited editor tests belong to earlier builds, with no new editor QA on this candidate. Wiki data and cheat codes remain tied to Alpha 2 and their compatibility with the newer target is unverified. Full-story and hardware acceptance remain pending. See [current status](docs/project-status.md).
+
+### Historical Kris delivery snapshot — 27 October 2026
 
 Issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) remains open; Alpha 2 and patcher defaults are unchanged. The model, provisionally accepted by the user, is frozen. The Bag cycle and one normal save/full-process shutdown/Continue pass are bounded native results with independent review; the outfit's known head/cap crop and low contrast remain documented.
 
@@ -73,7 +77,11 @@ On the private Kris candidate, one check at Cherrygrove City Pokémon Center sho
 
 ## Español
 
-### Estado actual de entrega de Kris — 27 de octubre de 2026
+### Estado actual de entrega — 31 de octubre de 2026
+
+La [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) está cerrada tras la revisión acotada documentada. Kris Sprint 2 es la opción web experimental predeterminada y Alfa 1 y Alfa 2 siguen disponibles. Incluye el editor EV/IV/naturalezas experimental por linaje revisado; las pruebas acotadas del editor pertenecen a versiones anteriores, sin nuevas pruebas del editor en esta candidata. Los datos de la wiki y los trucos siguen ligados a Alfa 2 y su compatibilidad con el nuevo destino no está verificada. Siguen pendientes la aceptación de la aventura completa y las pruebas en hardware. Véase el [estado actual](docs/project-status.md).
+
+### Estado histórico de entrega de Kris — 27 de octubre de 2026
 
 La [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) sigue abierta; Alfa 2 y los valores predeterminados del parcheador no cambian. El modelo, aceptado provisionalmente por el usuario, queda congelado. El ciclo de la Bolsa y una prueba de guardado normal/cierre completo/Continue son resultados nativos acotados con revisión independiente; se mantienen documentados el recorte de cabeza/gorra y el poco contraste de la ropa.
 
