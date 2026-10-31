@@ -2,18 +2,31 @@
 
 ## English
 
-The 73 unique PNG illustrations referenced by the trainer stage map have WebP derivatives. The source PNGs remain unchanged and are the `<img>` fallback; `<picture>` offers WebP. Conversion used ImageMagick at quality 90 with `-resize '1600x>'`, which preserves aspect ratio, never upscales, and does not crop. Stage 79/81 share Route 20 art, and stages 56/85 share Route 2 art; each source has one derivative.
+The 86 unique PNG illustrations referenced by the trainer stage map have WebP derivatives. The source PNGs remain unchanged and are the `<img>` fallback; `<picture>` offers WebP. Conversion used ImageMagick at quality 90 with `-resize '1600x>'`, which preserves aspect ratio, never upscales, and does not crop. Stage 79/81 share Route 20 art, and stages 56/85 share Route 2 art; each source has one derivative.
 
-Combined transfer size for these unique files: PNG 211,482,880 bytes; WebP 22,290,366 bytes (89.46% smaller). SHA-256 hashes below identify the generated WebP files. The thirty-two new derivatives come from owner-retained OpenAI-generated originals; artifact IDs and source PNG hashes are recorded in the bilingual table below and in `wiki-frontend/LOCATION-ART.md`.
+Combined transfer size for these unique files: PNG 248,650,326 bytes; WebP 26,125,706 bytes (89.49% smaller). SHA-256 hashes below identify the generated WebP files. The forty-five new derivatives come from owner-retained OpenAI-generated originals; artifact IDs and source PNG hashes are recorded in the bilingual table below and in `wiki-frontend/LOCATION-ART.md`.
 
 ## Español
 
-Las 73 ilustraciones PNG únicas referenciadas por el mapa de etapas de entrenadores tienen derivados WebP. Los PNG originales permanecen intactos y sirven de fallback en `<img>`; `<picture>` ofrece WebP. Se convirtieron con ImageMagick, calidad 90 y `-resize '1600x>'`, que conserva la proporción, no amplía ni recorta. Las etapas 79/81 comparten el arte de la Ruta 20, y las etapas 56/85 comparten el de la Ruta 2; cada fuente tiene un solo derivado.
+Las 86 ilustraciones PNG únicas referenciadas por el mapa de etapas de entrenadores tienen derivados WebP. Los PNG originales permanecen intactos y sirven de fallback en `<img>`; `<picture>` ofrece WebP. Se convirtieron con ImageMagick, calidad 90 y `-resize '1600x>'`, que conserva la proporción, no amplía ni recorta. Las etapas 79/81 comparten el arte de la Ruta 20, y las etapas 56/85 comparten el de la Ruta 2; cada fuente tiene un solo derivado.
 
-Transferencia conjunta de estos archivos únicos: PNG 211,482,880 bytes; WebP 22,290,366 bytes (89.46% menos). Los SHA-256 siguientes identifican los WebP generados. Los treinta y dos derivados nuevos proceden de originales generados con OpenAI y conservados por el propietario; los identificadores de artefacto y SHA-256 de los PNG fuente figuran en la tabla bilingüe siguiente y en `wiki-frontend/LOCATION-ART.md`.
+Transferencia conjunta de estos archivos únicos: PNG 248,650,326 bytes; WebP 26,125,706 bytes (89.49% menos). Los SHA-256 siguientes identifican los WebP generados. Los cuarenta y cinco derivados nuevos proceden de originales generados con OpenAI y conservados por el propietario; los identificadores de artefacto y SHA-256 de los PNG fuente figuran en la tabla bilingüe siguiente y en `wiki-frontend/LOCATION-ART.md`.
 
 | Source / Fuente | Original SHA-256 | Artifact / Artefacto | WebP SHA-256 |
 |---|---|---|---|
+| `mt-moon.png` | `36b4afc4a5fa156385fe4adbaf7a97a00ad415c0a29f546604d29558327c528a` | `exec-4fd2f96c-32d8-46b5-9d00-674fa88130bf` | `72d290e37d0fa1927c66c9af5e4d2f079ae273071b3cd2fbe3de9531769099e3` |
+| `cerulean-city-gym.png` | `5bfe0120e474ae7fdfe1d1fc48678c724b4269b8121b81d6cb915f5be0e3d91e` | `exec-63e60bdd-d08f-4e94-b1a5-da1458188076` | `709384db7879bb445582a16383e5525757eadde3c33bd8fc2610ff189aa7e954` |
+| `vermilion-city-gym.png` | `790c0fa4e4a3456689463338a55f610fe7a3fdf8040e31a4eedf95fe2214b0cc` | `exec-45d2bed1-e813-4e8f-9e09-ee1b73b4630f` | `81262b1c9608ffa0e00c74bbaad084695710823787c7fdd9fff60f031489027a` |
+| `fuchsia-city-gym.png` | `699ded2717aec4dcc6b28a89134574cac75d313cb3f05ee1c50e0892ed43f8ff` | `exec-0376e56a-32ac-4b9a-9831-a926eccdfa23` | `4aab0228d4cf93519a1776989f0dfc88679756cd91fc02c69459f1c0ea8da705` |
+| `celadon-city-gym.png` | `469c700a21c262aebd6c6c5078de44a5dec61f1990593416d3a69ecc477ec2a8` | `exec-56bdf8bd-5808-470a-8a11-9621d63ded27` | `c7f1ad423f775cb11ba7e596cd54b4bc39040400282e9b244c53a520e47fc66a` |
+| `saffron-city-gym.png` | `38f39c0a432f574183dad58175bdd6db116d1f0ece9283d81c22f31662e06d0a` | `exec-f605cc90-bc73-4ca9-be6b-c55382624387` | `678da338706d440870503695f432c33dec2619bfcab04114bb89453ba0e968c1` |
+| `seafoam-islands.png` | `cc5cfa9c660c5d08110e5b6ef9db19b39fe6171c1861ff788f2c980a7ea0e642` | `exec-c07d35c4-44dd-4e91-b7a9-ff64144e7d24` | `3a42541dc19b181822d437a5d91e68b612a25f0239227280be666734ade7bd5d` |
+| `seafoam-islands-gym.png` | `122e695e2853db73e75b5938ca8bb51dd0325c0992a8dc49620a51938bbe4fbb` | `exec-aa21b4e6-99f8-4b34-96cf-1f108be676e2` | `6c843bfc728fb32ad5b7dae62625cce95ca5c2b9961760bdbe7ce4953d5d5f37` |
+| `viridian-city-gym.png` | `09c836b68afb74e343e8a9bd05c55a0307b2091c0d814aadf73fa6584e5e488d` | `exec-fd3bf793-55fd-4ce6-ab0c-c4da86da33ec` | `fab6c7d8e7dc8138af8b65c8be68525f76bd9a1eb0755e50af80fbd96ebb83ca` |
+| `viridian-forest.png` | `4520cbbb123e548c5cc6ea26ba74e5b2d1e08ebda11b368e8bab1885b1a51b5b` | `exec-0621d21c-e450-4bc7-ad50-4f9c52cc11a6` | `f197d6a6ce6ed698edf47baf97da032fbbe4a5f2d485c2e93d0c268df7d7e2de` |
+| `saffron-dojo.png` | `8fc5fe3eee5c28378b31246f117ba3ff0c8332ad913d4fa24add8ee507ab35e7` | `exec-e0ccff4e-22e4-4ec6-be81-4a339c35325a` | `b7e4a6687345d74182badb0b8ebaec32dbad3defc1dc144f808581afd2669c65` |
+| `mt-silver-cave.png` | `e3a6b844aab80b130eb48abc30bdf2bd77c53a31b0ce5358c76f6ef93cad4dfc` | `exec-aaae0365-80cb-466b-811b-2ad2bb647d39` | `32dcca7d53a1944e3d855d4885c26c35f6cfda978cb4ad0ff26447b611340a6b` |
+| `cerulean-cave.png` | `854437617dc5aeccc187862af8a4af9064eab155853f20b2e8c5e02d8dd79a6c` | `exec-6424408e-4bbd-44ee-9ff5-817d525fe782` | `41f3e97e5ac37eb40fe94d2369ee7bbb83e5ae281cd09df7599423c26df45205` |
 | `sprout-tower.png` | `e41561ed67c0736ceb771966ef52648f07406a9539963e153458f7af4f32d6aa` | `exec-5788ceb8-a3e9-48d5-818e-d7de5f2821fe` | `f02e1a5b0618071e2e6f352bc8a3f8065f610e17bed672829ff4590e31c3f8ae` |
 | `ruins-of-alph.png` | `5b5cd31f9398171eae3ece812f9aa4c05dae32440291ecd19974772cf6ecd253` | `exec-b00cfbb1-1faf-4127-9843-60a748e16b36` | `12e6128a9093074bf45dbe55d3f205f8082133aa34eb3c3c5dae334d78719a9b` |
 | `violet-city-gym.png` | `ee406c34b8416f28e2472aa1c72f3eef374195ff6d45ab918c1fd9c6f7fa7325` | `exec-ddff5a02-397f-4e0a-bdd5-0a63e7d7ddd6` | `cd2942c36f7f7f88d007c747a4bff36c0af12a41b7b0bc54bce670fe0e3ac930` |
@@ -49,6 +62,19 @@ Transferencia conjunta de estos archivos únicos: PNG 211,482,880 bytes; WebP 22
 | `pewter-city-gym.png` | `375ebf97b2b8152f654d1acbf9dffda1eb39eacf195de9d1ba8711e621715eba` | `exec-7212571f-fdf9-4dee-bd15-fe860514f9ce` | `7d493cffa86d3a817e0e0b59d18a0985eba1e06cc37f8d1141e34fc66f0fe24e` |
 | Derivative / Derivado | Dimensions / Dimensiones | SHA-256 |
 |---|---:|---|
+| `mt-moon.webp` | 1600x596 | `72d290e37d0fa1927c66c9af5e4d2f079ae273071b3cd2fbe3de9531769099e3` |
+| `cerulean-city-gym.webp` | 1600x533 | `709384db7879bb445582a16383e5525757eadde3c33bd8fc2610ff189aa7e954` |
+| `vermilion-city-gym.webp` | 1600x533 | `81262b1c9608ffa0e00c74bbaad084695710823787c7fdd9fff60f031489027a` |
+| `fuchsia-city-gym.webp` | 1600x545 | `4aab0228d4cf93519a1776989f0dfc88679756cd91fc02c69459f1c0ea8da705` |
+| `celadon-city-gym.webp` | 1600x533 | `c7f1ad423f775cb11ba7e596cd54b4bc39040400282e9b244c53a520e47fc66a` |
+| `saffron-city-gym.webp` | 1600x640 | `678da338706d440870503695f432c33dec2619bfcab04114bb89453ba0e968c1` |
+| `seafoam-islands.webp` | 1600x600 | `3a42541dc19b181822d437a5d91e68b612a25f0239227280be666734ade7bd5d` |
+| `seafoam-islands-gym.webp` | 1600x595 | `6c843bfc728fb32ad5b7dae62625cce95ca5c2b9961760bdbe7ce4953d5d5f37` |
+| `viridian-city-gym.webp` | 1600x533 | `fab6c7d8e7dc8138af8b65c8be68525f76bd9a1eb0755e50af80fbd96ebb83ca` |
+| `viridian-forest.webp` | 1600x533 | `f197d6a6ce6ed698edf47baf97da032fbbe4a5f2d485c2e93d0c268df7d7e2de` |
+| `saffron-dojo.webp` | 1600x533 | `b7e4a6687345d74182badb0b8ebaec32dbad3defc1dc144f808581afd2669c65` |
+| `mt-silver-cave.webp` | 1600x600 | `32dcca7d53a1944e3d855d4885c26c35f6cfda978cb4ad0ff26447b611340a6b` |
+| `cerulean-cave.webp` | 1600x600 | `41f3e97e5ac37eb40fe94d2369ee7bbb83e5ae281cd09df7599423c26df45205` |
 | `cherrygrove-city.webp` | 1600x571 | `435ca350f889d1b6f63f537d4d02361e4df6369306fc7735ecda435728b1da33` |
 | `route-1.webp` | 1600x535 | `d3edd468969ccb2ff329d2998f50372c89cad737675176ad4aca1332909dd04d` |
 | `route-10.webp` | 1600x600 | `ba9423011f2cdc3948f44ff33728a545fcea39129db1f8904d5ea20ac7ca1d04` |
