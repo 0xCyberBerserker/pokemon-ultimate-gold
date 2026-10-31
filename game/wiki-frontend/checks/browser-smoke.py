@@ -115,11 +115,17 @@ def main():
                     if name == "mobile":
                         page.get_by_role("button", name="Abrir menú").click()
                         expect(page.get_by_role("button", name="Cerrar menú")).to_have_attribute("aria-expanded", "true")
+                        page.keyboard.press("Escape")
+                        expect(page.get_by_role("button", name="Abrir menú")).to_be_focused()
+                        page.get_by_role("button", name="Abrir menú").click()
+                        page.get_by_role("navigation", name="Wiki").get_by_role("button", name="Proyecto").click()
                         page.get_by_role("navigation", name="Wiki").get_by_role("link", name="Trucos", exact=True).focus()
                         page.keyboard.press("Escape")
                         expect(page.get_by_role("button", name="Abrir menú")).to_be_focused()
                         expect(page.get_by_role("button", name="Abrir menú")).to_have_attribute("aria-expanded", "false")
                         page.get_by_role("button", name="Abrir menú").click()
+                    else:
+                        page.get_by_role("navigation", name="Wiki").get_by_role("button", name="Proyecto").click()
                     page.get_by_role("navigation", name="Wiki").get_by_role("link", name="Trucos", exact=True).click()
                     if name == "mobile":
                         expect(page.get_by_role("button", name="Abrir menú")).to_have_attribute("aria-expanded", "false")
@@ -330,7 +336,65 @@ def main():
                     page.locator(".controls select").nth(1).select_option("en")
                     page.goto(wiki + "#/guide/features", wait_until="domcontentloaded")
                     expect(page.get_by_label("Lineage and patch routes")).to_contain_text("not a patch-stacking recipe")
+                    page.locator(".controls select").nth(1).select_option("es")
+                    sections = {
+                        "Primeros pasos": ["#/", "#/guide/player", "#/patcher", "#/faq"],
+                        "Aventura": ["#/trainers", "#/guides", "#/kris-progress"],
+                        "Enciclopedia": ["#/pokemon", "#/evolutions", "#/moves", "#/abilities", "#/items", "#/machines", "#/mechanics"],
+                        "Proyecto": ["#/guide/features", "#/guide/progress", "#/guide/sources-inventory", "#/cheats"],
+                    }
+                    headings = {
+                        "#/": "Tu guía de Johto.", "#/guide/player": "Guía del jugador", "#/patcher": "Parcheador de Ultimate Gold",
+                        "#/faq": "Preguntas frecuentes", "#/trainers": "Preparación de combates", "#/guides": "Guías",
+                        "#/kris-progress": "Progreso de Kris", "#/pokemon": "Pokédex", "#/evolutions": "Evoluciones",
+                        "#/moves": "Movimientos", "#/abilities": "Habilidades", "#/items": "Objetos", "#/machines": "MT / MO",
+                        "#/mechanics": "Mecánicas y compatibilidad", "#/guide/features": "Características de Ultimate Gold",
+                        "#/guide/progress": "Estado del proyecto", "#/guide/sources-inventory": "Inventario de fuentes", "#/cheats": "Catálogo de trucos",
+                    }
+                    for group, links in sections.items():
+                        for href in links:
+                            if name == "mobile":
+                                page.get_by_role("button", name="Abrir menú").click()
+                            nav = page.get_by_role("navigation", name="Wiki")
+                            nav.get_by_role("button", name=group, exact=True).click()
+                            expect(nav.get_by_role("button", name=group, exact=True)).to_have_attribute("aria-pressed", "true")
+                            nav.locator(f'a[href="{href}"]').click()
+                            expect(page).to_have_url(wiki + (href if href != "#/" else "#/"))
+                            if href == "#/":
+                                expect(page.locator(".home-page")).to_be_visible()
+                            expect(page.locator("main h1").first).to_have_text(headings[href])
+                            expect(page.get_by_text("Datos de la wiki de la versión indicada.")).to_have_count(0)
+                            check_width(page, f"{name} navigation {href}")
+                            check_accessible_names(page, f"navigation {href}")
+                            page.screenshot(path=str(captures / f"{name}-section-{href[2:].replace('/', '-') or 'home'}.png"), full_page=False)
+                    if name == "mobile":
+                        page.get_by_role("button", name="Abrir menú").click()
+                    nav = page.get_by_role("navigation", name="Wiki")
+                    nav.get_by_role("button", name="Proyecto").click()
+                    expect(nav.get_by_role("link", name="Créditos y licencias")).to_have_attribute("href", "../LICENSES.html")
+                    assert context.request.get(origin + PREFIX + "LICENSES.html").ok
                     context.close()
+                if not firefox_path:
+                    for width in (320, 390, 850, 1000, 1200, 1400, 1440):
+                        context = browser.new_context(viewport={"width": width, "height": 850})
+                        context.route("**/*", lambda route: route.continue_() if route.request.url.startswith(origin + "/") else route.abort())
+                        page = context.new_page()
+                        page.goto(wiki, wait_until="domcontentloaded")
+                        expect(page.locator(".home-page")).to_be_visible()
+                        page.locator(".controls select").nth(1).select_option("es")
+                        if width <= 850:
+                            page.get_by_role("button", name="Abrir menú").click()
+                        nav = page.get_by_role("navigation", name="Wiki")
+                        nav.get_by_role("button", name="Enciclopedia").click()
+                        expect(nav.get_by_role("link", name="Evoluciones")).to_be_visible()
+                        check_width(page, f"navigation at {width}px")
+                        if width >= 1400:
+                            categories = page.locator(".nav-categories").bounding_box()
+                            controls = page.locator(".controls").bounding_box()
+                            assert categories and controls and categories["x"] + categories["width"] <= controls["x"], f"Header overlap at {width}px"
+                        if width in (320, 390, 1400):
+                            page.screenshot(path=str(captures / f"navigation-{width}.png"))
+                        context.close()
                 assert not errors, errors
                 assert not missing_resources, sorted(missing_resources)
             finally:

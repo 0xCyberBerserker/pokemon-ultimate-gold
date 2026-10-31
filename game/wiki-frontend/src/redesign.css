@@ -1,10 +1,15 @@
 /* The approved Johto guide layout shares its palette across all wiki sections. */
 .brand img { width: 44px; height: 44px; flex: none; }
 .brand strong { font-size: .9rem; line-height: 1.1; }
-.main-sections { display: flex; align-items: center; gap: 6px; }
-.main-sections a { display: flex; align-items: center; gap: 8px; padding: 10px 13px; border-radius: 9px; font-weight: 700; }
-.main-sections a:hover, .main-sections .section-current { background: var(--gold-soft); }
-.current-section { color: var(--muted); font-size: .8rem; margin-left: 8px; }
+.current-section { color: var(--muted); font-size: .85rem; }
+.nav-categories { display: flex; flex-wrap: wrap; gap: 4px; }
+.nav-categories button { display: inline-flex; align-items: center; gap: 7px; padding: 10px 14px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); font: 700 .85rem system-ui, sans-serif; }
+.nav-categories button:hover, .nav-categories .category-current { color: var(--text); border-bottom-color: var(--gold); }
+.nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+.nav-links[hidden] { display: none; }
+.sidebar nav .nav-links a { display: flex; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 8px; color: var(--text); }
+.sidebar nav .nav-links a:hover { border-color: var(--line); background: var(--surface); }
+.sidebar nav .nav-links a.nav-current { border-color: var(--line); background: var(--gold-soft); }
 .controls, .filters, .preview-note, .note, .mode-note { font-family: system-ui, sans-serif; }
 main h1 { font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.1; }
 .preview-note { margin-bottom: 16px; }
@@ -21,13 +26,8 @@ main h1 { font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.1; }
 .journey-content .filters:not(.filters-open) { grid-template-columns: 1fr; }
 .journey-content .filters:not(.filters-open) label:not(:first-child) { display: none; }
 .journey-content .filters:not(.filters-open) label:first-child { grid-column: 1 / -1; }
-.journey-hero { position: relative; isolation: isolate; overflow: hidden; min-height: 175px; align-items: end; padding: 25px; border: 1px solid var(--line); border-radius: 14px; color: #fffdf7; background: #302719; }
-.journey-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: #1d160d99; }
-.journey-hero > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center 100%; }
-.journey-hero h1, .journey-hero p, .journey-hero .count { color: #fffdf7; }
-.journey-hero .section-tag { color: #ffe5aa; }
-.journey-hero > small { position: absolute; right: 10px; top: 10px; padding: 4px 7px; border-radius: 5px; background: #211a12cc; font: .65rem system-ui, sans-serif; }
-.journey-hero .count { padding: 6px 10px; border-radius: 8px; background: #211a12cc; }
+.journey-hero { min-height: 150px; align-items: end; padding: 25px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.journey-hero .count { padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); }
 .trainer-list-panel, .trainer-detail { min-width: 0; padding: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
 .trainer-list-panel > h2 { margin: 0 0 12px; font-size: 1.15rem; }
 .trainer-list-toggle { display: none; }
@@ -62,19 +62,33 @@ main h1 { font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.1; }
   .sidebar, .main-column { display: contents; }
   .brand { grid-column: 1; grid-row: 1; padding: 10px 18px; background: var(--surface); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .topbar { grid-column: 2; grid-row: 1; }
-  .sidebar nav { grid-column: 1 / -1; grid-row: 2; display: flex; align-items: center; gap: 4px; overflow-x: auto; padding: 4px 14px; background: var(--nav); border-bottom: 1px solid var(--line); }
-  .sidebar nav .nav-group { display: flex; flex: 0 0 auto; gap: 2px; }
-  .sidebar nav .nav-heading, .sidebar-foot { display: none; }
-  .sidebar nav a { white-space: nowrap; gap: 6px; padding: 9px 10px; font-size: .82rem; }
-  .sidebar nav a svg { width: 16px; height: 16px; }
+  .sidebar nav { grid-column: 1 / -1; grid-row: 2; display: grid; gap: 0; padding: 0 30px 9px; background: var(--nav); border-bottom: 1px solid var(--line); }
+  .nav-categories { border-bottom: 1px solid var(--line); }
+  .nav-links { padding-top: 8px; }
+  .sidebar nav .nav-links a { padding: 9px 12px; font-size: .84rem; }
+  .sidebar-foot { display: none; }
   .app-shell > .main-column > main { grid-column: 1 / -1; grid-row: 3; width: 100%; margin: 0 auto; align-self: start; }
   .app-shell > .main-column > footer { grid-column: 1 / -1; grid-row: 4; }
+}
+@media (min-width: 1400px) {
+  .sidebar nav { display: contents; }
+  .nav-categories { grid-column: 2; grid-row: 1; z-index: 1; align-self: center; justify-self: start; margin-left: 20px; border: 0; }
+  .nav-links:not([hidden]) { grid-column: 1 / -1; grid-row: 2; padding: 8px 30px; background: var(--nav); border-bottom: 1px solid var(--line); }
+  .topbar { justify-content: flex-end; padding-left: 530px; }
+  .current-section { display: none; }
 }
 @media (max-width: 850px) {
   .sidebar { background: var(--surface); }
   .brand img { width: 38px; height: 38px; }
   .topbar { background: var(--nav); }
-  .main-sections { display: none; }
+  .current-section { display: none; }
+  .sidebar nav.nav-open { gap: 12px; padding: 14px 16px 18px; box-shadow: 0 14px 25px #0002; }
+  .nav-categories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .nav-categories button { padding: 10px; border: 1px solid var(--line); border-radius: 8px; text-align: left; }
+  .nav-categories .category-current { background: var(--gold-soft); border-color: var(--gold); }
+  .nav-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+  .sidebar nav .nav-links a { padding: 10px; min-width: 0; font-size: .9rem; }
+  .sidebar nav .nav-links a svg { flex: none; }
   .journey-layout { grid-template-columns: 1fr; gap: 12px; }
   .journey-rail { padding: 10px; }
   .journey-rail-heading { padding-bottom: 7px; }
@@ -87,8 +101,6 @@ main h1 { font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.1; }
   .trainer-list-panel .trainer-list-open { display: grid; }
   .trainer-detail { grid-row: 2; }
   .journey-hero { min-height: 145px; padding: 32px 16px 16px; }
-  .journey-hero > img { object-position: 80% bottom; }
-  .journey-hero > small { max-width: 150px; }
 }
 @media (max-width: 480px) {
   .journey-hero .count { margin-top: 8px; }
