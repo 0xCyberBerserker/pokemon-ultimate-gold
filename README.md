@@ -4,7 +4,7 @@
   <p><strong>HEARTGOLD · JOHTO · FAN PROJECT</strong></p>
   <h1>ULTIMATE GOLD</h1>
   <p><strong>A fresh Johto journey, shaped by selected Sacred Gold lineage.</strong></p>
-  <p>A local-first browser patcher, a field guide, and two clearly labeled builds.</p>
+  <p>A local-first browser patcher, a field guide, and three clearly labeled builds.</p>
   <p>
     <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/#/patcher"><strong>Open the patcher</strong></a>
     · <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/">Explore the wiki</a>
@@ -16,7 +16,7 @@
   </p>
 </div>
 
-> **Build status:** Alpha 1 is the legacy selectable build. Alpha 2 is experimental.
+> **Build status:** Alpha 1 is the legacy selectable build. Alpha 2 is experimental. Kris Sprint 2 is the experimental patcher default.
 
 ## A familiar Johto, carefully revised
 
@@ -30,8 +30,9 @@
 | --- | --- | --- |
 | **Alpha 1** | Legacy | Native, reusable TM Refill. |
 | **Alpha 2** | Experimental | Rocket kit, evolution-shop stock, and eight field actions for HMs you already own. |
+| **Kris Sprint 2** | Experimental default | Alternative protagonist Kris and an experimental EV/IV/nature editor by reviewed lineage. |
 
-Alpha 2 has bounded, exact-build testing; full-story coverage is still open. The private EV/IV editor and Kris preview are not included in either download.
+Alpha 2 has bounded, exact-build testing; full-story coverage is still open. Kris Sprint 2 has no new editor QA; tests on earlier builds do not establish acceptance of this candidate. Wiki and cheat data are based on Alpha 2; compatibility with Kris Sprint 2 is unverified.
 
 ## Patch privately. Explore freely.
 
@@ -57,7 +58,7 @@ Choose a build and patch a clean dump from your own Pokémon HeartGold USA cartr
   <p><strong>HEARTGOLD · JOHTO · PROYECTO DE FANS</strong></p>
   <h1>ULTIMATE GOLD</h1>
   <p><strong>Una nueva aventura por Johto, basada en aportaciones seleccionadas de Sacred Gold.</strong></p>
-  <p>Un parcheador local en el navegador, una guía de campo y dos versiones claramente diferenciadas.</p>
+  <p>Un parcheador local en el navegador, una guía de campo y tres versiones claramente diferenciadas.</p>
   <p>
     <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/#/patcher"><strong>Abrir el parcheador</strong></a>
     · <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/">Explorar la wiki</a>
@@ -69,7 +70,7 @@ Choose a build and patch a clean dump from your own Pokémon HeartGold USA cartr
   </p>
 </div>
 
-> **Estado de las versiones:** Alfa 1 es la versión seleccionable anterior. Alfa 2 es experimental.
+> **Estado de las versiones:** Alfa 1 es la versión seleccionable anterior. Alfa 2 es experimental. Kris Sprint 2 es la opción experimental predeterminada del parcheador.
 
 ## Una Johto familiar, revisada con cuidado
 
@@ -83,8 +84,9 @@ Choose a build and patch a clean dump from your own Pokémon HeartGold USA cartr
 | --- | --- | --- |
 | **Alfa 1** | Anterior | TM Refill reutilizable nativo. |
 | **Alfa 2** | Experimental | Kit Rocket, existencias de objetos evolutivos y ocho acciones de campo para las MO que ya tienes. |
+| **Kris Sprint 2** | Predeterminada experimental | Kris como protagonista alternativa y editor EV/IV/naturalezas experimental por linaje revisado. |
 
-Alfa 2 cuenta con pruebas acotadas sobre el build exacto; la historia completa sigue pendiente. El editor privado de EV/IV y la vista previa de Kris no están incluidos en ninguna descarga.
+Alfa 2 cuenta con pruebas acotadas sobre el build exacto; la historia completa sigue pendiente. Kris Sprint 2 no cuenta con nuevas pruebas del editor; las pruebas de builds anteriores no aceptan esta candidata. Los datos de la wiki y los trucos se basan en Alfa 2; su compatibilidad con Kris Sprint 2 no está verificada.
 
 ## Parchea en privado. Explora a tu ritmo.
 

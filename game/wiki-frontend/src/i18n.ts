@@ -11,7 +11,7 @@ export const strings = {
     moveNote: 'Move source', derived_from_target_learnset: 'Calculated from the learnset',
     home: 'Home', trainers: 'Trainers', pokedex: 'Pokédex', guides: 'Guides', patcher: 'Patcher',
     project: 'Fan project · independent of Nintendo and The Pokémon Company', loading: 'Loading game data…',
-    error: 'Could not load the wiki data. Start the local site server and reload.', previous: 'Previous', next: 'Next',
+    error: 'Could not load the wiki data. Check your connection and try again.', previous: 'Previous', next: 'Next',
     stats: ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed'],
   },
   es: {
@@ -26,7 +26,7 @@ export const strings = {
     moveNote: 'Origen de movimientos', derived_from_target_learnset: 'Calculados del aprendizaje',
     home: 'Inicio', trainers: 'Entrenadores', pokedex: 'Pokédex', guides: 'Guías', patcher: 'Parcheador',
     project: 'Proyecto de fans · independiente de Nintendo y The Pokémon Company', loading: 'Cargando datos del juego…',
-    error: 'No se pudieron cargar los datos. Inicia el servidor local y vuelve a cargar.', previous: 'Anterior', next: 'Siguiente',
+    error: 'No se pudieron cargar los datos. Comprueba tu conexión y vuelve a intentarlo.', previous: 'Anterior', next: 'Siguiente',
     stats: ['PS', 'Ataque', 'Defensa', 'At. Esp.', 'Def. Esp.', 'Velocidad'],
   },
 } as const;

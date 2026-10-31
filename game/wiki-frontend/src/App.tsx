@@ -23,6 +23,14 @@ function writePreference(key: string, value: string) {
   try { localStorage.setItem(key, value); } catch { /* Preferences remain active for this session. */ }
 }
 
+export function startWikiLoadAttempt<T>(signal: AbortSignal, load: (signal: AbortSignal) => Promise<T>, onSuccess: (result: T) => void, onError: () => void) {
+  void load(signal).then((result) => {
+    if (!signal.aborted) onSuccess(result);
+  }).catch(() => {
+    if (!signal.aborted) onError();
+  });
+}
+
 export default function App() {
   const [language, setLanguage] = useState<Language>(() => readPreference('sgp-language') === 'es' ? 'es' : 'en');
   const [mode, setMode] = useState<GameMode>(() => readPreference('ultimate-gold-game-mode') === 'plus' ? 'plus' : 'normal');
@@ -32,6 +40,7 @@ export default function App() {
   const [patchVersion, setPatchVersion] = useState<Localized | null>(null);
   const [patchSource, setPatchSource] = useState<PatchSource | null>(null);
   const [error, setError] = useState(false);
+  const [loadAttempt, setLoadAttempt] = useState(0);
   const [navOpen, setNavOpen] = useState(false);
   const [navGroup, setNavGroup] = useState<number | null>(null);
   const menuButton = useRef<HTMLButtonElement>(null);
@@ -39,9 +48,9 @@ export default function App() {
   const t = strings[language];
   useEffect(() => {
     const controller = new AbortController();
-    loadWiki(controller.signal).then((result) => { setData(result.data); setWikiVersion(result.version); setPatchVersion(result.patchVersion); setPatchSource(result.source); }).catch(() => { if (!controller.signal.aborted) setError(true); });
+    startWikiLoadAttempt(controller.signal, loadWiki, (result) => { setData(result.data); setWikiVersion(result.version); setPatchVersion(result.patchVersion); setPatchSource(result.source); setError(false); }, () => setError(true));
     return () => controller.abort();
-  }, []);
+  }, [loadAttempt]);
   useEffect(() => { document.documentElement.dataset.theme = theme; document.documentElement.lang = language; }, [theme, language]);
   useEffect(() => {
     const preference = matchMedia('(prefers-color-scheme: dark)');
@@ -113,6 +122,6 @@ export default function App() {
       <label><span>{t.mode}</span><select value={mode} onChange={(event) => { const next = event.target.value as GameMode; setMode(next); writePreference('ultimate-gold-game-mode', next); }}><option value="normal">Normal</option><option value="plus">Plus</option></select></label>
       <label><span>{t.language}</span><select value={language} onChange={(event) => { const next = event.target.value as Language; setLanguage(next); writePreference('sgp-language', next); }}><option value="en">English</option><option value="es">Español</option></select></label>
       <button className="theme-button" aria-label={t.theme} onClick={() => { const next = theme === 'light' ? 'dark' : 'light'; setTheme(next); writePreference('ug-preview-theme', next); }}>{theme === 'light' ? <Moon size={19} /> : <Sun size={19} />}</button>
-    </div></header><main><SectionErrorBoundary key={route} language={language}><Suspense fallback={<p role="status">{t.loading}</p>}>{error ? <div className="panel section-error" role="alert"><p>{t.error}</p><button type="button" onClick={() => window.location.reload()}>{language === 'es' ? 'Reintentar' : 'Try again'}</button></div> : data ? isHome ? <Home data={data} language={language} /> : isPokedex ? <Pokedex data={data} language={language} id={pokemonId} /> : isReference ? <Reference key={routeName} data={data} language={language} route={route} patchDefault={patchVersion ?? undefined} wikiVersion={wikiVersion ?? undefined} /> : isPatcher && patchSource ? <Patcher language={language} source={patchSource} /> : isKris ? <KrisGallery language={language} /> : isCheats ? <CheatCatalog language={language} target={data.target_sha256} /> : parsed.kind === 'trainers' ? <TrainerExplorer data={data} language={language} mode={mode} /> : <p role="alert">{language === 'es' ? 'Sección no encontrada.' : 'Section not found.'}</p> : <p role="status">{t.loading}</p>}</Suspense></SectionErrorBoundary></main><footer>{wikiVersion && <span>{language === 'es' ? 'Datos' : 'Data'}: {wikiVersion[language].split(' — ')[0]} · </span>}Made with 🖤 in Barcelona City 🇪🇸</footer></div>
+    </div></header><main><SectionErrorBoundary key={route} language={language}><Suspense fallback={<p role="status">{t.loading}</p>}>{error ? <div className="panel section-error" role="alert"><p>{t.error}</p><button type="button" onClick={() => { setError(false); setLoadAttempt((attempt) => attempt + 1); }}>{language === 'es' ? 'Reintentar' : 'Try again'}</button></div> : data ? isHome ? <Home data={data} language={language} /> : isPokedex ? <Pokedex data={data} language={language} id={pokemonId} /> : isReference ? <Reference key={routeName} data={data} language={language} route={route} patchDefault={patchVersion ?? undefined} wikiVersion={wikiVersion ?? undefined} /> : isPatcher && patchSource ? <Patcher language={language} source={patchSource} /> : isKris ? <KrisGallery language={language} /> : isCheats ? <CheatCatalog language={language} target={data.target_sha256} /> : parsed.kind === 'trainers' ? <TrainerExplorer data={data} language={language} mode={mode} /> : <p role="alert">{language === 'es' ? 'Sección no encontrada.' : 'Section not found.'}</p> : <p role="status">{t.loading}</p>}</Suspense></SectionErrorBoundary></main><footer>{wikiVersion && <span>{language === 'es' ? 'Datos' : 'Data'}: {wikiVersion[language].split(' — ')[0]} · </span>}Made with 🖤 in Barcelona City 🇪🇸</footer></div>
   </div>;
 }
