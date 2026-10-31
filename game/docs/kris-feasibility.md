@@ -2,7 +2,11 @@
 
 ## English
 
-### Current sprint boundary — 27 October 2026
+### Current technical milestone — 31 October 2026
+
+The private Kris candidate has passed the combined Sprint 1 review and independent review at the documented scope. The [current project status](project-status.md) explains what was exercised, the assisted pose checks and the remaining presentation limits. Public Alpha 2 downloads are unchanged; this is not a full-adventure or human-playtest acceptance. The dated research and test snapshots below remain historical records, including their earlier pending items.
+
+### Historical sprint boundary — 27 October 2026
 
 Issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) remains open and Alpha 2 is unchanged. The current model is frozen at the user's request and provisionally accepted; the known crop and contrast limits remain. The Bag pocket cycle and one normal save/full-process shutdown/Continue sequence have bounded native coverage and independent review. See the [current project status](project-status.md) for the precise scope.
 
@@ -105,7 +109,11 @@ The additional battle-source review distinguishes ordinary and link backpics; re
 
 ## Español
 
-### Límite actual del sprint — 27 de octubre de 2026
+### Hito técnico actual — 31 de octubre de 2026
+
+La candidata privada de Kris ha superado la revisión conjunta del Sprint 1 y la revisión independiente dentro del alcance documentado. El [estado actual del proyecto](project-status.md) explica lo probado, las comprobaciones asistidas de poses y los límites visuales pendientes. Las descargas públicas de Alfa 2 no cambian; esto no acepta una aventura completa ni una prueba humana. Las instantáneas de investigación y pruebas fechadas que siguen se conservan como historial, incluidos sus pendientes anteriores.
+
+### Límite histórico del sprint — 27 de octubre de 2026
 
 La [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) sigue abierta y Alfa 2 no cambia. El modelo actual queda congelado por petición del usuario y aceptado provisionalmente; se mantienen los límites conocidos de recorte y contraste. El ciclo de bolsillos de la Bolsa y una secuencia de guardado normal/cierre completo/Continue tienen cobertura nativa acotada y revisión independiente. Véase el [estado actual del proyecto](project-status.md) para el alcance preciso.
 

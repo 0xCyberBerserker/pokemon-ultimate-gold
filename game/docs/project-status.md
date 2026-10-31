@@ -2,7 +2,18 @@
 
 ## English
 
-### Kris sprint status — 27 October 2026
+### Kris technical review accepted — 31 October 2026
+
+**Kris has passed the combined automated/emulator review and an independent review of the documented Sprint 1 criteria.** This result concerns the private candidate for [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33). Kris is not yet included in the public downloads; Alpha 2 and the patcher's default build remain unchanged.
+
+- **Appearance and menus:** reviewed coverage includes the introduction, field movement, battle and credits appearances, Trainer Card, photos and all eight Bag pockets. The current backpack model is retained; some Bag views still crop the cap/head and show limited outfit contrast.
+- **Gameplay and saves:** the accepted cases include the tested Pokéathlon Speed course and return, Rocket-costume checks, ordinary saving and a full emulator restart followed by Continue. These are specific tested routes, not a complete adventure playthrough.
+- **Previously pending poses:** the field-appearance coverage now includes watering, Pokégear and saving. Some rare poses were checked through prepared photos or other assisted scenarios, rather than by triggering every natural in-game action. Control and return were checked within those scenarios.
+- **Delivery:** a temporary private reference build and reproducible patch lineage are retained. This is a technical sprint milestone, not a new public release, hardware/link certification or broad human playtest. Earlier partial or inconclusive attempts remain in the history.
+
+Reviewed candidate SHA-256: `d577d8e8a47020deca8f9d5691af9480fd5671af79d0a92322f509de165f6267`. The earlier dated sections below describe the evidence available at those checkpoints; their pending items do not replace this current review result.
+
+### Historical Kris sprint snapshot — 27 October 2026
 
 **Issue #33 remains open; downloadable Alpha 2 and patcher defaults are unchanged.** The current private model is frozen at the user's request and provisionally accepted. Kris now uses a rear backpack instead of the side bag. All eight Bag pockets, ordinary exit and re-entry were exercised; some views still crop the cap/head and native lighting leaves the outfit low in contrast.
 
@@ -114,7 +125,18 @@ The [EV/IV feasibility study](ev-iv-kit-feasibility.md) preserves the earlier de
 
 ## Español
 
-### Estado del sprint de Kris — 27 de octubre de 2026
+### Revisión técnica de Kris aceptada — 31 de octubre de 2026
+
+**Kris ha superado la revisión conjunta de pruebas automatizadas/en emulador y una revisión independiente de los criterios documentados del Sprint 1.** El resultado corresponde a la candidata privada de la [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33). Kris todavía no está incluida en las descargas públicas; Alfa 2 y la versión predeterminada del parcheador no cambian.
+
+- **Apariencia y menús:** la cobertura revisada incluye la introducción, el movimiento por el campo, las apariciones en combate y créditos, la Ficha de Entrenador, las fotos y los ocho bolsillos de la Bolsa. Se conserva el modelo actual con mochila; algunas vistas de la Bolsa todavía recortan cabeza/gorra y muestran poco contraste en la ropa.
+- **Juego y partidas:** los casos aceptados incluyen el curso Speed del Pokéathlon probado y su regreso, las comprobaciones con uniforme Rocket, el guardado normal y el cierre completo del emulador seguido de Continue. Son rutas concretas probadas, no una partida completa de la aventura.
+- **Poses antes pendientes:** la cobertura de apariencia en el campo ya incluye riego, Pokégear y guardado. Algunas poses poco frecuentes se comprobaron mediante fotos preparadas u otros escenarios asistidos, sin activar de forma natural cada acción del juego. Se comprobaron el control y el retorno dentro de esos escenarios.
+- **Entrega:** se conservan una versión temporal privada de referencia y la trazabilidad del parche reproducible. Es un hito técnico del sprint, no una nueva release pública, certificación de hardware/conexión ni prueba humana amplia. Los intentos parciales o inconclusos anteriores permanecen en el historial.
+
+SHA-256 de la candidata revisada: `d577d8e8a47020deca8f9d5691af9480fd5671af79d0a92322f509de165f6267`. Las secciones fechadas anteriores que siguen describen la evidencia disponible en esos checkpoints; sus pendientes no sustituyen el resultado actual.
+
+### Instantánea histórica del sprint de Kris — 27 de octubre de 2026
 
 **La issue #33 sigue abierta; la descarga de Alfa 2 y los valores predeterminados del parcheador no cambian.** El modelo privado actual queda congelado por petición del usuario y aceptado provisionalmente. Kris usa ahora mochila trasera en lugar de bolso lateral. Se probaron los ocho bolsillos de la Bolsa, salir con normalidad y volver a entrar; algunas vistas aún recortan cabeza/gorra y la iluminación nativa deja poco contraste en la ropa.
 
