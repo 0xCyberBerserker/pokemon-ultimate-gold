@@ -3,7 +3,7 @@
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from tempfile import mkdtemp
+from tempfile import mkdtemp, TemporaryDirectory
 from threading import Thread
 from urllib.parse import unquote, urlsplit
 import json
@@ -71,8 +71,10 @@ def main():
                     context = browser.new_context(viewport={"width": width, "height": height}, reduced_motion="reduce")
                     context.route("**/*", lambda route: route.continue_() if route.request.url.startswith(origin + "/") else route.abort())
                     page = context.new_page()
+                    patch_requests = []
                     page.on("pageerror", lambda error: errors.append(str(error)))
                     page.on("response", lambda response: missing_resources.add(f"{response.status} {response.url}") if response.url.startswith(origin + "/") and response.status >= 400 else None)
+                    page.on("request", lambda request: patch_requests.append(request.url) if request.url.endswith(".xdelta") else None)
                     page.goto(wiki, wait_until="domcontentloaded")
                     expect(page.locator(".home-page")).to_be_visible()
                     check_accessible_names(page, "home")
@@ -183,6 +185,22 @@ def main():
                     assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), f"Horizontal overflow: {name} patcher source"
                     expect(page.frame_locator("iframe").locator("#rom")).to_be_attached()
                     expect(page.frame_locator("iframe").locator("#language")).to_have_value("es")
+                    if name == "desktop":
+                        frame = page.frame_locator("iframe")
+                        expect(frame.locator("#apply")).to_be_enabled()
+                        frame.locator("#rom").set_input_files({"name": "wrong.nds", "mimeType": "application/octet-stream", "buffer": b"not a ROM"})
+                        frame.locator("#apply").click()
+                        expect(frame.locator("#status")).to_contain_text("tamaño incorrecto")
+                        expect(frame.locator("#download")).to_be_hidden()
+                        with TemporaryDirectory(prefix="pug-invalid-input-") as temp:
+                            invalid = Path(temp) / "wrong-hash.nds"
+                            with invalid.open("wb") as stream:
+                                stream.truncate(manifest["source"]["size"])
+                            frame.locator("#rom").set_input_files(str(invalid))
+                            frame.locator("#apply").click()
+                            expect(frame.locator("#status")).to_contain_text("no coincide con el SHA-256", timeout=30000)
+                            expect(frame.locator("#download")).to_be_hidden()
+                        assert not patch_requests, "A rejected input requested a patch"
                     for route in ("moves", "items", "machines", "abilities", "evolutions", "guides", "faq", "mechanics", "guide/player", "guide/features"):
                         page.goto(wiki + "#/" + route, wait_until="domcontentloaded")
                         expect(page.locator("main h1").first).to_be_visible()

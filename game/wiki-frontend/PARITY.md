@@ -45,6 +45,8 @@ All 2,329 images in the Kris gallery manifest exist and match their recorded SHA
 
 Local Chromium also patched a hash-matched user-provided HeartGold source through the React iframe for both versions. Downloaded outputs matched the manifests: Alpha 1 `6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132`; Alpha 2 `24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`. Temporary outputs were deleted and the source hash remained unchanged. This verifies the local patching flow, not gameplay or deployment.
 
+The browser smoke test also rejects a short synthetic file and a correctly sized synthetic file with a wrong hash; neither produces a download or requests a delta.
+
 After the latest frontend changes, the generator was run in a disposable copy and the browser smoke and both patcher roundtrips passed against its actual `web/` output. The protected checkout was not regenerated.
 
 The migration uses the accepted public snapshot. Local historical material was preserved separately and must be reconciled through the project's provenance and publication review before claiming full local-content parity.
@@ -93,6 +95,8 @@ Para el truco `00-006`, la prueba busca por ID, compara el bloque completo mostr
 Las 2.329 imágenes del manifiesto de la galería de Kris existen y coinciden con su SHA-256 registrado; esta comprobación de integridad forma parte de las pruebas del frontend. La coincidencia de hashes no identifica qué imagen muestra un mockup temprano concreto.
 
 Chromium local también parcheó, mediante el iframe de React, un HeartGold aportado por el usuario cuyo hash coincide con el manifiesto, para ambas versiones. Las descargas coincidieron con los manifiestos: Alfa 1 `6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132`; Alfa 2 `24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6`. Se eliminaron las salidas temporales y el hash del original no cambió. Esto verifica el flujo local de parcheo, no la jugabilidad ni el despliegue.
+
+La prueba en navegador también rechaza un archivo sintético corto y otro del tamaño correcto con hash incorrecto; ninguno produce una descarga ni solicita un delta.
 
 Tras los últimos cambios del frontend se ejecutó el generador en una copia desechable. La prueba de navegador y los dos parcheos pasaron sobre la salida real de `web/`. No se regeneró el checkout protegido.
 
