@@ -19,6 +19,10 @@ test('decorative illustrations are bound to their own documented stages', async 
     ['stage-17', 'Route 35', 'route-35.png', '7da0e49fb39bd47928d12c2aeae46777b7242b2ce877260cd1775f7d23d3a6a6'],
     ['stage-19', 'Route 36', 'route-36.png', 'b03a3d3023b1a50a2f278a2d51f04fb5706eb50b10c74436a5b2486f64f9bcf9'],
     ['stage-20', 'Route 37', 'route-37.png', '043f6641452e706550b0bece324510a9add443792d149887c1c3aabbcdb61b99'],
+    ['stage-24', 'Route 38', 'route-38.png', '4238c63b302ed805c9b35d167cff54b356cc60a0d63e30c718a7c46fbd65a7e3'],
+    ['stage-25', 'Route 39', 'route-39.png', 'fb3234d3e345160e4e652f76faee48a5a8879a0f6f3ecb4abf7207ef250e509a'],
+    ['stage-28', 'Route 40', 'route-40.png', 'cc7e931e3932b8d3667984a1ffdbcd8994a6b2a439652f6b8d041054a38f30ac'],
+    ['stage-29', 'Route 41', 'route-41.png', '998487867c757b96ecfe81b5b71e0202b7f8a3729c45e951015f5493badc23e0'],
   ];
   for (const [id, name, file, hash] of cases) {
     assert.equal(journey.stages.find((stage) => stage.id === id)?.name.en, name);
@@ -46,6 +50,10 @@ test('stage banners label art in both languages and leave other stages neutral',
       ['stage-17', 'es', 'Ilustración decorativa', 'route-35.png'],
       ['stage-19', 'en', 'Decorative illustration', 'route-36.png'],
       ['stage-20', 'es', 'Ilustración decorativa', 'route-37.png'],
+      ['stage-24', 'en', 'Decorative illustration', 'route-38.png'],
+      ['stage-25', 'es', 'Ilustración decorativa', 'route-39.png'],
+      ['stage-28', 'en', 'Decorative illustration', 'route-40.png'],
+      ['stage-29', 'es', 'Ilustración decorativa', 'route-41.png'],
     ]) {
       globalThis.sessionStorage = { getItem: () => JSON.stringify({ stage }) };
       const html = renderToStaticMarkup(React.createElement(TrainerExplorer, { data, language, mode: 'normal' }));
