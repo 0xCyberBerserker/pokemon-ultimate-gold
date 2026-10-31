@@ -559,6 +559,13 @@ h1, h2, h3, h4 { font-family: "Outfit", sans-serif; }
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 10px;
 }
+.reference-list--rows {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+.reference-list.ability-list.reference-list--rows {
+  grid-template-columns: minmax(0, 1fr);
+}
 .reference-list .panel {
   display: grid;
   gap: 6px;
