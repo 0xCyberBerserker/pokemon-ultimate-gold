@@ -1,6 +1,6 @@
 import { useDeferredValue, useState } from 'react';
 import { localized } from '../../data/wiki';
-import type { Language, WikiData } from '../../data/types';
+import type { Language, Localized, WikiData } from '../../data/types';
 import { evolutionFamilies } from '../../data/evolutions';
 import Acquisition from './Acquisition';
 import { filterItems, filterMachinesForSearch, filterMoves } from '../../data/reference';
@@ -10,6 +10,8 @@ import { normalizeSearch } from '../../data/text';
 import GuideIndex from './GuideIndex';
 import MechanicsPage from './MechanicsPage';
 import PlayerGuide from './PlayerGuide';
+import FeaturesPage from './FeaturesPage';
+import ProjectStatusPage from './ProjectStatusPage';
 import TypeBadge from './TypeBadge';
 import './evolutions.css';
 
@@ -19,7 +21,7 @@ const WIKI_TARGET_LABELS: Record<string, { en: string; es: string }> = {
   '6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe3763e132': { en: 'Alpha 1', es: 'Alfa 1' },
 };
 
-type Props = { data: WikiData; language: Language; route: string };
+type Props = { data: WikiData; language: Language; route: string; patchDefault?: Localized; wikiVersion?: Localized };
 type MachineEntryProps = {
   title: string;
   href: string;
@@ -41,7 +43,7 @@ export function MachineEntry({ title, href, machine, data, language, compatibleS
   </details>;
 }
 
-export default function Reference({ data, language, route }: Props) {
+export default function Reference({ data, language, route, patchDefault, wikiVersion }: Props) {
   const es = language === 'es';
   const [query, setQuery] = useState('');
   const [typeFilter, setTypeFilter] = useState('');
@@ -55,6 +57,8 @@ export default function Reference({ data, language, route }: Props) {
   const title = kind === 'moves' ? (es ? 'Movimientos' : 'Moves') : kind === 'items' ? (es ? 'Objetos' : 'Items') : kind === 'machines' ? (es ? 'MT / MO' : 'TMs / HMs') : (es ? 'Guías' : 'Guides');
   if (kind === 'mechanics') return <MechanicsPage data={data} language={language} />;
   if (kind === 'guide' && key === 'player') return <PlayerGuide data={data} language={language} />;
+  if (kind === 'guide' && key === 'features') return <FeaturesPage data={data} language={language} patchDefault={patchDefault} wikiVersion={wikiVersion} />;
+  if (kind === 'guide' && key === 'progress') return <ProjectStatusPage data={data} language={language} patchDefault={patchDefault} wikiVersion={wikiVersion} />;
   if ((kind === 'guide' || kind === 'faq' || kind === 'mechanics') && key && data.guides[key]) {
     const guide = data.guides[key];
     if (key === 'faq') {
