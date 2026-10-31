@@ -6,6 +6,7 @@ import { localized } from '../../data/wiki';
 import { memberForMode } from '../../data/team';
 import { orderTrainers } from '../../data/journey';
 import { normalizeSearch } from '../../data/text';
+import { stageIllustration } from './stage-art';
 import { strings } from '../../i18n';
 import TypeBadge from '../reference/TypeBadge';
 
@@ -95,6 +96,7 @@ export default function TrainerExplorer({ data, language, mode }: Props) {
   const trainer: Trainer | undefined = selected === null ? filtered[0] : data.trainers.find((entry) => entry.id === selected);
   const selectionOutsideResults = selected !== null && !!trainer && !filtered.some((entry) => entry.id === selected);
   const selectedStage = data.trainer_journey.stages.find((entry) => entry.id === stage);
+  const illustration = stageIllustration(stage);
   function chooseStage(value: string) {
     setStage(value);
     setPage(0);
@@ -108,7 +110,7 @@ export default function TrainerExplorer({ data, language, mode }: Props) {
   }
   return <LazyMotion features={domAnimation} strict><section className="trainer-page"><div className="journey-layout">
     <aside className="journey-rail" aria-label={t.stage}><div className="journey-rail-heading"><strong>{language === 'es' ? 'Etapas de aventura' : 'Adventure stages'}</strong><span>Johto · Kanto</span></div><div className="journey-stages"><button type="button" className={!stage ? 'stage-current' : ''} aria-pressed={!stage} onClick={() => chooseStage('')}>{t.allStages}</button>{data.trainer_journey.stages.map((entry) => <button type="button" key={entry.id} className={stage === entry.id ? 'stage-current' : ''} aria-pressed={stage === entry.id} onClick={() => chooseStage(entry.id)}>{localized(entry.name, language)}</button>)}<button type="button" className={stage === 'other' ? 'stage-current' : ''} aria-pressed={stage === 'other'} onClick={() => chooseStage('other')}>{t.other}</button></div></aside>
-    <div className="journey-content"><div className="section-title journey-hero"><div><p className="section-tag">JOHTO · KANTO · ULTIMATE GOLD</p><h1>{selectedStage ? localized(selectedStage.name, language) : t.title}</h1><p>{t.intro}</p></div><span className="count">{filtered.length} {t.results}</span></div>
+    <div className="journey-content"><div className={`section-title journey-hero${illustration ? ' has-art' : ''}`}>{illustration && <img className="journey-illustration" src={illustration} alt="" />}<div><p className="section-tag">JOHTO · KANTO · ULTIMATE GOLD</p><h1>{selectedStage ? localized(selectedStage.name, language) : t.title}</h1><p>{t.intro}</p>{illustration && <small>{language === 'es' ? 'Ilustración decorativa' : 'Decorative illustration'}</small>}</div><span className="count">{filtered.length} {t.results}</span></div>
     <p className="mode-note">{localized(data.game_modes[mode]?.description, language)}</p>
     <button type="button" className="filters-toggle" aria-expanded={filtersOpen} aria-controls="trainer-filters" onClick={() => setFiltersOpen(!filtersOpen)}>{language === 'es' ? 'Filtros de búsqueda' : 'Search filters'} · {kind === 'first_visit' ? t.first_visit : kind === 'rematch' ? t.rematch : kind === 'other' ? t.other : t.allKinds}</button>
     <div id="trainer-filters" className={`filters ${filtersOpen ? 'filters-open' : ''}`}>
