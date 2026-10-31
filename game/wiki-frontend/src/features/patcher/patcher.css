@@ -63,7 +63,7 @@
 .patcher-card-index {
   margin: 0;
   color: var(--patcher-gold-dark);
-  font: 750 0.68rem/1.35 system-ui, sans-serif;
+  font: 750 0.68rem/1.35 "Nunito Sans", sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
@@ -71,7 +71,7 @@
 .patcher-hero h1 {
   margin: 8px 0 10px;
   color: var(--patcher-ink);
-  font: 700 clamp(2rem, 4.2vw, 3.2rem)/1.02 Georgia, "Times New Roman", serif;
+  font: 700 clamp(2rem, 4.2vw, 3.2rem)/1.02 "Outfit", sans-serif;
   letter-spacing: -0.035em;
 }
 
@@ -99,12 +99,12 @@
 
 .patcher-hero-mark span,
 .patcher-hero-mark small {
-  font: 750 0.62rem/1.2 system-ui, sans-serif;
+  font: 750 0.62rem/1.2 "Nunito Sans", sans-serif;
   letter-spacing: 0.16em;
 }
 
 .patcher-hero-mark strong {
-  font: 700 1.7rem/1 Georgia, serif;
+  font: 700 1.7rem/1 "Outfit", sans-serif;
 }
 
 .patcher-info-grid {
@@ -132,7 +132,7 @@
 .patcher-workbench-heading h2 {
   margin: 0;
   color: var(--patcher-ink);
-  font: 700 1.25rem/1.15 Georgia, "Times New Roman", serif;
+  font: 700 1.25rem/1.15 "Outfit", sans-serif;
 }
 
 .patcher-source-card > div > p,
@@ -209,7 +209,7 @@
   border-radius: 999px;
   background: var(--patcher-card-warm);
   color: var(--patcher-gold-dark);
-  font: 750 0.62rem/1.2 system-ui, sans-serif;
+  font: 750 0.62rem/1.2 "Nunito Sans", sans-serif;
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
@@ -266,7 +266,7 @@
   border-radius: 12px;
   background: var(--patcher-gold-wash);
   color: var(--patcher-gold-dark);
-  font: 800 0.8rem system-ui, sans-serif;
+  font: 800 0.8rem "Nunito Sans", sans-serif;
 }
 
 .patcher-standalone-button {

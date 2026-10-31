@@ -50,6 +50,7 @@ export interface WikiData {
   items: Record<string, { name: Localized; description: Localized; sprite?: string; category_id?: string; category?: Localized; nds_id?: number; icon_status?: string; acquisition?: Acquisition[] }>;
   guides: Record<string, { title: Localized; body: Record<Language, string> }>;
   tmhm: { item_id: number; move_id: number; kind: string; number: number }[];
+  tmhm_compatibility?: { target_sha256: string; by_species: Record<string, number[]> };
   game_modes: Record<GameMode, { description: Localized }>;
   trainer_journey: { stages: { id: string; name: Localized }[] };
 }

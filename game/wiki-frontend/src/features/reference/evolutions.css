@@ -1,3 +1,18 @@
+.evolution-family-list {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  align-items: stretch;
+}
+
+.evolution-family {
+  min-width: 0;
+}
+
+.evolution-family h2,
+.evolution-family p {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .evolution-paths {
   display: grid;
   gap: 12px;
@@ -6,7 +21,7 @@
 
 .evolution-path {
   display: grid;
-  grid-template-columns: minmax(100px, 0.7fr) 24px minmax(0, 2fr);
+  grid-template-columns: minmax(90px, 0.7fr) 24px minmax(0, 2fr);
   align-items: center;
   gap: 8px;
 }
@@ -48,7 +63,7 @@
 
 .evolution-edge {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-columns: 20px minmax(0, 1fr);
   align-items: center;
   gap: 8px;
   padding: 6px 10px;
@@ -58,8 +73,10 @@
 }
 
 .evolution-condition {
-  text-align: right;
-  overflow-wrap: anywhere;
+  grid-column: 1 / -1;
+  text-align: left;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .evolution-target {
@@ -78,7 +95,8 @@
 }
 
 .evolution-target strong {
-  overflow-wrap: anywhere;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .evolution-pokemon:focus-visible,
@@ -116,10 +134,13 @@
   }
 
   .evolution-edge {
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.2fr);
     gap: 5px;
     padding: 5px 7px;
     font-size: 0.9rem;
+  }
+
+  .evolution-family-list {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .evolution-target img {

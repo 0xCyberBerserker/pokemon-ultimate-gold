@@ -32,10 +32,12 @@ class ReactSiteIntegrationTests(unittest.TestCase):
         (self.wiki / "redirect.html").write_text("redirect", encoding="utf-8")
 
     def test_installs_only_frontend_files_and_preserves_redirects(self):
+        (self.assets / "outfit-abc.ttf").write_bytes(b"font fixture")
         plan = build_site.prepare_react_site(self.dist, self.wiki, self.legacy)
         build_site.install_react_site(plan, self.wiki)
         self.assertEqual((self.wiki / "index.html").read_text(encoding="utf-8"), HTML)
         self.assertEqual((self.wiki / "assets" / "app-abc.js").read_text(), "export {}")
+        self.assertEqual((self.wiki / "assets" / "outfit-abc.ttf").read_bytes(), b"font fixture")
         self.assertEqual((self.wiki / "redirect.html").read_text(), "redirect")
 
     def test_rejects_modified_index_and_colliding_asset_before_writing(self):

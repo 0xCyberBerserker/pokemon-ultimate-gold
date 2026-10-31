@@ -15,6 +15,8 @@ test('selected team renders every available IV and EV without closed sections', 
     const html = renderToStaticMarkup(React.createElement(TrainerExplorer, { data, language: 'en', mode: 'plus' }));
     assert.equal((html.match(/<progress\b/g) || []).length, trainer.members.length * 12);
     assert.equal((html.match(/class="member-card"/g) || []).length, trainer.members.length);
+    assert.equal((html.match(/class="stat-group stat-group-iv"/g) || []).length, trainer.members.length);
+    assert.equal((html.match(/class="stat-group stat-group-ev"/g) || []).length, trainer.members.length);
     assert.doesNotMatch(html, /<button[^>]*style=/);
     for (const card of html.match(/<article class="member-card">[\s\S]*?<\/article>/g) || []) {
       assert.equal((card.slice(0, card.indexOf('<details')).match(/<progress\b/g) || []).length, 12);

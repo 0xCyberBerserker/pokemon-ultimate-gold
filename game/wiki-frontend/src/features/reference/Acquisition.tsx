@@ -46,9 +46,20 @@ function statusLabel(status: string | undefined, es: boolean): string {
   }
 }
 
-export default function Acquisition({ records, language }: { records?: AcquisitionRecord[]; language: Language }) {
+export default function Acquisition({ records, language, compact = false }: { records?: AcquisitionRecord[]; language: Language; compact?: boolean }) {
   const es = language === 'es';
   if (!records?.length) return <p>{es ? 'No hay ubicación verificada para esta ROM.' : 'No verified in-game location is recorded for this ROM.'}</p>;
+  if (compact) return <div className="machine-acquisition-list">{records.map((record, index) => {
+    const method = record.status === 'verified_target_shop_stock' && record.price != null
+      ? es ? `Figura en una tienda por ₽${record.price.toLocaleString(language)}; la compra en juego no se ha probado.` : `Listed in a shop for ₽${record.price.toLocaleString(language)}; an in-game purchase has not been tested.`
+      : record.status === 'verified_event_script_static_no_gameplay'
+        ? (es ? 'La recogida en juego no se ha probado.' : 'In-game pickup has not been tested.')
+        : localized(record.method, language);
+    const caveat = record.status === 'documented_upstream'
+      ? (es ? 'Referencia del juego original; no confirmada en Ultimate Gold.' : 'Original-game reference; not confirmed in Ultimate Gold.')
+      : undefined;
+    return <article className="acquisition-record" key={index}><strong>{localized(record.location?.name, language)}</strong><p>{method}</p>{caveat && <small>{caveat}</small>}</article>;
+  })}</div>;
   return <div>{records.map((record, index) => {
     const evidence = record.evidence;
     const report = localPath(evidence?.report?.path);

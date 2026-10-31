@@ -1,0 +1,2 @@
+# Preserve the upstream SIL license files byte for byte.
+OFL-*.txt -whitespace

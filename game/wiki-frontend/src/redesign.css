@@ -3,26 +3,26 @@
 .brand strong { font-size: .9rem; line-height: 1.1; }
 .current-section { color: var(--muted); font-size: .85rem; }
 .nav-categories { display: flex; flex-wrap: wrap; gap: 4px; }
-.nav-categories button { display: inline-flex; align-items: center; gap: 7px; padding: 10px 14px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); font: 700 .85rem system-ui, sans-serif; }
+.nav-categories button { display: inline-flex; align-items: center; gap: 7px; padding: 10px 14px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); font: 700 .85rem "Nunito Sans", sans-serif; }
 .nav-categories button:hover, .nav-categories .category-current { color: var(--text); border-bottom-color: var(--gold); }
 .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
 .nav-links[hidden] { display: none; }
 .sidebar nav .nav-links a { display: flex; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 8px; color: var(--text); }
 .sidebar nav .nav-links a:hover { border-color: var(--line); background: var(--surface); }
 .sidebar nav .nav-links a.nav-current { border-color: var(--line); background: var(--gold-soft); }
-.controls, .filters, .preview-note, .note, .mode-note { font-family: system-ui, sans-serif; }
+.controls, .filters, .preview-note, .note, .mode-note { font-family: "Nunito Sans", sans-serif; }
 main h1 { font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.1; }
 .preview-note { margin-bottom: 16px; }
 .journey-layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 18px; align-items: start; }
 .journey-rail { min-width: 0; padding: 16px 12px; background: var(--nav); border: 1px solid var(--line); border-radius: 12px; }
 .journey-rail-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding: 2px 6px 12px; }
-.journey-rail-heading span { color: var(--muted); font: 600 .7rem system-ui, sans-serif; }
+.journey-rail-heading span { color: var(--muted); font: 600 .7rem "Nunito Sans", sans-serif; }
 .journey-stages { display: grid; gap: 3px; max-height: 70vh; overflow-y: auto; }
 .journey-stages button { width: 100%; text-align: left; padding: 9px 10px; border: 1px solid transparent; border-radius: 8px; color: var(--text); background: transparent; }
 .journey-stages button:hover { border-color: var(--line); }
 .journey-stages .stage-current { background: var(--gold-soft); border-color: var(--gold); font-weight: 700; }
 .journey-content { min-width: 0; }
-.filters-toggle { margin: 0 0 8px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); font: 600 .75rem system-ui, sans-serif; }
+.filters-toggle { margin: 0 0 8px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); font: 600 .75rem "Nunito Sans", sans-serif; }
 .journey-content .filters:not(.filters-open) { grid-template-columns: 1fr; }
 .journey-content .filters:not(.filters-open) label:not(:first-child) { display: none; }
 .journey-content .filters:not(.filters-open) label:first-child { grid-column: 1 / -1; }
@@ -31,13 +31,13 @@ main h1 { font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.1; }
 .journey-hero.has-art::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(18, 27, 24, .92), rgba(18, 27, 24, .65)); }
 .journey-illustration { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: -2; }
 .journey-hero.has-art p, .journey-hero.has-art small { color: #fff; }
-.journey-hero.has-art small { display: block; margin-top: 8px; font: .7rem system-ui, sans-serif; }
+.journey-hero.has-art small { display: block; margin-top: 8px; font: .7rem "Nunito Sans", sans-serif; }
 .journey-hero.has-art .count { background: #19221f; color: #fff; border-color: #56635d; }
 .journey-hero .count { padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); }
 .trainer-list-panel, .trainer-detail { min-width: 0; padding: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
 .trainer-list-panel > h2 { margin: 0 0 12px; font-size: 1.15rem; }
 .trainer-list-toggle { display: none; }
-.selection-notice { padding: 10px 12px; border-left: 3px solid var(--gold); background: var(--gold-soft); border-radius: 4px; font: .8rem/1.4 system-ui, sans-serif; }
+.selection-notice { padding: 10px 12px; border-left: 3px solid var(--gold); background: var(--gold-soft); border-radius: 4px; font: .8rem/1.4 "Nunito Sans", sans-serif; }
 .trainer-list { max-height: 900px; overflow-y: auto; }
 .trainer-option { background: var(--bg); }
 .trainer-sprite { position: relative; display: block; flex: none; overflow: hidden; image-rendering: pixelated; }
@@ -53,15 +53,21 @@ main h1 { font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.1; }
 .member-heading { align-items: center; }
 .member-heading > img { width: 82px; height: 82px; flex: none; border-radius: 8px; }
 .member-heading h3 { font-size: 1rem; }
-.member-card .type-badge { font: 700 .67rem system-ui, sans-serif; }
+.member-card .type-badge { font: 700 .67rem "Nunito Sans", sans-serif; }
 .stat-tables { grid-template-columns: 1fr; }
 .stat-group { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 2px; }
 .stat-group h4 { grid-column: 1 / -1; }
 .stat-line { display: flex; flex-direction: column; align-items: center; gap: 1px; min-width: 0; font-size: .65rem; }
 .stat-line progress { width: 100%; height: 5px; }
-.stat-line strong { width: 100%; text-align: center; background: var(--bg); border: 1px solid var(--line); border-radius: 4px; }
-.member-source { margin-top: 10px; color: var(--muted); font: .72rem/1.4 system-ui, sans-serif; }
+.stat-group-iv progress { accent-color: #4388b7; }
+.stat-group-ev progress { accent-color: #6b9a6e; }
+.stat-line strong { width: 100%; text-align: center; background: var(--bg); border: 1px solid var(--line); border-radius: 4px; font-size: .8rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.member-source { margin-top: 10px; color: var(--muted); font: .72rem/1.4 "Nunito Sans", sans-serif; }
 .member-source summary { cursor: pointer; }
+.compare-jump { margin-left: 8px; }
+.comparison-team .team-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.comparison-team .member-card { padding: 9px; }
+.comparison-team .member-heading > img { width: 56px; height: 56px; }
 
 @media (min-width: 851px) {
   .app-shell { grid-template-columns: 230px minmax(0, 1fr); grid-template-rows: auto auto 1fr auto; }

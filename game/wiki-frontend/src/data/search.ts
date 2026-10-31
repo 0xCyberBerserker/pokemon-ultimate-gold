@@ -2,14 +2,20 @@ import type { Language, Localized, WikiData } from './types.ts';
 import { localized } from './wiki.ts';
 import { normalizeSearch } from './text.ts';
 
-export interface SearchEntry { label: string; category: string; href: string; terms: string; normalized?: string }
+export interface SearchEntry { label: string; category: string; href: string; terms: string; detail?: string; normalized?: string }
 function names(value: Localized | undefined) { return `${value?.en || ''} ${value?.es || ''}`; }
 
 export function buildSearchIndex(data: WikiData, language: Language): SearchEntry[] {
   const es = language === 'es';
+  const trainerContext = (entry: WikiData['trainers'][number]) => {
+    const location = entry.locations?.map((place) => localized(place.name, language)).filter(Boolean).join(', ');
+    const stage = data.trainer_journey.stages.find((item) => item.id === entry.journey?.stage_id);
+    const kind = entry.journey?.kind === 'first_visit' ? (es ? 'Primera visita' : 'First visit') : entry.journey?.kind === 'rematch' ? (es ? 'Revancha' : 'Rematch') : '';
+    return [location || (stage ? localized(stage.name, language) : ''), kind].filter(Boolean).join(' · ');
+  };
   const entries = [
     ...data.species.map((entry) => ({ label: localized(entry.name, language), terms: `${entry.id} ${names(entry.name)}`, category: 'Pokédex', href: `#/pokemon/${entry.id}` })),
-    ...data.trainers.map((entry) => ({ label: `${localized(entry.class_name, language)} ${localized(entry.name, language)}`, terms: `${names(entry.class_name)} ${names(entry.name)}`, category: es ? 'Entrenadores' : 'Trainers', href: `#/trainers/${entry.id}` })),
+    ...data.trainers.map((entry) => ({ label: `${localized(entry.class_name, language)} ${localized(entry.name, language)}`, detail: trainerContext(entry), terms: `${names(entry.class_name)} ${names(entry.name)} ${(entry.locations || []).map((place) => names(place.name)).join(' ')} ${trainerContext(entry)}`, category: es ? 'Entrenadores' : 'Trainers', href: `#/trainers/${entry.id}` })),
     ...data.trainers.flatMap((entry) => (entry.locations || []).map((place) => ({ label: `${localized(place.name, language)} · ${localized(entry.name, language)}`, terms: `${names(place.name)} ${names(entry.name)}`, category: es ? 'Ubicaciones' : 'Locations', href: `#/trainers/${entry.id}` }))),
     ...Object.entries(data.moves).map(([id, entry]) => ({ label: localized(entry.name, language), terms: names(entry.name), category: es ? 'Movimientos' : 'Moves', href: `#/moves/${id}` })),
     ...Object.entries(data.abilities).map(([id, entry]) => ({ label: localized(entry.name, language), terms: `${names(entry.name)} ${names(entry.description)}`, category: es ? 'Habilidades' : 'Abilities', href: `#/abilities/${id}` })),

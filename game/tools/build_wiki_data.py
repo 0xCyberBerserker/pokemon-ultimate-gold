@@ -23,6 +23,10 @@ NATIVE_TARGET_SHA = "6e73ab1b8eb19f536793ce549c5fff2ba3c5b684b1c72ba819b5dffe376
 ALPHA1_SHOP_REPORT_SHA = "44d5e7c52922bcc0e7556d15dd6bfe5226d178fab270e90729ebe1560741eaca"
 ITEM_LOCATION_DOC_SHA = "5073d5b4356e992a1dbfb0fd3cd212323999ee927c1d2484c1f8475c42a67033"
 ALPHA2_TARGET_SHA = "24ea9b16615d35b37b3a75f6c7d6fb1397d5ac851b88db8b78b7d3857a2725f6"
+ALPHA2_DELTA_SHA = "1c7ba7258893cbcdb54748b28038c240b509e5e613a7b61a0be462eae3c9f045"
+KRIS_SPRINT2_TARGET_SHA = "fc0bf04ec57fa30121fdb50a4da3a94c300fc0abe171c96b3e60bc2e674baff4"
+KRIS_SPRINT2_DELTA_SHA = "8b99a32c572469985158690ee00251d842e43f1fdb4cb69777e3c6ccd1aa3f99"
+TMHM_COMPATIBILITY_SHA = "fea58ae4ab0f66bdbe435e6dd3a60a31cc0dbbaad14898dc3a674573bb298701"
 SPECIES_STAT_COMPARISON_SHA = "f2d3431d8c85a2aaf2558809891a2964cd15b97a1552aeb55dc1e6325630ebed"
 ALPHA2_BUILD_REPORT_SHA = "12f76a7c3afff0942ea7bc920fda4c0c45341c162d80f60627b8bba5787301a3"
 ALPHA2_SHOP_REPORT_SHA = "f2dfd66a494c262d80af5b2781439b2f7df093dfe4cccdec36573ecca433225d"
@@ -61,6 +65,57 @@ def digest(path):
 
 def digest_bytes(data):
     return hashlib.sha256(data).hexdigest()
+
+def load_tmhm_compatibility(target_hash):
+    """Load species compatibility only when its exact build is evidenced."""
+    if target_hash not in {ALPHA2_TARGET_SHA, KRIS_SPRINT2_TARGET_SHA}:
+        return None
+    path = ROOT / "docs/tmhm-compatibility.json"
+    if not path.is_file() or digest(path) != TMHM_COMPATIBILITY_SHA:
+        raise ValueError("TM/HM compatibility data differs from its reviewed derived-data pin")
+    report = json.loads(path.read_text(encoding="utf-8"))
+    personal = report.get("personal_data", {})
+    comparison = report.get("comparison", {})
+    expected_targets = {ALPHA2_TARGET_SHA, KRIS_SPRINT2_TARGET_SHA}
+    targets = report.get("targets", {})
+    expected_builds = {
+        "alpha2": (ALPHA2_TARGET_SHA, ALPHA2_DELTA_SHA),
+        "kris-sprint2": (KRIS_SPRINT2_TARGET_SHA, KRIS_SPRINT2_DELTA_SHA),
+    }
+    if set(targets) != set(expected_builds):
+        raise ValueError("TM/HM compatibility report does not include the exact reviewed builds")
+    for build_name, (expected_target, expected_delta) in expected_builds.items():
+        entry = targets[build_name]
+        if (entry.get("target_sha256") != expected_target
+                or entry.get("delta_sha256") != expected_delta
+                or entry.get("personal_narc_sha256") != "5f193d2eacddf0ffef9daf7acebd35dcdb21c30f59ab497759c3b7cc335f2d40"
+                or entry.get("machine_move_ids_sha256") != "1b2243d64d44d6db20da98374001468d8b316d89394a5642531827549cd3d645"):
+            raise ValueError(f"TM/HM compatibility provenance mismatch for {build_name}")
+    if (report.get("schema") != "ultimate-gold-tmhm-compatibility/v1"
+            or report.get("source_sha256") != "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105"
+            or personal != {"path": "a/0/0/2", "record_size": 44, "records": 508,
+                            "compatibility_offset": 28, "compatibility_bytes": 13,
+                            "bit_order": "LSB0", "index_order": "TM01–TM92, HM01–HM08"}
+            or set(comparison.get("targets", [])) != expected_targets
+            or comparison.get("personal_narc_sha256") != "5f193d2eacddf0ffef9daf7acebd35dcdb21c30f59ab497759c3b7cc335f2d40"
+            or comparison.get("personal_narc_equal") is not True
+            or comparison.get("machine_move_count") != 100
+            or comparison.get("machine_move_ids_sha256") != "1b2243d64d44d6db20da98374001468d8b316d89394a5642531827549cd3d645"
+            or comparison.get("machine_move_ids_equal") is not True
+            or comparison.get("compatibility_equal") is not True):
+        raise ValueError("TM/HM compatibility provenance or cross-build comparison is incomplete")
+    target = next((entry for entry in report.get("targets", {}).values()
+                   if entry.get("target_sha256") == target_hash), None)
+    if target is None:
+        return None
+    by_species = target.get("by_species", {})
+    if set(by_species) != {str(species_id) for species_id in range(1, 494)}:
+        raise ValueError("TM/HM compatibility data must cover National species 1–493")
+    for species_id, item_ids in by_species.items():
+        if (not isinstance(item_ids, list) or item_ids != sorted(set(item_ids))
+                or any(not isinstance(item_id, int) or item_id < 328 or item_id > 427 for item_id in item_ids)):
+            raise ValueError(f"Invalid TM/HM compatibility list for species {species_id}")
+    return {"target_sha256": target_hash, "by_species": by_species}
 
 def load_species_stat_comparison(target_hash, species_doc):
     if target_hash != ALPHA2_TARGET_SHA:
@@ -1111,6 +1166,13 @@ def main():
                               "ability_slots":"Exact target standard ability slots 1/2; the native personal format and selector do not expose a third hidden-ability slot. A canonically hidden ability placed in slot 2 by the hack remains a standard slot in this build.",
                               "descriptions":"English item descriptions use HGSS-matched references except three project custom strings stored in bank 223. Spanish descriptions use matched references and project translations with HGSS-mechanics corrections. These are wiki references, not proof of native target-ROM effects or Bag text.",
                               "sprites":"Pinned PokeAPI sprites; separate provenance manifests.","runtime":"NOT_RUN"}}
+    tmhm_compatibility = load_tmhm_compatibility(target_hash)
+    if tmhm_compatibility:
+        result["tmhm_compatibility"] = tmhm_compatibility
+        result["source_notes"]["tmhm_compatibility"] = (
+            "Per-species TM/HM flags read from the exact target personal NARC. Alpha 2 and Kris Sprint 2 target hashes, "
+            "personal NARC and all 100 move assignments were compared; this is static data, not gameplay acceptance."
+        )
     if species_stat_comparison:
         result["species_stat_comparison"] = {
             key: species_stat_comparison[key]

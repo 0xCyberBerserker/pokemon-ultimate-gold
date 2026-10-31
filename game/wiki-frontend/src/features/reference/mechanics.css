@@ -1,0 +1,121 @@
+.mechanics-page > .section-title {
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mechanics-data-badge {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: var(--muted);
+  background: var(--surface);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.mechanics-intro,
+.mechanics-outcomes > p {
+  max-width: 75ch;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.mechanics-pending {
+  margin: 18px 0 26px;
+  border-inline-start: 4px solid var(--gold);
+}
+
+.mechanics-pending p,
+.mechanics-outcome p,
+.mechanics-technical-report p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.mechanics-outcomes h2 {
+  margin-bottom: 4px;
+}
+
+.mechanics-outcome-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 10px;
+  margin: 16px 0 24px;
+}
+
+.mechanics-outcome {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+}
+
+.mechanics-outcome-symbol {
+  display: grid;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--text);
+  background: var(--bg);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.mechanics-outcome h3 {
+  margin: 2px 0 0;
+  font-size: 1rem;
+}
+
+.mechanics-technical-report {
+  margin-top: 20px;
+}
+
+.mechanics-technical-report > summary {
+  cursor: pointer;
+  padding: 4px 0;
+  font-weight: 700;
+}
+
+.mechanics-technical-report > p {
+  font-weight: 700;
+}
+
+.mechanics-technical-report .guide-html {
+  margin-top: 12px;
+}
+
+.mechanics-technical-report .guide-html :is(p, li, td, th) {
+  line-height: 1.55;
+}
+
+.mechanics-technical-report .guide-html table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mechanics-technical-report .guide-html :is(th, td) {
+  padding: 7px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.mechanics-technical-report .guide-html a {
+  color: var(--gold);
+}
+
+.mechanics-page :is(a, summary):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .mechanics-technical-report .guide-html table {
+    display: block;
+    overflow-x: auto;
+  }
+}
