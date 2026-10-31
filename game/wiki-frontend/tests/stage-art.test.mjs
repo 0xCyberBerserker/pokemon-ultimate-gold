@@ -41,16 +41,42 @@ function webpDimensions(image) {
 
 test('decorative illustrations are bound to their own documented stages', async () => {
   const journey = JSON.parse(await readFile(new URL('../../web/data/trainer-journey.json', import.meta.url)));
+  const webpHashes = {
+    'sprout-tower.png': 'f02e1a5b0618071e2e6f352bc8a3f8065f610e17bed672829ff4590e31c3f8ae',
+    'ruins-of-alph.png': '12e6128a9093074bf45dbe55d3f205f8082133aa34eb3c3c5dae334d78719a9b',
+    'violet-city-gym.png': 'cd2942c36f7f7f88d007c747a4bff36c0af12a41b7b0bc54bce670fe0e3ac930',
+    'union-cave.png': '2701a49a31b95182dc5c835b1d8678b668d1e4158d7a71f76c0633f5af768f58',
+    'slowpoke-well.png': '9738eed2125656f43958cfaa577cacab92040578b2fd97917473491cf5785e15',
+    'azalea-town-gym.png': '7e3fda41852d71f2de1912f76a8f7964649b0c0fe20c31fe8991ed00d94bbf6f',
+    'azalea-town.png': '562085b3ca7744d2d2db7f7388e1db82d291b897a78689d29b89a9f60cf28a40',
+    'goldenrod-tunnel.png': '638724d15833fe7181fb7eb571eb9415c2d65bb3fccfda0a7f26b5e4cad5a507',
+    'goldenrod-city-gym.png': '8bde7444406718bd14b9a887f7a40ba57a20cff5b622f50dce52c7030acd7e8b',
+    'national-park.png': '6224e44b5b041b6d31eaf3324477b8f2a382b077e22508a815c85718c35892d9',
+    'burned-tower.png': '5c2444bdf9f4c113dd8bdadb1d52c76d99c76adc1f20858fcded2e3bb238c58f',
+    'ecruteak-city.png': '8aaa19b429e3237af91bfd4234797026e0e0841cc5b96ac66b54227da0b139c1',
+  };
   const cases = [
     ['stage-01', 'Cherrygrove City', 'cherrygrove-city.png', '38dc8fcf71e931df9953dab85963d9bc0d732bccf174fa4edd8fba6d9576059f'],
     ['stage-02', 'Route 30', 'route-30.png', '0c0d9bca9a3346014dd0a19c3b3efe5daf5f5491cabd428576acaec2395c98fd'],
     ['stage-03', 'Route 31', 'route-31.png', 'a02ccb20c73d48845b90179c016d137544dd2b616a60e7e69767286ae14eb549'],
+    ['stage-04', 'Sprout Tower', 'sprout-tower.png', 'e41561ed67c0736ceb771966ef52648f07406a9539963e153458f7af4f32d6aa'],
+    ['stage-05', 'Ruins of Alph', 'ruins-of-alph.png', '5b5cd31f9398171eae3ece812f9aa4c05dae32440291ecd19974772cf6ecd253'],
+    ['stage-06', 'Violet City Gym', 'violet-city-gym.png', 'ee406c34b8416f28e2472aa1c72f3eef374195ff6d45ab918c1fd9c6f7fa7325'],
     ['stage-07', 'Route 32', 'route-32.png', '9a6080a93c2a7fc8421e001ac9a5c5173391bba7fc4dab5dc6f0ca64ecd11463'],
+    ['stage-08', 'Union Cave', 'union-cave.png', '8fe84b00c07ab8712809e92394afa1c8d3c077a000f64dc13351b09f8690d056'],
     ['stage-09', 'Route 33', 'route-33.png', '179c58c17659fb4374415c1291e11b639ec7860ac271d518a9d745fcf21ffaba'],
+    ['stage-10', 'Slowpoke Well', 'slowpoke-well.png', 'e3ef1de14cbfd8be348bf4c629bd1b104421ca63d3c80424adf3db88527ab8da'],
+    ['stage-11', 'Azalea Town Gym', 'azalea-town-gym.png', '98feaa4be2746200f8fc5701ef628604ee7abcac44f2c96f3fce83406172af16'],
+    ['stage-12', 'Azalea Town', 'azalea-town.png', '261a9266b445f2df6828b74d31b4f7ec77613e5127ee1b4ece2f61cce3d8eaa0'],
     ['stage-13', 'Route 34', 'route-34.png', 'f06afe6f354670055cd5f25e1173d2e159c072961da10e5cb4404cfac5c38033'],
+    ['stage-14', 'Goldenrod Tunnel', 'goldenrod-tunnel.png', 'fed5082c1700d7252be75f35abec9392954173300a86e14c80e8272c56e55fc9'],
+    ['stage-15', 'Goldenrod City Gym', 'goldenrod-city-gym.png', '02f8d2e3e1f59da80279f8a834c805daf3c4f0696218e38d6e563c8aac0b2ca2'],
     ['stage-17', 'Route 35', 'route-35.png', '7da0e49fb39bd47928d12c2aeae46777b7242b2ce877260cd1775f7d23d3a6a6'],
+    ['stage-18', 'National Park', 'national-park.png', '9d1153445413a3a59d67caf242864eddb8e15dcd4b5df66063705c919535f820'],
     ['stage-19', 'Route 36', 'route-36.png', 'b03a3d3023b1a50a2f278a2d51f04fb5706eb50b10c74436a5b2486f64f9bcf9'],
     ['stage-20', 'Route 37', 'route-37.png', '043f6641452e706550b0bece324510a9add443792d149887c1c3aabbcdb61b99'],
+    ['stage-21', 'Burned Tower', 'burned-tower.png', 'e75e36447476b7b769116153bf718f4dec3cd3cc7df671efcc52980899f9d844'],
+    ['stage-22', 'Ecruteak City', 'ecruteak-city.png', '7337ec490276d83e212bee375039b25768b3e835893875da1b4eabaa94d3a0fa'],
     ['stage-24', 'Route 38', 'route-38.png', '4238c63b302ed805c9b35d167cff54b356cc60a0d63e30c718a7c46fbd65a7e3'],
     ['stage-25', 'Route 39', 'route-39.png', 'fb3234d3e345160e4e652f76faee48a5a8879a0f6f3ecb4abf7207ef250e509a'],
     ['stage-28', 'Route 40', 'route-40.png', 'cc7e931e3932b8d3667984a1ffdbcd8994a6b2a439652f6b8d041054a38f30ac'],
@@ -94,13 +120,13 @@ test('decorative illustrations are bound to their own documented stages', async 
     const webpPath = new URL(`../../web/assets/locations/${file.replace(/\.png$/, '.webp')}`, import.meta.url);
     const webp = await readFile(webpPath);
     assert.ok(webp.byteLength > 0, `${file} WebP exists`);
+    if (webpHashes[file]) assert.equal(createHash('sha256').update(webp).digest('hex'), webpHashes[file]);
     const [sourceWidth, sourceHeight] = pngDimensions(image);
     const [webpWidth, webpHeight] = webpDimensions(webp);
     assert.ok(webpWidth <= 1600 && webpHeight <= 1600, `${file} WebP stays within 1600px`);
     assert.ok(webpWidth <= sourceWidth && webpHeight <= sourceHeight, `${file} WebP is not enlarged`);
     assert.ok(Math.abs(webpWidth / webpHeight - sourceWidth / sourceHeight) < 0.01, `${file} aspect ratio is preserved`);
   }
-  assert.equal(stageIllustration('stage-04'), undefined);
   assert.equal(stageIllustration('other'), undefined);
 });
 
@@ -114,12 +140,24 @@ test('stage banners label art in both languages and leave other stages neutral',
       ['stage-01', 'es', 'Ilustración decorativa', 'cherrygrove-city.png'],
       ['stage-02', 'es', 'Ilustración decorativa', 'route-30.png'],
       ['stage-03', 'en', 'Decorative illustration', 'route-31.png'],
+      ['stage-04', 'es', 'Ilustración decorativa', 'sprout-tower.png'],
+      ['stage-05', 'en', 'Decorative illustration', 'ruins-of-alph.png'],
+      ['stage-06', 'es', 'Ilustración decorativa', 'violet-city-gym.png'],
       ['stage-07', 'en', 'Decorative illustration', 'route-32.png'],
+      ['stage-08', 'en', 'Decorative illustration', 'union-cave.png'],
       ['stage-09', 'es', 'Ilustración decorativa', 'route-33.png'],
+      ['stage-10', 'es', 'Ilustración decorativa', 'slowpoke-well.png'],
+      ['stage-11', 'en', 'Decorative illustration', 'azalea-town-gym.png'],
+      ['stage-12', 'es', 'Ilustración decorativa', 'azalea-town.png'],
       ['stage-13', 'en', 'Decorative illustration', 'route-34.png'],
+      ['stage-14', 'en', 'Decorative illustration', 'goldenrod-tunnel.png'],
+      ['stage-15', 'es', 'Ilustración decorativa', 'goldenrod-city-gym.png'],
       ['stage-17', 'es', 'Ilustración decorativa', 'route-35.png'],
+      ['stage-18', 'en', 'Decorative illustration', 'national-park.png'],
       ['stage-19', 'en', 'Decorative illustration', 'route-36.png'],
       ['stage-20', 'es', 'Ilustración decorativa', 'route-37.png'],
+      ['stage-21', 'es', 'Ilustración decorativa', 'burned-tower.png'],
+      ['stage-22', 'en', 'Decorative illustration', 'ecruteak-city.png'],
       ['stage-24', 'en', 'Decorative illustration', 'route-38.png'],
       ['stage-25', 'es', 'Ilustración decorativa', 'route-39.png'],
       ['stage-28', 'en', 'Decorative illustration', 'route-40.png'],
@@ -163,7 +201,7 @@ test('stage banners label art in both languages and leave other stages neutral',
       assert.ok(html.includes(`<picture><source type="image/webp" srcSet="../assets/locations/${file.replace(/\.png$/, '.webp')}"/><img class="journey-illustration" src="../assets/locations/${file}" alt=""/></picture>`));
       assert.match(html, /journey-hero has-art/);
     }
-    globalThis.sessionStorage = { getItem: () => JSON.stringify({ stage: 'stage-04' }) };
+    globalThis.sessionStorage = { getItem: () => JSON.stringify({ stage: 'other' }) };
     const html = renderToStaticMarkup(React.createElement(TrainerExplorer, { data, language: 'en', mode: 'normal' }));
     assert.doesNotMatch(html, /journey-hero has-art|Decorative illustration/);
   } finally {
