@@ -6,10 +6,20 @@ These original AI-generated illustrations are atmospheric artwork, not screensho
 
 | Stage | File | Origin | SHA-256 |
 | --- | --- | --- | --- |
+| Cherrygrove City | `web/assets/locations/cherrygrove-city.png` | OpenAI image generator, generated for this wiki at the project owner's request | `38dc8fcf71e931df9953dab85963d9bc0d732bccf174fa4edd8fba6d9576059f` |
 | Route 30 | `web/assets/locations/route-30.png` | ChatGPT conversation, generated for this wiki and downloaded by the user | `0c0d9bca9a3346014dd0a19c3b3efe5daf5f5491cabd428576acaec2395c98fd` |
 | Route 31 | `web/assets/locations/route-31.png` | Built-in image generator, using the Route 30 illustration as a visual style reference | `a02ccb20c73d48845b90179c016d137544dd2b616a60e7e69767286ae14eb549` |
+| Route 32 | `web/assets/locations/route-32.png` | OpenAI image generator, generated for this wiki at the project owner's request | `9a6080a93c2a7fc8421e001ac9a5c5173391bba7fc4dab5dc6f0ca64ecd11463` |
 
 The Route 30 prompt requested a Johto rural path, trees, grass and river, with no Ho-Oh, text or interface. The Route 31 prompt requested a wooded path, cave and pond, with no text, logos, interface, identifiable characters or Pokémon. Generation was requested by the project owner. As between the user and OpenAI, [OpenAI's European terms](https://openai.com/policies/eu-terms-of-use/) assign output rights as permitted by law; third-party rights remain independent. The images contain no extracted game artwork.
+
+The Cherrygrove City artwork depicts a generic coastal settlement. The Route 32 artwork depicts a generic path beside the sea. Both are decorative and do not establish the game's layout or geography.
+
+### Generated artwork awaiting a matching stage
+
+| Intended stage | Original output | Origin | SHA-256 |
+| --- | --- | --- | --- |
+| Route 29 | Route 29 illustration, retained outside the repository | OpenAI image generator, generated for this wiki at the project owner's request; not included in the wiki until a matching route view exists | `a8343b456863d3717f8aeda7fbfd84dc94c14884091512240ea2d4243daeca39` |
 
 ## Español
 
@@ -17,7 +27,17 @@ Estas ilustraciones originales generadas con IA son arte ambiental, no capturas 
 
 | Etapa | Archivo | Procedencia | SHA-256 |
 | --- | --- | --- | --- |
+| Ciudad Cerezo | `web/assets/locations/cherrygrove-city.png` | Generador de imágenes de OpenAI, creado para esta wiki por solicitud del propietario | `38dc8fcf71e931df9953dab85963d9bc0d732bccf174fa4edd8fba6d9576059f` |
 | Ruta 30 | `web/assets/locations/route-30.png` | Conversación de ChatGPT, generada para esta wiki y descargada por el usuario | `0c0d9bca9a3346014dd0a19c3b3efe5daf5f5491cabd428576acaec2395c98fd` |
 | Ruta 31 | `web/assets/locations/route-31.png` | Generador integrado de imágenes, con la ilustración de Ruta 30 como referencia visual | `a02ccb20c73d48845b90179c016d137544dd2b616a60e7e69767286ae14eb549` |
+| Ruta 32 | `web/assets/locations/route-32.png` | Generador de imágenes de OpenAI, creado para esta wiki por solicitud del propietario | `9a6080a93c2a7fc8421e001ac9a5c5173391bba7fc4dab5dc6f0ca64ecd11463` |
 
 El encargo de Ruta 30 pidió un camino rural de Johto, árboles, hierba y río, sin Ho-Oh, texto ni interfaz. El de Ruta 31 pidió un camino arbolado, cueva y estanque, sin texto, logotipos, interfaz, personajes identificables ni Pokémon. El propietario del proyecto solicitó su generación. Entre usuario y OpenAI, los [términos europeos de OpenAI](https://openai.com/policies/eu-terms-of-use/) asignan los derechos sobre el resultado en la medida permitida por la ley; los derechos de terceros son independientes. Las imágenes no contienen arte extraído del juego.
+
+La ilustración de Ciudad Cerezo muestra una población costera genérica y la de Ruta 32 muestra un camino genérico junto al mar. Ambas son decorativas y no acreditan el diseño ni la geografía del juego.
+
+### Arte generado pendiente de una etapa correspondiente
+
+| Etapa prevista | Original | Procedencia | SHA-256 |
+| --- | --- | --- | --- |
+| Ruta 29 | Ilustración de Ruta 29 conservada fuera del repositorio | Generador de imágenes de OpenAI, creado para esta wiki por solicitud del propietario; no se incorpora hasta que exista una vista de esa ruta | `a8343b456863d3717f8aeda7fbfd84dc94c14884091512240ea2d4243daeca39` |
