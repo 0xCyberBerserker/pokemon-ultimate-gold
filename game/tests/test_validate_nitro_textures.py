@@ -18,6 +18,16 @@ def dictionary(name, entry):
     return struct.pack('<BBHHHI', 0, 1, size, 8, 16, 0x17f) + bytes(4) + struct.pack('<HH', len(entry), 4 + len(entry)) + entry + name.ljust(16, b'\0')
 
 
+def dictionary_many(entries):
+    count = len(entries)
+    unit = len(entries[0][1])
+    size = 12 + 4 * count + 4 + unit * count + 16 * count
+    return (struct.pack('<BBHHHI', 0, count, size, 8, 12 + 4 * count, 0x17f)
+            + bytes(4 * count) + struct.pack('<HH', unit, 4 + unit * count)
+            + b''.join(value for _, value in entries)
+            + b''.join(name.ljust(16, b'\0') for name, _ in entries))
+
+
 def container(magic, chunks):
     offset = 16 + 4 * len(chunks)
     positions = []
@@ -66,6 +76,25 @@ def compressed_fixture():
     return container(b'BTX0', [block])
 
 
+def texture_variant(fmt, fill=0):
+    texdict = dictionary(b'tex', struct.pack('<II', fmt << 26, 0))
+    paldict = dictionary(b'pal', bytes(4))
+    block = bytearray(0x3c) + texdict + paldict
+    length = {1: 64, 2: 16, 3: 32, 4: 64, 6: 64, 7: 128}[fmt]
+    tex_at = len(block)
+    block += bytes([fill] * length)
+    pal_at = len(block)
+    block += bytes(32)
+    block[:4] = b'TEX0'
+    struct.pack_into('<I', block, 4, len(block))
+    struct.pack_into('<HH', block, 0x0c, length // 8, 0x3c)
+    struct.pack_into('<I', block, 0x14, tex_at)
+    struct.pack_into('<I', block, 0x34, 0x3c + len(texdict))
+    struct.pack_into('<H', block, 0x30, 4)
+    struct.pack_into('<I', block, 0x38, pal_at)
+    return container(b'BTX0', [block])
+
+
 def pattern(texture=b'tex', palette=b'pal', track_name=b'mat'):
     entry = struct.pack('<I', 48)
     block = bytearray(b'PAT0' + bytes(4) + dictionary(b'anim', entry))
@@ -83,18 +112,53 @@ def pattern(texture=b'tex', palette=b'pal', track_name=b'mat'):
 def model(texture=b'tex', palette=b'pal', material_index=0):
     # One model and one material, with names bound through two dictionaries.
     td = dictionary(texture, bytes(4))
-    pd = dictionary(palette, bytes(4))
+    pd = dictionary(palette, bytes(4)) if palette is not None else struct.pack('<BBHHHIHH', 0, 0, 16, 8, 12, 0x7f, 4, 4)
     md = dictionary(b'mat', bytes(4))
     mats = bytearray(4) + md + td + pd + bytes([material_index, 0])
     struct.pack_into('<HH', mats, 0, 4 + len(md), 4 + len(md) + len(td))
     struct.pack_into('<HB', mats, 4 + len(md) + 20, len(mats) - 2, 1)
-    struct.pack_into('<HB', mats, 4 + len(md) + len(td) + 20, len(mats) - 1, 1)
+    if palette is not None:
+        struct.pack_into('<HB', mats, 4 + len(md) + len(td) + 20, len(mats) - 1, 1)
     model_data = bytearray(12) + mats
     struct.pack_into('<I', model_data, 0, len(model_data))
     struct.pack_into('<I', model_data, 8, 12)
     mdl = bytearray(b'MDL0' + bytes(4) + dictionary(b'model', struct.pack('<I', 48))) + model_data
     struct.pack_into('<I', mdl, 4, len(mdl))
     return container(b'BMD0', [mdl, fixture()[20:]])
+
+
+def ambiguous_model_and_textures():
+    md = dictionary(b'mat', bytes(4))
+    td = dictionary_many([(b'tex', bytes(4)), (b'alt', bytes(4))])
+    pd = dictionary(b'pal', bytes(4))
+    mats = bytearray(4) + md + td + pd + bytes([0, 0])
+    td_at, pd_at = 4 + len(md), 4 + len(md) + len(td)
+    struct.pack_into('<HH', mats, 0, td_at, pd_at)
+    for i in range(2):
+        struct.pack_into('<HB', mats, td_at + 24 + 4 * i, len(mats) - 2, 1)
+    struct.pack_into('<HB', mats, pd_at + 20, len(mats) - 1, 1)
+    model_data = bytearray(12) + mats
+    struct.pack_into('<II', model_data, 0, len(model_data), 0)
+    struct.pack_into('<I', model_data, 8, 12)
+    mdl = bytearray(b'MDL0' + bytes(4) + dictionary(b'model', struct.pack('<I', 48))) + model_data
+    struct.pack_into('<I', mdl, 4, len(mdl))
+    model_resource = container(b'BMD0', [mdl])
+    texentry = struct.pack('<II', 3 << 26, 0)
+    texdict = dictionary_many([(b'tex', texentry), (b'alt', texentry)])
+    paldict = dictionary(b'pal', bytes(4))
+    block = bytearray(0x3c) + texdict + paldict
+    tex_at = len(block)
+    block += bytes(32)
+    pal_at = len(block)
+    block += bytes(32)
+    block[:4] = b'TEX0'
+    struct.pack_into('<I', block, 4, len(block))
+    struct.pack_into('<HH', block, 0x0c, 4, 0x3c)
+    struct.pack_into('<I', block, 0x14, tex_at)
+    struct.pack_into('<I', block, 0x34, 0x3c + len(texdict))
+    struct.pack_into('<H', block, 0x30, 4)
+    struct.pack_into('<I', block, 0x38, pal_at)
+    return model_resource, container(b'BTX0', [block])
 
 
 def fixture_2d():
@@ -298,6 +362,42 @@ class NitroTextureTest(unittest.TestCase):
             struct.pack_into('<I', damaged, first + field, value)
             with self.subTest(field=field), self.assertRaises(ValueError):
                 module.validate(container(b'BMD0', [damaged, fixture()[20:]]))
+
+    def test_static_material_pairs_formats_and_palette_bounds(self):
+        for fmt in (1, 2, 3, 4, 6, 7):
+            data = texture_variant(fmt)
+            report = module.validate(model(palette=None if fmt == 7 else b'pal'), external=data)
+            self.assertEqual(report['material_pair_checks'][0]['status'], 'BUFFER_BOUNDS_CHECKED')
+            self.assertEqual(report['material_pair_checks'][0]['format'], fmt)
+        report = module.validate(model(), external=compressed_fixture())
+        self.assertEqual(report['material_pair_checks'][0]['format'], 5)
+        self.assertEqual(report['material_pair_checks'][0]['status'], 'BUFFER_BOUNDS_CHECKED')
+        for fmt, byte in ((1, 31), (4, 255)):
+            with self.subTest(fmt=fmt), self.assertRaisesRegex(ValueError, 'material palette read'):
+                module.validate(model(), external=texture_variant(fmt, byte))
+        for fmt in (3, 6):
+            damaged = bytearray(texture_variant(fmt, 0xff))
+            struct.pack_into('<H', damaged, 20 + 0x30, 1)
+            with self.subTest(fmt=fmt), self.assertRaisesRegex(ValueError, 'material palette read'):
+                module.validate(model(), external=bytes(damaged))
+        damaged = bytearray(compressed_fixture())
+        aux = 20 + struct.unpack_from('<I', damaged, 20 + 0x28)[0]
+        struct.pack_into('<H', damaged, aux, 0x3fff)
+        with self.assertRaisesRegex(ValueError, '4x4 palette read'):
+            module.validate(model(), external=bytes(damaged))
+        missing = module.validate(model(palette=None), external=texture_variant(3))
+        self.assertEqual(missing['material_pair_checks'][0]['status'], 'INCOMPLETE')
+
+    def test_ambiguous_material_bindings_and_texture_alias(self):
+        model_data, textures = ambiguous_model_and_textures()
+        report = module.validate(model_data, external=textures)
+        self.assertEqual(report['status'], 'INCOMPLETE')
+        pair = report['material_pair_checks'][0]
+        self.assertEqual(pair['status'], 'INCOMPLETE')
+        self.assertIn('ambiguous', pair['reason'])
+        self.assertIn('static material buffer bounds (0 of 1 materials)', report['checked'])
+        alias = module.validate(model(texture=b'alt'), external=textures)
+        self.assertEqual(alias['material_pair_checks'][0]['status'], 'BUFFER_BOUNDS_CHECKED')
 
     def test_external_texture_set(self):
         model_data = model()
