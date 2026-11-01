@@ -2,7 +2,7 @@
 
 ## English
 
-Follow the play path in order: patch, start safely, learn the build, consult the wiki, then decide whether to use optional cheats.
+Keep the original game file and back up your saves. Apply the patch, create a separate save for the selected build, review its changes, consult the wiki, and decide whether to use optional cheats.
 
 ### 1. Prepare the game
 
@@ -36,7 +36,7 @@ Made with 🖤 in Barcelona City 🇪🇸
 
 ## Español
 
-Sigue el recorrido en este orden: aplica el parche, inicia una partida segura, conoce los cambios, consulta la wiki y decide después si quieres activar trucos opcionales.
+Conserva el archivo de juego original y haz copias de tus partidas. Aplica el parche, crea una partida separada para la versión elegida, consulta sus cambios y la wiki, y decide si quieres usar trucos opcionales.
 
 ### 1. Prepara el juego
 

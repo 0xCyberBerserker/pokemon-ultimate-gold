@@ -2,7 +2,7 @@
 
 ## English
 
-Ultimate Gold is a custom HeartGold patch with checked components from the Drayano and Sacred Gold Plus lineages. The diagram separates credited lineage from the actual patch route.
+Ultimate Gold is a custom HeartGold patch with checked components from the Drayano and Sacred Gold Plus lineages. The [wiki’s Features page](https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/#/guide/features) separates credited lineage from the available direct patch choices.
 
 ### HeartGold foundation
 - All selectable builds target the same clean 128 MiB Pokémon HeartGold USA input. The patcher verifies its exact hash; no ROM is distributed here.
@@ -29,7 +29,7 @@ Ultimate Gold is a custom HeartGold patch with checked components from the Draya
 
 ## Español
 
-Ultimate Gold es un parche personalizado de HeartGold con componentes comprobados de las líneas de Drayano y Sacred Gold Plus. El diagrama separa el linaje acreditado de la ruta real del parche.
+Ultimate Gold es un parche personalizado de HeartGold con componentes comprobados de las líneas de Drayano y Sacred Gold Plus. La [página de Características de la wiki](https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/#/guide/features) separa el linaje acreditado de las opciones de parche directo disponibles.
 
 ### Base HeartGold
 - Todas las versiones seleccionables parten de la misma entrada limpia de Pokémon HeartGold USA, de 128 MiB. El parcheador verifica su hash exacto; aquí no se distribuye ninguna ROM.
