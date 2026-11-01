@@ -177,12 +177,49 @@ def check_compressed_pair(data, texture_name, palette_name):
     return count
 
 
+def check_material_pair(data, texture_name, palette_name):
+    """Validate reads for one unambiguous static material binding."""
+    t = one_block(data, (b'BTX0', b'BMD0'), b'TEX0')
+    base = t.start
+    textures = dict(t.dictionary(base + t.u16(base + 0x0e), 8))
+    palettes = dict(t.dictionary(base + t.u32(base + 0x34), 4))
+    param = struct.unpack_from('<I', textures[texture_name])[0]
+    fmt = (param >> 26) & 7
+    if fmt == 7:
+        return fmt
+    if fmt not in (1, 2, 3, 4, 5, 6):
+        raise Unsupported(f'unsupported texture format {fmt}')
+    if palette_name is None:
+        raise Unsupported('indexed texture has no unique palette binding')
+    if fmt == 5:
+        check_compressed_pair(data, texture_name, palette_name)
+        return fmt
+    width, height = 8 << ((param >> 20) & 7), 8 << ((param >> 23) & 7)
+    bpp = {1: 8, 2: 2, 3: 4, 4: 8, 6: 8}[fmt]
+    offset = (param & 0xffff) * 8
+    raw = t.get(base + t.u32(base + 0x14) + offset, width * height * bpp // 8)
+    if fmt in (1, 6):
+        mask = 31 if fmt == 1 else 7
+        max_index = max((byte & mask for byte in raw), default=0)
+    elif fmt in (2, 3):
+        bits = 2 if fmt == 2 else 4
+        mask = (1 << bits) - 1
+        max_index = max(((byte >> shift) & mask for byte in raw for shift in range(0, 8, bits)), default=0)
+    else:
+        max_index = max(raw, default=0)
+    pal_start = struct.unpack_from('<H', palettes[palette_name])[0] * 8
+    pal_size = t.u16(base + 0x30) * 8
+    if pal_start + (max_index + 1) * 2 > pal_size:
+        raise ValueError(f'material palette read out of supplied buffer: {texture_name}')
+    return fmt
+
+
 # Binding dictionary layout adapted from HoennB2 nsbtx.py (MIT).
 def material_names(data):
     mdl = one_block(data, (b'BMD0',), b'MDL0')
     models = mdl.dictionary(mdl.start + 8, 4)
-    tex_names, pal_names, model_materials = set(), set(), set()
-    for _, entry in models:
+    tex_names, pal_names, model_materials, bindings = set(), set(), set(), []
+    for model_name, entry in models:
         model = mdl.start + struct.unpack_from('<I', entry)[0]
         size = mdl.u32(model)
         if size < 12:
@@ -193,7 +230,8 @@ def material_names(data):
         materials = local.dictionary(mats + 4, 4)
         material_count = len(materials)
         model_materials.update(name for name, _ in materials)
-        for offset, dest in ((local.u16(mats), tex_names), (local.u16(mats + 2), pal_names)):
+        material_bindings = [{'model': model_name, 'material': name, 'textures': set(), 'palettes': set()} for name, _ in materials]
+        for offset, dest, kind in ((local.u16(mats), tex_names, 'textures'), (local.u16(mats + 2), pal_names, 'palettes')):
             for name, binding in local.dictionary(mats + offset, 4):
                 rel, count = struct.unpack_from('<HB', binding)
                 material_ids = local.get(mats + rel, count)
@@ -201,7 +239,10 @@ def material_names(data):
                     raise ValueError(f'material binding index out of bounds: {name}')
                 if count:
                     dest.add(name)
-    return tex_names, pal_names, model_materials
+                for index in material_ids:
+                    material_bindings[index][kind].add(name)
+        bindings.extend(material_bindings)
+    return tex_names, pal_names, model_materials, bindings
 
 
 # PAT0 name table layout adapted from HoennB2 anim_tex_check.py (MIT).
@@ -249,8 +290,9 @@ def validate(data, animation=None, external=None, selected_pair=None):
     model_refs = material_names(data) if data[:4] == b'BMD0' else None
     textures, palettes, unsupported = texture_set(external if external is not None else data)
     checks = ['TEX0 dictionary bounds and node references', 'texture payload bounds', 'palette starting offsets']
+    material_pair_checks = []
     if model_refs is not None:
-        mt, mp, model_materials = model_refs
+        mt, mp, model_materials, bindings = model_refs
         if not mt and not mp:
             raise Unsupported('model has no texture or palette bindings to compare')
         missing = (mt - set(textures)) | (mp - set(palettes))
@@ -259,6 +301,26 @@ def validate(data, animation=None, external=None, selected_pair=None):
         checks.append('material bindings bounded by declared model size')
         checks.append('material binding indices within model dictionary')
         checks.append('material names exist in supplied TEX0')
+        texture_data = external if external is not None else data
+        for binding in bindings:
+            record = {'model': binding['model'], 'material': binding['material']}
+            if len(binding['textures']) != 1 or len(binding['palettes']) > 1:
+                record['status'] = 'INCOMPLETE'
+                record['reason'] = 'missing or ambiguous static texture/palette binding'
+                material_pair_checks.append(record)
+                continue
+            texture = next(iter(binding['textures']))
+            palette = next(iter(binding['palettes'])) if binding['palettes'] else None
+            record.update({'texture': texture, 'palette': palette})
+            try:
+                record['format'] = check_material_pair(texture_data, texture, palette)
+                record['status'] = 'BUFFER_BOUNDS_CHECKED'
+            except Unsupported as exc:
+                record['status'] = 'INCOMPLETE'
+                record['reason'] = str(exc)
+            material_pair_checks.append(record)
+        checked_count = sum(item['status'] == 'BUFFER_BOUNDS_CHECKED' for item in material_pair_checks)
+        checks.append(f'static material buffer bounds ({checked_count} of {len(material_pair_checks)} materials)')
     if animation is not None:
         at, ap, timing_warnings, track_names = pattern_names(animation)
         missing = (at - set(textures)) | (ap - set(palettes))
@@ -278,10 +340,11 @@ def validate(data, animation=None, external=None, selected_pair=None):
         checks.append(f'4x4 selected-pair palette-buffer reads ({block_count} blocks)')
     return {'status': 'INCOMPLETE', 'sha256': hashlib.sha256(data).hexdigest(),
             'textures': textures, 'palettes': palettes, 'checked': checks, 'unsupported': unsupported,
+            'material_pair_checks': material_pair_checks,
             'animation_sha256': hashlib.sha256(animation).hexdigest() if animation is not None else None,
             'texture_set_sha256': hashlib.sha256(external).hexdigest() if external is not None else None,
             'selected_pair': {'texture': selected_pair[0], 'palette': selected_pair[1]} if selected_pair is not None else None,
-            'not_checked': ['dictionary lookup semantics', 'palette lengths and binding semantics', 'unselected palette pairs and inferred palette extents', 'PAT0 duration and duplicate-frame semantics', 'per-model animation binding', 'other animation types', 'hardware behavior']}
+            'not_checked': ['dictionary lookup semantics', 'palette lengths and binding semantics', 'dynamic animation substitutions and inferred palette extents', 'PAT0 duration and duplicate-frame semantics', 'per-model animation binding', 'other animation types', 'hardware behavior']}
 
 
 def validate_2d(chars, screen, palette):
