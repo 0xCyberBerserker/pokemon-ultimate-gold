@@ -28,7 +28,7 @@
 
 | Build | Status | What’s in it |
 | --- | --- | --- |
-| **Alpha 1** | Legacy | Native, reusable TM Refill. |
+| **Alpha 1** | Legacy | [TM Refill](game/docs/tm-refill-item.md): a reusable in-game Key Item that refills TMs you already own to 99. |
 | **Alpha 2** | Experimental | Rocket kit, evolution-shop stock, and eight field actions for HMs you already own. |
 | **Kris Sprint 2** | Experimental default | Alternative protagonist Kris and an experimental EV/IV/nature editor by reviewed lineage. |
 
@@ -82,7 +82,7 @@ Choose a build and patch a clean dump from your own Pokémon HeartGold USA cartr
 
 | Versión | Estado | Contenido |
 | --- | --- | --- |
-| **Alfa 1** | Anterior | TM Refill reutilizable nativo. |
+| **Alfa 1** | Anterior | [TM Refill (Recarga MT)](game/docs/tm-refill-item.md): objeto clave reutilizable que repone a 99 las MT que ya tienes. |
 | **Alfa 2** | Experimental | Kit Rocket, existencias de objetos evolutivos y ocho acciones de campo para las MO que ya tienes. |
 | **Kris Sprint 2** | Predeterminada experimental | Kris como protagonista alternativa y editor EV/IV/naturalezas experimental por linaje revisado. |
 

@@ -11,8 +11,8 @@ Ultimate Gold is a custom HeartGold patch with checked components from the Draya
 
 ### Drayano’s Sacred Gold / Storm Silver
 - The project inherits selected Sacred Gold 1.05 content. Both trainer archives match the original 1.05 control: 738 records and 2,086 team members.
-- Trainer and encounter changes make the challenge different from vanilla HeartGold. Fifteen story/resource files remain unported in the audited hybrid, so full story equivalence is not claimed.
-- Eighteen guarded ARM9 Speed-Up bytes match the delivered builds. Audio tempo and perceived pacing have not been measured.
+- Trainer and encounter changes make the challenge different from original HeartGold. Technical limitation: a historical audit of one hybrid candidate found 15 story/resource files that had not been ported. This finding applies to that audited candidate and must not be automatically extended to the current Alpha 2. Complete story equivalence is not claimed.
+- Speed-Up — technical verification only: 18 guarded bytes in the game's ARM9 code match the compared delivered builds. This confirms the specified byte comparison, not actual gameplay speed, frame rate, audio behavior or glitch-free operation. Music tempo and perceived pacing have not been measured.
 
 ### Sacred Gold Plus 1.2.3
 - Plus continues Drayano’s Sacred Gold and adds Fairy typing, Fairy moves, and camera options in its upstream project.
@@ -38,8 +38,8 @@ Ultimate Gold es un parche personalizado de HeartGold con componentes comprobado
 
 ### Sacred Gold / Storm Silver de Drayano
 - El proyecto hereda componentes seleccionados de Sacred Gold 1.05. Ambos archivos de entrenadores coinciden con el control original 1.05: 738 registros y 2.086 integrantes.
-- Los cambios de entrenadores y encuentros modifican la dificultad frente a HeartGold original. Quince archivos de historia/recursos siguen sin portar en el híbrido auditado; no se afirma equivalencia completa de la historia.
-- Dieciocho bytes ARM9 protegidos de Speed-Up coinciden con los builds entregados. No se han medido el tempo musical ni la percepción del ritmo.
+- Los cambios de entrenadores y encuentros modifican el desafío respecto de HeartGold original. Limitación técnica: una auditoría histórica de una candidata híbrida identificó 15 archivos de historia/recursos que todavía no se habían portado. Este hallazgo corresponde a esa candidata y no debe atribuirse automáticamente a Alpha 2 actual. No se afirma equivalencia completa de la historia.
+- Speed-Up — solo verificación técnica: 18 bytes protegidos del código ARM9 del juego coinciden con las builds entregadas que se compararon. Esto confirma la comparación de bytes indicada, no la velocidad real del juego, los fotogramas por segundo, el comportamiento del audio ni la ausencia de errores. No se han medido el tempo musical ni la percepción del ritmo.
 
 ### Sacred Gold Plus 1.2.3
 - Plus continúa el Sacred Gold de Drayano y añade tipo Hada, movimientos Hada y opciones de cámara en su proyecto upstream.
