@@ -10,7 +10,7 @@ Use the [browser patcher](../web/wiki/#/patcher) with your own clean, supported 
 
 ### 2. First steps
 
-Open the patched ROM in your Nintendo DS emulator or on your own compatible hardware. Create a separate save for this build; do not reuse a save from another ROM revision. Follow the opening sequence and Professor Elm's prompts before leaving New Bark Town. The selected starter and the Pokégear call sequence are part of normal progression.
+Open the patched game in a Nintendo DS emulator or on your own compatible hardware. Create a separate save for this build; do not reuse one from another ROM revision. Follow the opening and Professor Elm’s instructions before leaving New Bark Town. Your starter choice and the Pokégear call sequence are part of normal progression.
 
 ### 3. Mechanics and progression
 
@@ -44,7 +44,7 @@ Abre el [parcheador web](../web/wiki/#/patcher) con tu propia ROM limpia y compa
 
 ### 2. Primeros pasos
 
-Abre la ROM parcheada en tu emulador de Nintendo DS o en hardware compatible propio. Crea un guardado separado para esta versión; no reutilices una partida de otra revisión. Sigue la introducción y las indicaciones del profesor Elm antes de salir de New Bark Town (Pueblo Primavera). El inicial elegido y la secuencia de llamadas del Pokégear forman parte del progreso normal.
+Abre el juego parcheado en un emulador de Nintendo DS o en hardware compatible propio. Crea una partida separada para esta versión; no reutilices una de otra revisión de la ROM. Sigue la introducción y las indicaciones del profesor Elm antes de salir de New Bark Town (Pueblo Primavera). La elección del inicial y la secuencia de llamadas del Pokégear forman parte del progreso normal.
 
 ### 3. Mecánicas y progreso
 
