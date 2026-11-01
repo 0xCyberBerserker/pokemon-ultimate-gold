@@ -516,6 +516,10 @@ h1, h2, h3, h4 { font-family: "Outfit", sans-serif; }
   background: transparent;
   color: var(--text);
 }
+.search-dialog-header input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
 .search-dialog-header button {
   border: 0;
   background: transparent;
