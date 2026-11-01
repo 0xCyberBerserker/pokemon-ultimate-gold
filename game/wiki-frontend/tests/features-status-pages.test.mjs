@@ -25,6 +25,7 @@ test('features and status pages summarize current labels and retain the full bil
       const props = { data, language, patchDefault, wikiVersion };
       const features = renderToStaticMarkup(React.createElement(FeaturesPage, props));
       const featureSummary = features.split('<details class="panel project-technical-details">')[0];
+      assert.ok(features.includes(language === 'es' ? 'Ultimate Gold — acumulativa, experimental' : 'Ultimate Gold — cumulative, experimental'));
       assert.ok(features.includes(patchDefault[language]));
       assert.ok(features.includes(wikiVersion[language]));
       assert.ok(features.includes(data.guides.features.body[language]));

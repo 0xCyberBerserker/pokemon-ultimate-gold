@@ -23,7 +23,7 @@ export default function PlayerGuide({ data, language }: { data: WikiData; langua
   return <section className="player-guide">
     <a className="back-link" href="#/guides">← {es ? 'Guías' : 'Guides'}</a>
     <h1>{localized(guide.title, language)}</h1>
-    <p>{es ? 'Cinco pasos para preparar el juego y encontrar lo que necesitas durante la aventura.' : 'Five steps to prepare the game and find what you need during your adventure.'}</p>
+    <p>{es ? 'Conserva el archivo de juego original y haz copias de tus partidas. Aplica el parche, crea una partida separada para la versión elegida, consulta sus cambios y la wiki, y decide si quieres usar trucos opcionales.' : 'Keep the original game file and back up your saves. Apply the patch, create a separate save for the selected build, review its changes, consult the wiki, and decide whether to use optional cheats.'}</p>
     <ol className="player-guide-steps">{steps.map(([title, text, href, action], index) => <li className="panel" key={href}><span className="player-guide-number">{String(index + 1).padStart(2, '0')}</span><div><h2>{title}</h2><p>{text}</p><a className="text-link" href={href}>{action} →</a></div></li>)}</ol>
     <details className="panel guide-html"><summary>{es ? 'Guía completa e información adicional' : 'Complete guide and additional information'}</summary><div dangerouslySetInnerHTML={{ __html: publicGuideHtml('player', guide.body[language] || '', language) }} /></details>
   </section>;

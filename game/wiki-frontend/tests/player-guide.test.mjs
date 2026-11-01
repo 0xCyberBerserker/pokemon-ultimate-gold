@@ -17,6 +17,7 @@ test('player guide keeps the original content and exposes the essential steps in
       assert.ok(html.includes(data.guides.player.title[language]));
       assert.ok(html.includes('<details class="panel guide-html">'));
       assert.ok(html.includes(language === 'es' ? 'Guía completa e información adicional' : 'Complete guide and additional information'));
+      assert.ok(html.includes(language === 'es' ? 'Conserva el archivo de juego original y haz copias de tus partidas.' : 'Keep the original game file and back up your saves.'));
     }
   } finally {
     await server.close();
@@ -30,7 +31,7 @@ test('player guide route uses the dedicated guide view', async () => {
     const { default: Reference } = await server.ssrLoadModule('/src/features/reference/Reference.tsx');
     const html = renderToStaticMarkup(React.createElement(Reference, { data, language: 'en', route: '#/guide/player' }));
     assert.ok(html.includes('class="player-guide"'));
-    assert.ok(html.includes('Five steps to prepare the game'));
+    assert.ok(html.includes('Keep the original game file and back up your saves.'));
     assert.ok(html.includes('Complete guide and additional information'));
   } finally {
     await server.close();
