@@ -2,7 +2,7 @@
 
 ## English
 
-**In development.** This training menu is a candidate feature and is not included in the current patch or download.
+**Experimental.** This training menu is included in the experimental training-menu build, selected by default in the patcher. Earlier builds remain available.
 
 EVs are training points, IVs are a Pokémon’s individual potential, and Nature changes how most stats grow. These options affect your Pokémon’s stats; review the proposal before confirming.
 
@@ -23,7 +23,7 @@ The menu labels remain in English. **More** opens extra actions and **Train** op
 
 ![Training choices for EVs, IVs, Nature, and Exit. The candidate displays EVs, IVs, and Nature choices.](../web/assets/qa/party-training-stat-choice.png)
 
-This is limited candidate testing. It does not establish whole-game availability, save/reload persistence, or release integration.
+This is limited candidate testing. It does not establish whole-game availability or save/reload persistence for every scenario.
 
 ### What has been checked?
 
@@ -31,12 +31,13 @@ This is limited candidate testing. It does not establish whole-game availability
 - B cancels a preview without changing the party. Opening, returning and reopening also passed focused checks.
 - One confirmed Clefairy change raised its HP IV from 15 to 20 and its displayed HP from 22 to 23. The other party members stayed unchanged, and the regular Summary screen opened.
 - After closing Summary, B closes the remaining menu, X reopens it and B returns to a stable field view. A separate continuation into the party menu confirmed all three Pokémon’s data exactly matched the expected result.
+- In one separate case, the edited Clefairy and its two teammates remained intact after an ordinary save and a fresh load in a new process. The checked Bag data also matched. The Continue screen itself was not captured.
 
-These are separate checks on a development candidate, not a complete playthrough. Mail actions were displayed, but Read/Take were not exercised. Save/reload through the new route and broader Nature behavior have not been established here.
+These are separate checks on a development candidate, not a complete playthrough. Mail actions were displayed, but Read/Take were not exercised. Broader save/reload coverage and Nature behavior have not been established here.
 
 ## Español
 
-**En desarrollo.** Este menú de entrenamiento es una función candidata; no está incluido en el parche ni en la descarga actuales.
+**Experimental.** Este menú de entrenamiento está incluido en la versión experimental con menú de entrenamiento, seleccionada por defecto en el parcheador. Las versiones anteriores siguen disponibles.
 
 Los EV son puntos de entrenamiento, los IV representan el potencial individual del Pokémon y la naturaleza modifica cómo crecen la mayoría de sus estadísticas. Estas opciones afectan a sus estadísticas: revisa la propuesta antes de confirmarla.
 
@@ -57,7 +58,7 @@ Los rótulos de la interfaz siguen en inglés: **More** abre acciones adicionale
 
 ![Opciones de entrenamiento EVs, IVs, Nature y Exit. La candidata muestra las opciones EVs, IVs y Nature.](../web/assets/qa/party-training-stat-choice.png)
 
-Las pruebas de esta candidata son limitadas. No demuestran disponibilidad en todo el juego, persistencia tras guardar y recargar ni integración en una versión publicada.
+Las pruebas de esta candidata son limitadas. No demuestran disponibilidad en todo el juego ni persistencia tras guardar y recargar en todos los escenarios.
 
 ### ¿Qué se ha comprobado?
 
@@ -65,5 +66,6 @@ Las pruebas de esta candidata son limitadas. No demuestran disponibilidad en tod
 - B cancela una propuesta sin modificar el equipo. También se probaron la apertura, el retorno y la reapertura.
 - Un cambio confirmado de Clefairy subió su IV de PS de 15 a 20 y sus PS visibles de 22 a 23. Los demás compañeros quedaron intactos y se abrió el resumen habitual.
 - Tras cerrar Summary, B cierra el menú restante, X lo vuelve a abrir y B regresa a un mapa estable. Una continuación separada al menú del equipo confirmó que los datos de los tres Pokémon coincidían exactamente con el resultado esperado.
+- En otro caso, Clefairy editado y sus dos compañeros se conservaron tras un guardado ordinario y una carga en un proceso nuevo. También coincidieron los datos de la Bolsa comprobados. No se capturó la pantalla de Continue.
 
-Son comprobaciones separadas de una candidata en desarrollo, no una partida completa. Se mostraron las acciones de cartas, pero no se probaron Read/Take. Aquí no se ha acreditado guardar/recargar desde el nuevo recorrido ni un comportamiento más amplio de las naturalezas.
+Son comprobaciones separadas de una candidata en desarrollo, no una partida completa. Se mostraron las acciones de cartas, pero no se probaron Read/Take. Aquí no se ha acreditado una cobertura más amplia de guardado y carga ni de las naturalezas.

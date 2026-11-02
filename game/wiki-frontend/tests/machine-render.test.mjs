@@ -14,7 +14,8 @@ const candidate = await readJson(`../../web/data/${catalog.versions[catalog.defa
 test('machine view links per-species compatibility and keeps it target-specific', async () => {
   assert.equal(data.target_sha256, alpha2.target.sha256);
   assert.equal(data.tmhm_compatibility.target_sha256, data.target_sha256);
-  assert.equal(candidate.target.sha256, 'fc0bf04ec57fa30121fdb50a4da3a94c300fc0abe171c96b3e60bc2e674baff4');
+  assert.equal(candidate.target.sha256, '9b910d3ae666a893030acd651e7a4deed41a0fbf8093c82cad0d4336283dedd1');
+  assert.notEqual(candidate.target.sha256, data.target_sha256);
 
   const server = await createServer({ server: { middlewareMode: true, ws: false }, appType: 'custom' });
   try {
@@ -48,7 +49,7 @@ test('machine view links per-species compatibility and keeps it target-specific'
     };
     assert.equal(filterMachinesForSearch(mismatched, 'en', 'Bulbasaur', '', '').length, 0);
     const mismatchHtml = renderToStaticMarkup(React.createElement(Reference, { data: mismatched, language: 'en', route: '#/machines' }));
-    assert.match(mismatchHtml, /compatibility table is for Alpha 2; it is not used with Kris Sprint 2 data/);
+    assert.match(mismatchHtml, /compatibility table is for Alpha 2; it is not used with selected target data/);
     assert.equal((mismatchHtml.match(/class="panel machine-entry"/g) || []).length, 100);
     const missing = { ...data, tmhm_compatibility: undefined };
     assert.equal(filterMachinesForSearch(missing, 'en', 'Bulbasaur', '', '').length, 0);

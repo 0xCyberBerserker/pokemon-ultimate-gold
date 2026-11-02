@@ -57,7 +57,7 @@ export default function FeaturesPage({ data, language, patchDefault, wikiVersion
       <figure aria-label={es ? 'Linaje y ruta de los parches' : 'Lineage and patch routes'}>
         <figcaption><strong>{es ? 'Linaje y ruta de los parches' : 'Lineage and patch routes'}</strong></figcaption>
         <p>{es ? 'Linaje acreditado' : 'Credited upstream lineage'}: Drayano · Sacred Gold / Storm Silver 1.05 → Sacred Gold Plus 1.2.3</p>
-        <p>{es ? 'Parches directos desde HeartGold USA limpia' : 'Direct patches from clean HeartGold USA'}: Ultimate Gold {es ? 'Alfa' : 'Alpha'} 1 · Ultimate Gold {es ? 'Alfa' : 'Alpha'} 2 · {es ? 'Ultimate Gold — acumulativa, experimental' : 'Ultimate Gold — cumulative, experimental'}</p>
+        <p>{es ? 'Parches directos desde HeartGold USA limpia' : 'Direct patches from clean HeartGold USA'}: Ultimate Gold {es ? 'Alfa' : 'Alpha'} 1 · Ultimate Gold {es ? 'Alfa' : 'Alpha'} 2 · {es ? 'Ultimate Gold — acumulativa, experimental' : 'Ultimate Gold — cumulative, experimental'} · {es ? 'Ultimate Gold — menú de entrenamiento, experimental' : 'Ultimate Gold — training menu, experimental'}</p>
         <p>{es ? 'El linaje indica procedencia, no una secuencia para apilar parches. Cada versión utiliza su propio parche directo desde la ROM limpia.' : 'Lineage describes provenance, not a patch-stacking recipe. Each build uses its own direct patch from the clean ROM.'}</p>
       </figure>
       <div className="guide-html" dangerouslySetInnerHTML={{ __html: publicGuideHtml('features', guide.body[language] || '', language) }} />

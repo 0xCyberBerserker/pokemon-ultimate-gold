@@ -1,7 +1,7 @@
 {
   "format": 1,
   "status": "EXPERIMENTAL_SPRINT_ACCEPTED",
-  "default": true,
+  "default": false,
   "source": {
     "kind": "clean external HeartGold USA",
     "filename": "HeartGold-USA.nds",

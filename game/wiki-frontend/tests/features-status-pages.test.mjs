@@ -10,7 +10,7 @@ const data = await readJson('../../web/data/wiki-data.json');
 const catalog = await readJson('../../web/data/patch-catalog.json');
 
 test('features and status pages summarize current labels and retain the full bilingual reports', async () => {
-  assert.equal(catalog.default, 'kris-sprint2');
+  assert.equal(catalog.default, 'training-menu');
   assert.equal(catalog.wiki_data, 'alpha2');
   const patchDefault = catalog.versions[catalog.default].label;
   const wikiVersion = catalog.versions[catalog.wiki_data].label;
@@ -26,6 +26,7 @@ test('features and status pages summarize current labels and retain the full bil
       const features = renderToStaticMarkup(React.createElement(FeaturesPage, props));
       const featureSummary = features.split('<details class="panel project-technical-details">')[0];
       assert.ok(features.includes(language === 'es' ? 'Ultimate Gold — acumulativa, experimental' : 'Ultimate Gold — cumulative, experimental'));
+      assert.ok(features.includes(language === 'es' ? 'Ultimate Gold — menú de entrenamiento, experimental' : 'Ultimate Gold — training menu, experimental'));
       assert.ok(features.includes(patchDefault[language]));
       assert.ok(features.includes(wikiVersion[language]));
       assert.ok(features.includes(data.guides.features.body[language]));

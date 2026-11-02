@@ -4,14 +4,15 @@
 
 ### Focused party-training candidate — issue #36
 
-- **Private candidate:** More → Train opens the existing EV/IV/nature editor for the selected party member. This route is not included in the current public download; the browser default and patches remain unchanged.
+- **Experimental build:** More → Train opens the existing EV/IV/nature editor for the selected party member. The training-menu build is the patcher default; earlier builds remain selectable.
 - **Focused checks:** separate one-, three- and six-member party tests, preview cancellation and reopening passed independent review. One confirmed Clefairy HP IV change (15 → 20) produced HP 22 → 23 and opened Summary.
 - **Return and integrity:** a separate B/X/B witness confirmed responsive menus and stable field views. Its intermediate RAM capture failed the strict party check and remains recorded as rejected. One corrective continuation into the native party menu verified the complete expected three-member party, with every full checksum valid. This demonstrates recovery in that observed pause, without proving the cause of the intermediate representation.
-- **Limits:** no ordinary Save/cold-load proof through this new route, whole-game, global Nature-consumer, human or release acceptance. The wiki’s Guides section contains the illustrated development guide.
+- **Save and fresh load:** one ordinary save after the Clefairy change and a separate fresh-process load preserved the complete three-member party and checked Bag data. The Continue screen itself was not captured.
+- **Limits:** this single path does not establish broader save coverage, whole-game, global Nature-consumer, human, hardware or full-release acceptance. The wiki’s Guides section contains the illustrated development guide.
 
-### Current delivery status — 31 October 2026
+### Kris delivery snapshot — 31 October 2026
 
-Issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) is closed after the documented bounded review. Kris Sprint 2 is the experimental browser default, with Alpha 1 and Alpha 2 selectable. It includes the experimental EV/IV/nature editor by reviewed lineage; limited editor tests belong to earlier builds, with no new editor QA on this candidate. Wiki data and cheat codes remain tied to Alpha 2 and their compatibility with the newer target is unverified. Full-story and hardware acceptance remain pending. See [current status](docs/project-status.md).
+Issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) was closed after the documented bounded review. At this checkpoint Kris Sprint 2 was the experimental browser default, with Alpha 1 and Alpha 2 selectable. It includes the experimental EV/IV/nature editor by reviewed lineage; limited editor tests belong to earlier builds, with no new editor QA on this candidate. Wiki data and cheat codes remain tied to Alpha 2 and their compatibility with newer targets is unverified. Full-story and hardware acceptance remain pending. See [current status](docs/project-status.md).
 
 ### Historical Kris delivery snapshot — 27 October 2026
 
@@ -86,14 +87,15 @@ On the private Kris candidate, one check at Cherrygrove City Pokémon Center sho
 
 ### Candidata de entrenamiento del equipo: revisión focalizada — issue #36
 
-- **Candidata privada:** More → Train abre el editor EV/IV/naturalezas existente para el Pokémon seleccionado. Este recorrido no está incluido en la descarga pública actual; la opción web predeterminada y los parches siguen iguales.
+- **Versión experimental:** More → Train abre el editor EV/IV/naturalezas existente para el Pokémon seleccionado. La versión con menú de entrenamiento es la opción predeterminada del parcheador; las versiones anteriores siguen disponibles.
 - **Pruebas focalizadas:** equipos de uno, tres y seis miembros, cancelación de propuestas y reapertura superaron revisiones independientes separadas. Un cambio confirmado del IV de PS de Clefairy (15 → 20) produjo PS 22 → 23 y abrió Summary.
 - **Retorno e integridad:** un testigo separado B/X/B confirmó menús que responden y vistas estables del mapa. Su captura intermedia de RAM falló la comprobación estricta del equipo y sigue registrada como rechazada. Una única continuación correctiva al menú nativo verificó el equipo completo esperado de tres miembros, con todos sus checksums completos válidos. Esto demuestra recuperación en esa pausa observada, sin probar la causa de la representación intermedia.
-- **Límites:** no se acredita Save/carga en frío ordinarios mediante el nuevo recorrido, todo el juego, todos los consumidores de naturalezas ni aceptación humana o de release. La sección Guías de la wiki incluye la guía ilustrada en desarrollo.
+- **Guardado y carga nueva:** un guardado ordinario tras el cambio de Clefairy y una carga separada en un proceso nuevo conservaron el equipo completo de tres Pokémon y los datos de la Bolsa comprobados. No se capturó la pantalla de Continue.
+- **Límites:** este único recorrido no acredita una cobertura más amplia de guardado, todo el juego, todos los consumidores de naturalezas ni aceptación humana, en hardware o de una release completa. La sección Guías de la wiki incluye la guía ilustrada en desarrollo.
 
-### Estado actual de entrega — 31 de octubre de 2026
+### Estado de entrega de Kris — 31 de octubre de 2026
 
-La [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) está cerrada tras la revisión acotada documentada. Kris Sprint 2 es la opción web experimental predeterminada y Alfa 1 y Alfa 2 siguen disponibles. Incluye el editor EV/IV/naturalezas experimental por linaje revisado; las pruebas acotadas del editor pertenecen a versiones anteriores, sin nuevas pruebas del editor en esta candidata. Los datos de la wiki y los trucos siguen ligados a Alfa 2 y su compatibilidad con el nuevo destino no está verificada. Siguen pendientes la aceptación de la aventura completa y las pruebas en hardware. Véase el [estado actual](docs/project-status.md).
+La [issue #33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) se cerró tras la revisión acotada documentada. En ese momento, Kris Sprint 2 era la opción web experimental predeterminada y Alfa 1 y Alfa 2 seguían disponibles. Incluye el editor EV/IV/naturalezas experimental por linaje revisado; las pruebas acotadas del editor pertenecen a versiones anteriores, sin nuevas pruebas del editor en esta candidata. Los datos de la wiki y los trucos siguen ligados a Alfa 2 y su compatibilidad con versiones posteriores no está verificada. Siguen pendientes la aceptación de la aventura completa y las pruebas en hardware. Véase el [estado actual](docs/project-status.md).
 
 ### Estado histórico de entrega de Kris — 27 de octubre de 2026
 

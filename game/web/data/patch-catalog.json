@@ -1,6 +1,6 @@
 {
   "schema": "ultimate-gold-patch-catalog/v1",
-  "default": "kris-sprint2",
+  "default": "training-menu",
   "wiki_data": "alpha2",
   "versions": {
     "alpha1": {
@@ -34,10 +34,23 @@
         "es": "Ultimate Gold — acumulativa, experimental"
       },
       "note": {
-        "en": "Latest cumulative candidate: Kris and updated credits, with earlier features and an experimental stat editor included by reviewed lineage. Editor cases were tested on earlier builds; no new editor QA was performed on this candidate. Known Bag crop/contrast limits remain; full adventure and hardware are not certified. Wiki data and cheat checks are based on Alpha 2 and have not been verified against this candidate. Cross-build save compatibility has not been established. Uses your clean HeartGold USA dump.",
-        "es": "Candidata acumulativa más reciente: Kris y créditos actualizados, con funciones anteriores y un editor de estadísticas experimental incluidos por linaje revisado. Los casos del editor se probaron en versiones anteriores; no se realizaron nuevas pruebas del editor en esta candidata. Se mantienen los límites de recorte/contraste de la Bolsa; no se certifican aventura completa ni hardware. Los datos de la wiki y las comprobaciones de trucos corresponden a Alfa 2 y no se han verificado contra esta candidata. No se ha establecido la compatibilidad de partidas entre versiones. Usa tu dump limpio de HeartGold USA."
+        "en": "Earlier cumulative candidate: Kris and updated credits, with earlier features and an experimental stat editor included by reviewed lineage. Editor cases were tested on earlier builds; no new editor QA was performed on this candidate. Known Bag crop/contrast limits remain; full adventure and hardware are not certified. Wiki data and cheat checks are based on Alpha 2 and have not been verified against this candidate. Cross-build save compatibility has not been established. Uses your clean HeartGold USA dump.",
+        "es": "Candidata acumulativa anterior: Kris y créditos actualizados, con funciones anteriores y un editor de estadísticas experimental incluidos por linaje revisado. Los casos del editor se probaron en versiones anteriores; no se realizaron nuevas pruebas del editor en esta candidata. Se mantienen los límites de recorte/contraste de la Bolsa; no se certifican aventura completa ni hardware. Los datos de la wiki y las comprobaciones de trucos corresponden a Alfa 2 y no se han verificado contra esta candidata. No se ha establecido la compatibilidad de partidas entre versiones. Usa tu dump limpio de HeartGold USA."
       },
       "manifest": "./patch-manifest-kris-sprint2.json",
+      "status": "EXPERIMENTAL_SPRINT_ACCEPTED",
+      "experimental": true
+    },
+    "training-menu": {
+      "label": {
+        "en": "Ultimate Gold — training menu, experimental",
+        "es": "Ultimate Gold — menú de entrenamiento, experimental"
+      },
+      "note": {
+        "en": "Experimental cumulative build. One training change and its ordinary save and fresh load passed a focused check; broader coverage remains open. Known Kris Bag crop and contrast limits remain. Wiki data and cheat checks are based on Alpha 2; their compatibility with this build is unverified. Full story, hardware and cross-build saves are not certified.",
+        "es": "Build acumulativo experimental. Un cambio de entrenamiento y su guardado ordinario y carga en un proceso nuevo superaron una prueba focalizada; falta cobertura más amplia. Se mantienen los límites conocidos de recorte y contraste de Kris en la Bolsa. Los datos de la wiki y las comprobaciones de trucos corresponden a Alfa 2; su compatibilidad con este build no está verificada. No se certifican la historia completa, el hardware ni las partidas entre versiones."
+      },
+      "manifest": "./patch-manifest-training-menu.json",
       "status": "EXPERIMENTAL_SPRINT_ACCEPTED",
       "experimental": true
     }

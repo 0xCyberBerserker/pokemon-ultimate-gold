@@ -10,7 +10,7 @@ Browser-only patcher and game wiki for GitHub Pages, with optional CLI and Qt to
 2. Preview with `python3 -m http.server 8767 --bind 127.0.0.1 --directory web` and open `http://127.0.0.1:8767/`.
 3. Choose a build and your clean 128 MiB `.nds`, apply the patch, then download the verified result. Extract ZIP files before using the browser interface.
 
-**Builds:** Kris Sprint 2 is the experimental browser default, including Kris, updated credits and an experimental EV/IV/nature editor by reviewed lineage. Limited editor cases were tested on earlier builds; no new editor QA was performed on this candidate. Alpha 1 and Alpha 2 remain selectable. The wiki and cheat catalog describe Alpha 2 and have not been verified for the newer target. Exact-target tests cover representative actions, not the complete story. [Current scope](docs/project-status.md).
+**Builds:** The experimental training-menu build is the browser default and adds access to the editor from a party Pokémon's menu. Alpha 1, Alpha 2 and Kris Sprint 2 remain selectable. The wiki and cheat catalog describe Alpha 2 and have not been verified for the newer target. One edited party member passed a focused ordinary save and fresh-load check; full-story, hardware and broader save coverage remain open. [Training guide](docs/party-training.md) · [Current scope](docs/project-status.md).
 
 All ROM processing happens in the browser. No backend, account, ROM upload or installed xdelta tool is required. [Web guide](docs/web-patcher.md). The generated `web/` directory is the Pages payload.
 
@@ -41,7 +41,7 @@ The manifest names each output. Alpha 2's Rocket NPC in New Bark Town offers the
 
 La interfaz principal es el patcher de navegador y nuestra wiki para GitHub Pages. Genera la web con `python3 tools/build_site.py`; previsualiza con `python3 -m http.server 8767 --bind 127.0.0.1 --directory web` y abre `http://127.0.0.1:8767/`. Elige versión y tu `.nds` limpio de 128 MiB, aplica el parche y descarga el resultado verificado. Extrae antes los ZIP.
 
-**Versiones:** Kris Sprint 2 es la opción web experimental predeterminada, con Kris, créditos actualizados y un editor EV/IV/naturalezas experimental por linaje revisado. Algunos casos del editor se probaron en versiones anteriores; no se realizaron nuevas pruebas del editor en esta candidata. Alfa 1 y Alfa 2 siguen disponibles. Los datos de la wiki y el catálogo de trucos describen Alfa 2 y no se han verificado para el nuevo destino. Las pruebas del hash exacto cubren casos representativos, no la historia completa. [Alcance actual](docs/project-status.md).
+**Versiones:** La versión experimental con menú de entrenamiento es la opción web predeterminada y añade acceso al editor desde el menú de un Pokémon del equipo. Alfa 1, Alfa 2 y Kris Sprint 2 siguen disponibles. Los datos de la wiki y el catálogo de trucos describen Alfa 2 y no se han verificado para el nuevo destino. Un Pokémon editado superó una prueba focalizada de guardado ordinario y carga en un proceso nuevo; quedan pendientes la historia completa, el hardware y una cobertura más amplia de guardado. [Guía de entrenamiento](docs/party-training.md) · [Alcance actual](docs/project-status.md).
 
 Todo el procesamiento de la ROM es local. No necesita backend, cuenta, subir la ROM ni xdelta instalado. [Guía web](docs/web-patcher.md). `web/` contiene la entrega para Pages.
 

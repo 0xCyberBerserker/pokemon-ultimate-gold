@@ -271,10 +271,11 @@ def main():
                         standalone = opened.value
                         expect(standalone.locator("#rom")).to_be_visible()
                         expect(standalone.locator("#language")).to_have_value("es")
-                        expect(standalone.locator("#version")).to_have_value("kris-sprint2")
+                        expect(standalone.locator("#version")).to_have_value("training-menu")
                         standalone.goto(f"{origin}{PREFIX}index.html?standalone=1&lang=en", wait_until="domcontentloaded")
                         expect(standalone.locator("#language")).to_have_value("en")
                         standalone.locator("#language").select_option("es")
+                        expect(standalone.locator('#version option[value="training-menu"]')).to_have_count(1)
                         expect(standalone.locator('#version option[value="kris-sprint2"]')).to_have_count(1)
                         standalone.locator("#version").select_option("kris-sprint2")
                         expect(standalone.locator("#version-note")).to_contain_text("Alfa 2")
@@ -291,7 +292,7 @@ def main():
                     check_width(page, f"{name} patcher source")
                     expect(page.frame_locator("iframe").locator("#rom")).to_be_attached()
                     expect(page.frame_locator("iframe").locator("#language")).to_have_value("es")
-                    expect(page.frame_locator("iframe").locator("#version")).to_have_value("kris-sprint2")
+                    expect(page.frame_locator("iframe").locator("#version")).to_have_value("training-menu")
                     if name == "desktop":
                         frame = page.frame_locator("iframe")
                         expect(frame.locator("#apply")).to_be_enabled()

@@ -20,7 +20,8 @@ MANIFEST = ROOT / "patches" / "manifest.json"
 MANIFEST_ALPHA1 = ROOT / "patches" / "manifest-alpha1.json"
 MANIFEST_ALPHA2 = ROOT / "patches" / "manifest-alpha2.json"
 MANIFEST_KRIS_SPRINT2 = ROOT / "patches" / "manifest-kris-sprint2.json"
-PATCHER_DEFAULT = "kris-sprint2"
+MANIFEST_TRAINING_MENU = ROOT / "patches" / "manifest-training-menu.json"
+PATCHER_DEFAULT = "training-menu"
 WIKI_DATA_VERSION = "alpha2"
 CHEAT = ROOT / "config" / "cheats" / "DeSmuME" / "Sacred-Gold-Plus-Drayano-QoL-fix1.cht"
 
@@ -121,8 +122,8 @@ def verify_manifest(path: Path | None = None) -> dict:
             raise SystemExit(f"QA report does not match manifest: {evidence['file']}")
     return manifest
 
-def build_patch_catalog(alpha1: dict, alpha2: dict, kris_sprint2: dict, default_version: str = PATCHER_DEFAULT) -> dict:
-    if default_version not in ("alpha1", "alpha2", "kris-sprint2"):
+def build_patch_catalog(alpha1: dict, alpha2: dict, kris_sprint2: dict, training_menu: dict, default_version: str = PATCHER_DEFAULT) -> dict:
+    if default_version not in ("alpha1", "alpha2", "kris-sprint2", "training-menu"):
         raise SystemExit("Unknown default build")
     if alpha2.get("status") != "EXPERIMENTAL_TESTED_PARTIAL" or alpha2.get("default") is not True:
         raise SystemExit("Historical Alpha 2 manifest must remain experimental and unchanged")
@@ -132,6 +133,11 @@ def build_patch_catalog(alpha1: dict, alpha2: dict, kris_sprint2: dict, default_
             or kris_sprint2.get("default") is not False
             or kris_sprint2.get("source") != alpha1["source"]):
         raise SystemExit("Historical Kris Sprint 2 manifest must remain experimental and match the clean source")
+    training_source = training_menu.get("source") or {}
+    if (training_menu.get("default") is not False
+            or any(training_source.get(key) != alpha1["source"].get(key) for key in ("sha256", "size", "filename"))
+            or not isinstance(training_menu.get("status"), str) or not training_menu["status"]):
+        raise SystemExit("Training menu manifest must match the clean source")
     return {
         "schema": "ultimate-gold-patch-catalog/v1",
         "default": default_version,
@@ -152,23 +158,31 @@ def build_patch_catalog(alpha1: dict, alpha2: dict, kris_sprint2: dict, default_
             },
             "kris-sprint2": {
                 "label": {"en": "Ultimate Gold — cumulative, experimental", "es": "Ultimate Gold — acumulativa, experimental"},
-                "note": {"en": "Latest cumulative candidate: Kris and updated credits, with earlier features and an experimental stat editor included by reviewed lineage. Editor cases were tested on earlier builds; no new editor QA was performed on this candidate. Known Bag crop/contrast limits remain; full adventure and hardware are not certified. Wiki data and cheat checks are based on Alpha 2 and have not been verified against this candidate. Cross-build save compatibility has not been established. Uses your clean HeartGold USA dump.", "es": "Candidata acumulativa más reciente: Kris y créditos actualizados, con funciones anteriores y un editor de estadísticas experimental incluidos por linaje revisado. Los casos del editor se probaron en versiones anteriores; no se realizaron nuevas pruebas del editor en esta candidata. Se mantienen los límites de recorte/contraste de la Bolsa; no se certifican aventura completa ni hardware. Los datos de la wiki y las comprobaciones de trucos corresponden a Alfa 2 y no se han verificado contra esta candidata. No se ha establecido la compatibilidad de partidas entre versiones. Usa tu dump limpio de HeartGold USA."},
+                "note": {"en": "Earlier cumulative candidate: Kris and updated credits, with earlier features and an experimental stat editor included by reviewed lineage. Editor cases were tested on earlier builds; no new editor QA was performed on this candidate. Known Bag crop/contrast limits remain; full adventure and hardware are not certified. Wiki data and cheat checks are based on Alpha 2 and have not been verified against this candidate. Cross-build save compatibility has not been established. Uses your clean HeartGold USA dump.", "es": "Candidata acumulativa anterior: Kris y créditos actualizados, con funciones anteriores y un editor de estadísticas experimental incluidos por linaje revisado. Los casos del editor se probaron en versiones anteriores; no se realizaron nuevas pruebas del editor en esta candidata. Se mantienen los límites de recorte/contraste de la Bolsa; no se certifican aventura completa ni hardware. Los datos de la wiki y las comprobaciones de trucos corresponden a Alfa 2 y no se han verificado contra esta candidata. No se ha establecido la compatibilidad de partidas entre versiones. Usa tu dump limpio de HeartGold USA."},
                 "manifest": "./patch-manifest-kris-sprint2.json",
                 "status": kris_sprint2["status"],
+                "experimental": True,
+            },
+            "training-menu": {
+                "label": {"en": "Ultimate Gold — training menu, experimental", "es": "Ultimate Gold — menú de entrenamiento, experimental"},
+                "note": {"en": "Experimental cumulative build. One training change and its ordinary save and fresh load passed a focused check; broader coverage remains open. Known Kris Bag crop and contrast limits remain. Wiki data and cheat checks are based on Alpha 2; their compatibility with this build is unverified. Full story, hardware and cross-build saves are not certified.", "es": "Build acumulativo experimental. Un cambio de entrenamiento y su guardado ordinario y carga en un proceso nuevo superaron una prueba focalizada; falta cobertura más amplia. Se mantienen los límites conocidos de recorte y contraste de Kris en la Bolsa. Los datos de la wiki y las comprobaciones de trucos corresponden a Alfa 2; su compatibilidad con este build no está verificada. No se certifican la historia completa, el hardware ni las partidas entre versiones."},
+                "manifest": "./patch-manifest-training-menu.json",
+                "status": training_menu["status"],
                 "experimental": True,
             },
         },
     }
 
-def export_patch_payload(web_root: Path, alpha1: dict, alpha2: dict, kris_sprint2: dict, default_version: str = PATCHER_DEFAULT) -> dict:
-    catalog = build_patch_catalog(alpha1, alpha2, kris_sprint2, default_version)
+def export_patch_payload(web_root: Path, alpha1: dict, alpha2: dict, kris_sprint2: dict, training_menu: dict, default_version: str = PATCHER_DEFAULT) -> dict:
+    catalog = build_patch_catalog(alpha1, alpha2, kris_sprint2, training_menu, default_version)
     assets = web_root / "assets"; assets.mkdir(parents=True, exist_ok=True)
     data_dir = web_root / "data"; data_dir.mkdir(parents=True, exist_ok=True)
     published = {}
     for version, manifest, source, filename in (
             ("alpha1", alpha1, MANIFEST_ALPHA1, "patch-manifest-alpha1.json"),
             ("alpha2", alpha2, MANIFEST_ALPHA2, "patch-manifest-alpha2.json"),
-            ("kris-sprint2", kris_sprint2, MANIFEST_KRIS_SPRINT2, "patch-manifest-kris-sprint2.json")):
+            ("kris-sprint2", kris_sprint2, MANIFEST_KRIS_SPRINT2, "patch-manifest-kris-sprint2.json"),
+            ("training-menu", training_menu, MANIFEST_TRAINING_MENU, "patch-manifest-training-menu.json")):
         delta = ROOT / "patches" / manifest["delta"]["file"]
         shutil.copyfile(delta, assets / delta.name)
         public_manifest = json.loads(json.dumps(manifest))
@@ -286,9 +300,10 @@ def main(react_dist: Path | None = None) -> int:
     alpha1 = verify_manifest(MANIFEST_ALPHA1)
     alpha2 = verify_manifest(MANIFEST_ALPHA2)
     kris_sprint2 = verify_manifest(MANIFEST_KRIS_SPRINT2)
+    training_menu = verify_manifest(MANIFEST_TRAINING_MENU)
     if current != alpha2:
         raise SystemExit("Wiki data reference manifest must match Alpha 2")
-    export_patch_payload(WEB, alpha1, alpha2, kris_sprint2)
+    export_patch_payload(WEB, alpha1, alpha2, kris_sprint2, training_menu)
     shutil.copyfile(CHEAT, WEB / "assets" / "Sacred-Gold-Plus-Drayano-QoL-fix1.cht")
     wiki = WEB / "wiki"; wiki.mkdir(parents=True, exist_ok=True)
     pages = sorted((ROOT / "docs").glob("*.md"))
