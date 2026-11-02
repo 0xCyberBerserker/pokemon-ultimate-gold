@@ -2,6 +2,13 @@
 
 ## English
 
+### Focused party-training candidate — issue #36
+
+- **Private candidate:** More → Train opens the existing EV/IV/nature editor for the selected party member. This route is not included in the current public download; the browser default and patches remain unchanged.
+- **Focused checks:** separate one-, three- and six-member party tests, preview cancellation and reopening passed independent review. One confirmed Clefairy HP IV change (15 → 20) produced HP 22 → 23 and opened Summary.
+- **Return and integrity:** a separate B/X/B witness confirmed responsive menus and stable field views. Its intermediate RAM capture failed the strict party check and remains recorded as rejected. One corrective continuation into the native party menu verified the complete expected three-member party, with every full checksum valid. This demonstrates recovery in that observed pause, without proving the cause of the intermediate representation.
+- **Limits:** no ordinary Save/cold-load proof through this new route, whole-game, global Nature-consumer, human or release acceptance. The wiki’s Guides section contains the illustrated development guide.
+
 ### Current delivery status — 31 October 2026
 
 Issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) is closed after the documented bounded review. Kris Sprint 2 is the experimental browser default, with Alpha 1 and Alpha 2 selectable. It includes the experimental EV/IV/nature editor by reviewed lineage; limited editor tests belong to earlier builds, with no new editor QA on this candidate. Wiki data and cheat codes remain tied to Alpha 2 and their compatibility with the newer target is unverified. Full-story and hardware acceptance remain pending. See [current status](docs/project-status.md).
@@ -76,6 +83,13 @@ On the private Kris candidate, one check at Cherrygrove City Pokémon Center sho
 - [ ] Complete Kris integration and acceptance: issue [#33](https://github.com/0xCyberBerserker/pokemon-ultimate-gold/issues/33) remains open. K04 has a bounded single-player Speed-course native/independent PASS; one Sprout Tower 2F–3F stair-route movement subcase also passed independent review. These do not close all 15 field-state pairs or applicable K01–K12 regressions. The current matrix still marks field-move, watering, Pokégear-pose, Apricorn-animation and K09 contexts uncredited or partial. Alpha 2 and patcher defaults remain unchanged. See [bounded stair-route QA](docs/qa-kris-ladder-bounded.md), [current status](docs/project-status.md), [Kris feasibility](docs/kris-feasibility.md), [bounded Rocket QA](docs/qa-kris-rocket-bounded.md) and [QA records](docs/qa-kris-bag.json).
 
 ## Español
+
+### Candidata de entrenamiento del equipo: revisión focalizada — issue #36
+
+- **Candidata privada:** More → Train abre el editor EV/IV/naturalezas existente para el Pokémon seleccionado. Este recorrido no está incluido en la descarga pública actual; la opción web predeterminada y los parches siguen iguales.
+- **Pruebas focalizadas:** equipos de uno, tres y seis miembros, cancelación de propuestas y reapertura superaron revisiones independientes separadas. Un cambio confirmado del IV de PS de Clefairy (15 → 20) produjo PS 22 → 23 y abrió Summary.
+- **Retorno e integridad:** un testigo separado B/X/B confirmó menús que responden y vistas estables del mapa. Su captura intermedia de RAM falló la comprobación estricta del equipo y sigue registrada como rechazada. Una única continuación correctiva al menú nativo verificó el equipo completo esperado de tres miembros, con todos sus checksums completos válidos. Esto demuestra recuperación en esa pausa observada, sin probar la causa de la representación intermedia.
+- **Límites:** no se acredita Save/carga en frío ordinarios mediante el nuevo recorrido, todo el juego, todos los consumidores de naturalezas ni aceptación humana o de release. La sección Guías de la wiki incluye la guía ilustrada en desarrollo.
 
 ### Estado actual de entrega — 31 de octubre de 2026
 
