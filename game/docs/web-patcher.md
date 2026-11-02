@@ -10,6 +10,12 @@ Ultimate Gold alpha 1 includes the native reusable [TM Refill item](tm-refill-it
 
 The selector defaults to the experimental **training-menu** build. One patch applies directly to the compatible clean input; do not stack older patches. Alpha 1, Alpha 2 and Kris Sprint 2 remain selectable. The new build adds access to the existing stat editor from the party menu; one edited party member passed an ordinary save and fresh-load check. See the [training guide](party-training.md) for its scope and limits. Broader save coverage, the full adventure and hardware testing remain open. The wiki data and cheat catalog describe Alpha 2 and have not been verified against the latest candidate. See [current gameplay scope](project-status.md).
 
+### Moving a Kris Sprint 2 save to Training Menu
+
+Close all emulator instances running either build completely before copying or renaming files, so the emulator can finish writing the save. Keep a backup of your existing save and of any save already associated with the new build. In the same emulator, copy the ordinary save in its save directory and give the copy the new ROM's base name: `Ultimate-Gold-Kris-Sprint2` becomes `Ultimate-Gold-Training-Menu`. Keep the emulator's existing save format and extension; for example, use `.dsv` only if that is the format it already uses. Start the new ROM and load the ordinary in-game save, not an emulator savestate. Do not overwrite your only backup.
+
+One focused Kris Sprint 2 → Training Menu ordinary-save and fresh-load case in DeSmuME passed independent review. Other saves, builds, emulators and hardware are not certified by this case.
+
 The VCDIFF engine is vendored from [Marc Robledo's RomPatcher.js](https://github.com/marcrobledo/RomPatcher.js/) at commit `4f17297cd1dc0835a0b0747497fa15f5f63f1623`; its MIT license is retained under `web/vendor/rompatcher/`. `tools/build_site.py` copies the local delta and generates a relative wiki from `docs/`.
 
 Build locally with `python3 tools/build_site.py`, then publish the `web/` directory through a manually reviewed Pages workflow. No ROM is part of the payload.
@@ -23,5 +29,11 @@ El payload de GitHub Pages es estático y aplica el patch localmente en el naveg
 Ultimate Gold alfa 1 incluye el [objeto nativo de recarga de MT](tm-refill-item.md), entregado por el transeúnte de Pueblo Primavera. No necesita códigos. El perfil MT99 descargable sigue siendo una alternativa opcional del emulador, desactivada por defecto.
 
 El selector abre la versión experimental **con menú de entrenamiento**. Un único parche se aplica directamente sobre la entrada limpia compatible; no apiles parches anteriores. Alfa 1, Alfa 2 y Kris Sprint 2 siguen disponibles. La nueva versión añade acceso al editor de estadísticas existente desde el menú del equipo; un Pokémon editado superó una prueba de guardado ordinario y carga en un proceso nuevo. Consulta el alcance y los límites en la [guía de entrenamiento](party-training.md). Siguen pendientes una cobertura más amplia de guardado, la aventura completa y las pruebas en hardware. Los datos de la wiki y el catálogo de trucos describen Alfa 2 y no se han verificado contra la candidata más reciente. Consulta el [alcance actual](project-status.md).
+
+### Pasar una partida de Kris Sprint 2 a Training Menu
+
+Cierra por completo todas las instancias del emulador que ejecuten cualquiera de las dos versiones antes de copiar o cambiar nombres, para que termine de escribir la partida. Conserva una copia de seguridad de tu partida y de cualquier partida que ya esté asociada a la nueva versión. En el mismo emulador, copia la partida ordinaria en su carpeta de guardados y cambia el nombre de la copia para que coincida con la nueva ROM: `Ultimate-Gold-Kris-Sprint2` pasa a `Ultimate-Gold-Training-Menu`. Conserva el formato y la extensión que ya usa el emulador; por ejemplo, usa `.dsv` solo si ese es su formato habitual. Inicia la nueva ROM y carga la partida normal del juego, no un estado guardado del emulador. No sobrescribas tu única copia de seguridad.
+
+Un caso focalizado de guardado ordinario y carga en un proceso nuevo de Kris Sprint 2 → Training Menu en DeSmuME superó una revisión independiente. Este caso no certifica otras partidas, versiones, emuladores ni hardware.
 
 El motor VCDIFF procede de RomPatcher.js de Marc Robledo en el commit indicado arriba; conserva su licencia MIT. `tools/build_site.py` copia el delta local y genera una wiki relativa desde `docs/`.
