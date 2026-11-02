@@ -97,14 +97,17 @@ class WebBuildTests(unittest.TestCase):
         alpha1 = json.loads(build_site.MANIFEST_ALPHA1.read_text(encoding="utf-8"))
         alpha2 = json.loads(build_site.MANIFEST_ALPHA2.read_text(encoding="utf-8"))
         kris = build_site.verify_manifest(build_site.MANIFEST_KRIS_SPRINT2)
+        training = build_site.verify_manifest(build_site.MANIFEST_TRAINING_MENU)
         default = build_site.PATCHER_DEFAULT
-        self.assertEqual(default, "kris-sprint2")
-        catalog = build_site.build_patch_catalog(alpha1, alpha2, kris, default)
+        self.assertEqual(default, "training-menu")
+        catalog = build_site.build_patch_catalog(alpha1, alpha2, kris, training, default)
         self.assertEqual(catalog["default"], default)
         self.assertEqual(catalog["wiki_data"], "alpha2")
         self.assertIn("alpha1", catalog["versions"])
         self.assertIn("alpha2", catalog["versions"])
         self.assertIn("kris-sprint2", catalog["versions"])
+        self.assertIn("training-menu", catalog["versions"])
+        self.assertTrue(catalog["versions"]["training-menu"]["experimental"])
         self.assertTrue(catalog["versions"]["alpha2"]["experimental"])
         self.assertIn("EVIV", catalog["versions"]["alpha2"]["note"]["en"])
         self.assertTrue(catalog["versions"]["kris-sprint2"]["experimental"])
@@ -118,24 +121,25 @@ class WebBuildTests(unittest.TestCase):
         alpha1 = json.loads(build_site.MANIFEST_ALPHA1.read_text(encoding="utf-8"))
         alpha2 = json.loads(build_site.MANIFEST_ALPHA2.read_text(encoding="utf-8"))
         kris = build_site.verify_manifest(build_site.MANIFEST_KRIS_SPRINT2)
+        training = build_site.verify_manifest(build_site.MANIFEST_TRAINING_MENU)
         alpha2["default"] = True
-        catalog = build_site.build_patch_catalog(alpha1, alpha2, kris, "alpha2")
+        catalog = build_site.build_patch_catalog(alpha1, alpha2, kris, training, "alpha2")
         self.assertEqual(catalog["default"], "alpha2")
         self.assertTrue(catalog["versions"]["alpha2"]["experimental"])
         self.assertNotIn("Selected by default", catalog["versions"]["alpha1"]["note"]["en"])
         with self.assertRaises(SystemExit):
-            build_site.build_patch_catalog(alpha1, alpha2, kris, "unknown")
+            build_site.build_patch_catalog(alpha1, alpha2, kris, training, "unknown")
         with self.assertRaisesRegex(SystemExit, "Historical Alpha 2"):
-            build_site.build_patch_catalog(alpha1, dict(alpha2, default=False), kris, "kris-sprint2")
+            build_site.build_patch_catalog(alpha1, dict(alpha2, default=False), kris, training, "kris-sprint2")
         invalid = dict(kris, status="TESTED_PARTIAL")
         with self.assertRaisesRegex(SystemExit, "Kris Sprint 2"):
-            build_site.build_patch_catalog(alpha1, alpha2, invalid, "alpha2")
+            build_site.build_patch_catalog(alpha1, alpha2, invalid, training, "alpha2")
         invalid = dict(kris, default=True)
         with self.assertRaisesRegex(SystemExit, "Kris Sprint 2"):
-            build_site.build_patch_catalog(alpha1, alpha2, invalid, "alpha2")
+            build_site.build_patch_catalog(alpha1, alpha2, invalid, training, "alpha2")
         invalid = dict(kris, source={"sha256": "0" * 64})
         with self.assertRaisesRegex(SystemExit, "Kris Sprint 2"):
-            build_site.build_patch_catalog(alpha1, alpha2, invalid, "alpha2")
+            build_site.build_patch_catalog(alpha1, alpha2, invalid, training, "alpha2")
 
     def test_kris_sprint2_manifest_pins_hashes_and_clean_source(self):
         alpha1 = build_site.verify_manifest(build_site.MANIFEST_ALPHA1)
@@ -151,7 +155,7 @@ class WebBuildTests(unittest.TestCase):
         web_manifest = ROOT / "web/data/patch-manifest-kris-sprint2.json"
         web_delta = ROOT / "web/assets/ultimate-gold-kris-sprint2.xdelta"
         published = json.loads(web_manifest.read_text(encoding="utf-8"))
-        self.assertTrue(published["default"])
+        self.assertFalse(published["default"])
         self.assertEqual(published["publication_metadata"]["source_manifest_sha256"], hashlib.sha256(build_site.MANIFEST_KRIS_SPRINT2.read_bytes()).hexdigest())
         for key in ("source", "target", "delta"):
             self.assertEqual(published[key], kris[key])
@@ -161,22 +165,26 @@ class WebBuildTests(unittest.TestCase):
         alpha1 = build_site.verify_manifest(build_site.MANIFEST_ALPHA1)
         alpha2 = build_site.verify_manifest(build_site.MANIFEST_ALPHA2)
         kris = build_site.verify_manifest(build_site.MANIFEST_KRIS_SPRINT2)
+        training = build_site.verify_manifest(build_site.MANIFEST_TRAINING_MENU)
         default = build_site.PATCHER_DEFAULT
         with tempfile.TemporaryDirectory() as directory:
             web = Path(directory)
-            build_site.export_patch_payload(web, alpha1, alpha2, kris, default)
+            build_site.export_patch_payload(web, alpha1, alpha2, kris, training, default)
             catalog = json.loads((web / "data/patch-catalog.json").read_text(encoding="utf-8"))
             self.assertEqual(catalog["default"], default)
-            for manifest in (alpha1, alpha2, kris):
+            for manifest in (alpha1, alpha2, kris, training):
                 self.assertTrue((web / "assets" / manifest["delta"]["file"]).is_file())
                 self.assertEqual(hashlib.sha256((web / "assets" / manifest["delta"]["file"]).read_bytes()).hexdigest(), manifest["delta"]["sha256"])
-            latest = json.loads((web / "data/patch-manifest-kris-sprint2.json").read_text(encoding="utf-8"))
+            latest = json.loads((web / "data/patch-manifest-training-menu.json").read_text(encoding="utf-8"))
+            previous = json.loads((web / "data/patch-manifest-kris-sprint2.json").read_text(encoding="utf-8"))
             old = json.loads((web / "data/patch-manifest-alpha2.json").read_text(encoding="utf-8"))
             self.assertTrue(latest["default"])
             self.assertFalse(old["default"])
-            self.assertEqual((web / "data/patch-manifest.json").read_bytes(), (web / "data/patch-manifest-kris-sprint2.json").read_bytes())
-            self.assertEqual(latest["publication_metadata"]["source_manifest_sha256"], hashlib.sha256(build_site.MANIFEST_KRIS_SPRINT2.read_bytes()).hexdigest())
-            self.assertEqual(latest["target"], kris["target"])
+            self.assertFalse(previous["default"])
+            self.assertEqual((web / "data/patch-manifest.json").read_bytes(), (web / "data/patch-manifest-training-menu.json").read_bytes())
+            self.assertEqual(latest["publication_metadata"]["source_manifest_sha256"], hashlib.sha256(build_site.MANIFEST_TRAINING_MENU.read_bytes()).hexdigest())
+            self.assertEqual(latest["target"], training["target"])
+            self.assertEqual(previous["target"], kris["target"])
             self.assertEqual(catalog["versions"]["kris-sprint2"]["status"], "EXPERIMENTAL_SPRINT_ACCEPTED")
             self.assertFalse(any(web.rglob("*.nds")))
             self.assertFalse(any(web.rglob("*.sav")))

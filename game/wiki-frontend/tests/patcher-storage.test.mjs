@@ -6,7 +6,7 @@ import { runInNewContext } from 'node:vm';
 test('patcher loads its catalog even when browser storage is blocked', async () => {
   const app = await readFile(new URL('../../web/app.js', import.meta.url), 'utf8');
   const files = {};
-  for (const name of ['patch-catalog.json', 'patch-manifest-kris-sprint2.json']) {
+  for (const name of ['patch-catalog.json', 'patch-manifest-training-menu.json']) {
     files[name] = JSON.parse(await readFile(new URL(`../../web/data/${name}`, import.meta.url), 'utf8'));
   }
   const nodes = new Map();
@@ -31,7 +31,7 @@ test('patcher loads its catalog even when browser storage is blocked', async () 
   win.parent = win;
   runInNewContext(app, sandbox);
   for (let attempt = 0; attempt < 10 && node('apply').disabled; attempt++) await new Promise((resolve) => setImmediate(resolve));
-  assert.equal(node('version').value, 'kris-sprint2');
+  assert.equal(node('version').value, 'training-menu');
   assert.equal(node('apply').disabled, false);
   node('language').value = 'es';
   assert.doesNotThrow(() => node('language').events.change());

@@ -1,0 +1,53 @@
+{
+  "format": 1,
+  "status": "EXPERIMENTAL_SPRINT_ACCEPTED",
+  "default": false,
+  "source": {
+    "kind": "clean external HeartGold USA",
+    "filename": "HeartGold-USA.nds",
+    "sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+    "size": 134217728
+  },
+  "target": {
+    "filename": "Ultimate-Gold-Training-Menu.nds",
+    "sha256": "9b910d3ae666a893030acd651e7a4deed41a0fbf8093c82cad0d4336283dedd1",
+    "size": 127125512,
+    "build": "Kris and title credits from #33–#34, plus party training menu from #36"
+  },
+  "delta": {
+    "file": "ultimate-gold-training-menu.xdelta",
+    "sha256": "5d3cc86acf09863efca8fbdefc8c1493956ea7ae6226fded16a760d66a39a056",
+    "size": 7533718
+  },
+  "lineage": {
+    "parent_sha256": "fc0bf04ec57fa30121fdb50a4da3a94c300fc0abe171c96b3e60bc2e674baff4",
+    "training_issue": 36
+  },
+  "limits": [
+    "Experimental build: focused checks do not certify the full adventure or physical hardware.",
+    "Known Kris bag crop/contrast limitations remain; cumulative training changes do not resolve them.",
+    "Cross-build save compatibility and broader Nature-dependent mechanics are not certified.",
+    "Wiki reference datasets and cheats remain based on Alpha 2; they are not retargeted or newly certified for this build.",
+    "Browser UI/download, CI and deployment are separate publication checks, outside this native integrity report.",
+    "Each player supplies their own clean HeartGold USA dump, preferably from their original cartridge; no ROM or download source is provided."
+  ],
+  "claims": {
+    "integrity": "Clean HeartGold USA reconstructs the exact target with both the command-line patcher and the pinned web VCDIFF engine. Modified input and damaged patch are rejected by command-line hash validation.",
+    "training_menu": "Focused checks cover the More > Train route, selected party slots, cancellation and one confirmed HP-IV change.",
+    "ordinary_save": "The confirmed HP-IV change and all three party records and bag bytes were preserved by an ordinary in-game Save.",
+    "cold_load": "A fresh process loaded the actual saved file without an input savestate or cheats. The confirmed HP-IV 20 and HP 23/23, all three complete party records, saved Nature values and bag contents were preserved in this focused check."
+  },
+  "attribution": [
+    "Sacred Gold: Drayano",
+    "Sacred Gold Plus: Umberto-DEV and credited contributors",
+    "Ultimate Gold: R'LYEH FANGAME STUDIOS",
+    "Pokémon: respective rights holders"
+  ],
+  "evidence_reports": [
+    {
+      "file": "docs/qa-training-menu-release.json",
+      "sha256": "7e3bdb5b593e31de591749dd6326d45b3ec368d1a5b3dbcb5442d06861dcfbe4",
+      "status": "PASS_SCOPED_INTEGRITY_AND_NATIVE_SAVE_COLD"
+    }
+  ]
+}

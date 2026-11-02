@@ -4,7 +4,7 @@
   <p><strong>HEARTGOLD · JOHTO · FAN PROJECT</strong></p>
   <h1>ULTIMATE GOLD</h1>
   <p><strong>A fresh Johto journey, shaped by selected Sacred Gold lineage.</strong></p>
-  <p>A local-first browser patcher, a field guide, and three clearly labeled builds.</p>
+  <p>A local-first browser patcher, a field guide, and four clearly labeled builds.</p>
   <p>
     <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/#/patcher"><strong>Open the patcher</strong></a>
     · <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/">Explore the wiki</a>
@@ -16,7 +16,7 @@
   </p>
 </div>
 
-> **Build status:** Alpha 1 is the legacy selectable build. Alpha 2 is experimental. Kris Sprint 2 is the experimental patcher default.
+> **Build status:** The experimental training-menu build is the patcher default. Alpha 1, Alpha 2 and Kris Sprint 2 remain selectable.
 
 ## A familiar Johto, carefully revised
 
@@ -30,9 +30,10 @@
 | --- | --- | --- |
 | **Alpha 1** | Legacy | [TM Refill](game/docs/tm-refill-item.md): a reusable in-game Key Item that refills TMs you already own to 99. |
 | **Alpha 2** | Experimental | Rocket kit, evolution-shop stock, and eight field actions for HMs you already own. |
-| **Kris Sprint 2** | Experimental default | Alternative protagonist Kris and an experimental EV/IV/nature editor by reviewed lineage. |
+| **Kris Sprint 2** | Experimental | Alternative protagonist Kris and an experimental EV/IV/nature editor by reviewed lineage. |
+| **Training menu** | Experimental default | Access the existing training editor from a party Pokémon's menu. [Guide](game/docs/party-training.md). |
 
-Alpha 2 has bounded, exact-build testing; full-story coverage is still open. Kris Sprint 2 has no new editor QA; tests on earlier builds do not establish acceptance of this candidate. Wiki and cheat data are based on Alpha 2; compatibility with Kris Sprint 2 is unverified.
+Alpha 2 has bounded, exact-build testing; full-story coverage is still open. Kris Sprint 2 has no new editor QA; tests on earlier builds do not establish acceptance of this candidate. One training-menu change passed a focused ordinary save and fresh-load check; broader save coverage, full-game and hardware acceptance remain open. Wiki and cheat data are based on Alpha 2; compatibility with newer builds is unverified.
 
 ## Patch privately. Explore freely.
 
@@ -58,7 +59,7 @@ Choose a build and patch a clean dump from your own Pokémon HeartGold USA cartr
   <p><strong>HEARTGOLD · JOHTO · PROYECTO DE FANS</strong></p>
   <h1>ULTIMATE GOLD</h1>
   <p><strong>Una nueva aventura por Johto, basada en aportaciones seleccionadas de Sacred Gold.</strong></p>
-  <p>Un parcheador local en el navegador, una guía de campo y tres versiones claramente diferenciadas.</p>
+  <p>Un parcheador local en el navegador, una guía de campo y cuatro versiones claramente diferenciadas.</p>
   <p>
     <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/#/patcher"><strong>Abrir el parcheador</strong></a>
     · <a href="https://0xcyberberserker.github.io/pokemon-ultimate-gold/wiki/">Explorar la wiki</a>
@@ -70,7 +71,7 @@ Choose a build and patch a clean dump from your own Pokémon HeartGold USA cartr
   </p>
 </div>
 
-> **Estado de las versiones:** Alfa 1 es la versión seleccionable anterior. Alfa 2 es experimental. Kris Sprint 2 es la opción experimental predeterminada del parcheador.
+> **Estado de las versiones:** La versión experimental con menú de entrenamiento es la opción predeterminada del parcheador. Alfa 1, Alfa 2 y Kris Sprint 2 siguen disponibles.
 
 ## Una Johto familiar, revisada con cuidado
 
@@ -84,9 +85,10 @@ Choose a build and patch a clean dump from your own Pokémon HeartGold USA cartr
 | --- | --- | --- |
 | **Alfa 1** | Anterior | [TM Refill (Recarga MT)](game/docs/tm-refill-item.md): objeto clave reutilizable que repone a 99 las MT que ya tienes. |
 | **Alfa 2** | Experimental | Kit Rocket, existencias de objetos evolutivos y ocho acciones de campo para las MO que ya tienes. |
-| **Kris Sprint 2** | Predeterminada experimental | Kris como protagonista alternativa y editor EV/IV/naturalezas experimental por linaje revisado. |
+| **Kris Sprint 2** | Experimental | Kris como protagonista alternativa y editor EV/IV/naturalezas experimental por linaje revisado. |
+| **Menú de entrenamiento** | Predeterminada experimental | Acceso al editor existente desde el menú de un Pokémon del equipo. [Guía](game/docs/party-training.md). |
 
-Alfa 2 cuenta con pruebas acotadas sobre el build exacto; la historia completa sigue pendiente. Kris Sprint 2 no cuenta con nuevas pruebas del editor; las pruebas de builds anteriores no aceptan esta candidata. Los datos de la wiki y los trucos se basan en Alfa 2; su compatibilidad con Kris Sprint 2 no está verificada.
+Alfa 2 cuenta con pruebas acotadas sobre el build exacto; la historia completa sigue pendiente. Kris Sprint 2 no cuenta con nuevas pruebas del editor; las pruebas de builds anteriores no aceptan esta candidata. Un cambio desde el menú de entrenamiento superó una prueba focalizada de guardado ordinario y carga en un proceso nuevo; quedan pendientes una cobertura más amplia de guardado, el juego completo y la aceptación en hardware. Los datos de la wiki y los trucos se basan en Alfa 2; su compatibilidad con versiones posteriores no está verificada.
 
 ## Parchea en privado. Explora a tu ritmo.
 

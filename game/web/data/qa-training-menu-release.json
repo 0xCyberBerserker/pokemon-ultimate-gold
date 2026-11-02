@@ -1,0 +1,98 @@
+{
+  "schema": "ultimate-gold-training-menu-release-qa/v1",
+  "status": "PASS_SCOPED_INTEGRITY_AND_NATIVE_SAVE_COLD",
+  "scope": {
+    "en": "Cumulative Training Menu build: patch integrity, focused party-menu checks and one same-build ordinary Save followed by a fresh-process reload. Publication checks are separate.",
+    "es": "Build acumulativa Training Menu: integridad del parche, pruebas focalizadas del menú del equipo y un guardado normal seguido de recarga en un proceso nuevo con la misma build. Los controles de publicación son independientes."
+  },
+  "candidate": {
+    "sha256": "9b910d3ae666a893030acd651e7a4deed41a0fbf8093c82cad0d4336283dedd1",
+    "parent_sha256": "fc0bf04ec57fa30121fdb50a4da3a94c300fc0abe171c96b3e60bc2e674baff4",
+    "includes_issues": [
+      33,
+      34,
+      36
+    ]
+  },
+  "patch": {
+    "source_sha256": "65f02a56842b75aa92d775d56d657a56fe3fa993550b04dc20704ab82d760105",
+    "delta_sha256": "5d3cc86acf09863efca8fbdefc8c1493956ea7ae6226fded16a760d66a39a056",
+    "cli_reconstruction": "PASS_EXACT_TARGET",
+    "pinned_web_vcdiff_engine_node_reconstruction": "PASS_EXACT_TARGET",
+    "cli_wrong_input_and_corrupt_patch_rejection": "PASS",
+    "independent_review_sha256": "a9d95d7bd5d25b96355b610747d01cf0dc3908dc6e82e81f1693e9d548f59c87"
+  },
+  "native_checks": {
+    "focused_party_menu": "PASS_SCOPED; selected first/middle/last slots in separate cases, cancel/reentry and one confirmed HP-IV change.",
+    "ordinary_save": {
+      "status": "PASS_SCOPED",
+      "setup": "State-assisted continuation of an earlier native training change; Save itself performed through the normal game menu.",
+      "independent_review_sha256": "450c6a45999e81f50d075ddda385c4985bbbd1732002b640c12af5080d0f2f9b"
+    },
+    "fresh_process_reload": {
+      "status": "PASS_SCOPED",
+      "input_savestate": false,
+      "cheats": [],
+      "saved_party_and_bag_match": true,
+      "all_three_complete_party_records_valid": true,
+      "saved_nature_values_preserved": true,
+      "clefairy_hp_iv": 20,
+      "clefairy_hp": 23,
+      "clefairy_max_hp": 23,
+      "independent_review_sha256": "82132353769152d6a44cc2f956cd6d07fc2bf49f69298292a97970e8af585292",
+      "visual_limit": {
+        "en": "Introduction, loaded field and stable party views were observed. Continue itself was not captured.",
+        "es": "Se observaron la introducción, el mapa cargado y el equipo estable. No se capturó la pantalla Continue."
+      }
+    },
+    "attempt_accounting": {
+      "save_attempts": 2,
+      "first_save_attempt": "TIMEOUT_RETAINED_NOT_ACCEPTED",
+      "corrective_save": "PASS_SCOPED",
+      "cold_attempts": 1,
+      "cold_result": "PASS_SCOPED",
+      "earlier_intermediate_capture_rejection": "RETAINED; not retrospectively accepted."
+    },
+    "core_sha256": "d9a441d965216c4ad7350e6c34549e9ae211ca92618855d5a282acc89c82fe89",
+    "runner_sha256": "a16d1937c267614ad88ed43fe8360f9586ca1206fd253f258a7b3ff5c86d8db8",
+    "cleanup": "PASS; owned sessions closed and originals preserved.",
+    "raw_runner_labels": "Unchanged; scoped Save/cold conclusions come from separately reviewed evidence."
+  },
+  "summary": {
+    "en": [
+      "Includes Kris and title credits plus More → Train from the Pokémon party menu. Choose EVs, IVs or Nature and review a proposed change before confirming.",
+      "The confirmed Clefairy HP-IV change to 20, 23/23 HP, all three Pokémon, saved Nature values and bag contents survived an ordinary Save and fresh-process reload.",
+      "Apply the cumulative patch to your own clean HeartGold USA dump, preferably from your original cartridge. No ROM or download source is provided."
+    ],
+    "es": [
+      "Incluye Kris y los créditos de inicio, más More → Train desde el menú Pokémon. Elige EVs, IVs o Nature y revisa la propuesta antes de confirmarla.",
+      "El cambio confirmado de IV de PS de Clefairy a 20, sus 23/23 PS, los tres Pokémon, sus valores de naturaleza guardados y el contenido de la Bolsa se conservaron tras guardar normalmente y recargar en un proceso nuevo.",
+      "Aplica el parche acumulativo a tu propio volcado limpio de HeartGold USA, preferiblemente de tu cartucho original. No se proporciona una ROM ni una fuente de descarga."
+    ]
+  },
+  "limits": {
+    "en": [
+      "Experimental, focused coverage; full adventure and physical hardware are not certified.",
+      "Known Kris bag crop/contrast limitations remain.",
+      "Cross-build save compatibility and broader Nature-dependent mechanics are not certified.",
+      "Wiki reference datasets and cheats remain based on Alpha 2; they are not retargeted or newly certified for this build."
+    ],
+    "es": [
+      "Cobertura experimental y focalizada; no se certifican la aventura completa ni el hardware físico.",
+      "Persisten las limitaciones conocidas de recorte y contraste de la Bolsa con Kris.",
+      "No se certifican la compatibilidad de partidas entre versiones ni todas las mecánicas que dependen de la naturaleza.",
+      "Los datos de referencia y trucos de la wiki mantienen la base Alfa 2; no se han adaptado ni certificado de nuevo para esta build."
+    ]
+  },
+  "publication_checks": {
+    "status": "RECORDED_SEPARATELY_FROM_THIS_REPORT",
+    "en": "Browser UI and downloaded output, CI, integration and deployment are separate publication gates. This report neither claims their result nor references a future receipt.",
+    "es": "La interfaz web, el resultado descargado, CI, la integración y el despliegue son controles de publicación separados. Este informe no afirma su resultado ni referencia un recibo futuro."
+  },
+  "attribution": [
+    "Sacred Gold: Drayano",
+    "Sacred Gold Plus: Umberto-DEV and credited contributors",
+    "Ultimate Gold: R'LYEH FANGAME STUDIOS",
+    "Pokémon: respective rights holders"
+  ]
+}
